@@ -1,0 +1,44 @@
+name: Publish HTML from Markdown
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "docs/**/*.md"
+      - "scripts/render_html.py"
+      - "requirements.txt"
+      - ".github/workflows/publish-html.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Render HTML from Markdown
+        run: python scripts/render_html.py
+
+      - name: Commit rendered HTML (if changed)
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/*.html docs/*.md
+            git commit -m "Auto-render HTML from Markdown"
+            git push
+          else
+            echo "No changes"
+          fi
