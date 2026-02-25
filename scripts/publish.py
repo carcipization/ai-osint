@@ -75,23 +75,39 @@ def extract_dateline(md_text: str) -> str | None:
     return m.group(1).strip()
 
 
+URL_RE = re.compile(r"(?<!\]\()(?<!\()(?P<url>https?://[^\s<>)\]]+)")
+
+
+def linkify_plain_urls(md_text: str) -> str:
+    """Convert bare http(s) URLs to proper Markdown links.
+
+    Leaves existing markdown links untouched.
+    """
+
+    def repl(match: re.Match[str]) -> str:
+        url = match.group("url")
+        return f"[{url}]({url})"
+
+    return URL_RE.sub(repl, md_text)
+
+
 def upsert_crosslinks(md_text: str, slug: str) -> str:
     html_url = f"https://carcipization.github.io/ai-osint/{slug}.html"
     md_url = f"https://carcipization.github.io/ai-osint/{slug}.md"
 
     if "**Human-readable HTML:**" in md_text and "**LLM-friendly Markdown:**" in md_text:
-        return md_text
+        return linkify_plain_urls(md_text)
 
     lines = md_text.splitlines()
     insert_at = 1 if lines and lines[0].startswith("# ") else 0
     block = [
         "",
-        f"**Human-readable HTML:** {html_url}",
-        f"**LLM-friendly Markdown:** {md_url}",
+        f"**Human-readable HTML:** [HTML]({html_url})",
+        f"**LLM-friendly Markdown:** [Markdown]({md_url})",
         "",
     ]
     new_lines = lines[:insert_at] + block + lines[insert_at:]
-    return "\n".join(new_lines).rstrip() + "\n"
+    return linkify_plain_urls("\n".join(new_lines).rstrip() + "\n")
 
 
 def render_md_to_html(md_text: str, title: str) -> str:

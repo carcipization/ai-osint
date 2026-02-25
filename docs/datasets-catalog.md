@@ -1,7 +1,7 @@
 # Datasets Catalog
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/datasets-catalog.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/datasets-catalog.md
+**Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)
+**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
 
 Persistent inventory of open datasets/time-series sources to support AI-OSINT stories.
@@ -27,7 +27,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 ## Seed entries
 
 ### ACLED (Armed Conflict Location & Event Data)
-- **URL:** https://acleddata.com/
+- **URL:** [https://acleddata.com/](https://acleddata.com/)
 - **Coverage:** Global conflict/unrest events (country-level availability varies)
 - **Cadence:** Frequent updates
 - **Topic tags:** geopolitics, unrest, conflict
@@ -36,7 +36,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Protest intensity in X region jumps Y% week-over-week"
 
 ### GDELT Events
-- **URL:** https://www.gdeltproject.org/
+- **URL:** [https://www.gdeltproject.org/](https://www.gdeltproject.org/)
 - **Coverage:** Global media-derived event signals
 - **Cadence:** Near real-time
 - **Topic tags:** geopolitics, unrest, media signals
@@ -45,7 +45,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Media event-code surge preceded policy move"
 
 ### USGS Earthquake Catalog
-- **URL:** https://earthquake.usgs.gov/earthquakes/feed/
+- **URL:** [https://earthquake.usgs.gov/earthquakes/feed/](https://earthquake.usgs.gov/earthquakes/feed/)
 - **Coverage:** Global seismic events
 - **Cadence:** Near real-time feeds
 - **Topic tags:** disaster, infrastructure risk
@@ -54,7 +54,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Clustered seismic events near critical infrastructure"
 
 ### NASA FIRMS (Fire Information for Resource Management System)
-- **URL:** https://firms.modaps.eosdis.nasa.gov/
+- **URL:** [https://firms.modaps.eosdis.nasa.gov/](https://firms.modaps.eosdis.nasa.gov/)
 - **Coverage:** Global fire hotspots from satellite detections
 - **Cadence:** Near real-time/daily products
 - **Topic tags:** environment, conflict context, disruption
@@ -63,7 +63,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Unexpected hotspot spike in region under unrest"
 
 ### StatsCan Crime data portal
-- **URL:** https://www.statcan.gc.ca/ (datasets vary by table)
+- **URL:** [https://www.statcan.gc.ca/](https://www.statcan.gc.ca/) (datasets vary by table)
 - **Coverage:** Canada domestic statistics incl. crime tables
 - **Cadence:** Monthly/quarterly/annual depending table
 - **Topic tags:** domestic-crime, canada
@@ -72,7 +72,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Category-level divergence across provinces"
 
 ### FBI CDE / UCR resources
-- **URL:** https://cde.ucr.cjis.gov/
+- **URL:** [https://cde.ucr.cjis.gov/](https://cde.ucr.cjis.gov/)
 - **Coverage:** US crime reporting datasets/dashboards
 - **Cadence:** Periodic releases
 - **Topic tags:** domestic-crime, us
@@ -81,7 +81,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Outlier metro trend compared to national baseline"
 
 ### OECD.AI Policy Observatory / indicators
-- **URL:** https://oecd.ai/
+- **URL:** [https://oecd.ai/](https://oecd.ai/)
 - **Coverage:** AI policy, ecosystem, and country indicators
 - **Cadence:** Periodic updates
 - **Topic tags:** ai, policy, geopolitics
@@ -94,7 +94,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 ## Additions (2026-02-25 DATASET cycle)
 
 ### UCDP Georeferenced Event Dataset (GED)
-- **URL:** https://ucdp.uu.se/downloads/
+- **URL:** [https://ucdp.uu.se/downloads/](https://ucdp.uu.se/downloads/)
 - **Coverage:** Global organized violence event data; long historical span with geo/event detail
 - **Cadence:** Periodic releases
 - **Topic tags:** geopolitics, conflict, unrest
@@ -103,7 +103,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Is a local flare-up a true structural escalation or a transient reporting spike?"
 
 ### ICEWS Event Data (Harvard Dataverse)
-- **URL:** https://dataverse.harvard.edu/dataverse/icews
+- **URL:** [https://dataverse.harvard.edu/dataverse/icews](https://dataverse.harvard.edu/dataverse/icews)
 - **Coverage:** Global machine-coded political events; long-run historical/event-actor structure
 - **Cadence:** Batch/periodic updates via repository releases
 - **Topic tags:** geopolitics, early-warning, event-data
@@ -112,7 +112,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Did diplomatic hostility metrics jump before sanctions or kinetic action?"
 
 ### OONI Network Measurement Data
-- **URL:** https://ooni.org/data/
+- **URL:** [https://ooni.org/data/](https://ooni.org/data/)
 - **Coverage:** Global internet censorship/interference measurements from distributed probes
 - **Cadence:** Frequent/ongoing submissions
 - **Topic tags:** censorship, unrest, infrastructure, geopolitics
@@ -121,7 +121,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Did messaging-platform blocking coincide with street mobilization windows?"
 
 ### GDELT Data Feeds (Events + GKG)
-- **URL:** https://www.gdeltproject.org/data.html
+- **URL:** [https://www.gdeltproject.org/data.html](https://www.gdeltproject.org/data.html)
 - **Coverage:** Global media-derived events/themes/tone; high-frequency updates
 - **Cadence:** Near real-time (multiple updates per hour)
 - **Topic tags:** geopolitics, unrest, media-signals
@@ -130,7 +130,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Theme/tone shock appears before official acknowledgement of an incident cluster"
 
 ### CDC Data Portal (incl. NVSS Provisional Overdose series)
-- **URL:** https://data.cdc.gov/
+- **URL:** [https://data.cdc.gov/](https://data.cdc.gov/)
 - **Coverage:** US public-health indicators (national/state/local, dataset dependent)
 - **Cadence:** Dataset-specific (often monthly/quarterly updates)
 - **Topic tags:** us, domestic-risk, public-health
@@ -139,7 +139,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Do overdose and violent-crime trajectories diverge unusually in specific states?"
 
 ### Chicago Crimes (2001–Present)
-- **URL:** https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2
+- **URL:** [https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)
 - **Coverage:** Chicago incident-level crime records with offense/date/location metadata
 - **Cadence:** Frequent city feed updates
 - **Topic tags:** us, domestic-crime, city-level
@@ -148,7 +148,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Did robbery or motor-vehicle theft break seasonal pattern in specific districts?"
 
 ### Toronto Major Crime Indicators (MCI)
-- **URL:** https://open.toronto.ca/dataset/major-crime-indicators/
+- **URL:** [https://open.toronto.ca/dataset/major-crime-indicators/](https://open.toronto.ca/dataset/major-crime-indicators/)
 - **Coverage:** Toronto police-reported major crime incidents by category/neighbourhood/time
 - **Cadence:** Periodic municipal updates
 - **Topic tags:** canada, domestic-crime, city-level
@@ -157,7 +157,7 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Story-use ideas:** "Which Toronto neighbourhoods show category-specific outlier changes vs city baseline?"
 
 ### Stanford HELM (Holistic Evaluation of Language Models)
-- **URL:** https://crfm.stanford.edu/helm/
+- **URL:** [https://crfm.stanford.edu/helm/](https://crfm.stanford.edu/helm/)
 - **Coverage:** AI model benchmark/evaluation reporting across tasks and scenarios
 - **Cadence:** Periodic benchmark/report updates
 - **Topic tags:** ai, evaluation, capability-tracking
