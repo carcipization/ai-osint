@@ -1,7 +1,7 @@
 # Claim Check: Is Iran escalating enforcement as university unrest enters a fourth day?
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/latest.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/latest.md
+**Human-readable HTML:** https://carcipization.github.io/ai-osint/2026-02-25-iran-university-unrest-red-lines-claim-check.html
+**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/2026-02-25-iran-university-unrest-red-lines-claim-check.md
 
 
 **Dateline:** 2026-02-25  

@@ -28,7 +28,8 @@ import markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-SITE = ROOT / "site"
+# GitHub Pages source is /docs for this repo.
+OUT = DOCS
 
 CSS = """
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
@@ -127,11 +128,8 @@ def build_item(md_path: Path) -> Item:
     if text != raw:
         md_path.write_text(text, encoding="utf-8")
 
-    SITE.mkdir(parents=True, exist_ok=True)
-    out_md = SITE / f"{slug}.md"
-    out_html = SITE / f"{slug}.html"
-
-    out_md.write_text(text, encoding="utf-8")
+    OUT.mkdir(parents=True, exist_ok=True)
+    out_html = OUT / f"{slug}.html"
     out_html.write_text(render_md_to_html(text, title), encoding="utf-8")
 
     return Item(slug=slug, title=title, dateline=dateline)
@@ -139,8 +137,8 @@ def build_item(md_path: Path) -> Item:
 
 def write_latest(latest: Item) -> None:
     # Copy (not symlink) for compatibility with GitHub Pages.
-    shutil.copyfile(SITE / f"{latest.slug}.md", SITE / "latest.md")
-    shutil.copyfile(SITE / f"{latest.slug}.html", SITE / "latest.html")
+    shutil.copyfile(DOCS / f"{latest.slug}.md", OUT / "latest.md")
+    shutil.copyfile(OUT / f"{latest.slug}.html", OUT / "latest.html")
 
 
 def write_index(items: list[Item], latest: Item) -> None:
@@ -191,7 +189,7 @@ def write_index(items: list[Item], latest: Item) -> None:
 </html>
 """
 
-    (SITE / "index.html").write_text(index, encoding="utf-8")
+    (OUT / "index.html").write_text(index, encoding="utf-8")
 
 
 def main() -> None:
@@ -209,7 +207,7 @@ def main() -> None:
     write_latest(latest)
     write_index(items, latest)
 
-    print(f"Built {len(items)} posts into site/ (latest={latest.slug})")
+    print(f"Built {len(items)} posts into docs/ (latest={latest.slug})")
 
 
 if __name__ == "__main__":

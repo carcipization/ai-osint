@@ -5,8 +5,8 @@ Public GitHub Pages site for publishing AI-assisted OSINT stories.
 ## Core idea
 
 - Write stories/claim-checks as Markdown in `docs/`.
-- Build a simple GitHub Pages site into `site/` (HTML + Markdown mirrors).
-- `site/latest.*` always points at the most recent publication (by filename sort).
+- GitHub Pages is served from `docs/` (repo Pages source is `/docs`).
+- `docs/latest.*` always points at the most recent publication.
 
 ## Commands
 
@@ -16,8 +16,8 @@ make build
 python3 scripts/publish.py
 ```
 
-## Site
+## Published site (GitHub Pages)
 
-- Pages root: `site/`
-- Latest: `site/latest.md` + `site/latest.html`
-- Index: `site/index.html`
+- Pages root: `docs/`
+- Latest: `docs/latest.md` + `docs/latest.html`
+- Index: `docs/index.html`
