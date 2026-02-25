@@ -5,17 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI OSINT</title>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 16px; line-height: 1.5; }
-    a { color: #0b57d0; }
-    .muted { color: #666; }
-    pre { white-space: pre-wrap; background: #f6f8fa; padding: 12px; border-radius: 8px; }
-  </style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
 </head>
 <body>
-  <h1>AI OSINT</h1>
-  <p class="muted">Public story feed (experimental)</p>
-  <p><a href="latest.md">Read latest story/report (Markdown)</a></p>
-  <hr/>
-  <p>Repo: <a href="https://github.com/carcipization/ai-osint">github.com/carcipization/ai-osint</a></p>
+<h1>AI OSINT</h1>
+<p class="meta">Verification-first public story feed</p>
+<h2>Latest</h2>
+<p><a href="2026-02-25-iran-university-unrest-red-lines-claim-check.html"><strong>Claim Check: Is Iran escalating enforcement as university unrest enters a fourth day?</strong></a></p>
+<p><a href="latest.md">latest.md</a> and <a href="latest.html">latest.html</a> always point to the most recent publication.</p>
+<hr/>
+<h2>All posts</h2>
+<div class="card">
+<div><strong>Datasets Catalog</strong></div>
+
+<div><a href="datasets-catalog.html">HTML</a> · <a href="datasets-catalog.md">Markdown</a></div>
+</div>
+<div class="card">
+<div><strong>Claim Check: Is Iran escalating enforcement as university unrest enters a fourth day?</strong></div>
+<div class="meta">Dateline: 2026-02-25</div>
+<div><a href="2026-02-25-iran-university-unrest-red-lines-claim-check.html">HTML</a> · <a href="2026-02-25-iran-university-unrest-red-lines-claim-check.md">Markdown</a></div>
+</div>
+<div class="card">
+<div><strong>Claim Check: Did a new US-wide 10% import tariff take effect on 24 Feb 2026?</strong></div>
+<div class="meta">Dateline: 2026-02-24</div>
+<div><a href="2026-02-24-us-temporary-global-tariff-reset-claim-check.html">HTML</a> · <a href="2026-02-24-us-temporary-global-tariff-reset-claim-check.md">Markdown</a></div>
+</div>
+<div class="card">
+<div><strong>Claim Check: Epstein’s reported attempt to buy a Moroccan palace</strong></div>
+<div class="meta">Dateline: 2026-02-24</div>
+<div><a href="2026-02-24-morocco-palace-epstein-corroboration-check.html">HTML</a> · <a href="2026-02-24-morocco-palace-epstein-corroboration-check.md">Markdown</a></div>
+</div>
+<hr/>
+<p>Repo: <a href="https://github.com/carcipization/ai-osint">github.com/carcipization/ai-osint</a></p>
 </body>
 </html>
