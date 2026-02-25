@@ -1,5 +1,9 @@
 # Datasets Catalog
 
+**Human-readable HTML:** https://carcipization.github.io/ai-osint/datasets-catalog.html
+**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/datasets-catalog.md
+
+
 Persistent inventory of open datasets/time-series sources to support AI-OSINT stories.
 
 ## How to use this file

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datasets Catalog</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="datasets-catalog">Datasets Catalog</h1>
+<p><strong>Human-readable HTML:</strong> https://carcipization.github.io/ai-osint/datasets-catalog.html
+<strong>LLM-friendly Markdown:</strong> https://carcipization.github.io/ai-osint/datasets-catalog.md</p>
+<p>Persistent inventory of open datasets/time-series sources to support AI-OSINT stories.</p>
+<h2 id="how-to-use-this-file">How to use this file</h2>
+<ul>
+<li>Keep entries concise and practical.</li>
+<li>Prioritize primary/public sources.</li>
+<li>Update when new datasets are discovered or caveats change.</li>
+<li>In STORY mode, consult this list for corroboration, anomaly checks, and context.</li>
+</ul>
+<h2 id="entry-template">Entry template</h2>
+<ul>
+<li><strong>Name:</strong></li>
+<li><strong>URL:</strong></li>
+<li><strong>Coverage:</strong> (geo + timeframe)</li>
+<li><strong>Cadence:</strong> (real-time/daily/weekly/monthly)</li>
+<li><strong>Topic tags:</strong></li>
+<li><strong>Good for:</strong></li>
+<li><strong>Caveats:</strong></li>
+<li><strong>Story-use ideas:</strong></li>
+</ul>
+<hr />
+<h2 id="seed-entries">Seed entries</h2>
+<h3 id="acled-armed-conflict-location-event-data">ACLED (Armed Conflict Location &amp; Event Data)</h3>
+<ul>
+<li><strong>URL:</strong> https://acleddata.com/</li>
+<li><strong>Coverage:</strong> Global conflict/unrest events (country-level availability varies)</li>
+<li><strong>Cadence:</strong> Frequent updates</li>
+<li><strong>Topic tags:</strong> geopolitics, unrest, conflict</li>
+<li><strong>Good for:</strong> Detecting spikes in protests, violence, and conflict-event shifts</li>
+<li><strong>Caveats:</strong> Methodology definitions matter; reporting lag and source bias by region</li>
+<li><strong>Story-use ideas:</strong> "Protest intensity in X region jumps Y% week-over-week"</li>
+</ul>
+<h3 id="gdelt-events">GDELT Events</h3>
+<ul>
+<li><strong>URL:</strong> https://www.gdeltproject.org/</li>
+<li><strong>Coverage:</strong> Global media-derived event signals</li>
+<li><strong>Cadence:</strong> Near real-time</li>
+<li><strong>Topic tags:</strong> geopolitics, unrest, media signals</li>
+<li><strong>Good for:</strong> Early-change detection and narrative shifts across regions/topics</li>
+<li><strong>Caveats:</strong> Media-coverage bias; not a direct ground-truth dataset</li>
+<li><strong>Story-use ideas:</strong> "Media event-code surge preceded policy move"</li>
+</ul>
+<h3 id="usgs-earthquake-catalog">USGS Earthquake Catalog</h3>
+<ul>
+<li><strong>URL:</strong> https://earthquake.usgs.gov/earthquakes/feed/</li>
+<li><strong>Coverage:</strong> Global seismic events</li>
+<li><strong>Cadence:</strong> Near real-time feeds</li>
+<li><strong>Topic tags:</strong> disaster, infrastructure risk</li>
+<li><strong>Good for:</strong> Rapid hazard context for geopolitical/infrastructure stories</li>
+<li><strong>Caveats:</strong> Natural hazard data; relevance to political stories is contextual</li>
+<li><strong>Story-use ideas:</strong> "Clustered seismic events near critical infrastructure"</li>
+</ul>
+<h3 id="nasa-firms-fire-information-for-resource-management-system">NASA FIRMS (Fire Information for Resource Management System)</h3>
+<ul>
+<li><strong>URL:</strong> https://firms.modaps.eosdis.nasa.gov/</li>
+<li><strong>Coverage:</strong> Global fire hotspots from satellite detections</li>
+<li><strong>Cadence:</strong> Near real-time/daily products</li>
+<li><strong>Topic tags:</strong> environment, conflict context, disruption</li>
+<li><strong>Good for:</strong> Detecting unusual fire concentration changes by region</li>
+<li><strong>Caveats:</strong> Cloud cover/sensor limits; hotspot ≠ confirmed incident cause</li>
+<li><strong>Story-use ideas:</strong> "Unexpected hotspot spike in region under unrest"</li>
+</ul>
+<h3 id="statscan-crime-data-portal">StatsCan Crime data portal</h3>
+<ul>
+<li><strong>URL:</strong> https://www.statcan.gc.ca/ (datasets vary by table)</li>
+<li><strong>Coverage:</strong> Canada domestic statistics incl. crime tables</li>
+<li><strong>Cadence:</strong> Monthly/quarterly/annual depending table</li>
+<li><strong>Topic tags:</strong> domestic-crime, canada</li>
+<li><strong>Good for:</strong> Baseline trends and regional crime discontinuities in Canada</li>
+<li><strong>Caveats:</strong> Release lag; table definitions/revisions</li>
+<li><strong>Story-use ideas:</strong> "Category-level divergence across provinces"</li>
+</ul>
+<h3 id="fbi-cde-ucr-resources">FBI CDE / UCR resources</h3>
+<ul>
+<li><strong>URL:</strong> https://cde.ucr.cjis.gov/</li>
+<li><strong>Coverage:</strong> US crime reporting datasets/dashboards</li>
+<li><strong>Cadence:</strong> Periodic releases</li>
+<li><strong>Topic tags:</strong> domestic-crime, us</li>
+<li><strong>Good for:</strong> US national/regional crime trend comparisons</li>
+<li><strong>Caveats:</strong> Reporting participation changes; category comparability over time</li>
+<li><strong>Story-use ideas:</strong> "Outlier metro trend compared to national baseline"</li>
+</ul>
+<h3 id="oecdai-policy-observatory-indicators">OECD.AI Policy Observatory / indicators</h3>
+<ul>
+<li><strong>URL:</strong> https://oecd.ai/</li>
+<li><strong>Coverage:</strong> AI policy, ecosystem, and country indicators</li>
+<li><strong>Cadence:</strong> Periodic updates</li>
+<li><strong>Topic tags:</strong> ai, policy, geopolitics</li>
+<li><strong>Good for:</strong> Cross-country AI policy and capability context</li>
+<li><strong>Caveats:</strong> Some metrics are composite and methodology-sensitive</li>
+<li><strong>Story-use ideas:</strong> "Policy change vs investment/compute signal mismatch"</li>
+</ul>
+</body>
+</html>
