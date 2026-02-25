@@ -88,3 +88,79 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Good for:** Cross-country AI policy and capability context
 - **Caveats:** Some metrics are composite and methodology-sensitive
 - **Story-use ideas:** "Policy change vs investment/compute signal mismatch"
+
+---
+
+## Additions (2026-02-25 DATASET cycle)
+
+### UCDP Georeferenced Event Dataset (GED)
+- **URL:** https://ucdp.uu.se/downloads/
+- **Coverage:** Global organized violence event data; long historical span with geo/event detail
+- **Cadence:** Periodic releases
+- **Topic tags:** geopolitics, conflict, unrest
+- **Good for:** Conflict intensity discontinuities, district-level escalation checks, cross-feed validation with ACLED/GDELT
+- **Caveats:** Release cadence slower than near-real-time feeds; coding changes/version notes must be tracked
+- **Story-use ideas:** "Is a local flare-up a true structural escalation or a transient reporting spike?"
+
+### ICEWS Event Data (Harvard Dataverse)
+- **URL:** https://dataverse.harvard.edu/dataverse/icews
+- **Coverage:** Global machine-coded political events; long-run historical/event-actor structure
+- **Cadence:** Batch/periodic updates via repository releases
+- **Topic tags:** geopolitics, early-warning, event-data
+- **Good for:** Regime interaction shifts, cooperation-vs-conflict balance changes, pre-crisis signal testing
+- **Caveats:** Machine-coding and media-source dependence can inject bias/noise; requires triangulation
+- **Story-use ideas:** "Did diplomatic hostility metrics jump before sanctions or kinetic action?"
+
+### OONI Network Measurement Data
+- **URL:** https://ooni.org/data/
+- **Coverage:** Global internet censorship/interference measurements from distributed probes
+- **Cadence:** Frequent/ongoing submissions
+- **Topic tags:** censorship, unrest, infrastructure, geopolitics
+- **Good for:** Technical corroboration of shutdowns/platform blocking during protests/elections/conflicts
+- **Caveats:** Probe coverage varies by country/ASN; non-detections are not definitive evidence of no interference
+- **Story-use ideas:** "Did messaging-platform blocking coincide with street mobilization windows?"
+
+### GDELT Data Feeds (Events + GKG)
+- **URL:** https://www.gdeltproject.org/data.html
+- **Coverage:** Global media-derived events/themes/tone; high-frequency updates
+- **Cadence:** Near real-time (multiple updates per hour)
+- **Topic tags:** geopolitics, unrest, media-signals
+- **Good for:** Early anomaly surfacing and narrative-shift detection before official statistics publish
+- **Caveats:** Media-coverage bias and language asymmetries; not direct ground truth
+- **Story-use ideas:** "Theme/tone shock appears before official acknowledgement of an incident cluster"
+
+### CDC Data Portal (incl. NVSS Provisional Overdose series)
+- **URL:** https://data.cdc.gov/
+- **Coverage:** US public-health indicators (national/state/local, dataset dependent)
+- **Cadence:** Dataset-specific (often monthly/quarterly updates)
+- **Topic tags:** us, domestic-risk, public-health
+- **Good for:** Social stress context and divergence analysis alongside domestic crime series
+- **Caveats:** Provisional series are revised; lag and suppression rules can affect short-window interpretation
+- **Story-use ideas:** "Do overdose and violent-crime trajectories diverge unusually in specific states?"
+
+### Chicago Crimes (2001–Present)
+- **URL:** https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2
+- **Coverage:** Chicago incident-level crime records with offense/date/location metadata
+- **Cadence:** Frequent city feed updates
+- **Topic tags:** us, domestic-crime, city-level
+- **Good for:** District/category anomaly detection, near-real-time urban trend checks, policy-change impact monitoring
+- **Caveats:** Incident updates/backfills occur; offense definitions and geocoding fields need careful handling
+- **Story-use ideas:** "Did robbery or motor-vehicle theft break seasonal pattern in specific districts?"
+
+### Toronto Major Crime Indicators (MCI)
+- **URL:** https://open.toronto.ca/dataset/major-crime-indicators/
+- **Coverage:** Toronto police-reported major crime incidents by category/neighbourhood/time
+- **Cadence:** Periodic municipal updates
+- **Topic tags:** canada, domestic-crime, city-level
+- **Good for:** Canadian urban crime discontinuity checks and cross-border methodology-aware comparisons
+- **Caveats:** Reporting and category conventions differ from US systems; publication lag may vary
+- **Story-use ideas:** "Which Toronto neighbourhoods show category-specific outlier changes vs city baseline?"
+
+### Stanford HELM (Holistic Evaluation of Language Models)
+- **URL:** https://crfm.stanford.edu/helm/
+- **Coverage:** AI model benchmark/evaluation reporting across tasks and scenarios
+- **Cadence:** Periodic benchmark/report updates
+- **Topic tags:** ai, evaluation, capability-tracking
+- **Good for:** Tracking capability/safety trade-offs and identifying suspicious benchmark discontinuities
+- **Caveats:** Benchmark design/protocol changes can mimic capability jumps; compare like-for-like settings
+- **Story-use ideas:** "Large benchmark jump without matching transparency on training or evaluation protocol"

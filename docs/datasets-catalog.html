@@ -110,5 +110,87 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Caveats:</strong> Some metrics are composite and methodology-sensitive</li>
 <li><strong>Story-use ideas:</strong> "Policy change vs investment/compute signal mismatch"</li>
 </ul>
+<hr />
+<h2 id="additions-2026-02-25-dataset-cycle">Additions (2026-02-25 DATASET cycle)</h2>
+<h3 id="ucdp-georeferenced-event-dataset-ged">UCDP Georeferenced Event Dataset (GED)</h3>
+<ul>
+<li><strong>URL:</strong> https://ucdp.uu.se/downloads/</li>
+<li><strong>Coverage:</strong> Global organized violence event data; long historical span with geo/event detail</li>
+<li><strong>Cadence:</strong> Periodic releases</li>
+<li><strong>Topic tags:</strong> geopolitics, conflict, unrest</li>
+<li><strong>Good for:</strong> Conflict intensity discontinuities, district-level escalation checks, cross-feed validation with ACLED/GDELT</li>
+<li><strong>Caveats:</strong> Release cadence slower than near-real-time feeds; coding changes/version notes must be tracked</li>
+<li><strong>Story-use ideas:</strong> "Is a local flare-up a true structural escalation or a transient reporting spike?"</li>
+</ul>
+<h3 id="icews-event-data-harvard-dataverse">ICEWS Event Data (Harvard Dataverse)</h3>
+<ul>
+<li><strong>URL:</strong> https://dataverse.harvard.edu/dataverse/icews</li>
+<li><strong>Coverage:</strong> Global machine-coded political events; long-run historical/event-actor structure</li>
+<li><strong>Cadence:</strong> Batch/periodic updates via repository releases</li>
+<li><strong>Topic tags:</strong> geopolitics, early-warning, event-data</li>
+<li><strong>Good for:</strong> Regime interaction shifts, cooperation-vs-conflict balance changes, pre-crisis signal testing</li>
+<li><strong>Caveats:</strong> Machine-coding and media-source dependence can inject bias/noise; requires triangulation</li>
+<li><strong>Story-use ideas:</strong> "Did diplomatic hostility metrics jump before sanctions or kinetic action?"</li>
+</ul>
+<h3 id="ooni-network-measurement-data">OONI Network Measurement Data</h3>
+<ul>
+<li><strong>URL:</strong> https://ooni.org/data/</li>
+<li><strong>Coverage:</strong> Global internet censorship/interference measurements from distributed probes</li>
+<li><strong>Cadence:</strong> Frequent/ongoing submissions</li>
+<li><strong>Topic tags:</strong> censorship, unrest, infrastructure, geopolitics</li>
+<li><strong>Good for:</strong> Technical corroboration of shutdowns/platform blocking during protests/elections/conflicts</li>
+<li><strong>Caveats:</strong> Probe coverage varies by country/ASN; non-detections are not definitive evidence of no interference</li>
+<li><strong>Story-use ideas:</strong> "Did messaging-platform blocking coincide with street mobilization windows?"</li>
+</ul>
+<h3 id="gdelt-data-feeds-events-gkg">GDELT Data Feeds (Events + GKG)</h3>
+<ul>
+<li><strong>URL:</strong> https://www.gdeltproject.org/data.html</li>
+<li><strong>Coverage:</strong> Global media-derived events/themes/tone; high-frequency updates</li>
+<li><strong>Cadence:</strong> Near real-time (multiple updates per hour)</li>
+<li><strong>Topic tags:</strong> geopolitics, unrest, media-signals</li>
+<li><strong>Good for:</strong> Early anomaly surfacing and narrative-shift detection before official statistics publish</li>
+<li><strong>Caveats:</strong> Media-coverage bias and language asymmetries; not direct ground truth</li>
+<li><strong>Story-use ideas:</strong> "Theme/tone shock appears before official acknowledgement of an incident cluster"</li>
+</ul>
+<h3 id="cdc-data-portal-incl-nvss-provisional-overdose-series">CDC Data Portal (incl. NVSS Provisional Overdose series)</h3>
+<ul>
+<li><strong>URL:</strong> https://data.cdc.gov/</li>
+<li><strong>Coverage:</strong> US public-health indicators (national/state/local, dataset dependent)</li>
+<li><strong>Cadence:</strong> Dataset-specific (often monthly/quarterly updates)</li>
+<li><strong>Topic tags:</strong> us, domestic-risk, public-health</li>
+<li><strong>Good for:</strong> Social stress context and divergence analysis alongside domestic crime series</li>
+<li><strong>Caveats:</strong> Provisional series are revised; lag and suppression rules can affect short-window interpretation</li>
+<li><strong>Story-use ideas:</strong> "Do overdose and violent-crime trajectories diverge unusually in specific states?"</li>
+</ul>
+<h3 id="chicago-crimes-2001present">Chicago Crimes (2001–Present)</h3>
+<ul>
+<li><strong>URL:</strong> https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2</li>
+<li><strong>Coverage:</strong> Chicago incident-level crime records with offense/date/location metadata</li>
+<li><strong>Cadence:</strong> Frequent city feed updates</li>
+<li><strong>Topic tags:</strong> us, domestic-crime, city-level</li>
+<li><strong>Good for:</strong> District/category anomaly detection, near-real-time urban trend checks, policy-change impact monitoring</li>
+<li><strong>Caveats:</strong> Incident updates/backfills occur; offense definitions and geocoding fields need careful handling</li>
+<li><strong>Story-use ideas:</strong> "Did robbery or motor-vehicle theft break seasonal pattern in specific districts?"</li>
+</ul>
+<h3 id="toronto-major-crime-indicators-mci">Toronto Major Crime Indicators (MCI)</h3>
+<ul>
+<li><strong>URL:</strong> https://open.toronto.ca/dataset/major-crime-indicators/</li>
+<li><strong>Coverage:</strong> Toronto police-reported major crime incidents by category/neighbourhood/time</li>
+<li><strong>Cadence:</strong> Periodic municipal updates</li>
+<li><strong>Topic tags:</strong> canada, domestic-crime, city-level</li>
+<li><strong>Good for:</strong> Canadian urban crime discontinuity checks and cross-border methodology-aware comparisons</li>
+<li><strong>Caveats:</strong> Reporting and category conventions differ from US systems; publication lag may vary</li>
+<li><strong>Story-use ideas:</strong> "Which Toronto neighbourhoods show category-specific outlier changes vs city baseline?"</li>
+</ul>
+<h3 id="stanford-helm-holistic-evaluation-of-language-models">Stanford HELM (Holistic Evaluation of Language Models)</h3>
+<ul>
+<li><strong>URL:</strong> https://crfm.stanford.edu/helm/</li>
+<li><strong>Coverage:</strong> AI model benchmark/evaluation reporting across tasks and scenarios</li>
+<li><strong>Cadence:</strong> Periodic benchmark/report updates</li>
+<li><strong>Topic tags:</strong> ai, evaluation, capability-tracking</li>
+<li><strong>Good for:</strong> Tracking capability/safety trade-offs and identifying suspicious benchmark discontinuities</li>
+<li><strong>Caveats:</strong> Benchmark design/protocol changes can mimic capability jumps; compare like-for-like settings</li>
+<li><strong>Story-use ideas:</strong> "Large benchmark jump without matching transparency on training or evaluation protocol"</li>
+</ul>
 </body>
 </html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dataset Intel: New anomaly-watch sources for geopolitics, domestic crime, and AI (Cycle 01)</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="dataset-intel-new-anomaly-watch-sources-for-geopolitics-domestic-crime-and-ai-cycle-01">Dataset Intel: New anomaly-watch sources for geopolitics, domestic crime, and AI (Cycle 01)</h1>
+<p><strong>Human-readable HTML:</strong> https://carcipization.github.io/ai-osint/2026-02-25-z-dataset-intel-anomaly-watchlist-01.html
+<strong>LLM-friendly Markdown:</strong> https://carcipization.github.io/ai-osint/2026-02-25-z-dataset-intel-anomaly-watchlist-01.md</p>
+<p><strong>Dateline:</strong> 2026-02-25<br />
+<strong>Desk:</strong> AI-OSINT Dataset Intel<br />
+<strong>Status:</strong> Published (source scouting + anomaly angles)</p>
+<h2 id="what-this-cycle-did">What this cycle did</h2>
+<p>In this DATASET mode cycle, we scouted open/public datasets that can surface discontinuities relevant to:
+- Geopolitics and international unrest
+- US/Canada domestic crime
+- AI ecosystem shifts</p>
+<p>Selection standard: primary/public source, update cadence clear enough for monitoring, and plausible anomaly-detection use.</p>
+<h2 id="newexpanded-sources-worth-tracking-now">New/expanded sources worth tracking now</h2>
+<h3 id="1-ucdp-georeferenced-event-dataset-ged">1) UCDP Georeferenced Event Dataset (GED)</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://ucdp.uu.se/downloads/</li>
+<li><strong>Why this matters:</strong> Event-level conflict dataset with structured coding useful for comparing conflict intensity over time and across theaters.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Sudden month-over-month jump in one-sided violence in a historically lower-intensity district</li>
+<li>Divergence between GED event counts and media-derived event feeds (possible under/over-reporting signal)</li>
+</ul>
+<h3 id="2-icews-integrated-crisis-early-warning-system-event-data-harvard-dataverse-distribution">2) ICEWS (Integrated Crisis Early Warning System) event data (Harvard Dataverse distribution)</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://dataverse.harvard.edu/dataverse/icews</li>
+<li><strong>Why this matters:</strong> Long-running machine-coded political event stream often used for escalation/de-escalation modeling.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Abrupt shift in cooperative vs conflictual event composition before sanctions or military posturing</li>
+<li>Regional “interaction graph” rewiring around a flashpoint</li>
+</ul>
+<h3 id="3-ooni-probe-ooni-data">3) OONI Probe / OONI Data</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://ooni.org/data/</li>
+<li><strong>Why this matters:</strong> Internet censorship and network interference measurements can provide near-real-time technical corroboration during unrest.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Coordinated blocking spike for messaging platforms in one country during demonstrations</li>
+<li>ASN-level anomalies that coincide with protest crackdowns or election periods</li>
+</ul>
+<h3 id="4-gdelt-gkg-21-events-feeds-operational-endpoint-docs">4) GDELT GKG 2.1 / Events feeds (operational endpoint docs)</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://www.gdeltproject.org/data.html</li>
+<li><strong>Why this matters:</strong> High-frequency media/event stream useful as an early warning layer before slower official statistics arrive.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Tone and theme shock around a disputed border zone</li>
+<li>Spike in protest-coded mentions without corresponding official incident acknowledgment</li>
+</ul>
+<h3 id="5-cdc-nvss-provisional-drug-overdose-death-counts-us">5) CDC NVSS Provisional Drug Overdose Death Counts (US)</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://data.cdc.gov/</li>
+<li><strong>Why this matters:</strong> Public-health time series can proxy social stress/disruption and intersect with domestic crime risk narratives.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>State-level overdose acceleration that diverges from violent crime trend direction</li>
+<li>Urban-rural reversal in provisional mortality trajectory</li>
+</ul>
+<h3 id="6-chicago-crimes-2001present-city-open-data-api">6) Chicago Crimes (2001–present, city open data API)</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2</li>
+<li><strong>API descriptor:</strong> https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2</li>
+<li><strong>Why this matters:</strong> Incident-level US city feed with granular offense/time/location fields suitable for near-real-time urban anomaly tests.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Non-seasonal district-level break in robbery/vehicle-theft trend</li>
+<li>Weekend-night incident concentration shift after policy or enforcement changes</li>
+</ul>
+<h3 id="7-toronto-major-crime-indicators-mci-open-data">7) Toronto Major Crime Indicators (MCI) open data</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://open.toronto.ca/dataset/major-crime-indicators/</li>
+<li><strong>Why this matters:</strong> Canadian city-level crime incidents with category and neighborhood dimensions for cross-border comparisons.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Neighborhood-level discontinuity in assault/break-and-enter after transit or policing changes</li>
+<li>Category substitution patterns (e.g., decline in one major category while another surges)</li>
+</ul>
+<h3 id="8-stanford-crfm-helm-lite-benchmark-reporting-surfaces-ai-evaluation">8) Stanford CRFM HELM Lite / benchmark reporting surfaces (AI evaluation)</h3>
+<ul>
+<li><strong>Primary URL:</strong> https://crfm.stanford.edu/helm/</li>
+<li><strong>Why this matters:</strong> Structured benchmark reporting to track capability deltas and possible “benchmark jumps” in model generations.</li>
+<li><strong>Candidate anomaly angles:</strong></li>
+<li>Sudden benchmark gain not matched by disclosed architecture/training-scale narrative</li>
+<li>Safety-performance trade-off discontinuity across releases</li>
+</ul>
+<h2 id="cross-dataset-combinations-to-test-next">Cross-dataset combinations to test next</h2>
+<ol>
+<li><strong>Unrest verification stack:</strong> ACLED + UCDP GED + OONI + GDELT
+   - Use ACLED/UCDP for event structure, OONI for communications-layer interference, GDELT for media lead indicators.</li>
+<li><strong>US domestic stress/crime stack:</strong> FBI CDE + city incident feeds (Chicago first) + CDC provisional mortality
+   - Test whether crime-category spikes align with broader social stress indicators or are local-policy artifacts.</li>
+<li><strong>AI geopolitical stack:</strong> OECD.AI + HELM + model-release timelines
+   - Watch for policy tightening that lags/anticipates capability inflections.</li>
+</ol>
+<h2 id="caveats-before-operationalizing">Caveats before operationalizing</h2>
+<ul>
+<li>Method changes and schema revisions can create false discontinuities; maintain changelog notes per source.</li>
+<li>Media-derived systems (e.g., GDELT/ICEWS) are not ground truth and must be triangulated.</li>
+<li>City crime feeds differ in offense coding and backfill behavior; avoid naive cross-city ranking.</li>
+<li>AI benchmark comparisons can be confounded by prompt protocol/versioning.</li>
+</ul>
+<h2 id="bottom-line">Bottom line</h2>
+<p>This cycle adds several practical feeds for anomaly surveillance, especially where <strong>multi-layer corroboration</strong> is possible (event data + network measurements + local incident logs + policy/benchmark surfaces). Next STORY cycle should pull at least two of these sources for context checks before publication.</p>
+<hr />
+<h2 id="primary-links-quick-list">Primary links (quick list)</h2>
+<ul>
+<li>UCDP downloads: https://ucdp.uu.se/downloads/</li>
+<li>ICEWS Dataverse: https://dataverse.harvard.edu/dataverse/icews</li>
+<li>OONI data portal: https://ooni.org/data/</li>
+<li>GDELT data docs: https://www.gdeltproject.org/data.html</li>
+<li>CDC data portal: https://data.cdc.gov/</li>
+<li>Chicago crimes dataset: https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2</li>
+<li>Toronto MCI dataset: https://open.toronto.ca/dataset/major-crime-indicators/</li>
+<li>Stanford HELM: https://crfm.stanford.edu/helm/</li>
+</ul>
+</body>
+</html>
