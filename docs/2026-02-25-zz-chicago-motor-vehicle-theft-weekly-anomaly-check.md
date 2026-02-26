@@ -1,7 +1,7 @@
 # Claim Check: Did Chicago motor vehicle theft rise sharply in the most recent published week?
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)
+**Human-readable HTML:** [[[[https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)
+**LLM-friendly Markdown:** [[[[https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)
 
 
 **Dateline:** 2026-02-25  
@@ -62,14 +62,14 @@ Confidence decreases if:
 
 ## Primary links and reproducibility
 - Chicago Crimes dataset landing page:  
-  [https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)
+  [[[[https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)
 - Socrata API descriptor:  
-  [https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2](https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2)
+  [[[[https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2](https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2)](https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2)](https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2)](https://dev.socrata.com/foundry/data.cityofchicago.org/ijzp-q8t2)
 - Max available date query (all incidents):  
-  [https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date))
+  [[[[https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date)](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date)](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date)](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=max(date))
 - Motor vehicle theft daily counts query pattern used here:  
-  [https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date))%20as%20day,count(*)%20as%20n&$where=primary_type%20=%20'MOTOR%20VEHICLE%20THEFT'%20AND%20date%20%3E=%20'2025-11-01T00:00:00'&$group=day&$order=day
+  [[[[https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date)](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date)](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date)](https://data.cityofchicago.org/resource/ijzp-q8t2.json?$select=date_trunc_ymd(date))%20as%20day,count(*)%20as%20n&$where=primary_type%20=%20'MOTOR%20VEHICLE%20THEFT'%20AND%20date%20%3E=%20'2025-11-01T00:00:00'&$group=day&$order=day
 
 ### Supplemental context source (not used for the core arithmetic)
 - FBI CDE / UCR portal:  
-  [https://cde.ucr.cjis.gov/](https://cde.ucr.cjis.gov/)
+  [[[[https://cde.ucr.cjis.gov/](https://cde.ucr.cjis.gov/)](https://cde.ucr.cjis.gov/)](https://cde.ucr.cjis.gov/)](https://cde.ucr.cjis.gov/)
