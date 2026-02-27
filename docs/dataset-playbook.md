@@ -1,8 +1,5 @@
 # Dataset Playbook
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/dataset-playbook.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/dataset-playbook.md)
-
 
 **Dateline:** 2026-02-27  
 **Status:** Living guide

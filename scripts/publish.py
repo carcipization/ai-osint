@@ -92,6 +92,10 @@ def linkify_plain_urls(md_text: str) -> str:
 
 
 def upsert_crosslinks(md_text: str, slug: str) -> str:
+    # Keep method docs terse: skip auto crosslink header for playbook pages.
+    if slug == "dataset-playbook":
+        return linkify_plain_urls(md_text)
+
     html_url = f"https://carcipization.github.io/ai-osint/{slug}.html"
     md_url = f"https://carcipization.github.io/ai-osint/{slug}.md"
 
