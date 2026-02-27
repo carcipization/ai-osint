@@ -1,9 +1,5 @@
 # Dataset Playbook
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/dataset-playbook.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/dataset-playbook.md
-
-
 
 **Dateline:** 2026-02-27  
 **Status:** Living guide
@@ -50,36 +46,6 @@ Include one-line rationale for the label.
 - **Coverage illusion** (probe/sensor/reporting dropouts).
 - **Backfill/revision shock** (history rewritten).
 - **Narrative overfit** (story picked before test).
-
-## Weird/obscure source trade-offs
-
-### Behavioral derivatives
-Examples: AIS/ADS-B inferred behaviors, anchorage states.
-
-- **Pro:** early signal.
-- **Con:** inference errors.
-- **Use:** trigger + corroborate, not standalone proof.
-
-### Technical side-effects
-Examples: OONI interference measurements.
-
-- **Pro:** direct mechanism clues.
-- **Con:** probe-distribution bias.
-- **Use:** pair with independent reporting/official statements.
-
-### Research corpora snapshots
-Examples: TGDataset.
-
-- **Pro:** strong historical/graph baselines.
-- **Con:** not live; scope constraints.
-- **Use:** structure/context, not real-time truth.
-
-### Aggregator mega-feeds
-Examples: OpenSanctions, GDELT, OpenCorporates.
-
-- **Pro:** broad discovery speed.
-- **Con:** inherited upstream errors/latency.
-- **Use:** discovery/prioritization; verify against primaries before strong claims.
 
 ## Strategy mode
 

@@ -79,6 +79,36 @@ Prioritize candidates with high signal + high corroboration + medium/low FP risk
 - TGStat/Telemetr/TGDataset + event timeline + independent reporting
 - Good for identifying bridge channels and coordinated amplification windows.
 
+## Weird/obscure source trade-offs
+
+### Behavioral derivatives
+Examples: AIS/ADS-B inferred behaviors, anchorage states.
+
+- **Pro:** early signal.
+- **Con:** inference errors.
+- **Use:** trigger + corroborate, not standalone proof.
+
+### Technical side-effects
+Examples: OONI interference measurements.
+
+- **Pro:** direct mechanism clues.
+- **Con:** probe-distribution bias.
+- **Use:** pair with independent reporting/official statements.
+
+### Research corpora snapshots
+Examples: TGDataset.
+
+- **Pro:** strong historical/graph baselines.
+- **Con:** not live; scope constraints.
+- **Use:** structure/context, not real-time truth.
+
+### Aggregator mega-feeds
+Examples: OpenSanctions, GDELT, OpenCorporates.
+
+- **Pro:** broad discovery speed.
+- **Con:** inherited upstream errors/latency.
+- **Use:** discovery/prioritization; verify against primaries before strong claims.
+
 ## Escalation rule (to playbook)
 
 Escalate a candidate into `dataset-playbook.md` workflow only if:

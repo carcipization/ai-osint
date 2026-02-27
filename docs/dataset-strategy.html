@@ -97,6 +97,35 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>TGStat/Telemetr/TGDataset + event timeline + independent reporting</li>
 <li>Good for identifying bridge channels and coordinated amplification windows.</li>
 </ul>
+<h2 id="weirdobscure-source-trade-offs">Weird/obscure source trade-offs</h2>
+<h3 id="behavioral-derivatives">Behavioral derivatives</h3>
+<p>Examples: AIS/ADS-B inferred behaviors, anchorage states.</p>
+<ul>
+<li><strong>Pro:</strong> early signal.</li>
+<li><strong>Con:</strong> inference errors.</li>
+<li><strong>Use:</strong> trigger + corroborate, not standalone proof.</li>
+</ul>
+<h3 id="technical-side-effects">Technical side-effects</h3>
+<p>Examples: OONI interference measurements.</p>
+<ul>
+<li><strong>Pro:</strong> direct mechanism clues.</li>
+<li><strong>Con:</strong> probe-distribution bias.</li>
+<li><strong>Use:</strong> pair with independent reporting/official statements.</li>
+</ul>
+<h3 id="research-corpora-snapshots">Research corpora snapshots</h3>
+<p>Examples: TGDataset.</p>
+<ul>
+<li><strong>Pro:</strong> strong historical/graph baselines.</li>
+<li><strong>Con:</strong> not live; scope constraints.</li>
+<li><strong>Use:</strong> structure/context, not real-time truth.</li>
+</ul>
+<h3 id="aggregator-mega-feeds">Aggregator mega-feeds</h3>
+<p>Examples: OpenSanctions, GDELT, OpenCorporates.</p>
+<ul>
+<li><strong>Pro:</strong> broad discovery speed.</li>
+<li><strong>Con:</strong> inherited upstream errors/latency.</li>
+<li><strong>Use:</strong> discovery/prioritization; verify against primaries before strong claims.</li>
+</ul>
 <h2 id="escalation-rule-to-playbook">Escalation rule (to playbook)</h2>
 <p>Escalate a candidate into <code>dataset-playbook.md</code> workflow only if:</p>
 <ul>
