@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dataset Playbook (General-purpose OSINT)</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="dataset-playbook-general-purpose-osint">Dataset Playbook (General-purpose OSINT)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-playbook.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-playbook.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-02-27<br />
+<strong>Desk:</strong> AI-OSINT Methods<br />
+<strong>Status:</strong> Living guide</p>
+<h2 id="why-this-exists">Why this exists</h2>
+<p>This playbook is a practical operating guide for turning datasets into high-confidence, verification-first stories.</p>
+<p>It is designed to be:
+- <strong>General-purpose</strong> (works across geopolitics, security, infrastructure, climate, domestic risk, AI governance)
+- <strong>Repeatable</strong> (same checks every cycle)
+- <strong>Auditable</strong> (easy to trace claims back to source evidence)</p>
+<hr />
+<h2 id="core-operating-model">Core operating model</h2>
+<h3 id="1-start-with-a-falsifiable-question">1) Start with a falsifiable question</h3>
+<p>Use a concrete claim shape:
+- "Did X increase/decrease in Y timeframe?"
+- "Did behavior shift after event Z?"
+- "Is this pattern unusual versus baseline?"</p>
+<p>Avoid vague prompts like "what looks interesting?" until after baseline checks are done.</p>
+<h3 id="2-build-a-minimum-triangulation-set">2) Build a minimum triangulation set</h3>
+<p>For each story angle, use at least:
+- <strong>1 primary dataset</strong> (closest to ground truth)
+- <strong>1 independent corroborator</strong> (different collection method)
+- <strong>1 context/control source</strong> (to test confounders)</p>
+<h3 id="3-separate-signal-from-mechanics">3) Separate signal from mechanics</h3>
+<p>Before interpreting meaning, test whether the pattern can be explained by:
+- release cadence changes,
+- schema changes,
+- backfills/revisions,
+- temporary outages/coverage shifts,
+- platform policy changes.</p>
+<h3 id="4-state-confidence-explicitly">4) State confidence explicitly</h3>
+<p>Use labels consistently:
+- <strong>Confirmed</strong> (multiple independent sources align)
+- <strong>Likely</strong> (strong but incomplete evidence)
+- <strong>Inconclusive</strong> (insufficient or conflicting evidence)
+- <strong>False/Misleading</strong> (claim contradicted by stronger evidence)</p>
+<h3 id="5-preserve-auditability">5) Preserve auditability</h3>
+<p>Every published claim should include:
+- source URLs,
+- time window,
+- metric definition,
+- caveats,
+- what would change the conclusion.</p>
+<hr />
+<h2 id="dataset-selection-framework">Dataset selection framework</h2>
+<p>When deciding whether to use a dataset in production cycles, score it on:</p>
+<ol>
+<li><strong>Coverage fit</strong> — Does it actually cover the geography/time/topic needed?</li>
+<li><strong>Cadence fit</strong> — Is update frequency appropriate for the claim horizon?</li>
+<li><strong>Method transparency</strong> — Is collection/processing method documented?</li>
+<li><strong>Revision behavior</strong> — Are backfills/re-writes common?</li>
+<li><strong>Reproducibility</strong> — Can someone else independently rerun your logic?</li>
+<li><strong>Operational friction</strong> — API reliability, licensing, auth burden, cost.</li>
+</ol>
+<p>High story value with low methodological transparency is allowed for scouting, but should be tagged as provisional.</p>
+<hr />
+<h2 id="workflow-by-cycle-practical">Workflow by cycle (practical)</h2>
+<h3 id="a-scout">A) Scout</h3>
+<ul>
+<li>Pull candidate anomalies from high-cadence feeds.</li>
+<li>Discard anything that cannot be expressed in a measurable way.</li>
+</ul>
+<h3 id="b-verify">B) Verify</h3>
+<ul>
+<li>Re-query at least one independent source.</li>
+<li>Compare against a recent baseline and seasonal window if relevant.</li>
+</ul>
+<h3 id="c-stress-test">C) Stress-test</h3>
+<ul>
+<li>Check known failure modes (coverage gaps, reporting lag, dedupe issues, taxonomy drift).</li>
+<li>Attempt one plausible null explanation.</li>
+</ul>
+<h3 id="d-publish">D) Publish</h3>
+<ul>
+<li>Keep claim narrow.</li>
+<li>Include confidence and caveats.</li>
+<li>Log unresolved verification gaps as explicit follow-ups.</li>
+</ul>
+<h3 id="e-catalog-maintenance">E) Catalog maintenance</h3>
+<ul>
+<li>Add high-value sources to <code>datasets-catalog.md</code>.</li>
+<li>Keep entries short, practical, and comparable.</li>
+</ul>
+<hr />
+<h2 id="common-failure-modes-and-fixes">Common failure modes (and fixes)</h2>
+<ul>
+<li><strong>Cadence mismatch</strong> → comparing daily claims against monthly datasets.</li>
+<li>
+<p><em>Fix:</em> align claim horizon to release frequency.</p>
+</li>
+<li>
+<p><strong>Taxonomy drift</strong> → category definitions changed mid-series.</p>
+</li>
+<li>
+<p><em>Fix:</em> re-normalize or split pre/post periods.</p>
+</li>
+<li>
+<p><strong>Coverage illusions</strong> → apparent drop is sensor/reporting dropout.</p>
+</li>
+<li>
+<p><em>Fix:</em> add coverage/probe-density control metric.</p>
+</li>
+<li>
+<p><strong>Narrative overfitting</strong> → selecting evidence to fit a prior.</p>
+</li>
+<li>
+<p><em>Fix:</em> write the disconfirming test first.</p>
+</li>
+<li>
+<p><strong>Cross-domain overreach</strong> → jumping from correlation to causation.</p>
+</li>
+<li><em>Fix:</em> phrase as hypothesis unless causal chain is evidenced.</li>
+</ul>
+<hr />
+<h2 id="weirdobscure-sources-trade-offs-and-usage">Weird/obscure sources: trade-offs and usage</h2>
+<p>These sources can be extremely high-yield, but require stronger caveats discipline.</p>
+<h3 id="a-behavioral-derivative-datasets">A) Behavioral-derivative datasets</h3>
+<p>Examples: Global Fishing Watch anchorage behavior, AIS/ADS-B derived activity states.</p>
+<ul>
+<li><strong>Strength:</strong> detects pattern changes before formal reporting catches up.</li>
+<li><strong>Risk:</strong> inferred states can be wrong in edge cases.</li>
+<li><strong>Best use:</strong> early warning + triangulation trigger, not standalone proof.</li>
+</ul>
+<h3 id="b-technical-side-effect-datasets">B) Technical-side-effect datasets</h3>
+<p>Examples: OONI network interference measurements.</p>
+<ul>
+<li><strong>Strength:</strong> can reveal censorship/disruption mechanics directly.</li>
+<li><strong>Risk:</strong> probe distribution and local network quirks can bias interpretation.</li>
+<li><strong>Best use:</strong> corroborate platform-blocking narratives with explicit uncertainty.</li>
+</ul>
+<h3 id="c-governanceincident-curation-datasets">C) Governance/incident curation datasets</h3>
+<p>Examples: AI Incident Database (AIAAIC).</p>
+<ul>
+<li><strong>Strength:</strong> structured chronology of complex sociotechnical harms.</li>
+<li><strong>Risk:</strong> not exhaustive; media/reporting bias matters.</li>
+<li><strong>Best use:</strong> trend context and divergence checks, paired with primary incident docs.</li>
+</ul>
+<h3 id="d-research-corpora-snapshots">D) Research corpora snapshots</h3>
+<p>Examples: TGDataset (public Telegram channels), benchmark archives.</p>
+<ul>
+<li><strong>Strength:</strong> rich historical graph analysis and longitudinal modeling.</li>
+<li><strong>Risk:</strong> snapshot staleness and collection-scope constraints.</li>
+<li><strong>Best use:</strong> structural baseline building; avoid treating as live ground truth.</li>
+</ul>
+<h3 id="e-aggregator-mega-feeds">E) Aggregator mega-feeds</h3>
+<p>Examples: OpenSanctions, GDELT, OpenCorporates (aggregated registry paths).</p>
+<ul>
+<li><strong>Strength:</strong> broad, fast discovery across jurisdictions/domains.</li>
+<li><strong>Risk:</strong> inherited upstream errors and uneven source latency.</li>
+<li><strong>Best use:</strong> discovery and prioritization; escalate to primary records for final claims.</li>
+</ul>
+<hr />
+<h2 id="pairing-patterns-that-work-well">Pairing patterns that work well</h2>
+<ul>
+<li><strong>Mobility + sanctions/trade:</strong> ADS-B/AIS + OpenSanctions + UN Comtrade</li>
+<li><strong>Unrest + censorship:</strong> ACLED/UCDP + OONI + local official statements</li>
+<li><strong>Procurement + ownership:</strong> TED/USAspending/Contracts Finder + OpenOwnership/PSC/OpenCorporates</li>
+<li><strong>Climate hazard + infrastructure risk:</strong> IBTrACS/FIRMS + maritime/port activity + official advisories</li>
+<li><strong>Narrative networks:</strong> TGStat/Telemetr/TGDataset + event timeline + independent reporting</li>
+</ul>
+<hr />
+<h2 id="confidence-rubric-recommended-wording">Confidence rubric (recommended wording)</h2>
+<ul>
+<li><strong>High confidence:</strong> independent sources converge; known confounders tested.</li>
+<li><strong>Moderate confidence:</strong> signal is strong but one key uncertainty remains.</li>
+<li><strong>Low confidence:</strong> preliminary indicator only; multiple unresolved uncertainties.</li>
+</ul>
+<p>Always include one-line rationale for confidence level.</p>
+<hr />
+<h2 id="publication-checklist-short-form">Publication checklist (short form)</h2>
+<p>Before publish, confirm:
+- [ ] Claim is specific and measurable
+- [ ] Time window is explicit
+- [ ] At least two independent sources used
+- [ ] One plausible null explanation tested
+- [ ] Caveats listed
+- [ ] Confidence level stated
+- [ ] Follow-up data gaps logged</p>
+<hr />
+<h2 id="maintenance-policy">Maintenance policy</h2>
+<ul>
+<li>Review this playbook when adding a new dataset class.</li>
+<li>If a failure mode is discovered in production, add it here immediately.</li>
+<li>Keep this file concise and operational; move long case studies to separate docs.</li>
+</ul>
+<p>This file is intentionally a living methods guide, not a static manifesto.</p>
+</body>
+</html>
