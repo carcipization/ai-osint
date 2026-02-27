@@ -21,3 +21,14 @@ python3 scripts/publish.py
 - Pages root: `docs/`
 - Latest: `docs/latest.md` + `docs/latest.html`
 - Index: `docs/index.html`
+
+## Story format requirement (claim checks)
+
+For STORY-mode claim checks, include a **Claim provenance** section that lists the concrete social posts being evaluated:
+
+- platform
+- handle/account
+- post URL
+- UTC timestamp
+
+If direct post URLs are unavailable, explicitly say so and include the best available identifying details (quoted text, account, approximate time, screenshot reference, etc.).
