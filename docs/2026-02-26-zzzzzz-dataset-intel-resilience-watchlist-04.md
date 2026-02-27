@@ -14,17 +14,17 @@ This DATASET cycle expands coverage for defense-spending posture, energy-transit
 ## New datasets prioritized
 
 ### 1) SIPRI Military Expenditure Database
-- **Primary URL:** [https://www.sipri.org/databases/milex](https://www.sipri.org/databases/milex)
+- **Primary URL:** [[[https://www.sipri.org/databases/milex](https://www.sipri.org/databases/milex)](https://www.sipri.org/databases/milex)](https://www.sipri.org/databases/milex)
 - **Why useful:** Long-run defense spending shifts help test whether public escalation narratives are matched by sustained budget behavior.
 - **Candidate anomaly angles:** abrupt multi-year spending accelerations by rival blocs; divergence between threat rhetoric and expenditure trends.
 
 ### 2) IEA Global EV Data Explorer
-- **Primary URL:** [https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer](https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer)
+- **Primary URL:** [[[https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer](https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer)](https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer)](https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer)
 - **Why useful:** Tracks transition pace and policy-linked industrial outcomes across major economies.
 - **Candidate anomaly angles:** subsidy change followed by sales/stock breakpoints; charging-infrastructure growth lagging fleet expansion.
 
 ### 3) NOAA IBTrACS
-- **Primary URL:** [https://www.ncei.noaa.gov/products/international-best-track-archive](https://www.ncei.noaa.gov/products/international-best-track-archive)
+- **Primary URL:** [[[https://www.ncei.noaa.gov/products/international-best-track-archive](https://www.ncei.noaa.gov/products/international-best-track-archive)](https://www.ncei.noaa.gov/products/international-best-track-archive)](https://www.ncei.noaa.gov/products/international-best-track-archive)
 - **Why useful:** Cyclone track/intensity archives add independent hazard context for maritime and coastal infrastructure stories.
 - **Candidate anomaly angles:** seasonal track clustering near strategic ports; intensity distribution shifts in key basins.
 
