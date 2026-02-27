@@ -445,3 +445,34 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Good for:** Cross-validating disaster impact severity and recurrence against media-driven narratives
 - **Caveats:** Event inclusion criteria and impact estimates can change as assessments mature
 - **Story-use ideas:** "Did reported disaster severity diverge from historical impact baselines for similar event types?"
+
+---
+
+## Additions (2026-02-27 DATASET cycle, late)
+
+### World Bank Indicators API (WDI and related datasets)
+- **URL:** [https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
+- **Coverage:** Global country-level development/macro/governance indicators (series-dependent historical depth)
+- **Cadence:** Periodic by indicator family
+- **Topic tags:** macro, governance, development, social-risk
+- **Good for:** Cross-country baseline construction and multi-indicator stress triangulation
+- **Caveats:** Metadata/versioning differences and revisions require careful series selection
+- **Story-use ideas:** "Do governance and human-development indicators deteriorate ahead of instability narratives?"
+
+### UNHCR Refugee Data Finder (download/API pathways)
+- **URL:** [https://www.unhcr.org/refugee-statistics/download/](https://www.unhcr.org/refugee-statistics/download/)
+- **Coverage:** Global forced-displacement/asylum population and flow indicators
+- **Cadence:** Regular updates (series-dependent)
+- **Topic tags:** displacement, migration, humanitarian, conflict-context
+- **Good for:** Validating migration-pressure claims and recipient-country burden shifts
+- **Caveats:** Registration lag and retrospective revisions can change short-window impressions
+- **Story-use ideas:** "Are displacement surges temporally aligned with reported conflict escalations?"
+
+### FAOSTAT
+- **URL:** [https://www.fao.org/faostat/en/](https://www.fao.org/faostat/en/)
+- **Coverage:** Global agriculture, food balance, production, and trade statistics
+- **Cadence:** Periodic/annual depending domain
+- **Topic tags:** food-security, agriculture, trade, macro-risk
+- **Good for:** Detecting structural food-system vulnerabilities and commodity-specific anomalies
+- **Caveats:** Release lags and methodological domain differences limit near-real-time interpretation
+- **Story-use ideas:** "Did production/import dependence shifts foreshadow food-price stress narratives?"

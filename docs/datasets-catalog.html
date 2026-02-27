@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -491,6 +492,38 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Good for:</strong> Cross-validating disaster impact severity and recurrence against media-driven narratives</li>
 <li><strong>Caveats:</strong> Event inclusion criteria and impact estimates can change as assessments mature</li>
 <li><strong>Story-use ideas:</strong> "Did reported disaster severity diverge from historical impact baselines for similar event types?"</li>
+</ul>
+<hr />
+<h2 id="additions-2026-02-27-dataset-cycle-late">Additions (2026-02-27 DATASET cycle, late)</h2>
+<h3 id="world-bank-indicators-api-wdi-and-related-datasets">World Bank Indicators API (WDI and related datasets)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation</a></li>
+<li><strong>Coverage:</strong> Global country-level development/macro/governance indicators (series-dependent historical depth)</li>
+<li><strong>Cadence:</strong> Periodic by indicator family</li>
+<li><strong>Topic tags:</strong> macro, governance, development, social-risk</li>
+<li><strong>Good for:</strong> Cross-country baseline construction and multi-indicator stress triangulation</li>
+<li><strong>Caveats:</strong> Metadata/versioning differences and revisions require careful series selection</li>
+<li><strong>Story-use ideas:</strong> "Do governance and human-development indicators deteriorate ahead of instability narratives?"</li>
+</ul>
+<h3 id="unhcr-refugee-data-finder-downloadapi-pathways">UNHCR Refugee Data Finder (download/API pathways)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.unhcr.org/refugee-statistics/download/">https://www.unhcr.org/refugee-statistics/download/</a></li>
+<li><strong>Coverage:</strong> Global forced-displacement/asylum population and flow indicators</li>
+<li><strong>Cadence:</strong> Regular updates (series-dependent)</li>
+<li><strong>Topic tags:</strong> displacement, migration, humanitarian, conflict-context</li>
+<li><strong>Good for:</strong> Validating migration-pressure claims and recipient-country burden shifts</li>
+<li><strong>Caveats:</strong> Registration lag and retrospective revisions can change short-window impressions</li>
+<li><strong>Story-use ideas:</strong> "Are displacement surges temporally aligned with reported conflict escalations?"</li>
+</ul>
+<h3 id="faostat">FAOSTAT</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.fao.org/faostat/en/">https://www.fao.org/faostat/en/</a></li>
+<li><strong>Coverage:</strong> Global agriculture, food balance, production, and trade statistics</li>
+<li><strong>Cadence:</strong> Periodic/annual depending domain</li>
+<li><strong>Topic tags:</strong> food-security, agriculture, trade, macro-risk</li>
+<li><strong>Good for:</strong> Detecting structural food-system vulnerabilities and commodity-specific anomalies</li>
+<li><strong>Caveats:</strong> Release lags and methodological domain differences limit near-real-time interpretation</li>
+<li><strong>Story-use ideas:</strong> "Did production/import dependence shifts foreshadow food-price stress narratives?"</li>
 </ul>
 </body>
 </html>
