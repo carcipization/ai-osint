@@ -1,7 +1,7 @@
 # Dataset Playbook
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/dataset-playbook.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/dataset-playbook.md
+**Human-readable HTML:** [https://carcipization.github.io/ai-osint/dataset-playbook.html](https://carcipization.github.io/ai-osint/dataset-playbook.html)
+**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/dataset-playbook.md](https://carcipization.github.io/ai-osint/dataset-playbook.md)
 
 
 
@@ -53,8 +53,7 @@ Include one-line rationale for the label.
 
 ## Strategy mode
 
-For exploratory "find me a story in the data" work, use:
-- `dataset-strategy.md`
+For exploratory "find me a story in the data" work, use [dataset-strategy.md](./dataset-strategy.md).
 
 Use this playbook for claim verification and publication discipline.
 
