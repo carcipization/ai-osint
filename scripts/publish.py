@@ -75,7 +75,7 @@ def extract_dateline(md_text: str) -> str | None:
     return m.group(1).strip()
 
 
-URL_RE = re.compile(r"(?<!\]\()(?<!\()(?P<url>https?://[^\s<>)\]]+)")
+URL_RE = re.compile(r"(?<!\]\()(?<!\()(?<!\[)(?P<url>https?://[^\s<>)\]]+)")
 
 
 def linkify_plain_urls(md_text: str) -> str:
