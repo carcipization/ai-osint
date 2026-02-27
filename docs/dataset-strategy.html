@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dataset Strategy (finding stories in data)</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="dataset-strategy-finding-stories-in-data">Dataset Strategy (finding stories in data)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-strategy.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-strategy.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-02-27<br />
+<strong>Status:</strong> Living guide</p>
+<h2 id="purpose">Purpose</h2>
+<p>Use this when you <strong>don’t</strong> have a specific claim yet and need to surface high-value story candidates from datasets.</p>
+<p>This is exploration strategy, not claim-verification procedure (that lives in <code>dataset-playbook.md</code>).</p>
+<h2 id="core-loop">Core loop</h2>
+<ol>
+<li><strong>Map domains</strong>: geopolitics, mobility, procurement, ownership, censorship, hazard, AI infra.</li>
+<li><strong>Scan for discontinuities</strong>: level shifts, slope changes, concentration jumps, decouplings.</li>
+<li><strong>Cross-domain triangulate</strong>: test whether multiple independent domains move together.</li>
+<li><strong>Score candidate stories</strong>: novelty, stakes, verifiability, timeliness.</li>
+<li><strong>Promote top candidates</strong> into formal claim-check workflow.</li>
+</ol>
+<h2 id="what-to-hunt-for">What to hunt for</h2>
+<h3 id="1-breaks-in-baseline">1) Breaks in baseline</h3>
+<ul>
+<li>Sudden jump/drop vs rolling baseline</li>
+<li>Structural break after policy/event boundary</li>
+<li>Persistent deviation (not one-off noise)</li>
+</ul>
+<h3 id="2-concentration-shifts">2) Concentration shifts</h3>
+<ul>
+<li>Spend/traffic/ownership moving into fewer entities</li>
+<li>New hub emergence</li>
+<li>Sudden dominance reversal</li>
+</ul>
+<h3 id="3-decouplings">3) Decouplings</h3>
+<ul>
+<li>Two metrics that usually track each other diverge</li>
+<li>Narrative says "up" while operational proxy says "flat/down"</li>
+<li>Policy intent vs observed behavior mismatch</li>
+</ul>
+<h3 id="4-cross-border-reroutes">4) Cross-border reroutes</h3>
+<ul>
+<li>Flows move through intermediaries after sanctions/policy pressure</li>
+<li>Alternate corridors appear with lagged confirmation in other datasets</li>
+</ul>
+<h3 id="5-synchrony-across-independent-systems">5) Synchrony across independent systems</h3>
+<ul>
+<li>Similar timing across mobility + procurement + network metadata</li>
+<li>Suggests coordinated underlying process worth testing</li>
+</ul>
+<h2 id="candidate-scoring-rubric-fast">Candidate scoring rubric (fast)</h2>
+<p>Score each 1–5:</p>
+<ul>
+<li><strong>Signal strength</strong> (clear discontinuity?)</li>
+<li><strong>Independent corroboration</strong> (available?)</li>
+<li><strong>Public interest/stakes</strong></li>
+<li><strong>Actionability</strong> (can we publish a tight claim now?)</li>
+<li><strong>False-positive risk</strong> (invert this score)</li>
+</ul>
+<p>Prioritize candidates with high signal + high corroboration + medium/low FP risk.</p>
+<h2 id="pattern-libraries-useful-combinations">Pattern libraries (useful combinations)</h2>
+<h3 id="mobility-sanctionstrade">Mobility + sanctions/trade</h3>
+<ul>
+<li>ADS-B/AIS + OpenSanctions + UN Comtrade</li>
+<li>Good for reroutes, chokepoint stress, designation-response lag.</li>
+</ul>
+<h3 id="unrest-censorship">Unrest + censorship</h3>
+<ul>
+<li>ACLED/UCDP + OONI + local official statements</li>
+<li>Good for "street activity vs network control" coupling.</li>
+</ul>
+<h3 id="procurement-ownership">Procurement + ownership</h3>
+<ul>
+<li>TED/USAspending/Contracts Finder + OpenOwnership/PSC/OpenCorporates</li>
+<li>Good for vendor concentration and related-entity patterns.</li>
+</ul>
+<h3 id="hazard-infrastructure">Hazard + infrastructure</h3>
+<ul>
+<li>IBTrACS/FIRMS + maritime/port traffic + advisories</li>
+<li>Good for separating hazard-driven disruption from policy/security narratives.</li>
+</ul>
+<h3 id="narrative-network-drift">Narrative network drift</h3>
+<ul>
+<li>TGStat/Telemetr/TGDataset + event timeline + independent reporting</li>
+<li>Good for identifying bridge channels and coordinated amplification windows.</li>
+</ul>
+<h2 id="escalation-rule-to-playbook">Escalation rule (to playbook)</h2>
+<p>Escalate a candidate into <code>dataset-playbook.md</code> workflow only if:</p>
+<ul>
+<li>it can be written as one falsifiable claim,</li>
+<li>at least two independent sources are available,</li>
+<li>and one plausible null explanation can be tested quickly.</li>
+</ul>
+<p>If not, keep it in watchlist mode.</p>
+<h2 id="anti-patterns">Anti-patterns</h2>
+<ul>
+<li>Forcing causal language from correlational scans.</li>
+<li>Publishing one-feed anomalies with no controls.</li>
+<li>Chasing novelty over reproducibility.</li>
+<li>Ignoring release/revision mechanics.</li>
+</ul>
+<h2 id="output-format-for-scouts">Output format for scouts</h2>
+<p>For each candidate, record:</p>
+<ul>
+<li><strong>Claim stub</strong> (one sentence)</li>
+<li><strong>Observed anomaly</strong> (what changed + window)</li>
+<li><strong>Datasets used</strong></li>
+<li><strong>Null test to run next</strong></li>
+<li><strong>Initial confidence</strong> (low/medium/high)</li>
+</ul>
+<p>Keep scout outputs terse; promote only high-quality candidates.</p>
+</body>
+</html>

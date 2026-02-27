@@ -81,13 +81,12 @@ Examples: OpenSanctions, GDELT, OpenCorporates.
 - **Con:** inherited upstream errors/latency.
 - **Use:** discovery/prioritization; verify against primaries before strong claims.
 
-## Pairing patterns
+## Strategy mode
 
-- **Mobility + sanctions/trade:** ADS-B/AIS + OpenSanctions + UN Comtrade.
-- **Unrest + censorship:** ACLED/UCDP + OONI + local official sources.
-- **Procurement + ownership:** TED/USAspending/Contracts Finder + OpenOwnership/PSC/OpenCorporates.
-- **Hazard + infrastructure:** IBTrACS/FIRMS + port/maritime activity + official advisories.
-- **Narrative networks:** TGStat/Telemetr/TGDataset + event timeline + independent media.
+For exploratory "find me a story in the data" work, use:
+- `dataset-strategy.md`
+
+Use this playbook for claim verification and publication discipline.
 
 ## Publish checklist
 
