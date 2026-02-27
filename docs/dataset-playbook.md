@@ -73,3 +73,6 @@ Use this playbook for claim verification and publication discipline.
 - Keep this file terse.
 - Add newly discovered failure modes immediately.
 - Move long examples/case studies to separate docs.
+## Related
+- Strategy guide: [`dataset-strategy.md`](./dataset-strategy.md)
+

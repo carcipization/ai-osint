@@ -137,3 +137,6 @@ For each candidate, record:
 - **Initial confidence** (low/medium/high)
 
 Keep scout outputs terse; promote only high-quality candidates.
+## Related
+- Verification playbook: [`dataset-playbook.md`](./dataset-playbook.md)
+
