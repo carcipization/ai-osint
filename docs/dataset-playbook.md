@@ -4,9 +4,6 @@
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/dataset-playbook.md)
 
 
-**HTML:** [https://carcipization.github.io/ai-osint/dataset-playbook.html](https://carcipization.github.io/ai-osint/dataset-playbook.html)  
-**Markdown:** [https://carcipization.github.io/ai-osint/dataset-playbook.md](https://carcipization.github.io/ai-osint/dataset-playbook.md)
-
 **Dateline:** 2026-02-27  
 **Status:** Living guide
 
