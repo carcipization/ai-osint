@@ -414,3 +414,34 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Good for:** Structural network research and historical baseline modeling
 - **Caveats:** Static snapshot characteristics; not a live operational feed
 - **Story-use ideas:** "Which bridge channels materially shift centrality over long windows?"
+
+---
+
+## Additions (2026-02-27 DATASET cycle)
+
+### IMF Data API (macro + balance-of-payments/public finance series)
+- **URL:** [https://www.imf.org/external/datamapper/api/](https://www.imf.org/external/datamapper/api/)
+- **Coverage:** Cross-country macroeconomic indicators (dataset-dependent historical depth)
+- **Cadence:** Periodic updates by indicator family
+- **Topic tags:** macro, sovereign-risk, fiscal, external-balance
+- **Good for:** Testing whether crisis narratives are consistent with recent macro/fiscal trajectory data
+- **Caveats:** Indicator definitions and update lag vary across datasets; country revisions are common
+- **Story-use ideas:** "Did external-balance deterioration precede currency/political stress signals?"
+
+### ITU ICT Data (telecom/Internet development indicators)
+- **URL:** [https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx)
+- **Coverage:** Country-level ICT penetration, subscriptions, and connectivity indicators
+- **Cadence:** Annual/periodic releases
+- **Topic tags:** connectivity, infrastructure, development, censorship-context
+- **Good for:** Long-run digital-access baselines when assessing shutdown/blocking and information-friction claims
+- **Caveats:** Annual cadence limits near-real-time inference; methodology revisions can affect trend continuity
+- **Story-use ideas:** "Are outage/censorship claims occurring in markets with rapidly rising dependency on mobile broadband?"
+
+### EM-DAT International Disaster Database
+- **URL:** [https://www.emdat.be/](https://www.emdat.be/)
+- **Coverage:** Global disaster events with impacts (deaths, affected, economic losses)
+- **Cadence:** Ongoing curated updates
+- **Topic tags:** disaster, humanitarian, infrastructure-risk
+- **Good for:** Cross-validating disaster impact severity and recurrence against media-driven narratives
+- **Caveats:** Event inclusion criteria and impact estimates can change as assessments mature
+- **Story-use ideas:** "Did reported disaster severity diverge from historical impact baselines for similar event types?"

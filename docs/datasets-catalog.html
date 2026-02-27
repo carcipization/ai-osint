@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -459,6 +460,38 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Good for:</strong> Structural network research and historical baseline modeling</li>
 <li><strong>Caveats:</strong> Static snapshot characteristics; not a live operational feed</li>
 <li><strong>Story-use ideas:</strong> "Which bridge channels materially shift centrality over long windows?"</li>
+</ul>
+<hr />
+<h2 id="additions-2026-02-27-dataset-cycle">Additions (2026-02-27 DATASET cycle)</h2>
+<h3 id="imf-data-api-macro-balance-of-paymentspublic-finance-series">IMF Data API (macro + balance-of-payments/public finance series)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.imf.org/external/datamapper/api/">https://www.imf.org/external/datamapper/api/</a></li>
+<li><strong>Coverage:</strong> Cross-country macroeconomic indicators (dataset-dependent historical depth)</li>
+<li><strong>Cadence:</strong> Periodic updates by indicator family</li>
+<li><strong>Topic tags:</strong> macro, sovereign-risk, fiscal, external-balance</li>
+<li><strong>Good for:</strong> Testing whether crisis narratives are consistent with recent macro/fiscal trajectory data</li>
+<li><strong>Caveats:</strong> Indicator definitions and update lag vary across datasets; country revisions are common</li>
+<li><strong>Story-use ideas:</strong> "Did external-balance deterioration precede currency/political stress signals?"</li>
+</ul>
+<h3 id="itu-ict-data-telecominternet-development-indicators">ITU ICT Data (telecom/Internet development indicators)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx</a></li>
+<li><strong>Coverage:</strong> Country-level ICT penetration, subscriptions, and connectivity indicators</li>
+<li><strong>Cadence:</strong> Annual/periodic releases</li>
+<li><strong>Topic tags:</strong> connectivity, infrastructure, development, censorship-context</li>
+<li><strong>Good for:</strong> Long-run digital-access baselines when assessing shutdown/blocking and information-friction claims</li>
+<li><strong>Caveats:</strong> Annual cadence limits near-real-time inference; methodology revisions can affect trend continuity</li>
+<li><strong>Story-use ideas:</strong> "Are outage/censorship claims occurring in markets with rapidly rising dependency on mobile broadband?"</li>
+</ul>
+<h3 id="em-dat-international-disaster-database">EM-DAT International Disaster Database</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.emdat.be/">https://www.emdat.be/</a></li>
+<li><strong>Coverage:</strong> Global disaster events with impacts (deaths, affected, economic losses)</li>
+<li><strong>Cadence:</strong> Ongoing curated updates</li>
+<li><strong>Topic tags:</strong> disaster, humanitarian, infrastructure-risk</li>
+<li><strong>Good for:</strong> Cross-validating disaster impact severity and recurrence against media-driven narratives</li>
+<li><strong>Caveats:</strong> Event inclusion criteria and impact estimates can change as assessments mature</li>
+<li><strong>Story-use ideas:</strong> "Did reported disaster severity diverge from historical impact baselines for similar event types?"</li>
 </ul>
 </body>
 </html>
