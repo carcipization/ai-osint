@@ -507,3 +507,34 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Good for:** Structural context on state capacity and institutional change narratives
 - **Caveats:** Composite/perception-based annual indicators are weak for short-term event attribution
 - **Story-use ideas:** "Are claims of sudden institutional breakdown consistent with long-run governance trajectories?"
+
+---
+
+## Additions (2026-02-28 DATASET cycle, late)
+
+### AGSI+ (European gas storage transparency)
+- **URL:** [https://agsi.gie.eu/](https://agsi.gie.eu/)
+- **Coverage:** European underground gas storage levels and injection/withdrawal metrics by country/site
+- **Cadence:** Daily/intraday updates (platform and operator dependent)
+- **Topic tags:** energy, gas, storage, europe, supply-risk
+- **Good for:** Detecting abnormal seasonal drawdown speed, cross-country storage divergence, and stress around supply incidents
+- **Caveats:** Storage state is not a direct proxy for end-user outages; interpretation needs weather/demand context
+- **Story-use ideas:** "Did withdrawals accelerate beyond seasonal norms after a pipeline or LNG disruption event?"
+
+### ENTSO-E Transparency Platform
+- **URL:** [https://transparency.entsoe.eu/](https://transparency.entsoe.eu/)
+- **Coverage:** European electricity generation/load, cross-border flows, outages, and balancing/market indicators
+- **Cadence:** Near real-time to daily (dataset-specific)
+- **Topic tags:** electricity, grid, interconnectors, outages, europe
+- **Good for:** Identifying interconnector reversals, generation-mix shocks, and outage clusters linked to geopolitical or weather stress
+- **Caveats:** Data completeness and publication latency vary by market/TSO and product family
+- **Story-use ideas:** "Did cross-border power-flow reversals appear immediately after regional infrastructure incidents?"
+
+### Vortexa Freight Tracker
+- **URL:** [https://www.vortexa.com/freight-tracker/](https://www.vortexa.com/freight-tracker/)
+- **Coverage:** Global seaborne crude/products/LNG flow analytics and tanker-routing intelligence
+- **Cadence:** Frequent updates (service/product dependent)
+- **Topic tags:** maritime, tanker, energy-trade, chokepoints, rerouting
+- **Good for:** Monitoring chokepoint avoidance, loading/discharge timing shifts, and route-level behavioral discontinuities
+- **Caveats:** Commercial analytics methodology and access limits require careful source disclosure and independent corroboration
+- **Story-use ideas:** "Did tanker rerouting around a chokepoint materially precede official supply-risk warnings?"
