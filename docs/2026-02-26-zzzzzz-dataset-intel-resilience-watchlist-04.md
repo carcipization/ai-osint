@@ -38,3 +38,8 @@ Persistent inventory updated in `docs/datasets-catalog.md` with these three entr
 
 ## Bottom line
 This cycle improves resilience-focused triangulation: defense budget behavior + transition industrial momentum + storm-risk context, strengthening pre-story anomaly screening.
+
+## Source links
+- [SIPRI Military Expenditure Database](https://www.sipri.org/databases/milex)
+- [IEA Global EV Data Explorer](https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer)
+- [NOAA IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive)

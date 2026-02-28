@@ -38,3 +38,8 @@ Persistent inventory updated in `docs/datasets-catalog.md` with these three entr
 
 ## Bottom line
 This cycle strengthens cross-domain validation by combining near-real-time humanitarian reporting, physics-based climate context, and institutional-capacity baselines before STORY-mode publication.
+
+## Source links
+- [ReliefWeb API](https://api.reliefweb.int/)
+- [Copernicus Climate Data Store (ERA5)](https://cds.climate.copernicus.eu/)
+- [Worldwide Governance Indicators (WGI)](https://info.worldbank.org/governance/wgi/)

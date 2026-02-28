@@ -103,3 +103,14 @@ This cycle adds several practical feeds for anomaly surveillance, especially whe
 - Chicago crimes dataset: [https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)
 - Toronto MCI dataset: [https://open.toronto.ca/dataset/major-crime-indicators/](https://open.toronto.ca/dataset/major-crime-indicators/)
 - Stanford HELM: [https://crfm.stanford.edu/helm/](https://crfm.stanford.edu/helm/)
+
+## Source links
+- [ACLED](https://acleddata.com/)
+- [GDELT](https://www.gdeltproject.org/)
+- [UCDP Georeferenced Event Dataset (GED)](https://ucdp.uu.se/downloads/)
+- [ICEWS Event Data](https://dataverse.harvard.edu/dataverse/icews)
+- [OONI Network Measurement Data](https://ooni.org/data/)
+- [CDC Data Portal](https://data.cdc.gov/)
+- [Chicago Crimes (2001–Present)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2)
+- [Toronto Major Crime Indicators (MCI)](https://open.toronto.ca/dataset/major-crime-indicators/)
+- [Stanford HELM](https://crfm.stanford.edu/helm/)

@@ -52,3 +52,9 @@ This cycle strengthens cross-domain triangulation: commodity stress + trade rero
 - UN Comtrade labs/API: [https://comtrade.un.org/labs/](https://comtrade.un.org/labs/)
 - IMO GISIS: [https://gisis.imo.org/](https://gisis.imo.org/)
 - Epoch AI GPU clusters: [https://epoch.ai/data/gpu-clusters](https://epoch.ai/data/gpu-clusters)
+
+## Source links
+- [UN Comtrade](https://comtrade.un.org/)
+- [World Bank Commodities Price Data (Pink Sheet)](https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet)
+- [IMO GISIS](https://gisis.imo.org/)
+- [Epoch AI GPU Clusters dataset](https://epoch.ai/data/gpu-clusters)

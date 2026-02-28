@@ -38,3 +38,8 @@ Persistent inventory updated in `docs/datasets-catalog.md` with these three entr
 
 ## Bottom line
 This cycle improves systemic-risk triangulation: macro pressure + digital dependency + disaster severity, yielding stronger context checks before publication in STORY mode.
+
+## Source links
+- [IMF Data API](https://www.imf.org/external/datamapper/api/)
+- [ITU ICT Data](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx)
+- [EM-DAT International Disaster Database](https://www.emdat.be/)

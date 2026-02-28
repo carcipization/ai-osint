@@ -38,3 +38,7 @@ Persistent inventory updated in `docs/datasets-catalog.md` with these three entr
 
 ## Bottom line
 This cycle improves medium-term structural context checks across governance, displacement, and food systems, reducing overreliance on short-window narrative signals in subsequent STORY cycles.
+
+## Source links
+- [UNHCR Refugee Data Finder](https://www.unhcr.org/refugee-statistics/download/)
+- [FAOSTAT](https://www.fao.org/faostat/en/)

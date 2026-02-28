@@ -78,3 +78,14 @@ This cycle adds high-utility sources for detecting discontinuities in sanctions 
 - Global Fishing Watch datasets/code: [https://globalfishingwatch.org/datasets-and-code/](https://globalfishingwatch.org/datasets-and-code/)
 - Edmonton EPS occurrences: [https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data](https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data)
 - AI Incident Database: [https://incidentdatabase.ai/](https://incidentdatabase.ai/)
+
+## Source links
+- [ACLED](https://acleddata.com/)
+- [UCDP Georeferenced Event Dataset (GED)](https://ucdp.uu.se/downloads/)
+- [Toronto Major Crime Indicators (MCI)](https://open.toronto.ca/dataset/major-crime-indicators/)
+- [Stanford HELM](https://crfm.stanford.edu/helm/)
+- [OpenSanctions](https://www.opensanctions.org/datasets/)
+- [UN Comtrade](https://comtrade.un.org/)
+- [Global Fishing Watch](https://globalfishingwatch.org/datasets-and-code/)
+- [Edmonton EPS Neighbourhood Criminal Occurrences](https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data)
+- [AI Incident Database (AIAAIC)](https://incidentdatabase.ai/)

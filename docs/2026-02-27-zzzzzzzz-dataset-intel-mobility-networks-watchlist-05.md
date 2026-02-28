@@ -110,3 +110,20 @@ Persistent inventory updated in `docs/datasets-catalog.md` with all sources abov
 
 ## Bottom line
 This off-cycle package materially expands transport-network, ownership-network, spend-network, and public Telegram-network observability—improving pre-story anomaly detection and cross-domain corroboration.
+
+## Source links
+- [Global Fishing Watch](https://globalfishingwatch.org/datasets-and-code/)
+- [OpenSky Network Data](https://opensky-network.org/data)
+- [ADS-B Exchange](https://www.adsbexchange.com/data/)
+- [ADSB.lol Open Data API](https://www.adsb.lol/docs/open-data/api/)
+- [MarineCadastre AccessAIS](https://marinecadastre.gov/accessais/)
+- [AISHub API](https://www.aishub.net/api)
+- [OpenCorporates API](https://api.opencorporates.com/)
+- [Open Ownership Register (BODS)](https://register.openownership.org/)
+- [UK Companies House PSC bulk data](https://download.companieshouse.gov.uk/en_pscdata.html)
+- [USAspending API](https://api.usaspending.gov/)
+- [TED Open Data + TED API](https://data.ted.europa.eu/)
+- [UK Contracts Finder API](https://www.contractsfinder.service.gov.uk/apidocumentation)
+- [TGStat Statistics API](https://tgstat.com/api/stat)
+- [Telemetr public API](https://api.telemetr.io/)
+- [TGDataset](https://github.com/SystemsLab-Sapienza/TGDataset)

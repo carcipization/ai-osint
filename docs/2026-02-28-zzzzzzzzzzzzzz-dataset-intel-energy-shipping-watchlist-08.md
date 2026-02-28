@@ -59,3 +59,8 @@ Recent cycles flagged rapid hazard and governance anomalies. The missing layer i
 
 ## Next-step playbook
 For the next STORY cycle, prioritize event windows where at least two of the three layers move together (e.g., tanker reroutes + interconnector reversals + storage drawdown acceleration). Those are high-yield candidates for evidence-led OSINT narratives.
+
+## Source links
+- [AGSI+](https://agsi.gie.eu/)
+- [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/)
+- [Vortexa Freight Tracker](https://www.vortexa.com/freight-tracker/)
