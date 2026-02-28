@@ -476,3 +476,34 @@ Persistent inventory of open datasets/time-series sources to support AI-OSINT st
 - **Good for:** Detecting structural food-system vulnerabilities and commodity-specific anomalies
 - **Caveats:** Release lags and methodological domain differences limit near-real-time interpretation
 - **Story-use ideas:** "Did production/import dependence shifts foreshadow food-price stress narratives?"
+
+---
+
+## Additions (2026-02-28 DATASET cycle)
+
+### ReliefWeb API
+- **URL:** [https://api.reliefweb.int/](https://api.reliefweb.int/)
+- **Coverage:** Global humanitarian updates, situation reports, and disaster/event metadata
+- **Cadence:** Frequent/ongoing publication flow
+- **Topic tags:** humanitarian, disasters, displacement, alerts
+- **Good for:** Rapid timeline corroboration and cross-region incident clustering checks
+- **Caveats:** Aggregated feed quality depends on upstream sources and curation practices
+- **Story-use ideas:** "Did humanitarian alert volume and severity shift abruptly around a claimed crisis window?"
+
+### Copernicus Climate Data Store (ERA5)
+- **URL:** [https://cds.climate.copernicus.eu/](https://cds.climate.copernicus.eu/)
+- **Coverage:** Global atmospheric/oceanic reanalysis variables across long historical windows
+- **Cadence:** Regularly updated reanalysis products
+- **Topic tags:** climate, weather, hazard-context, environment
+- **Good for:** Testing extreme-weather claims against consistent gridded baselines
+- **Caveats:** Reanalysis resolution and model assumptions can miss local microclimate extremes
+- **Story-use ideas:** "Do claimed weather records exceed location-specific historical percentile bands?"
+
+### Worldwide Governance Indicators (WGI)
+- **URL:** [https://info.worldbank.org/governance/wgi/](https://info.worldbank.org/governance/wgi/)
+- **Coverage:** Global annual governance metrics across six institutional dimensions
+- **Cadence:** Annual
+- **Topic tags:** governance, institutions, fragility, macro-risk
+- **Good for:** Structural context on state capacity and institutional change narratives
+- **Caveats:** Composite/perception-based annual indicators are weak for short-term event attribution
+- **Story-use ideas:** "Are claims of sudden institutional breakdown consistent with long-run governance trajectories?"
