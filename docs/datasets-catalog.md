@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-01 18:01 UTC  
+**Dateline:** 2026-03-01 21:29 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -123,6 +123,12 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - **Cadence:** Monthly
 - **Good for:** Commodity price-shock context
 - **Caveats:** Benchmarks, not local retail prices
+
+### U.S. EIA Open Data API
+- **URL:** [https://www.eia.gov/opendata/](https://www.eia.gov/opendata/)
+- **Cadence:** Series-dependent (daily/weekly/monthly)
+- **Good for:** Verifying oil, gas, power, and fuel-market claims with official US energy series
+- **Caveats:** API series metadata and units vary; some releases are revised after publication
 
 ### AGSI+ (EU gas storage)
 - **URL:** [https://agsi.gie.eu/](https://agsi.gie.eu/)
