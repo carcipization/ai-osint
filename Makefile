@@ -1,7 +1,7 @@
 PYTHON ?= python3
 VENV := .venv
 
-.PHONY: venv build validate clean oneoff-story oneoff-datasets
+.PHONY: venv build validate test clean oneoff-story oneoff-datasets cadence-prompt sync-cadence-cron
 
 venv:
 	$(PYTHON) -m venv $(VENV)
@@ -16,8 +16,17 @@ validate: venv
 clean:
 	rm -rf $(VENV)
 
+test:
+	PYTHONPATH=. $(PYTHON) -m unittest discover -s tests -p 'test_*.py' -v
+
 oneoff-story:
-	scripts/run_oneoff_slot.py STORY
+	python3 scripts/osintctl_cli.py enqueue-oneoff STORY
 
 oneoff-datasets:
-	scripts/run_oneoff_slot.py DATASETS
+	python3 scripts/osintctl_cli.py enqueue-oneoff DATASETS
+
+cadence-prompt:
+	python3 scripts/osintctl_cli.py prompt cadence
+
+sync-cadence-cron:
+	python3 scripts/osintctl_cli.py sync-cadence-cron

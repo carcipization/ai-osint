@@ -1,0 +1,47 @@
+{
+  "run_at": "2026-03-01 12:01 UTC",
+  "mode": "FOLLOWUP",
+  "method": "weighted(recency,impact,uncertainty,velocity)+exploration",
+  "selected": [
+    {
+      "slug": "2026-02-28-zzzzzzzzzzzzz-hirara-seismic-swarm-48h-osint-story",
+      "topic": "seismic",
+      "priority": "high-velocity recency"
+    },
+    {
+      "slug": "2026-02-27-zzzzzzzzz-global-m4-earthquakes-24h-spike-claim-check",
+      "topic": "seismic",
+      "priority": "high-velocity recency"
+    },
+    {
+      "slug": "2026-02-28-zzzzzzzzzzzzzz-dataset-intel-energy-shipping-watchlist-08",
+      "topic": "energy-shipping",
+      "priority": "medium velocity"
+    },
+    {
+      "slug": "2026-02-27-zzzzzzzzzzz-bitcoin-new-all-time-high-today-claim-check",
+      "topic": "market",
+      "priority": "high update velocity"
+    },
+    {
+      "slug": "2026-02-26-zzzzzzz-eu-ai-act-entry-into-force-claim-check",
+      "topic": "policy",
+      "priority": "revisit interval"
+    },
+    {
+      "slug": "2026-02-26-zzzzz-global-temperature-record-2025-claim-check",
+      "topic": "climate",
+      "priority": "revisit interval"
+    },
+    {
+      "slug": "2026-02-24-morocco-palace-epstein-corroboration-check",
+      "topic": "forensics",
+      "priority": "exploration + unresolved uncertainty"
+    }
+  ],
+  "result": {
+    "published_followup": true,
+    "slug": "2026-03-01-zzzzzzzzzzzzzzz-followup-epstein-morocco-palace-corroboration-update",
+    "note": "New BBC corroboration materially strengthens confidence for the Morocco palace claim; no other checked candidate showed material change."
+  }
+}
