@@ -1,7 +1,7 @@
 PYTHON ?= python3
 VENV := .venv
 
-.PHONY: venv build validate clean
+.PHONY: venv build validate clean oneoff-story oneoff-datasets
 
 venv:
 	$(PYTHON) -m venv $(VENV)
@@ -15,3 +15,9 @@ validate: venv
 
 clean:
 	rm -rf $(VENV)
+
+oneoff-story:
+	scripts/run_oneoff_slot.py STORY
+
+oneoff-datasets:
+	scripts/run_oneoff_slot.py DATASETS
