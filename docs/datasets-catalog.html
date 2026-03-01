@@ -12,581 +12,393 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a>
+<p><strong>Dateline:</strong> 2026-03-01 06:01 UTC<br />
+<strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
-<p>Persistent inventory of open datasets/time-series sources to support AI-OSINT stories.</p>
-<h2 id="how-to-use-this-file">How to use this file</h2>
+<p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
+<h2 id="use-rules-short">Use rules (short)</h2>
 <ul>
-<li>Keep entries concise and practical.</li>
-<li>Prioritize primary/public sources.</li>
-<li>Update when new datasets are discovered or caveats change.</li>
-<li>In STORY mode, consult this list for corroboration, anomaly checks, and context.</li>
+<li>Prefer primary/public sources.</li>
+<li>Triangulate at least 2 independent sources for strong claims.</li>
+<li>Check cadence/lag before interpreting short-window moves.</li>
+<li>Treat media-derived and third-party aggregations as signals, not ground truth.</li>
 </ul>
-<h2 id="entry-template">Entry template</h2>
+<h2 id="fast-taxonomy">Fast taxonomy</h2>
 <ul>
-<li><strong>Name:</strong></li>
-<li><strong>URL:</strong></li>
-<li><strong>Coverage:</strong> (geo + timeframe)</li>
-<li><strong>Cadence:</strong> (real-time/daily/weekly/monthly)</li>
-<li><strong>Topic tags:</strong></li>
-<li><strong>Good for:</strong></li>
-<li><strong>Caveats:</strong></li>
-<li><strong>Story-use ideas:</strong></li>
+<li><strong>Near-real-time signals:</strong> GDELT, OONI, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds</li>
+<li><strong>Structural baselines:</strong> World Bank/IMF/FAOSTAT/WGI/ITU/OECD.AI</li>
+<li><strong>Conflict &amp; humanitarian:</strong> ACLED, UCDP GED, ICEWS, EM-DAT, ReliefWeb, UNHCR</li>
+<li><strong>Trade/energy/maritime:</strong> UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa</li>
+<li><strong>Ownership/procurement:</strong> OpenCorporates, OpenOwnership, Companies House PSC, USAspending, TED, Contracts Finder</li>
+<li><strong>AI capability/risk:</strong> HELM, Epoch GPU clusters, AI Incident DB</li>
+<li><strong>Domestic crime/public safety:</strong> FBI CDE, StatsCan, Chicago, Toronto MCI, Edmonton EPS</li>
 </ul>
 <hr />
-<h2 id="seed-entries">Seed entries</h2>
-<h3 id="acled-armed-conflict-location-event-data">ACLED (Armed Conflict Location &amp; Event Data)</h3>
+<h2 id="1-conflict-unrest-and-information-control">1) Conflict, unrest, and information control</h2>
+<h3 id="acled">ACLED</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://acleddata.com/">https://acleddata.com/</a></li>
-<li><strong>Coverage:</strong> Global conflict/unrest events (country-level availability varies)</li>
-<li><strong>Cadence:</strong> Frequent updates</li>
-<li><strong>Topic tags:</strong> geopolitics, unrest, conflict</li>
-<li><strong>Good for:</strong> Detecting spikes in protests, violence, and conflict-event shifts</li>
-<li><strong>Caveats:</strong> Methodology definitions matter; reporting lag and source bias by region</li>
-<li><strong>Story-use ideas:</strong> "Protest intensity in X region jumps Y% week-over-week"</li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> Protest/conflict intensity shifts</li>
+<li><strong>Caveats:</strong> Reporting lag and regional source bias</li>
 </ul>
-<h3 id="gdelt-events">GDELT Events</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.gdeltproject.org/">https://www.gdeltproject.org/</a></li>
-<li><strong>Coverage:</strong> Global media-derived event signals</li>
-<li><strong>Cadence:</strong> Near real-time</li>
-<li><strong>Topic tags:</strong> geopolitics, unrest, media signals</li>
-<li><strong>Good for:</strong> Early-change detection and narrative shifts across regions/topics</li>
-<li><strong>Caveats:</strong> Media-coverage bias; not a direct ground-truth dataset</li>
-<li><strong>Story-use ideas:</strong> "Media event-code surge preceded policy move"</li>
-</ul>
-<h3 id="usgs-earthquake-catalog">USGS Earthquake Catalog</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://earthquake.usgs.gov/earthquakes/feed/">https://earthquake.usgs.gov/earthquakes/feed/</a></li>
-<li><strong>Coverage:</strong> Global seismic events</li>
-<li><strong>Cadence:</strong> Near real-time feeds</li>
-<li><strong>Topic tags:</strong> disaster, infrastructure risk</li>
-<li><strong>Good for:</strong> Rapid hazard context for geopolitical/infrastructure stories</li>
-<li><strong>Caveats:</strong> Natural hazard data; relevance to political stories is contextual</li>
-<li><strong>Story-use ideas:</strong> "Clustered seismic events near critical infrastructure"</li>
-</ul>
-<h3 id="nasa-firms-fire-information-for-resource-management-system">NASA FIRMS (Fire Information for Resource Management System)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://firms.modaps.eosdis.nasa.gov/">https://firms.modaps.eosdis.nasa.gov/</a></li>
-<li><strong>Coverage:</strong> Global fire hotspots from satellite detections</li>
-<li><strong>Cadence:</strong> Near real-time/daily products</li>
-<li><strong>Topic tags:</strong> environment, conflict context, disruption</li>
-<li><strong>Good for:</strong> Detecting unusual fire concentration changes by region</li>
-<li><strong>Caveats:</strong> Cloud cover/sensor limits; hotspot ≠ confirmed incident cause</li>
-<li><strong>Story-use ideas:</strong> "Unexpected hotspot spike in region under unrest"</li>
-</ul>
-<h3 id="statscan-crime-data-portal">StatsCan Crime data portal</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.statcan.gc.ca/">https://www.statcan.gc.ca/</a> (datasets vary by table)</li>
-<li><strong>Coverage:</strong> Canada domestic statistics incl. crime tables</li>
-<li><strong>Cadence:</strong> Monthly/quarterly/annual depending table</li>
-<li><strong>Topic tags:</strong> domestic-crime, canada</li>
-<li><strong>Good for:</strong> Baseline trends and regional crime discontinuities in Canada</li>
-<li><strong>Caveats:</strong> Release lag; table definitions/revisions</li>
-<li><strong>Story-use ideas:</strong> "Category-level divergence across provinces"</li>
-</ul>
-<h3 id="fbi-cde-ucr-resources">FBI CDE / UCR resources</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://cde.ucr.cjis.gov/">https://cde.ucr.cjis.gov/</a></li>
-<li><strong>Coverage:</strong> US crime reporting datasets/dashboards</li>
-<li><strong>Cadence:</strong> Periodic releases</li>
-<li><strong>Topic tags:</strong> domestic-crime, us</li>
-<li><strong>Good for:</strong> US national/regional crime trend comparisons</li>
-<li><strong>Caveats:</strong> Reporting participation changes; category comparability over time</li>
-<li><strong>Story-use ideas:</strong> "Outlier metro trend compared to national baseline"</li>
-</ul>
-<h3 id="oecdai-policy-observatory-indicators">OECD.AI Policy Observatory / indicators</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://oecd.ai/">https://oecd.ai/</a></li>
-<li><strong>Coverage:</strong> AI policy, ecosystem, and country indicators</li>
-<li><strong>Cadence:</strong> Periodic updates</li>
-<li><strong>Topic tags:</strong> ai, policy, geopolitics</li>
-<li><strong>Good for:</strong> Cross-country AI policy and capability context</li>
-<li><strong>Caveats:</strong> Some metrics are composite and methodology-sensitive</li>
-<li><strong>Story-use ideas:</strong> "Policy change vs investment/compute signal mismatch"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-25-dataset-cycle">Additions (2026-02-25 DATASET cycle)</h2>
-<h3 id="ucdp-georeferenced-event-dataset-ged">UCDP Georeferenced Event Dataset (GED)</h3>
+<h3 id="ucdp-ged">UCDP GED</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://ucdp.uu.se/downloads/">https://ucdp.uu.se/downloads/</a></li>
-<li><strong>Coverage:</strong> Global organized violence event data; long historical span with geo/event detail</li>
-<li><strong>Cadence:</strong> Periodic releases</li>
-<li><strong>Topic tags:</strong> geopolitics, conflict, unrest</li>
-<li><strong>Good for:</strong> Conflict intensity discontinuities, district-level escalation checks, cross-feed validation with ACLED/GDELT</li>
-<li><strong>Caveats:</strong> Release cadence slower than near-real-time feeds; coding changes/version notes must be tracked</li>
-<li><strong>Story-use ideas:</strong> "Is a local flare-up a true structural escalation or a transient reporting spike?"</li>
+<li><strong>Cadence:</strong> Periodic</li>
+<li><strong>Good for:</strong> Historical conflict baselines; district-level escalation checks</li>
+<li><strong>Caveats:</strong> Slower than live feeds</li>
 </ul>
-<h3 id="icews-event-data-harvard-dataverse">ICEWS Event Data (Harvard Dataverse)</h3>
+<h3 id="icews-harvard-dataverse">ICEWS (Harvard Dataverse)</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://dataverse.harvard.edu/dataverse/icews">https://dataverse.harvard.edu/dataverse/icews</a></li>
-<li><strong>Coverage:</strong> Global machine-coded political events; long-run historical/event-actor structure</li>
-<li><strong>Cadence:</strong> Batch/periodic updates via repository releases</li>
-<li><strong>Topic tags:</strong> geopolitics, early-warning, event-data</li>
-<li><strong>Good for:</strong> Regime interaction shifts, cooperation-vs-conflict balance changes, pre-crisis signal testing</li>
-<li><strong>Caveats:</strong> Machine-coding and media-source dependence can inject bias/noise; requires triangulation</li>
-<li><strong>Story-use ideas:</strong> "Did diplomatic hostility metrics jump before sanctions or kinetic action?"</li>
+<li><strong>Cadence:</strong> Batch/periodic</li>
+<li><strong>Good for:</strong> Actor-interaction trend changes; pre-crisis signal testing</li>
+<li><strong>Caveats:</strong> Machine-coded + media-dependent noise</li>
 </ul>
-<h3 id="ooni-network-measurement-data">OONI Network Measurement Data</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://ooni.org/data/">https://ooni.org/data/</a></li>
-<li><strong>Coverage:</strong> Global internet censorship/interference measurements from distributed probes</li>
-<li><strong>Cadence:</strong> Frequent/ongoing submissions</li>
-<li><strong>Topic tags:</strong> censorship, unrest, infrastructure, geopolitics</li>
-<li><strong>Good for:</strong> Technical corroboration of shutdowns/platform blocking during protests/elections/conflicts</li>
-<li><strong>Caveats:</strong> Probe coverage varies by country/ASN; non-detections are not definitive evidence of no interference</li>
-<li><strong>Story-use ideas:</strong> "Did messaging-platform blocking coincide with street mobilization windows?"</li>
-</ul>
-<h3 id="gdelt-data-feeds-events-gkg">GDELT Data Feeds (Events + GKG)</h3>
+<h3 id="gdelt-events-gkg">GDELT (Events + GKG)</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://www.gdeltproject.org/data.html">https://www.gdeltproject.org/data.html</a></li>
-<li><strong>Coverage:</strong> Global media-derived events/themes/tone; high-frequency updates</li>
-<li><strong>Cadence:</strong> Near real-time (multiple updates per hour)</li>
-<li><strong>Topic tags:</strong> geopolitics, unrest, media-signals</li>
-<li><strong>Good for:</strong> Early anomaly surfacing and narrative-shift detection before official statistics publish</li>
-<li><strong>Caveats:</strong> Media-coverage bias and language asymmetries; not direct ground truth</li>
-<li><strong>Story-use ideas:</strong> "Theme/tone shock appears before official acknowledgement of an incident cluster"</li>
+<li><strong>Cadence:</strong> Near real-time</li>
+<li><strong>Good for:</strong> Early anomaly and narrative-shift detection</li>
+<li><strong>Caveats:</strong> Media bias/language asymmetry; not ground truth</li>
 </ul>
-<h3 id="cdc-data-portal-incl-nvss-provisional-overdose-series">CDC Data Portal (incl. NVSS Provisional Overdose series)</h3>
+<h3 id="ooni">OONI</h3>
 <ul>
-<li><strong>URL:</strong> <a href="https://data.cdc.gov/">https://data.cdc.gov/</a></li>
-<li><strong>Coverage:</strong> US public-health indicators (national/state/local, dataset dependent)</li>
-<li><strong>Cadence:</strong> Dataset-specific (often monthly/quarterly updates)</li>
-<li><strong>Topic tags:</strong> us, domestic-risk, public-health</li>
-<li><strong>Good for:</strong> Social stress context and divergence analysis alongside domestic crime series</li>
-<li><strong>Caveats:</strong> Provisional series are revised; lag and suppression rules can affect short-window interpretation</li>
-<li><strong>Story-use ideas:</strong> "Do overdose and violent-crime trajectories diverge unusually in specific states?"</li>
-</ul>
-<h3 id="chicago-crimes-2001present">Chicago Crimes (2001–Present)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2">https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2</a></li>
-<li><strong>Coverage:</strong> Chicago incident-level crime records with offense/date/location metadata</li>
-<li><strong>Cadence:</strong> Frequent city feed updates</li>
-<li><strong>Topic tags:</strong> us, domestic-crime, city-level</li>
-<li><strong>Good for:</strong> District/category anomaly detection, near-real-time urban trend checks, policy-change impact monitoring</li>
-<li><strong>Caveats:</strong> Incident updates/backfills occur; offense definitions and geocoding fields need careful handling</li>
-<li><strong>Story-use ideas:</strong> "Did robbery or motor-vehicle theft break seasonal pattern in specific districts?"</li>
-</ul>
-<h3 id="toronto-major-crime-indicators-mci">Toronto Major Crime Indicators (MCI)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://open.toronto.ca/dataset/major-crime-indicators/">https://open.toronto.ca/dataset/major-crime-indicators/</a></li>
-<li><strong>Coverage:</strong> Toronto police-reported major crime incidents by category/neighbourhood/time</li>
-<li><strong>Cadence:</strong> Periodic municipal updates</li>
-<li><strong>Topic tags:</strong> canada, domestic-crime, city-level</li>
-<li><strong>Good for:</strong> Canadian urban crime discontinuity checks and cross-border methodology-aware comparisons</li>
-<li><strong>Caveats:</strong> Reporting and category conventions differ from US systems; publication lag may vary</li>
-<li><strong>Story-use ideas:</strong> "Which Toronto neighbourhoods show category-specific outlier changes vs city baseline?"</li>
-</ul>
-<h3 id="stanford-helm-holistic-evaluation-of-language-models">Stanford HELM (Holistic Evaluation of Language Models)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://crfm.stanford.edu/helm/">https://crfm.stanford.edu/helm/</a></li>
-<li><strong>Coverage:</strong> AI model benchmark/evaluation reporting across tasks and scenarios</li>
-<li><strong>Cadence:</strong> Periodic benchmark/report updates</li>
-<li><strong>Topic tags:</strong> ai, evaluation, capability-tracking</li>
-<li><strong>Good for:</strong> Tracking capability/safety trade-offs and identifying suspicious benchmark discontinuities</li>
-<li><strong>Caveats:</strong> Benchmark design/protocol changes can mimic capability jumps; compare like-for-like settings</li>
-<li><strong>Story-use ideas:</strong> "Large benchmark jump without matching transparency on training or evaluation protocol"</li>
+<li><strong>URL:</strong> <a href="https://ooni.org/data/">https://ooni.org/data/</a></li>
+<li><strong>Cadence:</strong> Ongoing</li>
+<li><strong>Good for:</strong> Corroborating censorship/shutdown claims</li>
+<li><strong>Caveats:</strong> Probe coverage uneven; non-detection ≠ no interference</li>
 </ul>
 <hr />
-<h2 id="additions-2026-02-25-dataset-cycle-late">Additions (2026-02-25 DATASET cycle, late)</h2>
-<h3 id="opensanctions-global-sanctionswatchlist-aggregation">OpenSanctions (global sanctions/watchlist aggregation)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.opensanctions.org/datasets/">https://www.opensanctions.org/datasets/</a></li>
-<li><strong>Coverage:</strong> Multi-jurisdiction sanctions, PEP, and watchlist entities from many official sources</li>
-<li><strong>Cadence:</strong> Frequent rolling updates (dataset-dependent)</li>
-<li><strong>Topic tags:</strong> sanctions, geopolitics, compliance, networks</li>
-<li><strong>Good for:</strong> Tracking designation waves, entity-network expansion, and cross-regime timing gaps</li>
-<li><strong>Caveats:</strong> Aggregated source; high-stakes claims should be checked against originating authority records</li>
-<li><strong>Story-use ideas:</strong> "Do sanctions additions accelerate after specific conflict events, and which regimes move first?"</li>
-</ul>
-<h3 id="un-comtrade-official-international-goods-trade">UN Comtrade (official international goods trade)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://comtrade.un.org/">https://comtrade.un.org/</a></li>
-<li><strong>Coverage:</strong> Bilateral goods trade by commodity/country (annual and monthly goods series)</li>
-<li><strong>Cadence:</strong> Monthly + annual releases (with lag/revisions)</li>
-<li><strong>Topic tags:</strong> trade, geopolitics, sanctions-evasion, macro</li>
-<li><strong>Good for:</strong> Rerouting detection, partner-switch analysis, and commodity-level discontinuity checks</li>
-<li><strong>Caveats:</strong> Reporting lag/mirror discrepancies; short-window interpretation requires caution</li>
-<li><strong>Story-use ideas:</strong> "Did dual-use commodity flows reroute through intermediary hubs after sanctions changes?"</li>
-</ul>
-<h3 id="global-fishing-watch-datasetscode">Global Fishing Watch datasets/code</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://globalfishingwatch.org/datasets-and-code/">https://globalfishingwatch.org/datasets-and-code/</a></li>
-<li><strong>Coverage:</strong> Global vessel-activity derivatives (AIS/satellite-informed), fisheries/effort layers</li>
-<li><strong>Cadence:</strong> Product-specific updates (often frequent/periodic)</li>
-<li><strong>Topic tags:</strong> maritime, geopolitics, enforcement, infrastructure</li>
-<li><strong>Good for:</strong> Maritime behavior shifts near disputed waters and chokepoints</li>
-<li><strong>Caveats:</strong> AIS coverage gaps/spoofing/transponder behavior can bias interpretation</li>
-<li><strong>Story-use ideas:</strong> "Did apparent vessel activity collapse in a disputed area during a security incident window?"</li>
-</ul>
-<h3 id="edmonton-eps-neighbourhood-criminal-occurrences">Edmonton EPS Neighbourhood Criminal Occurrences</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data">https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data</a></li>
-<li><strong>Coverage:</strong> Edmonton neighbourhood-level monthly criminal occurrence counts</li>
-<li><strong>Cadence:</strong> Monthly</li>
-<li><strong>Topic tags:</strong> canada, domestic-crime, city-level</li>
-<li><strong>Good for:</strong> Sub-city Canadian discontinuity analysis and category/neighbourhood outlier detection</li>
-<li><strong>Caveats:</strong> Occurrence definitions and local reporting practices differ from other cities</li>
-<li><strong>Story-use ideas:</strong> "Which neighbourhood-category combinations break from city baseline trend?"</li>
-</ul>
-<h3 id="ai-incident-database-aiaaic">AI Incident Database (AIAAIC)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://incidentdatabase.ai/">https://incidentdatabase.ai/</a></li>
-<li><strong>Coverage:</strong> Publicly documented AI incidents across sectors/use-cases</li>
-<li><strong>Cadence:</strong> Ongoing updates as incidents are documented</li>
-<li><strong>Topic tags:</strong> ai, safety, incidents, governance</li>
-<li><strong>Good for:</strong> Risk-event trend monitoring and capability-risk divergence context</li>
-<li><strong>Caveats:</strong> Not exhaustive; depends on public reporting and curation practices</li>
-<li><strong>Story-use ideas:</strong> "Are reported AI incidents rising faster than benchmarked capability improvements?"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-26-dataset-cycle">Additions (2026-02-26 DATASET cycle)</h2>
-<h3 id="world-bank-commodities-price-data-pink-sheet">World Bank Commodities Price Data (Pink Sheet)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet">https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet</a></li>
-<li><strong>Coverage:</strong> Global commodity benchmark prices (energy, metals, agriculture)</li>
-<li><strong>Cadence:</strong> Monthly</li>
-<li><strong>Topic tags:</strong> commodities, macro, geopolitics, unrest-context</li>
-<li><strong>Good for:</strong> Price-shock context and supply-stress baselining around policy/security events</li>
-<li><strong>Caveats:</strong> Benchmarks are not local retail prices; lag/revisions can affect short-window reads</li>
-<li><strong>Story-use ideas:</strong> "Did food/fuel benchmark spikes precede unrest or emergency policy changes?"</li>
-</ul>
-<h3 id="un-comtrade-official-international-trade">UN Comtrade (official international trade)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://comtrade.un.org/">https://comtrade.un.org/</a></li>
-<li><strong>Coverage:</strong> Bilateral goods trade by commodity/country (monthly + annual)</li>
-<li><strong>Cadence:</strong> Monthly/annual releases</li>
-<li><strong>Topic tags:</strong> trade, sanctions, geopolitics, rerouting</li>
-<li><strong>Good for:</strong> Detecting intermediary reroutes and commodity-flow discontinuities</li>
-<li><strong>Caveats:</strong> Mirror-stat differences and publication lag require cautious near-term inference</li>
-<li><strong>Story-use ideas:</strong> "Did sanctioned-product flows shift through third-country hubs?"</li>
-</ul>
-<h3 id="imo-gisis-modules">IMO GISIS modules</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://gisis.imo.org/">https://gisis.imo.org/</a></li>
-<li><strong>Coverage:</strong> Maritime safety/security modules incl. piracy/casualty references</li>
-<li><strong>Cadence:</strong> Ongoing (module-dependent)</li>
-<li><strong>Topic tags:</strong> maritime, chokepoints, security, geopolitics</li>
-<li><strong>Good for:</strong> Incident clustering around sea-lane stress windows</li>
-<li><strong>Caveats:</strong> Access/completeness may vary by module/reporting pathway</li>
-<li><strong>Story-use ideas:</strong> "Are piracy/casualty clusters increasing near strategic corridors?"</li>
-</ul>
-<h3 id="epoch-ai-gpu-clusters-dataset">Epoch AI GPU Clusters dataset</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://epoch.ai/data/gpu-clusters">https://epoch.ai/data/gpu-clusters</a></li>
-<li><strong>Coverage:</strong> Publicly documented large compute clusters relevant to AI</li>
-<li><strong>Cadence:</strong> Periodic updates</li>
-<li><strong>Topic tags:</strong> ai, compute, infrastructure</li>
-<li><strong>Good for:</strong> Tracking compute concentration and frontier-scale buildout changes</li>
-<li><strong>Caveats:</strong> Public-disclosure and estimation bias; not exhaustive</li>
-<li><strong>Story-use ideas:</strong> "Are frontier compute clusters concentrating faster in specific jurisdictions?"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-26-dataset-cycle-late">Additions (2026-02-26 DATASET cycle, late)</h2>
-<h3 id="sipri-military-expenditure-database">SIPRI Military Expenditure Database</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.sipri.org/databases/milex">https://www.sipri.org/databases/milex</a></li>
-<li><strong>Coverage:</strong> Country-level military expenditure time series (long historical span)</li>
-<li><strong>Cadence:</strong> Annual updates</li>
-<li><strong>Topic tags:</strong> defense, geopolitics, spending, risk-signals</li>
-<li><strong>Good for:</strong> Contextualizing force-posture narratives and identifying unusual budget acceleration/slowdown patterns</li>
-<li><strong>Caveats:</strong> National accounting comparability and exchange-rate effects can distort simple cross-country comparisons</li>
-<li><strong>Story-use ideas:</strong> "Do reported security escalations align with sustained expenditure changes?"</li>
-</ul>
-<h3 id="iea-global-ev-data-explorer">IEA Global EV Data Explorer</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer">https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer</a></li>
-<li><strong>Coverage:</strong> Country-level electric-vehicle stock/sales and charging indicators</li>
-<li><strong>Cadence:</strong> Annual (with periodic updates)</li>
-<li><strong>Topic tags:</strong> energy-transition, industry, macro, policy</li>
-<li><strong>Good for:</strong> Tracking industrial-policy outcomes and supply-chain transition speed by country</li>
-<li><strong>Caveats:</strong> Series definitions and market-segmentation assumptions vary; avoid overreading single-year shifts</li>
-<li><strong>Story-use ideas:</strong> "Did subsidy changes create measurable EV adoption discontinuities?"</li>
-</ul>
-<h3 id="noaa-ibtracs-international-best-track-archive-for-climate-stewardship">NOAA IBTrACS (International Best Track Archive for Climate Stewardship)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.ncei.noaa.gov/products/international-best-track-archive">https://www.ncei.noaa.gov/products/international-best-track-archive</a></li>
-<li><strong>Coverage:</strong> Global tropical cyclone tracks/intensity from multiple agencies</li>
-<li><strong>Cadence:</strong> Ongoing/periodic updates</li>
-<li><strong>Topic tags:</strong> disaster-risk, climate, infrastructure, maritime</li>
-<li><strong>Good for:</strong> Hazard-context overlays for port/shipping and coastal-infrastructure OSINT stories</li>
-<li><strong>Caveats:</strong> Cross-basin and historical-era comparability needs care due to observing-system changes</li>
-<li><strong>Story-use ideas:</strong> "Did cyclone-track clustering raise short-window risk near strategic ports?"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-27-off-cycle-transport-ownership-procurement-telegram">Additions (2026-02-27 off-cycle: transport, ownership, procurement, Telegram)</h2>
-<h3 id="opensky-network-data">OpenSky Network Data</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://opensky-network.org/data">https://opensky-network.org/data</a></li>
-<li><strong>Coverage:</strong> Global aircraft surveillance data access paths (real-time and historical workflows)</li>
-<li><strong>Cadence:</strong> Continuous ingestion; access mode dependent</li>
-<li><strong>Topic tags:</strong> aviation, ads-b, mobility, geopolitics</li>
-<li><strong>Good for:</strong> Flight-route anomaly detection, corridor pressure checks, and temporal pattern baselining</li>
-<li><strong>Caveats:</strong> Access constraints and rate limits vary by endpoint/user type</li>
-<li><strong>Story-use ideas:</strong> "Did sanctioned or high-interest aircraft reroute following policy/airspace changes?"</li>
-</ul>
-<h3 id="ads-b-exchange-datahistorical">ADS-B Exchange Data/Historical</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.adsbexchange.com/data/">https://www.adsbexchange.com/data/</a></li>
-<li><strong>Coverage:</strong> Global unfiltered flight tracking with historical products</li>
-<li><strong>Cadence:</strong> Near real-time + archived products</li>
-<li><strong>Topic tags:</strong> aviation, ads-b, monitoring</li>
-<li><strong>Good for:</strong> Reconstructing flight paths and identifying abrupt traffic discontinuities</li>
-<li><strong>Caveats:</strong> Commercial terms and endpoint availability can change</li>
-<li><strong>Story-use ideas:</strong> "Did specific fleets go dark or reroute around event windows?"</li>
-</ul>
-<h3 id="adsblol-open-data-api">ADSB.lol Open Data API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.adsb.lol/docs/open-data/api/">https://www.adsb.lol/docs/open-data/api/</a></li>
-<li><strong>Coverage:</strong> Community-driven ADS-B feed and historical archives</li>
-<li><strong>Cadence:</strong> Near real-time + periodic historical updates</li>
-<li><strong>Topic tags:</strong> aviation, ads-b, open-data</li>
-<li><strong>Good for:</strong> Fast prototyping, redundancy checks, and open-data triangulation</li>
-<li><strong>Caveats:</strong> Community coverage can be uneven by geography/time</li>
-<li><strong>Story-use ideas:</strong> "Were diversion/emergency patterns regionally synchronized?"</li>
-</ul>
-<h3 id="marinecadastre-accessais">MarineCadastre AccessAIS</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://marinecadastre.gov/accessais/">https://marinecadastre.gov/accessais/</a></li>
-<li><strong>Coverage:</strong> AIS vessel traffic datasets (US-focused)</li>
-<li><strong>Cadence:</strong> Dataset-dependent updates</li>
-<li><strong>Topic tags:</strong> maritime, ais, infrastructure-risk</li>
-<li><strong>Good for:</strong> Port/chokepoint traffic analysis and vessel-density anomalies</li>
-<li><strong>Caveats:</strong> Primary focus is US waters; global conclusions require additional sources</li>
-<li><strong>Story-use ideas:</strong> "Is congestion or loitering near strategic infrastructure diverging from baseline?"</li>
-</ul>
-<h3 id="aishub-api">AISHub API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.aishub.net/api">https://www.aishub.net/api</a></li>
-<li><strong>Coverage:</strong> Aggregated AIS data from contributor network</li>
-<li><strong>Cadence:</strong> Near real-time feed access</li>
-<li><strong>Topic tags:</strong> maritime, ais, vessel-tracking</li>
-<li><strong>Good for:</strong> Vessel-track monitoring and behavior-change detection</li>
-<li><strong>Caveats:</strong> Access model depends on participation/plan; global completeness varies</li>
-<li><strong>Story-use ideas:</strong> "Do transponder gaps or route deviations cluster by vessel class?"</li>
-</ul>
-<h3 id="opencorporates-api">OpenCorporates API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://api.opencorporates.com/">https://api.opencorporates.com/</a></li>
-<li><strong>Coverage:</strong> Multi-jurisdiction company registry aggregation</li>
-<li><strong>Cadence:</strong> Ongoing updates from source registries</li>
-<li><strong>Topic tags:</strong> corporates, ownership, compliance, networks</li>
-<li><strong>Good for:</strong> Entity resolution and corporate relationship mapping</li>
-<li><strong>Caveats:</strong> Jurisdictional depth/latency varies; verify against primary registries for high-stakes claims</li>
-<li><strong>Story-use ideas:</strong> "Do director/officer changes spike before sanctions or procurement events?"</li>
-</ul>
-<h3 id="open-ownership-register-bods">Open Ownership Register (BODS)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://register.openownership.org/">https://register.openownership.org/</a></li>
-<li><strong>Coverage:</strong> Structured beneficial ownership disclosures from multiple sources</li>
-<li><strong>Cadence:</strong> Regular republished updates</li>
-<li><strong>Topic tags:</strong> beneficial-ownership, corporates, transparency</li>
-<li><strong>Good for:</strong> Beneficial-owner linkage analysis and ownership-chain reconstruction</li>
-<li><strong>Caveats:</strong> Source-country coverage heterogeneity and disclosure quality differences</li>
-<li><strong>Story-use ideas:</strong> "Did beneficial ownership links reorganize before major policy or contract shifts?"</li>
-</ul>
-<h3 id="uk-companies-house-psc-bulk-data">UK Companies House PSC bulk data</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://download.companieshouse.gov.uk/en_pscdata.html">https://download.companieshouse.gov.uk/en_pscdata.html</a></li>
-<li><strong>Coverage:</strong> UK persons with significant control (beneficial ownership) snapshot</li>
-<li><strong>Cadence:</strong> Snapshot releases</li>
-<li><strong>Topic tags:</strong> uk, beneficial-ownership, corporates</li>
-<li><strong>Good for:</strong> UK-centric ownership graphing and change-point detection</li>
-<li><strong>Caveats:</strong> Snapshot timing and filing behavior can affect short-window interpretation</li>
-<li><strong>Story-use ideas:</strong> "Are ownership-control updates clustering in target sectors?"</li>
-</ul>
-<h3 id="usaspending-api">USAspending API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://api.usaspending.gov/">https://api.usaspending.gov/</a></li>
-<li><strong>Coverage:</strong> US federal awards/transactions (contracts, grants, etc.)</li>
-<li><strong>Cadence:</strong> Regularly updated</li>
-<li><strong>Topic tags:</strong> procurement, contracts, us, spending</li>
-<li><strong>Good for:</strong> Vendor concentration analysis and agency spend discontinuities</li>
-<li><strong>Caveats:</strong> Award lifecycle nuances (obligation vs outlay) can mislead naive comparisons</li>
-<li><strong>Story-use ideas:</strong> "Did strategic sectors see abrupt recipient concentration changes?"</li>
-</ul>
-<h3 id="ted-open-data-ted-api">TED Open Data + TED API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://data.ted.europa.eu/">https://data.ted.europa.eu/</a></li>
-<li><strong>Coverage:</strong> EU public procurement notices across member states</li>
-<li><strong>Cadence:</strong> Ongoing publication flow</li>
-<li><strong>Topic tags:</strong> procurement, eu, contracts, public-spend</li>
-<li><strong>Good for:</strong> Cross-country procurement trend and market-structure analysis</li>
-<li><strong>Caveats:</strong> Taxonomy/method updates (eForms etc.) require normalization care</li>
-<li><strong>Story-use ideas:</strong> "Are contract surges synchronized across member states in sensitive domains?"</li>
-</ul>
-<h3 id="uk-contracts-finder-api">UK Contracts Finder API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.contractsfinder.service.gov.uk/apidocumentation">https://www.contractsfinder.service.gov.uk/apidocumentation</a></li>
-<li><strong>Coverage:</strong> UK contract opportunities and award notices</li>
-<li><strong>Cadence:</strong> Ongoing updates</li>
-<li><strong>Topic tags:</strong> procurement, uk, contracts</li>
-<li><strong>Good for:</strong> UK spend and supplier-pattern monitoring</li>
-<li><strong>Caveats:</strong> Field completeness and publication practices vary by contracting body</li>
-<li><strong>Story-use ideas:</strong> "Do repeat winners or micro-lot patterns suggest concentrated procurement behavior?"</li>
-</ul>
-<h3 id="tgstat-statistics-api">TGStat Statistics API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://tgstat.com/api/stat">https://tgstat.com/api/stat</a></li>
-<li><strong>Coverage:</strong> Public Telegram channel/group analytics (channel-level indicators)</li>
-<li><strong>Cadence:</strong> Frequent/near-real-time platform updates</li>
-<li><strong>Topic tags:</strong> telegram, social-graph, metadata, influence</li>
-<li><strong>Good for:</strong> Public-channel growth/engagement/citation monitoring and graph seeding</li>
-<li><strong>Caveats:</strong> Third-party coverage and methodology are platform-dependent</li>
-<li><strong>Story-use ideas:</strong> "Did coordinated channel clusters exhibit synchronized growth/citation bursts?"</li>
-</ul>
-<h3 id="telemetr-public-api">Telemetr public API</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://api.telemetr.io/">https://api.telemetr.io/</a></li>
-<li><strong>Coverage:</strong> Public Telegram channel analytics corpus</li>
-<li><strong>Cadence:</strong> Frequent updates (service-dependent)</li>
-<li><strong>Topic tags:</strong> telegram, analytics, network-monitoring</li>
-<li><strong>Good for:</strong> Cross-channel benchmarking and anomaly detection at scale</li>
-<li><strong>Caveats:</strong> Service terms, pricing, and coverage may shift; validate critical findings independently</li>
-<li><strong>Story-use ideas:</strong> "Do engagement shocks coincide across channels tied to one narrative arc?"</li>
-</ul>
-<h3 id="tgdataset-research-corpus">TGDataset (research corpus)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://github.com/SystemsLab-Sapienza/TGDataset">https://github.com/SystemsLab-Sapienza/TGDataset</a></li>
-<li><strong>Coverage:</strong> Large historical public Telegram channels/messages research dataset</li>
-<li><strong>Cadence:</strong> Research release snapshots</li>
-<li><strong>Topic tags:</strong> telegram, research, graph-analysis, historical</li>
-<li><strong>Good for:</strong> Structural network research and historical baseline modeling</li>
-<li><strong>Caveats:</strong> Static snapshot characteristics; not a live operational feed</li>
-<li><strong>Story-use ideas:</strong> "Which bridge channels materially shift centrality over long windows?"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-27-dataset-cycle">Additions (2026-02-27 DATASET cycle)</h2>
-<h3 id="imf-data-api-macro-balance-of-paymentspublic-finance-series">IMF Data API (macro + balance-of-payments/public finance series)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.imf.org/external/datamapper/api/">https://www.imf.org/external/datamapper/api/</a></li>
-<li><strong>Coverage:</strong> Cross-country macroeconomic indicators (dataset-dependent historical depth)</li>
-<li><strong>Cadence:</strong> Periodic updates by indicator family</li>
-<li><strong>Topic tags:</strong> macro, sovereign-risk, fiscal, external-balance</li>
-<li><strong>Good for:</strong> Testing whether crisis narratives are consistent with recent macro/fiscal trajectory data</li>
-<li><strong>Caveats:</strong> Indicator definitions and update lag vary across datasets; country revisions are common</li>
-<li><strong>Story-use ideas:</strong> "Did external-balance deterioration precede currency/political stress signals?"</li>
-</ul>
-<h3 id="itu-ict-data-telecominternet-development-indicators">ITU ICT Data (telecom/Internet development indicators)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx</a></li>
-<li><strong>Coverage:</strong> Country-level ICT penetration, subscriptions, and connectivity indicators</li>
-<li><strong>Cadence:</strong> Annual/periodic releases</li>
-<li><strong>Topic tags:</strong> connectivity, infrastructure, development, censorship-context</li>
-<li><strong>Good for:</strong> Long-run digital-access baselines when assessing shutdown/blocking and information-friction claims</li>
-<li><strong>Caveats:</strong> Annual cadence limits near-real-time inference; methodology revisions can affect trend continuity</li>
-<li><strong>Story-use ideas:</strong> "Are outage/censorship claims occurring in markets with rapidly rising dependency on mobile broadband?"</li>
-</ul>
-<h3 id="em-dat-international-disaster-database">EM-DAT International Disaster Database</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.emdat.be/">https://www.emdat.be/</a></li>
-<li><strong>Coverage:</strong> Global disaster events with impacts (deaths, affected, economic losses)</li>
-<li><strong>Cadence:</strong> Ongoing curated updates</li>
-<li><strong>Topic tags:</strong> disaster, humanitarian, infrastructure-risk</li>
-<li><strong>Good for:</strong> Cross-validating disaster impact severity and recurrence against media-driven narratives</li>
-<li><strong>Caveats:</strong> Event inclusion criteria and impact estimates can change as assessments mature</li>
-<li><strong>Story-use ideas:</strong> "Did reported disaster severity diverge from historical impact baselines for similar event types?"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-27-dataset-cycle-late">Additions (2026-02-27 DATASET cycle, late)</h2>
-<h3 id="world-bank-indicators-api-wdi-and-related-datasets">World Bank Indicators API (WDI and related datasets)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation</a></li>
-<li><strong>Coverage:</strong> Global country-level development/macro/governance indicators (series-dependent historical depth)</li>
-<li><strong>Cadence:</strong> Periodic by indicator family</li>
-<li><strong>Topic tags:</strong> macro, governance, development, social-risk</li>
-<li><strong>Good for:</strong> Cross-country baseline construction and multi-indicator stress triangulation</li>
-<li><strong>Caveats:</strong> Metadata/versioning differences and revisions require careful series selection</li>
-<li><strong>Story-use ideas:</strong> "Do governance and human-development indicators deteriorate ahead of instability narratives?"</li>
-</ul>
-<h3 id="unhcr-refugee-data-finder-downloadapi-pathways">UNHCR Refugee Data Finder (download/API pathways)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.unhcr.org/refugee-statistics/download/">https://www.unhcr.org/refugee-statistics/download/</a></li>
-<li><strong>Coverage:</strong> Global forced-displacement/asylum population and flow indicators</li>
-<li><strong>Cadence:</strong> Regular updates (series-dependent)</li>
-<li><strong>Topic tags:</strong> displacement, migration, humanitarian, conflict-context</li>
-<li><strong>Good for:</strong> Validating migration-pressure claims and recipient-country burden shifts</li>
-<li><strong>Caveats:</strong> Registration lag and retrospective revisions can change short-window impressions</li>
-<li><strong>Story-use ideas:</strong> "Are displacement surges temporally aligned with reported conflict escalations?"</li>
-</ul>
-<h3 id="faostat">FAOSTAT</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://www.fao.org/faostat/en/">https://www.fao.org/faostat/en/</a></li>
-<li><strong>Coverage:</strong> Global agriculture, food balance, production, and trade statistics</li>
-<li><strong>Cadence:</strong> Periodic/annual depending domain</li>
-<li><strong>Topic tags:</strong> food-security, agriculture, trade, macro-risk</li>
-<li><strong>Good for:</strong> Detecting structural food-system vulnerabilities and commodity-specific anomalies</li>
-<li><strong>Caveats:</strong> Release lags and methodological domain differences limit near-real-time interpretation</li>
-<li><strong>Story-use ideas:</strong> "Did production/import dependence shifts foreshadow food-price stress narratives?"</li>
-</ul>
-<hr />
-<h2 id="additions-2026-02-28-dataset-cycle">Additions (2026-02-28 DATASET cycle)</h2>
+<h2 id="2-humanitarian-and-disaster-context">2) Humanitarian and disaster context</h2>
 <h3 id="reliefweb-api">ReliefWeb API</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://api.reliefweb.int/">https://api.reliefweb.int/</a></li>
-<li><strong>Coverage:</strong> Global humanitarian updates, situation reports, and disaster/event metadata</li>
-<li><strong>Cadence:</strong> Frequent/ongoing publication flow</li>
-<li><strong>Topic tags:</strong> humanitarian, disasters, displacement, alerts</li>
-<li><strong>Good for:</strong> Rapid timeline corroboration and cross-region incident clustering checks</li>
-<li><strong>Caveats:</strong> Aggregated feed quality depends on upstream sources and curation practices</li>
-<li><strong>Story-use ideas:</strong> "Did humanitarian alert volume and severity shift abruptly around a claimed crisis window?"</li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> Situation-report timelines and incident clustering</li>
+<li><strong>Caveats:</strong> Aggregated quality depends on upstream sources</li>
 </ul>
-<h3 id="copernicus-climate-data-store-era5">Copernicus Climate Data Store (ERA5)</h3>
+<h3 id="em-dat">EM-DAT</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.emdat.be/">https://www.emdat.be/</a></li>
+<li><strong>Cadence:</strong> Ongoing curated updates</li>
+<li><strong>Good for:</strong> Cross-validating disaster impact severity</li>
+<li><strong>Caveats:</strong> Impact estimates evolve over time</li>
+</ul>
+<h3 id="unhcr-refugee-data-finder">UNHCR Refugee Data Finder</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.unhcr.org/refugee-statistics/download/">https://www.unhcr.org/refugee-statistics/download/</a></li>
+<li><strong>Cadence:</strong> Regular (series-dependent)</li>
+<li><strong>Good for:</strong> Displacement trend checks</li>
+<li><strong>Caveats:</strong> Registration lag/revisions</li>
+</ul>
+<h3 id="usgs-earthquake-feeds">USGS Earthquake feeds</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://earthquake.usgs.gov/earthquakes/feed/">https://earthquake.usgs.gov/earthquakes/feed/</a></li>
+<li><strong>Cadence:</strong> Near real-time</li>
+<li><strong>Good for:</strong> Fast seismic context</li>
+<li><strong>Caveats:</strong> Hazard signal only; causal claims require extra evidence</li>
+</ul>
+<h3 id="nasa-firms">NASA FIRMS</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://firms.modaps.eosdis.nasa.gov/">https://firms.modaps.eosdis.nasa.gov/</a></li>
+<li><strong>Cadence:</strong> Near real-time/daily</li>
+<li><strong>Good for:</strong> Fire hotspot anomalies</li>
+<li><strong>Caveats:</strong> Sensor/cloud limitations; hotspot ≠ cause</li>
+</ul>
+<h3 id="noaa-ibtracs">NOAA IBTrACS</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.ncei.noaa.gov/products/international-best-track-archive">https://www.ncei.noaa.gov/products/international-best-track-archive</a></li>
+<li><strong>Cadence:</strong> Ongoing/periodic</li>
+<li><strong>Good for:</strong> Cyclone hazard overlays for maritime/infrastructure stories</li>
+<li><strong>Caveats:</strong> Cross-era comparability limits</li>
+</ul>
+<h3 id="copernicus-cds-era5">Copernicus CDS (ERA5)</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://cds.climate.copernicus.eu/">https://cds.climate.copernicus.eu/</a></li>
-<li><strong>Coverage:</strong> Global atmospheric/oceanic reanalysis variables across long historical windows</li>
-<li><strong>Cadence:</strong> Regularly updated reanalysis products</li>
-<li><strong>Topic tags:</strong> climate, weather, hazard-context, environment</li>
-<li><strong>Good for:</strong> Testing extreme-weather claims against consistent gridded baselines</li>
-<li><strong>Caveats:</strong> Reanalysis resolution and model assumptions can miss local microclimate extremes</li>
-<li><strong>Story-use ideas:</strong> "Do claimed weather records exceed location-specific historical percentile bands?"</li>
-</ul>
-<h3 id="worldwide-governance-indicators-wgi">Worldwide Governance Indicators (WGI)</h3>
-<ul>
-<li><strong>URL:</strong> <a href="https://info.worldbank.org/governance/wgi/">https://info.worldbank.org/governance/wgi/</a></li>
-<li><strong>Coverage:</strong> Global annual governance metrics across six institutional dimensions</li>
-<li><strong>Cadence:</strong> Annual</li>
-<li><strong>Topic tags:</strong> governance, institutions, fragility, macro-risk</li>
-<li><strong>Good for:</strong> Structural context on state capacity and institutional change narratives</li>
-<li><strong>Caveats:</strong> Composite/perception-based annual indicators are weak for short-term event attribution</li>
-<li><strong>Story-use ideas:</strong> "Are claims of sudden institutional breakdown consistent with long-run governance trajectories?"</li>
+<li><strong>Cadence:</strong> Regular</li>
+<li><strong>Good for:</strong> Weather/extreme claims vs historical baselines</li>
+<li><strong>Caveats:</strong> Reanalysis resolution limits local inference</li>
 </ul>
 <hr />
-<h2 id="additions-2026-02-28-dataset-cycle-late">Additions (2026-02-28 DATASET cycle, late)</h2>
-<h3 id="agsi-european-gas-storage-transparency">AGSI+ (European gas storage transparency)</h3>
+<h2 id="3-energy-trade-and-maritime">3) Energy, trade, and maritime</h2>
+<h3 id="un-comtrade">UN Comtrade</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://comtrade.un.org/">https://comtrade.un.org/</a></li>
+<li><strong>Cadence:</strong> Monthly/annual</li>
+<li><strong>Good for:</strong> Commodity rerouting and sanctions-evasion pattern checks</li>
+<li><strong>Caveats:</strong> Publication lag + mirror discrepancies</li>
+</ul>
+<h3 id="world-bank-pink-sheet">World Bank Pink Sheet</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet">https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet</a></li>
+<li><strong>Cadence:</strong> Monthly</li>
+<li><strong>Good for:</strong> Commodity price-shock context</li>
+<li><strong>Caveats:</strong> Benchmarks, not local retail prices</li>
+</ul>
+<h3 id="agsi-eu-gas-storage">AGSI+ (EU gas storage)</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://agsi.gie.eu/">https://agsi.gie.eu/</a></li>
-<li><strong>Coverage:</strong> European underground gas storage levels and injection/withdrawal metrics by country/site</li>
-<li><strong>Cadence:</strong> Daily/intraday updates (platform and operator dependent)</li>
-<li><strong>Topic tags:</strong> energy, gas, storage, europe, supply-risk</li>
-<li><strong>Good for:</strong> Detecting abnormal seasonal drawdown speed, cross-country storage divergence, and stress around supply incidents</li>
-<li><strong>Caveats:</strong> Storage state is not a direct proxy for end-user outages; interpretation needs weather/demand context</li>
-<li><strong>Story-use ideas:</strong> "Did withdrawals accelerate beyond seasonal norms after a pipeline or LNG disruption event?"</li>
+<li><strong>Cadence:</strong> Daily/intraday</li>
+<li><strong>Good for:</strong> Storage stress and drawdown anomalies</li>
+<li><strong>Caveats:</strong> Storage level ≠ immediate outage risk</li>
 </ul>
-<h3 id="entso-e-transparency-platform">ENTSO-E Transparency Platform</h3>
+<h3 id="entso-e-transparency">ENTSO-E Transparency</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://transparency.entsoe.eu/">https://transparency.entsoe.eu/</a></li>
-<li><strong>Coverage:</strong> European electricity generation/load, cross-border flows, outages, and balancing/market indicators</li>
-<li><strong>Cadence:</strong> Near real-time to daily (dataset-specific)</li>
-<li><strong>Topic tags:</strong> electricity, grid, interconnectors, outages, europe</li>
-<li><strong>Good for:</strong> Identifying interconnector reversals, generation-mix shocks, and outage clusters linked to geopolitical or weather stress</li>
-<li><strong>Caveats:</strong> Data completeness and publication latency vary by market/TSO and product family</li>
-<li><strong>Story-use ideas:</strong> "Did cross-border power-flow reversals appear immediately after regional infrastructure incidents?"</li>
+<li><strong>Cadence:</strong> Near real-time to daily</li>
+<li><strong>Good for:</strong> Grid flow reversals, outages, generation shocks</li>
+<li><strong>Caveats:</strong> Completeness/latency varies by TSO and product</li>
+</ul>
+<h3 id="global-fishing-watch">Global Fishing Watch</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://globalfishingwatch.org/datasets-and-code/">https://globalfishingwatch.org/datasets-and-code/</a></li>
+<li><strong>Cadence:</strong> Product-dependent</li>
+<li><strong>Good for:</strong> Vessel behavior shifts near disputed waters</li>
+<li><strong>Caveats:</strong> AIS gaps/spoofing behavior</li>
+</ul>
+<h3 id="imo-gisis">IMO GISIS</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://gisis.imo.org/">https://gisis.imo.org/</a></li>
+<li><strong>Cadence:</strong> Ongoing (module-dependent)</li>
+<li><strong>Good for:</strong> Maritime safety/security incident context</li>
+<li><strong>Caveats:</strong> Access/completeness varies</li>
 </ul>
 <h3 id="vortexa-freight-tracker">Vortexa Freight Tracker</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://www.vortexa.com/freight-tracker/">https://www.vortexa.com/freight-tracker/</a></li>
-<li><strong>Coverage:</strong> Global seaborne crude/products/LNG flow analytics and tanker-routing intelligence</li>
-<li><strong>Cadence:</strong> Frequent updates (service/product dependent)</li>
-<li><strong>Topic tags:</strong> maritime, tanker, energy-trade, chokepoints, rerouting</li>
-<li><strong>Good for:</strong> Monitoring chokepoint avoidance, loading/discharge timing shifts, and route-level behavioral discontinuities</li>
-<li><strong>Caveats:</strong> Commercial analytics methodology and access limits require careful source disclosure and independent corroboration</li>
-<li><strong>Story-use ideas:</strong> "Did tanker rerouting around a chokepoint materially precede official supply-risk warnings?"</li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> Tanker rerouting/chokepoint pressure</li>
+<li><strong>Caveats:</strong> Commercial methodology/access limits</li>
+</ul>
+<h3 id="marinecadastre-accessais">MarineCadastre AccessAIS</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://marinecadastre.gov/accessais/">https://marinecadastre.gov/accessais/</a></li>
+<li><strong>Cadence:</strong> Dataset-dependent</li>
+<li><strong>Good for:</strong> US-focused vessel density/congestion analysis</li>
+<li><strong>Caveats:</strong> US-centric; not global coverage</li>
+</ul>
+<h3 id="aishub-api">AISHub API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.aishub.net/api">https://www.aishub.net/api</a></li>
+<li><strong>Cadence:</strong> Near real-time</li>
+<li><strong>Good for:</strong> Vessel track monitoring</li>
+<li><strong>Caveats:</strong> Coverage depends on contributor network/access plan</li>
+</ul>
+<hr />
+<h2 id="4-aviation-and-mobility-monitoring">4) Aviation and mobility monitoring</h2>
+<h3 id="opensky-network">OpenSky Network</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://opensky-network.org/data">https://opensky-network.org/data</a></li>
+<li><strong>Cadence:</strong> Continuous ingestion</li>
+<li><strong>Good for:</strong> Flight-route anomalies and corridor pressure checks</li>
+<li><strong>Caveats:</strong> Access/rate limits vary</li>
+</ul>
+<h3 id="ads-b-exchange">ADS-B Exchange</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.adsbexchange.com/data/">https://www.adsbexchange.com/data/</a></li>
+<li><strong>Cadence:</strong> Near real-time + historical products</li>
+<li><strong>Good for:</strong> Path reconstruction and traffic discontinuities</li>
+<li><strong>Caveats:</strong> Commercial terms/endpoints can change</li>
+</ul>
+<h3 id="adsblol-open-data-api">ADSB.lol Open Data API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.adsb.lol/docs/open-data/api/">https://www.adsb.lol/docs/open-data/api/</a></li>
+<li><strong>Cadence:</strong> Near real-time + archives</li>
+<li><strong>Good for:</strong> Redundant open-data triangulation</li>
+<li><strong>Caveats:</strong> Community coverage uneven geographically</li>
+</ul>
+<hr />
+<h2 id="5-economy-governance-and-structural-risk">5) Economy, governance, and structural risk</h2>
+<h3 id="world-bank-indicators-api">World Bank Indicators API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation</a></li>
+<li><strong>Cadence:</strong> Periodic by series</li>
+<li><strong>Good for:</strong> Cross-country baseline construction</li>
+<li><strong>Caveats:</strong> Revision/version handling required</li>
+</ul>
+<h3 id="imf-data-api">IMF Data API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.imf.org/external/datamapper/api/">https://www.imf.org/external/datamapper/api/</a></li>
+<li><strong>Cadence:</strong> Periodic by indicator</li>
+<li><strong>Good for:</strong> Sovereign-risk and macro-stress consistency checks</li>
+<li><strong>Caveats:</strong> Definition/lag differences across datasets</li>
+</ul>
+<h3 id="faostat">FAOSTAT</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.fao.org/faostat/en/">https://www.fao.org/faostat/en/</a></li>
+<li><strong>Cadence:</strong> Periodic/annual</li>
+<li><strong>Good for:</strong> Food security and agricultural stress baselines</li>
+<li><strong>Caveats:</strong> Not suitable for real-time inference</li>
+</ul>
+<h3 id="itu-ict-indicators">ITU ICT indicators</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx</a></li>
+<li><strong>Cadence:</strong> Annual/periodic</li>
+<li><strong>Good for:</strong> Digital dependency context for shutdown/censorship claims</li>
+<li><strong>Caveats:</strong> Annual cadence</li>
+</ul>
+<h3 id="worldwide-governance-indicators-wgi">Worldwide Governance Indicators (WGI)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://info.worldbank.org/governance/wgi/">https://info.worldbank.org/governance/wgi/</a></li>
+<li><strong>Cadence:</strong> Annual</li>
+<li><strong>Good for:</strong> Institutional fragility context</li>
+<li><strong>Caveats:</strong> Composite annual metrics, weak for short-term attribution</li>
+</ul>
+<h3 id="oecdai">OECD.AI</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://oecd.ai/">https://oecd.ai/</a></li>
+<li><strong>Cadence:</strong> Periodic</li>
+<li><strong>Good for:</strong> Cross-country AI policy/ecosystem context</li>
+<li><strong>Caveats:</strong> Composite indicator sensitivity</li>
+</ul>
+<h3 id="sipri-milex">SIPRI Milex</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.sipri.org/databases/milex">https://www.sipri.org/databases/milex</a></li>
+<li><strong>Cadence:</strong> Annual</li>
+<li><strong>Good for:</strong> Defense spending trajectory checks</li>
+<li><strong>Caveats:</strong> Cross-country accounting comparability issues</li>
+</ul>
+<hr />
+<h2 id="6-ownership-sanctions-and-procurement">6) Ownership, sanctions, and procurement</h2>
+<h3 id="opensanctions">OpenSanctions</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.opensanctions.org/datasets/">https://www.opensanctions.org/datasets/</a></li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> Designation-wave and entity-network monitoring</li>
+<li><strong>Caveats:</strong> Verify high-stakes claims against originating authorities</li>
+</ul>
+<h3 id="opencorporates-api">OpenCorporates API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://api.opencorporates.com/">https://api.opencorporates.com/</a></li>
+<li><strong>Cadence:</strong> Ongoing</li>
+<li><strong>Good for:</strong> Entity resolution and corporate linkage mapping</li>
+<li><strong>Caveats:</strong> Jurisdiction depth/latency uneven</li>
+</ul>
+<h3 id="open-ownership-register-bods">Open Ownership Register (BODS)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://register.openownership.org/">https://register.openownership.org/</a></li>
+<li><strong>Cadence:</strong> Regular republish</li>
+<li><strong>Good for:</strong> Beneficial ownership-chain reconstruction</li>
+<li><strong>Caveats:</strong> Coverage heterogeneity by country</li>
+</ul>
+<h3 id="uk-companies-house-psc-bulk">UK Companies House PSC bulk</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://download.companieshouse.gov.uk/en_pscdata.html">https://download.companieshouse.gov.uk/en_pscdata.html</a></li>
+<li><strong>Cadence:</strong> Snapshot releases</li>
+<li><strong>Good for:</strong> UK ownership-change analysis</li>
+<li><strong>Caveats:</strong> Filing behavior and snapshot timing effects</li>
+</ul>
+<h3 id="usaspending-api">USAspending API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://api.usaspending.gov/">https://api.usaspending.gov/</a></li>
+<li><strong>Cadence:</strong> Regular</li>
+<li><strong>Good for:</strong> Vendor concentration and agency spend shifts</li>
+<li><strong>Caveats:</strong> Obligation vs outlay interpretation traps</li>
+</ul>
+<h3 id="ted-open-dataapi-eu-procurement">TED Open Data/API (EU procurement)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://data.ted.europa.eu/">https://data.ted.europa.eu/</a></li>
+<li><strong>Cadence:</strong> Ongoing</li>
+<li><strong>Good for:</strong> Cross-country procurement trend analysis</li>
+<li><strong>Caveats:</strong> Taxonomy/format transitions need normalization</li>
+</ul>
+<h3 id="uk-contracts-finder-api">UK Contracts Finder API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.contractsfinder.service.gov.uk/apidocumentation">https://www.contractsfinder.service.gov.uk/apidocumentation</a></li>
+<li><strong>Cadence:</strong> Ongoing</li>
+<li><strong>Good for:</strong> UK award/opportunity monitoring</li>
+<li><strong>Caveats:</strong> Field completeness varies by authority</li>
+</ul>
+<hr />
+<h2 id="7-ai-capability-risk-and-incidents">7) AI capability, risk, and incidents</h2>
+<h3 id="stanford-helm">Stanford HELM</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://crfm.stanford.edu/helm/">https://crfm.stanford.edu/helm/</a></li>
+<li><strong>Cadence:</strong> Periodic</li>
+<li><strong>Good for:</strong> Capability/safety benchmark tracking</li>
+<li><strong>Caveats:</strong> Protocol changes can mimic jumps</li>
+</ul>
+<h3 id="epoch-ai-gpu-clusters">Epoch AI GPU Clusters</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://epoch.ai/data/gpu-clusters">https://epoch.ai/data/gpu-clusters</a></li>
+<li><strong>Cadence:</strong> Periodic</li>
+<li><strong>Good for:</strong> Compute concentration and frontier buildout tracking</li>
+<li><strong>Caveats:</strong> Public-disclosure bias; not exhaustive</li>
+</ul>
+<h3 id="ai-incident-database-aiaaic">AI Incident Database (AIAAIC)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://incidentdatabase.ai/">https://incidentdatabase.ai/</a></li>
+<li><strong>Cadence:</strong> Ongoing</li>
+<li><strong>Good for:</strong> Reported AI incident trend monitoring</li>
+<li><strong>Caveats:</strong> Not exhaustive; public-reporting dependent</li>
+</ul>
+<hr />
+<h2 id="8-domestic-crime-and-public-safety-uscanada">8) Domestic crime and public safety (US/Canada)</h2>
+<h3 id="fbi-cde-ucr">FBI CDE / UCR</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://cde.ucr.cjis.gov/">https://cde.ucr.cjis.gov/</a></li>
+<li><strong>Cadence:</strong> Periodic</li>
+<li><strong>Good for:</strong> US crime baseline comparisons</li>
+<li><strong>Caveats:</strong> Participation and category-comparability shifts</li>
+</ul>
+<h3 id="statscan">StatsCan</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.statcan.gc.ca/">https://www.statcan.gc.ca/</a></li>
+<li><strong>Cadence:</strong> Table-dependent</li>
+<li><strong>Good for:</strong> Canadian baseline trend checks</li>
+<li><strong>Caveats:</strong> Release lag and table revisions</li>
+</ul>
+<h3 id="chicago-crimes-2001present">Chicago Crimes (2001–present)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2">https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2</a></li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> District/category anomaly tracking</li>
+<li><strong>Caveats:</strong> Backfills and reclassification changes</li>
+</ul>
+<h3 id="toronto-mci">Toronto MCI</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://open.toronto.ca/dataset/major-crime-indicators/">https://open.toronto.ca/dataset/major-crime-indicators/</a></li>
+<li><strong>Cadence:</strong> Periodic</li>
+<li><strong>Good for:</strong> Neighbourhood-level trend checks</li>
+<li><strong>Caveats:</strong> Reporting conventions differ from US systems</li>
+</ul>
+<h3 id="edmonton-eps-neighbourhood-criminal-occurrences">Edmonton EPS Neighbourhood Criminal Occurrences</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data">https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data</a></li>
+<li><strong>Cadence:</strong> Monthly</li>
+<li><strong>Good for:</strong> Sub-city Canadian outlier detection</li>
+<li><strong>Caveats:</strong> Local definitions differ across municipalities</li>
+</ul>
+<hr />
+<h2 id="9-telegrampublic-channel-analytics">9) Telegram/public-channel analytics</h2>
+<h3 id="tgstat-api">TGStat API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://tgstat.com/api/stat">https://tgstat.com/api/stat</a></li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> Public-channel growth/citation monitoring</li>
+<li><strong>Caveats:</strong> Third-party methodology/coverage dependence</li>
+</ul>
+<h3 id="telemetr-api">Telemetr API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://api.telemetr.io/">https://api.telemetr.io/</a></li>
+<li><strong>Cadence:</strong> Frequent</li>
+<li><strong>Good for:</strong> Cross-channel benchmarking</li>
+<li><strong>Caveats:</strong> Terms/pricing/coverage can change</li>
+</ul>
+<h3 id="tgdataset-research-corpus">TGDataset (research corpus)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://github.com/SystemsLab-Sapienza/TGDataset">https://github.com/SystemsLab-Sapienza/TGDataset</a></li>
+<li><strong>Cadence:</strong> Snapshot releases</li>
+<li><strong>Good for:</strong> Historical network baseline research</li>
+<li><strong>Caveats:</strong> Not a live operational feed</li>
 </ul>
 </body>
 </html>
