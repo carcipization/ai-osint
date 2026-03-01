@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-01 06:01 UTC  
+**Dateline:** 2026-03-01 18:01 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -20,6 +20,13 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - **Ownership/procurement:** OpenCorporates, OpenOwnership, Companies House PSC, USAspending, TED, Contracts Finder
 - **AI capability/risk:** HELM, Epoch GPU clusters, AI Incident DB
 - **Domestic crime/public safety:** FBI CDE, StatsCan, Chicago, Toronto MCI, Edmonton EPS
+
+## Starter bundles (fast triage)
+- **Conflict escalation check (same-day):** ACLED + GDELT + ReliefWeb
+- **Internet shutdown claim:** OONI + ITU baseline + local official telecom notices
+- **Energy stress claim (Europe):** AGSI+ + ENTSO-E + Pink Sheet gas/oil context
+- **Sanctions-evasion trade reroute:** UN Comtrade + OpenSanctions + maritime/AIS source
+- **AI risk-vs-capability check:** HELM + Epoch GPU clusters + AI Incident Database
 
 ---
 
