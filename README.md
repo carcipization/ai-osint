@@ -16,18 +16,6 @@ make build
 python3 scripts/publish.py
 ```
 
-### One-off runs (out-of-cadence)
-
-Use these when you want an immediate STORY/DATASETS run without touching normal slot rotation (`.cron_checkpoint_mode.txt`):
-
-```bash
-make oneoff-story
-make oneoff-datasets
-# or
-python3 scripts/run_oneoff_slot.py STORY
-python3 scripts/run_oneoff_slot.py DATASETS
-```
-
 ## Published site (GitHub Pages)
 
 - Pages root: `docs/`
