@@ -1,49 +1,47 @@
 {
-  "run_at": "2026-03-01 00:01 UTC",
+  "run_at": "2026-03-01 12:01 UTC",
   "mode": "FOLLOWUP",
+  "method": "weighted(recency,impact,uncertainty,velocity)+exploration",
   "selected": [
     {
-      "slug": "2026-02-26-zzzzzzz-eu-ai-act-entry-into-force-claim-check",
-      "title": "Claim check: \u201cThe EU AI Act has not entered into force yet\u201d",
-      "score": 0.5937311395209569,
-      "age_h": 50.9
-    },
-    {
-      "slug": "2026-02-27-zzzzzzzzzz-dataset-intel-governance-signals-watchlist-06",
-      "title": "Dataset Intel: Governance-signals watchlist (cycle 06)",
-      "score": 0.7196301872184718,
-      "age_h": 32.9
-    },
-    {
-      "slug": "2026-02-27-zzzzzzzz-dataset-intel-systemic-risk-watchlist-05",
-      "title": "Dataset Intel: Systemic-risk watchlist (cycle 05)",
-      "score": 0.6321815434264554,
-      "age_h": 44.9
-    },
-    {
-      "slug": "2026-02-26-zzzzz-global-temperature-record-2025-claim-check",
-      "title": "Claim check: \u201c2025 was the warmest year on record globally\u201d",
-      "score": 0.6195128754617217,
-      "age_h": 62.9
-    },
-    {
-      "slug": "2026-02-26-zzzz-dataset-intel-cross-domain-watchlist-03",
-      "title": "Dataset Intel: Cross-domain anomaly watchlist (cycle 03)",
-      "score": 0.495578158932088,
-      "age_h": 68.9
-    },
-    {
-      "slug": "2026-02-26-global-m4-earthquake-activity-claim-check",
-      "title": "Claim Check: Has global M4+ earthquake activity surged in the latest week?",
-      "score": 0.7086308646744607,
-      "age_h": 71.1
+      "slug": "2026-02-28-zzzzzzzzzzzzz-hirara-seismic-swarm-48h-osint-story",
+      "topic": "seismic",
+      "priority": "high-velocity recency"
     },
     {
       "slug": "2026-02-27-zzzzzzzzz-global-m4-earthquakes-24h-spike-claim-check",
-      "title": "Claim check: \u201cGlobal M4+ earthquakes are spiking today\u201d",
-      "score": 1.0236773369763688,
-      "age_h": 38.9
+      "topic": "seismic",
+      "priority": "high-velocity recency"
+    },
+    {
+      "slug": "2026-02-28-zzzzzzzzzzzzzz-dataset-intel-energy-shipping-watchlist-08",
+      "topic": "energy-shipping",
+      "priority": "medium velocity"
+    },
+    {
+      "slug": "2026-02-27-zzzzzzzzzzz-bitcoin-new-all-time-high-today-claim-check",
+      "topic": "market",
+      "priority": "high update velocity"
+    },
+    {
+      "slug": "2026-02-26-zzzzzzz-eu-ai-act-entry-into-force-claim-check",
+      "topic": "policy",
+      "priority": "revisit interval"
+    },
+    {
+      "slug": "2026-02-26-zzzzz-global-temperature-record-2025-claim-check",
+      "topic": "climate",
+      "priority": "revisit interval"
+    },
+    {
+      "slug": "2026-02-24-morocco-palace-epstein-corroboration-check",
+      "topic": "forensics",
+      "priority": "exploration + unresolved uncertainty"
     }
   ],
-  "method": "weighted(recency,impact,uncertainty,velocity)+exploration"
+  "result": {
+    "published_followup": true,
+    "slug": "2026-03-01-zzzzzzzzzzzzzzz-followup-epstein-morocco-palace-corroboration-update",
+    "note": "New BBC corroboration materially strengthens confidence for the Morocco palace claim; no other checked candidate showed material change."
+  }
 }
