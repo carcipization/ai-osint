@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-01 21:29 UTC  
+**Dateline:** 2026-03-02 00:01 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -27,6 +27,13 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - **Energy stress claim (Europe):** AGSI+ + ENTSO-E + Pink Sheet gas/oil context
 - **Sanctions-evasion trade reroute:** UN Comtrade + OpenSanctions + maritime/AIS source
 - **AI risk-vs-capability check:** HELM + Epoch GPU clusters + AI Incident Database
+
+## Evidence reliability tiers (quick weighting)
+- **Tier 1 (strongest for hard claims):** official registries, agency/statistical releases, primary filings.
+- **Tier 2 (strong signal, needs context):** machine-coded or model-derived feeds (e.g., GDELT, ERA5, ICEWS).
+- **Tier 3 (lead generation only):** third-party aggregators/analytics and social-derived indicators.
+
+Rule of thumb: publish high-confidence claims only when Tier 1 is present, or when multiple independent Tier 2 sources converge and limitations are explicit.
 
 ---
 

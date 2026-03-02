@@ -12,12 +12,13 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-01 21:29 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-02 00:01 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -46,6 +47,13 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Sanctions-evasion trade reroute:</strong> UN Comtrade + OpenSanctions + maritime/AIS source</li>
 <li><strong>AI risk-vs-capability check:</strong> HELM + Epoch GPU clusters + AI Incident Database</li>
 </ul>
+<h2 id="evidence-reliability-tiers-quick-weighting">Evidence reliability tiers (quick weighting)</h2>
+<ul>
+<li><strong>Tier 1 (strongest for hard claims):</strong> official registries, agency/statistical releases, primary filings.</li>
+<li><strong>Tier 2 (strong signal, needs context):</strong> machine-coded or model-derived feeds (e.g., GDELT, ERA5, ICEWS).</li>
+<li><strong>Tier 3 (lead generation only):</strong> third-party aggregators/analytics and social-derived indicators.</li>
+</ul>
+<p>Rule of thumb: publish high-confidence claims only when Tier 1 is present, or when multiple independent Tier 2 sources converge and limitations are explicit.</p>
 <hr />
 <h2 id="1-conflict-unrest-and-information-control">1) Conflict, unrest, and information control</h2>
 <h3 id="acled">ACLED</h3>
