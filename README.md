@@ -14,6 +14,10 @@ Public GitHub Pages site for publishing AI-assisted OSINT stories.
 make build
 # or
 python3 scripts/publish.py
+
+# cadence safety check for claim-check posts (all, or specific files)
+python3 scripts/validate_claim_checks.py
+python3 scripts/validate_claim_checks.py docs/2026-03-02-zzzzzzzzzzzzzzzzzzz-california-robotaxi-permit-readiness-claim-check.md
 ```
 
 ## Published site (GitHub Pages)
