@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-02 00:46 UTC  
+**Dateline:** 2026-03-02 06:51 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -186,6 +186,12 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Cadence:** Monthly/annual
 - **Good for:** Commodity rerouting and sanctions-evasion pattern checks
 - **Caveats:** Publication lag + mirror discrepancies
+
+### UNCTADstat Data Center
+- **URL:** [https://unctadstat.unctad.org/EN/](https://unctadstat.unctad.org/EN/)
+- **Cadence:** Indicator-dependent (monthly/quarterly/annual)
+- **Good for:** Maritime trade structure, liner shipping connectivity, and country-level trade concentration baselines
+- **Caveats:** Release lag and metadata/version changes across indicator families
 
 ### World Bank Pink Sheet
 - **URL:** [https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet](https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet)
