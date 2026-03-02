@@ -12,12 +12,13 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-02 06:51 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-02 12:01 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -30,7 +31,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="fast-taxonomy">Fast taxonomy</h2>
 <ul>
-<li><strong>Near-real-time signals:</strong> GDELT, OONI, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds</li>
+<li><strong>Near-real-time signals:</strong> GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds</li>
 <li><strong>Structural baselines:</strong> World Bank/IMF/FAOSTAT/WGI/ITU/OECD.AI</li>
 <li><strong>Conflict &amp; humanitarian:</strong> ACLED, UCDP GED, ICEWS, EM-DAT, ReliefWeb, UNHCR</li>
 <li><strong>Trade/energy/maritime:</strong> UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa</li>
@@ -153,6 +154,20 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Cadence:</strong> Ongoing</li>
 <li><strong>Good for:</strong> Corroborating censorship/shutdown claims</li>
 <li><strong>Caveats:</strong> Probe coverage uneven; non-detection ≠ no interference</li>
+</ul>
+<h3 id="ripe-atlas">RIPE Atlas</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://atlas.ripe.net/docs/">https://atlas.ripe.net/docs/</a></li>
+<li><strong>Cadence:</strong> Near real-time (distributed probe measurements)</li>
+<li><strong>Good for:</strong> Reachability/latency path checks during suspected regional disruptions</li>
+<li><strong>Caveats:</strong> Probe geography is uneven; active measurements can miss application-layer blocking</li>
+</ul>
+<h3 id="caida-ioda-internet-outage-detection-and-analysis">CAIDA IODA (Internet Outage Detection and Analysis)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.caida.org/projects/ioda/">https://www.caida.org/projects/ioda/</a></li>
+<li><strong>Cadence:</strong> Near real-time monitoring + historical outage views</li>
+<li><strong>Good for:</strong> Macroscopic outage detection using BGP, darknet, and active-signal synthesis</li>
+<li><strong>Caveats:</strong> Detects infrastructure-level anomalies better than fine-grained platform/app restrictions</li>
 </ul>
 <hr />
 <h2 id="2-humanitarian-and-disaster-context">2) Humanitarian and disaster context</h2>

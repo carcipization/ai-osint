@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-02 06:51 UTC  
+**Dateline:** 2026-03-02 12:01 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -13,7 +13,7 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - Treat media-derived and third-party aggregations as signals, not ground truth.
 
 ## Fast taxonomy
-- **Near-real-time signals:** GDELT, OONI, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds
+- **Near-real-time signals:** GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds
 - **Structural baselines:** World Bank/IMF/FAOSTAT/WGI/ITU/OECD.AI
 - **Conflict & humanitarian:** ACLED, UCDP GED, ICEWS, EM-DAT, ReliefWeb, UNHCR
 - **Trade/energy/maritime:** UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa
@@ -130,6 +130,18 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Cadence:** Ongoing
 - **Good for:** Corroborating censorship/shutdown claims
 - **Caveats:** Probe coverage uneven; non-detection ≠ no interference
+
+### RIPE Atlas
+- **URL:** [https://atlas.ripe.net/docs/](https://atlas.ripe.net/docs/)
+- **Cadence:** Near real-time (distributed probe measurements)
+- **Good for:** Reachability/latency path checks during suspected regional disruptions
+- **Caveats:** Probe geography is uneven; active measurements can miss application-layer blocking
+
+### CAIDA IODA (Internet Outage Detection and Analysis)
+- **URL:** [https://www.caida.org/projects/ioda/](https://www.caida.org/projects/ioda/)
+- **Cadence:** Near real-time monitoring + historical outage views
+- **Good for:** Macroscopic outage detection using BGP, darknet, and active-signal synthesis
+- **Caveats:** Detects infrastructure-level anomalies better than fine-grained platform/app restrictions
 
 ---
 
