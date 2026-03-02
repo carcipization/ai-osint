@@ -193,6 +193,12 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Good for:** Commodity price-shock context
 - **Caveats:** Benchmarks, not local retail prices
 
+### IMF PortWatch — Daily Chokepoint Transit Calls and Trade Volume Estimates
+- **URL:** [https://portwatch.imf.org/datasets/42132aa4e2fc4d41bdaf9a445f688931_0/explore](https://portwatch.imf.org/datasets/42132aa4e2fc4d41bdaf9a445f688931_0/explore)
+- **Cadence:** Daily (AIS-derived)
+- **Good for:** Chokepoint stress checks (Suez/Panama/Bab el-Mandeb etc.), route-diversion quantification, and quick pre/post event transit baselines
+- **Caveats:** AIS reception/coverage and vessel classification decisions can shift counts; week/window definitions materially affect percent-change headlines
+
 ### U.S. EIA Open Data API
 - **URL:** [https://www.eia.gov/opendata/](https://www.eia.gov/opendata/)
 - **Cadence:** Series-dependent (daily/weekly/monthly)
