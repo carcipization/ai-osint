@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-02 00:01 UTC  
+**Dateline:** 2026-03-02 00:46 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -27,6 +27,68 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - **Energy stress claim (Europe):** AGSI+ + ENTSO-E + Pink Sheet gas/oil context
 - **Sanctions-evasion trade reroute:** UN Comtrade + OpenSanctions + maritime/AIS source
 - **AI risk-vs-capability check:** HELM + Epoch GPU clusters + AI Incident Database
+
+## Explicit monitoring bundles (new)
+
+### 1) Robotics SOTA tripwire bundle
+- **Concrete sources:**
+  - arXiv cs.RO feed: [https://arxiv.org/list/cs.RO/recent](https://arxiv.org/list/cs.RO/recent)
+  - Papers with Code (Robotics): [https://paperswithcode.com/area/robotics](https://paperswithcode.com/area/robotics)
+  - Hugging Face Papers (robotics tag/search): [https://huggingface.co/papers](https://huggingface.co/papers)
+  - Google DeepMind robotics publications: [https://deepmind.google/discover/blog/](https://deepmind.google/discover/blog/)
+  - Open X-Embodiment dataset/project page: [https://robotics-transformer-x.github.io/](https://robotics-transformer-x.github.io/)
+- **What to monitor:**
+  - New claims of generalist manipulation, long-horizon planning, or sim-to-real transfer breakthroughs.
+  - Reproducible benchmark deltas (success-rate jumps) on shared tasks (e.g., RT-X style eval sets).
+  - New large-scale robot datasets, policy checkpoints, or open-source stacks that lower replication cost.
+- **Caveats:**
+  - Demo videos often overstate robustness; require benchmark protocol + failure-mode disclosure.
+  - Cross-lab comparisons are noisy when embodiments/task definitions differ.
+  - Corporate blog timing can lead peer-reviewed publication by weeks/months.
+- **Practical trigger conditions for alerting:**
+  - Alert when **>=10 percentage-point** gain is reported on a recognized robotics benchmark with methods details.
+  - Alert when a top lab releases weights/code/data enabling third-party reproduction within 30 days.
+  - Alert when at least **2 independent sources** (paper + lab blog or paper + benchmark tracker) corroborate a “new SOTA” claim.
+
+### 2) Model SOTA / pre-release bundle (incl. LMSYS/LMArena signal)
+- **Concrete sources:**
+  - LMSYS Chatbot Arena leaderboard: [https://lmarena.ai/leaderboard](https://lmarena.ai/leaderboard)
+  - LMSYS announcements/X account: [https://x.com/lmsysorg](https://x.com/lmsysorg)
+  - OpenRouter model rankings: [https://openrouter.ai/rankings](https://openrouter.ai/rankings)
+  - Artificial Analysis model leaderboards: [https://artificialanalysis.ai/](https://artificialanalysis.ai/)
+  - Epoch AI benchmark/database index: [https://epoch.ai/data](https://epoch.ai/data)
+- **What to monitor:**
+  - Sudden leaderboard entrants, anonymous aliases, or large Elo jumps that can indicate pre-release frontier models.
+  - Convergence/divergence between human-preference leaderboards (Arena) and standardized eval suites.
+  - Provider routing changes (new model IDs, preview endpoints, silent version bumps).
+- **Caveats:**
+  - Arena-style Elo is preference-based and vulnerable to sampling/user-mix effects.
+  - Anonymous or proprietary entries may be renamed/withdrawn post-launch.
+  - Vendor “preview” models can drift rapidly; snapshots matter.
+- **Practical trigger conditions for alerting:**
+  - Alert on **new anonymous/preview model** entering top-tier (e.g., top 10) in LMArena with sustained placement over 24h.
+  - Alert on **>=30 Elo** move in 72h for a frontier family, then cross-check against at least one non-Arena benchmark source.
+  - Alert when model/API identifiers appear in docs/changelogs before formal launch announcement.
+
+### 3) AI labor nowcast bundle
+- **Concrete sources:**
+  - Indeed Hiring Lab (AI job postings): [https://www.hiringlab.org/](https://www.hiringlab.org/)
+  - Lightcast research and occupation trend reports: [https://lightcast.io/resources/research](https://lightcast.io/resources/research)
+  - LinkedIn Economic Graph / Workforce reports: [https://economicgraph.linkedin.com/](https://economicgraph.linkedin.com/)
+  - Upwork Research Institute: [https://www.upwork.com/research](https://www.upwork.com/research)
+  - US BLS CES/CPS releases: [https://www.bls.gov/](https://www.bls.gov/)
+- **What to monitor:**
+  - Share of postings requiring AI skills by occupation/region; acceleration vs baseline trend.
+  - Wage premium shifts for AI-adjacent roles and evidence of substitution vs augmentation.
+  - Freelance demand spikes for model integration, evaluation, and agent-ops tasks.
+- **Caveats:**
+  - Job-posting data is platform-biased and can double-count multi-posted roles.
+  - Skills taxonomy changes can create artificial trend breaks.
+  - Official labor stats lag and may under-detect fast task-level displacement.
+- **Practical trigger conditions for alerting:**
+  - Alert when AI-skill share rises **>=2 standard deviations** above trailing 12-month trend in a major occupation cluster.
+  - Alert when at least two independent sources show concurrent demand spike + wage compression in adjacent non-AI roles.
+  - Alert when official BLS releases confirm (or sharply contradict) private nowcast direction for 2 consecutive months.
 
 ## Evidence reliability tiers (quick weighting)
 - **Tier 1 (strongest for hard claims):** official registries, agency/statistical releases, primary filings.

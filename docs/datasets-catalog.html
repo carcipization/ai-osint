@@ -12,12 +12,13 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-02 00:01 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-02 00:46 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -45,6 +46,70 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Energy stress claim (Europe):</strong> AGSI+ + ENTSO-E + Pink Sheet gas/oil context</li>
 <li><strong>Sanctions-evasion trade reroute:</strong> UN Comtrade + OpenSanctions + maritime/AIS source</li>
 <li><strong>AI risk-vs-capability check:</strong> HELM + Epoch GPU clusters + AI Incident Database</li>
+</ul>
+<h2 id="explicit-monitoring-bundles-new">Explicit monitoring bundles (new)</h2>
+<h3 id="1-robotics-sota-tripwire-bundle">1) Robotics SOTA tripwire bundle</h3>
+<ul>
+<li><strong>Concrete sources:</strong></li>
+<li>arXiv cs.RO feed: <a href="https://arxiv.org/list/cs.RO/recent">https://arxiv.org/list/cs.RO/recent</a></li>
+<li>Papers with Code (Robotics): <a href="https://paperswithcode.com/area/robotics">https://paperswithcode.com/area/robotics</a></li>
+<li>Hugging Face Papers (robotics tag/search): <a href="https://huggingface.co/papers">https://huggingface.co/papers</a></li>
+<li>Google DeepMind robotics publications: <a href="https://deepmind.google/discover/blog/">https://deepmind.google/discover/blog/</a></li>
+<li>Open X-Embodiment dataset/project page: <a href="https://robotics-transformer-x.github.io/">https://robotics-transformer-x.github.io/</a></li>
+<li><strong>What to monitor:</strong></li>
+<li>New claims of generalist manipulation, long-horizon planning, or sim-to-real transfer breakthroughs.</li>
+<li>Reproducible benchmark deltas (success-rate jumps) on shared tasks (e.g., RT-X style eval sets).</li>
+<li>New large-scale robot datasets, policy checkpoints, or open-source stacks that lower replication cost.</li>
+<li><strong>Caveats:</strong></li>
+<li>Demo videos often overstate robustness; require benchmark protocol + failure-mode disclosure.</li>
+<li>Cross-lab comparisons are noisy when embodiments/task definitions differ.</li>
+<li>Corporate blog timing can lead peer-reviewed publication by weeks/months.</li>
+<li><strong>Practical trigger conditions for alerting:</strong></li>
+<li>Alert when <strong>&gt;=10 percentage-point</strong> gain is reported on a recognized robotics benchmark with methods details.</li>
+<li>Alert when a top lab releases weights/code/data enabling third-party reproduction within 30 days.</li>
+<li>Alert when at least <strong>2 independent sources</strong> (paper + lab blog or paper + benchmark tracker) corroborate a “new SOTA” claim.</li>
+</ul>
+<h3 id="2-model-sota-pre-release-bundle-incl-lmsyslmarena-signal">2) Model SOTA / pre-release bundle (incl. LMSYS/LMArena signal)</h3>
+<ul>
+<li><strong>Concrete sources:</strong></li>
+<li>LMSYS Chatbot Arena leaderboard: <a href="https://lmarena.ai/leaderboard">https://lmarena.ai/leaderboard</a></li>
+<li>LMSYS announcements/X account: <a href="https://x.com/lmsysorg">https://x.com/lmsysorg</a></li>
+<li>OpenRouter model rankings: <a href="https://openrouter.ai/rankings">https://openrouter.ai/rankings</a></li>
+<li>Artificial Analysis model leaderboards: <a href="https://artificialanalysis.ai/">https://artificialanalysis.ai/</a></li>
+<li>Epoch AI benchmark/database index: <a href="https://epoch.ai/data">https://epoch.ai/data</a></li>
+<li><strong>What to monitor:</strong></li>
+<li>Sudden leaderboard entrants, anonymous aliases, or large Elo jumps that can indicate pre-release frontier models.</li>
+<li>Convergence/divergence between human-preference leaderboards (Arena) and standardized eval suites.</li>
+<li>Provider routing changes (new model IDs, preview endpoints, silent version bumps).</li>
+<li><strong>Caveats:</strong></li>
+<li>Arena-style Elo is preference-based and vulnerable to sampling/user-mix effects.</li>
+<li>Anonymous or proprietary entries may be renamed/withdrawn post-launch.</li>
+<li>Vendor “preview” models can drift rapidly; snapshots matter.</li>
+<li><strong>Practical trigger conditions for alerting:</strong></li>
+<li>Alert on <strong>new anonymous/preview model</strong> entering top-tier (e.g., top 10) in LMArena with sustained placement over 24h.</li>
+<li>Alert on <strong>&gt;=30 Elo</strong> move in 72h for a frontier family, then cross-check against at least one non-Arena benchmark source.</li>
+<li>Alert when model/API identifiers appear in docs/changelogs before formal launch announcement.</li>
+</ul>
+<h3 id="3-ai-labor-nowcast-bundle">3) AI labor nowcast bundle</h3>
+<ul>
+<li><strong>Concrete sources:</strong></li>
+<li>Indeed Hiring Lab (AI job postings): <a href="https://www.hiringlab.org/">https://www.hiringlab.org/</a></li>
+<li>Lightcast research and occupation trend reports: <a href="https://lightcast.io/resources/research">https://lightcast.io/resources/research</a></li>
+<li>LinkedIn Economic Graph / Workforce reports: <a href="https://economicgraph.linkedin.com/">https://economicgraph.linkedin.com/</a></li>
+<li>Upwork Research Institute: <a href="https://www.upwork.com/research">https://www.upwork.com/research</a></li>
+<li>US BLS CES/CPS releases: <a href="https://www.bls.gov/">https://www.bls.gov/</a></li>
+<li><strong>What to monitor:</strong></li>
+<li>Share of postings requiring AI skills by occupation/region; acceleration vs baseline trend.</li>
+<li>Wage premium shifts for AI-adjacent roles and evidence of substitution vs augmentation.</li>
+<li>Freelance demand spikes for model integration, evaluation, and agent-ops tasks.</li>
+<li><strong>Caveats:</strong></li>
+<li>Job-posting data is platform-biased and can double-count multi-posted roles.</li>
+<li>Skills taxonomy changes can create artificial trend breaks.</li>
+<li>Official labor stats lag and may under-detect fast task-level displacement.</li>
+<li><strong>Practical trigger conditions for alerting:</strong></li>
+<li>Alert when AI-skill share rises <strong>&gt;=2 standard deviations</strong> above trailing 12-month trend in a major occupation cluster.</li>
+<li>Alert when at least two independent sources show concurrent demand spike + wage compression in adjacent non-AI roles.</li>
+<li>Alert when official BLS releases confirm (or sharply contradict) private nowcast direction for 2 consecutive months.</li>
 </ul>
 <h2 id="evidence-reliability-tiers-quick-weighting">Evidence reliability tiers (quick weighting)</h2>
 <ul>
