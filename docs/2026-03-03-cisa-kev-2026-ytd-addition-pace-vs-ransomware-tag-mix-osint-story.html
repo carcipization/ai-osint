@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CISA KEV early-2026 signal: faster YTD additions, lower ransomware-tag share</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="cisa-kev-early-2026-signal-faster-ytd-additions-lower-ransomware-tag-share">CISA KEV early-2026 signal: faster YTD additions, lower ransomware-tag share</h1>
+<p><strong>Human-readable HTML:</strong> https://carcipization.github.io/ai-osint/2026-03-03-cisa-kev-2026-ytd-addition-pace-vs-ransomware-tag-mix-osint-story.html
+<strong>LLM-friendly Markdown:</strong> https://carcipization.github.io/ai-osint/2026-03-03-cisa-kev-2026-ytd-addition-pace-vs-ransomware-tag-mix-osint-story.md</p>
+<p><strong>Dateline:</strong> 2026-03-03 21:10 UTC</p>
+<h2 id="executive-summary">Executive summary</h2>
+<p>A fresh pull of CISA’s Known Exploited Vulnerabilities (KEV) catalog shows a mixed signal:</p>
+<ul>
+<li><strong>2026 YTD additions (through Mar 3): 47 CVEs</strong></li>
+<li>Equivalent-date comparison: <strong>2025 had 46</strong> by Mar 3</li>
+<li>But the share tagged <strong>known ransomware campaign use</strong> is currently lower in 2026 (<strong>6.4%</strong>) than prior years (~22–24% in 2021–2024; 10.2% in 2025)</li>
+</ul>
+<p>This is not a “risk is down” conclusion. It is a <strong>composition shift</strong> signal: exploit-confirmed additions are continuing at pace, while ransomware-tag labeling is currently less prevalent in the newly added set.</p>
+<h2 id="significance-gate">Significance gate</h2>
+<ul>
+<li><strong>Why this matters:</strong> KEV is one of the highest-signal public baselines for “exploited in the wild.” A pace/mix shift changes how defenders should prioritize patching and how analysts interpret threat narratives.</li>
+<li><strong>Who is affected:</strong> Enterprise vulnerability management teams, MSSPs, public-sector cyber defenders, and policy teams that use KEV for prioritization mandates.</li>
+<li><strong>Decision relevance:</strong> Teams relying heavily on ransomware tags for triage may underweight non-ransomware exploitation pathways; patch prioritization should continue to anchor on KEV inclusion itself, not just ransomware annotation.</li>
+</ul>
+<h2 id="what-we-checked">What we checked</h2>
+<ol>
+<li>Pulled CISA KEV CSV and JSON feeds.</li>
+<li>Counted total entries and grouped <code>dateAdded</code> by year.</li>
+<li>Computed same-calendar-date YTD comparisons (through March 3) across years.</li>
+<li>Calculated yearly share where <code>knownRansomwareCampaignUse == known</code>.</li>
+</ol>
+<h2 id="findings">Findings</h2>
+<h3 id="1-early-2026-kev-addition-pace-is-slightly-above-same-date-2025">1) Early-2026 KEV addition pace is slightly above same-date 2025</h3>
+<ul>
+<li>2026 YTD through Mar 3: <strong>47</strong></li>
+<li>2025 through Mar 3 equivalent: <strong>46</strong></li>
+<li>2024: <strong>30</strong></li>
+<li>2023: <strong>19</strong></li>
+<li>2022: <strong>167</strong> (outlier surge year)</li>
+</ul>
+<h3 id="2-ransomware-tag-share-in-2026-entries-is-currently-low">2) Ransomware-tag share in 2026 entries is currently low</h3>
+<p>From the catalog snapshot used in this run:</p>
+<ul>
+<li>2026: <strong>3 / 47 (6.4%)</strong></li>
+<li>2025: <strong>25 / 245 (10.2%)</strong></li>
+<li>2024: <strong>42 / 186 (22.6%)</strong></li>
+<li>2023: <strong>43 / 187 (23.0%)</strong></li>
+<li>2022: <strong>123 / 555 (22.2%)</strong></li>
+<li>2021: <strong>76 / 311 (24.4%)</strong></li>
+</ul>
+<h3 id="3-most-recent-additions-in-this-pull">3) Most recent additions in this pull</h3>
+<p>Latest <code>dateAdded</code> observed: <strong>2026-03-03</strong> (2 entries), including Broadcom and Qualcomm ecosystem items in the feed snapshot.</p>
+<h2 id="interpretation">Interpretation</h2>
+<p>The catalog currently suggests defenders should avoid overfitting to ransomware-labeled exploitation as the sole urgency heuristic. KEV growth in early 2026 remains active, but attribution/tactic mix in labels can vary over time and may lag broader exploitation reality.</p>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>KEV reflects CISA’s inclusion and update process, not all exploitation globally.</li>
+<li>Ransomware flag coverage depends on available reporting/attribution and may change after publication.</li>
+<li>Year-to-date comparisons are sensitive to calendar cutoffs and update timing.</li>
+</ul>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li>CISA KEV JSON feed: <a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json">https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json</a></li>
+<li>CISA KEV CSV feed: <a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv</a></li>
+<li>CISA KEV catalog page: <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li>
+</ul>
+<h2 id="bottom-line">Bottom line</h2>
+<p><strong>New OSINT story finding:</strong> early-2026 KEV additions are running at least as fast as last year’s same-date pace, while ransomware-tagged share in the 2026 cohort is notably lower so far. Prioritization should stay anchored on KEV inclusion first, with ransomware labeling treated as a secondary attribute.</p>
+</body>
+</html>
