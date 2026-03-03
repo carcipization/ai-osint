@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-03 00:01 UTC  
+**Dateline:** 2026-03-03 03:01 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -11,6 +11,14 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - Triangulate at least 2 independent sources for strong claims.
 - Check cadence/lag before interpreting short-window moves.
 - Treat media-derived and third-party aggregations as signals, not ground truth.
+
+## Catalog quality keys (for maintenance)
+- **Access:** Open / registration / restricted
+- **Format:** API / CSV / dashboard / mixed
+- **Revision risk:** Low / Medium / High (likelihood historical values or methods change)
+- **Operational role:** Baseline / anomaly detection / corroboration / lead generation
+
+Use these keys when adding or refreshing entries so triage quality improves without adding catalog bloat.
 
 ## Fast taxonomy
 - **Near-real-time signals:** GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds
@@ -409,12 +417,18 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 ### CISA Known Exploited Vulnerabilities (KEV) Catalog
 - **URL:** [https://www.cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 - **Cadence:** Ongoing updates
+- **Access / Format:** Open / CSV + web catalog
+- **Revision risk:** Medium (entries and due dates can be updated)
+- **Operational role:** Corroboration + prioritization baseline
 - **Good for:** Grounding active-exploitation claims in an authoritative “exploited in the wild” list; prioritization context for cyber incident narratives
 - **Caveats:** US federal prioritization lens; omission does not imply safety
 
 ### FIRST EPSS (Exploit Prediction Scoring System)
 - **URL:** [https://www.first.org/epss/data_stats](https://www.first.org/epss/data_stats)
 - **Cadence:** Daily score publications
+- **Access / Format:** Open / daily CSV
+- **Revision risk:** Medium (scores change daily as model inputs evolve)
+- **Operational role:** Anomaly detection + lead generation for triage
 - **Good for:** Probabilistic exploitation-risk ranking of CVEs; triage and “which vulnerabilities matter now” framing
 - **Caveats:** Probability model, not confirmation of exploitation in a specific incident
 

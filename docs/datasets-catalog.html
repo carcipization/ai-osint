@@ -12,12 +12,13 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-03 00:01 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-03 03:01 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -28,6 +29,14 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>Check cadence/lag before interpreting short-window moves.</li>
 <li>Treat media-derived and third-party aggregations as signals, not ground truth.</li>
 </ul>
+<h2 id="catalog-quality-keys-for-maintenance">Catalog quality keys (for maintenance)</h2>
+<ul>
+<li><strong>Access:</strong> Open / registration / restricted</li>
+<li><strong>Format:</strong> API / CSV / dashboard / mixed</li>
+<li><strong>Revision risk:</strong> Low / Medium / High (likelihood historical values or methods change)</li>
+<li><strong>Operational role:</strong> Baseline / anomaly detection / corroboration / lead generation</li>
+</ul>
+<p>Use these keys when adding or refreshing entries so triage quality improves without adding catalog bloat.</p>
 <h2 id="fast-taxonomy">Fast taxonomy</h2>
 <ul>
 <li><strong>Near-real-time signals:</strong> GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds</li>
@@ -460,6 +469,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <ul>
 <li><strong>URL:</strong> <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li>
 <li><strong>Cadence:</strong> Ongoing updates</li>
+<li><strong>Access / Format:</strong> Open / CSV + web catalog</li>
+<li><strong>Revision risk:</strong> Medium (entries and due dates can be updated)</li>
+<li><strong>Operational role:</strong> Corroboration + prioritization baseline</li>
 <li><strong>Good for:</strong> Grounding active-exploitation claims in an authoritative “exploited in the wild” list; prioritization context for cyber incident narratives</li>
 <li><strong>Caveats:</strong> US federal prioritization lens; omission does not imply safety</li>
 </ul>
@@ -467,6 +479,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <ul>
 <li><strong>URL:</strong> <a href="https://www.first.org/epss/data_stats">https://www.first.org/epss/data_stats</a></li>
 <li><strong>Cadence:</strong> Daily score publications</li>
+<li><strong>Access / Format:</strong> Open / daily CSV</li>
+<li><strong>Revision risk:</strong> Medium (scores change daily as model inputs evolve)</li>
+<li><strong>Operational role:</strong> Anomaly detection + lead generation for triage</li>
 <li><strong>Good for:</strong> Probabilistic exploitation-risk ranking of CVEs; triage and “which vulnerabilities matter now” framing</li>
 <li><strong>Caveats:</strong> Probability model, not confirmation of exploitation in a specific incident</li>
 </ul>
