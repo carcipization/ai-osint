@@ -17,7 +17,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-03 03:01 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-03 15:06 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -483,6 +483,16 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Operational role:</strong> Anomaly detection + lead generation for triage</li>
 <li><strong>Good for:</strong> Probabilistic exploitation-risk ranking of CVEs; triage and “which vulnerabilities matter now” framing</li>
 <li><strong>Caveats:</strong> Probability model, not confirmation of exploitation in a specific incident</li>
+</ul>
+<h3 id="nist-national-vulnerability-database-nvd-cve-api">NIST National Vulnerability Database (NVD) CVE API</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://nvd.nist.gov/developers/vulnerabilities">https://nvd.nist.gov/developers/vulnerabilities</a></li>
+<li><strong>Cadence:</strong> Ongoing (NVD enrichment and update stream)</li>
+<li><strong>Access / Format:</strong> Open (API key recommended) / JSON API</li>
+<li><strong>Revision risk:</strong> High (CVSS vectors, CPE matches, and references can update after initial publication)</li>
+<li><strong>Operational role:</strong> Baseline + corroboration for vulnerability timeline claims</li>
+<li><strong>Good for:</strong> Verifying CVE publication/modification timestamps, severity metadata, affected-product mappings, and reference provenance when cyber claims go viral</li>
+<li><strong>Caveats:</strong> NVD lag can differ from CNA publication timing; enrichment completeness varies by CVE and can revise materially</li>
 </ul>
 <hr />
 <h2 id="9-domestic-crime-and-public-safety-uscanada">9) Domestic crime and public safety (US/Canada)</h2>
