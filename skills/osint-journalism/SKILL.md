@@ -41,6 +41,17 @@ A piece is novel when it adds at least one of:
 - Geospatial or registry linkage not present in headline coverage
 - Non-obvious inference that materially extends public reporting
 
+## Publishability gate (AP editor test)
+
+Before publishing a STORY, write a short preflight with:
+- Why AP would run this today (clear peg + broad relevance)
+- What is genuinely new versus already known
+- Who is affected and what changes because of this
+- The strongest argument that this is **not** a story
+- Editor verdict: publish/hold with one-sentence rationale
+
+If any item is weak or hand-wavy, hold and pick another candidate.
+
 ## Method notes for internet-shutdown stories
 
 When checking outage-duration claims:
