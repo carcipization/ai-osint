@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-03 03:01 UTC  
+**Dateline:** 2026-03-03 15:06 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -431,6 +431,16 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Operational role:** Anomaly detection + lead generation for triage
 - **Good for:** Probabilistic exploitation-risk ranking of CVEs; triage and “which vulnerabilities matter now” framing
 - **Caveats:** Probability model, not confirmation of exploitation in a specific incident
+
+
+### NIST National Vulnerability Database (NVD) CVE API
+- **URL:** [https://nvd.nist.gov/developers/vulnerabilities](https://nvd.nist.gov/developers/vulnerabilities)
+- **Cadence:** Ongoing (NVD enrichment and update stream)
+- **Access / Format:** Open (API key recommended) / JSON API
+- **Revision risk:** High (CVSS vectors, CPE matches, and references can update after initial publication)
+- **Operational role:** Baseline + corroboration for vulnerability timeline claims
+- **Good for:** Verifying CVE publication/modification timestamps, severity metadata, affected-product mappings, and reference provenance when cyber claims go viral
+- **Caveats:** NVD lag can differ from CNA publication timing; enrichment completeness varies by CVE and can revise materially
 
 ---
 
