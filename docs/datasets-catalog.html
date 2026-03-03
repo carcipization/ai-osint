@@ -12,12 +12,13 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-02 12:01 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-03 00:01 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -36,6 +37,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Trade/energy/maritime:</strong> UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa</li>
 <li><strong>Ownership/procurement:</strong> OpenCorporates, OpenOwnership, Companies House PSC, USAspending, TED, Contracts Finder</li>
 <li><strong>AI capability/risk:</strong> HELM, Epoch GPU clusters, AI Incident DB</li>
+<li><strong>Cyber vulnerability/exploitation risk:</strong> CISA KEV, FIRST EPSS</li>
 <li><strong>Domestic crime/public safety:</strong> FBI CDE, StatsCan, Chicago, Toronto MCI, Edmonton EPS</li>
 </ul>
 <h2 id="starter-bundles-fast-triage">Starter bundles (fast triage)</h2>
@@ -454,7 +456,23 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Caveats:</strong> Not exhaustive; public-reporting dependent</li>
 </ul>
 <hr />
-<h2 id="8-domestic-crime-and-public-safety-uscanada">8) Domestic crime and public safety (US/Canada)</h2>
+<h2 id="8-cyber-vulnerability-and-exploitation-risk">8) Cyber vulnerability and exploitation risk</h2>
+<h3 id="cisa-known-exploited-vulnerabilities-kev-catalog">CISA Known Exploited Vulnerabilities (KEV) Catalog</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li>
+<li><strong>Cadence:</strong> Ongoing updates</li>
+<li><strong>Good for:</strong> Grounding active-exploitation claims in an authoritative “exploited in the wild” list; prioritization context for cyber incident narratives</li>
+<li><strong>Caveats:</strong> US federal prioritization lens; omission does not imply safety</li>
+</ul>
+<h3 id="first-epss-exploit-prediction-scoring-system">FIRST EPSS (Exploit Prediction Scoring System)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.first.org/epss/data_stats">https://www.first.org/epss/data_stats</a></li>
+<li><strong>Cadence:</strong> Daily score publications</li>
+<li><strong>Good for:</strong> Probabilistic exploitation-risk ranking of CVEs; triage and “which vulnerabilities matter now” framing</li>
+<li><strong>Caveats:</strong> Probability model, not confirmation of exploitation in a specific incident</li>
+</ul>
+<hr />
+<h2 id="9-domestic-crime-and-public-safety-uscanada">9) Domestic crime and public safety (US/Canada)</h2>
 <h3 id="fbi-cde-ucr">FBI CDE / UCR</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://cde.ucr.cjis.gov/">https://cde.ucr.cjis.gov/</a></li>
@@ -491,7 +509,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Caveats:</strong> Local definitions differ across municipalities</li>
 </ul>
 <hr />
-<h2 id="9-telegrampublic-channel-analytics">9) Telegram/public-channel analytics</h2>
+<h2 id="10-telegrampublic-channel-analytics">10) Telegram/public-channel analytics</h2>
 <h3 id="tgstat-api">TGStat API</h3>
 <ul>
 <li><strong>URL:</strong> <a href="https://tgstat.com/api/stat">https://tgstat.com/api/stat</a></li>

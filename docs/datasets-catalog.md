@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-02 12:01 UTC  
+**Dateline:** 2026-03-03 00:01 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -19,6 +19,7 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - **Trade/energy/maritime:** UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa
 - **Ownership/procurement:** OpenCorporates, OpenOwnership, Companies House PSC, USAspending, TED, Contracts Finder
 - **AI capability/risk:** HELM, Epoch GPU clusters, AI Incident DB
+- **Cyber vulnerability/exploitation risk:** CISA KEV, FIRST EPSS
 - **Domestic crime/public safety:** FBI CDE, StatsCan, Chicago, Toronto MCI, Edmonton EPS
 
 ## Starter bundles (fast triage)
@@ -403,7 +404,23 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 
 ---
 
-## 8) Domestic crime and public safety (US/Canada)
+## 8) Cyber vulnerability and exploitation risk
+
+### CISA Known Exploited Vulnerabilities (KEV) Catalog
+- **URL:** [https://www.cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+- **Cadence:** Ongoing updates
+- **Good for:** Grounding active-exploitation claims in an authoritative “exploited in the wild” list; prioritization context for cyber incident narratives
+- **Caveats:** US federal prioritization lens; omission does not imply safety
+
+### FIRST EPSS (Exploit Prediction Scoring System)
+- **URL:** [https://www.first.org/epss/data_stats](https://www.first.org/epss/data_stats)
+- **Cadence:** Daily score publications
+- **Good for:** Probabilistic exploitation-risk ranking of CVEs; triage and “which vulnerabilities matter now” framing
+- **Caveats:** Probability model, not confirmation of exploitation in a specific incident
+
+---
+
+## 9) Domestic crime and public safety (US/Canada)
 
 ### FBI CDE / UCR
 - **URL:** [https://cde.ucr.cjis.gov/](https://cde.ucr.cjis.gov/)
@@ -437,7 +454,7 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 
 ---
 
-## 9) Telegram/public-channel analytics
+## 10) Telegram/public-channel analytics
 
 ### TGStat API
 - **URL:** [https://tgstat.com/api/stat](https://tgstat.com/api/stat)
