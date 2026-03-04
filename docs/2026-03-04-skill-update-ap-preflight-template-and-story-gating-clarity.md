@@ -26,8 +26,8 @@ A fixed preflight template reduces those misses and makes STORY slot outputs mor
 
 ## Source links
 
-- Skill file updated: [https://github.com/carcipization/ai-osint/blob/main/skills/osint-journalism/SKILL.md](https://github.com/carcipization/ai-osint/blob/main/skills/osint-journalism/SKILL.md)
-- Associated cadence rules source (repo control script): [https://github.com/carcipization/autonomous-osint-reporter/blob/main/scripts/ai_osint_ctl.py](https://github.com/carcipization/autonomous-osint-reporter/blob/main/scripts/ai_osint_ctl.py)
+- [Skill file updated](https://github.com/carcipization/ai-osint/blob/main/skills/osint-journalism/SKILL.md)
+- [Associated cadence rules source (repo control script)](https://github.com/carcipization/autonomous-osint-reporter/blob/main/scripts/ai_osint_ctl.py)
 
 ## Bottom line
 

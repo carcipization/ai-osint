@@ -66,9 +66,9 @@ The catalog currently suggests defenders should avoid overfitting to ransomware-
 
 ## Source links
 
-- CISA KEV JSON feed: [https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json)
-- CISA KEV CSV feed: [https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)
-- CISA KEV catalog page: [https://www.cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+- [CISA KEV JSON feed](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json)
+- [CISA KEV CSV feed](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)
+- [CISA KEV catalog page](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 
 ## Bottom line
 

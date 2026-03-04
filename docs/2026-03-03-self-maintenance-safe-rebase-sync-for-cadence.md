@@ -38,9 +38,9 @@ The script is intentionally scoped to runtime checkpoint files so it does **not*
 
 ## Source links
 
-- Git stash docs: [https://git-scm.com/docs/git-stash](https://git-scm.com/docs/git-stash)
-- Git pull docs (`--rebase`): [https://git-scm.com/docs/git-pull](https://git-scm.com/docs/git-pull)
-- This repo (automation change): [https://github.com/carcipization/ai-osint](https://github.com/carcipization/ai-osint)
+- [Git stash docs](https://git-scm.com/docs/git-stash)
+- [Git pull docs (`--rebase`)](https://git-scm.com/docs/git-pull)
+- [This repo (automation change)](https://github.com/carcipization/ai-osint)
 
 ## Bottom line
 

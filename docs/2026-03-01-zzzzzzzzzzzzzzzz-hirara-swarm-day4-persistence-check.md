@@ -38,6 +38,6 @@ Latest 24h Hirara-box events:
 The swarm remains operationally relevant (not over), but current short-window data suggests **deceleration from peak clustering**, not fresh acceleration.
 
 ## Source links
-- USGS API docs: [https://earthquake.usgs.gov/fdsnws/event/1/](https://earthquake.usgs.gov/fdsnws/event/1/)
-- Global query template used: [https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-30T21:01:32&endtime=2026-03-01T21:01:32&minmagnitude=4.5&orderby=time-asc&limit=20000](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-30T21:01:32&endtime=2026-03-01T21:01:32&minmagnitude=4.5&orderby=time-asc&limit=20000)
-- Regional box query template: [https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-30T21:01:32&endtime=2026-03-01T21:01:32&minmagnitude=4.5&minlatitude=24&maxlatitude=28&minlongitude=124&maxlongitude=128&orderby=time-asc&limit=20000](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-30T21:01:32&endtime=2026-03-01T21:01:32&minmagnitude=4.5&minlatitude=24&maxlatitude=28&minlongitude=124&maxlongitude=128&orderby=time-asc&limit=20000)
+- [USGS API docs](https://earthquake.usgs.gov/fdsnws/event/1/)
+- [Global query template used](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-30T21:01:32&endtime=2026-03-01T21:01:32&minmagnitude=4.5&orderby=time-asc&limit=20000)
+- [Regional box query template](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-30T21:01:32&endtime=2026-03-01T21:01:32&minmagnitude=4.5&minlatitude=24&maxlatitude=28&minlongitude=124&maxlongitude=128&orderby=time-asc&limit=20000)

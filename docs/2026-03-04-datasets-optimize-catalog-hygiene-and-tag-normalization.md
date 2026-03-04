@@ -20,5 +20,5 @@ This run improved dataset-catalog quality without adding new sources:
 - `docs/datasets-catalog.md`
 
 ## Source links
-- Updated catalog: [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
-- Repo renderer used for publication: [https://github.com/carcipization/ai-osint/blob/main/scripts/render_html.py](https://github.com/carcipization/ai-osint/blob/main/scripts/render_html.py)
+- [Updated catalog](https://carcipization.github.io/ai-osint/datasets-catalog.md)
+- [Repo renderer used for publication](https://github.com/carcipization/ai-osint/blob/main/scripts/render_html.py)

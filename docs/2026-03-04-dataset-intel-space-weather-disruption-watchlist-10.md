@@ -33,9 +33,9 @@ For space-weather claims, use this sequence:
 
 ## Source links
 
-- NOAA SWPC JSON directory: [https://services.swpc.noaa.gov/json/](https://services.swpc.noaa.gov/json/)
-- SWPC products/alerts hub: [https://www.swpc.noaa.gov/products](https://www.swpc.noaa.gov/products)
-- Updated catalog page: [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
+- [NOAA SWPC JSON directory](https://services.swpc.noaa.gov/json/)
+- [SWPC products/alerts hub](https://www.swpc.noaa.gov/products)
+- [Updated catalog page](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
 ## Bottom line
 

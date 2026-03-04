@@ -54,11 +54,11 @@ No new authoritative primary-source evidence surfaced in this quick follow-up wi
 ## Source links
 
 - Treasury Debt to the Penny (latest): [https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page[size]=1](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page[size]=1)
-- Treasury Debt to the Penny (2026-02-11): [https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-11](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-11)
-- USGS Event API docs: [https://earthquake.usgs.gov/fdsnws/event/1/](https://earthquake.usgs.gov/fdsnws/event/1/)
-- USGS global M4.5+ query template: [https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=4.5&orderby=time-asc&limit=20000](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=4.5&orderby=time-asc&limit=20000)
-- California DMV AV permit holders: [https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/](https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/)
-- California CPUC AV permits issued: [https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/autonomous-vehicle-programs/autonomous-vehicle-program-permits-issued](https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/autonomous-vehicle-programs/autonomous-vehicle-program-permits-issued)
+- [Treasury Debt to the Penny (2026-02-11)](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-11)
+- [USGS Event API docs](https://earthquake.usgs.gov/fdsnws/event/1/)
+- [USGS global M4.5+ query template](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=4.5&orderby=time-asc&limit=20000)
+- [California DMV AV permit holders](https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/autonomous-vehicle-testing-permit-holders/)
+- [California CPUC AV permits issued](https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/autonomous-vehicle-programs/autonomous-vehicle-program-permits-issued)
 
 ## Bottom line
 
