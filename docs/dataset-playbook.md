@@ -72,6 +72,15 @@ Use this playbook for claim verification and publication discipline.
 - Keep this file terse.
 - Add newly discovered failure modes immediately.
 - Move long examples/case studies to separate docs.
+
+## Datasets catalog optimization rules
+
+- Optimize for signal density first, compactness second.
+- Default to shrinking or holding size; growth needs explicit operational value.
+- Remove speculative/hypothetical sections when not tied to active workflows.
+- Prefer replacing/merging existing prose over append-only additions.
+- If a pass grows the file, include a short rationale and plan a compensating cleanup pass.
+
 ## Related
 - Strategy guide: [`dataset-strategy.md`](./dataset-strategy.md)
 

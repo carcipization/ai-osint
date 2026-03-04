@@ -12,33 +12,18 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - Check cadence/lag before interpreting short-window moves.
 - Treat media-derived and third-party aggregations as signals, not ground truth.
 
-## Catalog quality keys (for maintenance)
+## Catalog quality keys
 - **Access:** Open / registration / restricted
 - **Format:** API / CSV / dashboard / mixed
-- **Revision risk:** Low / Medium / High (likelihood historical values or methods change)
+- **Revision risk:** Low / Medium / High
 - **Operational role:** Baseline / anomaly detection / corroboration / lead generation
 
-Use these keys when adding or refreshing entries so triage quality improves without adding catalog bloat.
-
-## Catalog hygiene checklist (optimize mode)
-- Keep one canonical entry per dataset (no duplicates with alternate names).
-- Prefer stable organization or product homepages over temporary report URLs.
-- Add a short caveat that describes the most common analyst failure mode.
-- If a source is API-first, include docs endpoint rather than marketing pages.
-- When adding adjacent sources, update the nearest starter bundle instead of creating a new section.
-
-## Signal-family tags (normalization)
-Use these tags in analyst notes so retrieval/search stays consistent across runs:
-- `conflict-events`
-- `network-outage`
-- `maritime-transit`
-- `energy-balance`
-- `supply-chain`
-- `governance-registry`
-- `cyber-exploit-risk`
-- `ai-capability`
-- `ai-safety-incidents`
-- `labor-nowcast`
+## Optimization policy (compactness-biased)
+- Default to higher signal density and lower size.
+- Growth is allowed only when it adds clear retrieval/comparison value.
+- If size grows, include a one-line rationale and trim elsewhere in the next pass.
+- Remove entries/sections whose value is hypothetical or not operationally used.
+- Prefer replacement and deduplication over append-only edits.
 
 ## Fast taxonomy
 - **Near-real-time signals:** GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds
@@ -56,68 +41,6 @@ Use these tags in analyst notes so retrieval/search stays consistent across runs
 - **Energy stress claim (Europe):** AGSI+ + ENTSO-E + Pink Sheet gas/oil context
 - **Sanctions-evasion trade reroute:** UN Comtrade + OpenSanctions + maritime/AIS source
 - **AI risk-vs-capability check:** HELM + Epoch GPU clusters + AI Incident Database
-
-## Explicit monitoring bundles (new)
-
-### 1) Robotics SOTA tripwire bundle
-- **Concrete sources:**
-  - arXiv cs.RO feed: [https://arxiv.org/list/cs.RO/recent](https://arxiv.org/list/cs.RO/recent)
-  - Papers with Code (Robotics): [https://paperswithcode.com/area/robotics](https://paperswithcode.com/area/robotics)
-  - Hugging Face Papers (robotics tag/search): [https://huggingface.co/papers](https://huggingface.co/papers)
-  - Google DeepMind robotics publications: [https://deepmind.google/discover/blog/](https://deepmind.google/discover/blog/)
-  - Open X-Embodiment dataset/project page: [https://robotics-transformer-x.github.io/](https://robotics-transformer-x.github.io/)
-- **What to monitor:**
-  - New claims of generalist manipulation, long-horizon planning, or sim-to-real transfer breakthroughs.
-  - Reproducible benchmark deltas (success-rate jumps) on shared tasks (e.g., RT-X style eval sets).
-  - New large-scale robot datasets, policy checkpoints, or open-source stacks that lower replication cost.
-- **Caveats:**
-  - Demo videos often overstate robustness; require benchmark protocol + failure-mode disclosure.
-  - Cross-lab comparisons are noisy when embodiments/task definitions differ.
-  - Corporate blog timing can lead peer-reviewed publication by weeks/months.
-- **Practical trigger conditions for alerting:**
-  - Alert when **>=10 percentage-point** gain is reported on a recognized robotics benchmark with methods details.
-  - Alert when a top lab releases weights/code/data enabling third-party reproduction within 30 days.
-  - Alert when at least **2 independent sources** (paper + lab blog or paper + benchmark tracker) corroborate a “new SOTA” claim.
-
-### 2) Model SOTA / pre-release bundle (incl. LMSYS/LMArena signal)
-- **Concrete sources:**
-  - LMSYS Chatbot Arena leaderboard: [https://lmarena.ai/leaderboard](https://lmarena.ai/leaderboard)
-  - LMSYS announcements/X account: [https://x.com/lmsysorg](https://x.com/lmsysorg)
-  - OpenRouter model rankings: [https://openrouter.ai/rankings](https://openrouter.ai/rankings)
-  - Artificial Analysis model leaderboards: [https://artificialanalysis.ai/](https://artificialanalysis.ai/)
-  - Epoch AI benchmark/database index: [https://epoch.ai/data](https://epoch.ai/data)
-- **What to monitor:**
-  - Sudden leaderboard entrants, anonymous aliases, or large Elo jumps that can indicate pre-release frontier models.
-  - Convergence/divergence between human-preference leaderboards (Arena) and standardized eval suites.
-  - Provider routing changes (new model IDs, preview endpoints, silent version bumps).
-- **Caveats:**
-  - Arena-style Elo is preference-based and vulnerable to sampling/user-mix effects.
-  - Anonymous or proprietary entries may be renamed/withdrawn post-launch.
-  - Vendor “preview” models can drift rapidly; snapshots matter.
-- **Practical trigger conditions for alerting:**
-  - Alert on **new anonymous/preview model** entering top-tier (e.g., top 10) in LMArena with sustained placement over 24h.
-  - Alert on **>=30 Elo** move in 72h for a frontier family, then cross-check against at least one non-Arena benchmark source.
-  - Alert when model/API identifiers appear in docs/changelogs before formal launch announcement.
-
-### 3) AI labor nowcast bundle
-- **Concrete sources:**
-  - Indeed Hiring Lab (AI job postings): [https://www.hiringlab.org/](https://www.hiringlab.org/)
-  - Lightcast research and occupation trend reports: [https://lightcast.io/resources/research](https://lightcast.io/resources/research)
-  - LinkedIn Economic Graph / Workforce reports: [https://economicgraph.linkedin.com/](https://economicgraph.linkedin.com/)
-  - Upwork Research Institute: [https://www.upwork.com/research](https://www.upwork.com/research)
-  - US BLS CES/CPS releases: [https://www.bls.gov/](https://www.bls.gov/)
-- **What to monitor:**
-  - Share of postings requiring AI skills by occupation/region; acceleration vs baseline trend.
-  - Wage premium shifts for AI-adjacent roles and evidence of substitution vs augmentation.
-  - Freelance demand spikes for model integration, evaluation, and agent-ops tasks.
-- **Caveats:**
-  - Job-posting data is platform-biased and can double-count multi-posted roles.
-  - Skills taxonomy changes can create artificial trend breaks.
-  - Official labor stats lag and may under-detect fast task-level displacement.
-- **Practical trigger conditions for alerting:**
-  - Alert when AI-skill share rises **>=2 standard deviations** above trailing 12-month trend in a major occupation cluster.
-  - Alert when at least two independent sources show concurrent demand spike + wage compression in adjacent non-AI roles.
-  - Alert when official BLS releases confirm (or sharply contradict) private nowcast direction for 2 consecutive months.
 
 ## Evidence reliability tiers (quick weighting)
 - **Tier 1 (strongest for hard claims):** official registries, agency/statistical releases, primary filings.
@@ -519,7 +442,7 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Caveats:** Not a live operational feed
 
 
-## 10) Space weather and geomagnetic disruption
+## 11) Space weather and geomagnetic disruption
 
 ### NOAA SWPC space weather data (JSON)
 - **URL:** [https://services.swpc.noaa.gov/json/](https://services.swpc.noaa.gov/json/)
