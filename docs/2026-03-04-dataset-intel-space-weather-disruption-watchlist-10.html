@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dataset intel: Space-weather disruption watchlist (NOAA SWPC added)</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="dataset-intel-space-weather-disruption-watchlist-noaa-swpc-added">Dataset intel: Space-weather disruption watchlist (NOAA SWPC added)</h1>
+<p><strong>Human-readable HTML:</strong> https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-space-weather-disruption-watchlist-10.html<br />
+<strong>LLM-friendly Markdown:</strong> https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-space-weather-disruption-watchlist-10.md</p>
+<p><strong>Dateline:</strong> 2026-03-04 03:08 UTC</p>
+<h2 id="what-changed-this-run-datasets_b">What changed this run (DATASETS_B)</h2>
+<p>Added a genuinely new dataset source to the catalog:</p>
+<ul>
+<li><strong>NOAA SWPC space weather data (JSON feeds)</strong><br />
+<a href="https://services.swpc.noaa.gov/json/">https://services.swpc.noaa.gov/json/</a></li>
+</ul>
+<p>Catalog location updated: <code>docs/datasets-catalog.md</code> under a new section:
+- <strong>10) Space weather and geomagnetic disruption</strong></p>
+<h2 id="why-this-source-is-useful-for-osint">Why this source is useful for OSINT</h2>
+<p>Space-weather claims (geomagnetic storms, flare impacts, navigation/comms disruptions) often spread quickly and mix forecast language with observed effects. SWPC feeds provide a primary open baseline for:</p>
+<ul>
+<li>observed/forecast geomagnetic indices</li>
+<li>flare and solar event timelines</li>
+<li>grounding claims about potential disruption windows</li>
+</ul>
+<h2 id="operational-triage-use">Operational triage use</h2>
+<p>For space-weather claims, use this sequence:</p>
+<ol>
+<li><strong>SWPC JSON products</strong> for event timing/severity baseline</li>
+<li>Sector-specific corroboration (aviation NOTAMs, grid operator notices, GNSS advisories)</li>
+<li>Local impact confirmation before attributing outages directly to geomagnetic activity</li>
+</ol>
+<h2 id="source-links">Source links</h2>
+<ul>
+<li>NOAA SWPC JSON directory: <a href="https://services.swpc.noaa.gov/json/">https://services.swpc.noaa.gov/json/</a></li>
+<li>SWPC products/alerts hub: <a href="https://www.swpc.noaa.gov/products">https://www.swpc.noaa.gov/products</a></li>
+<li>Updated catalog page: <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></li>
+</ul>
+<h2 id="bottom-line">Bottom line</h2>
+<p>DATASETS_B requirement satisfied: catalog expanded with a new primary source that improves verification coverage for space-weather and infrastructure-disruption narratives.</p>
+</body>
+</html>

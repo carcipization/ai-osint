@@ -17,7 +17,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Dateline:</strong> 2026-03-03 15:06 UTC<br />
+<p><strong>Dateline:</strong> 2026-03-04 03:07 UTC<br />
 <strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">https://carcipization.github.io/ai-osint/datasets-catalog.html</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></p>
 <p>Compact inventory of high-value open datasets for AI-OSINT stories.</p>
@@ -553,6 +553,17 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Cadence:</strong> Snapshot releases</li>
 <li><strong>Good for:</strong> Historical network baseline research</li>
 <li><strong>Caveats:</strong> Not a live operational feed</li>
+</ul>
+<h2 id="10-space-weather-and-geomagnetic-disruption">10) Space weather and geomagnetic disruption</h2>
+<h3 id="noaa-swpc-space-weather-data-json">NOAA SWPC space weather data (JSON)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://services.swpc.noaa.gov/json/">https://services.swpc.noaa.gov/json/</a></li>
+<li><strong>Cadence:</strong> Near real-time to daily (product-dependent)</li>
+<li><strong>Access / Format:</strong> Open / JSON feeds</li>
+<li><strong>Revision risk:</strong> Medium (provisional observations and forecast updates can revise)</li>
+<li><strong>Operational role:</strong> Anomaly detection + corroboration for space-weather impact claims</li>
+<li><strong>Good for:</strong> Verifying geomagnetic storm severity signals (e.g., Kp), solar flare timelines, and operational risk context for GNSS, HF comms, power-grid and aviation routing narratives</li>
+<li><strong>Caveats:</strong> Product definitions differ (observed vs forecast); operational impact claims still require sector-specific corroboration</li>
 </ul>
 </body>
 </html>
