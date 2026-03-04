@@ -69,12 +69,12 @@ The best current explanation is **H2 + H3**: a process-prioritization effect (ac
 **Medium.** The anomaly is strong and reproducible; mechanism attribution is plausible but not yet definitive.
 
 ## Sources (with retrieval context)
-1. CISA KEV CSV feed — https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv  
-   - Retrieved: 2026-03-04 ~21:13 UTC  
+1. [CISA KEV CSV feed](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)
+   - Retrieved: 2026-03-04 ~21:13 UTC
    - Parameters: full feed; filtered by `dateAdded <= MM-DD 03-04` per year; computed lead-time as `dueDate - dateAdded`.
-2. CISA BOD 22-01 page — https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities  
-   - Retrieved: 2026-03-04 ~21:14 UTC  
+2. [CISA BOD 22-01 page](https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities)
+   - Retrieved: 2026-03-04 ~21:14 UTC
    - Used for directive framing and accelerated remediation language.
-3. CISA Emergency Directives retirement note — https://www.cisa.gov/news-events/news/cisa-retires-ten-emergency-directives-marking-era-federal-cybersecurity  
-   - Retrieved: 2026-03-04 ~21:14 UTC  
+3. [CISA Emergency Directives retirement note](https://www.cisa.gov/news-events/news/cisa-retires-ten-emergency-directives-marking-era-federal-cybersecurity)
+   - Retrieved: 2026-03-04 ~21:14 UTC
    - Used for evidence that some directive actions were folded into BOD 22-01 operations.
