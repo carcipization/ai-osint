@@ -1,7 +1,7 @@
 # Claim Check: Did Chicago motor vehicle theft rise sharply in the most recent published week?
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-25-zz-chicago-motor-vehicle-theft-weekly-anomaly-check.md)
 
 
 **Dateline:** 2026-02-25  

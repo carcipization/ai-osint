@@ -1,7 +1,7 @@
 # Claim Check: Did a new US-wide 10% import tariff take effect on 24 Feb 2026?
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-24-us-temporary-global-tariff-reset-claim-check.html](https://carcipization.github.io/ai-osint/2026-02-24-us-temporary-global-tariff-reset-claim-check.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-24-us-temporary-global-tariff-reset-claim-check.md](https://carcipization.github.io/ai-osint/2026-02-24-us-temporary-global-tariff-reset-claim-check.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-24-us-temporary-global-tariff-reset-claim-check.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-24-us-temporary-global-tariff-reset-claim-check.md)
 
 
 **Dateline:** 2026-02-24  

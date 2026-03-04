@@ -1,6 +1,6 @@
 # Dataset Playbook
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/dataset-playbook.html)  
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/dataset-playbook.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/dataset-playbook.md)
 
 

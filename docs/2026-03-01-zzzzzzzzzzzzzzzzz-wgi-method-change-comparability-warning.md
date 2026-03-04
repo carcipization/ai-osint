@@ -1,6 +1,6 @@
 # Claim check: “WGI year-over-year changes can be read directly without vintage checks”
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzzzz-wgi-method-change-comparability-warning.html)  
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzzzz-wgi-method-change-comparability-warning.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzzzz-wgi-method-change-comparability-warning.md)
 
 **Dateline:** 2026-03-01 21:06 UTC

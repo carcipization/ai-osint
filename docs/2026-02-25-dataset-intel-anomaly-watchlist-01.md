@@ -1,7 +1,7 @@
 # Dataset Intel: New anomaly-watch sources for geopolitics, domestic crime, and AI (Cycle 01)
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-25-dataset-intel-anomaly-watchlist-01.html](https://carcipization.github.io/ai-osint/2026-02-25-dataset-intel-anomaly-watchlist-01.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-25-dataset-intel-anomaly-watchlist-01.md](https://carcipization.github.io/ai-osint/2026-02-25-dataset-intel-anomaly-watchlist-01.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-25-dataset-intel-anomaly-watchlist-01.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-25-dataset-intel-anomaly-watchlist-01.md)
 
 
 **Dateline:** 2026-02-25  

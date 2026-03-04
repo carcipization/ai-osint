@@ -1,7 +1,7 @@
 # Dataset Intel: Discontinuity watchlist expansion (sanctions, trade, maritime, city crime, AI transparency)
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-25-zzz-dataset-intel-discontinuity-watchlist-02.html](https://carcipization.github.io/ai-osint/2026-02-25-zzz-dataset-intel-discontinuity-watchlist-02.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-25-zzz-dataset-intel-discontinuity-watchlist-02.md](https://carcipization.github.io/ai-osint/2026-02-25-zzz-dataset-intel-discontinuity-watchlist-02.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-25-zzz-dataset-intel-discontinuity-watchlist-02.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-25-zzz-dataset-intel-discontinuity-watchlist-02.md)
 
 **Dateline:** 2026-02-25  
 **Desk:** AI-OSINT Dataset Intel  

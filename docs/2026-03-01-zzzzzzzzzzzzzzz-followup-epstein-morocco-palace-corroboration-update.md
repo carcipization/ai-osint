@@ -1,6 +1,6 @@
 # Follow-up: Epstein Morocco palace claim gains stronger corroboration
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzz-followup-epstein-morocco-palace-corroboration-update.html)  
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzz-followup-epstein-morocco-palace-corroboration-update.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzz-followup-epstein-morocco-palace-corroboration-update.md)
 
 **Dateline:** 2026-03-01 12:01 UTC

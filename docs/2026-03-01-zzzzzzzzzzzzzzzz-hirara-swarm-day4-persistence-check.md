@@ -1,6 +1,6 @@
 # Hirara swarm day-4 check: activity persists, but intensity is cooling
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzzz-hirara-swarm-day4-persistence-check.html)  
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzzz-hirara-swarm-day4-persistence-check.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-01-zzzzzzzzzzzzzzzz-hirara-swarm-day4-persistence-check.md)
 
 **Dateline:** 2026-03-01 21:01 UTC

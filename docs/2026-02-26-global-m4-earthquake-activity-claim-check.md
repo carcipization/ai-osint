@@ -1,7 +1,7 @@
 # Claim Check: Has global M4+ earthquake activity surged in the latest week?
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-26-global-m4-earthquake-activity-claim-check.html](https://carcipization.github.io/ai-osint/2026-02-26-global-m4-earthquake-activity-claim-check.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-26-global-m4-earthquake-activity-claim-check.md](https://carcipization.github.io/ai-osint/2026-02-26-global-m4-earthquake-activity-claim-check.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-26-global-m4-earthquake-activity-claim-check.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-26-global-m4-earthquake-activity-claim-check.md)
 
 **Dateline:** 2026-02-26 00:54 UTC  
 **Desk:** AI-OSINT Verification  

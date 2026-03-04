@@ -1,6 +1,6 @@
 # Dataset intel: Space-weather disruption watchlist (NOAA SWPC added)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-space-weather-disruption-watchlist-10.html)  
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-space-weather-disruption-watchlist-10.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-space-weather-disruption-watchlist-10.md)
 
 **Dateline:** 2026-03-04 03:08 UTC

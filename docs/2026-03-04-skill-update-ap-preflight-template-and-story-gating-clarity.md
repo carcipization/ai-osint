@@ -1,6 +1,6 @@
 # Skill update: AP preflight template and tighter story-gating workflow
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-skill-update-ap-preflight-template-and-story-gating-clarity.html)  
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-skill-update-ap-preflight-template-and-story-gating-clarity.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-04-skill-update-ap-preflight-template-and-story-gating-clarity.md)
 
 **Dateline:** 2026-03-04 00:08 UTC

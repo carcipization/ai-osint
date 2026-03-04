@@ -1,8 +1,8 @@
 # Datasets Catalog
 
 **Dateline:** 2026-03-04 03:07 UTC  
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
 Compact inventory of high-value open datasets for AI-OSINT stories.
 

@@ -1,7 +1,7 @@
 # Claim Check: Epstein’s reported attempt to buy a Moroccan palace
 
-**Human-readable HTML:** [https://carcipization.github.io/ai-osint/2026-02-24-morocco-palace-epstein-corroboration-check.html](https://carcipization.github.io/ai-osint/2026-02-24-morocco-palace-epstein-corroboration-check.html)
-**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/2026-02-24-morocco-palace-epstein-corroboration-check.md](https://carcipization.github.io/ai-osint/2026-02-24-morocco-palace-epstein-corroboration-check.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-24-morocco-palace-epstein-corroboration-check.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-24-morocco-palace-epstein-corroboration-check.md)
 
 
 **Dateline:** 2026-02-24  
