@@ -49,7 +49,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Structural baselines:</strong> World Bank/IMF/FAOSTAT/WGI/ITU/OECD.AI</li>
 <li><strong>Conflict &amp; humanitarian:</strong> ACLED, UCDP GED, ICEWS, EM-DAT, ReliefWeb, UNHCR</li>
 <li><strong>Trade/energy/maritime:</strong> UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa</li>
-<li><strong>Ownership/procurement:</strong> OpenCorporates, OpenOwnership, Companies House PSC, USAspending, TED, Contracts Finder</li>
+<li><strong>Ownership/procurement:</strong> OpenCorporates, OpenOwnership, GLEIF LEI, Companies House PSC, USAspending, TED, Contracts Finder</li>
 <li><strong>AI capability/risk:</strong> HELM, Epoch GPU clusters, AI Incident DB</li>
 <li><strong>Cyber vulnerability/exploitation risk:</strong> CISA KEV, FIRST EPSS</li>
 <li><strong>Domestic crime/public safety:</strong> FBI CDE, StatsCan, Chicago, Toronto MCI, Edmonton EPS</li>
@@ -353,6 +353,16 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Cadence:</strong> Regular republish</li>
 <li><strong>Good for:</strong> Beneficial ownership-chain reconstruction</li>
 <li><strong>Caveats:</strong> Coverage heterogeneity by country</li>
+</ul>
+<h3 id="global-legal-entity-identifier-foundation-gleif-lei-golden-copy">Global Legal Entity Identifier Foundation (GLEIF) LEI Golden Copy</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file">https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file</a></li>
+<li><strong>Cadence:</strong> Daily file publication</li>
+<li><strong>Access / Format:</strong> Open / CSV (concatenated + delta files)</li>
+<li><strong>Revision risk:</strong> Medium (record status and legal-name/relationship fields can update)</li>
+<li><strong>Operational role:</strong> Baseline + corroboration for cross-border entity resolution</li>
+<li><strong>Good for:</strong> Resolving legal-entity identity across jurisdictions, linking counterparties in sanctions/procurement investigations, and reducing false matches when company names are reused</li>
+<li><strong>Caveats:</strong> LEI coverage is broad but not universal; relationship fields are incomplete in some jurisdictions and require registry-level confirmation for high-stakes claims</li>
 </ul>
 <h3 id="uk-companies-house-psc-bulk">UK Companies House PSC bulk</h3>
 <ul>

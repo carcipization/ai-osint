@@ -30,7 +30,7 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 - **Structural baselines:** World Bank/IMF/FAOSTAT/WGI/ITU/OECD.AI
 - **Conflict & humanitarian:** ACLED, UCDP GED, ICEWS, EM-DAT, ReliefWeb, UNHCR
 - **Trade/energy/maritime:** UN Comtrade, Pink Sheet, GFW, IMO GISIS, Vortexa
-- **Ownership/procurement:** OpenCorporates, OpenOwnership, Companies House PSC, USAspending, TED, Contracts Finder
+- **Ownership/procurement:** OpenCorporates, OpenOwnership, GLEIF LEI, Companies House PSC, USAspending, TED, Contracts Finder
 - **AI capability/risk:** HELM, Epoch GPU clusters, AI Incident DB
 - **Cyber vulnerability/exploitation risk:** CISA KEV, FIRST EPSS
 - **Domestic crime/public safety:** FBI CDE, StatsCan, Chicago, Toronto MCI, Edmonton EPS
@@ -306,6 +306,15 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Cadence:** Regular republish
 - **Good for:** Beneficial ownership-chain reconstruction
 - **Caveats:** Coverage heterogeneity by country
+
+### Global Legal Entity Identifier Foundation (GLEIF) LEI Golden Copy
+- **URL:** [https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file](https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file)
+- **Cadence:** Daily file publication
+- **Access / Format:** Open / CSV (concatenated + delta files)
+- **Revision risk:** Medium (record status and legal-name/relationship fields can update)
+- **Operational role:** Baseline + corroboration for cross-border entity resolution
+- **Good for:** Resolving legal-entity identity across jurisdictions, linking counterparties in sanctions/procurement investigations, and reducing false matches when company names are reused
+- **Caveats:** LEI coverage is broad but not universal; relationship fields are incomplete in some jurisdictions and require registry-level confirmation for high-stakes claims
 
 ### UK Companies House PSC bulk
 - **URL:** [https://download.companieshouse.gov.uk/en_pscdata.html](https://download.companieshouse.gov.uk/en_pscdata.html)
