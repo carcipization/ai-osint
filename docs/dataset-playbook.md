@@ -3,84 +3,132 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/dataset-playbook.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/dataset-playbook.md)
 
-
-
-**Dateline:** 2026-02-27  
+**Dateline:** 2026-03-04 21:31 UTC
 **Status:** Living guide
 
-## Quickstart (for agents)
+## Purpose
+Operational guide for turning dataset signals into publishable OSINT stories.
 
-1. Define one falsifiable claim.
-2. Use 3-source minimum: primary + independent corroborator + context/control.
-3. Test one null explanation.
-4. Publish with confidence + caveats.
-5. Log gaps and next checks.
+Use this for both:
+- **Verification mode** (test a concrete claim), and
+- **Discovery mode** (find a story candidate in data).
 
-## Claim format
+## Core operating loop
+1. Define one falsifiable claim/question.
+2. Run significance gate: why it matters if true/false, and who is affected.
+3. Set scope (window, geography, domain, minimum evidence).
+4. Collect primary evidence first.
+5. Triangulate with at least 2 independent source classes.
+6. Compare against baseline (not raw counts alone).
+7. Test at least one null/alternative explanation.
+8. Publish with confidence + limitations + decision relevance.
+9. Log follow-up triggers and revisit cadence.
 
-Use one of these:
+## Claim formats
+- “Did X change in window Y?”
+- “Did behavior shift after event Z?”
+- “Is X an anomaly vs baseline?”
 
-- "Did X change in window Y?"
-- "Did behavior shift after event Z?"
-- "Is X an anomaly vs baseline?"
-
-Reject broad prompts until a measurable claim exists.
+Reject broad narrative prompts until a measurable question exists.
 
 ## Triangulation minimum
+For each consequential claim:
+- **Primary:** closest available ground-truth source.
+- **Corroborator:** different collection method/source class.
+- **Control/context:** confounder check (seasonality, policy, weather, outages, calendar effect, revisions).
 
-For each claim:
+## Discovery mode (when no claim exists yet)
+Scan for:
+1. **Baseline breaks:** level/slope shifts vs rolling history.
+2. **Concentration shifts:** flows/spend/ownership moving into fewer entities.
+3. **Decouplings:** metrics that usually track each other diverge.
+4. **Cross-border reroutes:** corridor substitutions after policy/sanctions pressure.
+5. **Cross-domain synchrony:** independent systems moving together in time.
 
-- **Primary:** closest to ground truth.
-- **Corroborator:** different collection method.
-- **Control/context:** confounder check (seasonality, policy, weather, outages, etc.).
+Promote a candidate to full story only if all are true:
+- one falsifiable claim can be written,
+- >=2 independent sources exist,
+- one plausible null can be tested quickly.
+
+## Fast candidate scoring
+Score 1–5 each:
+- Signal strength
+- Corroboration availability
+- Public stakes
+- Actionability (publishable now)
+- False-positive risk (inverse)
+
+Prioritize high signal + high corroboration + low/medium FP risk.
+
+## Evidence reliability tiers
+- **Tier 1 (strongest):** official registries, agency/statistical releases, primary filings.
+- **Tier 2:** machine-coded/model-derived feeds and telemetry products.
+- **Tier 3:** third-party aggregators/social-derived indicators.
+
+Publishing rule of thumb:
+- Hard claims should include Tier 1, or convergent multi-source Tier 2 evidence with explicit caveats.
+
+## Dataset quality keys (for catalog maintenance + story triage)
+- **Access:** Open / registration / restricted
+- **Format:** API / CSV / dashboard / mixed
+- **Revision risk:** Low / Medium / High
+- **Operational role:** Baseline / anomaly detection / corroboration / lead generation
+
+## Starter bundles (quick triage patterns)
+- **Conflict escalation:** ACLED + GDELT + ReliefWeb
+- **Internet shutdown:** OONI + RIPE/IODA + official telecom notices
+- **Energy stress (EU):** AGSI+ + ENTSO-E + Pink Sheet context
+- **Trade reroute/sanctions:** UN Comtrade + OpenSanctions + AIS/maritime source
+- **AI capability vs risk:** HELM + Epoch compute + AI Incident Database
+- **Cyber exploitation tempo:** CISA KEV + EPSS + NVD
 
 ## Confidence labels
+- **High:** independent sources converge; confounders tested.
+- **Medium:** core finding supported; key dependency unresolved.
+- **Low:** preliminary signal with substantial uncertainty.
+- **False/Misleading:** stronger evidence contradicts claim.
 
-- **High:** independent sources converge; key confounders tested.
-- **Medium:** strong signal; one major uncertainty remains.
-- **Low:** preliminary indicator; multiple unresolved uncertainties.
-- **False/Misleading:** contradicted by stronger evidence.
+Always include a one-line rationale for the label.
 
-Include one-line rationale for the label.
+## Failure modes checklist
+- Cadence mismatch (daily claim, monthly source)
+- Schema/taxonomy drift
+- Coverage illusion/probe dropout
+- Backfill/revision shock
+- Base-rate neglect
+- Narrative lock-in
+- Source monoculture
+- False precision on tiny denominators
 
-## Failure modes (fast checks)
+## Story output minimum
+- Headline
+- **Dateline:** YYYY-MM-DD HH:MM UTC
+- Why this update now
+- Evidence (numbered, linked)
+- Method (reproducible)
+- Hypotheses and adjudication (for STORY slots)
+- Limitations
+- Confidence + rationale
+- One-line decision relevance
 
-- **Cadence mismatch** (daily claim, monthly data).
-- **Schema/taxonomy drift** (definitions changed mid-series).
-- **Coverage illusion** (probe/sensor/reporting dropouts).
-- **Backfill/revision shock** (history rewritten).
-- **Narrative overfit** (story picked before test).
+## Follow-up triggers
+Run follow-up immediately when:
+- primary source correction/reclassification lands,
+- independent source materially changes confidence,
+- magnitude/trajectory moves beyond prior uncertainty bounds,
+- downstream real-world impact appears.
 
-## Strategy mode
+Default revisit cadence:
+- High velocity: 6–24h
+- Medium: 1–3d
+- Low: 3–14d
 
-For exploratory "find me a story in the data" work, use [dataset-strategy.md](./dataset-strategy.md).
-
-Use this playbook for claim verification and publication discipline.
-
-## Publish checklist
-
-- [ ] Claim is specific and measurable.
-- [ ] Time window stated.
-- [ ] 2+ independent sources used.
-- [ ] Null explanation tested.
-- [ ] Caveats listed.
-- [ ] Confidence label + rationale included.
-- [ ] Follow-up gaps logged.
-
-## Maintenance rules
-
-- Keep this file terse.
-- Add newly discovered failure modes immediately.
-- Move long examples/case studies to separate docs.
-
-## Datasets catalog optimization rules
-
+## Catalog optimization rules
 - Optimize for signal density first, compactness second.
-- Default to shrinking or holding size; growth needs explicit operational value.
-- Remove speculative/hypothetical sections when not tied to active workflows.
-- Prefer replacing/merging existing prose over append-only additions.
-- If a pass grows the file, include a short rationale and plan a compensating cleanup pass.
+- Default to shrinking/holding size; growth needs explicit operational value.
+- Remove speculative sections not tied to active workflows.
+- Prefer replace/merge over append-only edits.
+- If a pass grows size, document rationale and schedule cleanup.
 
 ## Related
-- Strategy guide: [`dataset-strategy.md`](./dataset-strategy.md)
-
+- Dataset list: [`datasets-catalog.md`](./datasets-catalog.md)

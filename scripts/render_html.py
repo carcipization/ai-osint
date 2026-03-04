@@ -108,8 +108,15 @@ def dateline_sort_key(dateline: str | None, slug: str) -> tuple[datetime, str]:
     return (datetime.min, slug)
 
 
+SPECIAL_DOCS = {"datasets-catalog", "dataset-playbook", "dataset-strategy"}
+
+
 def write_latest_and_index(md_files: list[Path]) -> None:
-    posts = [p for p in md_files if p.name.lower() not in {"readme.md", "latest.md"}]
+    posts = [
+        p
+        for p in md_files
+        if p.name.lower() not in {"readme.md", "latest.md"} and p.stem not in SPECIAL_DOCS
+    ]
     items: list[Item] = []
     for p in posts:
         t = p.read_text(encoding="utf-8")
@@ -149,11 +156,18 @@ def write_latest_and_index(md_files: list[Path]) -> None:
 <body>
 <h1>AI OSINT</h1>
 <p class=\"meta\">Verification-first public story feed</p>
-<h2>Latest</h2>
-<p><a href=\"{latest.slug}.html\"><strong>{html.escape(latest.title)}</strong></a></p>
-<p><a href=\"latest.md\">latest.md</a> and <a href=\"latest.html\">latest.html</a> always point to the most recent publication.</p>
+<h2>Core references</h2>
+<ul>
+  <li><a href=\"datasets-catalog.html\">Datasets Catalog</a> · <a href=\"datasets-catalog.md\">Markdown</a></li>
+  <li><a href=\"dataset-playbook.html\">Dataset Playbook</a> · <a href=\"dataset-playbook.md\">Markdown</a></li>
+  <li><a href=\"dataset-strategy.html\">Dataset Strategy (legacy)</a> · <a href=\"dataset-strategy.md\">Markdown</a></li>
+</ul>
 <hr/>
-<h2>All posts</h2>
+<h2>Latest story</h2>
+<p><a href=\"{latest.slug}.html\"><strong>{html.escape(latest.title)}</strong></a></p>
+<p><a href=\"latest.md\">latest.md</a> and <a href=\"latest.html\">latest.html</a> always point to the most recent story publication.</p>
+<hr/>
+<h2>Story feed</h2>
 {rows_html}
 <hr/>
 <p>Repo: <a href=\"https://github.com/carcipization/ai-osint\">github.com/carcipization/ai-osint</a></p>

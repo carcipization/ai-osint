@@ -19,77 +19,132 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="dataset-playbook">Dataset Playbook</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-playbook.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-playbook.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-02-27<br />
+<p><strong>Dateline:</strong> 2026-03-04 21:31 UTC
 <strong>Status:</strong> Living guide</p>
-<h2 id="quickstart-for-agents">Quickstart (for agents)</h2>
+<h2 id="purpose">Purpose</h2>
+<p>Operational guide for turning dataset signals into publishable OSINT stories.</p>
+<p>Use this for both:
+- <strong>Verification mode</strong> (test a concrete claim), and
+- <strong>Discovery mode</strong> (find a story candidate in data).</p>
+<h2 id="core-operating-loop">Core operating loop</h2>
 <ol>
-<li>Define one falsifiable claim.</li>
-<li>Use 3-source minimum: primary + independent corroborator + context/control.</li>
-<li>Test one null explanation.</li>
-<li>Publish with confidence + caveats.</li>
-<li>Log gaps and next checks.</li>
+<li>Define one falsifiable claim/question.</li>
+<li>Run significance gate: why it matters if true/false, and who is affected.</li>
+<li>Set scope (window, geography, domain, minimum evidence).</li>
+<li>Collect primary evidence first.</li>
+<li>Triangulate with at least 2 independent source classes.</li>
+<li>Compare against baseline (not raw counts alone).</li>
+<li>Test at least one null/alternative explanation.</li>
+<li>Publish with confidence + limitations + decision relevance.</li>
+<li>Log follow-up triggers and revisit cadence.</li>
 </ol>
-<h2 id="claim-format">Claim format</h2>
-<p>Use one of these:</p>
+<h2 id="claim-formats">Claim formats</h2>
 <ul>
-<li>"Did X change in window Y?"</li>
-<li>"Did behavior shift after event Z?"</li>
-<li>"Is X an anomaly vs baseline?"</li>
+<li>“Did X change in window Y?”</li>
+<li>“Did behavior shift after event Z?”</li>
+<li>“Is X an anomaly vs baseline?”</li>
 </ul>
-<p>Reject broad prompts until a measurable claim exists.</p>
+<p>Reject broad narrative prompts until a measurable question exists.</p>
 <h2 id="triangulation-minimum">Triangulation minimum</h2>
-<p>For each claim:</p>
+<p>For each consequential claim:
+- <strong>Primary:</strong> closest available ground-truth source.
+- <strong>Corroborator:</strong> different collection method/source class.
+- <strong>Control/context:</strong> confounder check (seasonality, policy, weather, outages, calendar effect, revisions).</p>
+<h2 id="discovery-mode-when-no-claim-exists-yet">Discovery mode (when no claim exists yet)</h2>
+<p>Scan for:
+1. <strong>Baseline breaks:</strong> level/slope shifts vs rolling history.
+2. <strong>Concentration shifts:</strong> flows/spend/ownership moving into fewer entities.
+3. <strong>Decouplings:</strong> metrics that usually track each other diverge.
+4. <strong>Cross-border reroutes:</strong> corridor substitutions after policy/sanctions pressure.
+5. <strong>Cross-domain synchrony:</strong> independent systems moving together in time.</p>
+<p>Promote a candidate to full story only if all are true:
+- one falsifiable claim can be written,
+- &gt;=2 independent sources exist,
+- one plausible null can be tested quickly.</p>
+<h2 id="fast-candidate-scoring">Fast candidate scoring</h2>
+<p>Score 1–5 each:
+- Signal strength
+- Corroboration availability
+- Public stakes
+- Actionability (publishable now)
+- False-positive risk (inverse)</p>
+<p>Prioritize high signal + high corroboration + low/medium FP risk.</p>
+<h2 id="evidence-reliability-tiers">Evidence reliability tiers</h2>
 <ul>
-<li><strong>Primary:</strong> closest to ground truth.</li>
-<li><strong>Corroborator:</strong> different collection method.</li>
-<li><strong>Control/context:</strong> confounder check (seasonality, policy, weather, outages, etc.).</li>
+<li><strong>Tier 1 (strongest):</strong> official registries, agency/statistical releases, primary filings.</li>
+<li><strong>Tier 2:</strong> machine-coded/model-derived feeds and telemetry products.</li>
+<li><strong>Tier 3:</strong> third-party aggregators/social-derived indicators.</li>
+</ul>
+<p>Publishing rule of thumb:
+- Hard claims should include Tier 1, or convergent multi-source Tier 2 evidence with explicit caveats.</p>
+<h2 id="dataset-quality-keys-for-catalog-maintenance-story-triage">Dataset quality keys (for catalog maintenance + story triage)</h2>
+<ul>
+<li><strong>Access:</strong> Open / registration / restricted</li>
+<li><strong>Format:</strong> API / CSV / dashboard / mixed</li>
+<li><strong>Revision risk:</strong> Low / Medium / High</li>
+<li><strong>Operational role:</strong> Baseline / anomaly detection / corroboration / lead generation</li>
+</ul>
+<h2 id="starter-bundles-quick-triage-patterns">Starter bundles (quick triage patterns)</h2>
+<ul>
+<li><strong>Conflict escalation:</strong> ACLED + GDELT + ReliefWeb</li>
+<li><strong>Internet shutdown:</strong> OONI + RIPE/IODA + official telecom notices</li>
+<li><strong>Energy stress (EU):</strong> AGSI+ + ENTSO-E + Pink Sheet context</li>
+<li><strong>Trade reroute/sanctions:</strong> UN Comtrade + OpenSanctions + AIS/maritime source</li>
+<li><strong>AI capability vs risk:</strong> HELM + Epoch compute + AI Incident Database</li>
+<li><strong>Cyber exploitation tempo:</strong> CISA KEV + EPSS + NVD</li>
 </ul>
 <h2 id="confidence-labels">Confidence labels</h2>
 <ul>
-<li><strong>High:</strong> independent sources converge; key confounders tested.</li>
-<li><strong>Medium:</strong> strong signal; one major uncertainty remains.</li>
-<li><strong>Low:</strong> preliminary indicator; multiple unresolved uncertainties.</li>
-<li><strong>False/Misleading:</strong> contradicted by stronger evidence.</li>
+<li><strong>High:</strong> independent sources converge; confounders tested.</li>
+<li><strong>Medium:</strong> core finding supported; key dependency unresolved.</li>
+<li><strong>Low:</strong> preliminary signal with substantial uncertainty.</li>
+<li><strong>False/Misleading:</strong> stronger evidence contradicts claim.</li>
 </ul>
-<p>Include one-line rationale for the label.</p>
-<h2 id="failure-modes-fast-checks">Failure modes (fast checks)</h2>
+<p>Always include a one-line rationale for the label.</p>
+<h2 id="failure-modes-checklist">Failure modes checklist</h2>
 <ul>
-<li><strong>Cadence mismatch</strong> (daily claim, monthly data).</li>
-<li><strong>Schema/taxonomy drift</strong> (definitions changed mid-series).</li>
-<li><strong>Coverage illusion</strong> (probe/sensor/reporting dropouts).</li>
-<li><strong>Backfill/revision shock</strong> (history rewritten).</li>
-<li><strong>Narrative overfit</strong> (story picked before test).</li>
+<li>Cadence mismatch (daily claim, monthly source)</li>
+<li>Schema/taxonomy drift</li>
+<li>Coverage illusion/probe dropout</li>
+<li>Backfill/revision shock</li>
+<li>Base-rate neglect</li>
+<li>Narrative lock-in</li>
+<li>Source monoculture</li>
+<li>False precision on tiny denominators</li>
 </ul>
-<h2 id="strategy-mode">Strategy mode</h2>
-<p>For exploratory "find me a story in the data" work, use <a href="./dataset-strategy.md">dataset-strategy.md</a>.</p>
-<p>Use this playbook for claim verification and publication discipline.</p>
-<h2 id="publish-checklist">Publish checklist</h2>
+<h2 id="story-output-minimum">Story output minimum</h2>
 <ul>
-<li>[ ] Claim is specific and measurable.</li>
-<li>[ ] Time window stated.</li>
-<li>[ ] 2+ independent sources used.</li>
-<li>[ ] Null explanation tested.</li>
-<li>[ ] Caveats listed.</li>
-<li>[ ] Confidence label + rationale included.</li>
-<li>[ ] Follow-up gaps logged.</li>
+<li>Headline</li>
+<li><strong>Dateline:</strong> YYYY-MM-DD HH:MM UTC</li>
+<li>Why this update now</li>
+<li>Evidence (numbered, linked)</li>
+<li>Method (reproducible)</li>
+<li>Hypotheses and adjudication (for STORY slots)</li>
+<li>Limitations</li>
+<li>Confidence + rationale</li>
+<li>One-line decision relevance</li>
 </ul>
-<h2 id="maintenance-rules">Maintenance rules</h2>
-<ul>
-<li>Keep this file terse.</li>
-<li>Add newly discovered failure modes immediately.</li>
-<li>Move long examples/case studies to separate docs.</li>
-</ul>
-<h2 id="datasets-catalog-optimization-rules">Datasets catalog optimization rules</h2>
+<h2 id="follow-up-triggers">Follow-up triggers</h2>
+<p>Run follow-up immediately when:
+- primary source correction/reclassification lands,
+- independent source materially changes confidence,
+- magnitude/trajectory moves beyond prior uncertainty bounds,
+- downstream real-world impact appears.</p>
+<p>Default revisit cadence:
+- High velocity: 6–24h
+- Medium: 1–3d
+- Low: 3–14d</p>
+<h2 id="catalog-optimization-rules">Catalog optimization rules</h2>
 <ul>
 <li>Optimize for signal density first, compactness second.</li>
-<li>Default to shrinking or holding size; growth needs explicit operational value.</li>
-<li>Remove speculative/hypothetical sections when not tied to active workflows.</li>
-<li>Prefer replacing/merging existing prose over append-only additions.</li>
-<li>If a pass grows the file, include a short rationale and plan a compensating cleanup pass.</li>
+<li>Default to shrinking/holding size; growth needs explicit operational value.</li>
+<li>Remove speculative sections not tied to active workflows.</li>
+<li>Prefer replace/merge over append-only edits.</li>
+<li>If a pass grows size, document rationale and schedule cleanup.</li>
 </ul>
 <h2 id="related">Related</h2>
 <ul>
-<li>Strategy guide: <a href="./dataset-strategy.md"><code>dataset-strategy.md</code></a></li>
+<li>Dataset list: <a href="./datasets-catalog.md"><code>datasets-catalog.md</code></a></li>
 </ul>
 </body>
 </html>
