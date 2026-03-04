@@ -58,8 +58,8 @@ def upsert_crosslinks(md_path: Path) -> None:
     insert_at = 1 if lines and lines[0].startswith("# ") else 0
     block = [
         "",
-        f"**Human-readable HTML:** {html_url}",
-        f"**LLM-friendly Markdown:** {md_url}",
+        f"**Human-readable HTML:** [HTML]({html_url})",
+        f"**LLM-friendly Markdown:** [Markdown]({md_url})",
         "",
     ]
     new_lines = lines[:insert_at] + block + lines[insert_at:]

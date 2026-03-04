@@ -1,7 +1,7 @@
 # FOLLOWUP: weighted scan on KEV, GOES divergence, U.S. debt, Hirara, and space-weather signals
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/2026-03-04-followup-weighted-scan-kev-goes-debt-hirara-space-weather.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/2026-03-04-followup-weighted-scan-kev-goes-debt-hirara-space-weather.md
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-followup-weighted-scan-kev-goes-debt-hirara-space-weather.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-04-followup-weighted-scan-kev-goes-debt-hirara-space-weather.md)
 
 **Dateline:** 2026-03-04 18:06 UTC
 

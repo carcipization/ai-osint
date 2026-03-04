@@ -17,15 +17,17 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
   <h1 id="noaa-goes-x-ray-feed-divergence-primary-stream-briefly-zeroed-while-secondary-remained-nominal">NOAA GOES X-ray feed divergence: primary stream briefly zeroed while secondary remained nominal</h1>
-<p><strong>Human-readable HTML:</strong> https://carcipization.github.io/ai-osint/2026-03-04-goes-primary-secondary-xray-divergence-osint-story.html
-<strong>LLM-friendly Markdown:</strong> https://carcipization.github.io/ai-osint/2026-03-04-goes-primary-secondary-xray-divergence-osint-story.md</p>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-goes-primary-secondary-xray-divergence-osint-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-goes-primary-secondary-xray-divergence-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-04 09:06 UTC</p>
 <h2 id="ap-editor-preflight-publishability-gate">AP editor preflight (publishability gate)</h2>
-<p>1) <strong>Why AP would run this today:</strong> Space-weather warnings are operational inputs for satellite operators, aviation, power-grid monitoring, and emergency comms. A measurable data-feed divergence in a core public NOAA stream is a live reliability story.
-2) <strong>What is genuinely new:</strong> In the latest 1-day SWPC GOES X-ray data pull, the <strong>primary</strong> 0.1–0.8nm stream shows two short zero-flux windows with electron contamination flags while the <strong>secondary</strong> stream reports non-zero flux for the same timestamps.
-3) <strong>Who is affected / what changes:</strong> Any analyst or automation pipeline using single-source primary X-ray feed can misread flare activity as "zero" during affected minutes; multi-feed cross-checking becomes mandatory.
-4) <strong>Strongest counterargument:</strong> This could be routine sensor-correction behavior, not an incident; if so, it is a known technical caveat rather than headline news.
-5) <strong>Editor verdict:</strong> <strong>Publish</strong> — narrow but decision-relevant OSINT finding because it changes how downstream users should validate near-real-time space-weather signals.</p>
+<ol>
+<li><strong>Why AP would run this today:</strong> Space-weather warnings are operational inputs for satellite operators, aviation, power-grid monitoring, and emergency comms. A measurable data-feed divergence in a core public NOAA stream is a live reliability story.</li>
+<li><strong>What is genuinely new:</strong> In the latest 1-day SWPC GOES X-ray data pull, the <strong>primary</strong> 0.1–0.8nm stream shows two short zero-flux windows with electron contamination flags while the <strong>secondary</strong> stream reports non-zero flux for the same timestamps.</li>
+<li><strong>Who is affected / what changes:</strong> Any analyst or automation pipeline using single-source primary X-ray feed can misread flare activity as "zero" during affected minutes; multi-feed cross-checking becomes mandatory.</li>
+<li><strong>Strongest counterargument:</strong> This could be routine sensor-correction behavior, not an incident; if so, it is a known technical caveat rather than headline news.</li>
+<li><strong>Editor verdict:</strong> <strong>Publish</strong> — narrow but decision-relevant OSINT finding because it changes how downstream users should validate near-real-time space-weather signals.</li>
+</ol>
 <h2 id="what-we-observed">What we observed</h2>
 <p>Using SWPC 1-day GOES X-ray JSON feeds (0.1–0.8nm channel):</p>
 <ul>

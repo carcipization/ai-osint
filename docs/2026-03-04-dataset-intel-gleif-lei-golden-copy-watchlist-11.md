@@ -1,7 +1,7 @@
 # Dataset intel: GLEIF LEI Golden Copy for cross-border entity-resolution baselines (Watchlist #11)
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-gleif-lei-golden-copy-watchlist-11.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-gleif-lei-golden-copy-watchlist-11.md
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-gleif-lei-golden-copy-watchlist-11.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-04-dataset-intel-gleif-lei-golden-copy-watchlist-11.md)
 
 **Dateline:** 2026-03-04 15:04 UTC
 

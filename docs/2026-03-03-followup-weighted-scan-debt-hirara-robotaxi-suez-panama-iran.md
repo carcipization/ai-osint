@@ -1,7 +1,7 @@
 # FOLLOWUP: Weighted scan of prior stories (debt, Hirara, robotaxi, Suez/Panama, Iran)
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/2026-03-03-followup-weighted-scan-debt-hirara-robotaxi-suez-panama-iran.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/2026-03-03-followup-weighted-scan-debt-hirara-robotaxi-suez-panama-iran.md
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-03-followup-weighted-scan-debt-hirara-robotaxi-suez-panama-iran.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-03-followup-weighted-scan-debt-hirara-robotaxi-suez-panama-iran.md)
 
 
 **Dateline:** 2026-03-03 18:12 UTC

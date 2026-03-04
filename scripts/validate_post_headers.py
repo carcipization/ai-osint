@@ -4,10 +4,11 @@ from __future__ import annotations
 """Validate baseline markdown publication headers for cadence safety.
 
 Checks:
-- Required top links are present:
-  - **Human-readable HTML:** https://carcipization.github.io/ai-osint/<slug>.html
-  - **LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/<slug>.md
+- Required top links are present (short clickable format):
+  - **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/<slug>.html)
+  - **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/<slug>.md)
 - Dateline format is strict: **Dateline:** YYYY-MM-DD HH:MM UTC
+- If AP preflight section exists, it uses proper Markdown ordered-list syntax (`1.`..`5.`)
 
 Usage:
   python3 scripts/validate_post_headers.py
@@ -25,14 +26,16 @@ DOCS = ROOT / "docs"
 DATELINE_RE = re.compile(r"^\*\*Dateline:\*\* \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC$", re.M)
 
 
-def has_required_link(text: str, label: str, url: str) -> bool:
-    plain = f"**{label}:** {url}"
-    markdown = f"**{label}:** [{url}]({url})"
-    if plain in text or markdown in text:
+def has_required_link(text: str, label: str, link_text: str, url: str) -> bool:
+    expected = f"**{label}:** [{link_text}]({url})"
+    return expected in text
+
+
+def has_valid_ap_preflight_ordered_list(text: str) -> bool:
+    if "## AP editor preflight" not in text:
         return True
-    # Fallback regex: labeled line containing exact URL anywhere after label.
-    rx = re.compile(rf"^\*\*{re.escape(label)}:\*\*.*{re.escape(url)}.*$", re.M)
-    return bool(rx.search(text))
+    nums = [1, 2, 3, 4, 5]
+    return all(re.search(rf"^\s*{n}\.\s+", text, re.M) for n in nums)
 
 
 def validate_file(path: Path) -> list[str]:
@@ -43,12 +46,14 @@ def validate_file(path: Path) -> list[str]:
     html_url = f"{base}.html"
     md_url = f"{base}.md"
 
-    if not has_required_link(text, "Human-readable HTML", html_url):
-        issues.append(f"{path.name}: missing/incorrect Human-readable HTML link")
-    if not has_required_link(text, "LLM-friendly Markdown", md_url):
-        issues.append(f"{path.name}: missing/incorrect LLM-friendly Markdown link")
+    if not has_required_link(text, "Human-readable HTML", "HTML", html_url):
+        issues.append(f"{path.name}: missing/incorrect Human-readable HTML link ([HTML](...))")
+    if not has_required_link(text, "LLM-friendly Markdown", "Markdown", md_url):
+        issues.append(f"{path.name}: missing/incorrect LLM-friendly Markdown link ([Markdown](...))")
     if not DATELINE_RE.search(text):
         issues.append(f"{path.name}: missing/invalid dateline format (**Dateline:** YYYY-MM-DD HH:MM UTC)")
+    if not has_valid_ap_preflight_ordered_list(text):
+        issues.append(f"{path.name}: AP preflight present but ordered list is not valid Markdown 1.-5.")
 
     return issues
 

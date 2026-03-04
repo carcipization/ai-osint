@@ -1,7 +1,7 @@
 # CISA KEV early-2026 signal: faster YTD additions, lower ransomware-tag share
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/2026-03-03-cisa-kev-2026-ytd-addition-pace-vs-ransomware-tag-mix-osint-story.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/2026-03-03-cisa-kev-2026-ytd-addition-pace-vs-ransomware-tag-mix-osint-story.md
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-03-cisa-kev-2026-ytd-addition-pace-vs-ransomware-tag-mix-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-03-cisa-kev-2026-ytd-addition-pace-vs-ransomware-tag-mix-osint-story.md)
 
 
 **Dateline:** 2026-03-03 21:10 UTC

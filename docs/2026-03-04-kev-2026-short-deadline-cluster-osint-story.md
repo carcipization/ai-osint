@@ -1,16 +1,16 @@
 # CISA KEV in early 2026 shows an unusually high share of 2–3 day remediation deadlines
 
-**Human-readable HTML:** https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.html
-**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.md
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.md)
 
 **Dateline:** 2026-03-04 21:07 UTC
 
 ## AP editor preflight (publishability gate)
-1) **Why this is a story AP would run today:** CISA’s KEV catalog drives real patching priorities across government and industry. A measurable shift toward very short remediation windows is operationally relevant now.
-2) **What is genuinely new vs already known:** Prior KEV reporting often tracks counts. This run isolates a **deadline-structure anomaly**: in 2026 YTD, a much larger share of additions carry 2–3 day due-date windows than equivalent early-year periods.
-3) **Who is affected and what changes because of this:** Vulnerability management teams, public-sector agencies, and MSSPs face tighter execution windows; triage and emergency patch workflows need more pre-positioned surge capacity.
-4) **Strongest counterargument for “not a story”:** Small early-year sample effects can exaggerate percentages, and KEV due-date policy may be context-specific to certain vulnerabilities.
-5) **Editor verdict:** **Publish** — this is a concrete, decision-relevant timing signal in a high-impact federal baseline dataset.
+1. **Why this is a story AP would run today:** CISA’s KEV catalog drives real patching priorities across government and industry. A measurable shift toward very short remediation windows is operationally relevant now.
+2. **What is genuinely new vs already known:** Prior KEV reporting often tracks counts. This run isolates a **deadline-structure anomaly**: in 2026 YTD, a much larger share of additions carry 2–3 day due-date windows than equivalent early-year periods.
+3. **Who is affected and what changes because of this:** Vulnerability management teams, public-sector agencies, and MSSPs face tighter execution windows; triage and emergency patch workflows need more pre-positioned surge capacity.
+4. **Strongest counterargument for “not a story”:** Small early-year sample effects can exaggerate percentages, and KEV due-date policy may be context-specific to certain vulnerabilities.
+5. **Editor verdict:** **Publish** — this is a concrete, decision-relevant timing signal in a high-impact federal baseline dataset.
 
 ## Significance gate
 - **Why it matters:** Patch urgency is determined by deadline windows, not just KEV inclusion counts.
