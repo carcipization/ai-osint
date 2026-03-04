@@ -1,6 +1,6 @@
 # Datasets Catalog
 
-**Dateline:** 2026-03-03 15:06 UTC  
+**Dateline:** 2026-03-04 03:07 UTC  
 **Human-readable HTML:** [https://carcipization.github.io/ai-osint/datasets-catalog.html](https://carcipization.github.io/ai-osint/datasets-catalog.html)  
 **LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
@@ -497,3 +497,16 @@ Rule of thumb: publish high-confidence claims only when Tier 1 is present, or wh
 - **Cadence:** Snapshot releases
 - **Good for:** Historical network baseline research
 - **Caveats:** Not a live operational feed
+
+
+## 10) Space weather and geomagnetic disruption
+
+### NOAA SWPC space weather data (JSON)
+- **URL:** [https://services.swpc.noaa.gov/json/](https://services.swpc.noaa.gov/json/)
+- **Cadence:** Near real-time to daily (product-dependent)
+- **Access / Format:** Open / JSON feeds
+- **Revision risk:** Medium (provisional observations and forecast updates can revise)
+- **Operational role:** Anomaly detection + corroboration for space-weather impact claims
+- **Good for:** Verifying geomagnetic storm severity signals (e.g., Kp), solar flare timelines, and operational risk context for GNSS, HF comms, power-grid and aviation routing narratives
+- **Caveats:** Product definitions differ (observed vs forecast); operational impact claims still require sector-specific corroboration
+
