@@ -20,6 +20,26 @@ Compact inventory of high-value open datasets for AI-OSINT stories.
 
 Use these keys when adding or refreshing entries so triage quality improves without adding catalog bloat.
 
+## Catalog hygiene checklist (optimize mode)
+- Keep one canonical entry per dataset (no duplicates with alternate names).
+- Prefer stable organization or product homepages over temporary report URLs.
+- Add a short caveat that describes the most common analyst failure mode.
+- If a source is API-first, include docs endpoint rather than marketing pages.
+- When adding adjacent sources, update the nearest starter bundle instead of creating a new section.
+
+## Signal-family tags (normalization)
+Use these tags in analyst notes so retrieval/search stays consistent across runs:
+- `conflict-events`
+- `network-outage`
+- `maritime-transit`
+- `energy-balance`
+- `supply-chain`
+- `governance-registry`
+- `cyber-exploit-risk`
+- `ai-capability`
+- `ai-safety-incidents`
+- `labor-nowcast`
+
 ## Fast taxonomy
 - **Near-real-time signals:** GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds
 - **Structural baselines:** World Bank/IMF/FAOSTAT/WGI/ITU/OECD.AI

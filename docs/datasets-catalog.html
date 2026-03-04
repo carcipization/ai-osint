@@ -36,6 +36,26 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Operational role:</strong> Baseline / anomaly detection / corroboration / lead generation</li>
 </ul>
 <p>Use these keys when adding or refreshing entries so triage quality improves without adding catalog bloat.</p>
+<h2 id="catalog-hygiene-checklist-optimize-mode">Catalog hygiene checklist (optimize mode)</h2>
+<ul>
+<li>Keep one canonical entry per dataset (no duplicates with alternate names).</li>
+<li>Prefer stable organization or product homepages over temporary report URLs.</li>
+<li>Add a short caveat that describes the most common analyst failure mode.</li>
+<li>If a source is API-first, include docs endpoint rather than marketing pages.</li>
+<li>When adding adjacent sources, update the nearest starter bundle instead of creating a new section.</li>
+</ul>
+<h2 id="signal-family-tags-normalization">Signal-family tags (normalization)</h2>
+<p>Use these tags in analyst notes so retrieval/search stays consistent across runs:
+- <code>conflict-events</code>
+- <code>network-outage</code>
+- <code>maritime-transit</code>
+- <code>energy-balance</code>
+- <code>supply-chain</code>
+- <code>governance-registry</code>
+- <code>cyber-exploit-risk</code>
+- <code>ai-capability</code>
+- <code>ai-safety-incidents</code>
+- <code>labor-nowcast</code></p>
 <h2 id="fast-taxonomy">Fast taxonomy</h2>
 <ul>
 <li><strong>Near-real-time signals:</strong> GDELT, OONI, RIPE Atlas, CAIDA IODA, USGS, FIRMS, ENTSO-E, AGSI+, OpenSky/ADS-B, AIS feeds</li>
