@@ -52,6 +52,14 @@ Before publishing a STORY, write a short preflight with:
 
 If any item is weak or hand-wavy, hold and pick another candidate.
 
+### Fast preflight template (copy/paste)
+
+- **AP peg now:**
+- **New information in this run:**
+- **Affected parties + decisions impacted:**
+- **Best “not a story” argument:**
+- **Editor verdict (publish/hold + one sentence):**
+
 ## Method notes for internet-shutdown stories
 
 When checking outage-duration claims:
