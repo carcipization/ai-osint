@@ -72,9 +72,9 @@ Using the same regional box (24–28N, 124–128E), M4.5+:
 Published because 3 of 5 sampled lines produced decision-relevant updates (GOES divergence non-persistence, debt-level refresh, and Hirara cooldown) rather than routine “no change” repetition.
 
 ## Sources
-- SWPC GOES primary X-rays (1 day): https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json
-- SWPC GOES secondary X-rays (1 day): https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json
-- SWPC planetary K-index product: https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json
-- CISA KEV CSV: https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv
-- U.S. Treasury Debt to the Penny API: https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny
-- USGS Earthquake API: https://earthquake.usgs.gov/fdsnws/event/1/
+- [SWPC GOES primary X-rays (1 day)](https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json)
+- [SWPC GOES secondary X-rays (1 day)](https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json)
+- [SWPC planetary K-index product](https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json)
+- [CISA KEV CSV](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)
+- [U.S. Treasury Debt to the Penny API](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny)
+- [USGS Earthquake API](https://earthquake.usgs.gov/fdsnws/event/1/)

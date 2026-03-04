@@ -42,7 +42,7 @@ Context signal: SWPC geomagnetic products showed a **Kp=5 (G1)** period on 2026-
 - Findings should be re-checked in subsequent windows to determine persistence rate.
 
 ## Sources
-- SWPC GOES primary X-rays (1 day): https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json
-- SWPC GOES secondary X-rays (1 day): https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json
-- SWPC planetary K-index forecast/history product: https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json
-- SWPC alerts feed: https://services.swpc.noaa.gov/products/alerts.json
+- [SWPC GOES primary X-rays (1 day)](https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json)
+- [SWPC GOES secondary X-rays (1 day)](https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json)
+- [SWPC planetary K-index forecast/history product](https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json)
+- [SWPC alerts feed](https://services.swpc.noaa.gov/products/alerts.json)
