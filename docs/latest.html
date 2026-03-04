@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Claim check: Did U.S. federal debt cross $38.6 trillion as claimed in a viral Reddit post?</title>
+  <title>CISA KEV deadline compression in early 2026: anomaly confirmed, likely a prioritization-shock signal (not just a count effect)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,53 +16,88 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="claim-check-did-us-federal-debt-cross-386-trillion-as-claimed-in-a-viral-reddit-post">Claim check: Did U.S. federal debt cross $38.6 trillion as claimed in a viral Reddit post?</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-03-us-debt-just-hit-38-point-6-trillion-claim-check.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-03-us-debt-just-hit-38-point-6-trillion-claim-check.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-03 06:06 UTC</p>
-<h2 id="verdict">Verdict</h2>
-<p><strong>Supported (time-bounded).</strong></p>
-<p>The claim that total U.S. debt had crossed <strong>$38.6T</strong> is supported by the U.S. Treasury’s Debt to the Penny series for the claim date window.</p>
-<h2 id="significance-gate-why-this-claim-matters">Significance gate (why this claim matters)</h2>
-<ul>
-<li><strong>If true:</strong> Macro commentators, investors, and policy analysts are discussing a debt stock that has crossed another psychological threshold; debt-service and issuance narratives are grounded in a real level shift.</li>
-<li><strong>If false:</strong> Market and political narratives could be amplifying an incorrect number, distorting risk framing and policy debate.</li>
-<li><strong>Who is affected:</strong> Fixed-income/equity investors, fiscal-policy analysts, journalists, and the general public exposed to viral debt figures.</li>
-<li><strong>Decision relevance:</strong> High for how people interpret Treasury supply, rates sensitivity, and fiscal sustainability commentary.</li>
-</ul>
-<h2 id="claim-provenance">Claim provenance</h2>
-<p>Primary social claim(s) checked (direct post URL):</p>
+  <h1 id="cisa-kev-deadline-compression-in-early-2026-anomaly-confirmed-likely-a-prioritization-shock-signal-not-just-a-count-effect">CISA KEV deadline compression in early 2026: anomaly confirmed, likely a prioritization-shock signal (not just a count effect)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-04 21:16 UTC</p>
+<h2 id="ap-editor-preflight-publishability-gate">AP editor preflight (publishability gate)</h2>
 <ol>
-<li><strong>Platform:</strong> Reddit (r/StockMarket)<br />
-<strong>Account:</strong> u/autoexecx<br />
-<strong>Post URL:</strong> <a href="https://www.reddit.com/r/StockMarket/comments/1r1xmab/the_us_debt_just_hit_386_trillion_at_what_point/">https://www.reddit.com/r/StockMarket/comments/1r1xmab/the_us_debt_just_hit_386_trillion_at_what_point/</a><br />
-<strong>UTC timestamp:</strong> 2026-02-11T13:38:48Z (from Reddit API metadata)</li>
+<li><strong>Why AP would run this today:</strong> KEV due dates directly set federal patch urgency. A sharp rise in 2–3 day due windows changes real operational tempo for agencies and contractors now.</li>
+<li><strong>What is genuinely new:</strong> Not a simple KEV-count story. The new signal is <strong>deadline-structure compression</strong>: short due windows became unusually common in early 2026 versus matched early-year windows.</li>
+<li><strong>Who is affected / what changes:</strong> Federal civilian agencies, MSSPs, and enterprise vuln teams using KEV-based prioritization may need to shift from weekly batching to surge-capable same-week response.</li>
+<li><strong>Strongest “not a story” counterargument:</strong> Small early-year samples and policy mechanics can create noisy percentages without indicating a durable regime change.</li>
+<li><strong>Editor verdict:</strong> <strong>Publish</strong> — the anomaly is measurable, operationally material, and testable with clear competing explanations.</li>
 </ol>
-<p>Claim text under review: “The US Debt Just Hit 38.6 Trillion.”</p>
-<h2 id="what-we-checked">What we checked</h2>
-<ol>
-<li>Treasury’s official <strong>Debt to the Penny</strong> endpoint for the exact claim date and nearby dates.</li>
-<li>Whether total public debt outstanding exceeded $38.6T at/around the claim timestamp.</li>
-</ol>
-<h2 id="evidence">Evidence</h2>
+<h2 id="significance-gate">Significance gate</h2>
 <ul>
-<li>U.S. Treasury Fiscal Data API (Debt to the Penny):</li>
-<li>API root: <a href="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny">https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny</a></li>
-<li>2026-02-11 total public debt outstanding: <strong>$38,620,772,876,638.50</strong><br />
-    Query: <a href="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-11">https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-11</a></li>
-<li>2026-02-10 total public debt outstanding: <strong>$38,645,729,764,967.98</strong><br />
-    Query: <a href="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-10">https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-10</a></li>
-<li>2026-02-12 total public debt outstanding: <strong>$38,647,755,796,057.39</strong><br />
-    Query: <a href="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-12">https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_date:eq:2026-02-12</a></li>
+<li><strong>Why it matters:</strong> Deadline windows govern staffing, maintenance windows, and incident escalation; counts alone do not.</li>
+<li><strong>Who is affected:</strong> Federal defenders, critical-infra operators mapped to KEV controls, MSSPs, cyber insurers.</li>
+<li><strong>Decision relevance:</strong> If compression persists, organizations need faster patch triage and pre-approved emergency change workflows.</li>
 </ul>
-<h2 id="analysis">Analysis</h2>
-<p>Treasury’s official daily totals place the debt level above <strong>$38.6T</strong> on the claim date and adjacent days. The post’s headline figure is therefore directionally and numerically consistent with primary-source federal data.</p>
+<h2 id="observed-data-what-changed">Observed data (what changed)</h2>
+<p>Using CISA KEV CSV, compute <code>dueDate - dateAdded</code> in days, then compare year-matched windows through <strong>March 4</strong>.</p>
+<h3 id="same-date-comparison-through-mar-4">Same-date comparison (through Mar 4)</h3>
+<ul>
+<li><strong>2026:</strong> 47 additions; <strong>8/47 (17.0%)</strong> had lead time <strong>&lt;=3 days</strong></li>
+<li><strong>2025:</strong> 50 additions; <strong>0/50 (0.0%)</strong> &lt;=3 days</li>
+<li><strong>2024:</strong> 31 additions; <strong>1/31 (3.2%)</strong> &lt;=3 days</li>
+<li><strong>2023:</strong> 19 additions; <strong>0/19 (0.0%)</strong> &lt;=3 days</li>
+<li><strong>2022:</strong> 167 additions; <strong>0/167 (0.0%)</strong> &lt;=3 days</li>
+</ul>
+<h3 id="2026-short-window-cluster-3-days">2026 short-window cluster (&lt;=3 days)</h3>
+<p>Eight entries cluster in late Jan–Feb, including Fortinet, Ivanti, SolarWinds (x2), BeyondTrust, Dell, and Cisco (x2).</p>
+<h2 id="hypotheses-and-adjudication">Hypotheses and adjudication</h2>
+<h3 id="h1-exploit-urgency-increased-forcing-shorter-remediation-windows">H1 — Exploit urgency increased, forcing shorter remediation windows</h3>
+<ul>
+<li><strong>Prediction:</strong> short-window entries should co-occur with stronger urgency markers (e.g., active exploitation context, high operational risk products).</li>
+<li><strong>Test result:</strong> <strong>mixed support</strong>. The cluster includes widely targeted enterprise edge/management products (supports urgency framing), but only <strong>1/8</strong> of &lt;=3-day entries carried <code>knownRansomwareCampaignUse=Known</code> in the feed snapshot (weakens a ransomware-only explanation).</li>
+<li><strong>Status:</strong> <strong>mixed</strong>.</li>
+</ul>
+<h3 id="h2-cisa-processpolicy-normalization-under-bod-22-01-is-driving-tighter-timelines">H2 — CISA process/policy normalization under BOD 22-01 is driving tighter timelines</h3>
+<ul>
+<li><strong>Prediction:</strong> short-window behavior can rise without broad ransomware tagging, and CISA framing should emphasize accelerated remediation for exploited vulns.</li>
+<li><strong>Test result:</strong> CISA BOD 22-01 text explicitly frames KEV as accelerated mandatory remediation for federal agencies; CISA statements on retiring Emergency Directives indicate actions being folded into BOD 22-01 operations. This is consistent with process-driven compression.</li>
+<li><strong>Status:</strong> <strong>supported (moderate)</strong>.</li>
+</ul>
+<h3 id="h3-vendor-mix-artifact-a-few-vendorsproducts-created-a-temporary-cluster">H3 — Vendor-mix artifact (a few vendors/products created a temporary cluster)</h3>
+<ul>
+<li><strong>Prediction:</strong> &lt;=3-day observations are concentrated in a handful of vendors/products and dates.</li>
+<li><strong>Test result:</strong> supported. The 8 short-window entries are concentrated in a narrow time band (late Jan–Feb) and repeated vendor families (e.g., SolarWinds and Cisco each appear twice).</li>
+<li><strong>Status:</strong> <strong>supported</strong>.</li>
+</ul>
+<h3 id="h4-null-pure-random-small-sample-noise-with-no-operational-meaning">H4 (null) — Pure random small-sample noise with no operational meaning</h3>
+<ul>
+<li><strong>Prediction:</strong> 2026 short-window share should be close to prior matched windows.</li>
+<li><strong>Test result:</strong> not supported. 2026 is 17.0% vs 0.0% (2025), 3.2% (2024), 0.0% (2023), 0.0% (2022) in same-date windows.</li>
+<li><strong>Status:</strong> <strong>rejected for now</strong> (though persistence still unproven).</li>
+</ul>
+<h2 id="provisional-conclusion">Provisional conclusion</h2>
+<p>The best current explanation is <strong>H2 + H3</strong>: a process-prioritization effect (accelerated federal remediation logic) interacting with a concentrated vendor/product wave, rather than a simple “more KEVs” pattern or a ransomware-only shift.</p>
+<h2 id="what-would-confirm-or-falsify-this-in-the-next-cycle">What would confirm or falsify this in the next cycle</h2>
+<ul>
+<li><strong>Confirm compression regime:</strong> &lt;=3-day share remains elevated over the next 30–60 days and spreads beyond current vendor concentration.</li>
+<li><strong>Falsify/soften:</strong> metric mean-reverts quickly and new entries return to historical lead-time patterns.</li>
+<li><strong>Different mechanism signal:</strong> sharp rise in <code>knownRansomwareCampaignUse=Known</code> among short-window entries would shift weight toward H1.</li>
+</ul>
 <h2 id="limitations">Limitations</h2>
 <ul>
-<li>“Debt just hit” is imprecise language; the series fluctuates daily and may cross thresholds multiple times.</li>
-<li>This check addresses the <strong>numeric threshold claim only</strong>, not broader investment conclusions in the post.</li>
+<li>Early-year denominator is still modest; percentages can swing quickly.</li>
+<li>KEV due dates reflect federal policy obligations, not direct global exploit prevalence.</li>
+<li>This is an observational inference; no causal claim about internal CISA decision criteria.</li>
 </ul>
-<h2 id="bottom-line">Bottom line</h2>
-<p>Based on Treasury’s Debt to the Penny data, the viral claim that U.S. debt crossed <strong>$38.6 trillion</strong> is <strong>supported</strong> for the checked time window.</p>
+<h2 id="confidence">Confidence</h2>
+<p><strong>Medium.</strong> The anomaly is strong and reproducible; mechanism attribution is plausible but not yet definitive.</p>
+<h2 id="sources-with-retrieval-context">Sources (with retrieval context)</h2>
+<ol>
+<li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV feed</a>
+   - Retrieved: 2026-03-04 ~21:13 UTC
+   - Parameters: full feed; filtered by <code>dateAdded &lt;= MM-DD 03-04</code> per year; computed lead-time as <code>dueDate - dateAdded</code>.</li>
+<li><a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities">CISA BOD 22-01 page</a>
+   - Retrieved: 2026-03-04 ~21:14 UTC
+   - Used for directive framing and accelerated remediation language.</li>
+<li><a href="https://www.cisa.gov/news-events/news/cisa-retires-ten-emergency-directives-marking-era-federal-cybersecurity">CISA Emergency Directives retirement note</a>
+   - Retrieved: 2026-03-04 ~21:14 UTC
+   - Used for evidence that some directive actions were folded into BOD 22-01 operations.</li>
+</ol>
 </body>
 </html>
