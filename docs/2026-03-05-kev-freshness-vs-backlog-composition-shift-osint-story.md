@@ -1,4 +1,4 @@
-# KEV 2026 is faster at ingesting newly published CVEs, but backlog clean-up still drives a meaningful share
+# U.S. exploited-vulnerability list is adding newer bugs faster in 2026, but old high-risk flaws still keep getting added
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-kev-freshness-vs-backlog-composition-shift-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-kev-freshness-vs-backlog-composition-shift-osint-story.md)
@@ -6,60 +6,59 @@
 **Dateline:** 2026-03-05 09:05 UTC
 
 ## Story
-In a matched Jan 1–Mar 5 window, KEV additions in 2026 look **faster-moving** than in 2025 when measured as lag from CVE publication date to KEV date-added. But KEV still includes older CVEs at meaningful rates, which means defenders cannot treat the catalog as purely “new-threat feed.”
+CISA’s **Known Exploited Vulnerabilities** list (usually called the **KEV catalog**) is a U.S. government list of software security flaws that are confirmed to be used by attackers in real-world intrusions.
 
-**Decision relevance:** triage policies should keep a dual-track posture (rapid-response for fresh KEV items + structured backlog reduction for older exploited flaws).
+Each flaw is tracked by a **CVE** ID (Common Vulnerabilities and Exposures), which is the standard public identifier for a specific software bug.
+
+In early 2026, the KEV catalog appears to be picking up newly published CVEs faster than it did in the same period of 2025. But older bugs are still being added at meaningful levels. In plain terms: defenders still need to do two jobs at once — respond quickly to newly exploited bugs and keep grinding through older exploited backlog.
 
 ## Key findings
-1. **CISA KEV catalog (primary):** 47 additions in 2026-01-01..2026-03-05 versus 50 in 2025-01-01..2025-03-05.  
-   Source: [CISA KEV CSV](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)  
-   Retrieval: 2026-03-05 09:04 UTC  
-   Parameters: dateAdded filtered to matched windows above.
+1. **Catalog activity is similar year over year in the matched window.**
+   - KEV additions from Jan. 1 to Mar. 5:
+     - **2026: 47**
+     - **2025: 50**
 
-2. **MITRE CVE publication dates (independent primary source class):** datePublished fetched for each KEV CVE in both windows; lag computed as `dateAdded - datePublished` in days.  
-   Source: [MITRE CVE API](https://cveawg.mitre.org/api/)  
-   Retrieval: 2026-03-05 09:04 UTC  
-   Parameters: per-CVE lookups for all KEV entries in both matched windows.
+2. **Time from CVE publication to KEV inclusion got shorter in 2026.**
+   - Median lag:
+     - **2026: 13 days**
+     - **2025: 36.5 days**
+   - Added within 30 days of CVE publication:
+     - **2026: 57.4%**
+     - **2025: 48.0%**
 
-3. **Distribution shift toward fresher KEV additions:**
-   - Median lag: **13 days (2026)** vs **36.5 days (2025)**
-   - Share added within 30 days of CVE publication: **57.4% (2026)** vs **48.0% (2025)**
-   - Same-year publication share: **53.2% (2026)** vs **48.0% (2025)**
-
-4. **Backlog still material in 2026:**
-   - Share older than 365 days at KEV inclusion: **23.4% (2026)** (vs **30.0%** in 2025 matched window)
-   - Extreme examples in 2026 include CVEs originally published in 2009 and 2008 (e.g., CVE-2009-0556, CVE-2008-0015) entering KEV during this period.
+3. **Older exploited bugs are still a substantial part of the list.**
+   - Entries added more than a year after CVE publication:
+     - **2026: 23.4%**
+     - **2025: 30.0%**
+   - Some 2026 additions trace back to very old CVEs (including 2008–2009-era IDs).
 
 ## Hypotheses and adjudication
-- **H1 (fresh-intake shift):** 2026 KEV is ingesting more newly published CVEs faster than 2025.  
-  Prediction: median lag falls and short-lag share rises.  
+- **H1 (faster fresh intake):** KEV is now pulling in newly published CVEs faster.  
   **Status: Supported.**
 
-- **H2 (pure backlog cycle):** 2026 KEV additions are mostly older CVEs, similar to backlog-dominant behavior.  
-  Prediction: high `>365 day` share with no short-lag improvement.  
-  **Status: Rejected.** Backlog remains but does not dominate as strongly.
+- **H2 (still mostly backlog):** KEV additions are mainly old CVEs.  
+  **Status: Not supported as the main pattern.** Backlog is still material, but not dominant.
 
-- **H3 (vendor-batch artifact):** observed lag change is mostly one-vendor release behavior.  
-  Prediction: shift disappears once vendor mix is inspected.  
-  **Status: Mixed.** Vendor concentration exists (Microsoft remains top contributor), but lag improvement appears at portfolio level, not only one-vendor effect.
+- **H3 (single-vendor artifact):** This shift is mostly one vendor’s release behavior.  
+  **Status: Mixed.** Vendor concentration exists, but the faster pattern is visible at overall portfolio level.
 
 ## One-line significance
-KEV currently signals both rapid exploitation response and ongoing legacy-risk exposure, so patch programs that optimize only for “new CVEs” are likely to miss a consequential share of exploited backlog risk.
+If teams treat KEV as only a “new bug” feed, they will miss a meaningful share of actively exploited older vulnerabilities.
 
 ## Appendix: Method
-- Pull KEV CSV from CISA.
-- Filter entries by `dateAdded` in two matched windows: 2025-01-01..2025-03-05 and 2026-01-01..2026-03-05.
-- Query MITRE CVE API for each CVE’s `datePublished`.
-- Compute lag in days and compare medians/quantiles and threshold shares (`<=30`, `>365`).
-- Sanity-check vendor concentration for each window to test whether one vendor alone explains the shift.
+- Pulled CISA KEV CSV data.
+- Filtered two matched windows: 2025-01-01..2025-03-05 and 2026-01-01..2026-03-05.
+- Pulled CVE publication dates from MITRE CVE API.
+- Computed lag in days (`dateAdded - datePublished`) and compared medians and threshold shares.
+- Checked vendor concentration as a confounder test.
 
 ## Appendix: Limitations
-- Matched-window snapshot is short and can be affected by batch disclosure dynamics.
-- MITRE `datePublished` is a useful anchor but does not capture private exploitation lead-time.
-- This analysis measures **catalog inclusion timing**, not true first exploitation date.
+- This is a short matched-window snapshot and can move with batch updates.
+- CVE publication date is an anchor, not the same as first observed exploitation.
+- Results describe **catalog timing**, not total global exploitation timing.
 
 ## Appendix: Confidence
-**Medium.** Evidence uses two independent primary datasets with full-coverage per-CVE joins in-window, but interpretation is still sensitive to short-window composition effects.
+**Medium.** The direction of change is clear in two primary-source datasets, but short-window composition effects can still shift percentages.
 
 ## Appendix: Sources
 - [CISA Known Exploited Vulnerabilities catalog page](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
