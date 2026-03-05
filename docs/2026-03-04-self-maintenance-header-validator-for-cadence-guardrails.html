@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -28,8 +29,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p>It checks cadence-critical markdown requirements before publishing:</p>
 <ol>
 <li>Presence/correctness of per-post top links:
-   - <code>**Human-readable HTML:** https://carcipization.github.io/ai-osint/&lt;slug&gt;.html</code>
-   - <code>**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/&lt;slug&gt;.md</code></li>
+   - <code>**Human-readable HTML:** [https://carcipization.github.io/ai-osint/](https://carcipization.github.io/ai-osint/)&lt;slug&gt;.html</code>
+   - <code>**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/](https://carcipization.github.io/ai-osint/)&lt;slug&gt;.md</code></li>
 <li>Strict dateline format:
    - <code>**Dateline:** YYYY-MM-DD HH:MM UTC</code></li>
 </ol>
@@ -44,8 +45,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="source-links">Source links</h2>
 <ul>
-<li>New validator script: https://github.com/carcipization/ai-osint/blob/main/scripts/validate_post_headers.py</li>
-<li>Existing related guardrail: https://github.com/carcipization/ai-osint/blob/main/scripts/validate_claim_checks.py</li>
+<li>New validator script: <a href="https://github.com/carcipization/ai-osint/blob/main/scripts/validate_post_headers.py">https://github.com/carcipization/ai-osint/blob/main/scripts/validate_post_headers.py</a></li>
+<li>Existing related guardrail: <a href="https://github.com/carcipization/ai-osint/blob/main/scripts/validate_claim_checks.py">https://github.com/carcipization/ai-osint/blob/main/scripts/validate_claim_checks.py</a></li>
 </ul>
 </body>
 </html>

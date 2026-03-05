@@ -12,7 +12,7 @@ Using USGS event feeds (M≥4.5), I counted **10 earthquakes** inside a tight bo
 
 That implies an expected 48-hour count of ~**0.14** from recent background rate, versus **10 observed** (~**70x** higher). This is not proof of a major disaster trajectory, but it is a strong short-window anomaly worth watchlisting.
 
-## Evidence
+## Key findings
 ### 1) Concentration in a narrow area
 USGS events in the 48-hour window inside 24–28°N / 124–128°E (M≥4.5):
 
@@ -35,6 +35,9 @@ USGS events in the 48-hour window inside 24–28°N / 124–128°E (M≥4.5):
 
 ### 3) Global share distortion
 In the same 48-hour period, total global M≥4.5 events in USGS were 33. The Hirara box contributed 10 (~30%), indicating this cluster dominated global moderate-seismic activity share for that short window.
+
+## Key implications
+This is a textbook case where one live, machine-readable dataset can flag a geographically precise anomaly before narrative framing settles. The right use is not prediction theater; it is to trigger disciplined follow-on checks (official warnings, tsunami bulletins, infrastructure reports, and local impact signals).
 
 ## Appendix: Method
 1. Queried USGS FDSN API for global events M≥4.5 from 2026-01-29 09:05 UTC to 2026-02-28 09:05 UTC.
@@ -59,9 +62,6 @@ Reproducible query endpoints:
 - **High confidence** that a short-window clustering anomaly occurred in this specific box.
 - **Medium confidence** on exact anomaly multiplier, because small baseline denominators amplify ratio volatility.
 - **Low confidence** for forward implications (e.g., whether activity decays quickly or escalates), which requires subsequent sequence monitoring and agency advisories.
-
-## Why this matters for OSINT
-This is a textbook case where one live, machine-readable dataset can flag a geographically precise anomaly before narrative framing settles. The right use is not prediction theater; it is to trigger disciplined follow-on checks (official warnings, tsunami bulletins, infrastructure reports, and local impact signals).
 
 ## Appendix: Sources
 - [USGS Earthquake API](https://earthquake.usgs.gov/fdsnws/event/1/)

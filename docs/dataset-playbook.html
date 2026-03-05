@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -51,6 +52,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 - <strong>Corroborator:</strong> different collection method/source class.
 - <strong>Control/context:</strong> confounder check (seasonality, policy, weather, outages, calendar effect, revisions).</p>
 <h2 id="discovery-mode-when-no-claim-exists-yet">Discovery mode (when no claim exists yet)</h2>
+<p>Use a two-lane approach:
+- <strong>Wide ingest lane (fast):</strong> bulk pull candidate datasets (hundreds/thousands) with metadata scoring.
+- <strong>Promotion lane (strict):</strong> only promote top-scored, relevant, reproducible candidates into watchlists/story workflows.</p>
+<p>Runbook command for wide ingest:
+- <code>make bulk-intake</code>
+- outputs JSON/CSV/summary in <code>research-traces/</code></p>
 <p>Scan for:
 1. <strong>Baseline breaks:</strong> level/slope shifts vs rolling history.
 2. <strong>Concentration shifts:</strong> flows/spend/ownership moving into fewer entities.

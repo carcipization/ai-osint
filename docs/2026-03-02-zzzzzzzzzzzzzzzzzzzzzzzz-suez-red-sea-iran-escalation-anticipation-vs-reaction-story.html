@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -20,7 +21,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-02-zzzzzzzzzzzzzzzzzzzzzzzz-suez-red-sea-iran-escalation-anticipation-vs-reaction-story.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-02-zzzzzzzzzzzzzzzzzzzzzzzz-suez-red-sea-iran-escalation-anticipation-vs-reaction-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-02 06:51 UTC</p>
-<h2 id="why-this-matters">Why this matters</h2>
+<h2 id="story">Story</h2>
 <p>The core policy/logistics question is not only whether traffic changed after the Iran strikes, but whether carriers and routing patterns were already positioning for a wider regional war risk before the shooting started.</p>
 <h2 id="event-timeline-utc">Event timeline (UTC)</h2>
 <ul>
@@ -118,15 +119,31 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 - <strong>Yes, partially:</strong> The Feb 27 pre-strike reroute advisory indicates at least some operators were already managing elevated regional risk before the confirmed Iran-war escalation headlines.
 - <strong>But not proven at system level:</strong> Aggregate Suez/Cape PortWatch totals through Feb 22 show no clear pre-shock break, and we cannot yet observe Feb 27 onward in this dataset.</p>
 <p>So the strongest defensible claim now is: <strong>carrier-level anticipation signals existed, but chokepoint flow data is still too lagged to confirm a broad industry-wide anticipation regime versus immediate reaction.</strong></p>
-<h2 id="limitations">Limitations</h2>
+<h2 id="key-implications">Key implications</h2>
+<p>Current evidence does <strong>not</strong> support a clean “industry anticipated war escalation” or “industry only reacted after strikes” binary. The better reading is <strong>partial anticipation at carrier decision level, with system-level traffic proof pending due to data lag</strong>.</p>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
 <li>This publication is constrained by PortWatch availability through 2026-02-22 at run time.</li>
 <li>Reuters live page extraction can be sparse in machine-readable snapshots; timeline relies on Reuters page timestamps/dated bullets where available.</li>
 <li>No proprietary freight booking, war-risk premium, or insurer quote data were used in this pass.</li>
 </ul>
-<h2 id="confidence">Confidence</h2>
+<h2 id="appendix-method">Appendix: Method</h2>
+<ul>
+<li>Built an event timeline from dated Reuters/official carrier statements.</li>
+<li>Pulled IMF PortWatch daily AIS chokepoint totals for Suez, Cape of Good Hope, and Bab el-Mandeb.</li>
+<li>Compared pre-shock and comparison windows using mean differences and bootstrap confidence intervals.</li>
+<li>Explicitly checked data freshness to avoid claiming post-event effects before data availability.</li>
+</ul>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
 <p><strong>Moderate on carrier-behavior timeline; low-to-moderate on aggregate anticipation-vs-reaction attribution until post-2026-02-28 traffic data lands.</strong></p>
-<h2 id="bottom-line">Bottom line</h2>
-<p>Current evidence does <strong>not</strong> support a clean “industry anticipated war escalation” or “industry only reacted after strikes” binary. The better reading is <strong>partial anticipation at carrier decision level, with system-level traffic proof pending due to data lag</strong>.</p>
+<h2 id="appendix-sources">Appendix: Sources</h2>
+<ul>
+<li><a href="https://www.maersk.com/news/articles/2026/02/03/first-gemini-service-to-transit-the-red-sea">Maersk: first Gemini service to transit the Red Sea</a></li>
+<li><a href="https://www.reuters.com/business/maersk-hapag-lloyd-transit-red-sea-with-one-their-shared-services-2026-02-03/">Reuters: Maersk/Hapag-Lloyd one-service transit note</a></li>
+<li><a href="https://www.reuters.com/world/middle-east/maersk-reroutes-some-sailings-around-africa-due-unforeseen-constraints-in-red-2026-02-27/">Reuters: Maersk reroutes some sailings around Africa (2026-02-27)</a></li>
+<li><a href="https://www.reuters.com/world/iran-crisis-live-explosions-tehran-israel-announces-strike-2026-02-28/">Reuters live Iran crisis file (2026-02-28)</a></li>
+<li><a href="https://www.reuters.com/world/middle-east/irans-supreme-leader-khamenei-killed-iranian-state-media-confirm-2026-03-01/">Reuters bulletin on Khamenei death confirmation (2026-03-01)</a></li>
+<li><a href="https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer">IMF PortWatch Daily Chokepoints service</a></li>
+</ul>
 </body>
 </html>

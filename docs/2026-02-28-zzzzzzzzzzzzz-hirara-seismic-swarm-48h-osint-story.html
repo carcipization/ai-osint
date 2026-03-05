@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -20,11 +21,11 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-02-28-zzzzzzzzzzzzz-hirara-seismic-swarm-48h-osint-story.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-02-28-zzzzzzzzzzzzz-hirara-seismic-swarm-48h-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-02-28 09:05 UTC</p>
-<h2 id="executive-summary">Executive summary</h2>
+<h2 id="story">Story</h2>
 <p>A localized seismic cluster north-west of Hirara (Miyakojima, Japan) became an outlier in the last 48 hours.</p>
 <p>Using USGS event feeds (M≥4.5), I counted <strong>10 earthquakes</strong> inside a tight box (24–28°N, 124–128°E) between <strong>2026-02-26 09:05 UTC</strong> and <strong>2026-02-28 09:05 UTC</strong>. In the <strong>preceding 28 days</strong>, the same box recorded only <strong>2 events</strong>.</p>
 <p>That implies an expected 48-hour count of ~<strong>0.14</strong> from recent background rate, versus <strong>10 observed</strong> (~<strong>70x</strong> higher). This is not proof of a major disaster trajectory, but it is a strong short-window anomaly worth watchlisting.</p>
-<h2 id="evidence">Evidence</h2>
+<h2 id="key-findings">Key findings</h2>
 <h3 id="1-concentration-in-a-narrow-area">1) Concentration in a narrow area</h3>
 <p>USGS events in the 48-hour window inside 24–28°N / 124–128°E (M≥4.5):</p>
 <ul>
@@ -48,7 +49,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h3 id="3-global-share-distortion">3) Global share distortion</h3>
 <p>In the same 48-hour period, total global M≥4.5 events in USGS were 33. The Hirara box contributed 10 (~30%), indicating this cluster dominated global moderate-seismic activity share for that short window.</p>
-<h2 id="method">Method</h2>
+<h2 id="key-implications">Key implications</h2>
+<p>This is a textbook case where one live, machine-readable dataset can flag a geographically precise anomaly before narrative framing settles. The right use is not prediction theater; it is to trigger disciplined follow-on checks (official warnings, tsunami bulletins, infrastructure reports, and local impact signals).</p>
+<h2 id="appendix-method">Appendix: Method</h2>
 <ol>
 <li>Queried USGS FDSN API for global events M≥4.5 from 2026-01-29 09:05 UTC to 2026-02-28 09:05 UTC.</li>
 <li>Split data into:
@@ -61,20 +64,23 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 - USGS API docs/feed: <a href="https://earthquake.usgs.gov/fdsnws/event/1/">https://earthquake.usgs.gov/fdsnws/event/1/</a>
 - Example global query (M≥4.5, bounded by start/end): <a href="https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;starttime=2026-01-29T09:05:00&amp;endtime=2026-02-28T09:05:00&amp;minmagnitude=4.5&amp;orderby=time-asc&amp;limit=20000">https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;starttime=2026-01-29T09:05:00&amp;endtime=2026-02-28T09:05:00&amp;minmagnitude=4.5&amp;orderby=time-asc&amp;limit=20000</a>
 - Example regional query (same period + bounds): <a href="https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;starttime=2026-01-29T09:05:00&amp;endtime=2026-02-28T09:05:00&amp;minmagnitude=4.5&amp;minlatitude=24&amp;maxlatitude=28&amp;minlongitude=124&amp;maxlongitude=128&amp;orderby=time-asc&amp;limit=20000">https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;starttime=2026-01-29T09:05:00&amp;endtime=2026-02-28T09:05:00&amp;minmagnitude=4.5&amp;minlatitude=24&amp;maxlatitude=28&amp;minlongitude=124&amp;maxlongitude=128&amp;orderby=time-asc&amp;limit=20000</a></p>
-<h2 id="limitations">Limitations</h2>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
 <li>USGS event solutions can be revised (magnitude, depth, exact location) after initial publication.</li>
 <li>A simple rectangular bounding box may include/exclude edge events that a tectonic-boundary polygon would handle better.</li>
 <li>This is a short-window anomaly test, not a full seismic hazard forecast.</li>
 <li>No casualty/infrastructure impact inference is made from this signal alone.</li>
 </ul>
-<h2 id="uncertainty-and-confidence">Uncertainty and confidence</h2>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
 <ul>
 <li><strong>High confidence</strong> that a short-window clustering anomaly occurred in this specific box.</li>
 <li><strong>Medium confidence</strong> on exact anomaly multiplier, because small baseline denominators amplify ratio volatility.</li>
 <li><strong>Low confidence</strong> for forward implications (e.g., whether activity decays quickly or escalates), which requires subsequent sequence monitoring and agency advisories.</li>
 </ul>
-<h2 id="why-this-matters-for-osint">Why this matters for OSINT</h2>
-<p>This is a textbook case where one live, machine-readable dataset can flag a geographically precise anomaly before narrative framing settles. The right use is not prediction theater; it is to trigger disciplined follow-on checks (official warnings, tsunami bulletins, infrastructure reports, and local impact signals).</p>
+<h2 id="appendix-sources">Appendix: Sources</h2>
+<ul>
+<li><a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS Earthquake API</a></li>
+<li><a href="https://earthquake.usgs.gov/">USGS Earthquake Hazards Program</a></li>
+</ul>
 </body>
 </html>

@@ -18,12 +18,6 @@ Using CISA KEV CSV, compute `dueDate - dateAdded` in days, then compare year-mat
 ### 2026 short-window cluster (<=3 days)
 Eight entries cluster in late Jan–Feb, including Fortinet, Ivanti, SolarWinds (x2), BeyondTrust, Dell, and Cisco (x2).
 
-## Appendix: Method
-- Pulled CISA KEV CSV snapshot.
-- Computed lead time as `dueDate - dateAdded` for each entry.
-- Compared same-date windows through March 4 across years.
-- Flagged short-window entries (`<=3 days`) and inspected vendor/date concentration.
-
 ## Hypotheses and adjudication
 ### H1 — Exploit urgency increased, forcing shorter remediation windows
 - **Prediction:** short-window entries should co-occur with stronger urgency markers (e.g., active exploitation context, high operational risk products).
@@ -52,6 +46,12 @@ The best current explanation is **H2 + H3**: a process-prioritization effect (ac
 - **Confirm compression regime:** <=3-day share remains elevated over the next 30–60 days and spreads beyond current vendor concentration.
 - **Falsify/soften:** metric mean-reverts quickly and new entries return to historical lead-time patterns.
 - **Different mechanism signal:** sharp rise in `knownRansomwareCampaignUse=Known` among short-window entries would shift weight toward H1.
+
+## Appendix: Method
+- Pulled CISA KEV CSV snapshot.
+- Computed lead time as `dueDate - dateAdded` for each entry.
+- Compared same-date windows through March 4 across years.
+- Flagged short-window entries (`<=3 days`) and inspected vendor/date concentration.
 
 ## Appendix: Limitations
 - Early-year denominator is still modest; percentages can swing quickly.

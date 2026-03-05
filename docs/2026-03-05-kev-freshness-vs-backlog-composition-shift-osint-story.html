@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -20,18 +21,10 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-kev-freshness-vs-backlog-composition-shift-osint-story.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-kev-freshness-vs-backlog-composition-shift-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-05 09:05 UTC</p>
-<h2 id="ap-preflight-publishability-gate">AP preflight (publishability gate)</h2>
-<ol>
-<li>AP would run this now because KEV drives federal remediation deadlines and heavily influences enterprise patch triage; a composition shift in what gets added (newly published vs long-known flaws) changes immediate operational prioritization.</li>
-<li>New here: matched-window evidence that 2026 KEV additions skew materially fresher than 2025 (median lag from CVE publication to KEV inclusion fell), while a non-trivial long tail of old CVEs remains.</li>
-<li>Affected: US federal agencies, critical-infrastructure defenders, and enterprise vulnerability-management teams deciding between emergency patching and backlog burn-down.</li>
-<li>Strongest “not a story” counterargument: this could be short-window noise caused by a few batch disclosure days or vendor clustering.</li>
-<li><strong>Editor verdict: Publish</strong> — this is decision-relevant now, methodologically reproducible, and adds a distinct insight beyond simple KEV count tracking.</li>
-</ol>
-<h2 id="what-changed-and-why-this-matters-now">What changed and why this matters now</h2>
+<h2 id="story">Story</h2>
 <p>In a matched Jan 1–Mar 5 window, KEV additions in 2026 look <strong>faster-moving</strong> than in 2025 when measured as lag from CVE publication date to KEV date-added. But KEV still includes older CVEs at meaningful rates, which means defenders cannot treat the catalog as purely “new-threat feed.”</p>
 <p><strong>Decision relevance:</strong> triage policies should keep a dual-track posture (rapid-response for fresh KEV items + structured backlog reduction for older exploited flaws).</p>
-<h2 id="evidence">Evidence</h2>
+<h2 id="key-findings">Key findings</h2>
 <ol>
 <li>
 <p><strong>CISA KEV catalog (primary):</strong> 47 additions in 2026-01-01..2026-03-05 versus 50 in 2025-01-01..2025-03-05.<br />
@@ -57,14 +50,6 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
    - Extreme examples in 2026 include CVEs originally published in 2009 and 2008 (e.g., CVE-2009-0556, CVE-2008-0015) entering KEV during this period.</p>
 </li>
 </ol>
-<h2 id="method-reproducible">Method (reproducible)</h2>
-<ul>
-<li>Pull KEV CSV from CISA.</li>
-<li>Filter entries by <code>dateAdded</code> in two matched windows: 2025-01-01..2025-03-05 and 2026-01-01..2026-03-05.</li>
-<li>Query MITRE CVE API for each CVE’s <code>datePublished</code>.</li>
-<li>Compute lag in days and compare medians/quantiles and threshold shares (<code>&lt;=30</code>, <code>&gt;365</code>).</li>
-<li>Sanity-check vendor concentration for each window to test whether one vendor alone explains the shift.</li>
-</ul>
 <h2 id="hypotheses-and-adjudication">Hypotheses and adjudication</h2>
 <ul>
 <li>
@@ -83,17 +68,25 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <strong>Status: Mixed.</strong> Vendor concentration exists (Microsoft remains top contributor), but lag improvement appears at portfolio level, not only one-vendor effect.</p>
 </li>
 </ul>
-<h2 id="limitations">Limitations</h2>
+<h2 id="one-line-significance">One-line significance</h2>
+<p>KEV currently signals both rapid exploitation response and ongoing legacy-risk exposure, so patch programs that optimize only for “new CVEs” are likely to miss a consequential share of exploited backlog risk.</p>
+<h2 id="appendix-method">Appendix: Method</h2>
+<ul>
+<li>Pull KEV CSV from CISA.</li>
+<li>Filter entries by <code>dateAdded</code> in two matched windows: 2025-01-01..2025-03-05 and 2026-01-01..2026-03-05.</li>
+<li>Query MITRE CVE API for each CVE’s <code>datePublished</code>.</li>
+<li>Compute lag in days and compare medians/quantiles and threshold shares (<code>&lt;=30</code>, <code>&gt;365</code>).</li>
+<li>Sanity-check vendor concentration for each window to test whether one vendor alone explains the shift.</li>
+</ul>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
 <li>Matched-window snapshot is short and can be affected by batch disclosure dynamics.</li>
 <li>MITRE <code>datePublished</code> is a useful anchor but does not capture private exploitation lead-time.</li>
 <li>This analysis measures <strong>catalog inclusion timing</strong>, not true first exploitation date.</li>
 </ul>
-<h2 id="confidence">Confidence</h2>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
 <p><strong>Medium.</strong> Evidence uses two independent primary datasets with full-coverage per-CVE joins in-window, but interpretation is still sensitive to short-window composition effects.</p>
-<h2 id="one-line-significance">One-line significance</h2>
-<p>KEV currently signals both rapid exploitation response and ongoing legacy-risk exposure, so patch programs that optimize only for “new CVEs” are likely to miss a consequential share of exploited backlog risk.</p>
-<h2 id="source-links">Source links</h2>
+<h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
 <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA Known Exploited Vulnerabilities catalog page</a></li>
 <li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV feed</a></li>

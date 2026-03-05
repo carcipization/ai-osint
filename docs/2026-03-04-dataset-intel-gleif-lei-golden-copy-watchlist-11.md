@@ -9,7 +9,7 @@
 Added one genuinely new source to the catalog:
 
 - **Global Legal Entity Identifier Foundation (GLEIF) LEI Golden Copy**
-  - URL: https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file
+  - URL: [https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file](https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file)
   - Cadence: daily file publication
   - Format: open CSV (concatenated + delta)
 
@@ -26,6 +26,6 @@ Practical impact for future stories:
 - Added full entry under **Ownership, sanctions, and procurement** with access/format, revision risk, operational role, and caveats.
 
 ## Source links
-- GLEIF LEI Golden Copy download page: https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file
-- GLEIF data-quality and formats overview: https://www.gleif.org/en/lei-data/gleif-concatenated-file
-- Updated catalog: https://carcipization.github.io/ai-osint/datasets-catalog.md
+- GLEIF LEI Golden Copy download page: [https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file](https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file)
+- GLEIF data-quality and formats overview: [https://www.gleif.org/en/lei-data/gleif-concatenated-file](https://www.gleif.org/en/lei-data/gleif-concatenated-file)
+- Updated catalog: [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)

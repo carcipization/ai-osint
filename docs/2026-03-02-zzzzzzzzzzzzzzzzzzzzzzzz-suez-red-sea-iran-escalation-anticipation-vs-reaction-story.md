@@ -5,7 +5,7 @@
 
 **Dateline:** 2026-03-02 06:51 UTC
 
-## Why this matters
+## Story
 The core policy/logistics question is not only whether traffic changed after the Iran strikes, but whether carriers and routing patterns were already positioning for a wider regional war risk before the shooting started.
 
 ## Event timeline (UTC)
@@ -96,13 +96,27 @@ Why:
 
 So the strongest defensible claim now is: **carrier-level anticipation signals existed, but chokepoint flow data is still too lagged to confirm a broad industry-wide anticipation regime versus immediate reaction.**
 
-## Limitations
+## Key implications
+Current evidence does **not** support a clean “industry anticipated war escalation” or “industry only reacted after strikes” binary. The better reading is **partial anticipation at carrier decision level, with system-level traffic proof pending due to data lag**.
+
+## Appendix: Limitations
 - This publication is constrained by PortWatch availability through 2026-02-22 at run time.
 - Reuters live page extraction can be sparse in machine-readable snapshots; timeline relies on Reuters page timestamps/dated bullets where available.
 - No proprietary freight booking, war-risk premium, or insurer quote data were used in this pass.
 
-## Confidence
+## Appendix: Method
+- Built an event timeline from dated Reuters/official carrier statements.
+- Pulled IMF PortWatch daily AIS chokepoint totals for Suez, Cape of Good Hope, and Bab el-Mandeb.
+- Compared pre-shock and comparison windows using mean differences and bootstrap confidence intervals.
+- Explicitly checked data freshness to avoid claiming post-event effects before data availability.
+
+## Appendix: Confidence
 **Moderate on carrier-behavior timeline; low-to-moderate on aggregate anticipation-vs-reaction attribution until post-2026-02-28 traffic data lands.**
 
-## Bottom line
-Current evidence does **not** support a clean “industry anticipated war escalation” or “industry only reacted after strikes” binary. The better reading is **partial anticipation at carrier decision level, with system-level traffic proof pending due to data lag**.
+## Appendix: Sources
+- [Maersk: first Gemini service to transit the Red Sea](https://www.maersk.com/news/articles/2026/02/03/first-gemini-service-to-transit-the-red-sea)
+- [Reuters: Maersk/Hapag-Lloyd one-service transit note](https://www.reuters.com/business/maersk-hapag-lloyd-transit-red-sea-with-one-their-shared-services-2026-02-03/)
+- [Reuters: Maersk reroutes some sailings around Africa (2026-02-27)](https://www.reuters.com/world/middle-east/maersk-reroutes-some-sailings-around-africa-due-unforeseen-constraints-in-red-2026-02-27/)
+- [Reuters live Iran crisis file (2026-02-28)](https://www.reuters.com/world/iran-crisis-live-explosions-tehran-israel-announces-strike-2026-02-28/)
+- [Reuters bulletin on Khamenei death confirmation (2026-03-01)](https://www.reuters.com/world/middle-east/irans-supreme-leader-khamenei-killed-iranian-state-media-confirm-2026-03-01/)
+- [IMF PortWatch Daily Chokepoints service](https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer)

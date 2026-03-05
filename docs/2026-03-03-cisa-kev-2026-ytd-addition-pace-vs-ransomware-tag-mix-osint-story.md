@@ -14,12 +14,6 @@ A fresh pull of CISA’s Known Exploited Vulnerabilities (KEV) catalog shows a m
 
 This is not a “risk is down” conclusion. It is a **composition shift** signal: exploit-confirmed additions are continuing at pace, while ransomware-tag labeling is currently less prevalent in the newly added set.
 
-## Appendix: Method
-1. Pulled CISA KEV CSV and JSON feeds.
-2. Counted total entries and grouped `dateAdded` by year.
-3. Computed same-calendar-date YTD comparisons (through March 3) across years.
-4. Calculated yearly share where `knownRansomwareCampaignUse == known`.
-
 ## Key findings
 ### 1) Early-2026 KEV addition pace is slightly above same-date 2025
 
@@ -44,18 +38,24 @@ From the catalog snapshot used in this run:
 
 Latest `dateAdded` observed: **2026-03-03** (2 entries), including Broadcom and Qualcomm ecosystem items in the feed snapshot.
 
-## Interpretation
+## Key implications
 The catalog currently suggests defenders should avoid overfitting to ransomware-labeled exploitation as the sole urgency heuristic. KEV growth in early 2026 remains active, but attribution/tactic mix in labels can vary over time and may lag broader exploitation reality.
+
+## Appendix: Method
+1. Pulled CISA KEV CSV and JSON feeds.
+2. Counted total entries and grouped `dateAdded` by year.
+3. Computed same-calendar-date YTD comparisons (through March 3) across years.
+4. Calculated yearly share where `knownRansomwareCampaignUse == known`.
 
 ## Appendix: Limitations
 - KEV reflects CISA’s inclusion and update process, not all exploitation globally.
 - Ransomware flag coverage depends on available reporting/attribution and may change after publication.
 - Year-to-date comparisons are sensitive to calendar cutoffs and update timing.
 
+## Appendix: Confidence
+**Medium.** The pace and composition signals are clear in the current snapshot, but ransomware-tag share can shift as CISA updates entries and as the year progresses.
+
 ## Appendix: Sources
 - [CISA KEV JSON feed](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json)
 - [CISA KEV CSV feed](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)
 - [CISA KEV catalog page](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
-
-## Appendix: Confidence
-**Medium.** The pace and composition signals are clear in the current snapshot, but ransomware-tag share can shift as CISA updates entries and as the year progresses.

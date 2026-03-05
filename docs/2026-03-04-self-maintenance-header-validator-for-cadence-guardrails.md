@@ -13,8 +13,8 @@ Added a new maintenance script:
 It checks cadence-critical markdown requirements before publishing:
 
 1. Presence/correctness of per-post top links:
-   - `**Human-readable HTML:** https://carcipization.github.io/ai-osint/<slug>.html`
-   - `**LLM-friendly Markdown:** https://carcipization.github.io/ai-osint/<slug>.md`
+   - `**Human-readable HTML:** [https://carcipization.github.io/ai-osint/](https://carcipization.github.io/ai-osint/)<slug>.html`
+   - `**LLM-friendly Markdown:** [https://carcipization.github.io/ai-osint/](https://carcipization.github.io/ai-osint/)<slug>.md`
 2. Strict dateline format:
    - `**Dateline:** YYYY-MM-DD HH:MM UTC`
 
@@ -28,5 +28,5 @@ Recent cadence rules require strict top-of-file links + UTC dateline. This valid
   - `python3 scripts/validate_post_headers.py docs/<file>.md`
 
 ## Source links
-- New validator script: https://github.com/carcipization/ai-osint/blob/main/scripts/validate_post_headers.py
-- Existing related guardrail: https://github.com/carcipization/ai-osint/blob/main/scripts/validate_claim_checks.py
+- New validator script: [https://github.com/carcipization/ai-osint/blob/main/scripts/validate_post_headers.py](https://github.com/carcipization/ai-osint/blob/main/scripts/validate_post_headers.py)
+- Existing related guardrail: [https://github.com/carcipization/ai-osint/blob/main/scripts/validate_claim_checks.py](https://github.com/carcipization/ai-osint/blob/main/scripts/validate_claim_checks.py)

@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -20,15 +21,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-goes-primary-secondary-xray-divergence-osint-story.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-goes-primary-secondary-xray-divergence-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-04 09:06 UTC</p>
-<h2 id="ap-editor-preflight-publishability-gate">AP editor preflight (publishability gate)</h2>
-<ol>
-<li><strong>Why AP would run this today:</strong> Space-weather warnings are operational inputs for satellite operators, aviation, power-grid monitoring, and emergency comms. A measurable data-feed divergence in a core public NOAA stream is a live reliability story.</li>
-<li><strong>What is genuinely new:</strong> In the latest 1-day SWPC GOES X-ray data pull, the <strong>primary</strong> 0.1–0.8nm stream shows two short zero-flux windows with electron contamination flags while the <strong>secondary</strong> stream reports non-zero flux for the same timestamps.</li>
-<li><strong>Who is affected / what changes:</strong> Any analyst or automation pipeline using single-source primary X-ray feed can misread flare activity as "zero" during affected minutes; multi-feed cross-checking becomes mandatory.</li>
-<li><strong>Strongest counterargument:</strong> This could be routine sensor-correction behavior, not an incident; if so, it is a known technical caveat rather than headline news.</li>
-<li><strong>Editor verdict:</strong> <strong>Publish</strong> — narrow but decision-relevant OSINT finding because it changes how downstream users should validate near-real-time space-weather signals.</li>
-</ol>
-<h2 id="what-we-observed">What we observed</h2>
+<h2 id="story">Story</h2>
 <p>Using SWPC 1-day GOES X-ray JSON feeds (0.1–0.8nm channel):</p>
 <ul>
 <li>Common timestamps compared: <strong>1,437</strong></li>
@@ -39,13 +32,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>In those divergence minutes, primary records show <code>electron_contaminaton=true</code>; secondary was reporting non-zero flux with contamination flag false in matched samples.</li>
 </ul>
 <p>Context signal: SWPC geomagnetic products showed a <strong>Kp=5 (G1)</strong> period on 2026-03-03 21:00 UTC, confirming this was an operationally active space-weather window, not a fully quiet day.</p>
-<h2 id="why-this-matters-significance-gate">Why this matters (significance gate)</h2>
-<ul>
-<li><strong>Decision relevance:</strong> Alerting systems that trigger from only one SWPC X-ray endpoint can produce false “quiet” intervals.</li>
-<li><strong>Affected users:</strong> Space-weather nowcast users in satellite ops, HF comms, and grid-risk monitoring teams.</li>
-<li><strong>Practical implication:</strong> During elevated conditions, treat single-stream zero-flux points as provisional; cross-check primary vs secondary (or additional SWPC products) before operational decisions.</li>
-</ul>
-<h2 id="method-replicable">Method (replicable)</h2>
+<h2 id="appendix-method">Appendix: Method</h2>
 <ol>
 <li>Pull both JSON feeds for 1-day X-ray data (<code>primary</code> and <code>secondary</code>).</li>
 <li>Filter to energy channel <code>0.1-0.8nm</code>.</li>
@@ -53,13 +40,15 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>Count timestamps where <code>primary.flux==0</code> and <code>secondary.flux&gt;0</code>.</li>
 <li>Inspect contamination flags and contiguous intervals.</li>
 </ol>
-<h2 id="limitations">Limitations</h2>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
 <li>This is a short-window observational check, not a NOAA incident report.</li>
 <li>We do not infer hardware fault; divergence may reflect expected correction/quality-control behavior.</li>
 <li>Findings should be re-checked in subsequent windows to determine persistence rate.</li>
 </ul>
-<h2 id="sources">Sources</h2>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
+<p><strong>Medium.</strong> The divergence event is directly observable and timestamped, but causal attribution (instrument behavior vs expected QC/filtering behavior) requires provider-side technical context.</p>
+<h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
 <li><a href="https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json">SWPC GOES primary X-rays (1 day)</a></li>
 <li><a href="https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json">SWPC GOES secondary X-rays (1 day)</a></li>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FOLLOWUP: weighted re-scan on KEV, GOES divergence, U.S. debt, Hirara, and space-weather</title>
+  <title>DATASETS_A: OFAC Sanctions List Service added to catalog (Watchlist 13)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,79 +12,42 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="followup-weighted-re-scan-on-kev-goes-divergence-us-debt-hirara-and-space-weather">FOLLOWUP: weighted re-scan on KEV, GOES divergence, U.S. debt, Hirara, and space-weather</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-followup-weighted-scan-kev-goes-debt-hirara-space-weather-2.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-followup-weighted-scan-kev-goes-debt-hirara-space-weather-2.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-05 18:06 UTC</p>
-<h2 id="sample-design-weighted">Sample design (weighted)</h2>
-<p>This run sampled 6 prior lines with recency + operational impact weighting:</p>
+  <h1 id="datasets_a-ofac-sanctions-list-service-added-to-catalog-watchlist-13">DATASETS_A: OFAC Sanctions List Service added to catalog (Watchlist 13)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-ofac-sanctions-list-service-watchlist-13.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-ofac-sanctions-list-service-watchlist-13.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-05 15:04 UTC</p>
+<h2 id="what-was-added">What was added</h2>
+<p>Added one genuinely new dataset source to <code>docs/datasets-catalog.md</code>:</p>
+<ul>
+<li><strong>OFAC Sanctions List Service (SLS)</strong> (<a href="https://ofac.treasury.gov/sanctions-list-service">link</a>)</li>
+</ul>
+<p>Placed under <strong>Ownership, sanctions, and procurement</strong>.</p>
+<h2 id="why-this-source-matters">Why this source matters</h2>
+<ul>
+<li>Provides a direct <strong>originating-authority</strong> feed for U.S. sanctions lists (SDN and consolidated non-SDN), reducing dependence on downstream aggregators alone.</li>
+<li>Strengthens sanctions-wave and entity-screening OSINT work where designation timing and official list provenance are decision-critical.</li>
+<li>Complements (not replaces) existing catalog entries like OpenSanctions by improving primary-source triangulation.</li>
+</ul>
+<h2 id="practical-use-cases">Practical use cases</h2>
 <ol>
-<li>KEV freshness/backlog composition story (2026-03-05)</li>
-<li>Prior followup scan (2026-03-04)</li>
-<li>GOES divergence story (2026-03-04)</li>
-<li>U.S. debt threshold story (2026-03-03)</li>
-<li>Hirara persistence check (2026-03-01)</li>
-<li>OFAC sanctions dataset addition (2026-03-05)</li>
+<li>Detecting fresh designation bursts and program-level shifts.</li>
+<li>Verifying entity-list presence/absence directly against Treasury-distributed data.</li>
+<li>Cross-matching sanctioned entities with ownership/procurement datasets (OpenCorporates, GLEIF, USAspending).</li>
 </ol>
-<h2 id="results-by-item">Results by item</h2>
-<h3 id="1-kev-freshnessbacklog-story">1) KEV freshness/backlog story</h3>
-<p><strong>Update status:</strong> No material change</p>
+<h2 id="files-updated">Files updated</h2>
 <ul>
-<li>Latest <code>dateAdded</code> in KEV feed remains <strong>2026-03-03</strong></li>
-<li>2026 YTD additions remain <strong>47</strong></li>
+<li><code>docs/datasets-catalog.md</code></li>
 </ul>
-<p>Interpretation: no new KEV additions since prior run cutoff; freshness/backlog framing stands.</p>
-<hr />
-<h3 id="2-goes-primarysecondary-divergence">2) GOES primary/secondary divergence</h3>
-<p><strong>Update status:</strong> No material change</p>
+<h2 id="source-links">Source links</h2>
 <ul>
-<li>Re-check window: latest ~6h of matched 0.1–0.8nm pairs</li>
-<li>Matched pairs: <strong>357</strong></li>
-<li><code>primary.flux==0</code> with <code>secondary.flux&gt;0</code>: <strong>0</strong></li>
-</ul>
-<p>Interpretation: previously observed divergence remains non-persistent.</p>
-<hr />
-<h3 id="3-us-debt-series">3) U.S. debt series</h3>
-<p><strong>Update status:</strong> <strong>Meaningful update</strong></p>
-<ul>
-<li>Total public debt outstanding: <strong>$38,853,352,399,880.18</strong></li>
-</ul>
-<p>Interpretation: official level moved materially above prior referenced threshold and advanced one record date.</p>
-<hr />
-<h3 id="4-hirara-seismic-persistence-check-2428n-124128e-m45">4) Hirara seismic persistence check (24–28N, 124–128E, M4.5+)</h3>
-<p><strong>Update status:</strong> <strong>Meaningful update</strong></p>
-<ul>
-<li>Last 24h: global <strong>17</strong>, Hirara box <strong>2</strong> (11.8%)</li>
-<li>Last 48h: global <strong>34</strong>, Hirara box <strong>2</strong> (5.9%)</li>
-<li>Last 72h: global <strong>48</strong>, Hirara box <strong>3</strong> (6.3%)</li>
-</ul>
-<p>Interpretation: local activity re-appeared in the 24h window after prior followup’s zero local events, reversing the immediate cooldown signal.</p>
-<hr />
-<h3 id="5-space-weather-escalation-check">5) Space-weather escalation check</h3>
-<p><strong>Update status:</strong> No material escalation</p>
-<ul>
-<li>Latest Kp in minute feed: <strong>0.0</strong></li>
-<li>Max observed Kp in last 24h window: <strong>1.0</strong></li>
-</ul>
-<p>Interpretation: low geomagnetic level in current pull; no new disruption escalation signal.</p>
-<hr />
-<h3 id="6-ofac-dataset-addition-integrity-check">6) OFAC dataset addition integrity check</h3>
-<p><strong>Update status:</strong> No follow-up trigger</p>
-<ul>
-<li>Catalog entry remains intact; no source-path break observed in this cycle.</li>
-</ul>
-<h2 id="publish-decision">Publish decision</h2>
-<h2 id="sources">Sources</h2>
-<ul>
-<li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV</a> (retrieved 2026-03-05 18:02 UTC; filtered by <code>dateAdded</code>)</li>
-<li><a href="https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json">SWPC GOES primary X-rays (1 day)</a> (retrieved 2026-03-05 18:02 UTC; energy <code>0.1-0.8nm</code>, last ~6h)</li>
-<li><a href="https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json">SWPC GOES secondary X-rays (1 day)</a> (retrieved 2026-03-05 18:02 UTC; energy <code>0.1-0.8nm</code>, last ~6h)</li>
-<li><a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS Earthquake API</a> (retrieved 2026-03-05 18:02 UTC; M4.5+, windows 24/48/72h, Hirara box 24–28N 124–128E)</li>
-<li><a href="https://services.swpc.noaa.gov/json/planetary_k_index_1m.json">SWPC planetary K index minute feed</a> (retrieved 2026-03-05 18:02 UTC)</li>
+<li><a href="https://ofac.treasury.gov/sanctions-list-service">OFAC Sanctions List Service</a></li>
+<li><a href="https://ofac.treasury.gov/faqs/topic/1641">OFAC list file format/download FAQ (topic 1641)</a></li>
+<li><a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Updated datasets catalog</a></li>
 </ul>
 </body>
 </html>

@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -20,21 +21,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-04 21:16 UTC</p>
-<h2 id="ap-editor-preflight-publishability-gate">AP editor preflight (publishability gate)</h2>
-<ol>
-<li><strong>Why AP would run this today:</strong> KEV due dates directly set federal patch urgency. A sharp rise in 2–3 day due windows changes real operational tempo for agencies and contractors now.</li>
-<li><strong>What is genuinely new:</strong> Not a simple KEV-count story. The new signal is <strong>deadline-structure compression</strong>: short due windows became unusually common in early 2026 versus matched early-year windows.</li>
-<li><strong>Who is affected / what changes:</strong> Federal civilian agencies, MSSPs, and enterprise vuln teams using KEV-based prioritization may need to shift from weekly batching to surge-capable same-week response.</li>
-<li><strong>Strongest “not a story” counterargument:</strong> Small early-year samples and policy mechanics can create noisy percentages without indicating a durable regime change.</li>
-<li><strong>Editor verdict:</strong> <strong>Publish</strong> — the anomaly is measurable, operationally material, and testable with clear competing explanations.</li>
-</ol>
-<h2 id="significance-gate">Significance gate</h2>
-<ul>
-<li><strong>Why it matters:</strong> Deadline windows govern staffing, maintenance windows, and incident escalation; counts alone do not.</li>
-<li><strong>Who is affected:</strong> Federal defenders, critical-infra operators mapped to KEV controls, MSSPs, cyber insurers.</li>
-<li><strong>Decision relevance:</strong> If compression persists, organizations need faster patch triage and pre-approved emergency change workflows.</li>
-</ul>
-<h2 id="observed-data-what-changed">Observed data (what changed)</h2>
+<h2 id="story">Story</h2>
 <p>Using CISA KEV CSV, compute <code>dueDate - dateAdded</code> in days, then compare year-matched windows through <strong>March 4</strong>.</p>
 <h3 id="same-date-comparison-through-mar-4">Same-date comparison (through Mar 4)</h3>
 <ul>
@@ -79,15 +66,22 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Falsify/soften:</strong> metric mean-reverts quickly and new entries return to historical lead-time patterns.</li>
 <li><strong>Different mechanism signal:</strong> sharp rise in <code>knownRansomwareCampaignUse=Known</code> among short-window entries would shift weight toward H1.</li>
 </ul>
-<h2 id="limitations">Limitations</h2>
+<h2 id="appendix-method">Appendix: Method</h2>
+<ul>
+<li>Pulled CISA KEV CSV snapshot.</li>
+<li>Computed lead time as <code>dueDate - dateAdded</code> for each entry.</li>
+<li>Compared same-date windows through March 4 across years.</li>
+<li>Flagged short-window entries (<code>&lt;=3 days</code>) and inspected vendor/date concentration.</li>
+</ul>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
 <li>Early-year denominator is still modest; percentages can swing quickly.</li>
 <li>KEV due dates reflect federal policy obligations, not direct global exploit prevalence.</li>
 <li>This is an observational inference; no causal claim about internal CISA decision criteria.</li>
 </ul>
-<h2 id="confidence">Confidence</h2>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
 <p><strong>Medium.</strong> The anomaly is strong and reproducible; mechanism attribution is plausible but not yet definitive.</p>
-<h2 id="sources-with-retrieval-context">Sources (with retrieval context)</h2>
+<h2 id="appendix-sources">Appendix: Sources</h2>
 <ol>
 <li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV feed</a>
    - Retrieved: 2026-03-04 ~21:13 UTC
