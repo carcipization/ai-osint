@@ -20,6 +20,7 @@ Design goals:
 
 from dataclasses import dataclass
 from pathlib import Path
+from datetime import datetime
 import html
 import re
 import shutil
@@ -161,9 +162,20 @@ def write_latest(latest: Item) -> None:
     shutil.copyfile(OUT / f"{latest.slug}.html", OUT / "latest.html")
 
 
+def dateline_sort_key(it: Item) -> tuple[datetime, str]:
+    if not it.dateline:
+        return (datetime.min, it.slug)
+    for fmt in ("%Y-%m-%d %H:%M UTC", "%Y-%m-%d"):
+        try:
+            return (datetime.strptime(it.dateline, fmt), it.slug)
+        except ValueError:
+            continue
+    return (datetime.min, it.slug)
+
+
 def write_index(items: list[Item], latest: Item) -> None:
-    # newest-first
-    items_sorted = list(items)[::-1]
+    # newest-first by dateline (fallback to slug)
+    items_sorted = sorted(items, key=dateline_sort_key, reverse=True)
 
     rows = []
     for it in items_sorted:
@@ -219,10 +231,8 @@ def main() -> None:
 
     items = [build_item(p) for p in sources]
 
-    # Prefer date-prefixed posts for "latest".
-    date_re = re.compile(r"^\d{4}-\d{2}-\d{2}-")
-    dated = [it for it in items if date_re.match(it.slug)]
-    latest = (dated[-1] if dated else items[-1])
+    # Use dateline-first selection for "latest" (fallback to slug).
+    latest = max(items, key=dateline_sort_key)
 
     write_latest(latest)
     write_index(items, latest)
