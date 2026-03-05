@@ -25,6 +25,14 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
    - Supported / Not supported / Partly supported / Inconclusive
    - Add explicit caveats for model-derived metrics and method-sensitive estimates
 
+## Dataset intake policy (batch-first)
+
+- Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
+- Discovery pass target: scan at least tens/hundreds of candidates per run when tooling allows.
+- Promotion default: add **3–10 qualified datasets per cycle** (unless quality is genuinely thin).
+- Adding only one dataset should be an exception and should include a brief reason in trace notes.
+- Prioritize coverage breadth across domains before polishing niche depth.
+
 ## Claim-check minimum standard
 
 A claim-check must include all of the following before publication:
