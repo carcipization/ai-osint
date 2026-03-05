@@ -19,138 +19,78 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="dataset-playbook">Dataset Playbook</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-playbook.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/dataset-playbook.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-04 21:31 UTC
+<p><strong>Dateline:</strong> 2026-03-05 21:40 UTC
 <strong>Status:</strong> Living guide</p>
 <h2 id="purpose">Purpose</h2>
-<p>Operational guide for turning dataset signals into publishable OSINT stories.</p>
-<p>Use this for both:
-- <strong>Verification mode</strong> (test a concrete claim), and
-- <strong>Discovery mode</strong> (find a story candidate in data).</p>
-<h2 id="core-operating-loop">Core operating loop</h2>
+<p>Operational guide for <strong>dataset intake and catalog quality</strong>.</p>
+<p>This is <strong>not</strong> the story-writing guide.
+Use this to discover, score, and promote datasets in batches.</p>
+<h2 id="hard-separation-from-story-workflow">Hard separation from STORY workflow</h2>
+<ul>
+<li>Do <strong>not</strong> run AP/story preflight for dataset selection.</li>
+<li>Do <strong>not</strong> require narrative publishability checks to add datasets.</li>
+<li>Story framing belongs in story/claim-check workflows only.</li>
+</ul>
+<h2 id="core-dataset-loop-batch-first">Core dataset loop (batch-first)</h2>
 <ol>
-<li>Define one falsifiable claim/question.</li>
-<li>Run significance gate: why it matters if true/false, and who is affected.</li>
-<li>Set scope (window, geography, domain, minimum evidence).</li>
-<li>Collect primary evidence first.</li>
-<li>Triangulate with at least 2 independent source classes.</li>
-<li>Compare against baseline (not raw counts alone).</li>
-<li>Test at least one null/alternative explanation.</li>
-<li>Publish with confidence + limitations + decision relevance.</li>
-<li>Log follow-up triggers and revisit cadence.</li>
+<li>Run wide ingest (<code>make bulk-intake</code>) and gather candidate sources at scale.</li>
+<li>Deduplicate/canonicalize by source and endpoint.</li>
+<li>Score candidates (relevance, reproducibility, update cadence, access).</li>
+<li>Promote top qualified candidates to catalog/watchlists in <strong>batches</strong>.</li>
+<li>Record caveats + intended operational use for each promoted dataset.</li>
+<li>Log rejects briefly (why excluded) to avoid re-triage churn.</li>
 </ol>
-<h2 id="claim-formats">Claim formats</h2>
+<h2 id="batch-defaults">Batch defaults</h2>
 <ul>
-<li>“Did X change in window Y?”</li>
-<li>“Did behavior shift after event Z?”</li>
-<li>“Is X an anomaly vs baseline?”</li>
+<li>Discovery target: tens/hundreds of candidates per run when tooling allows.</li>
+<li>Promotion default: <strong>3–10 qualified datasets per cycle</strong>.</li>
+<li>Single-dataset promotion is an exception and must include a reason in trace notes.</li>
 </ul>
-<p>Reject broad narrative prompts until a measurable question exists.</p>
-<h2 id="triangulation-minimum">Triangulation minimum</h2>
-<p>For each consequential claim:
-- <strong>Primary:</strong> closest available ground-truth source.
-- <strong>Corroborator:</strong> different collection method/source class.
-- <strong>Control/context:</strong> confounder check (seasonality, policy, weather, outages, calendar effect, revisions).</p>
-<h2 id="discovery-mode-when-no-claim-exists-yet">Discovery mode (when no claim exists yet)</h2>
-<p>Use a two-lane approach:
-- <strong>Wide ingest lane (fast):</strong> bulk pull candidate datasets (hundreds/thousands) with metadata scoring.
-- <strong>Promotion lane (strict):</strong> only promote top-scored, relevant, reproducible candidates into watchlists/story workflows.</p>
-<p>Runbook command for wide ingest:
-- <code>make bulk-intake</code>
-- outputs JSON/CSV/summary in <code>research-traces/</code></p>
-<p>Scan for:
-1. <strong>Baseline breaks:</strong> level/slope shifts vs rolling history.
-2. <strong>Concentration shifts:</strong> flows/spend/ownership moving into fewer entities.
-3. <strong>Decouplings:</strong> metrics that usually track each other diverge.
-4. <strong>Cross-border reroutes:</strong> corridor substitutions after policy/sanctions pressure.
-5. <strong>Cross-domain synchrony:</strong> independent systems moving together in time.</p>
-<p>Promote a candidate to full story only if all are true:
-- one falsifiable claim can be written,
-- &gt;=2 independent sources exist,
-- one plausible null can be tested quickly.</p>
-<h2 id="fast-candidate-scoring">Fast candidate scoring</h2>
-<p>Score 1–5 each:
-- Signal strength
-- Corroboration availability
-- Public stakes
-- Actionability (publishable now)
-- False-positive risk (inverse)</p>
-<p>Prioritize high signal + high corroboration + low/medium FP risk.</p>
-<h2 id="evidence-reliability-tiers">Evidence reliability tiers</h2>
+<h2 id="scoring-rubric-15">Scoring rubric (1–5)</h2>
 <ul>
-<li><strong>Tier 1 (strongest):</strong> official registries, agency/statistical releases, primary filings.</li>
-<li><strong>Tier 2:</strong> machine-coded/model-derived feeds and telemetry products.</li>
-<li><strong>Tier 3:</strong> third-party aggregators/social-derived indicators.</li>
+<li>Domain relevance to active reporting lanes</li>
+<li>Source authority/provenance</li>
+<li>Reproducibility/access reliability</li>
+<li>Update cadence freshness</li>
+<li>Complementarity (adds new coverage vs duplicate signal)</li>
+<li>Noise/false-positive risk (inverse)</li>
 </ul>
-<p>Publishing rule of thumb:
-- Hard claims should include Tier 1, or convergent multi-source Tier 2 evidence with explicit caveats.</p>
-<h2 id="dataset-quality-keys-for-catalog-maintenance-story-triage">Dataset quality keys (for catalog maintenance + story triage)</h2>
+<p>Prioritize: high relevance + high authority + high reproducibility + medium/low noise.</p>
+<h2 id="evidence-tiers-for-dataset-quality">Evidence tiers for dataset quality</h2>
 <ul>
-<li><strong>Access:</strong> Open / registration / restricted</li>
-<li><strong>Format:</strong> API / CSV / dashboard / mixed</li>
-<li><strong>Revision risk:</strong> Low / Medium / High</li>
-<li><strong>Operational role:</strong> Baseline / anomaly detection / corroboration / lead generation</li>
+<li><strong>Tier 1:</strong> official registries, agencies, primary institutional releases</li>
+<li><strong>Tier 2:</strong> structured telemetry/model-derived systems</li>
+<li><strong>Tier 3:</strong> aggregators/social-derived feeds</li>
 </ul>
-<h2 id="starter-bundles-quick-triage-patterns">Starter bundles (quick triage patterns)</h2>
+<p>Catalog can include Tier 2/3, but mark caveats clearly.
+High-stakes verification should anchor on Tier 1 when available.</p>
+<h2 id="promotion-criteria-dataset-level">Promotion criteria (dataset-level)</h2>
+<p>Promote when all are true:
+- Source is real, reachable, and stably identifiable
+- Operational use-case is concrete
+- Caveats are known/documented
+- It adds coverage breadth or materially improves existing lane quality</p>
+<h2 id="output-format-for-dataset-posts-lean">Output format for DATASET posts (lean)</h2>
 <ul>
-<li><strong>Conflict escalation:</strong> ACLED + GDELT + ReliefWeb</li>
-<li><strong>Internet shutdown:</strong> OONI + RIPE/IODA + official telecom notices</li>
-<li><strong>Energy stress (EU):</strong> AGSI+ + ENTSO-E + Pink Sheet context</li>
-<li><strong>Trade reroute/sanctions:</strong> UN Comtrade + OpenSanctions + AIS/maritime source</li>
-<li><strong>AI capability vs risk:</strong> HELM + Epoch compute + AI Incident Database</li>
-<li><strong>Cyber exploitation tempo:</strong> CISA KEV + EPSS + NVD</li>
+<li>What changed this cycle (count + list)</li>
+<li>Added datasets (name, URL, domain, access, update cadence)</li>
+<li>Why each matters operationally (1–2 lines)</li>
+<li>Key caveats/limitations (brief)</li>
+<li>Catalog files touched</li>
+<li>Trace/reference links</li>
 </ul>
-<h2 id="confidence-labels">Confidence labels</h2>
+<p>Avoid story-style sections like “Why this update now”, AP preflight, or editorial verdict.</p>
+<h2 id="catalog-maintenance-rules">Catalog maintenance rules</h2>
 <ul>
-<li><strong>High:</strong> independent sources converge; confounders tested.</li>
-<li><strong>Medium:</strong> core finding supported; key dependency unresolved.</li>
-<li><strong>Low:</strong> preliminary signal with substantial uncertainty.</li>
-<li><strong>False/Misleading:</strong> stronger evidence contradicts claim.</li>
-</ul>
-<p>Always include a one-line rationale for the label.</p>
-<h2 id="failure-modes-checklist">Failure modes checklist</h2>
-<ul>
-<li>Cadence mismatch (daily claim, monthly source)</li>
-<li>Schema/taxonomy drift</li>
-<li>Coverage illusion/probe dropout</li>
-<li>Backfill/revision shock</li>
-<li>Base-rate neglect</li>
-<li>Narrative lock-in</li>
-<li>Source monoculture</li>
-<li>False precision on tiny denominators</li>
-</ul>
-<h2 id="story-output-minimum">Story output minimum</h2>
-<ul>
-<li>Headline</li>
-<li><strong>Dateline:</strong> YYYY-MM-DD HH:MM UTC</li>
-<li>Why this update now</li>
-<li>Evidence (numbered, linked)</li>
-<li>Method (reproducible)</li>
-<li>Hypotheses and adjudication (for STORY slots)</li>
-<li>Limitations</li>
-<li>Confidence + rationale</li>
-<li>One-line decision relevance</li>
-</ul>
-<h2 id="follow-up-triggers">Follow-up triggers</h2>
-<p>Run follow-up immediately when:
-- primary source correction/reclassification lands,
-- independent source materially changes confidence,
-- magnitude/trajectory moves beyond prior uncertainty bounds,
-- downstream real-world impact appears.</p>
-<p>Default revisit cadence:
-- High velocity: 6–24h
-- Medium: 1–3d
-- Low: 3–14d</p>
-<h2 id="catalog-optimization-rules">Catalog optimization rules</h2>
-<ul>
-<li>Optimize for signal density first, compactness second.</li>
-<li>Default to shrinking/holding size; growth needs explicit operational value.</li>
-<li>Remove speculative sections not tied to active workflows.</li>
-<li>Prefer replace/merge over append-only edits.</li>
-<li>If a pass grows size, document rationale and schedule cleanup.</li>
+<li>Optimize for retrieval speed and signal density.</li>
+<li>Prefer replace/merge over append-only sprawl.</li>
+<li>Remove stale/low-utility entries when better substitutes exist.</li>
+<li>Keep taxonomy consistent and compact.</li>
 </ul>
 <h2 id="related">Related</h2>
 <ul>
 <li>Dataset list: <a href="./datasets-catalog.md"><code>datasets-catalog.md</code></a></li>
+<li>Story and claim-check style rules: <a href="../skills/osint-journalism/SKILL.md"><code>../skills/osint-journalism/SKILL.md</code></a></li>
 </ul>
 </body>
 </html>
