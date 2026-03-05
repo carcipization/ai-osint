@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-05 15:03 UTC
+**Dateline:** 2026-03-05 21:04 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 67 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 68 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -94,6 +94,7 @@ Use this compact map before scanning full entries.
 - [UK Contracts Finder API](https://www.contractsfinder.service.gov.uk/apidocumentation) — UK procurement opportunities/awards stream. Field completeness differs across authorities.
 - [GLEIF LEI Golden Copy](https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file) — Daily global legal-entity identifiers and reference data. High-value backbone for cross-border entity deduplication.
 - [OFAC Sanctions List Service (SLS)](https://ofac.treasury.gov/sanctions-list-service) — Official U.S. Treasury sanctions list distribution (SDN + consolidated non-SDN datasets) with machine-readable download pathways. Critical primary-source anchor for sanctions designation timing and entity-screening verification.
+- [Consolidated Canadian Autonomous Sanctions List](https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng) — Global Affairs Canada list of individuals/entities sanctioned under SEMA and JVCFOA, published in HTML/PDF/XML. Valuable jurisdictional complement for cross-country sanctions verification and entity-resolution workflows.
 
 ## AI capability, risk, and labor
 - [Stanford HELM](https://crfm.stanford.edu/helm/) — Standardized model benchmark tracking for capability/safety comparisons. Protocol drift can mimic model jumps.
