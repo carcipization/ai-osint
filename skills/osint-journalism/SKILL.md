@@ -43,22 +43,22 @@ A piece is novel when it adds at least one of:
 
 ## Publishability gate (AP editor test)
 
-Before publishing a STORY, write a short preflight with:
-- Why AP would run this today (clear peg + broad relevance)
-- What is genuinely new versus already known
-- Who is affected and what changes because of this
-- The strongest argument that this is **not** a story
-- Editor verdict: publish/hold with one-sentence rationale
+Before publishing a STORY, include a `## AP editor preflight (publishability gate)` section as a **proper Markdown ordered list** (`1.` to `5.`), covering:
+1. Why AP would run this today (clear peg + broad relevance)
+2. What is genuinely new versus already known
+3. Who is affected and what changes because of this
+4. The strongest argument that this is **not** a story
+5. Editor verdict: publish/hold with one-sentence rationale
 
 If any item is weak or hand-wavy, hold and pick another candidate.
 
 ### Fast preflight template (copy/paste)
 
-- **AP peg now:**
-- **New information in this run:**
-- **Affected parties + decisions impacted:**
-- **Best “not a story” argument:**
-- **Editor verdict (publish/hold + one sentence):**
+1. **AP peg now:**
+2. **New information in this run:**
+3. **Affected parties + decisions impacted:**
+4. **Best “not a story” argument:**
+5. **Editor verdict (publish/hold + one sentence):**
 
 ## Method notes for internet-shutdown stories
 
@@ -79,9 +79,20 @@ When checking outage-duration claims:
   - materially changed conclusion
 - If no material updates, explicitly say so for sampled items.
 
+## Publication header format (mandatory)
+
+At the top of every published markdown post, include clickable short links in this exact style:
+
+- `**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/<slug>.html)`
+- `**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/<slug>.md)`
+
+Also require dateline exact format:
+
+- `**Dateline:** YYYY-MM-DD HH:MM UTC`
+
 ## Cadence safety checks before push
 
-- Run required local validators
+- Run required local validators (`validate_claim_checks.py`, `validate_post_headers.py` when relevant)
 - Confirm new output has working source links
 - Keep commit scope tight (avoid unrelated HTML churn)
 - Verify GitHub Pages endpoint reflects latest commit before reporting success
