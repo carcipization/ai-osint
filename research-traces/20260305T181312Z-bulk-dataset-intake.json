@@ -1,0 +1,2436 @@
+{
+  "generated_at": "2026-03-05T18:13:12.493666+00:00",
+  "count": 100,
+  "errors": [],
+  "candidates": [
+    {
+      "portal": "data.gov",
+      "id": "2d0e242c-88f0-43de-b6c5-da9b9d88864f",
+      "name": "harmonized-tariff-schedule-of-the-united-states-2024",
+      "title": "Harmonized Tariff Schedule of the United States (2026)",
+      "url": "https://catalog.data.gov/dataset/harmonized-tariff-schedule-of-the-united-states-2024",
+      "license": "us-pd",
+      "modified": "2026-02-27T14:11:10.524835",
+      "org": "US International Trade Commission",
+      "tags": [
+        "hts",
+        "product-classification",
+        "tariff-schedule"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "XLS"
+      ],
+      "resource_count": 15,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "3fdb5bea-e09e-4ab6-ade8-f4a76b2d3b34",
+      "name": "national-register-of-historic-places-9d3f5",
+      "title": "National Register of Historic Places",
+      "url": "https://catalog.data.gov/dataset/national-register-of-historic-places-9d3f5",
+      "license": "notspecified",
+      "modified": "2026-03-04T00:18:38.665227",
+      "org": "Department of the Interior",
+      "tags": [
+        "crss",
+        "cultural-landscapes",
+        "cultural-resource-management",
+        "cultural-resources-theme",
+        "ecological-framework-human-use-cultural-landscapes-cultural-landscapes",
+        "historic-buildings",
+        "historic-districts",
+        "historic-objects",
+        "historic-preservation",
+        "historic-properties",
+        "historic-resource-types",
+        "historic-sites",
+        "historic-structures",
+        "listed-historic-properties",
+        "national-geospatial-data-asset",
+        "national-park-service",
+        "national-register-of-historic-places",
+        "ngda",
+        "ngda-portfolio-themes",
+        "nps",
+        "nris"
+      ],
+      "formats": [
+        "API",
+        "DOC",
+        "JPEG",
+        "XML",
+        "ZIP"
+      ],
+      "resource_count": 6,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "a9d0792e-9ce0-4dae-bff2-a7d9492743a9",
+      "name": "mdg-cyclone-gezani-2026-openstreetmap-data",
+      "title": "Madagascar - Tropical Cyclone Gezani - OpenStreetMap Data",
+      "url": "https://data.humdata.org/dataset/mdg-cyclone-gezani-2026-openstreetmap-data",
+      "license": "hdx-odc-odbl",
+      "modified": "2026-03-05T13:31:18.632433",
+      "org": "Humanitarian OpenStreetMap Team (HOT)",
+      "tags": [
+        "cyclones-hurricanes-typhoons",
+        "facilities-infrastructure",
+        "geodata",
+        "natural disasters",
+        "roads",
+        "transportation"
+      ],
+      "formats": [
+        "GeoJSON",
+        "SHP"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "a5c814cf-a98b-479d-a679-d390e325bf59",
+      "name": "moz-floods-january-2026-openstreetmap-data",
+      "title": "Mozambique - Floods - January 2026 - OpenStreetMap Data",
+      "url": "https://data.humdata.org/dataset/moz-floods-january-2026-openstreetmap-data",
+      "license": "hdx-odc-odbl",
+      "modified": "2026-03-05T13:27:12.174604",
+      "org": "Humanitarian OpenStreetMap Team (HOT)",
+      "tags": [
+        "facilities-infrastructure",
+        "flooding",
+        "geodata",
+        "natural disasters",
+        "roads",
+        "transportation"
+      ],
+      "formats": [
+        "GeoJSON",
+        "SHP"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "656e0b2d-60f1-49e8-a3a7-073602d441a2",
+      "name": "border-crossing-entry-data-683ae",
+      "title": "Border Crossing Entry Data",
+      "url": "https://catalog.data.gov/dataset/border-crossing-entry-data-683ae",
+      "license": "notspecified",
+      "modified": "2026-03-05T08:27:23.519048",
+      "org": "Department of Transportation",
+      "tags": [
+        "buses",
+        "canada",
+        "containers",
+        "inbound-border-crossing-entries",
+        "mexico",
+        "passengers",
+        "pedestrians",
+        "personal-vehicles",
+        "ports",
+        "trains",
+        "trucks"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "6558e045-c63c-4b12-9342-c7899688ff66",
+      "name": "traffic-crashes-crashes",
+      "title": "Traffic Crashes - Crashes",
+      "url": "https://catalog.data.gov/dataset/traffic-crashes-crashes",
+      "license": "notspecified",
+      "modified": "2026-03-01T02:05:13.518791",
+      "org": "City of Chicago",
+      "tags": [
+        "link-to-article-present",
+        "public-safety",
+        "traffic-crashes",
+        "transportation",
+        "vision-zero"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "a1cbf6e9-6a08-4288-8b6b-a3c5666b7c2d",
+      "name": "motor-vehicle-collisions-crashes",
+      "title": "Motor Vehicle Collisions - Crashes",
+      "url": "https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes",
+      "license": "notspecified",
+      "modified": "2026-03-01T01:57:18.825425",
+      "org": "City of New York",
+      "tags": [
+        "big-apps",
+        "bigapps",
+        "collisions",
+        "nycopendata",
+        "nypd",
+        "traffic-data",
+        "vision",
+        "visionzero",
+        "zero"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "f9880479-bf5c-477c-ba8e-0651a0e054a5",
+      "name": "lottery-powerball-winning-numbers-beginning-2010",
+      "title": "Lottery Powerball Winning Numbers: Beginning 2010",
+      "url": "https://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010",
+      "license": "notspecified",
+      "modified": "2026-02-28T22:14:34.446869",
+      "org": "State of New York",
+      "tags": [
+        "new-york-lottery",
+        "powerball",
+        "results",
+        "winning"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "d76c7561-286d-4aae-b1c5-40f452f12645",
+      "name": "monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil",
+      "title": "Monthly Rates of Laboratory-Confirmed COVID-19 Hospitalizations from the COVID-NET Surveillance System",
+      "url": "https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil",
+      "license": "other-license-specified",
+      "modified": "2026-02-27T14:15:16.477241",
+      "org": "U.S. Department of Health & Human Services",
+      "tags": [
+        "covid",
+        "covid-19",
+        "covid-net",
+        "covid19",
+        "covidnet",
+        "hospitalization-rate",
+        "hospitalizations",
+        "rate",
+        "rates-by-age-group",
+        "rates-by-race-and-ethnicity",
+        "resp-net",
+        "respiratory-disease",
+        "respiratory-illness",
+        "respiratory-virus-response",
+        "respnet",
+        "surveillance"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "29aa21ae-b135-4227-9db6-6dd283715900",
+      "name": "air-quality",
+      "title": "Air Quality",
+      "url": "https://catalog.data.gov/dataset/air-quality",
+      "license": "notspecified",
+      "modified": "2026-02-15T00:43:59.373079",
+      "org": "City of New York",
+      "tags": [
+        "2018od4a-video",
+        "air-quality",
+        "dohmh",
+        "health",
+        "surveillance"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "844dbad1-ee1e-44b8-9799-34cb7ed24640",
+      "name": "electric-vehicle-population-data",
+      "title": "Electric Vehicle Population Data",
+      "url": "https://catalog.data.gov/dataset/electric-vehicle-population-data",
+      "license": "other-license-specified",
+      "modified": "2026-02-15T00:05:06.517456",
+      "org": "State of Washington",
+      "tags": [
+        "bev",
+        "bevs",
+        "bolt",
+        "car",
+        "cars",
+        "chevrolet",
+        "chevy",
+        "clean-energy",
+        "department-of-licensing",
+        "dol",
+        "dol_open_data",
+        "electric",
+        "energy",
+        "environment",
+        "ev",
+        "evs",
+        "green-report",
+        "hybrid",
+        "hybrids",
+        "leaf",
+        "model-3",
+        "nhtsa",
+        "nissan",
+        "phev",
+        "phevs",
+        "plug-in",
+        "plug-ins",
+        "population",
+        "rao_ev",
+        "rao_open_data",
+        "rao_veh",
+        "tesla",
+        "vehicle",
+        "vehicles",
+        "volt"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "3a087ced-91ef-46aa-9d69-9ab4ea9e9376",
+      "name": "state-park-annual-attendance-figures-by-facility-beginning-2003",
+      "title": "State Park Annual Attendance Figures by Facility:  Beginning 2003",
+      "url": "https://catalog.data.gov/dataset/state-park-annual-attendance-figures-by-facility-beginning-2003",
+      "license": "notspecified",
+      "modified": "2026-02-14T21:57:12.680481",
+      "org": "State of New York",
+      "tags": [
+        "historic-sites",
+        "recreational-facilities",
+        "state-parks"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "9b8c4f87-15a5-40a3-ac82-cd637e3535c4",
+      "name": "warehouse-and-retail-sales",
+      "title": "Warehouse and Retail Sales",
+      "url": "https://catalog.data.gov/dataset/warehouse-and-retail-sales",
+      "license": "notspecified",
+      "modified": "2026-02-08T00:13:29.705831",
+      "org": "Montgomery County of Maryland",
+      "tags": [
+        "alcohol",
+        "liquor",
+        "sale"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "464950af-0d57-47ae-a1fa-b4413b0adaf7",
+      "name": "hdx-signals",
+      "title": "HDX Signals",
+      "url": "https://data.humdata.org/dataset/hdx-signals",
+      "license": "cc-by-igo",
+      "modified": "2026-03-05T15:50:25.483532",
+      "org": "HDX",
+      "tags": [
+        "agriculture-livestock",
+        "conflict-violence",
+        "displacement",
+        "drought",
+        "food security",
+        "markets"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 3,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "6ff7ff93-5d58-41c4-877f-8939f2dda1eb",
+      "name": "wfp-hungermap-data-for-yem",
+      "title": "Yemen - HungerMap data",
+      "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-yem",
+      "license": "cc-by-sa",
+      "modified": "2026-03-05T14:25:38.353377",
+      "org": "WFP - World Food Programme",
+      "tags": [
+        "food security",
+        "indicators"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "20171cfa-489e-491b-a2e9-fcedad17b10e",
+      "name": "wfp-hungermap-data-for-ukr",
+      "title": "Ukraine - HungerMap data",
+      "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-ukr",
+      "license": "cc-by-sa",
+      "modified": "2026-03-05T14:25:27.231163",
+      "org": "WFP - World Food Programme",
+      "tags": [
+        "food security",
+        "indicators"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "5be668ad-8702-4f89-a64d-69dfdaad4d98",
+      "name": "wfp-hungermap-data-for-syr",
+      "title": "Syrian Arab Republic - HungerMap data",
+      "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-syr",
+      "license": "cc-by-sa",
+      "modified": "2026-03-05T14:25:10.133347",
+      "org": "WFP - World Food Programme",
+      "tags": [
+        "food security",
+        "indicators"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "f5e17e1b-8795-4282-9fe2-0700f0d67c8a",
+      "name": "wfp-hungermap-data-for-hti",
+      "title": "Haiti - HungerMap data",
+      "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-hti",
+      "license": "cc-by-sa",
+      "modified": "2026-03-05T14:24:59.020773",
+      "org": "WFP - World Food Programme",
+      "tags": [
+        "food security",
+        "indicators"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "d3bc2eca-2c52-4f72-9b47-56cc7c6d1b2f",
+      "name": "wfp-hungermap-data-for-ecu",
+      "title": "Ecuador - HungerMap data",
+      "url": "https://data.humdata.org/dataset/wfp-hungermap-data-for-ecu",
+      "license": "cc-by-sa",
+      "modified": "2026-03-05T14:24:44.234847",
+      "org": "WFP - World Food Programme",
+      "tags": [
+        "food security",
+        "indicators"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "28b5df69-6d74-439d-9541-4109c0f71a8b",
+      "name": "iati-zwe",
+      "title": "Zimbabwe - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-zwe",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:35:04.280582",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "9994addc-15b8-46aa-936e-1acd79c691ed",
+      "name": "iati-mnp",
+      "title": "Northern Mariana Islands - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-mnp",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:35:03.022493",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "49ccc745-58e9-4aab-af18-863ddac8481f",
+      "name": "iati-zmb",
+      "title": "Zambia - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-zmb",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:56.847310",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "c9e3490c-1cd9-4e65-b2f4-1e002065e429",
+      "name": "iati-yem",
+      "title": "Yemen - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-yem",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:49.673755",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "2c46e704-520e-4f5c-9c25-7f0aea03c2e5",
+      "name": "iati-esh",
+      "title": "Western Sahara - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-esh",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:43.921395",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "5243b829-54a1-43f6-aaee-be831be47345",
+      "name": "iati-wlf",
+      "title": "Wallis and Futuna Islands - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-wlf",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:40.168690",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "5571025e-52d5-4abc-8e4f-2db93434510f",
+      "name": "iati-vnm",
+      "title": "Viet Nam - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-vnm",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:39.219688",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "b5e4e5e3-fcbe-43aa-a7c3-f8b60bc9ae15",
+      "name": "iati-vgb",
+      "title": "British Virgin Islands - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-vgb",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:38.371150",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "01c0bf96-9864-4bcd-93e2-cdbc42cd17a3",
+      "name": "iati-ven",
+      "title": "Venezuela (Bolivarian Republic of) - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-ven",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:32.608769",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "6ee99011-3e58-44d2-b3f4-5505f541ba3d",
+      "name": "iati-vut",
+      "title": "Vanuatu - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-vut",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:28.902304",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "dbdefa94-15b7-4bb6-8cc9-5495c5eb1e1d",
+      "name": "iati-uzb",
+      "title": "Uzbekistan - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-uzb",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:25.652897",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "63f6a05e-64ec-4517-8985-ac1fbd2fb1f9",
+      "name": "iati-ury",
+      "title": "Uruguay - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-ury",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:21.622304",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "d5060e5f-aeac-4d38-ba98-cfc8e63ad707",
+      "name": "iati-usa",
+      "title": "United States of America - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-usa",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:17.590293",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "c5d36749-b725-4f26-a3f3-564ac0b2c40d",
+      "name": "iati-gbr",
+      "title": "United Kingdom of Great Britain and Northern Ireland - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-gbr",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:15.801155",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "fe77667e-8ea6-4273-9378-d9866a27a16f",
+      "name": "iati-ukr",
+      "title": "Ukraine - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-ukr",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:12.137889",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "0cbcaabb-c318-43c8-9980-05897d218414",
+      "name": "iati-are",
+      "title": "United Arab Emirates - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-are",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:34:09.705165",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "66b331c1-80f4-42e3-950d-91e49d2fe167",
+      "name": "iati-uga",
+      "title": "Uganda - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-uga",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:54.200246",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "0f1a0874-e0a2-4355-ae6c-1c41fa769123",
+      "name": "iati-tuv",
+      "title": "Tuvalu - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tuv",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:42.289501",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "3eb9ce66-d673-4161-87ee-ef8040fee025",
+      "name": "iati-tkm",
+      "title": "Turkmenistan - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tkm",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:38.277233",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "4ad987e5-ee08-4cd5-a2e1-e51014461a5e",
+      "name": "iati-tur",
+      "title": "T\u00fcrkiye - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tur",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:37.127069",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "129c832e-6dc4-4e23-85d9-e5e8170abba5",
+      "name": "iati-tun",
+      "title": "Tunisia - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tun",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:26.417896",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "793df9f4-9300-4535-94bc-9fcecf526812",
+      "name": "iati-tto",
+      "title": "Trinidad and Tobago - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tto",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:19.038773",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "4853c7c5-2b63-4dea-8de6-5e90db65e3da",
+      "name": "iati-ton",
+      "title": "Tonga - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-ton",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:16.670005",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "6cc5fffa-e556-4ab6-a581-b7dee40369a5",
+      "name": "iati-tgo",
+      "title": "Togo - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tgo",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:12.738411",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "69af3957-0e48-4d0c-9ecb-4bbfab92efb7",
+      "name": "iati-tkl",
+      "title": "Tokelau - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tkl",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:12.341823",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "c61c654c-ffcb-4d81-8a40-6022cbf81c13",
+      "name": "iati-tls",
+      "title": "Timor-Leste - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tls",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:08.514234",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "6e6de877-fd40-4e3a-b209-c98aba849e86",
+      "name": "iati-tha",
+      "title": "Thailand - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tha",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:04.336212",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "016d4cb0-57b0-40ec-99b1-fda00e1a1ad1",
+      "name": "iati-tza",
+      "title": "United Republic of Tanzania - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tza",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:00.327694",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "aaac16e6-67ae-4939-a585-7aea4f325435",
+      "name": "iati-tjk",
+      "title": "Tajikistan - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tjk",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:51.277624",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "2d06e0ee-b53b-4ea2-811f-06d791859e5d",
+      "name": "iati-syr",
+      "title": "Syrian Arab Republic - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-syr",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:45.670550",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "f81b510b-0f27-405a-a9f7-20789cde1bb9",
+      "name": "iati-twn",
+      "title": "Taiwan (Province of China) - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-twn",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:44.636934",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "ade5a5db-a373-43d8-bb17-293620add363",
+      "name": "iati-swe",
+      "title": "Sweden - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-swe",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:35.051646",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "caa4f488-f7bf-4474-a34c-e4c0e6912a45",
+      "name": "iati-che",
+      "title": "Switzerland - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-che",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:34.917235",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "ae6059d8-d82c-48af-935c-7f4a4178b1d1",
+      "name": "iati-swz",
+      "title": "Eswatini - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-swz",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:33.092290",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "548e4c67-8f9c-4444-9622-3ad2de878baf",
+      "name": "iati-sur",
+      "title": "Suriname - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-sur",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:27.966162",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "3cbcf424-2bcd-46ef-980e-daa2355db83c",
+      "name": "iati-sdn",
+      "title": "Sudan - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-sdn",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:25.216123",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "a5d5322a-84b5-4d0d-9b9f-f3732b1994a7",
+      "name": "iati-ssd",
+      "title": "South Sudan - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-ssd",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:19.055379",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "2d6083fa-d6e4-47ef-a39a-58460a9e7917",
+      "name": "iati-lka",
+      "title": "Sri Lanka - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-lka",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:10.945955",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "ede01368-7887-4391-9564-0a4a0776d2f6",
+      "name": "iati-esp",
+      "title": "Spain - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-esp",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:32:05.075854",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 7
+    },
+    {
+      "portal": "HDX",
+      "id": "cedfe5d7-32a2-4079-b988-f5d04dc39f76",
+      "name": "iati-tca",
+      "title": "Turks and Caicos Islands - Current IATI Aid Activities",
+      "url": "https://data.humdata.org/dataset/iati-tca",
+      "license": "hdx-other",
+      "modified": "2026-03-05T12:33:39.345326",
+      "org": "International Aid Transparency Initiative",
+      "tags": [
+        "funding",
+        "who is doing what and where-3w-4w-5w"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 1,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "976ba379-f7ed-4960-a324-eb89b2ffa7a9",
+      "name": "authorizations-from-10-01-2006-thru-12-31-2022",
+      "title": "Authorizations From 10/01/2006 Thru 09/30/2025",
+      "url": "https://catalog.data.gov/dataset/authorizations-from-10-01-2006-thru-12-31-2022",
+      "license": "notspecified",
+      "modified": "2026-02-22T00:17:06.932234",
+      "org": "Export-Import Bank of the US",
+      "tags": [
+        "exim",
+        "export-import-bank",
+        "guarantee",
+        "insurance",
+        "loan",
+        "working-capital"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 1,
+      "score": 7
+    },
+    {
+      "portal": "data.gov",
+      "id": "5cb8d78e-54d3-4a36-bb51-190c316829f7",
+      "name": "uniform-crime-reporting-ucr-program",
+      "title": "Uniform Crime Reporting (UCR) Program",
+      "url": "https://catalog.data.gov/dataset/uniform-crime-reporting-ucr-program",
+      "license": "us-pd",
+      "modified": "2025-11-14T14:57:57.949034",
+      "org": "Department of Justice",
+      "tags": [
+        "arrested-person",
+        "arson",
+        "crime-in-the-united-states",
+        "crime-report",
+        "crime-statistics",
+        "hate-crime",
+        "homicide",
+        "law-enforcement-officers-killed-and-assaulted",
+        "leoka",
+        "nationwide-crime",
+        "nibrs",
+        "police-employees"
+      ],
+      "formats": [
+        "Api",
+        "ZIP"
+      ],
+      "resource_count": 5,
+      "score": 6
+    },
+    {
+      "portal": "data.gov",
+      "id": "694609f9-efa2-4cc6-ac94-acf083cf57b7",
+      "name": "crime-data-from-2020-to-present",
+      "title": "Crime Data from 2020 to Present",
+      "url": "https://catalog.data.gov/dataset/crime-data-from-2020-to-present",
+      "license": "other-license-specified",
+      "modified": "2026-01-03T23:05:25.179914",
+      "org": "City of Los Angeles",
+      "tags": [
+        "crime",
+        "crime-data",
+        "crimes",
+        "lapd",
+        "police",
+        "safe-city"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 6
+    },
+    {
+      "portal": "data.gov",
+      "id": "f2e604c6-9c1e-4271-bdbb-f1f60ad06a16",
+      "name": "nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system",
+      "title": "Nutrition, Physical Activity, and Obesity - Behavioral Risk Factor Surveillance System",
+      "url": "https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system",
+      "license": "other-license-specified",
+      "modified": "2025-12-13T19:50:22.736472",
+      "org": "U.S. Department of Health & Human Services",
+      "tags": [
+        "adults",
+        "brfss",
+        "dnpao",
+        "fruit",
+        "nutrition",
+        "obesity",
+        "overweight",
+        "physical-activity",
+        "vegetables",
+        "walking"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 6
+    },
+    {
+      "portal": "data.gov",
+      "id": "2eb5b083-2b33-466c-90dc-dc1ebd844ed8",
+      "name": "nps-visitor-use-statistics-data-package-2024",
+      "title": "NPS Visitor Use Statistics Data Package, 2024",
+      "url": "https://catalog.data.gov/dataset/nps-visitor-use-statistics-data-package-2024",
+      "license": "other-license-specified",
+      "modified": "2026-01-25T17:28:22.661985",
+      "org": "Department of the Interior",
+      "tags": [
+        "nps-gov-subject-site-social-science",
+        "public-use-statistics",
+        "statistics",
+        "visitation",
+        "visitation-statistics",
+        "visitor-use",
+        "visitor-use-statistics"
+      ],
+      "formats": [
+        "CSV",
+        "XML"
+      ],
+      "resource_count": 3,
+      "score": 6
+    },
+    {
+      "portal": "data.gov",
+      "id": "9e9442e3-1efc-4907-bf5e-5a64db9b5c29",
+      "name": "bsee-data-center-leasing-information",
+      "title": "BSEE Data Center - Leasing Information",
+      "url": "https://catalog.data.gov/dataset/bsee-data-center-leasing-information",
+      "license": "other-license-specified",
+      "modified": "2026-01-25T20:23:04.021974",
+      "org": "Department of the Interior",
+      "tags": [
+        "adjudication",
+        "alaska",
+        "area-block",
+        "area-code",
+        "assignments",
+        "block-number",
+        "bsee",
+        "collateral",
+        "company",
+        "decommissioning",
+        "designated-operator",
+        "gulf-of-america",
+        "lease",
+        "leasing",
+        "offshore",
+        "oil-spill-financial-responsibility",
+        "operator",
+        "osfr",
+        "owner",
+        "pacific",
+        "renewable",
+        "unit-agreements",
+        "units"
+      ],
+      "formats": [
+        "PDF",
+        "ZIP"
+      ],
+      "resource_count": 60,
+      "score": 5
+    },
+    {
+      "portal": "data.gov",
+      "id": "e92e27c7-75c7-4819-9744-cb7ab4f023d0",
+      "name": "public-library-survey-pls-2018",
+      "title": "Public Library Survey (PLS) 2018",
+      "url": "https://catalog.data.gov/dataset/public-library-survey-pls-2018",
+      "license": "notspecified",
+      "modified": "2025-03-27T19:32:28.136247",
+      "org": "Institute of Museum and Library Services",
+      "tags": [
+        "2018",
+        "pls",
+        "public-library",
+        "survey"
+      ],
+      "formats": [
+        "CSV",
+        "PDF",
+        "SAS",
+        "SPSS",
+        "XLS"
+      ],
+      "resource_count": 7,
+      "score": 5
+    },
+    {
+      "portal": "data.gov",
+      "id": "8ee0ba65-f6cc-4614-aa1e-4c4587487615",
+      "name": "public-library-survey-pls-2022",
+      "title": "Public Library Survey (PLS) 2022",
+      "url": "https://catalog.data.gov/dataset/public-library-survey-pls-2022",
+      "license": "notspecified",
+      "modified": "2025-03-27T19:32:13.189384",
+      "org": "Institute of Museum and Library Services",
+      "tags": [
+        "2022",
+        "pls",
+        "public-library",
+        "survey"
+      ],
+      "formats": [
+        "CSV",
+        "HTML",
+        "PDF",
+        "SAS",
+        "SPSS"
+      ],
+      "resource_count": 5,
+      "score": 5
+    },
+    {
+      "portal": "data.gov",
+      "id": "3b5373a4-81e6-42f7-a5e4-171a08ae602b",
+      "name": "lapd-calls-for-service-2019",
+      "title": "LAPD Calls for Service 2019",
+      "url": "https://catalog.data.gov/dataset/lapd-calls-for-service-2019",
+      "license": "other-license-specified",
+      "modified": "2025-07-12T19:05:44.966741",
+      "org": "City of Los Angeles",
+      "tags": [
+        "911",
+        "calls",
+        "cfs",
+        "lapd",
+        "police",
+        "safety"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 5
+    },
+    {
+      "portal": "data.gov",
+      "id": "37f7cedc-4ed8-4569-99a9-0c36f1af7152",
+      "name": "arrest-data",
+      "title": "Arrest Data",
+      "url": "https://catalog.data.gov/dataset/arrest-data",
+      "license": "us-pd",
+      "modified": "2025-11-14T15:10:56.244322",
+      "org": "Department of Justice",
+      "tags": [
+        "aggravated-assault",
+        "arrest-rate",
+        "arson",
+        "breaking-or-entering",
+        "drug",
+        "forcible-rape",
+        "forgery-and-counterfeiting",
+        "larceny-theft",
+        "murder-and-nonnegligent-manslaughter",
+        "property-crime-index",
+        "prostitution-and-commercialized-vice",
+        "sex-offenses",
+        "vandalism",
+        "violent-crime-index"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "resource_count": 1,
+      "score": 5
+    },
+    {
+      "portal": "HDX",
+      "id": "277743aa-7ed2-4f8c-b5e3-8b3fe4abedde",
+      "name": "ner-jiaf-humanitarian-needs-pin-and-severity",
+      "title": "Niger: JIAF Humanitarian Needs People in Need and Severity",
+      "url": "https://data.humdata.org/dataset/ner-jiaf-humanitarian-needs-pin-and-severity",
+      "license": "",
+      "modified": "2026-03-05T16:59:15.721886",
+      "org": "OCHA Niger",
+      "tags": [
+        "affected area",
+        "affected population",
+        "humanitarian needs overview-hno",
+        "humanitarian response plan-hrp",
+        "people in need-pin",
+        "severity"
+      ],
+      "formats": [],
+      "resource_count": 0,
+      "score": 5
+    },
+    {
+      "portal": "HDX",
+      "id": "920c9bc5-7471-4033-abee-3b15672e1a42",
+      "name": "cmr-jiaf-humanitarian-needs-pin-and-severity",
+      "title": "Cameroon: JIAF Humanitarian Needs People in Need and Severity",
+      "url": "https://data.humdata.org/dataset/cmr-jiaf-humanitarian-needs-pin-and-severity",
+      "license": "",
+      "modified": "2026-03-05T16:58:44.310595",
+      "org": "OCHA Cameroon",
+      "tags": [
+        "affected area",
+        "affected population",
+        "humanitarian needs overview-hno",
+        "humanitarian response plan-hrp",
+        "people in need-pin",
+        "severity"
+      ],
+      "formats": [],
+      "resource_count": 0,
+      "score": 5
+    },
+    {
+      "portal": "data.gov",
+      "id": "a7ea74cb-075f-42ab-a267-6c105d7e7563",
+      "name": "civil-rights-data-collection-state-files-2015-16-cf9b8",
+      "title": "Civil Rights Data Collection State Files 2015-16",
+      "url": "https://catalog.data.gov/dataset/civil-rights-data-collection-state-files-2015-16-cf9b8",
+      "license": "other-license-specified",
+      "modified": "2024-03-10T03:41:38.593236",
+      "org": "Department of Education",
+      "tags": [
+        "evaluation",
+        "ocr",
+        "performance",
+        "policy-analysis",
+        "trend-analysis"
+      ],
+      "formats": [
+        "CSV",
+        "TEXT",
+        "XLS"
+      ],
+      "resource_count": 104,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "05bceb99-66ac-47d5-a612-a2b18ee4b973",
+      "name": "public-school-characteristics-2022-23-451db",
+      "title": "Public School Characteristics 2022-23",
+      "url": "https://catalog.data.gov/dataset/public-school-characteristics-2022-23-451db",
+      "license": "other-license-specified",
+      "modified": "2024-10-21T07:48:42.231971",
+      "org": "Department of Education",
+      "tags": [
+        "0ee4621b-38be-46bb-8360-219726022a58",
+        "ccd",
+        "common-core-of-data",
+        "edge",
+        "education-demographic-and-geographic-estimates-program",
+        "national-center-for-education-statistics",
+        "nces",
+        "points",
+        "public-school-locations",
+        "public-schools",
+        "u-s-census-bureau",
+        "united-states",
+        "us-census-bureau"
+      ],
+      "formats": [
+        "ArcGIS GeoServices REST API",
+        "CSV",
+        "GeoJSON",
+        "HTML",
+        "KML",
+        "XML",
+        "ZIP"
+      ],
+      "resource_count": 7,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "38aac441-ad72-4fe3-a6e6-c259e0c1e4d6",
+      "name": "u-s-chronic-disease-indicators",
+      "title": "U.S. Chronic Disease Indicators",
+      "url": "https://catalog.data.gov/dataset/u-s-chronic-disease-indicators",
+      "license": "other-license-specified",
+      "modified": "2025-02-03T21:50:29.642668",
+      "org": "U.S. Department of Health & Human Services",
+      "tags": [
+        "alcohol",
+        "arthritis",
+        "asthma",
+        "cancer",
+        "copd",
+        "diabetes",
+        "tobacco"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "cbe250b2-f7fd-48a5-9b6e-69fdf9350c9c",
+      "name": "summer-meal-programs-all-summer-sites-contact-and-program-participation-information-progra-98b1c",
+      "title": "Summer Meal Programs - All Summer Sites  - Contact and Program Participation Information - Program Period 2019",
+      "url": "https://catalog.data.gov/dataset/summer-meal-programs-all-summer-sites-contact-and-program-participation-information-progra-98b1c",
+      "license": "notspecified",
+      "modified": "2023-09-25T10:20:03.026957",
+      "org": "City of Austin",
+      "tags": [
+        "contact",
+        "food",
+        "free-summer-meals",
+        "meals",
+        "nutrition",
+        "sfsp",
+        "site",
+        "sso",
+        "summer",
+        "tda",
+        "texas-department-of-agriculture"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "XML"
+      ],
+      "resource_count": 4,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "6a729632-dd9a-4a0b-9bca-ea76fc9ba169",
+      "name": "disability-and-health-data-system-dhds",
+      "title": "Disability and Health Data System (DHDS)",
+      "url": "https://catalog.data.gov/dataset/disability-and-health-data-system-dhds",
+      "license": "notspecified",
+      "modified": "2020-11-10T16:18:17.190566",
+      "org": "U.S. Department of Health & Human Services",
+      "tags": [
+        "dhds",
+        "disability"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "RDF",
+        "xsl"
+      ],
+      "resource_count": 4,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "8254e8fd-12e8-4e5f-8a6c-6f7b3c12d089",
+      "name": "lactmed-09a41",
+      "title": "LactMed (Drugs and Lactation Database)",
+      "url": "https://catalog.data.gov/dataset/lactmed-09a41",
+      "license": "other-license-specified",
+      "modified": "2025-06-19T11:53:18.867907",
+      "org": "U.S. Department of Health & Human Services",
+      "tags": [
+        "consumer-health",
+        "data-distribution",
+        "dataset",
+        "environmental-health",
+        "toxicology"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "resource_count": 3,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "80762abe-70fb-43f8-9961-0a351fec6cd5",
+      "name": "baby-names-from-social-security-card-applications-state-and-district-of-columbia-data",
+      "title": "Baby Names from Social Security Card Applications - State and District of Columbia Data",
+      "url": "https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-state-and-district-of-columbia-data",
+      "license": "cc-zero",
+      "modified": "2025-07-04T07:09:55.573131",
+      "org": "Social Security Administration",
+      "tags": [
+        "1998",
+        "1999",
+        "2000",
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "baby-names",
+        "births",
+        "social-security",
+        "social-security-administration",
+        "social-security-cards",
+        "ssa"
+      ],
+      "formats": [
+        "HTML",
+        "ZIP"
+      ],
+      "resource_count": 2,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "6291b7de-330d-40e9-ad0e-a8aa4082dfe8",
+      "name": "baby-names-from-social-security-card-applications-national-data",
+      "title": "Baby Names from Social Security Card Applications - National Data",
+      "url": "https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-data",
+      "license": "cc-zero",
+      "modified": "2025-07-04T07:09:50.971701",
+      "org": "Social Security Administration",
+      "tags": [
+        "1998",
+        "1999",
+        "2000",
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "baby-names",
+        "births",
+        "social-security",
+        "social-security-administration",
+        "social-security-cards",
+        "ssa"
+      ],
+      "formats": [
+        "HTML",
+        "ZIP"
+      ],
+      "resource_count": 2,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "76295ca9-bb8b-42ba-806b-a18b38054ce2",
+      "name": "supply-chain-greenhouse-gas-emission-factors-v1-3-by-naics-6",
+      "title": "Supply Chain Greenhouse Gas Emission Factors v1.3 by NAICS-6",
+      "url": "https://catalog.data.gov/dataset/supply-chain-greenhouse-gas-emission-factors-v1-3-by-naics-6",
+      "license": "other-license-specified",
+      "modified": "2024-07-10T18:42:30.962320",
+      "org": "U.S. Environmental Protection Agency",
+      "tags": [
+        "climate-change",
+        "ghg-reporting",
+        "industry-ghgs",
+        "scope-3",
+        "useeio"
+      ],
+      "formats": [
+        "CSV"
+      ],
+      "resource_count": 2,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "654d4564-3be1-4b9f-b989-93b240658f30",
+      "name": "disaster-declarations-summaries-nemis",
+      "title": "Disaster Declarations Summaries",
+      "url": "https://catalog.data.gov/dataset/disaster-declarations-summaries-nemis",
+      "license": "other-license-specified",
+      "modified": "2025-06-07T09:48:41.177652",
+      "org": "Department of Homeland Security",
+      "tags": [
+        "incidents"
+      ],
+      "formats": [],
+      "resource_count": 1,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "cd62cb2f-b8f3-41e2-a1f1-8a68de43fac6",
+      "name": "production-supply-and-distribution-database",
+      "title": "Production, Supply, and Distribution Database",
+      "url": "https://catalog.data.gov/dataset/production-supply-and-distribution-database",
+      "license": "cc-by",
+      "modified": "2025-04-21T20:43:34.031529",
+      "org": "Department of Agriculture",
+      "tags": [
+        "commodity-balance",
+        "consumption",
+        "international-market",
+        "market-year",
+        "production",
+        "psd",
+        "stocks",
+        "supply-and-demand",
+        "trade"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "resource_count": 1,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "07f079ea-4c60-4528-a61b-f5e815ef77cb",
+      "name": "fruit-and-vegetable-prices",
+      "title": "Fruit and Vegetable Prices",
+      "url": "https://catalog.data.gov/dataset/fruit-and-vegetable-prices",
+      "license": "cc-zero",
+      "modified": "2025-04-21T20:41:29.599892",
+      "org": "Department of Agriculture",
+      "tags": [
+        "agricultural-economics",
+        "food-costs"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 1,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "8e8c27eb-03e1-4da6-9208-c1ae5b179a18",
+      "name": "wheat-data",
+      "title": "Wheat Data",
+      "url": "https://catalog.data.gov/dataset/wheat-data",
+      "license": "cc-zero",
+      "modified": "2025-04-21T20:41:21.215103",
+      "org": "Department of Agriculture",
+      "tags": [
+        "agricultural-economics",
+        "consumption",
+        "prices",
+        "production",
+        "stocks",
+        "trade",
+        "wheat"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 1,
+      "score": 4
+    },
+    {
+      "portal": "data.gov",
+      "id": "b76307fd-e13d-47aa-8e58-aa0cf781bfca",
+      "name": "2017-18-arrests-civil-rights-data-collection",
+      "title": "2017-18 Arrests Civil Rights Data Collection",
+      "url": "https://catalog.data.gov/dataset/2017-18-arrests-civil-rights-data-collection",
+      "license": "other-license-specified",
+      "modified": "2024-10-25T13:10:16.604824",
+      "org": "Department of Education",
+      "tags": [
+        "arrests",
+        "children-with-disabilities",
+        "civil-rights",
+        "crdc",
+        "disability",
+        "elementary-and-secondary",
+        "language",
+        "law-enforcement",
+        "minority",
+        "ocr",
+        "race",
+        "student-enrollment",
+        "student-retention",
+        "students"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 7,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "c08c24f0-2b71-4f5b-b688-c97e8d19c72a",
+      "name": "2017-18-harassment-or-bullying-civil-rights-data-collection",
+      "title": "2017-18 Harassment or Bullying Civil Rights Data Collection",
+      "url": "https://catalog.data.gov/dataset/2017-18-harassment-or-bullying-civil-rights-data-collection",
+      "license": "other-license-specified",
+      "modified": "2024-10-25T13:10:30.174558",
+      "org": "Department of Education",
+      "tags": [
+        "bullying",
+        "civil-rights",
+        "crdc",
+        "elementary-and-secondary",
+        "harassment",
+        "language",
+        "minority",
+        "ocr",
+        "race",
+        "students"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 6,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "77b88dc7-5411-4287-8d5e-f14ad4c84f00",
+      "name": "walkability-index8",
+      "title": "Walkability Index",
+      "url": "https://catalog.data.gov/dataset/walkability-index8",
+      "license": "",
+      "modified": "2025-02-25T05:40:16.412130",
+      "org": "U.S. Environmental Protection Agency",
+      "tags": [
+        "alabama",
+        "alaska",
+        "american samoa",
+        "arizona",
+        "arkansas",
+        "california",
+        "canada",
+        "chesapeake bay",
+        "chesapeake bay watershed",
+        "colorado",
+        "connecticut",
+        "delaware",
+        "environment",
+        "florida",
+        "georgia",
+        "hawaii",
+        "health",
+        "human",
+        "idaho",
+        "illinois",
+        "indiana",
+        "iowa",
+        "kansas",
+        "kentucky",
+        "land",
+        "louisiana",
+        "maine",
+        "maryland",
+        "massachusetts",
+        "mexico",
+        "michigan",
+        "minnesota",
+        "mississippi",
+        "missouri",
+        "montana",
+        "nebraska",
+        "nevada",
+        "new hampshire",
+        "new jersey",
+        "new mexico",
+        "new york",
+        "north carolina",
+        "north dakota",
+        "ohio",
+        "oklahoma",
+        "oregon",
+        "pennsylvania",
+        "puerto rico",
+        "recreation",
+        "rhode island",
+        "south carolina",
+        "south dakota",
+        "tennessee",
+        "texas",
+        "transportation",
+        "united states",
+        "utah",
+        "vermont",
+        "virginia",
+        "washington",
+        "washington dc",
+        "west virginia",
+        "wisconsin",
+        "wyoming"
+      ],
+      "formats": [
+        "CSV",
+        "Esri REST",
+        "ZIP"
+      ],
+      "resource_count": 4,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "9daae01a-235e-44d9-8913-b25162a1dbe5",
+      "name": "2011-12-estimations-for-enrollment-civil-rights-data-collection",
+      "title": "2011-12 Estimations for Enrollment Civil Rights Data Collection",
+      "url": "https://catalog.data.gov/dataset/2011-12-estimations-for-enrollment-civil-rights-data-collection",
+      "license": "other-license-specified",
+      "modified": "2024-03-10T03:39:08.290049",
+      "org": "Department of Education",
+      "tags": [
+        "civil-rights",
+        "crdc",
+        "ocr"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 4,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "afdfd7c5-6297-46bf-ac45-c5172e41bb61",
+      "name": "civil-rights-data-collection-2013-14-59e0e",
+      "title": "Civil Rights Data Collection, 2013-14",
+      "url": "https://catalog.data.gov/dataset/civil-rights-data-collection-2013-14-59e0e",
+      "license": "cc-zero",
+      "modified": "2023-08-12T23:32:44.230367",
+      "org": "Department of Education",
+      "tags": [
+        "519e6cdf-3011-4b75-9e12-34a45cb17fd8",
+        "advanced-placement",
+        "civil-rights",
+        "course-taking",
+        "discrimination",
+        "education-of-students-with-disabilities",
+        "elementary-and-secondary-education",
+        "enrollment-demographics",
+        "gifted-and-talented-programs",
+        "graduation-testing",
+        "juvenile-justice-facilities",
+        "mental-retardation",
+        "minority-groups",
+        "sat-or-act-test-participation",
+        "school-counselors",
+        "school-expenditures",
+        "school-staff",
+        "schools",
+        "sex-discrimination",
+        "special-education-services",
+        "student-chronic-absenteeism",
+        "student-discipline",
+        "student-pregnancy",
+        "student-retention",
+        "students",
+        "sworn-law-enforcement-officers",
+        "teacher-absenteeism",
+        "teacher-certification",
+        "teacher-experience"
+      ],
+      "formats": [
+        "TEXT",
+        "Zipped CSV"
+      ],
+      "resource_count": 4,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "8eba9676-2567-425c-93dd-69d64fe9514b",
+      "name": "civil-rights-data-collection-2011-12-53eb4",
+      "title": "Civil Rights Data Collection, 2011-12",
+      "url": "https://catalog.data.gov/dataset/civil-rights-data-collection-2011-12-53eb4",
+      "license": "cc-zero",
+      "modified": "2023-08-12T23:56:42.155545",
+      "org": "Department of Education",
+      "tags": [
+        "519e6cdf-3011-4b75-9e12-34a45cb17fd8",
+        "advanced-placement",
+        "civil-rights",
+        "discrimination",
+        "education-of-students-with-disabilities",
+        "elementary-and-secondary-education",
+        "enrollment-demographics",
+        "graduation-testing",
+        "mental-retardation",
+        "minority-groups",
+        "schools",
+        "sex-discrimination",
+        "special-education-services",
+        "student-discipline",
+        "student-pregnancy",
+        "students"
+      ],
+      "formats": [
+        "TEXT"
+      ],
+      "resource_count": 3,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "92a6a47b-d274-42ec-a642-99db7a6793a6",
+      "name": "census-of-fatal-occupational-injuries-cfoi-6f46f",
+      "title": "Census of Fatal Occupational Injuries (CFOI)",
+      "url": "https://catalog.data.gov/dataset/census-of-fatal-occupational-injuries-cfoi-6f46f",
+      "license": "cc-zero",
+      "modified": "2022-05-16T23:51:18.222792",
+      "org": "U.S. Department of Labor Bureau of Labor Statistics",
+      "tags": [
+        "causes-of-death",
+        "death",
+        "fatalities",
+        "health",
+        "industry",
+        "occupational-injuries",
+        "safety"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "resource_count": 2,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "b0c3e8b1-047e-426a-8140-ad7ef307ba74",
+      "name": "significant-nrc-enforcement-actions",
+      "title": "Significant NRC Enforcement Actions",
+      "url": "https://catalog.data.gov/dataset/significant-nrc-enforcement-actions",
+      "license": "cc-zero",
+      "modified": "2024-11-18T18:43:46.054498",
+      "org": "Nuclear Regulatory Commission",
+      "tags": [
+        "civil-penalty",
+        "confirmatory-order",
+        "deliberately",
+        "event",
+        "fuel-cycle-facilities",
+        "individual",
+        "inoperable",
+        "materials",
+        "nrc",
+        "nuclear-regulations",
+        "reactor",
+        "report",
+        "severity-level",
+        "significant-enforcement-actions",
+        "violation"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "475c58eb-4302-4fd7-9991-de5243ff9138",
+      "name": "civil-rights-data-collection-crdc-for-the-2015-16-school-year",
+      "title": "Civil Rights Data Collection (CRDC) for the 2015-16  school year",
+      "url": "https://catalog.data.gov/dataset/civil-rights-data-collection-crdc-for-the-2015-16-school-year",
+      "license": "other-license-specified",
+      "modified": "2024-10-25T13:09:32.218535",
+      "org": "Department of Education",
+      "tags": [
+        "civil-rights",
+        "elementary-and-secondary",
+        "language",
+        "minority",
+        "ocr",
+        "office-for-civil-rights-ocr",
+        "race",
+        "student-enrollment",
+        "student-retention",
+        "students"
+      ],
+      "formats": [
+        "ZIP"
+      ],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "4ec38947-b055-4083-b344-75274322fade",
+      "name": "civil-rights-data-collection-crdc-for-the-2017-18-school-year",
+      "title": "Civil Rights Data Collection (CRDC) for the 2017-18 school year",
+      "url": "https://catalog.data.gov/dataset/civil-rights-data-collection-crdc-for-the-2017-18-school-year",
+      "license": "other-license-specified",
+      "modified": "2024-10-25T13:09:32.101440",
+      "org": "Department of Education",
+      "tags": [
+        "civil-rights",
+        "discrimination",
+        "elementary-and-secondary",
+        "enrollment-demographics",
+        "language",
+        "minority-groups",
+        "office-for-civil-rights-ocr",
+        "race",
+        "student-retention",
+        "students"
+      ],
+      "formats": [
+        "ZIP"
+      ],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "37110cca-9d46-4b5e-9bc2-0e938ae4f980",
+      "name": "fatality-analysis-reporting-system-fars",
+      "title": "Fatality Analysis Reporting System ( FARS )",
+      "url": "https://catalog.data.gov/dataset/fatality-analysis-reporting-system-fars",
+      "license": "us-pd",
+      "modified": "2024-05-01T08:14:37.816519",
+      "org": "Department of Transportation",
+      "tags": [
+        "crash",
+        "death",
+        "fars",
+        "fatal",
+        "fatal-vehicle-crashes",
+        "fatality-analysis-traffic-safety",
+        "injury",
+        "vehicle"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "a47e8d73-50e3-4cda-bb6a-bdd63a0d1d4a",
+      "name": "iowa-school-performance-profiles",
+      "title": "Iowa School Performance Profiles",
+      "url": "https://catalog.data.gov/dataset/iowa-school-performance-profiles",
+      "license": "notspecified",
+      "modified": "2023-09-01T16:35:44.334045",
+      "org": "State of Iowa",
+      "tags": [
+        "school-report-cards",
+        "student-performance"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "4541f970-4e4b-442e-bf40-10e02f535b15",
+      "name": "2011-12-gifted-and-talented-enrollment-estimations-615ac",
+      "title": "2011-12 Gifted and Talented Enrollment Estimations",
+      "url": "https://catalog.data.gov/dataset/2011-12-gifted-and-talented-enrollment-estimations-615ac",
+      "license": "other-license-specified",
+      "modified": "2023-09-01T13:58:41.425917",
+      "org": "Department of Education",
+      "tags": [
+        "ocr"
+      ],
+      "formats": [
+        "XLS"
+      ],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "96223bb8-ac6d-4168-a367-1f817f29d0f9",
+      "name": "dynamic-small-business-search-dsbs-4f0da",
+      "title": "Dynamic Small Business Search (DSBS)",
+      "url": "https://catalog.data.gov/dataset/dynamic-small-business-search-dsbs-4f0da",
+      "license": "us-pd",
+      "modified": "2023-04-11T19:23:22.664814",
+      "org": "Small Business Administration",
+      "tags": [
+        "business-name",
+        "company-name",
+        "organization-name"
+      ],
+      "formats": [],
+      "resource_count": 1,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "67bb074c-c8d3-46ea-90d2-76fceb290094",
+      "name": "auto-sales",
+      "title": "Auto Sales",
+      "url": "https://catalog.data.gov/dataset/auto-sales",
+      "license": "us-pd",
+      "modified": "2025-01-02T18:43:40.374730",
+      "org": "Department of Transportation",
+      "tags": [
+        "monthly-transportation-statistics"
+      ],
+      "formats": [],
+      "resource_count": 0,
+      "score": 3
+    },
+    {
+      "portal": "data.gov",
+      "id": "cb6a67f2-7211-4f6e-addf-0ccb4ac14d47",
+      "name": "civil-rights-data-collection-crdc",
+      "title": "Civil Rights Data Collection (CRDC)",
+      "url": "https://catalog.data.gov/dataset/civil-rights-data-collection-crdc",
+      "license": "other-license-specified",
+      "modified": "2024-10-01T04:27:44.321285",
+      "org": "Department of Education",
+      "tags": [
+        "advanced-placement",
+        "civil-rights",
+        "course-taking",
+        "data",
+        "discrimination",
+        "education-of-children-with-disabilities",
+        "elementary-and-secondary",
+        "minority-groups",
+        "ocr",
+        "office-for-civil-rights-ocr",
+        "race"
+      ],
+      "formats": [],
+      "resource_count": 0,
+      "score": 3
+    }
+  ]
+}

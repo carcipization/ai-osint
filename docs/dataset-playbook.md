@@ -38,6 +38,14 @@ For each consequential claim:
 - **Control/context:** confounder check (seasonality, policy, weather, outages, calendar effect, revisions).
 
 ## Discovery mode (when no claim exists yet)
+Use a two-lane approach:
+- **Wide ingest lane (fast):** bulk pull candidate datasets (hundreds/thousands) with metadata scoring.
+- **Promotion lane (strict):** only promote top-scored, relevant, reproducible candidates into watchlists/story workflows.
+
+Runbook command for wide ingest:
+- `make bulk-intake`
+- outputs JSON/CSV/summary in `research-traces/`
+
 Scan for:
 1. **Baseline breaks:** level/slope shifts vs rolling history.
 2. **Concentration shifts:** flows/spend/ownership moving into fewer entities.
