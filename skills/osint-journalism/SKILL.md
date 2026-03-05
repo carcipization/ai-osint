@@ -32,6 +32,7 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 - Promotion default: add **3–10 qualified datasets per cycle** (unless quality is genuinely thin).
 - Adding only one dataset should be an exception and should include a brief reason in trace notes.
 - Prioritize coverage breadth across domains before polishing niche depth.
+- Do **not** run AP/story preflight or story publishability gates for dataset selection.
 
 ## Claim-check minimum standard
 

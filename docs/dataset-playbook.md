@@ -3,140 +3,74 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/dataset-playbook.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/dataset-playbook.md)
 
-**Dateline:** 2026-03-04 21:31 UTC
+**Dateline:** 2026-03-05 21:40 UTC
 **Status:** Living guide
 
 ## Purpose
-Operational guide for turning dataset signals into publishable OSINT stories.
+Operational guide for **dataset intake and catalog quality**.
 
-Use this for both:
-- **Verification mode** (test a concrete claim), and
-- **Discovery mode** (find a story candidate in data).
+This is **not** the story-writing guide.
+Use this to discover, score, and promote datasets in batches.
 
-## Core operating loop
-1. Define one falsifiable claim/question.
-2. Run significance gate: why it matters if true/false, and who is affected.
-3. Set scope (window, geography, domain, minimum evidence).
-4. Collect primary evidence first.
-5. Triangulate with at least 2 independent source classes.
-6. Compare against baseline (not raw counts alone).
-7. Test at least one null/alternative explanation.
-8. Publish with confidence + limitations + decision relevance.
-9. Log follow-up triggers and revisit cadence.
+## Hard separation from STORY workflow
+- Do **not** run AP/story preflight for dataset selection.
+- Do **not** require narrative publishability checks to add datasets.
+- Story framing belongs in story/claim-check workflows only.
 
-## Claim formats
-- “Did X change in window Y?”
-- “Did behavior shift after event Z?”
-- “Is X an anomaly vs baseline?”
+## Core dataset loop (batch-first)
+1. Run wide ingest (`make bulk-intake`) and gather candidate sources at scale.
+2. Deduplicate/canonicalize by source and endpoint.
+3. Score candidates (relevance, reproducibility, update cadence, access).
+4. Promote top qualified candidates to catalog/watchlists in **batches**.
+5. Record caveats + intended operational use for each promoted dataset.
+6. Log rejects briefly (why excluded) to avoid re-triage churn.
 
-Reject broad narrative prompts until a measurable question exists.
+## Batch defaults
+- Discovery target: tens/hundreds of candidates per run when tooling allows.
+- Promotion default: **3–10 qualified datasets per cycle**.
+- Single-dataset promotion is an exception and must include a reason in trace notes.
 
-## Triangulation minimum
-For each consequential claim:
-- **Primary:** closest available ground-truth source.
-- **Corroborator:** different collection method/source class.
-- **Control/context:** confounder check (seasonality, policy, weather, outages, calendar effect, revisions).
+## Scoring rubric (1–5)
+- Domain relevance to active reporting lanes
+- Source authority/provenance
+- Reproducibility/access reliability
+- Update cadence freshness
+- Complementarity (adds new coverage vs duplicate signal)
+- Noise/false-positive risk (inverse)
 
-## Discovery mode (when no claim exists yet)
-Use a two-lane approach:
-- **Wide ingest lane (fast):** bulk pull candidate datasets (hundreds/thousands) with metadata scoring.
-- **Promotion lane (strict):** only promote top-scored, relevant, reproducible candidates into watchlists/story workflows.
+Prioritize: high relevance + high authority + high reproducibility + medium/low noise.
 
-Runbook command for wide ingest:
-- `make bulk-intake`
-- outputs JSON/CSV/summary in `research-traces/`
+## Evidence tiers for dataset quality
+- **Tier 1:** official registries, agencies, primary institutional releases
+- **Tier 2:** structured telemetry/model-derived systems
+- **Tier 3:** aggregators/social-derived feeds
 
-Scan for:
-1. **Baseline breaks:** level/slope shifts vs rolling history.
-2. **Concentration shifts:** flows/spend/ownership moving into fewer entities.
-3. **Decouplings:** metrics that usually track each other diverge.
-4. **Cross-border reroutes:** corridor substitutions after policy/sanctions pressure.
-5. **Cross-domain synchrony:** independent systems moving together in time.
+Catalog can include Tier 2/3, but mark caveats clearly.
+High-stakes verification should anchor on Tier 1 when available.
 
-Promote a candidate to full story only if all are true:
-- one falsifiable claim can be written,
-- >=2 independent sources exist,
-- one plausible null can be tested quickly.
+## Promotion criteria (dataset-level)
+Promote when all are true:
+- Source is real, reachable, and stably identifiable
+- Operational use-case is concrete
+- Caveats are known/documented
+- It adds coverage breadth or materially improves existing lane quality
 
-## Fast candidate scoring
-Score 1–5 each:
-- Signal strength
-- Corroboration availability
-- Public stakes
-- Actionability (publishable now)
-- False-positive risk (inverse)
+## Output format for DATASET posts (lean)
+- What changed this cycle (count + list)
+- Added datasets (name, URL, domain, access, update cadence)
+- Why each matters operationally (1–2 lines)
+- Key caveats/limitations (brief)
+- Catalog files touched
+- Trace/reference links
 
-Prioritize high signal + high corroboration + low/medium FP risk.
+Avoid story-style sections like “Why this update now”, AP preflight, or editorial verdict.
 
-## Evidence reliability tiers
-- **Tier 1 (strongest):** official registries, agency/statistical releases, primary filings.
-- **Tier 2:** machine-coded/model-derived feeds and telemetry products.
-- **Tier 3:** third-party aggregators/social-derived indicators.
-
-Publishing rule of thumb:
-- Hard claims should include Tier 1, or convergent multi-source Tier 2 evidence with explicit caveats.
-
-## Dataset quality keys (for catalog maintenance + story triage)
-- **Access:** Open / registration / restricted
-- **Format:** API / CSV / dashboard / mixed
-- **Revision risk:** Low / Medium / High
-- **Operational role:** Baseline / anomaly detection / corroboration / lead generation
-
-## Starter bundles (quick triage patterns)
-- **Conflict escalation:** ACLED + GDELT + ReliefWeb
-- **Internet shutdown:** OONI + RIPE/IODA + official telecom notices
-- **Energy stress (EU):** AGSI+ + ENTSO-E + Pink Sheet context
-- **Trade reroute/sanctions:** UN Comtrade + OpenSanctions + AIS/maritime source
-- **AI capability vs risk:** HELM + Epoch compute + AI Incident Database
-- **Cyber exploitation tempo:** CISA KEV + EPSS + NVD
-
-## Confidence labels
-- **High:** independent sources converge; confounders tested.
-- **Medium:** core finding supported; key dependency unresolved.
-- **Low:** preliminary signal with substantial uncertainty.
-- **False/Misleading:** stronger evidence contradicts claim.
-
-Always include a one-line rationale for the label.
-
-## Failure modes checklist
-- Cadence mismatch (daily claim, monthly source)
-- Schema/taxonomy drift
-- Coverage illusion/probe dropout
-- Backfill/revision shock
-- Base-rate neglect
-- Narrative lock-in
-- Source monoculture
-- False precision on tiny denominators
-
-## Story output minimum
-- Headline
-- **Dateline:** YYYY-MM-DD HH:MM UTC
-- Why this update now
-- Evidence (numbered, linked)
-- Method (reproducible)
-- Hypotheses and adjudication (for STORY slots)
-- Limitations
-- Confidence + rationale
-- One-line decision relevance
-
-## Follow-up triggers
-Run follow-up immediately when:
-- primary source correction/reclassification lands,
-- independent source materially changes confidence,
-- magnitude/trajectory moves beyond prior uncertainty bounds,
-- downstream real-world impact appears.
-
-Default revisit cadence:
-- High velocity: 6–24h
-- Medium: 1–3d
-- Low: 3–14d
-
-## Catalog optimization rules
-- Optimize for signal density first, compactness second.
-- Default to shrinking/holding size; growth needs explicit operational value.
-- Remove speculative sections not tied to active workflows.
-- Prefer replace/merge over append-only edits.
-- If a pass grows size, document rationale and schedule cleanup.
+## Catalog maintenance rules
+- Optimize for retrieval speed and signal density.
+- Prefer replace/merge over append-only sprawl.
+- Remove stale/low-utility entries when better substitutes exist.
+- Keep taxonomy consistent and compact.
 
 ## Related
 - Dataset list: [`datasets-catalog.md`](./datasets-catalog.md)
+- Story and claim-check style rules: [`../skills/osint-journalism/SKILL.md`](../skills/osint-journalism/SKILL.md)
