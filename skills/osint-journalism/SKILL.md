@@ -51,6 +51,11 @@ A piece is novel when it adds at least one of:
 
 Write story posts in AP-style narrative flow first, then append technical notes.
 
+Plain-language rule (mandatory):
+- Assume an informed general reader, not a specialist.
+- Define acronyms and specialist terms at first mention (e.g., KEV, CVE, EPSS, BOD).
+- Prefer concrete language over insider shorthand.
+
 Required order:
 1. Headline
 2. Dateline
