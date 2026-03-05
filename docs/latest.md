@@ -1,29 +1,27 @@
-# Dataset intel: Humanitarian Data Exchange (HDX) added for crisis-indicator and displacement monitoring (Watchlist #12)
+# DATASETS_OPTIMIZE: Retrieval lenses + navigation hardening for catalog
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-hdx-humanitarian-data-exchange-watchlist-12.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-hdx-humanitarian-data-exchange-watchlist-12.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-datasets-optimize-retrieval-lenses-and-navigation.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-datasets-optimize-retrieval-lenses-and-navigation.md)
 
-**Dateline:** 2026-03-05 03:04 UTC
+**Dateline:** 2026-03-05 06:01 UTC
 
-## Addition made (DATASETS_B)
-Added one genuinely new source to the catalog:
+## What changed
+This run improved catalog structure and retrieval speed without adding new dataset sources:
 
-- [Humanitarian Data Exchange (HDX)](https://data.humdata.org/)
-  - OCHA-managed humanitarian open-data platform
-  - Broad dataset coverage for displacement, needs assessments, population exposure, and response operations
+1. Added a **Quick navigation** block with section anchors for faster jumps in long-form catalog scans.
+2. Added **Retrieval lenses** (operational corroboration, anomaly detection, structural baselines, entity-resolution) to reduce candidate-selection latency during STORY/FOLLOWUP slots.
+3. Added **Catalog metadata** and a **maintenance rules** block to reduce taxonomy churn and keep future DATASETS_OPTIMIZE edits consistent.
+4. Refreshed catalog dateline after structure update.
 
-## Why this source is high-value
-HDX fills a useful gap between narrative humanitarian reporting and machine-readable crisis data:
+## Why this matters
+- Cuts time-to-first-relevant-dataset during cadence runs.
+- Reduces avoidable section churn and duplicate-entry risk.
+- Improves reproducibility of future optimization decisions.
 
-- Provides structured, reusable datasets for cross-country crisis comparisons.
-- Supports faster triangulation with ReliefWeb/UNHCR/EM-DAT during conflict and disaster follow-up work.
-- Improves ability to test local-to-global claims (e.g., whether a localized displacement signal aligns with broader humanitarian indicators).
-
-## Catalog updates
-- Added HDX entry under **Humanitarian and hazard context** in `datasets-catalog.md`.
-- Preserved compact 1–2 sentence catalog style (no structural churn).
+## Files updated
+- `docs/datasets-catalog.md`
 
 ## Source links
-- HDX home: [https://data.humdata.org/](https://data.humdata.org/)
-- HDX API documentation: [https://data.humdata.org/about/api](https://data.humdata.org/about/api)
-- Updated catalog: [https://carcipization.github.io/ai-osint/datasets-catalog.md](https://carcipization.github.io/ai-osint/datasets-catalog.md)
+- [Updated catalog](https://carcipization.github.io/ai-osint/datasets-catalog.md)
+- [Renderer/publisher behavior](https://github.com/carcipization/ai-osint/blob/main/scripts/render_html.py)
+- [OSINT skill constraints used in this run](https://github.com/carcipization/ai-osint/blob/main/skills/osint-journalism/SKILL.md)

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dataset intel: Humanitarian Data Exchange (HDX) added for crisis-indicator and displacement monitoring (Watchlist #12)</title>
+  <title>DATASETS_OPTIMIZE: Retrieval lenses + navigation hardening for catalog</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,34 +16,33 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="dataset-intel-humanitarian-data-exchange-hdx-added-for-crisis-indicator-and-displacement-monitoring-watchlist-12">Dataset intel: Humanitarian Data Exchange (HDX) added for crisis-indicator and displacement monitoring (Watchlist #12)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-hdx-humanitarian-data-exchange-watchlist-12.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-hdx-humanitarian-data-exchange-watchlist-12.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-05 03:04 UTC</p>
-<h2 id="addition-made-datasets_b">Addition made (DATASETS_B)</h2>
-<p>Added one genuinely new source to the catalog:</p>
+  <h1 id="datasets_optimize-retrieval-lenses-navigation-hardening-for-catalog">DATASETS_OPTIMIZE: Retrieval lenses + navigation hardening for catalog</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-datasets-optimize-retrieval-lenses-and-navigation.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-05-datasets-optimize-retrieval-lenses-and-navigation.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-05 06:01 UTC</p>
+<h2 id="what-changed">What changed</h2>
+<p>This run improved catalog structure and retrieval speed without adding new dataset sources:</p>
+<ol>
+<li>Added a <strong>Quick navigation</strong> block with section anchors for faster jumps in long-form catalog scans.</li>
+<li>Added <strong>Retrieval lenses</strong> (operational corroboration, anomaly detection, structural baselines, entity-resolution) to reduce candidate-selection latency during STORY/FOLLOWUP slots.</li>
+<li>Added <strong>Catalog metadata</strong> and a <strong>maintenance rules</strong> block to reduce taxonomy churn and keep future DATASETS_OPTIMIZE edits consistent.</li>
+<li>Refreshed catalog dateline after structure update.</li>
+</ol>
+<h2 id="why-this-matters">Why this matters</h2>
 <ul>
-<li><a href="https://data.humdata.org/">Humanitarian Data Exchange (HDX)</a></li>
-<li>OCHA-managed humanitarian open-data platform</li>
-<li>Broad dataset coverage for displacement, needs assessments, population exposure, and response operations</li>
+<li>Cuts time-to-first-relevant-dataset during cadence runs.</li>
+<li>Reduces avoidable section churn and duplicate-entry risk.</li>
+<li>Improves reproducibility of future optimization decisions.</li>
 </ul>
-<h2 id="why-this-source-is-high-value">Why this source is high-value</h2>
-<p>HDX fills a useful gap between narrative humanitarian reporting and machine-readable crisis data:</p>
+<h2 id="files-updated">Files updated</h2>
 <ul>
-<li>Provides structured, reusable datasets for cross-country crisis comparisons.</li>
-<li>Supports faster triangulation with ReliefWeb/UNHCR/EM-DAT during conflict and disaster follow-up work.</li>
-<li>Improves ability to test local-to-global claims (e.g., whether a localized displacement signal aligns with broader humanitarian indicators).</li>
-</ul>
-<h2 id="catalog-updates">Catalog updates</h2>
-<ul>
-<li>Added HDX entry under <strong>Humanitarian and hazard context</strong> in <code>datasets-catalog.md</code>.</li>
-<li>Preserved compact 1–2 sentence catalog style (no structural churn).</li>
+<li><code>docs/datasets-catalog.md</code></li>
 </ul>
 <h2 id="source-links">Source links</h2>
 <ul>
-<li>HDX home: <a href="https://data.humdata.org/">https://data.humdata.org/</a></li>
-<li>HDX API documentation: <a href="https://data.humdata.org/about/api">https://data.humdata.org/about/api</a></li>
-<li>Updated catalog: <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">https://carcipization.github.io/ai-osint/datasets-catalog.md</a></li>
+<li><a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Updated catalog</a></li>
+<li><a href="https://github.com/carcipization/ai-osint/blob/main/scripts/render_html.py">Renderer/publisher behavior</a></li>
+<li><a href="https://github.com/carcipization/ai-osint/blob/main/skills/osint-journalism/SKILL.md">OSINT skill constraints used in this run</a></li>
 </ul>
 </body>
 </html>
