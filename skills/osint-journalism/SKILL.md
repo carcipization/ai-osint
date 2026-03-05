@@ -1,6 +1,12 @@
 # OSINT Journalism Skill
 
-Purpose: produce verification-first OSINT outputs that are reproducible, source-linked, and publication-safe under cadence pressure.
+Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-based reporting that reads like publishable wire copy.
+
+## Editorial north star
+
+- Optimize for: **story quality**, **reporting reliability**, **publication speed**.
+- Rules are tools, not outcomes.
+- If a checklist step does not materially improve journalism, skip or shorten it.
 
 ## Quick operating mode
 
@@ -41,24 +47,20 @@ A piece is novel when it adds at least one of:
 - Geospatial or registry linkage not present in headline coverage
 - Non-obvious inference that materially extends public reporting
 
-## Publishability gate (AP editor test)
+## Story format (AP style, mandatory)
 
-Before publishing a STORY, include a `## AP editor preflight (publishability gate)` section as a **proper Markdown ordered list** (`1.` to `5.`), covering:
-1. Why AP would run this today (clear peg + broad relevance)
-2. What is genuinely new versus already known
-3. Who is affected and what changes because of this
-4. The strongest argument that this is **not** a story
-5. Editor verdict: publish/hold with one-sentence rationale
+Write story posts in AP-style narrative flow first, then append technical notes.
 
-If any item is weak or hand-wavy, hold and pick another candidate.
+Required order:
+1. Headline
+2. Dateline
+3. **Story** (clean narrative: lead, nut graf, key findings, implications)
+4. **Appendix: Method**
+5. **Appendix: Limitations**
+6. **Appendix: Confidence**
+7. **Appendix: Sources**
 
-### Fast preflight template (copy/paste)
-
-1. **AP peg now:**
-2. **New information in this run:**
-3. **Affected parties + decisions impacted:**
-4. **Best “not a story” argument:**
-5. **Editor verdict (publish/hold + one sentence):**
+Do **not** include editorial throat-clearing in the story body (e.g., “why this is publishable”, “AP preflight”, internal gate checklists). If editorial justification is needed, store it in `research-traces/`.
 
 ## Method notes for internet-shutdown stories
 
@@ -72,7 +74,7 @@ When checking outage-duration claims:
 
 ## Follow-up slot discipline
 
-- Sample 5–10 recent high-impact stories.
+- Sample recent high-impact stories (target 3–10, based on available time).
 - Publish only if there is a **meaningful update**:
   - new primary data
   - official revision
