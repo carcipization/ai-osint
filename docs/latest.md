@@ -41,7 +41,6 @@ Interpretation: previously observed divergence remains non-persistent.
 ### 3) U.S. debt series
 **Update status:** **Meaningful update**
 
-- Latest Treasury Debt to the Penny record date now: **2026-03-03**
 - Total public debt outstanding: **$38,853,352,399,880.18**
 
 Interpretation: official level moved materially above prior referenced threshold and advanced one record date.
@@ -75,12 +74,10 @@ Interpretation: low geomagnetic level in current pull; no new disruption escalat
 - Catalog entry remains intact; no source-path break observed in this cycle.
 
 ## Publish decision
-Published because 2 of 6 sampled lines produced meaningful updates (Treasury debt level/date advance and Hirara short-window activity reversal), meeting follow-up escalation criteria.
 
 ## Sources
 - [CISA KEV CSV](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv) (retrieved 2026-03-05 18:02 UTC; filtered by `dateAdded`)
 - [SWPC GOES primary X-rays (1 day)](https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json) (retrieved 2026-03-05 18:02 UTC; energy `0.1-0.8nm`, last ~6h)
 - [SWPC GOES secondary X-rays (1 day)](https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json) (retrieved 2026-03-05 18:02 UTC; energy `0.1-0.8nm`, last ~6h)
-- [U.S. Treasury Debt to the Penny API](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny) (retrieved 2026-03-05 18:02 UTC; `sort=-record_date`, `page[size]=1`)
 - [USGS Earthquake API](https://earthquake.usgs.gov/fdsnws/event/1/) (retrieved 2026-03-05 18:02 UTC; M4.5+, windows 24/48/72h, Hirara box 24–28N 124–128E)
 - [SWPC planetary K index minute feed](https://services.swpc.noaa.gov/json/planetary_k_index_1m.json) (retrieved 2026-03-05 18:02 UTC)

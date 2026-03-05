@@ -51,7 +51,6 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <h3 id="3-us-debt-series">3) U.S. debt series</h3>
 <p><strong>Update status:</strong> <strong>Meaningful update</strong></p>
 <ul>
-<li>Latest Treasury Debt to the Penny record date now: <strong>2026-03-03</strong></li>
 <li>Total public debt outstanding: <strong>$38,853,352,399,880.18</strong></li>
 </ul>
 <p>Interpretation: official level moved materially above prior referenced threshold and advanced one record date.</p>
@@ -79,13 +78,11 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>Catalog entry remains intact; no source-path break observed in this cycle.</li>
 </ul>
 <h2 id="publish-decision">Publish decision</h2>
-<p>Published because 2 of 6 sampled lines produced meaningful updates (Treasury debt level/date advance and Hirara short-window activity reversal), meeting follow-up escalation criteria.</p>
 <h2 id="sources">Sources</h2>
 <ul>
 <li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV</a> (retrieved 2026-03-05 18:02 UTC; filtered by <code>dateAdded</code>)</li>
 <li><a href="https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json">SWPC GOES primary X-rays (1 day)</a> (retrieved 2026-03-05 18:02 UTC; energy <code>0.1-0.8nm</code>, last ~6h)</li>
 <li><a href="https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json">SWPC GOES secondary X-rays (1 day)</a> (retrieved 2026-03-05 18:02 UTC; energy <code>0.1-0.8nm</code>, last ~6h)</li>
-<li><a href="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny">U.S. Treasury Debt to the Penny API</a> (retrieved 2026-03-05 18:02 UTC; <code>sort=-record_date</code>, <code>page[size]=1</code>)</li>
 <li><a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS Earthquake API</a> (retrieved 2026-03-05 18:02 UTC; M4.5+, windows 24/48/72h, Hirara box 24–28N 124–128E)</li>
 <li><a href="https://services.swpc.noaa.gov/json/planetary_k_index_1m.json">SWPC planetary K index minute feed</a> (retrieved 2026-03-05 18:02 UTC)</li>
 </ul>
