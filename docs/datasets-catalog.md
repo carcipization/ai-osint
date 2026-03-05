@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-05 06:01 UTC
+**Dateline:** 2026-03-05 15:03 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 66 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 67 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -93,6 +93,7 @@ Use this compact map before scanning full entries.
 - [TED Open Data](https://data.ted.europa.eu/) — EU procurement notices and awards for cross-country trend analysis. Requires normalization across taxonomy changes.
 - [UK Contracts Finder API](https://www.contractsfinder.service.gov.uk/apidocumentation) — UK procurement opportunities/awards stream. Field completeness differs across authorities.
 - [GLEIF LEI Golden Copy](https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file) — Daily global legal-entity identifiers and reference data. High-value backbone for cross-border entity deduplication.
+- [OFAC Sanctions List Service (SLS)](https://ofac.treasury.gov/sanctions-list-service) — Official U.S. Treasury sanctions list distribution (SDN + consolidated non-SDN datasets) with machine-readable download pathways. Critical primary-source anchor for sanctions designation timing and entity-screening verification.
 
 ## AI capability, risk, and labor
 - [Stanford HELM](https://crfm.stanford.edu/helm/) — Standardized model benchmark tracking for capability/safety comparisons. Protocol drift can mimic model jumps.
