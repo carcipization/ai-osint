@@ -5,19 +5,7 @@
 
 **Dateline:** 2026-03-04 21:16 UTC
 
-## AP editor preflight (publishability gate)
-1. **Why AP would run this today:** KEV due dates directly set federal patch urgency. A sharp rise in 2–3 day due windows changes real operational tempo for agencies and contractors now.
-2. **What is genuinely new:** Not a simple KEV-count story. The new signal is **deadline-structure compression**: short due windows became unusually common in early 2026 versus matched early-year windows.
-3. **Who is affected / what changes:** Federal civilian agencies, MSSPs, and enterprise vuln teams using KEV-based prioritization may need to shift from weekly batching to surge-capable same-week response.
-4. **Strongest “not a story” counterargument:** Small early-year samples and policy mechanics can create noisy percentages without indicating a durable regime change.
-5. **Editor verdict:** **Publish** — the anomaly is measurable, operationally material, and testable with clear competing explanations.
-
-## Significance gate
-- **Why it matters:** Deadline windows govern staffing, maintenance windows, and incident escalation; counts alone do not.
-- **Who is affected:** Federal defenders, critical-infra operators mapped to KEV controls, MSSPs, cyber insurers.
-- **Decision relevance:** If compression persists, organizations need faster patch triage and pre-approved emergency change workflows.
-
-## Observed data (what changed)
+## Story
 Using CISA KEV CSV, compute `dueDate - dateAdded` in days, then compare year-matched windows through **March 4**.
 
 ### Same-date comparison (through Mar 4)
@@ -30,8 +18,13 @@ Using CISA KEV CSV, compute `dueDate - dateAdded` in days, then compare year-mat
 ### 2026 short-window cluster (<=3 days)
 Eight entries cluster in late Jan–Feb, including Fortinet, Ivanti, SolarWinds (x2), BeyondTrust, Dell, and Cisco (x2).
 
-## Hypotheses and adjudication
+## Appendix: Method
+- Pulled CISA KEV CSV snapshot.
+- Computed lead time as `dueDate - dateAdded` for each entry.
+- Compared same-date windows through March 4 across years.
+- Flagged short-window entries (`<=3 days`) and inspected vendor/date concentration.
 
+## Hypotheses and adjudication
 ### H1 — Exploit urgency increased, forcing shorter remediation windows
 - **Prediction:** short-window entries should co-occur with stronger urgency markers (e.g., active exploitation context, high operational risk products).
 - **Test result:** **mixed support**. The cluster includes widely targeted enterprise edge/management products (supports urgency framing), but only **1/8** of <=3-day entries carried `knownRansomwareCampaignUse=Known` in the feed snapshot (weakens a ransomware-only explanation).
@@ -60,15 +53,15 @@ The best current explanation is **H2 + H3**: a process-prioritization effect (ac
 - **Falsify/soften:** metric mean-reverts quickly and new entries return to historical lead-time patterns.
 - **Different mechanism signal:** sharp rise in `knownRansomwareCampaignUse=Known` among short-window entries would shift weight toward H1.
 
-## Limitations
+## Appendix: Limitations
 - Early-year denominator is still modest; percentages can swing quickly.
 - KEV due dates reflect federal policy obligations, not direct global exploit prevalence.
 - This is an observational inference; no causal claim about internal CISA decision criteria.
 
-## Confidence
+## Appendix: Confidence
 **Medium.** The anomaly is strong and reproducible; mechanism attribution is plausible but not yet definitive.
 
-## Sources (with retrieval context)
+## Appendix: Sources
 1. [CISA KEV CSV feed](https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv)
    - Retrieved: 2026-03-04 ~21:13 UTC
    - Parameters: full feed; filtered by `dateAdded <= MM-DD 03-04` per year; computed lead-time as `dueDate - dateAdded`.
