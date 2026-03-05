@@ -3,9 +3,39 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-04 21:30 UTC
+**Dateline:** 2026-03-05 06:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
+
+**Catalog metadata:** 66 datasets • 11 domains • structure-optimized for cadence retrieval
+
+## Quick navigation
+- [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
+- [Humanitarian and hazard context](#humanitarian-and-hazard-context)
+- [Energy, trade, and maritime](#energy-trade-and-maritime)
+- [Aviation and mobility](#aviation-and-mobility)
+- [Economy, governance, and structural risk](#economy-governance-and-structural-risk)
+- [Ownership, sanctions, and procurement](#ownership-sanctions-and-procurement)
+- [AI capability, risk, and labor](#ai-capability-risk-and-labor)
+- [Cyber vulnerability and exploitation risk](#cyber-vulnerability-and-exploitation-risk)
+- [Domestic public safety](#domestic-public-safety)
+- [Telegram/public-channel analytics](#telegrampublic-channel-analytics)
+- [Space weather and disruption context](#space-weather-and-disruption-context)
+
+## Retrieval lenses (for fast story triage)
+Use this compact map before scanning full entries.
+
+- **Fast operational corroboration (minutes to hourly):** OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, CISA KEV Catalog, FIRST EPSS.
+- **Event-tracking + anomaly detection (hourly to daily):** ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.
+- **Structural baselines (monthly to annual):** UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.
+- **Entity/ownership resolution:** OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.
+
+## Catalog maintenance rules (DATASETS_OPTIMIZE)
+1. Preserve section-level taxonomy unless a split/merge clearly improves retrieval speed.
+2. Prefer editing descriptors over moving entries across sections.
+3. Keep each entry to one sentence of scope + one sentence of caveat/value.
+4. If adding aliases in future, keep one canonical entry and mention aliases in-text.
+5. Re-run duplicate-domain and section-balance checks before publish.
 
 ## Conflict, unrest, and information control
 - [ACLED](https://acleddata.com/) — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.

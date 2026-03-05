@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,8 +20,39 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-04 21:30 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-05 06:01 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
+<p><strong>Catalog metadata:</strong> 66 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<h2 id="quick-navigation">Quick navigation</h2>
+<ul>
+<li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
+<li><a href="#humanitarian-and-hazard-context">Humanitarian and hazard context</a></li>
+<li><a href="#energy-trade-and-maritime">Energy, trade, and maritime</a></li>
+<li><a href="#aviation-and-mobility">Aviation and mobility</a></li>
+<li><a href="#economy-governance-and-structural-risk">Economy, governance, and structural risk</a></li>
+<li><a href="#ownership-sanctions-and-procurement">Ownership, sanctions, and procurement</a></li>
+<li><a href="#ai-capability-risk-and-labor">AI capability, risk, and labor</a></li>
+<li><a href="#cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</a></li>
+<li><a href="#domestic-public-safety">Domestic public safety</a></li>
+<li><a href="#telegrampublic-channel-analytics">Telegram/public-channel analytics</a></li>
+<li><a href="#space-weather-and-disruption-context">Space weather and disruption context</a></li>
+</ul>
+<h2 id="retrieval-lenses-for-fast-story-triage">Retrieval lenses (for fast story triage)</h2>
+<p>Use this compact map before scanning full entries.</p>
+<ul>
+<li><strong>Fast operational corroboration (minutes to hourly):</strong> OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, CISA KEV Catalog, FIRST EPSS.</li>
+<li><strong>Event-tracking + anomaly detection (hourly to daily):</strong> ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.</li>
+<li><strong>Structural baselines (monthly to annual):</strong> UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.</li>
+<li><strong>Entity/ownership resolution:</strong> OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.</li>
+</ul>
+<h2 id="catalog-maintenance-rules-datasets_optimize">Catalog maintenance rules (DATASETS_OPTIMIZE)</h2>
+<ol>
+<li>Preserve section-level taxonomy unless a split/merge clearly improves retrieval speed.</li>
+<li>Prefer editing descriptors over moving entries across sections.</li>
+<li>Keep each entry to one sentence of scope + one sentence of caveat/value.</li>
+<li>If adding aliases in future, keep one canonical entry and mention aliases in-text.</li>
+<li>Re-run duplicate-domain and section-balance checks before publish.</li>
+</ol>
 <h2 id="conflict-unrest-and-information-control">Conflict, unrest, and information control</h2>
 <ul>
 <li><a href="https://acleddata.com/">ACLED</a> — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.</li>
