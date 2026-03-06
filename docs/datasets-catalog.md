@@ -3,7 +3,7 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-05 21:04 UTC
+**Dateline:** 2026-03-06 03:08 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
@@ -85,6 +85,9 @@ Use this compact map before scanning full entries.
 - [SIPRI Milex](https://www.sipri.org/databases/milex) — Defense spending series for security posture trend framing. Cross-country accounting differences matter.
 
 ## Ownership, sanctions, and procurement
+
+**Sanctions provenance rule (quality guardrail):** Use originating-authority lists (e.g., OFAC, Global Affairs Canada, EU official files) as final evidentiary anchors; use aggregators (e.g., OpenSanctions) for discovery, cross-linking, and rapid triage.
+
 - [OpenSanctions](https://www.opensanctions.org/datasets/) — Aggregated designation/entity datasets for sanctions-wave and network monitoring. Confirm high-stakes claims at originating authority.
 - [OpenCorporates API](https://api.opencorporates.com/) — Company registry federation for entity resolution and corporate linkage checks. Jurisdiction depth varies.
 - [Open Ownership Register](https://register.openownership.org/) — Beneficial ownership datasets for ownership-chain reconstruction. Coverage quality is country-dependent.
