@@ -3,7 +3,7 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-06 17:28 UTC
+**Dateline:** 2026-03-06 18:06 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
@@ -29,6 +29,7 @@ Use this compact map before scanning full entries.
 - **Event-tracking + anomaly detection (hourly to daily):** ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.
 - **Structural baselines (monthly to annual):** UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.
 - **Entity/ownership resolution:** OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.
+- **Revision-sensitive series (confidence-capped until confirmed):** Eurostat annual demographic indicators with break/provisional flags, IMF/World Bank indicators near recent release boundaries, and any feed with explicit estimated/provisional markers.
 
 ## Catalog maintenance rules (DATASETS_OPTIMIZE)
 1. Preserve section-level taxonomy unless a split/merge clearly improves retrieval speed.
@@ -36,6 +37,7 @@ Use this compact map before scanning full entries.
 3. Keep each entry to one sentence of scope + one sentence of caveat/value.
 4. If adding aliases in future, keep one canonical entry and mention aliases in-text.
 5. Re-run duplicate-domain and section-balance checks before publish.
+6. For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.
 
 ## Conflict, unrest, and information control
 - [ACLED](https://acleddata.com/) — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.

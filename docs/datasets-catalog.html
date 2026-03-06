@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,7 +20,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-06 17:28 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-06 18:06 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
 <p><strong>Catalog metadata:</strong> 70 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
@@ -43,6 +44,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>Event-tracking + anomaly detection (hourly to daily):</strong> ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.</li>
 <li><strong>Structural baselines (monthly to annual):</strong> UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.</li>
 <li><strong>Entity/ownership resolution:</strong> OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.</li>
+<li><strong>Revision-sensitive series (confidence-capped until confirmed):</strong> Eurostat annual demographic indicators with break/provisional flags, IMF/World Bank indicators near recent release boundaries, and any feed with explicit estimated/provisional markers.</li>
 </ul>
 <h2 id="catalog-maintenance-rules-datasets_optimize">Catalog maintenance rules (DATASETS_OPTIMIZE)</h2>
 <ol>
@@ -51,6 +53,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>Keep each entry to one sentence of scope + one sentence of caveat/value.</li>
 <li>If adding aliases in future, keep one canonical entry and mention aliases in-text.</li>
 <li>Re-run duplicate-domain and section-balance checks before publish.</li>
+<li>For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.</li>
 </ol>
 <h2 id="conflict-unrest-and-information-control">Conflict, unrest, and information control</h2>
 <ul>
