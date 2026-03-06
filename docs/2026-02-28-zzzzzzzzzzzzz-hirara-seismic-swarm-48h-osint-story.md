@@ -1,68 +1,39 @@
-# Hirara seismic swarm: a 48-hour jump from background noise to global outlier
+# Hirara area seismic activity surged in 48 hours, jumping far above recent local baseline
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-28-zzzzzzzzzzzzz-hirara-seismic-swarm-48h-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-28-zzzzzzzzzzzzz-hirara-seismic-swarm-48h-osint-story.md)
 
 **Dateline:** 2026-02-28 09:05 UTC
 
-## Story
-A localized seismic cluster north-west of Hirara (Miyakojima, Japan) became an outlier in the last 48 hours.
+A localized earthquake cluster northwest of Hirara (Miyakojima, Japan) rose sharply over 48 hours, moving from background-level activity to a clear short-window anomaly.
 
-Using USGS event feeds (M≥4.5), I counted **10 earthquakes** inside a tight box (24–28°N, 124–128°E) between **2026-02-26 09:05 UTC** and **2026-02-28 09:05 UTC**. In the **preceding 28 days**, the same box recorded only **2 events**.
+Using U.S. Geological Survey (USGS) feeds for earthquakes magnitude 4.5 and above, this analysis counted 10 events in a 24–28°N, 124–128°E box between 2026-02-26 09:05 UTC and 2026-02-28 09:05 UTC. In the preceding 28 days, the same box recorded two events.
 
-That implies an expected 48-hour count of ~**0.14** from recent background rate, versus **10 observed** (~**70x** higher). This is not proof of a major disaster trajectory, but it is a strong short-window anomaly worth watchlisting.
+Using that baseline rate, the expected 48-hour count is about 0.14 events; observed was 10, roughly 70 times higher. The same 48-hour window contained 33 global M4.5+ USGS events, meaning this single box contributed about 30% of global moderate-magnitude activity in that period.
 
-## Key findings
-### 1) Concentration in a narrow area
-USGS events in the 48-hour window inside 24–28°N / 124–128°E (M≥4.5):
-
-- 2026-02-26 15:53 UTC — M4.7 — 51 km NW of Hirara, Japan
-- 2026-02-26 18:51 UTC — M4.9 — 51 km NW of Hirara, Japan
-- 2026-02-26 23:06 UTC — M4.7 — 52 km NNW of Hirara, Japan
-- 2026-02-27 02:54 UTC — M5.2 — 55 km NNW of Hirara, Japan
-- 2026-02-27 06:11 UTC — M4.8 — 42 km NNW of Hirara, Japan
-- 2026-02-27 06:43 UTC — M4.7 — 61 km NNW of Hirara, Japan
-- 2026-02-27 11:01 UTC — M4.7 — 47 km NNW of Hirara, Japan
-- 2026-02-27 14:48 UTC — M5.0 — 61 km NNW of Hirara, Japan
-- 2026-02-28 01:49 UTC — M5.1 — 50 km NNW of Hirara, Japan
-- 2026-02-28 05:53 UTC — M5.4 — 43 km NW of Hirara, Japan
-
-### 2) Window-vs-baseline contrast
-- **Observed in box (last 48h):** 10
-- **Observed in box (prior 28d):** 2
-- **Expected in 48h from prior rate:** 2 × (2/28) = 0.14
-- **Observed / expected:** ~70x
-
-### 3) Global share distortion
-In the same 48-hour period, total global M≥4.5 events in USGS were 33. The Hirara box contributed 10 (~30%), indicating this cluster dominated global moderate-seismic activity share for that short window.
-
-## Key implications
-This is a textbook case where one live, machine-readable dataset can flag a geographically precise anomaly before narrative framing settles. The right use is not prediction theater; it is to trigger disciplined follow-on checks (official warnings, tsunami bulletins, infrastructure reports, and local impact signals).
+This does not establish a disaster trajectory by itself, but it is a strong anomaly signal that justifies close follow-on monitoring.
 
 ## Appendix: Method
-1. Queried USGS FDSN API for global events M≥4.5 from 2026-01-29 09:05 UTC to 2026-02-28 09:05 UTC.
-2. Split data into:
-   - recent window: last 48 hours
-   - baseline window: preceding 28 days
-3. Filtered both windows to geographic box 24–28°N, 124–128°E.
-4. Compared observed count in recent window against baseline-implied expected count.
 
-Reproducible query endpoints:
-- USGS API docs/feed: [https://earthquake.usgs.gov/fdsnws/event/1/](https://earthquake.usgs.gov/fdsnws/event/1/)
-- Example global query (M≥4.5, bounded by start/end): [https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-29T09:05:00&endtime=2026-02-28T09:05:00&minmagnitude=4.5&orderby=time-asc&limit=20000](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-29T09:05:00&endtime=2026-02-28T09:05:00&minmagnitude=4.5&orderby=time-asc&limit=20000)
-- Example regional query (same period + bounds): [https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-29T09:05:00&endtime=2026-02-28T09:05:00&minmagnitude=4.5&minlatitude=24&maxlatitude=28&minlongitude=124&maxlongitude=128&orderby=time-asc&limit=20000](https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-01-29T09:05:00&endtime=2026-02-28T09:05:00&minmagnitude=4.5&minlatitude=24&maxlatitude=28&minlongitude=124&maxlongitude=128&orderby=time-asc&limit=20000)
+- Queried USGS FDSN API for global M4.5+ events from 2026-01-29 09:05 UTC to 2026-02-28 09:05 UTC.
+- Split into:
+  - recent window: last 48 hours
+  - baseline window: preceding 28 days
+- Applied geographic filter: 24–28°N, 124–128°E.
+- Compared observed recent-window count with baseline-implied expected count.
 
 ## Appendix: Limitations
-- USGS event solutions can be revised (magnitude, depth, exact location) after initial publication.
-- A simple rectangular bounding box may include/exclude edge events that a tectonic-boundary polygon would handle better.
-- This is a short-window anomaly test, not a full seismic hazard forecast.
-- No casualty/infrastructure impact inference is made from this signal alone.
+
+- USGS solutions can be revised after initial publication.
+- Rectangular boxes are practical but coarse geographic approximations.
+- This is an anomaly test, not a forward hazard forecast.
+- No casualty or infrastructure impact inference is made from this signal alone.
 
 ## Appendix: Confidence
-- **High confidence** that a short-window clustering anomaly occurred in this specific box.
-- **Medium confidence** on exact anomaly multiplier, because small baseline denominators amplify ratio volatility.
-- **Low confidence** for forward implications (e.g., whether activity decays quickly or escalates), which requires subsequent sequence monitoring and agency advisories.
+
+**High** on existence of a short-window clustering anomaly in this box; **medium** on exact anomaly multiplier due to small baseline denominator; **low** on forward trajectory implications without additional monitoring.
 
 ## Appendix: Sources
-- [USGS Earthquake API](https://earthquake.usgs.gov/fdsnws/event/1/)
-- [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/)
+
+1. [USGS Earthquake API](https://earthquake.usgs.gov/fdsnws/event/1/)
+2. [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/)
