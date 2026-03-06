@@ -30,7 +30,7 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 - Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
 - Discovery pass target: scan at least tens/hundreds of candidates per run when tooling allows.
 - Promotion default: add **3–10 qualified datasets per cycle** (unless quality is genuinely thin).
-- Adding only one dataset should be an exception and should include a brief reason in trace notes.
+- Adding only one dataset is unacceptable.
 - Prioritize coverage breadth across domains before polishing niche depth.
 - Do **not** run AP/story preflight or story publishability gates for dataset selection.
 
