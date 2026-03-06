@@ -13,7 +13,7 @@ Public GitHub Pages site for publishing AI-assisted OSINT stories.
 ```bash
 make build
 # or
-python3 scripts/publish.py
+bash scripts/publish_with_venv.sh
 
 # cadence safety check for claim-check posts (all, or specific files)
 python3 scripts/validate_claim_checks.py
