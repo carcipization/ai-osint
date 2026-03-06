@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanctions screening feeds are running on different clocks, creating a measurable update-window risk</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="sanctions-screening-feeds-are-running-on-different-clocks-creating-a-measurable-update-window-risk">Sanctions screening feeds are running on different clocks, creating a measurable update-window risk</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-06-sanctions-feeds-out-of-sync-update-clock-risk-osint-story.html">HTML</a><br />
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-06-sanctions-feeds-out-of-sync-update-clock-risk-osint-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-06 17:28 UTC</p>
+<h2 id="ap-preflight-publishability-gate">AP preflight (publishability gate)</h2>
+<ol>
+<li>This is publishable now because sanctions compliance is operationally time-sensitive, and primary-source feeds currently show non-trivial update-clock divergence across major authorities.</li>
+<li>What is new: this piece quantifies the <em>metadata-level timing mismatch</em> (not just list-content differences) between OFAC, Canada, and UN consolidated feeds.</li>
+<li>Who is affected/what changes: financial institutions, logistics/compliance teams, and OSINT monitors relying on automated screening pipelines may face temporary blind spots if they assume synchronized refresh cycles.</li>
+<li>Strongest “not a story” counterargument: all screening programs should already account for asynchronous publication, so this is expected operations rather than news.</li>
+<li><strong>Editor verdict: Publish</strong> — the cross-source, timestamped evidence provides a concrete, current risk window and a clear process implication for high-impact compliance workflows.</li>
+</ol>
+<h2 id="what-changed-why-now">What changed / why now</h2>
+<p>As of 2026-03-06, the latest machine-readable sanctions sources are not updating on the same operational clock:
+- OFAC SDN export was last modified on <strong>2026-03-06</strong> (same day).
+- UN consolidated list reports last substantive update on <strong>2026-02-27</strong>.
+- Canada’s consolidated page states list updated <strong>2026-02-19</strong>, while the XML file itself shows a newer file-level modification date (<strong>2026-03-04</strong>), indicating possible transport refresh without clearly stated substantive list change.</p>
+<p>This is an OSINT-significant pattern because many downstream screening systems are treated as if “global sanctions data” refreshes as one stream.</p>
+<h2 id="significance-gate">Significance gate</h2>
+<ul>
+<li><strong>If true:</strong> institutions using multi-jurisdiction screening can miss newly effective designations during the asynchronous gap unless they implement jurisdiction-specific freshness rules.</li>
+<li><strong>If false:</strong> apparent lag is a metadata artifact with little practical impact; current controls are likely sufficient.</li>
+<li><strong>Who is affected:</strong> sanctions compliance units, correspondent banking operations, maritime/trade screening desks, and investigative analysts.</li>
+</ul>
+<h2 id="evidence">Evidence</h2>
+<ol>
+<li>
+<p><strong>OFAC Sanctions List Service (SDN CSV export)</strong>
+   - Endpoint returns machine-readable SDN rows; retrieved header showed <code>Last-Modified: Fri, 06 Mar 2026 15:02:59 GMT</code>.
+   - Retrieved 2026-03-06 17:23 UTC.
+   - Source: <a href="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV">OFAC SLS SDN.CSV</a></p>
+</li>
+<li>
+<p><strong>Consolidated Canadian Autonomous Sanctions List (Global Affairs Canada)</strong>
+   - Official page states: “list was last updated on February 19, 2026.”
+   - Retrieved 2026-03-06 17:23 UTC.
+   - Source: <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng">Canada consolidated sanctions page</a></p>
+</li>
+<li>
+<p><strong>Canada XML feed metadata</strong>
+   - XML endpoint header showed <code>Last-Modified: Wed, 04 Mar 2026 17:50:25 GMT</code>.
+   - Retrieved 2026-03-06 17:23 UTC.
+   - Source: <a href="https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml">Canada XML feed</a></p>
+</li>
+<li>
+<p><strong>UN Security Council consolidated list</strong>
+   - UN consolidated-list page states the list “was last updated on 27 February 2026.”
+   - Retrieved 2026-03-06 17:24 UTC.
+   - Source: <a href="https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list">UNSC Consolidated List page</a></p>
+</li>
+</ol>
+<h2 id="method-reproducible">Method (reproducible)</h2>
+<ul>
+<li>Queried primary-source machine endpoints and list pages for three authorities (US OFAC, Canada, UN).</li>
+<li>Recorded two freshness indicators where available:
+  1. <strong>Declared substantive update date</strong> on official page text.
+  2. <strong>Transport-level file freshness</strong> from HTTP <code>Last-Modified</code> header.</li>
+<li>Compared date deltas across authorities to identify asynchronous windows relevant to screening operations.</li>
+</ul>
+<h2 id="hypotheses-and-adjudication">Hypotheses and adjudication</h2>
+<ol>
+<li>
+<p><strong>H1: Major sanctions sources are currently out of sync by multiple days (supported).</strong>
+   - Prediction: latest update markers differ materially across authorities.
+   - Result: observed same-day OFAC vs 27 Feb UN vs 19 Feb declared Canada page update.</p>
+</li>
+<li>
+<p><strong>H2: Canada feed may show file-level refresh without clear substantive-list update (supported).</strong>
+   - Prediction: page-declared date and XML <code>Last-Modified</code> date diverge.
+   - Result: observed 19 Feb (declared) vs 04 Mar (file metadata).</p>
+</li>
+<li>
+<p><strong>H3 (null/artifact): differences are purely formatting artifacts with negligible operational meaning (mixed).</strong>
+   - Prediction: no plausible screening impact from timing offsets.
+   - Result: not fully rejected; impact depends on local control design, but asynchronous windows are objectively present.</p>
+</li>
+</ol>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>This analysis measures <strong>freshness metadata windows</strong>, not full content-level diff of every designation across jurisdictions.</li>
+<li>Jurisdictional sanctions scopes differ by law and mandate; list-size or update-date mismatch does not imply legal inconsistency.</li>
+<li>HTTP <code>Last-Modified</code> can reflect file regeneration or hosting-layer changes, not necessarily net-new designations.</li>
+</ul>
+<h2 id="confidence">Confidence</h2>
+<p><strong>Medium.</strong> Timing divergence is directly observed from primary sources, but operational risk magnitude will vary by institution-specific ingestion and escalation controls.</p>
+<h2 id="one-line-decision-relevance">One-line decision relevance</h2>
+<p>Treat sanctions ingestion as jurisdiction-specific clocks, not a single global refresh stream, or accept measurable blind-spot windows.</p>
+</body>
+</html>
