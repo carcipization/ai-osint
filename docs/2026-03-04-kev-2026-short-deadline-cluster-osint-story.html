@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CISA KEV deadline compression in early 2026: anomaly confirmed, likely a prioritization-shock signal (not just a count effect)</title>
+  <title>CISA KEV in early 2026 shows an unusual cluster of very short remediation deadlines</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,81 +16,35 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="cisa-kev-deadline-compression-in-early-2026-anomaly-confirmed-likely-a-prioritization-shock-signal-not-just-a-count-effect">CISA KEV deadline compression in early 2026: anomaly confirmed, likely a prioritization-shock signal (not just a count effect)</h1>
+  <h1 id="cisa-kev-in-early-2026-shows-an-unusual-cluster-of-very-short-remediation-deadlines">CISA KEV in early 2026 shows an unusual cluster of very short remediation deadlines</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-04-kev-2026-short-deadline-cluster-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-04 21:16 UTC</p>
-<h2 id="story">Story</h2>
-<p>Using CISA KEV CSV, compute <code>dueDate - dateAdded</code> in days, then compare year-matched windows through <strong>March 4</strong>.</p>
-<h3 id="same-date-comparison-through-mar-4">Same-date comparison (through Mar 4)</h3>
-<ul>
-<li><strong>2026:</strong> 47 additions; <strong>8/47 (17.0%)</strong> had lead time <strong>&lt;=3 days</strong></li>
-<li><strong>2025:</strong> 50 additions; <strong>0/50 (0.0%)</strong> &lt;=3 days</li>
-<li><strong>2024:</strong> 31 additions; <strong>1/31 (3.2%)</strong> &lt;=3 days</li>
-<li><strong>2023:</strong> 19 additions; <strong>0/19 (0.0%)</strong> &lt;=3 days</li>
-<li><strong>2022:</strong> 167 additions; <strong>0/167 (0.0%)</strong> &lt;=3 days</li>
-</ul>
-<h3 id="2026-short-window-cluster-3-days">2026 short-window cluster (&lt;=3 days)</h3>
-<p>Eight entries cluster in late Jan–Feb, including Fortinet, Ivanti, SolarWinds (x2), BeyondTrust, Dell, and Cisco (x2).</p>
-<h2 id="hypotheses-and-adjudication">Hypotheses and adjudication</h2>
-<h3 id="h1-exploit-urgency-increased-forcing-shorter-remediation-windows">H1 — Exploit urgency increased, forcing shorter remediation windows</h3>
-<ul>
-<li><strong>Prediction:</strong> short-window entries should co-occur with stronger urgency markers (e.g., active exploitation context, high operational risk products).</li>
-<li><strong>Test result:</strong> <strong>mixed support</strong>. The cluster includes widely targeted enterprise edge/management products (supports urgency framing), but only <strong>1/8</strong> of &lt;=3-day entries carried <code>knownRansomwareCampaignUse=Known</code> in the feed snapshot (weakens a ransomware-only explanation).</li>
-<li><strong>Status:</strong> <strong>mixed</strong>.</li>
-</ul>
-<h3 id="h2-cisa-processpolicy-normalization-under-bod-22-01-is-driving-tighter-timelines">H2 — CISA process/policy normalization under BOD 22-01 is driving tighter timelines</h3>
-<ul>
-<li><strong>Prediction:</strong> short-window behavior can rise without broad ransomware tagging, and CISA framing should emphasize accelerated remediation for exploited vulns.</li>
-<li><strong>Test result:</strong> CISA BOD 22-01 text explicitly frames KEV as accelerated mandatory remediation for federal agencies; CISA statements on retiring Emergency Directives indicate actions being folded into BOD 22-01 operations. This is consistent with process-driven compression.</li>
-<li><strong>Status:</strong> <strong>supported (moderate)</strong>.</li>
-</ul>
-<h3 id="h3-vendor-mix-artifact-a-few-vendorsproducts-created-a-temporary-cluster">H3 — Vendor-mix artifact (a few vendors/products created a temporary cluster)</h3>
-<ul>
-<li><strong>Prediction:</strong> &lt;=3-day observations are concentrated in a handful of vendors/products and dates.</li>
-<li><strong>Test result:</strong> supported. The 8 short-window entries are concentrated in a narrow time band (late Jan–Feb) and repeated vendor families (e.g., SolarWinds and Cisco each appear twice).</li>
-<li><strong>Status:</strong> <strong>supported</strong>.</li>
-</ul>
-<h3 id="h4-null-pure-random-small-sample-noise-with-no-operational-meaning">H4 (null) — Pure random small-sample noise with no operational meaning</h3>
-<ul>
-<li><strong>Prediction:</strong> 2026 short-window share should be close to prior matched windows.</li>
-<li><strong>Test result:</strong> not supported. 2026 is 17.0% vs 0.0% (2025), 3.2% (2024), 0.0% (2023), 0.0% (2022) in same-date windows.</li>
-<li><strong>Status:</strong> <strong>rejected for now</strong> (though persistence still unproven).</li>
-</ul>
-<h2 id="provisional-conclusion">Provisional conclusion</h2>
-<p>The best current explanation is <strong>H2 + H3</strong>: a process-prioritization effect (accelerated federal remediation logic) interacting with a concentrated vendor/product wave, rather than a simple “more KEVs” pattern or a ransomware-only shift.</p>
-<h2 id="what-would-confirm-or-falsify-this-in-the-next-cycle">What would confirm or falsify this in the next cycle</h2>
-<ul>
-<li><strong>Confirm compression regime:</strong> &lt;=3-day share remains elevated over the next 30–60 days and spreads beyond current vendor concentration.</li>
-<li><strong>Falsify/soften:</strong> metric mean-reverts quickly and new entries return to historical lead-time patterns.</li>
-<li><strong>Different mechanism signal:</strong> sharp rise in <code>knownRansomwareCampaignUse=Known</code> among short-window entries would shift weight toward H1.</li>
-</ul>
+<p>The U.S. Cybersecurity and Infrastructure Security Agency’s Known Exploited Vulnerabilities (KEV) catalog is showing a sharper deadline pattern in early 2026 than in comparable periods in recent years.</p>
+<p>Using CISA’s public KEV CSV and comparing year-matched windows through March 4, 2026, 8 of 47 new 2026 entries (17.0%) had due dates three days or less after listing. Comparable windows show 0 of 50 in 2025, 1 of 31 in 2024, 0 of 19 in 2023, and 0 of 167 in 2022.</p>
+<p>The short-deadline entries cluster in late January and February and include products from multiple major enterprise vendors, with repeat appearances from Cisco and SolarWinds. That concentration suggests the change is not a random one-day outlier, though it is still too early to call it a stable regime.</p>
+<p>The pattern does not map cleanly to ransomware-tagged entries alone. In this snapshot, only one of the eight short-window entries is labeled as known ransomware campaign use, indicating broader exploited-vulnerability urgency and policy prioritization dynamics may be at work.</p>
+<p>For defenders and federal operators, the immediate implication is operational: KEV monitoring should assume that some exploited vulnerabilities may now arrive with very short mandated remediation windows, increasing patching pressure and change-management risk.</p>
 <h2 id="appendix-method">Appendix: Method</h2>
 <ul>
-<li>Pulled CISA KEV CSV snapshot.</li>
-<li>Computed lead time as <code>dueDate - dateAdded</code> for each entry.</li>
-<li>Compared same-date windows through March 4 across years.</li>
-<li>Flagged short-window entries (<code>&lt;=3 days</code>) and inspected vendor/date concentration.</li>
+<li>Source dataset: CISA KEV CSV feed.</li>
+<li>Computed lead time as <code>dueDate - dateAdded</code> in days.</li>
+<li>Compared same-date windows through March 4 across years (2022–2026).</li>
+<li>Counted entries with lead time <code>&lt;=3 days</code> and reviewed vendor/date clustering.</li>
 </ul>
 <h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
-<li>Early-year denominator is still modest; percentages can swing quickly.</li>
-<li>KEV due dates reflect federal policy obligations, not direct global exploit prevalence.</li>
-<li>This is an observational inference; no causal claim about internal CISA decision criteria.</li>
+<li>Early-year samples are smaller and can shift quickly.</li>
+<li>KEV due dates represent federal remediation policy timelines, not full global exploitation prevalence.</li>
+<li>This is observational analysis and does not identify internal CISA decision mechanics.</li>
 </ul>
 <h2 id="appendix-confidence">Appendix: Confidence</h2>
-<p><strong>Medium.</strong> The anomaly is strong and reproducible; mechanism attribution is plausible but not yet definitive.</p>
+<p><strong>Medium.</strong> The short-deadline cluster is clear and reproducible in the feed, but mechanism attribution remains provisional.</p>
 <h2 id="appendix-sources">Appendix: Sources</h2>
 <ol>
-<li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV feed</a>
-   - Retrieved: 2026-03-04 ~21:13 UTC
-   - Parameters: full feed; filtered by <code>dateAdded &lt;= MM-DD 03-04</code> per year; computed lead-time as <code>dueDate - dateAdded</code>.</li>
-<li><a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities">CISA BOD 22-01 page</a>
-   - Retrieved: 2026-03-04 ~21:14 UTC
-   - Used for directive framing and accelerated remediation language.</li>
-<li><a href="https://www.cisa.gov/news-events/news/cisa-retires-ten-emergency-directives-marking-era-federal-cybersecurity">CISA Emergency Directives retirement note</a>
-   - Retrieved: 2026-03-04 ~21:14 UTC
-   - Used for evidence that some directive actions were folded into BOD 22-01 operations.</li>
+<li><a href="https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv">CISA KEV CSV feed</a></li>
+<li><a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities">CISA BOD 22-01</a></li>
+<li><a href="https://www.cisa.gov/news-events/news/cisa-retires-ten-emergency-directives-marking-era-federal-cybersecurity">CISA Emergency Directives retirement note</a></li>
 </ol>
 </body>
 </html>
