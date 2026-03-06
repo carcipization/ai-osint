@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets Catalog</title>
+  <title>Sanctions screening feeds are running on different clocks, creating a measurable update-window risk</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,148 +12,96 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
-.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
+  <h1 id="sanctions-screening-feeds-are-running-on-different-clocks-creating-a-measurable-update-window-risk">Sanctions screening feeds are running on different clocks, creating a measurable update-window risk</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-06-sanctions-feeds-out-of-sync-update-clock-risk-osint-story.html">HTML</a><br />
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-06-sanctions-feeds-out-of-sync-update-clock-risk-osint-story.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-06 17:28 UTC</p>
-<p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 70 datasets • 11 domains • structure-optimized for cadence retrieval</p>
-<h2 id="quick-navigation">Quick navigation</h2>
-<ul>
-<li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
-<li><a href="#humanitarian-and-hazard-context">Humanitarian and hazard context</a></li>
-<li><a href="#energy-trade-and-maritime">Energy, trade, and maritime</a></li>
-<li><a href="#aviation-and-mobility">Aviation and mobility</a></li>
-<li><a href="#economy-governance-and-structural-risk">Economy, governance, and structural risk</a></li>
-<li><a href="#ownership-sanctions-and-procurement">Ownership, sanctions, and procurement</a></li>
-<li><a href="#ai-capability-risk-and-labor">AI capability, risk, and labor</a></li>
-<li><a href="#cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</a></li>
-<li><a href="#domestic-public-safety">Domestic public safety</a></li>
-<li><a href="#telegrampublic-channel-analytics">Telegram/public-channel analytics</a></li>
-<li><a href="#space-weather-and-disruption-context">Space weather and disruption context</a></li>
-</ul>
-<h2 id="retrieval-lenses-for-fast-story-triage">Retrieval lenses (for fast story triage)</h2>
-<p>Use this compact map before scanning full entries.</p>
-<ul>
-<li><strong>Fast operational corroboration (minutes to hourly):</strong> OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, CISA KEV Catalog, FIRST EPSS.</li>
-<li><strong>Event-tracking + anomaly detection (hourly to daily):</strong> ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.</li>
-<li><strong>Structural baselines (monthly to annual):</strong> UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.</li>
-<li><strong>Entity/ownership resolution:</strong> OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.</li>
-</ul>
-<h2 id="catalog-maintenance-rules-datasets_optimize">Catalog maintenance rules (DATASETS_OPTIMIZE)</h2>
+<h2 id="ap-preflight-publishability-gate">AP preflight (publishability gate)</h2>
 <ol>
-<li>Preserve section-level taxonomy unless a split/merge clearly improves retrieval speed.</li>
-<li>Prefer editing descriptors over moving entries across sections.</li>
-<li>Keep each entry to one sentence of scope + one sentence of caveat/value.</li>
-<li>If adding aliases in future, keep one canonical entry and mention aliases in-text.</li>
-<li>Re-run duplicate-domain and section-balance checks before publish.</li>
+<li>This is publishable now because sanctions compliance is operationally time-sensitive, and primary-source feeds currently show non-trivial update-clock divergence across major authorities.</li>
+<li>What is new: this piece quantifies the <em>metadata-level timing mismatch</em> (not just list-content differences) between OFAC, Canada, and UN consolidated feeds.</li>
+<li>Who is affected/what changes: financial institutions, logistics/compliance teams, and OSINT monitors relying on automated screening pipelines may face temporary blind spots if they assume synchronized refresh cycles.</li>
+<li>Strongest “not a story” counterargument: all screening programs should already account for asynchronous publication, so this is expected operations rather than news.</li>
+<li><strong>Editor verdict: Publish</strong> — the cross-source, timestamped evidence provides a concrete, current risk window and a clear process implication for high-impact compliance workflows.</li>
 </ol>
-<h2 id="conflict-unrest-and-information-control">Conflict, unrest, and information control</h2>
+<h2 id="what-changed-why-now">What changed / why now</h2>
+<p>As of 2026-03-06, the latest machine-readable sanctions sources are not updating on the same operational clock:
+- OFAC SDN export was last modified on <strong>2026-03-06</strong> (same day).
+- UN consolidated list reports last substantive update on <strong>2026-02-27</strong>.
+- Canada’s consolidated page states list updated <strong>2026-02-19</strong>, while the XML file itself shows a newer file-level modification date (<strong>2026-03-04</strong>), indicating possible transport refresh without clearly stated substantive list change.</p>
+<p>This is an OSINT-significant pattern because many downstream screening systems are treated as if “global sanctions data” refreshes as one stream.</p>
+<h2 id="significance-gate">Significance gate</h2>
 <ul>
-<li><a href="https://acleddata.com/">ACLED</a> — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.</li>
-<li><a href="https://ucdp.uu.se/downloads/">UCDP GED</a> — Curated historical conflict events. Best for baseline and long-window comparison, not immediate same-day claims.</li>
-<li><a href="https://dataverse.harvard.edu/dataverse/icews">ICEWS</a> — Machine-coded actor/event dataset useful for interaction trend shifts. Treat as signal-heavy and media-dependent, not ground truth.</li>
-<li><a href="https://www.gdeltproject.org/data.html">GDELT</a> — Global event/media coding for fast anomaly detection and narrative-shift tracking. Excellent early warning, weaker as final evidentiary anchor.</li>
-<li><a href="https://ooni.org/data/">OONI</a> — Network interference and censorship measurements. Useful for shutdown/censorship corroboration, with coverage uneven by probe geography.</li>
-<li><a href="https://atlas.ripe.net/docs/">RIPE Atlas</a> — Distributed active internet measurements for reachability/latency checks. Good for disruption diagnostics, limited by probe placement.</li>
-<li><a href="https://www.caida.org/projects/ioda/">CAIDA IODA</a> — Outage detection via BGP/darknet/active signals. Strong for macro outage events, less sensitive to app/platform-level blocking.</li>
+<li><strong>If true:</strong> institutions using multi-jurisdiction screening can miss newly effective designations during the asynchronous gap unless they implement jurisdiction-specific freshness rules.</li>
+<li><strong>If false:</strong> apparent lag is a metadata artifact with little practical impact; current controls are likely sufficient.</li>
+<li><strong>Who is affected:</strong> sanctions compliance units, correspondent banking operations, maritime/trade screening desks, and investigative analysts.</li>
 </ul>
-<h2 id="humanitarian-and-hazard-context">Humanitarian and hazard context</h2>
+<h2 id="evidence">Evidence</h2>
+<ol>
+<li>
+<p><strong>OFAC Sanctions List Service (SDN CSV export)</strong>
+   - Endpoint returns machine-readable SDN rows; retrieved header showed <code>Last-Modified: Fri, 06 Mar 2026 15:02:59 GMT</code>.
+   - Retrieved 2026-03-06 17:23 UTC.
+   - Source: <a href="https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV">OFAC SLS SDN.CSV</a></p>
+</li>
+<li>
+<p><strong>Consolidated Canadian Autonomous Sanctions List (Global Affairs Canada)</strong>
+   - Official page states: “list was last updated on February 19, 2026.”
+   - Retrieved 2026-03-06 17:23 UTC.
+   - Source: <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng">Canada consolidated sanctions page</a></p>
+</li>
+<li>
+<p><strong>Canada XML feed metadata</strong>
+   - XML endpoint header showed <code>Last-Modified: Wed, 04 Mar 2026 17:50:25 GMT</code>.
+   - Retrieved 2026-03-06 17:23 UTC.
+   - Source: <a href="https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml">Canada XML feed</a></p>
+</li>
+<li>
+<p><strong>UN Security Council consolidated list</strong>
+   - UN consolidated-list page states the list “was last updated on 27 February 2026.”
+   - Retrieved 2026-03-06 17:24 UTC.
+   - Source: <a href="https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list">UNSC Consolidated List page</a></p>
+</li>
+</ol>
+<h2 id="method-reproducible">Method (reproducible)</h2>
 <ul>
-<li><a href="https://api.reliefweb.int/">ReliefWeb API</a> — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.</li>
-<li><a href="https://data.humdata.org/">Humanitarian Data Exchange (HDX)</a> — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.</li>
-<li><a href="https://www.emdat.be/">EM-DAT</a> — Disaster impact database for severity and cross-event context. Reliable for structured comparisons but estimates revise over time.</li>
-<li><a href="https://www.unhcr.org/refugee-statistics/download/">UNHCR Refugee Data</a> — Displacement statistics for migration and conflict follow-through analysis. Be mindful of registration lag.</li>
-<li><a href="https://earthquake.usgs.gov/earthquakes/feed/">USGS Earthquake Feeds</a> — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.</li>
-<li><a href="https://firms.modaps.eosdis.nasa.gov/">NASA FIRMS</a> — Satellite fire hotspot detections for wildfire and conflict-adjacent fire patterns. Hotspots are signal, not cause.</li>
-<li><a href="https://www.ncei.noaa.gov/products/international-best-track-archive">NOAA IBTrACS</a> — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.</li>
-<li><a href="https://cds.climate.copernicus.eu/">Copernicus CDS (ERA5)</a> — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.</li>
+<li>Queried primary-source machine endpoints and list pages for three authorities (US OFAC, Canada, UN).</li>
+<li>Recorded two freshness indicators where available:
+  1. <strong>Declared substantive update date</strong> on official page text.
+  2. <strong>Transport-level file freshness</strong> from HTTP <code>Last-Modified</code> header.</li>
+<li>Compared date deltas across authorities to identify asynchronous windows relevant to screening operations.</li>
 </ul>
-<h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
+<h2 id="hypotheses-and-adjudication">Hypotheses and adjudication</h2>
+<ol>
+<li>
+<p><strong>H1: Major sanctions sources are currently out of sync by multiple days (supported).</strong>
+   - Prediction: latest update markers differ materially across authorities.
+   - Result: observed same-day OFAC vs 27 Feb UN vs 19 Feb declared Canada page update.</p>
+</li>
+<li>
+<p><strong>H2: Canada feed may show file-level refresh without clear substantive-list update (supported).</strong>
+   - Prediction: page-declared date and XML <code>Last-Modified</code> date diverge.
+   - Result: observed 19 Feb (declared) vs 04 Mar (file metadata).</p>
+</li>
+<li>
+<p><strong>H3 (null/artifact): differences are purely formatting artifacts with negligible operational meaning (mixed).</strong>
+   - Prediction: no plausible screening impact from timing offsets.
+   - Result: not fully rejected; impact depends on local control design, but asynchronous windows are objectively present.</p>
+</li>
+</ol>
+<h2 id="limitations">Limitations</h2>
 <ul>
-<li><a href="https://comtrade.un.org/">UN Comtrade</a> — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.</li>
-<li><a href="https://unctadstat.unctad.org/EN/">UNCTADstat</a> — Trade and shipping indicators for structural maritime baselines. Strong macro context; indicator release cadence varies.</li>
-<li><a href="https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet">World Bank Pink Sheet</a> — Commodity benchmark prices for shock context. Not a retail/local price proxy.</li>
-<li><a href="https://portwatch.imf.org/datasets/42132aa4e2fc4d41bdaf9a445f688931_0/explore">IMF PortWatch</a> — AIS-derived chokepoint transit estimates for Suez/Panama-type stress checks. Sensitive to window definitions and AIS coverage.</li>
-<li><a href="https://www.eia.gov/opendata/">U.S. EIA Open Data</a> — Official US energy series for oil/gas/power claims. Strong grounding source; unit/metadata discipline required.</li>
-<li><a href="https://agsi.gie.eu/">AGSI+</a> — European gas storage dynamics. Useful for storage-stress monitoring, but storage level alone does not imply outages.</li>
-<li><a href="https://transparency.entsoe.eu/">ENTSO-E Transparency</a> — Power flows/generation/outage indicators across Europe. High value for grid shock stories; country/product completeness varies.</li>
-<li><a href="https://globalfishingwatch.org/datasets-and-code/">Global Fishing Watch</a> — Vessel activity telemetry for disputed waters and maritime behavior changes. AIS gaps/spoofing are recurring limitations.</li>
-<li><a href="https://gisis.imo.org/">IMO GISIS</a> — Maritime safety/security registry modules. Good official context source with module-dependent completeness.</li>
-<li><a href="https://www.vortexa.com/freight-tracker/">Vortexa Freight Tracker</a> — Commercial tanker flow analytics for rerouting pressure. Strong directional signal, methodology is vendor-defined.</li>
-<li><a href="https://marinecadastre.gov/accessais/">MarineCadastre AccessAIS</a> — US-focused AIS archive access. Useful for US waters analyses, not global coverage.</li>
-<li><a href="https://www.aishub.net/api">AISHub API</a> — Community AIS data feeds for vessel tracking redundancy. Coverage quality depends on contributor network.</li>
+<li>This analysis measures <strong>freshness metadata windows</strong>, not full content-level diff of every designation across jurisdictions.</li>
+<li>Jurisdictional sanctions scopes differ by law and mandate; list-size or update-date mismatch does not imply legal inconsistency.</li>
+<li>HTTP <code>Last-Modified</code> can reflect file regeneration or hosting-layer changes, not necessarily net-new designations.</li>
 </ul>
-<h2 id="aviation-and-mobility">Aviation and mobility</h2>
-<ul>
-<li><a href="https://opensky-network.org/data">OpenSky Network</a> — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.</li>
-<li><a href="https://www.adsbexchange.com/data/">ADS-B Exchange</a> — Broad ADS-B feeds for flight path reconstruction and discontinuities. Commercial endpoint/term changes should be monitored.</li>
-<li><a href="https://www.adsb.lol/docs/open-data/api/">ADSB.lol Open Data</a> — Community-backed ADS-B API and archives. Useful as independent aviation corroboration with uneven geography.</li>
-</ul>
-<h2 id="economy-governance-and-structural-risk">Economy, governance, and structural risk</h2>
-<ul>
-<li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">World Bank Indicators API</a> — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.</li>
-<li><a href="https://www.imf.org/external/datamapper/api/">IMF Data API</a> — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.</li>
-<li><a href="https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access">Eurostat APIs (Statistics + Catalogue)</a> — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.</li>
-<li><a href="https://www.fao.org/faostat/en/">FAOSTAT</a> — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.</li>
-<li><a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">ITU ICT Indicators</a> — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.</li>
-<li><a href="https://info.worldbank.org/governance/wgi/">Worldwide Governance Indicators</a> — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.</li>
-<li><a href="https://oecd.ai/">OECD.AI</a> — Cross-country AI ecosystem/policy indicators. Best for comparative policy context, not daily movement.</li>
-<li><a href="https://www.sipri.org/databases/milex">SIPRI Milex</a> — Defense spending series for security posture trend framing. Cross-country accounting differences matter.</li>
-</ul>
-<h2 id="ownership-sanctions-and-procurement">Ownership, sanctions, and procurement</h2>
-<p><strong>Sanctions provenance rule (quality guardrail):</strong> Use originating-authority lists (e.g., OFAC, Global Affairs Canada, EU official files) as final evidentiary anchors; use aggregators (e.g., OpenSanctions) for discovery, cross-linking, and rapid triage.</p>
-<ul>
-<li><a href="https://www.opensanctions.org/datasets/">OpenSanctions</a> — Aggregated designation/entity datasets for sanctions-wave and network monitoring. Confirm high-stakes claims at originating authority.</li>
-<li><a href="https://scsanctions.un.org/resources/xml/en/consolidated.xml">UN Security Council Consolidated List</a> — Official UN consolidated sanctions list in XML/HTML/PDF with committee-linked identifiers. High-value multilateral baseline for cross-jurisdiction sanctions timing and scope checks.</li>
-<li><a href="https://api.opencorporates.com/">OpenCorporates API</a> — Company registry federation for entity resolution and corporate linkage checks. Jurisdiction depth varies.</li>
-<li><a href="https://register.openownership.org/">Open Ownership Register</a> — Beneficial ownership datasets for ownership-chain reconstruction. Coverage quality is country-dependent.</li>
-<li><a href="https://download.companieshouse.gov.uk/en_pscdata.html">UK Companies House PSC</a> — UK person-with-significant-control snapshots. Powerful for UK ownership-change analysis with filing-lag caveats.</li>
-<li><a href="https://api.usaspending.gov/">USAspending API</a> — US federal spending/procurement patterns and vendor concentration. Interpret obligation vs outlay carefully.</li>
-<li><a href="https://data.ted.europa.eu/">TED Open Data</a> — EU procurement notices and awards for cross-country trend analysis. Requires normalization across taxonomy changes.</li>
-<li><a href="https://www.contractsfinder.service.gov.uk/apidocumentation">UK Contracts Finder API</a> — UK procurement opportunities/awards stream. Field completeness differs across authorities.</li>
-<li><a href="https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file">GLEIF LEI Golden Copy</a> — Daily global legal-entity identifiers and reference data. High-value backbone for cross-border entity deduplication.</li>
-<li><a href="https://ofac.treasury.gov/sanctions-list-service">OFAC Sanctions List Service (SLS)</a> — Official U.S. Treasury sanctions list distribution (SDN + consolidated non-SDN datasets) with machine-readable download pathways. Critical primary-source anchor for sanctions designation timing and entity-screening verification.</li>
-<li><a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng">Consolidated Canadian Autonomous Sanctions List</a> — Global Affairs Canada list of individuals/entities sanctioned under SEMA and JVCFOA, published in HTML/PDF/XML. Valuable jurisdictional complement for cross-country sanctions verification and entity-resolution workflows.</li>
-</ul>
-<h2 id="ai-capability-risk-and-labor">AI capability, risk, and labor</h2>
-<ul>
-<li><a href="https://crfm.stanford.edu/helm/">Stanford HELM</a> — Standardized model benchmark tracking for capability/safety comparisons. Protocol drift can mimic model jumps.</li>
-<li><a href="https://epoch.ai/data/gpu-clusters">Epoch AI GPU Clusters</a> — Frontier compute concentration and buildout signal. Public disclosure bias means incomplete coverage.</li>
-<li><a href="https://incidentdatabase.ai/">AI Incident Database</a> — Curated AI incident records for qualitative risk trend monitoring. Public-report dependence limits completeness.</li>
-<li><a href="https://lmarena.ai/leaderboard">LMArena</a> — Human-preference leaderboard signal for model shifts and previews. Preference-based Elo is useful but sampling-sensitive.</li>
-<li><a href="https://artificialanalysis.ai/">Artificial Analysis</a> — Multi-benchmark model comparisons for cross-checking leaderboard narratives. Vendor/test selection can shape rankings.</li>
-<li><a href="https://www.hiringlab.org/">Indeed Hiring Lab</a> — Labor-market signal on skills demand and hiring shifts. Platform composition effects should be considered.</li>
-<li><a href="https://economicgraph.linkedin.com/">LinkedIn Economic Graph</a> — Workforce trend analytics for occupational and skills transitions. Platform sample bias applies.</li>
-</ul>
-<h2 id="cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</h2>
-<ul>
-<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV Catalog</a> — Authoritative list of vulnerabilities observed exploited in the wild for federal prioritization. Crucial corroboration source for exploitation claims.</li>
-<li><a href="https://www.first.org/epss/data_stats">FIRST EPSS</a> — Daily exploit-likelihood scoring for CVE triage prioritization. Probability signal, not exploitation confirmation.</li>
-<li><a href="https://nvd.nist.gov/developers/vulnerabilities">NIST NVD CVE API</a> — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.</li>
-</ul>
-<h2 id="domestic-public-safety">Domestic public safety</h2>
-<ul>
-<li><a href="https://cde.ucr.cjis.gov/">FBI CDE/UCR</a> — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.</li>
-<li><a href="https://www.statcan.gc.ca/">Statistics Canada</a> — Canadian official statistical series for national and provincial context. Release lag and revisions apply.</li>
-<li><a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2">Chicago Crimes (2001–present)</a> — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.</li>
-<li><a href="https://open.toronto.ca/dataset/major-crime-indicators/">Toronto MCI</a> — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.</li>
-<li><a href="https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data">Edmonton EPS occurrences</a> — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.</li>
-</ul>
-<h2 id="telegrampublic-channel-analytics">Telegram/public-channel analytics</h2>
-<ul>
-<li><a href="https://tgstat.com/api/stat">TGStat API</a> — Public Telegram channel growth/citation signal. Third-party methodology should be treated as a caveated proxy.</li>
-<li><a href="https://api.telemetr.io/">Telemetr API</a> — Channel benchmarking and trend data for comparative network scans. Coverage and terms may change.</li>
-<li><a href="https://github.com/SystemsLab-Sapienza/TGDataset">TGDataset</a> — Research snapshot corpus for historical Telegram network structure. Best for baseline context, not live operational monitoring.</li>
-</ul>
-<h2 id="space-weather-and-disruption-context">Space weather and disruption context</h2>
-<ul>
-<li><a href="https://services.swpc.noaa.gov/json/">NOAA SWPC JSON feeds</a> — Operational space-weather observations/forecasts (e.g., flare/Kp products). Useful for timing and severity context in comms/power/GNSS stories, with forecast/observed distinction required.</li>
-</ul>
+<h2 id="confidence">Confidence</h2>
+<p><strong>Medium.</strong> Timing divergence is directly observed from primary sources, but operational risk magnitude will vary by institution-specific ingestion and escalation controls.</p>
+<h2 id="one-line-decision-relevance">One-line decision relevance</h2>
+<p>Treat sanctions ingestion as jurisdiction-specific clocks, not a single global refresh stream, or accept measurable blind-spot windows.</p>
 </body>
 </html>
