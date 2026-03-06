@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CBP watchlist-match mix shift in early FY2026: USBP share up, port-of-entry volume still high</title>
+  <title>CBP watchlist-match mix shift in early FY2026: USBP share rises while port-of-entry volume remains high</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,85 +12,42 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="cbp-watchlist-match-mix-shift-in-early-fy2026-usbp-share-up-port-of-entry-volume-still-high">CBP watchlist-match mix shift in early FY2026: USBP share up, port-of-entry volume still high</h1>
+  <h1 id="cbp-watchlist-match-mix-shift-in-early-fy2026-usbp-share-rises-while-port-of-entry-volume-remains-high">CBP watchlist-match mix shift in early FY2026: USBP share rises while port-of-entry volume remains high</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-06-cbp-tsds-encounter-mix-shift-early-fy2026-osint-story.html">HTML</a><br />
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-06-cbp-tsds-encounter-mix-shift-early-fy2026-osint-story.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-06 06:09 UTC</p>
-<h2 id="ap-preflight-publishability-gate">AP preflight (publishability gate)</h2>
-<ol>
-<li><strong>Why AP would run this today:</strong> U.S. border security metrics are a live policy issue, and CBP’s own table now shows a notable shift in terrorism-related encounter composition at the start of FY2026.</li>
-<li><strong>What is genuinely new:</strong> The specific early-FY2026 pattern (USBP percentage increase to 0.0971% while OFO port-of-entry terrorism-related encounters are already near FY2025 totals) is a fresh data-point synthesis from primary tables.</li>
-<li><strong>Who is affected / what changes:</strong> Border-security policymakers, operational planners, and the public interpreting whether risk is changing versus denominator/method effects.</li>
-<li><strong>Strongest “not a story” counterargument:</strong> The signal could be mostly a partial-year denominator artifact, and TSDS-related records are not equivalent to confirmed terrorism offenses.</li>
-<li><strong>Editor verdict:</strong> <strong>Publish</strong> — the signal is material, caveated, and decision-relevant if framed explicitly as an early indicator rather than a settled trend.</li>
-</ol>
-<h2 id="why-this-update-now">Why this update now</h2>
-<p>A newly updated CBP enforcement table (last modified Feb. 19, 2026) shows two concurrent facts that are easy to miss when read separately: a higher USBP watchlist-match share and still-heavy watchlist-match volume at legal land ports.</p>
-<h2 id="significance-gate-why-this-matters">Significance gate (why this matters)</h2>
+<p><strong>Dateline:</strong> 2026-03-06 07:40 UTC</p>
+<p>U.S. Customs and Border Protection (CBP) data for early FY2026 shows a notable mix shift in terrorism-related screening encounters: the U.S. Border Patrol (USBP) share is higher than in FY2025, even though the absolute USBP count is lower.</p>
+<p>At the same time, Office of Field Operations (OFO) land-port terrorism-related encounters are already near FY2025 full-year levels by January. Read together, those two signals suggest composition change, not a simple one-direction trend.</p>
+<p>CBP reports USBP terrorism-related encounters at 106 in FY2025 and 34 in FY2026 through January, while the USBP percentage of total USBP encounters rises from 0.0287% to 0.0971%. CBP also reports OFO land-port terrorism-related encounters at 4,011 in FY2025 versus 3,927 through January FY2026.</p>
+<p>The most cautious interpretation is that denominator effects and operational factors are both in play: a smaller total USBP denominator can raise percentages even when counts fall, while OFO volume staying high weakens a pure “early-year artifact” explanation.</p>
+<h2 id="appendix-method">Appendix: Method</h2>
 <ul>
-<li><strong>If true (structural shift):</strong> Screening burden is becoming more concentrated in specific channels/components, which can change staffing and intelligence-prioritization choices.</li>
-<li><strong>If false (artifact):</strong> Public and policy narratives may over-read early, partial-year ratios.</li>
-<li><strong>Who is affected:</strong> CBP component leadership, congressional oversight, local port operations, and media/policy consumers relying on top-line percentages.</li>
-<li><strong>Decision relevance:</strong> Whether to interpret early FY2026 numbers as risk growth, process change, or denominator math directly affects resource-allocation arguments.</li>
+<li>Source: CBP Enforcement Statistics table, compared FY2025 rows against FY2026-to-January rows within the same table.</li>
+<li>Metrics used:</li>
+<li>USBP terrorism-related counts</li>
+<li>CBP-reported USBP percentage of total USBP encounters</li>
+<li>OFO land-port terrorism-related counts</li>
+<li>Cross-source normalization was intentionally avoided to reduce denominator mismatch risk.</li>
 </ul>
-<h2 id="evidence-primary-linked">Evidence (primary, linked)</h2>
-<ol>
-<li>
-<p><strong>CBP Enforcement Statistics</strong> (retrieved 2026-03-06 06:02 UTC) reports:
-   - USBP terrorism-related encounters: <strong>106 (FY25)</strong> and <strong>34 (FY26 to January)</strong>.
-   - USBP “Percentage of Total USBP Encounters”: <strong>0.0287% (FY25)</strong> vs <strong>0.0971% (FY26 to January)</strong>.
-   - OFO land-port terrorism-related encounters (all nationalities): <strong>4,011 (FY25)</strong> vs <strong>3,927 (FY26 to January)</strong>.<br />
-   Source: <a href="https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics">CBP Enforcement Statistics</a></p>
-</li>
-<li>
-<p><strong>CBP methodological caveat on TSDS rows</strong> (same table, retrieved 2026-03-06 06:02 UTC): terrorism-related records may include TSDS records; data are screening records and not standalone adjudications of criminal guilt.<br />
-   Source: <a href="https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics">CBP Enforcement Statistics — TSDS section notes</a></p>
-</li>
-<li>
-<p><strong>FBI watchlisting process context</strong> (retrieved 2026-03-06 06:02 UTC): TSDS is a U.S. government screening dataset used for watchlisting and screening support; inclusion criteria and handling are process-governed and sensitive.<br />
-   Source: <a href="https://www.fbi.gov/file-repository/counterterrorism/terrorist-watchlisting-transparency-document-april-2024-050224.pdf">FBI Terrorist Watchlisting Transparency Document (PDF)</a></p>
-</li>
-</ol>
-<h2 id="method-reproducible">Method (reproducible)</h2>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
-<li>Scope: FY25 vs FY26-to-January values from the same CBP table to avoid cross-source denominator drift.</li>
-<li>Metric focus:</li>
-<li>CBP-reported USBP percentage row (already normalized by component encounters).</li>
-<li>Component-count comparison (USBP between ports vs OFO at land ports of entry).</li>
-<li>Falsification attempt:</li>
-<li>Tested whether this can be dismissed as a single noisy monthly value; rejected because the reported shift appears in CBP’s own FY aggregate rows and is accompanied by a component-mix contrast (OFO still near prior-year totals by January).</li>
+<li>FY2026 values are partial-year (through January) and may be revised.</li>
+<li>CBP terrorism-related rows reference screening records (including Terrorist Screening Dataset context), not direct counts of prosecuted terrorism crimes.</li>
+<li>Between-ports (USBP) and ports-of-entry (OFO) operate in different environments, so direct comparison has structural limits.</li>
 </ul>
-<h2 id="hypotheses-and-adjudication">Hypotheses and adjudication</h2>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
+<p><strong>Medium.</strong> The underlying numbers are from a primary CBP source, but interpretation remains sensitive to partial-year timing and screening-data semantics.</p>
+<h2 id="appendix-sources">Appendix: Sources</h2>
 <ol>
-<li>
-<p><strong>Denominator compression hypothesis (supported):</strong> USBP total encounters fell enough that a smaller absolute count can still produce a higher percentage.
-   - Prediction: percentage can rise despite lower absolute USBP terrorism-related counts.
-   - Test: CBP table shows exactly that pattern (34 vs 106 counts, but 0.0971% vs 0.0287%).</p>
-</li>
-<li>
-<p><strong>Screening/process shift hypothesis (mixed):</strong> detection prioritization or referral patterns changed, raising hit concentration in some channels.
-   - Prediction: component mix should look uneven rather than uniformly down.
-   - Test: OFO land-port terrorism-related encounters remain very high early in FY26 (3,927 by January), while USBP share behavior differs; this is directionally consistent but not conclusive.</p>
-</li>
-<li>
-<p><strong>Artifact-only hypothesis (weakly supported):</strong> apparent shift is mostly a reporting-window artifact and not operationally meaningful.
-   - Prediction: all components should scale down similarly in early-year views.
-   - Test: OFO near-full-year-equivalent volume by January weakens a pure artifact explanation, though partial-year caveats remain important.</p>
-</li>
+<li>CBP Enforcement Statistics (retrieved 2026-03-06 06:02 UTC):<br />
+<a href="https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics">https://www.cbp.gov/newsroom/stats/cbp-enforcement-statistics</a></li>
+<li>FBI Terrorist Watchlisting Transparency Document (context on TSDS/watchlisting process):<br />
+<a href="https://www.fbi.gov/file-repository/counterterrorism/terrorist-watchlisting-transparency-document-april-2024-050224.pdf">https://www.fbi.gov/file-repository/counterterrorism/terrorist-watchlisting-transparency-document-april-2024-050224.pdf</a></li>
 </ol>
-<h2 id="limitations">Limitations</h2>
-<ul>
-<li>FY26 values are partial-year (to January) and may revise.</li>
-<li>TSDS-related encounters are screening matches/records context, not direct measures of prosecuted terrorism crimes.</li>
-<li>Cross-component comparability is constrained by different operating contexts (between ports vs land ports of entry).</li>
-</ul>
-<h2 id="confidence">Confidence</h2>
-<p><strong>Medium.</strong> The core pattern is directly in a primary CBP table, but interpretation risk is non-trivial due to partial-year timing and screening-data semantics.</p>
-<h2 id="one-line-decision-relevance">One-line decision relevance</h2>
-<p>Early FY2026 border-security interpretation should treat the watchlist signal as a <strong>composition shift requiring component-level analysis</strong>, not as a simple “up/down” headline.</p>
 </body>
 </html>
