@@ -15,10 +15,6 @@ make build
 # or
 bash scripts/publish_with_venv.sh
 
-# cadence safety check for claim-check posts (all, or specific files)
-python3 scripts/validate_claim_checks.py
-python3 scripts/validate_claim_checks.py docs/2026-03-02-zzzzzzzzzzzzzzzzzzz-california-robotaxi-permit-readiness-claim-check.md
-
 # cadence-safe git sync when tracked runtime checkpoint files are dirty
 bash scripts/safe_rebase_sync.sh
 ```

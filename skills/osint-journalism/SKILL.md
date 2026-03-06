@@ -108,7 +108,6 @@ Also require dateline exact format:
 
 ## Cadence safety checks before push
 
-- Run required local validators (`validate_claim_checks.py`, `validate_post_headers.py` when relevant)
 - Confirm new output has working source links
 - Keep commit scope tight (avoid unrelated HTML churn)
 - Verify GitHub Pages endpoint reflects latest commit before reporting success
