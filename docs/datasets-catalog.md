@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-06 18:06 UTC
+**Dateline:** 2026-03-07 03:05 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 70 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 73 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -56,6 +56,7 @@ Use this compact map before scanning full entries.
 - [USGS Earthquake Feeds](https://earthquake.usgs.gov/earthquakes/feed/) — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.
 - [NASA FIRMS](https://firms.modaps.eosdis.nasa.gov/) — Satellite fire hotspot detections for wildfire and conflict-adjacent fire patterns. Hotspots are signal, not cause.
 - [NOAA IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive) — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.
+- [NOAA CO-OPS Data Retrieval API](https://api.tidesandcurrents.noaa.gov/api/prod/) — Official U.S. coastal observations/predictions (water level, tides, currents, meteorology) with high-frequency station queries. Strong disruption-context source with station-coverage and interval-limit constraints.
 - [Copernicus CDS (ERA5)](https://cds.climate.copernicus.eu/) — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.
 
 ## Energy, trade, and maritime
@@ -81,6 +82,8 @@ Use this compact map before scanning full entries.
 - [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.
 - [IMF Data API](https://www.imf.org/external/datamapper/api/) — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.
 - [Eurostat APIs (Statistics + Catalogue)](https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access) — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.
+- [U.S. Census Bureau APIs](https://www.census.gov/data/developers/data-sets.html) — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.
+- [FRED API (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) — Large macro/financial time-series API with release, category, and observation endpoints for reproducible economic context checks. Excellent baseline layer, but mixed source provenance across series requires metadata discipline.
 - [FAOSTAT](https://www.fao.org/faostat/en/) — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.
 - [ITU ICT Indicators](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx) — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.
 - [Worldwide Governance Indicators](https://info.worldbank.org/governance/wgi/) — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.

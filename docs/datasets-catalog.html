@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-06 18:06 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-07 03:05 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 70 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 73 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -73,6 +74,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://earthquake.usgs.gov/earthquakes/feed/">USGS Earthquake Feeds</a> — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.</li>
 <li><a href="https://firms.modaps.eosdis.nasa.gov/">NASA FIRMS</a> — Satellite fire hotspot detections for wildfire and conflict-adjacent fire patterns. Hotspots are signal, not cause.</li>
 <li><a href="https://www.ncei.noaa.gov/products/international-best-track-archive">NOAA IBTrACS</a> — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.</li>
+<li><a href="https://api.tidesandcurrents.noaa.gov/api/prod/">NOAA CO-OPS Data Retrieval API</a> — Official U.S. coastal observations/predictions (water level, tides, currents, meteorology) with high-frequency station queries. Strong disruption-context source with station-coverage and interval-limit constraints.</li>
 <li><a href="https://cds.climate.copernicus.eu/">Copernicus CDS (ERA5)</a> — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.</li>
 </ul>
 <h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
@@ -101,6 +103,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">World Bank Indicators API</a> — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.</li>
 <li><a href="https://www.imf.org/external/datamapper/api/">IMF Data API</a> — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.</li>
 <li><a href="https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access">Eurostat APIs (Statistics + Catalogue)</a> — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.</li>
+<li><a href="https://www.census.gov/data/developers/data-sets.html">U.S. Census Bureau APIs</a> — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.</li>
+<li><a href="https://fred.stlouisfed.org/docs/api/fred/">FRED API (St. Louis Fed)</a> — Large macro/financial time-series API with release, category, and observation endpoints for reproducible economic context checks. Excellent baseline layer, but mixed source provenance across series requires metadata discipline.</li>
 <li><a href="https://www.fao.org/faostat/en/">FAOSTAT</a> — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.</li>
 <li><a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">ITU ICT Indicators</a> — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.</li>
 <li><a href="https://info.worldbank.org/governance/wgi/">Worldwide Governance Indicators</a> — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.</li>
