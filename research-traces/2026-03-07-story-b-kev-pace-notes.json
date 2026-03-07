@@ -1,0 +1,48 @@
+{
+  "retrieved_utc": "2026-03-07 22:59:54",
+  "total": 1536,
+  "max_date_added": "2026-03-05",
+  "recent_30d_window_start": "2026-02-04",
+  "recent_30d_additions": 31,
+  "ytd_through_mar7": {
+    "2023": 22,
+    "2024": 35,
+    "2025": 50,
+    "2026": 52
+  },
+  "recent_top_vendors": [
+    [
+      "Microsoft",
+      8
+    ],
+    [
+      "Apple",
+      4
+    ],
+    [
+      "Cisco",
+      2
+    ],
+    [
+      "Roundcube",
+      2
+    ],
+    [
+      "Hikvision",
+      1
+    ],
+    [
+      "Rockwell",
+      1
+    ],
+    [
+      "Broadcom",
+      1
+    ],
+    [
+      "Qualcomm",
+      1
+    ]
+  ],
+  "known_ransomware_campaign_use_count": 312
+}
