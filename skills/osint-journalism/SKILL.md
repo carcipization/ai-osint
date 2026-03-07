@@ -106,6 +106,58 @@ Also require dateline exact format:
 
 - `**Dateline:** YYYY-MM-DD HH:MM UTC`
 
+## Verification workflow (mandatory for stories + claim-checks)
+
+1. **Frame the testable question**
+   - Write one sentence for the exact proposition being tested.
+   - Split into sub-claims if the headline mixes multiple assertions.
+
+2. **Build an evidence ledger (private)**
+   - Track each source as: URL, publisher, timestamp, what it proves, known limitations.
+   - Mark every item as Observation / Inference / Unknown.
+
+3. **Run contradiction pass before drafting**
+   - Seek at least one source that could falsify the working thesis.
+   - If disconfirming evidence exists, surface it prominently, not as a footnote.
+
+4. **Check numbers mechanically**
+   - Recompute percentages, deltas, ratios, and period-over-period changes.
+   - State denominator and timeframe for every statistic in prose.
+
+5. **Assign confidence by evidence quality, not intuition**
+   - Confidence must map to source tier strength + method stability + recency.
+
+## Sourcing rigor rules
+
+- Prefer first-party machine-readable sources over screenshots, summaries, or reposts.
+- Treat single-source stories as provisional unless the source is a direct primary authority.
+- Timestamp sensitivity check: if data can revise, label it explicitly as preliminary.
+- Quote claims precisely; do not strengthen wording beyond what the source says.
+- Keep attribution close to the claim sentence (reader should not hunt for provenance).
+
+## Claim-check quality guardrails
+
+- Distinguish clearly between:
+  - what is directly measured,
+  - what is modeled/estimated,
+  - what is inferred by context.
+- Never let a binary verdict hide important uncertainty bands.
+- If a key input is missing, choose **Inconclusive** over forced certainty.
+- Include at least one "what would change this verdict" condition in limitations.
+
+## Narrative clarity checklist
+
+- Lead with the answer, then the strongest evidence, then why it matters.
+- Keep paragraphs short and single-purpose.
+- Replace abstract method language with concrete verbs (measured, counted, compared, matched).
+- Avoid stacked caveats in one sentence; distribute them where each uncertainty appears.
+
+## Corrections and updates protocol
+
+- If a published post is materially wrong, correct fast and state what changed.
+- For follow-ups, explicitly separate: unchanged findings vs new findings.
+- Preserve an audit trail in `research-traces/` for major methodological changes.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
