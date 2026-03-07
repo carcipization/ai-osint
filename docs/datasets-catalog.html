@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-07 23:14 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-07 23:10 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 76 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 74 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -33,8 +34,14 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="#ai-capability-risk-and-labor">AI capability, risk, and labor</a></li>
 <li><a href="#cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</a></li>
 <li><a href="#domestic-public-safety">Domestic public safety</a></li>
-<li><a href="#telegrampublic-channel-analytics">Telegram/public-channel analytics</a></li>
+<li><a href="#telegram-and-public-channel-analytics">Telegram and public-channel analytics</a></li>
 <li><a href="#space-weather-and-disruption-context">Space weather and disruption context</a></li>
+</ul>
+<h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
+<ul>
+<li><strong>Section balance (entries):</strong> Economy/governance (13), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
+<li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
 <h2 id="retrieval-lenses-for-fast-story-triage">Retrieval lenses (for fast story triage)</h2>
 <p>Use this compact map before scanning full entries.</p>
@@ -152,7 +159,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://open.toronto.ca/dataset/major-crime-indicators/">Toronto MCI</a> — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.</li>
 <li><a href="https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data">Edmonton EPS occurrences</a> — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.</li>
 </ul>
-<h2 id="telegrampublic-channel-analytics">Telegram/public-channel analytics</h2>
+<h2 id="telegram-and-public-channel-analytics">Telegram and public-channel analytics</h2>
 <ul>
 <li><a href="https://tgstat.com/api/stat">TGStat API</a> — Public Telegram channel growth/citation signal. Third-party methodology should be treated as a caveated proxy.</li>
 <li><a href="https://api.telemetr.io/">Telemetr API</a> — Channel benchmarking and trend data for comparative network scans. Coverage and terms may change.</li>

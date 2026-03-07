@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-07 23:14 UTC
+**Dateline:** 2026-03-07 23:10 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 76 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 74 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -19,8 +19,13 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [AI capability, risk, and labor](#ai-capability-risk-and-labor)
 - [Cyber vulnerability and exploitation risk](#cyber-vulnerability-and-exploitation-risk)
 - [Domestic public safety](#domestic-public-safety)
-- [Telegram/public-channel analytics](#telegrampublic-channel-analytics)
+- [Telegram and public-channel analytics](#telegram-and-public-channel-analytics)
 - [Space weather and disruption context](#space-weather-and-disruption-context)
+
+## Structural QA snapshot
+- **Section balance (entries):** Economy/governance (13), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
+- **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
 ## Retrieval lenses (for fast story triage)
 Use this compact map before scanning full entries.
@@ -130,7 +135,7 @@ Use this compact map before scanning full entries.
 - [Toronto MCI](https://open.toronto.ca/dataset/major-crime-indicators/) — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.
 - [Edmonton EPS occurrences](https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data) — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.
 
-## Telegram/public-channel analytics
+## Telegram and public-channel analytics
 - [TGStat API](https://tgstat.com/api/stat) — Public Telegram channel growth/citation signal. Third-party methodology should be treated as a caveated proxy.
 - [Telemetr API](https://api.telemetr.io/) — Channel benchmarking and trend data for comparative network scans. Coverage and terms may change.
 - [TGDataset](https://github.com/SystemsLab-Sapienza/TGDataset) — Research snapshot corpus for historical Telegram network structure. Best for baseline context, not live operational monitoring.
