@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-07 03:05 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-07 23:14 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 73 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 76 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -104,6 +105,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access">Eurostat APIs (Statistics + Catalogue)</a> — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.</li>
 <li><a href="https://www.census.gov/data/developers/data-sets.html">U.S. Census Bureau APIs</a> — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.</li>
 <li><a href="https://fred.stlouisfed.org/docs/api/fred/">FRED API (St. Louis Fed)</a> — Large macro/financial time-series API with release, category, and observation endpoints for reproducible economic context checks. Excellent baseline layer, but mixed source provenance across series requires metadata discipline.</li>
+<li><a href="https://www.bls.gov/developers/">BLS Public Data API</a> — U.S. Bureau of Labor Statistics machine-readable labor series (employment, CPI, PPI, productivity and more) for high-confidence domestic labor/inflation baselines. Strong official coverage with series-ID and seasonal-adjustment handling required.</li>
+<li><a href="https://apps.bea.gov/API/signup/">BEA Data API</a> — U.S. Bureau of Economic Analysis API for GDP, personal income, international transactions, and regional accounts used in macro claim context checks. Primary-source economic backbone with revision-aware interpretation needed around release windows.</li>
+<li><a href="https://data.ecb.europa.eu/help/api/overview">ECB Data Portal API / SDW</a> — European Central Bank Statistical Data Warehouse API for euro area monetary, financial, and banking indicators. High-value eurozone baseline layer, but concept/code-list precision is essential for reproducible pulls.</li>
 <li><a href="https://www.fao.org/faostat/en/">FAOSTAT</a> — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.</li>
 <li><a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">ITU ICT Indicators</a> — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.</li>
 <li><a href="https://info.worldbank.org/governance/wgi/">Worldwide Governance Indicators</a> — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.</li>

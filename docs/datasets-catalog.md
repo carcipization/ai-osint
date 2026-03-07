@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-07 03:05 UTC
+**Dateline:** 2026-03-07 23:14 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 73 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 76 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -84,6 +84,9 @@ Use this compact map before scanning full entries.
 - [Eurostat APIs (Statistics + Catalogue)](https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access) — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.
 - [U.S. Census Bureau APIs](https://www.census.gov/data/developers/data-sets.html) — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.
 - [FRED API (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) — Large macro/financial time-series API with release, category, and observation endpoints for reproducible economic context checks. Excellent baseline layer, but mixed source provenance across series requires metadata discipline.
+- [BLS Public Data API](https://www.bls.gov/developers/) — U.S. Bureau of Labor Statistics machine-readable labor series (employment, CPI, PPI, productivity and more) for high-confidence domestic labor/inflation baselines. Strong official coverage with series-ID and seasonal-adjustment handling required.
+- [BEA Data API](https://apps.bea.gov/API/signup/) — U.S. Bureau of Economic Analysis API for GDP, personal income, international transactions, and regional accounts used in macro claim context checks. Primary-source economic backbone with revision-aware interpretation needed around release windows.
+- [ECB Data Portal API / SDW](https://data.ecb.europa.eu/help/api/overview) — European Central Bank Statistical Data Warehouse API for euro area monetary, financial, and banking indicators. High-value eurozone baseline layer, but concept/code-list precision is essential for reproducible pulls.
 - [FAOSTAT](https://www.fao.org/faostat/en/) — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.
 - [ITU ICT Indicators](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx) — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.
 - [Worldwide Governance Indicators](https://info.worldbank.org/governance/wgi/) — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.
