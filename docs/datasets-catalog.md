@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-07 23:10 UTC
+**Dateline:** 2026-03-08 03:18 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 74 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 78 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,7 +23,7 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (13), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Section balance (entries):** Economy/governance (17), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -92,6 +92,10 @@ Use this compact map before scanning full entries.
 - [BLS Public Data API](https://www.bls.gov/developers/) — U.S. Bureau of Labor Statistics machine-readable labor series (employment, CPI, PPI, productivity and more) for high-confidence domestic labor/inflation baselines. Strong official coverage with series-ID and seasonal-adjustment handling required.
 - [BEA Data API](https://apps.bea.gov/API/signup/) — U.S. Bureau of Economic Analysis API for GDP, personal income, international transactions, and regional accounts used in macro claim context checks. Primary-source economic backbone with revision-aware interpretation needed around release windows.
 - [ECB Data Portal API / SDW](https://data.ecb.europa.eu/help/api/overview) — European Central Bank Statistical Data Warehouse API for euro area monetary, financial, and banking indicators. High-value eurozone baseline layer, but concept/code-list precision is essential for reproducible pulls.
+- [BIS Data Portal API](https://data.bis.org/help/api) — Bank for International Settlements machine-readable macro-financial and banking statistics for cross-border credit, debt, and liquidity context. Strong systemic-risk baseline with careful series-key selection required.
+- [OECD SDMX-JSON API](https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html) — OECD programmatic access to macro, labor, and policy indicators in SDMX structures, useful for multi-country denominator checks. High comparability value, but dataset dimensions and revisions vary by domain.
+- [U.S. Treasury FiscalData API](https://fiscaldata.treasury.gov/api-documentation/) — Official U.S. Treasury API for debt, cash, deficit, and revenue series used in fiscal stress and financing claims. First-party authority source with table/version metadata discipline needed.
+- [Bank of England Database API](https://www.bankofengland.co.uk/boeapps/database/help.asp?Back=Y&Highlight=CSV) — Official Bank of England statistical database endpoints for rates, money, and balance-sheet context in UK-focused macro stories. Valuable central-bank anchor with legacy query syntax constraints.
 - [FAOSTAT](https://www.fao.org/faostat/en/) — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.
 - [ITU ICT Indicators](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx) — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.
 - [Worldwide Governance Indicators](https://info.worldbank.org/governance/wgi/) — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.

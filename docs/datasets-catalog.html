@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-07 23:10 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-08 03:18 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 74 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 78 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,7 +39,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (13), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (17), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -113,6 +114,10 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://www.bls.gov/developers/">BLS Public Data API</a> — U.S. Bureau of Labor Statistics machine-readable labor series (employment, CPI, PPI, productivity and more) for high-confidence domestic labor/inflation baselines. Strong official coverage with series-ID and seasonal-adjustment handling required.</li>
 <li><a href="https://apps.bea.gov/API/signup/">BEA Data API</a> — U.S. Bureau of Economic Analysis API for GDP, personal income, international transactions, and regional accounts used in macro claim context checks. Primary-source economic backbone with revision-aware interpretation needed around release windows.</li>
 <li><a href="https://data.ecb.europa.eu/help/api/overview">ECB Data Portal API / SDW</a> — European Central Bank Statistical Data Warehouse API for euro area monetary, financial, and banking indicators. High-value eurozone baseline layer, but concept/code-list precision is essential for reproducible pulls.</li>
+<li><a href="https://data.bis.org/help/api">BIS Data Portal API</a> — Bank for International Settlements machine-readable macro-financial and banking statistics for cross-border credit, debt, and liquidity context. Strong systemic-risk baseline with careful series-key selection required.</li>
+<li><a href="https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html">OECD SDMX-JSON API</a> — OECD programmatic access to macro, labor, and policy indicators in SDMX structures, useful for multi-country denominator checks. High comparability value, but dataset dimensions and revisions vary by domain.</li>
+<li><a href="https://fiscaldata.treasury.gov/api-documentation/">U.S. Treasury FiscalData API</a> — Official U.S. Treasury API for debt, cash, deficit, and revenue series used in fiscal stress and financing claims. First-party authority source with table/version metadata discipline needed.</li>
+<li><a href="https://www.bankofengland.co.uk/boeapps/database/help.asp?Back=Y&amp;Highlight=CSV">Bank of England Database API</a> — Official Bank of England statistical database endpoints for rates, money, and balance-sheet context in UK-focused macro stories. Valuable central-bank anchor with legacy query syntax constraints.</li>
 <li><a href="https://www.fao.org/faostat/en/">FAOSTAT</a> — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.</li>
 <li><a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">ITU ICT Indicators</a> — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.</li>
 <li><a href="https://info.worldbank.org/governance/wgi/">Worldwide Governance Indicators</a> — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.</li>
