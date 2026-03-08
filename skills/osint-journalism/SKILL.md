@@ -156,16 +156,23 @@ Also require dateline exact format:
 
 These rules target recurring weak spots in OSINT reporting quality: overreliance on single artifacts, weak provenance for social content, and under-explained uncertainty.
 
-### 1) UGC provenance ladder (image/video/social posts)
+### 1) UGC provenance fit-for-claim (image/video/social posts)
 
-For any user-generated content used as evidence, document at least 3 checks from different families:
-- Source check: account history, prior behavior, and whether the uploader appears original or a repeater.
+Do not use a fixed checklist count. Choose checks based on what the claim actually asserts, and cover the dimensions required to validate that claim.
+
+- If a claim depends on **where** something happened, prioritize and document location checks.
+- If it depends on **when** it happened, prioritize and document timing checks.
+- If it depends on **what** is shown, prioritize and document content/authenticity checks.
+- If it depends on **who** posted it or chain-of-custody, prioritize and document source/provenance checks.
+
+Available check families:
+- Source check: account history, prior behavior, and whether uploader appears original vs repeater.
 - Content check: reverse-image/keyframe search for prior appearances or context shifts.
 - Time check: chronolocation cues (sun/shadow/weather/event timing) or upload-time consistency.
 - Place check: geolocation cues matched to maps/satellite/street-level references.
-- Integrity check: note whether metadata is missing/stripped and whether that limits certainty.
+- Integrity check: whether metadata is missing/stripped and how that limits certainty.
 
-If fewer than 3 checks are possible, downgrade confidence and say why.
+Minimum standard: evidence must cover every critical dimension of the claim; if any critical dimension remains unverified, downgrade confidence and state exactly what is missing.
 
 ### 2) Corroboration floor by claim criticality
 
