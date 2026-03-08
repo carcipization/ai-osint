@@ -24,8 +24,24 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 
 ## Structural QA snapshot
 - **Section balance (entries):** Economy/governance (21), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 21+12+11+9+7+7+5+3+3+3+1 = **82** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
+
+## Retrieval aliases (canonical domain tokens)
+Use these stable tokens in internal retrieval notes so query phrasing stays consistent across cadence runs.
+
+- **conflict-control:** conflict, unrest, censorship, shutdowns, outages
+- **humanitarian-hazard:** earthquakes, disasters, displacement, fires, coastal
+- **energy-trade-maritime:** shipping, chokepoints, commodities, power, gas
+- **aviation-mobility:** flights, ADS-B, routes, air traffic
+- **economy-governance-risk:** macro, central-bank, labor, fiscal, governance
+- **ownership-sanctions-procurement:** sanctions, entities, beneficial ownership, contracts
+- **ai-risk-labor:** model capability, incidents, compute, hiring
+- **cyber-exploitation:** CVE, KEV, EPSS, exploitation
+- **public-safety:** crime, police, city incidents
+- **telegram-analytics:** channels, citations, growth
+- **space-weather:** solar flares, geomagnetic, Kp, SWPC
 
 ## Retrieval lenses (for fast story triage)
 Use this compact map before scanning full entries.
