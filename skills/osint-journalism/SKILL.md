@@ -199,6 +199,16 @@ In `research-traces/`, add a short **"Could this be wrong because..."** block li
 - For follow-ups, explicitly separate: unchanged findings vs new findings.
 - Preserve an audit trail in `research-traces/` for major methodological changes.
 
+## Copy desk pass (mandatory before publish)
+
+Run a final newsroom-style pass focused on accuracy and readability, not prose flourishes:
+
+- **Claim-to-source sweep:** every factual sentence maps to a linked source or is explicitly labeled inference.
+- **Attribution verb audit:** use verb strength that matches evidence quality (`shows` vs `suggests` vs `claims`).
+- **Numerical hygiene:** units, denominators, and time windows are explicit and internally consistent.
+- **Uncertainty placement:** caveats appear where the uncertainty is introduced, not buried later.
+- **Headline discipline:** headline states the strongest defensible conclusion, not the most dramatic framing.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
