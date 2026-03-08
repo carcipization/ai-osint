@@ -152,6 +152,40 @@ Also require dateline exact format:
 - Replace abstract method language with concrete verbs (measured, counted, compared, matched).
 - Avoid stacked caveats in one sentence; distribute them where each uncertainty appears.
 
+## Weak-point guardrails (SELF quality upgrade)
+
+These rules target recurring weak spots in OSINT reporting quality: overreliance on single artifacts, weak provenance for social content, and under-explained uncertainty.
+
+### 1) UGC provenance ladder (image/video/social posts)
+
+For any user-generated content used as evidence, document at least 3 checks from different families:
+- Source check: account history, prior behavior, and whether the uploader appears original or a repeater.
+- Content check: reverse-image/keyframe search for prior appearances or context shifts.
+- Time check: chronolocation cues (sun/shadow/weather/event timing) or upload-time consistency.
+- Place check: geolocation cues matched to maps/satellite/street-level references.
+- Integrity check: note whether metadata is missing/stripped and whether that limits certainty.
+
+If fewer than 3 checks are possible, downgrade confidence and say why.
+
+### 2) Corroboration floor by claim criticality
+
+- High-impact claims (casualties, state action, cross-border incidents, market-moving assertions): require at least 2 independent evidence families before strong verdicts.
+- If all available evidence traces back to one origin, classify as provisional or inconclusive.
+- Independence means not just two articles citing the same upstream post.
+
+### 3) Falsification logging (private trace)
+
+In `research-traces/`, add a short **"Could this be wrong because..."** block listing:
+- top disconfirming hypothesis,
+- what evidence would invalidate the current conclusion,
+- whether that evidence was found or missing.
+
+### 4) Attribution precision in copy
+
+- Put attribution in the same sentence as each disputable fact.
+- Distinguish verbs by evidence strength: “shows/measured” (direct), “indicates/suggests” (inference), “claims/alleges” (unverified assertion).
+- Do not use certainty language (“proves”, “confirms”) unless direct primary evidence is explicit and linked.
+
 ## Corrections and updates protocol
 
 - If a published post is materially wrong, correct fast and state what changed.
