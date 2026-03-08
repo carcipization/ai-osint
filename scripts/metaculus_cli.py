@@ -21,6 +21,20 @@ from urllib.error import HTTPError
 BASE_URL = os.environ.get("METACULUS_API_BASE", "https://www.metaculus.com/api2")
 
 
+def _load_local_env() -> None:
+    env_path = Path(__file__).resolve().parents[1] / ".env.local"
+    if not env_path.exists():
+        return
+    for raw in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        k = k.strip()
+        if k and k not in os.environ:
+            os.environ[k] = v.strip()
+
+
 def _get_json(path: str, params: dict[str, Any] | None = None, *, token: str | None = None, cookie: str | None = None) -> Any:
     qs = ""
     if params:
@@ -140,6 +154,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> int:
+    _load_local_env()
     parser = build_parser()
     args = parser.parse_args()
     return args.func(args)
