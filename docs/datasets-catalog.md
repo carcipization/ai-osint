@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-08 03:18 UTC
+**Dateline:** 2026-03-08 15:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 78 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 82 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,7 +23,7 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (17), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Section balance (entries):** Economy/governance (21), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -96,6 +96,10 @@ Use this compact map before scanning full entries.
 - [OECD SDMX-JSON API](https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html) — OECD programmatic access to macro, labor, and policy indicators in SDMX structures, useful for multi-country denominator checks. High comparability value, but dataset dimensions and revisions vary by domain.
 - [U.S. Treasury FiscalData API](https://fiscaldata.treasury.gov/api-documentation/) — Official U.S. Treasury API for debt, cash, deficit, and revenue series used in fiscal stress and financing claims. First-party authority source with table/version metadata discipline needed.
 - [Bank of England Database API](https://www.bankofengland.co.uk/boeapps/database/help.asp?Back=Y&Highlight=CSV) — Official Bank of England statistical database endpoints for rates, money, and balance-sheet context in UK-focused macro stories. Valuable central-bank anchor with legacy query syntax constraints.
+- [UK ONS APIs (Developer Hub)](https://developer.ons.gov.uk/) — Office for National Statistics APIs and dataset endpoints for UK population, labor, prices, and economic indicators. Strong first-party UK baseline layer with dataset-level release-cadence checks still required.
+- [Deutsche Bundesbank SDMX Web Service](https://www.bundesbank.de/en/statistics/time-series-databases/help-for-sdmx-web-service-611112) — Bundesbank machine-readable SDMX service for monetary, banking, and macro-financial series used in Germany/euro-area context checks. High-quality central-bank source with series-key/code-list precision needed for reproducible pulls.
+- [Bank of Canada Valet API](https://www.bankofcanada.ca/valet/docs) — Official Bank of Canada Valet API for exchange rates, interest rates, and related financial series suitable for Canada-focused macro and policy verification. Primary-source monetary baseline with endpoint/series metadata discipline required.
+- [Japan e-Stat API](https://www.e-stat.go.jp/en/api/) — Government of Japan Statistics Bureau API gateway for official national statistics across demographics, labor, prices, and industry datasets. Valuable first-party Japan denominator source with table-specific update cadence and schema differences to track.
 - [FAOSTAT](https://www.fao.org/faostat/en/) — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.
 - [ITU ICT Indicators](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx) — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.
 - [Worldwide Governance Indicators](https://info.worldbank.org/governance/wgi/) — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.
