@@ -220,6 +220,7 @@ def write_index(items: list[Item], latest: Item) -> None:
             "<hr/>",
             "<h2>Dataset references</h2>",
             "<ul>",
+            '<li><a href="datasets-catalog.html">Datasets Catalog</a> · <a href="datasets-catalog.md">Markdown</a></li>',
             '<li><a href="dataset-playbook.html">Dataset Playbook</a> · <a href="dataset-playbook.md">Markdown</a></li>',
             "</ul>",
             "<hr/>",
