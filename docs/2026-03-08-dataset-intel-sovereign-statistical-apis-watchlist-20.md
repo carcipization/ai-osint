@@ -1,4 +1,4 @@
-# DATASETS_B: added UK ONS, Deutsche Bundesbank SDMX, Bank of Canada Valet, and Japan e-Stat APIs for sovereign statistical baselines (Watchlist 20)
+# Datasets: added UK ONS, Deutsche Bundesbank SDMX, Bank of Canada Valet, and Japan e-Stat APIs for sovereign statistical baselines (Watchlist 20)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-08-dataset-intel-sovereign-statistical-apis-watchlist-20.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-08-dataset-intel-sovereign-statistical-apis-watchlist-20.md)

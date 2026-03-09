@@ -1,4 +1,4 @@
-# DATASETS_A: Eurostat API suite added for EU structural-baseline and update-tracking workflows (Watchlist 15)
+# Datasets: Eurostat API suite added for EU structural-baseline and update-tracking workflows (Watchlist 15)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-06-dataset-intel-eurostat-api-structural-baselines-watchlist-15.html)  
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-06-dataset-intel-eurostat-api-structural-baselines-watchlist-15.md)

@@ -1,4 +1,4 @@
-# Datasets optimize: catalog checksum and alias lens hardening
+# Datasets: catalog checksum and alias lens hardening
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-08-datasets-optimize-catalog-checksum-and-alias-lens-hardening.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-08-datasets-optimize-catalog-checksum-and-alias-lens-hardening.md)

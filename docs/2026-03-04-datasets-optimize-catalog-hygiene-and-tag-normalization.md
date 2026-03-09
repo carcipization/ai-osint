@@ -1,4 +1,4 @@
-# DATASETS_OPTIMIZE: Catalog hygiene + signal-tag normalization
+# Datasets: Catalog hygiene + signal-tag normalization
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-04-datasets-optimize-catalog-hygiene-and-tag-normalization.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-04-datasets-optimize-catalog-hygiene-and-tag-normalization.md)

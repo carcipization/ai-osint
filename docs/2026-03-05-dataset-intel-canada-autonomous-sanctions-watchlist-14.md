@@ -1,4 +1,4 @@
-# DATASETS_B: Canada autonomous sanctions list added to catalog (Watchlist 14)
+# Datasets: Canada autonomous sanctions list added to catalog (Watchlist 14)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-canada-autonomous-sanctions-watchlist-14.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-canada-autonomous-sanctions-watchlist-14.md)

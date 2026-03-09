@@ -1,4 +1,4 @@
-# DATASETS_A: added NOAA CO-OPS, U.S. Census APIs, and FRED for coastal + domestic baseline coverage (Watchlist 17)
+# Datasets: added NOAA CO-OPS, U.S. Census APIs, and FRED for coastal + domestic baseline coverage (Watchlist 17)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-07-dataset-intel-coastal-and-us-macro-baselines-watchlist-17.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-07-dataset-intel-coastal-and-us-macro-baselines-watchlist-17.md)

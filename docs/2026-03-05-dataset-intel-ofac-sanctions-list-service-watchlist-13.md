@@ -1,4 +1,4 @@
-# DATASETS_A: OFAC Sanctions List Service added to catalog (Watchlist 13)
+# Datasets: OFAC Sanctions List Service added to catalog (Watchlist 13)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-ofac-sanctions-list-service-watchlist-13.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-ofac-sanctions-list-service-watchlist-13.md)

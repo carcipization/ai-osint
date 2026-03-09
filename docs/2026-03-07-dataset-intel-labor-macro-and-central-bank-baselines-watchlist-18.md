@@ -1,4 +1,4 @@
-# DATASETS_B: added BLS, BEA, and ECB SDW APIs for labor + macro + monetary baseline coverage (Watchlist 18)
+# Datasets: added BLS, BEA, and ECB SDW APIs for labor + macro + monetary baseline coverage (Watchlist 18)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-07-dataset-intel-labor-macro-and-central-bank-baselines-watchlist-18.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-07-dataset-intel-labor-macro-and-central-bank-baselines-watchlist-18.md)

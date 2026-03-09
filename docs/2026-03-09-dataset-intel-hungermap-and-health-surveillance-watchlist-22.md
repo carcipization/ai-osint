@@ -1,4 +1,4 @@
-# DATASETS_B: added WFP HungerMap (Ukraine/Haiti/Ecuador) and CDC provisional mortality/hospitalization feeds (Watchlist 22)
+# Datasets: added WFP HungerMap (Ukraine/Haiti/Ecuador) and CDC provisional mortality/hospitalization feeds (Watchlist 22)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-09-dataset-intel-hungermap-and-health-surveillance-watchlist-22.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-09-dataset-intel-hungermap-and-health-surveillance-watchlist-22.md)

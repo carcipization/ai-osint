@@ -1,4 +1,4 @@
-# DATASETS_OPTIMIZE: sanctions-provenance guardrail added to catalog
+# Datasets: sanctions-provenance guardrail added to catalog
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-06-datasets-optimize-sanctions-provenance-guardrail.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-06-datasets-optimize-sanctions-provenance-guardrail.md)

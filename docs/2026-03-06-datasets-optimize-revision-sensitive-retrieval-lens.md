@@ -1,4 +1,4 @@
-# DATASETS_OPTIMIZE: added revision-sensitive retrieval lens and flag-handling rule
+# Datasets: added revision-sensitive retrieval lens and flag-handling rule
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-06-datasets-optimize-revision-sensitive-retrieval-lens.html)  
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-06-datasets-optimize-revision-sensitive-retrieval-lens.md)

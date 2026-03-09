@@ -1,4 +1,4 @@
-# DATASETS_OPTIMIZE: Retrieval lenses + navigation hardening for catalog
+# Datasets: Retrieval lenses + navigation hardening for catalog
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-datasets-optimize-retrieval-lenses-and-navigation.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-datasets-optimize-retrieval-lenses-and-navigation.md)

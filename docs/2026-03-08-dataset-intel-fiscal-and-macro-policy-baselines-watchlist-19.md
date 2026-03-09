@@ -1,4 +1,4 @@
-# DATASETS_A: added BIS, OECD, U.S. Treasury FiscalData, and Bank of England statistical APIs for fiscal and macro-policy baselines (Watchlist 19)
+# Datasets: added BIS, OECD, U.S. Treasury FiscalData, and Bank of England statistical APIs for fiscal and macro-policy baselines (Watchlist 19)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-08-dataset-intel-fiscal-and-macro-policy-baselines-watchlist-19.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-08-dataset-intel-fiscal-and-macro-policy-baselines-watchlist-19.md)

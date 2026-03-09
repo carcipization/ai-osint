@@ -1,4 +1,4 @@
-# DATASETS_OPTIMIZE: added freshness and revision-risk tags for safer retrieval triage
+# Datasets: added freshness and revision-risk tags for safer retrieval triage
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-09-datasets-optimize-freshness-and-revision-risk-tags.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-09-datasets-optimize-freshness-and-revision-risk-tags.md)

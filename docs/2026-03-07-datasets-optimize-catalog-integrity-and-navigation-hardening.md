@@ -1,4 +1,4 @@
-# Datasets optimize: catalog integrity and navigation hardening
+# Datasets: catalog integrity and navigation hardening
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-07-datasets-optimize-catalog-integrity-and-navigation-hardening.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-07-datasets-optimize-catalog-integrity-and-navigation-hardening.md)
