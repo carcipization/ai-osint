@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets Catalog</title>
+  <title>DATASETS_OPTIMIZE: added freshness and revision-risk tags for safer retrieval triage</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,210 +12,37 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
-.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-catalog">Datasets Catalog</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
+  <h1 id="datasets_optimize-added-freshness-and-revision-risk-tags-for-safer-retrieval-triage">DATASETS_OPTIMIZE: added freshness and revision-risk tags for safer retrieval triage</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-09-datasets-optimize-freshness-and-revision-risk-tags.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-09-datasets-optimize-freshness-and-revision-risk-tags.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-09 17:39 UTC</p>
-<p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 94 datasets • 11 domains • structure-optimized for cadence retrieval</p>
-<h2 id="quick-navigation">Quick navigation</h2>
+<h2 id="what-changed">What changed</h2>
+<p>Catalog structure was improved (no new datasets added):</p>
 <ul>
-<li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
-<li><a href="#humanitarian-and-hazard-context">Humanitarian and hazard context</a></li>
-<li><a href="#energy-trade-and-maritime">Energy, trade, and maritime</a></li>
-<li><a href="#aviation-and-mobility">Aviation and mobility</a></li>
-<li><a href="#economy-governance-and-structural-risk">Economy, governance, and structural risk</a></li>
-<li><a href="#ownership-sanctions-and-procurement">Ownership, sanctions, and procurement</a></li>
-<li><a href="#ai-capability-risk-and-labor">AI capability, risk, and labor</a></li>
-<li><a href="#cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</a></li>
-<li><a href="#domestic-public-safety">Domestic public safety</a></li>
-<li><a href="#telegram-and-public-channel-analytics">Telegram and public-channel analytics</a></li>
-<li><a href="#space-weather-and-disruption-context">Space weather and disruption context</a></li>
+<li>Added a <strong>Freshness and revision-risk tags</strong> section to <code>docs/datasets-catalog.md</code>.</li>
+<li>Introduced compact retrieval tags:</li>
+<li>Freshness tiers: <code>F0</code>, <code>F1</code>, <code>F2</code>, <code>F3</code></li>
+<li>Revision flags: <code>R+</code>, <code>R0</code></li>
+<li>Added an operational guardrail: avoid single-source high-impact conclusions from <code>F0+R+</code> feeds without independent corroboration.</li>
 </ul>
-<h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
+<h2 id="why-this-improves-quality">Why this improves quality</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 23+13+11+17+7+7+6+3+3+3+1 = <strong>94</strong> (must match catalog metadata count).</li>
-<li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
-<li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
+<li>Speeds triage by making update-velocity and revision-risk explicit.</li>
+<li>Reduces false certainty from volatile, backfill-prone feeds.</li>
+<li>Improves consistency between dataset selection and evidence-confidence decisions in downstream stories.</li>
 </ul>
-<h2 id="retrieval-aliases-canonical-domain-tokens">Retrieval aliases (canonical domain tokens)</h2>
-<p>Use these stable tokens in internal retrieval notes so query phrasing stays consistent across cadence runs.</p>
+<h2 id="files-updated">Files updated</h2>
 <ul>
-<li><strong>conflict-control:</strong> conflict, unrest, censorship, shutdowns, outages</li>
-<li><strong>humanitarian-hazard:</strong> earthquakes, disasters, displacement, fires, coastal</li>
-<li><strong>energy-trade-maritime:</strong> shipping, chokepoints, commodities, power, gas</li>
-<li><strong>aviation-mobility:</strong> flights, ADS-B, routes, air traffic</li>
-<li><strong>economy-governance-risk:</strong> macro, central-bank, labor, fiscal, governance</li>
-<li><strong>ownership-sanctions-procurement:</strong> sanctions, entities, beneficial ownership, contracts</li>
-<li><strong>ai-risk-labor:</strong> model capability, incidents, compute, hiring</li>
-<li><strong>cyber-exploitation:</strong> CVE, KEV, EPSS, exploitation</li>
-<li><strong>public-safety:</strong> crime, police, city incidents</li>
-<li><strong>telegram-analytics:</strong> channels, citations, growth</li>
-<li><strong>space-weather:</strong> solar flares, geomagnetic, Kp, SWPC</li>
+<li><code>docs/datasets-catalog.md</code></li>
 </ul>
-<h2 id="retrieval-lenses-for-fast-story-triage">Retrieval lenses (for fast story triage)</h2>
-<p>Use this compact map before scanning full entries.</p>
+<h2 id="reference-links">Reference links</h2>
 <ul>
-<li><strong>Fast operational corroboration (minutes to hourly):</strong> OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, CISA KEV Catalog, FIRST EPSS.</li>
-<li><strong>Event-tracking + anomaly detection (hourly to daily):</strong> ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.</li>
-<li><strong>Structural baselines (monthly to annual):</strong> UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.</li>
-<li><strong>Entity/ownership resolution:</strong> OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.</li>
-<li><strong>Revision-sensitive series (confidence-capped until confirmed):</strong> Eurostat annual demographic indicators with break/provisional flags, IMF/World Bank indicators near recent release boundaries, and any feed with explicit estimated/provisional markers.</li>
-</ul>
-<h2 id="catalog-maintenance-rules-datasets_optimize">Catalog maintenance rules (DATASETS_OPTIMIZE)</h2>
-<ol>
-<li>Preserve section-level taxonomy unless a split/merge clearly improves retrieval speed.</li>
-<li>Prefer editing descriptors over moving entries across sections.</li>
-<li>Keep each entry to one sentence of scope + one sentence of caveat/value.</li>
-<li>If adding aliases in future, keep one canonical entry and mention aliases in-text.</li>
-<li>Re-run duplicate-domain and section-balance checks before publish.</li>
-<li>For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.</li>
-</ol>
-<h2 id="freshness-and-revision-risk-tags-retrieval-optimization">Freshness and revision-risk tags (retrieval optimization)</h2>
-<p>Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.</p>
-<ul>
-<li><strong>F0 (live/operational):</strong> minute/hourly feeds; high utility for breaking checks, high volatility risk.</li>
-<li><strong>F1 (daily/near-daily):</strong> strong short-cycle monitoring value; expect occasional backfills.</li>
-<li><strong>F2 (periodic official):</strong> weekly/monthly official releases; stable baseline, slower signal.</li>
-<li><strong>F3 (structural/annual):</strong> long-horizon context only; unsuitable for real-time claims.</li>
-</ul>
-<p><strong>Revision flags:</strong>
-- <strong>R+ (revision-prone):</strong> source commonly backfills or restates recent periods.
-- <strong>R0 (low revision):</strong> revision risk present but typically limited after release cutoffs.</p>
-<p>Operational rule: for high-impact claims, avoid single-source conclusions from <strong>F0+R+</strong> datasets without at least one independent corroboration family.</p>
-<h2 id="conflict-unrest-and-information-control">Conflict, unrest, and information control</h2>
-<ul>
-<li><a href="https://acleddata.com/">ACLED</a> — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.</li>
-<li><a href="https://ucdp.uu.se/downloads/">UCDP GED</a> — Curated historical conflict events. Best for baseline and long-window comparison, not immediate same-day claims.</li>
-<li><a href="https://dataverse.harvard.edu/dataverse/icews">ICEWS</a> — Machine-coded actor/event dataset useful for interaction trend shifts. Treat as signal-heavy and media-dependent, not ground truth.</li>
-<li><a href="https://www.gdeltproject.org/data.html">GDELT</a> — Global event/media coding for fast anomaly detection and narrative-shift tracking. Excellent early warning, weaker as final evidentiary anchor.</li>
-<li><a href="https://ooni.org/data/">OONI</a> — Network interference and censorship measurements. Useful for shutdown/censorship corroboration, with coverage uneven by probe geography.</li>
-<li><a href="https://atlas.ripe.net/docs/">RIPE Atlas</a> — Distributed active internet measurements for reachability/latency checks. Good for disruption diagnostics, limited by probe placement.</li>
-<li><a href="https://www.caida.org/projects/ioda/">CAIDA IODA</a> — Outage detection via BGP/darknet/active signals. Strong for macro outage events, less sensitive to app/platform-level blocking.</li>
-</ul>
-<h2 id="humanitarian-and-hazard-context">Humanitarian and hazard context</h2>
-<ul>
-<li><a href="https://api.reliefweb.int/">ReliefWeb API</a> — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.</li>
-<li><a href="https://data.humdata.org/">Humanitarian Data Exchange (HDX)</a> — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.</li>
-<li><a href="https://www.emdat.be/">EM-DAT</a> — Disaster impact database for severity and cross-event context. Reliable for structured comparisons but estimates revise over time.</li>
-<li><a href="https://www.unhcr.org/refugee-statistics/download/">UNHCR Refugee Data</a> — Displacement statistics for migration and conflict follow-through analysis. Be mindful of registration lag.</li>
-<li><a href="https://earthquake.usgs.gov/earthquakes/feed/">USGS Earthquake Feeds</a> — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.</li>
-<li><a href="https://firms.modaps.eosdis.nasa.gov/">NASA FIRMS</a> — Satellite fire hotspot detections for wildfire and conflict-adjacent fire patterns. Hotspots are signal, not cause.</li>
-<li><a href="https://www.ncei.noaa.gov/products/international-best-track-archive">NOAA IBTrACS</a> — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.</li>
-<li><a href="https://api.tidesandcurrents.noaa.gov/api/prod/">NOAA CO-OPS Data Retrieval API</a> — Official U.S. coastal observations/predictions (water level, tides, currents, meteorology) with high-frequency station queries. Strong disruption-context source with station-coverage and interval-limit constraints.</li>
-<li><a href="https://cds.climate.copernicus.eu/">Copernicus CDS (ERA5)</a> — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.</li>
-<li><a href="https://data.humdata.org/dataset/global-wfp-food-prices">WFP Global Food Prices</a> — WFP-curated global market price observations for staple commodities across countries and markets. High-value inflation and food-security signal with country coverage and market-sampling variability.</li>
-<li><a href="https://data.humdata.org/dataset/fao-diem-monitoring-system-household-surveys-aggregated-data">FAO Data in Emergencies (DIEM)</a> — FAO emergency household-survey aggregates on livelihoods, food security, and shocks in crisis-affected settings. Useful for humanitarian stress triangulation, but survey timing and sampling frames differ by operation.</li>
-<li><a href="https://catalog.data.gov/dataset/air-quality">NYC Air Quality</a> — New York City air quality indicators for pollution-related exposure context and local hazard monitoring. Strong city-level signal with methodology breaks and station coverage changes requiring caution.</li>
-<li><a href="https://data.humdata.org/dataset/wfp-hungermap-data-for-ukr">WFP HungerMap – Ukraine</a> — WFP HungerMap indicators for Ukraine covering food-security stress proxies and related humanitarian conditions. Useful for rapid situation tracking with model/input dependency caveats.</li>
-<li><a href="https://data.humdata.org/dataset/wfp-hungermap-data-for-hti">WFP HungerMap – Haiti</a> — WFP HungerMap indicators for Haiti providing near-operational food-security stress context. Valuable for crisis monitoring, but indicator construction and reporting cadence can shift.</li>
-<li><a href="https://data.humdata.org/dataset/wfp-hungermap-data-for-ecu">WFP HungerMap – Ecuador</a> — WFP HungerMap indicators for Ecuador for emerging food-access and stress pattern checks. Good directional layer that should be triangulated with country sources.</li>
-<li><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state">CDC Provisional COVID-19 Death Counts by Week and State</a> — Weekly provisional mortality counts by U.S. state for respiratory-wave and excess-pressure context. High-value public-health signal with known reporting lag and revision risk.</li>
-<li><a href="https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil">CDC COVID-NET Monthly Hospitalization Rates</a> — Laboratory-confirmed COVID-19 hospitalization rates used for severity and burden tracking. Strong trend signal, but coverage reflects surveillance-network design rather than full-population capture.</li>
-</ul>
-<h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
-<ul>
-<li><a href="https://comtrade.un.org/">UN Comtrade</a> — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.</li>
-<li><a href="https://unctadstat.unctad.org/EN/">UNCTADstat</a> — Trade and shipping indicators for structural maritime baselines. Strong macro context; indicator release cadence varies.</li>
-<li><a href="https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet">World Bank Pink Sheet</a> — Commodity benchmark prices for shock context. Not a retail/local price proxy.</li>
-<li><a href="https://portwatch.imf.org/datasets/42132aa4e2fc4d41bdaf9a445f688931_0/explore">IMF PortWatch</a> — AIS-derived chokepoint transit estimates for Suez/Panama-type stress checks. Sensitive to window definitions and AIS coverage.</li>
-<li><a href="https://www.eia.gov/opendata/">U.S. EIA Open Data</a> — Official US energy series for oil/gas/power claims. Strong grounding source; unit/metadata discipline required.</li>
-<li><a href="https://agsi.gie.eu/">AGSI+</a> — European gas storage dynamics. Useful for storage-stress monitoring, but storage level alone does not imply outages.</li>
-<li><a href="https://transparency.entsoe.eu/">ENTSO-E Transparency</a> — Power flows/generation/outage indicators across Europe. High value for grid shock stories; country/product completeness varies.</li>
-<li><a href="https://globalfishingwatch.org/datasets-and-code/">Global Fishing Watch</a> — Vessel activity telemetry for disputed waters and maritime behavior changes. AIS gaps/spoofing are recurring limitations.</li>
-<li><a href="https://gisis.imo.org/">IMO GISIS</a> — Maritime safety/security registry modules. Good official context source with module-dependent completeness.</li>
-<li><a href="https://www.vortexa.com/freight-tracker/">Vortexa Freight Tracker</a> — Commercial tanker flow analytics for rerouting pressure. Strong directional signal, methodology is vendor-defined.</li>
-<li><a href="https://marinecadastre.gov/accessais/">MarineCadastre AccessAIS</a> — US-focused AIS archive access. Useful for US waters analyses, not global coverage.</li>
-<li><a href="https://www.aishub.net/api">AISHub API</a> — Community AIS data feeds for vessel tracking redundancy. Coverage quality depends on contributor network.</li>
-<li><a href="https://catalog.data.gov/dataset/harmonized-tariff-schedule-of-the-united-states-2024">Harmonized Tariff Schedule of the United States (2026)</a> — Official U.S. tariff schedule classifications and duty-rate tables for import-policy and trade-exposure verification. Authoritative legal baseline, with periodic amendments that require effective-date checks.</li>
-</ul>
-<h2 id="aviation-and-mobility">Aviation and mobility</h2>
-<ul>
-<li><a href="https://opensky-network.org/data">OpenSky Network</a> — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.</li>
-<li><a href="https://www.adsbexchange.com/data/">ADS-B Exchange</a> — Broad ADS-B feeds for flight path reconstruction and discontinuities. Commercial endpoint/term changes should be monitored.</li>
-<li><a href="https://www.adsb.lol/docs/open-data/api/">ADSB.lol Open Data</a> — Community-backed ADS-B API and archives. Useful as independent aviation corroboration with uneven geography.</li>
-</ul>
-<h2 id="economy-governance-and-structural-risk">Economy, governance, and structural risk</h2>
-<ul>
-<li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">World Bank Indicators API</a> — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.</li>
-<li><a href="https://www.imf.org/external/datamapper/api/">IMF Data API</a> — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.</li>
-<li><a href="https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access">Eurostat APIs (Statistics + Catalogue)</a> — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.</li>
-<li><a href="https://www.census.gov/data/developers/data-sets.html">U.S. Census Bureau APIs</a> — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.</li>
-<li><a href="https://fred.stlouisfed.org/docs/api/fred/">FRED API (St. Louis Fed)</a> — Large macro/financial time-series API with release, category, and observation endpoints for reproducible economic context checks. Excellent baseline layer, but mixed source provenance across series requires metadata discipline.</li>
-<li><a href="https://www.bls.gov/developers/">BLS Public Data API</a> — U.S. Bureau of Labor Statistics machine-readable labor series (employment, CPI, PPI, productivity and more) for high-confidence domestic labor/inflation baselines. Strong official coverage with series-ID and seasonal-adjustment handling required.</li>
-<li><a href="https://apps.bea.gov/API/signup/">BEA Data API</a> — U.S. Bureau of Economic Analysis API for GDP, personal income, international transactions, and regional accounts used in macro claim context checks. Primary-source economic backbone with revision-aware interpretation needed around release windows.</li>
-<li><a href="https://data.ecb.europa.eu/help/api/overview">ECB Data Portal API / SDW</a> — European Central Bank Statistical Data Warehouse API for euro area monetary, financial, and banking indicators. High-value eurozone baseline layer, but concept/code-list precision is essential for reproducible pulls.</li>
-<li><a href="https://data.bis.org/help/api">BIS Data Portal API</a> — Bank for International Settlements machine-readable macro-financial and banking statistics for cross-border credit, debt, and liquidity context. Strong systemic-risk baseline with careful series-key selection required.</li>
-<li><a href="https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html">OECD SDMX-JSON API</a> — OECD programmatic access to macro, labor, and policy indicators in SDMX structures, useful for multi-country denominator checks. High comparability value, but dataset dimensions and revisions vary by domain.</li>
-<li><a href="https://fiscaldata.treasury.gov/api-documentation/">U.S. Treasury FiscalData API</a> — Official U.S. Treasury API for debt, cash, deficit, and revenue series used in fiscal stress and financing claims. First-party authority source with table/version metadata discipline needed.</li>
-<li><a href="https://www.bankofengland.co.uk/boeapps/database/help.asp?Back=Y&amp;Highlight=CSV">Bank of England Database API</a> — Official Bank of England statistical database endpoints for rates, money, and balance-sheet context in UK-focused macro stories. Valuable central-bank anchor with legacy query syntax constraints.</li>
-<li><a href="https://developer.ons.gov.uk/">UK ONS APIs (Developer Hub)</a> — Office for National Statistics APIs and dataset endpoints for UK population, labor, prices, and economic indicators. Strong first-party UK baseline layer with dataset-level release-cadence checks still required.</li>
-<li><a href="https://www.bundesbank.de/en/statistics/time-series-databases/help-for-sdmx-web-service-611112">Deutsche Bundesbank SDMX Web Service</a> — Bundesbank machine-readable SDMX service for monetary, banking, and macro-financial series used in Germany/euro-area context checks. High-quality central-bank source with series-key/code-list precision needed for reproducible pulls.</li>
-<li><a href="https://www.bankofcanada.ca/valet/docs">Bank of Canada Valet API</a> — Official Bank of Canada Valet API for exchange rates, interest rates, and related financial series suitable for Canada-focused macro and policy verification. Primary-source monetary baseline with endpoint/series metadata discipline required.</li>
-<li><a href="https://www.e-stat.go.jp/en/api/">Japan e-Stat API</a> — Government of Japan Statistics Bureau API gateway for official national statistics across demographics, labor, prices, and industry datasets. Valuable first-party Japan denominator source with table-specific update cadence and schema differences to track.</li>
-<li><a href="https://www.fao.org/faostat/en/">FAOSTAT</a> — Food/agriculture structural data for medium/long-horizon analysis. Not suitable for immediate operational claims.</li>
-<li><a href="https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx">ITU ICT Indicators</a> — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.</li>
-<li><a href="https://info.worldbank.org/governance/wgi/">Worldwide Governance Indicators</a> — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.</li>
-<li><a href="https://oecd.ai/">OECD.AI</a> — Cross-country AI ecosystem/policy indicators. Best for comparative policy context, not daily movement.</li>
-<li><a href="https://polymarket.com/">Polymarket</a> — Real-money event-contract market prices that can act as high-frequency belief proxies for elections, policy, and geopolitical scenarios. Useful as a sentiment/expectations signal, but contract design, liquidity, and participant composition can distort implied probabilities.</li>
-<li><a href="https://www.metaculus.com/questions/">Metaculus</a> — Forecast-question platform with probabilistic crowd predictions and time-series forecast histories, useful for expectation-shift monitoring and narrative timing checks. Strong for trend-of-belief signals, but user-base composition and question framing can bias implied probabilities.</li>
-<li><a href="https://www.sipri.org/databases/milex">SIPRI Milex</a> — Defense spending series for security posture trend framing. Cross-country accounting differences matter.</li>
-</ul>
-<h2 id="ownership-sanctions-and-procurement">Ownership, sanctions, and procurement</h2>
-<p><strong>Sanctions provenance rule (quality guardrail):</strong> Use originating-authority lists (e.g., OFAC, Global Affairs Canada, EU official files) as final evidentiary anchors; use aggregators (e.g., OpenSanctions) for discovery, cross-linking, and rapid triage.</p>
-<ul>
-<li><a href="https://www.opensanctions.org/datasets/">OpenSanctions</a> — Aggregated designation/entity datasets for sanctions-wave and network monitoring. Confirm high-stakes claims at originating authority.</li>
-<li><a href="https://scsanctions.un.org/resources/xml/en/consolidated.xml">UN Security Council Consolidated List</a> — Official UN consolidated sanctions list in XML/HTML/PDF with committee-linked identifiers. High-value multilateral baseline for cross-jurisdiction sanctions timing and scope checks.</li>
-<li><a href="https://api.opencorporates.com/">OpenCorporates API</a> — Company registry federation for entity resolution and corporate linkage checks. Jurisdiction depth varies.</li>
-<li><a href="https://register.openownership.org/">Open Ownership Register</a> — Beneficial ownership datasets for ownership-chain reconstruction. Coverage quality is country-dependent.</li>
-<li><a href="https://download.companieshouse.gov.uk/en_pscdata.html">UK Companies House PSC</a> — UK person-with-significant-control snapshots. Powerful for UK ownership-change analysis with filing-lag caveats.</li>
-<li><a href="https://api.usaspending.gov/">USAspending API</a> — US federal spending/procurement patterns and vendor concentration. Interpret obligation vs outlay carefully.</li>
-<li><a href="https://data.ted.europa.eu/">TED Open Data</a> — EU procurement notices and awards for cross-country trend analysis. Requires normalization across taxonomy changes.</li>
-<li><a href="https://www.contractsfinder.service.gov.uk/apidocumentation">UK Contracts Finder API</a> — UK procurement opportunities/awards stream. Field completeness differs across authorities.</li>
-<li><a href="https://www.gleif.org/en/lei-data/gleif-golden-copy/download-the-concatenated-file">GLEIF LEI Golden Copy</a> — Daily global legal-entity identifiers and reference data. High-value backbone for cross-border entity deduplication.</li>
-<li><a href="https://ofac.treasury.gov/sanctions-list-service">OFAC Sanctions List Service (SLS)</a> — Official U.S. Treasury sanctions list distribution (SDN + consolidated non-SDN datasets) with machine-readable download pathways. Critical primary-source anchor for sanctions designation timing and entity-screening verification.</li>
-<li><a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng">Consolidated Canadian Autonomous Sanctions List</a> — Global Affairs Canada list of individuals/entities sanctioned under SEMA and JVCFOA, published in HTML/PDF/XML. Valuable jurisdictional complement for cross-country sanctions verification and entity-resolution workflows.</li>
-</ul>
-<h2 id="ai-capability-risk-and-labor">AI capability, risk, and labor</h2>
-<ul>
-<li><a href="https://crfm.stanford.edu/helm/">Stanford HELM</a> — Standardized model benchmark tracking for capability/safety comparisons. Protocol drift can mimic model jumps.</li>
-<li><a href="https://epoch.ai/data/gpu-clusters">Epoch AI GPU Clusters</a> — Frontier compute concentration and buildout signal. Public disclosure bias means incomplete coverage.</li>
-<li><a href="https://incidentdatabase.ai/">AI Incident Database</a> — Curated AI incident records for qualitative risk trend monitoring. Public-report dependence limits completeness.</li>
-<li><a href="https://lmarena.ai/leaderboard">LMArena</a> — Human-preference leaderboard signal for model shifts and previews. Preference-based Elo is useful but sampling-sensitive.</li>
-<li><a href="https://artificialanalysis.ai/">Artificial Analysis</a> — Multi-benchmark model comparisons for cross-checking leaderboard narratives. Vendor/test selection can shape rankings.</li>
-<li><a href="https://www.hiringlab.org/">Indeed Hiring Lab</a> — Labor-market signal on skills demand and hiring shifts. Platform composition effects should be considered.</li>
-<li><a href="https://economicgraph.linkedin.com/">LinkedIn Economic Graph</a> — Workforce trend analytics for occupational and skills transitions. Platform sample bias applies.</li>
-</ul>
-<h2 id="cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</h2>
-<ul>
-<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV Catalog</a> — Authoritative list of vulnerabilities observed exploited in the wild for federal prioritization. Crucial corroboration source for exploitation claims.</li>
-<li><a href="https://www.first.org/epss/data_stats">FIRST EPSS</a> — Daily exploit-likelihood scoring for CVE triage prioritization. Probability signal, not exploitation confirmation.</li>
-<li><a href="https://nvd.nist.gov/developers/vulnerabilities">NIST NVD CVE API</a> — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.</li>
-</ul>
-<h2 id="domestic-public-safety">Domestic public safety</h2>
-<ul>
-<li><a href="https://cde.ucr.cjis.gov/">FBI CDE/UCR</a> — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.</li>
-<li><a href="https://www.statcan.gc.ca/">Statistics Canada</a> — Canadian official statistical series for national and provincial context. Release lag and revisions apply.</li>
-<li><a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2">Chicago Crimes (2001–present)</a> — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.</li>
-<li><a href="https://open.toronto.ca/dataset/major-crime-indicators/">Toronto MCI</a> — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.</li>
-<li><a href="https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data">Edmonton EPS occurrences</a> — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.</li>
-<li><a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes">NYC Motor Vehicle Collisions – Crashes</a> — High-frequency crash records including location, contributing factors, and injury/fatality fields for urban safety trend checks. Valuable operational signal with reporting-lag and post-incident reclassification caveats.</li>
-</ul>
-<h2 id="telegram-and-public-channel-analytics">Telegram and public-channel analytics</h2>
-<ul>
-<li><a href="https://tgstat.com/api/stat">TGStat API</a> — Public Telegram channel growth/citation signal. Third-party methodology should be treated as a caveated proxy.</li>
-<li><a href="https://api.telemetr.io/">Telemetr API</a> — Channel benchmarking and trend data for comparative network scans. Coverage and terms may change.</li>
-<li><a href="https://github.com/SystemsLab-Sapienza/TGDataset">TGDataset</a> — Research snapshot corpus for historical Telegram network structure. Best for baseline context, not live operational monitoring.</li>
-</ul>
-<h2 id="space-weather-and-disruption-context">Space weather and disruption context</h2>
-<ul>
-<li><a href="https://services.swpc.noaa.gov/json/">NOAA SWPC JSON feeds</a> — Operational space-weather observations/forecasts (e.g., flare/Kp products). Useful for timing and severity context in comms/power/GNSS stories, with forecast/observed distinction required.</li>
+<li><a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Updated datasets catalog</a></li>
+<li><a href="https://carcipization.github.io/ai-osint/2026-03-09-datasets-optimize-freshness-and-revision-risk-tags.md">This optimization update (Markdown)</a></li>
 </ul>
 </body>
 </html>
