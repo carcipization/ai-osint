@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-08 19:20 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-09 06:06 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 84 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 89 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 23+12+11+9+7+7+5+3+3+3+1 = <strong>84</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (12), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 23+13+11+12+7+7+6+3+3+3+1 = <strong>89</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -97,6 +98,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://www.ncei.noaa.gov/products/international-best-track-archive">NOAA IBTrACS</a> — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.</li>
 <li><a href="https://api.tidesandcurrents.noaa.gov/api/prod/">NOAA CO-OPS Data Retrieval API</a> — Official U.S. coastal observations/predictions (water level, tides, currents, meteorology) with high-frequency station queries. Strong disruption-context source with station-coverage and interval-limit constraints.</li>
 <li><a href="https://cds.climate.copernicus.eu/">Copernicus CDS (ERA5)</a> — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.</li>
+<li><a href="https://data.humdata.org/dataset/global-wfp-food-prices">WFP Global Food Prices</a> — WFP-curated global market price observations for staple commodities across countries and markets. High-value inflation and food-security signal with country coverage and market-sampling variability.</li>
+<li><a href="https://data.humdata.org/dataset/fao-diem-monitoring-system-household-surveys-aggregated-data">FAO Data in Emergencies (DIEM)</a> — FAO emergency household-survey aggregates on livelihoods, food security, and shocks in crisis-affected settings. Useful for humanitarian stress triangulation, but survey timing and sampling frames differ by operation.</li>
+<li><a href="https://catalog.data.gov/dataset/air-quality">NYC Air Quality</a> — New York City air quality indicators for pollution-related exposure context and local hazard monitoring. Strong city-level signal with methodology breaks and station coverage changes requiring caution.</li>
 </ul>
 <h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
 <ul>
@@ -112,6 +116,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://www.vortexa.com/freight-tracker/">Vortexa Freight Tracker</a> — Commercial tanker flow analytics for rerouting pressure. Strong directional signal, methodology is vendor-defined.</li>
 <li><a href="https://marinecadastre.gov/accessais/">MarineCadastre AccessAIS</a> — US-focused AIS archive access. Useful for US waters analyses, not global coverage.</li>
 <li><a href="https://www.aishub.net/api">AISHub API</a> — Community AIS data feeds for vessel tracking redundancy. Coverage quality depends on contributor network.</li>
+<li><a href="https://catalog.data.gov/dataset/harmonized-tariff-schedule-of-the-united-states-2024">Harmonized Tariff Schedule of the United States (2026)</a> — Official U.S. tariff schedule classifications and duty-rate tables for import-policy and trade-exposure verification. Authoritative legal baseline, with periodic amendments that require effective-date checks.</li>
 </ul>
 <h2 id="aviation-and-mobility">Aviation and mobility</h2>
 <ul>
@@ -183,6 +188,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2">Chicago Crimes (2001–present)</a> — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.</li>
 <li><a href="https://open.toronto.ca/dataset/major-crime-indicators/">Toronto MCI</a> — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.</li>
 <li><a href="https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data">Edmonton EPS occurrences</a> — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.</li>
+<li><a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes">NYC Motor Vehicle Collisions – Crashes</a> — High-frequency crash records including location, contributing factors, and injury/fatality fields for urban safety trend checks. Valuable operational signal with reporting-lag and post-incident reclassification caveats.</li>
 </ul>
 <h2 id="telegram-and-public-channel-analytics">Telegram and public-channel analytics</h2>
 <ul>

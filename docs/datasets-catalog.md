@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-08 19:20 UTC
+**Dateline:** 2026-03-09 06:06 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 84 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 89 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (12), Ownership/sanctions/procurement (11), Humanitarian/hazard (9), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (5), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 23+12+11+9+7+7+5+3+3+3+1 = **84** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (12), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 23+13+11+12+7+7+6+3+3+3+1 = **89** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -79,6 +79,9 @@ Use this compact map before scanning full entries.
 - [NOAA IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive) — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.
 - [NOAA CO-OPS Data Retrieval API](https://api.tidesandcurrents.noaa.gov/api/prod/) — Official U.S. coastal observations/predictions (water level, tides, currents, meteorology) with high-frequency station queries. Strong disruption-context source with station-coverage and interval-limit constraints.
 - [Copernicus CDS (ERA5)](https://cds.climate.copernicus.eu/) — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.
+- [WFP Global Food Prices](https://data.humdata.org/dataset/global-wfp-food-prices) — WFP-curated global market price observations for staple commodities across countries and markets. High-value inflation and food-security signal with country coverage and market-sampling variability.
+- [FAO Data in Emergencies (DIEM)](https://data.humdata.org/dataset/fao-diem-monitoring-system-household-surveys-aggregated-data) — FAO emergency household-survey aggregates on livelihoods, food security, and shocks in crisis-affected settings. Useful for humanitarian stress triangulation, but survey timing and sampling frames differ by operation.
+- [NYC Air Quality](https://catalog.data.gov/dataset/air-quality) — New York City air quality indicators for pollution-related exposure context and local hazard monitoring. Strong city-level signal with methodology breaks and station coverage changes requiring caution.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
@@ -93,6 +96,7 @@ Use this compact map before scanning full entries.
 - [Vortexa Freight Tracker](https://www.vortexa.com/freight-tracker/) — Commercial tanker flow analytics for rerouting pressure. Strong directional signal, methodology is vendor-defined.
 - [MarineCadastre AccessAIS](https://marinecadastre.gov/accessais/) — US-focused AIS archive access. Useful for US waters analyses, not global coverage.
 - [AISHub API](https://www.aishub.net/api) — Community AIS data feeds for vessel tracking redundancy. Coverage quality depends on contributor network.
+- [Harmonized Tariff Schedule of the United States (2026)](https://catalog.data.gov/dataset/harmonized-tariff-schedule-of-the-united-states-2024) — Official U.S. tariff schedule classifications and duty-rate tables for import-policy and trade-exposure verification. Authoritative legal baseline, with periodic amendments that require effective-date checks.
 
 ## Aviation and mobility
 - [OpenSky Network](https://opensky-network.org/data) — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.
@@ -160,6 +164,7 @@ Use this compact map before scanning full entries.
 - [Chicago Crimes (2001–present)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2) — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.
 - [Toronto MCI](https://open.toronto.ca/dataset/major-crime-indicators/) — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.
 - [Edmonton EPS occurrences](https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data) — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.
+- [NYC Motor Vehicle Collisions – Crashes](https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes) — High-frequency crash records including location, contributing factors, and injury/fatality fields for urban safety trend checks. Valuable operational signal with reporting-lag and post-incident reclassification caveats.
 
 ## Telegram and public-channel analytics
 - [TGStat API](https://tgstat.com/api/stat) — Public Telegram channel growth/citation signal. Third-party methodology should be treated as a caveated proxy.
