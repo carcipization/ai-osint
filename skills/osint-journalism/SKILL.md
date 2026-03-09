@@ -94,6 +94,7 @@ When checking outage-duration claims:
   - official revision
   - materially changed conclusion
 - If no material updates, explicitly say so for sampled items.
+- **Cadence rotation rule:** always advance to the next slot after completing a FOLLOWUP sampling pass, even when no publishable update is found (no-op FOLLOWUP still rotates state).
 
 ## Publication header format (mandatory)
 
