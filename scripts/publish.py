@@ -173,6 +173,16 @@ def dateline_sort_key(it: Item) -> tuple[datetime, str]:
     return (datetime.min, it.slug)
 
 
+def is_story_or_datasets_item(it: Item) -> bool:
+    s = it.slug.lower()
+    return (
+        "osint-story" in s
+        or "dataset-intel" in s
+        or s.startswith("datasets-")
+        or s.startswith("dataset-")
+    )
+
+
 def write_index(items: list[Item], latest: Item) -> None:
     # newest-first by dateline (fallback to slug)
     items_sorted = sorted(items, key=dateline_sort_key, reverse=True)
@@ -230,14 +240,17 @@ def main() -> None:
         raise SystemExit("No docs/*.md files found")
 
     items = [build_item(p) for p in sources]
+    feed_items = [it for it in items if is_story_or_datasets_item(it)]
+    if not feed_items:
+        raise SystemExit("No STORY/DATASETS items found for feed")
 
-    # Use dateline-first selection for "latest" (fallback to slug).
-    latest = max(items, key=dateline_sort_key)
+    # Use dateline-first selection for feed "latest" (fallback to slug).
+    latest = max(feed_items, key=dateline_sort_key)
 
     write_latest(latest)
-    write_index(items, latest)
+    write_index(feed_items, latest)
 
-    print(f"Built {len(items)} posts into docs/ (latest={latest.slug})")
+    print(f"Built {len(items)} posts into docs/ (feed items={len(feed_items)}, latest={latest.slug})")
 
 
 if __name__ == "__main__":
