@@ -3,7 +3,7 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-09 17:06 UTC
+**Dateline:** 2026-03-09 17:39 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
@@ -59,6 +59,21 @@ Use this compact map before scanning full entries.
 4. If adding aliases in future, keep one canonical entry and mention aliases in-text.
 5. Re-run duplicate-domain and section-balance checks before publish.
 6. For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.
+
+## Freshness and revision-risk tags (retrieval optimization)
+Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.
+
+- **F0 (live/operational):** minute/hourly feeds; high utility for breaking checks, high volatility risk.
+- **F1 (daily/near-daily):** strong short-cycle monitoring value; expect occasional backfills.
+- **F2 (periodic official):** weekly/monthly official releases; stable baseline, slower signal.
+- **F3 (structural/annual):** long-horizon context only; unsuitable for real-time claims.
+
+**Revision flags:**
+- **R+ (revision-prone):** source commonly backfills or restates recent periods.
+- **R0 (low revision):** revision risk present but typically limited after release cutoffs.
+
+Operational rule: for high-impact claims, avoid single-source conclusions from **F0+R+** datasets without at least one independent corroboration family.
+
 
 ## Conflict, unrest, and information control
 - [ACLED](https://acleddata.com/) — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.

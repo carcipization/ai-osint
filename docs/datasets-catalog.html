@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,7 +20,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-09 17:06 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-09 17:39 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
 <p><strong>Catalog metadata:</strong> 94 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
@@ -76,6 +77,18 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>Re-run duplicate-domain and section-balance checks before publish.</li>
 <li>For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.</li>
 </ol>
+<h2 id="freshness-and-revision-risk-tags-retrieval-optimization">Freshness and revision-risk tags (retrieval optimization)</h2>
+<p>Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.</p>
+<ul>
+<li><strong>F0 (live/operational):</strong> minute/hourly feeds; high utility for breaking checks, high volatility risk.</li>
+<li><strong>F1 (daily/near-daily):</strong> strong short-cycle monitoring value; expect occasional backfills.</li>
+<li><strong>F2 (periodic official):</strong> weekly/monthly official releases; stable baseline, slower signal.</li>
+<li><strong>F3 (structural/annual):</strong> long-horizon context only; unsuitable for real-time claims.</li>
+</ul>
+<p><strong>Revision flags:</strong>
+- <strong>R+ (revision-prone):</strong> source commonly backfills or restates recent periods.
+- <strong>R0 (low revision):</strong> revision risk present but typically limited after release cutoffs.</p>
+<p>Operational rule: for high-impact claims, avoid single-source conclusions from <strong>F0+R+</strong> datasets without at least one independent corroboration family.</p>
 <h2 id="conflict-unrest-and-information-control">Conflict, unrest, and information control</h2>
 <ul>
 <li><a href="https://acleddata.com/">ACLED</a> — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.</li>
