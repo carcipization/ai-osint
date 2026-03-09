@@ -108,7 +108,7 @@ def dateline_sort_key(dateline: str | None, slug: str) -> tuple[datetime, str]:
     return (datetime.min, slug)
 
 
-SPECIAL_DOCS = {"datasets-catalog", "dataset-playbook", "dataset-strategy"}
+SPECIAL_DOCS = {"datasets-catalog", "dataset-playbook"}
 
 
 def write_latest_and_index(md_files: list[Path]) -> None:
@@ -160,7 +160,7 @@ def write_latest_and_index(md_files: list[Path]) -> None:
 <ul>
   <li><a href=\"datasets-catalog.html\">Datasets Catalog</a> · <a href=\"datasets-catalog.md\">Markdown</a></li>
   <li><a href=\"dataset-playbook.html\">Dataset Playbook</a> · <a href=\"dataset-playbook.md\">Markdown</a></li>
-  <li><a href=\"dataset-strategy.html\">Dataset Strategy (legacy)</a> · <a href=\"dataset-strategy.md\">Markdown</a></li>
+  <!-- removed legacy doc link -->
 </ul>
 <hr/>
 <h2>Latest story</h2>

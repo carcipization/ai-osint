@@ -173,7 +173,7 @@ def dateline_sort_key(it: Item) -> tuple[datetime, str]:
     return (datetime.min, it.slug)
 
 
-SPECIAL_DATASET_DOCS = {"datasets-catalog", "dataset-playbook", "dataset-strategy"}
+SPECIAL_DATASET_DOCS = {"datasets-catalog", "dataset-playbook"}
 
 
 def is_story_or_datasets_item(it: Item) -> bool:
@@ -221,7 +221,6 @@ def write_index(items: list[Item], latest: Item) -> None:
             "<h2>Dataset references</h2>",
             "<ul>",
             '<li><a href="dataset-playbook.html">Dataset Playbook</a> · <a href="dataset-playbook.md">Markdown</a></li>',
-            '<li><a href="dataset-strategy.html">Dataset Strategy (legacy)</a> · <a href="dataset-strategy.md">Markdown</a></li>',
             "</ul>",
             "<hr/>",
             '<p>Repo: <a href="https://github.com/carcipization/ai-osint">github.com/carcipization/ai-osint</a></p>',
