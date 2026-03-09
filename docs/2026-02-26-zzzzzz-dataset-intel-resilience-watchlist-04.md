@@ -1,4 +1,4 @@
-# Dataset Intel: Resilience watchlist (cycle 04)
+# Datasets: Resilience watchlist (cycle 04)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-26-zzzzzz-dataset-intel-resilience-watchlist-04.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-26-zzzzzz-dataset-intel-resilience-watchlist-04.md)

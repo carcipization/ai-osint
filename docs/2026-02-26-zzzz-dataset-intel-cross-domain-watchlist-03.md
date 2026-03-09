@@ -1,4 +1,4 @@
-# Dataset Intel: Cross-domain anomaly watchlist (cycle 03)
+# Datasets: Cross-domain anomaly watchlist (cycle 03)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-26-zzzz-dataset-intel-cross-domain-watchlist-03.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-26-zzzz-dataset-intel-cross-domain-watchlist-03.md)

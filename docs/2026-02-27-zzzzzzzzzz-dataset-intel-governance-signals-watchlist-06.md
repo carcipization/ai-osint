@@ -1,4 +1,4 @@
-# Dataset Intel: Governance-signals watchlist (cycle 06)
+# Datasets: Governance-signals watchlist (cycle 06)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-27-zzzzzzzzzz-dataset-intel-governance-signals-watchlist-06.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-27-zzzzzzzzzz-dataset-intel-governance-signals-watchlist-06.md)

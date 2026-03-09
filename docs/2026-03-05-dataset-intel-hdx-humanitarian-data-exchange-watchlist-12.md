@@ -1,4 +1,4 @@
-# Dataset intel: Humanitarian Data Exchange (HDX) added for crisis-indicator and displacement monitoring (Watchlist #12)
+# Datasets: Humanitarian Data Exchange (HDX) added for crisis-indicator and displacement monitoring (Watchlist #12)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-hdx-humanitarian-data-exchange-watchlist-12.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-05-dataset-intel-hdx-humanitarian-data-exchange-watchlist-12.md)

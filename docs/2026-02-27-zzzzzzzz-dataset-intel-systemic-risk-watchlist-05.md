@@ -1,4 +1,4 @@
-# Dataset Intel: Systemic-risk watchlist (cycle 05)
+# Datasets: Systemic-risk watchlist (cycle 05)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-27-zzzzzzzz-dataset-intel-systemic-risk-watchlist-05.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-27-zzzzzzzz-dataset-intel-systemic-risk-watchlist-05.md)

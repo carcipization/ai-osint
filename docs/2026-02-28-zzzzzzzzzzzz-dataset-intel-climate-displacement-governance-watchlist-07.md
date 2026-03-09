@@ -1,4 +1,4 @@
-# Dataset Intel: Climate-displacement-governance watchlist (cycle 07)
+# Datasets: Climate-displacement-governance watchlist (cycle 07)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-02-28-zzzzzzzzzzzz-dataset-intel-climate-displacement-governance-watchlist-07.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-02-28-zzzzzzzzzzzz-dataset-intel-climate-displacement-governance-watchlist-07.md)

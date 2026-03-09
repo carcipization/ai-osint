@@ -180,10 +180,11 @@ def is_story_or_datasets_item(it: Item) -> bool:
     s = it.slug.lower()
     if s in SPECIAL_DATASET_DOCS:
         return False
+    if s.startswith("datasets-optimize"):
+        return False
     return (
         "osint-story" in s
         or "dataset-intel" in s
-        or s.startswith("datasets-")
         or s.startswith("dataset-")
     )
 

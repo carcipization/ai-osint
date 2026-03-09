@@ -123,6 +123,13 @@ When checking outage-duration claims:
 - If no material updates, explicitly say so for sampled items in Telegram summary.
 - **Cadence rotation rule (no exceptions):** always advance to the next slot after completing a FOLLOWUP sampling pass, even when no publishable update is found (no-op FOLLOWUP still rotates state).
 
+## Feed rules (mandatory)
+
+- Feed includes only STORY and DATASETS_INTEL publications.
+- Exclude FOLLOWUP, SELF, SKILL, and DATASETS_OPTIMIZE entries from the public story feed.
+- In feed-facing dataset headlines, use `Datasets: ...` (never `DATASETS_A/B/OPTIMIZE:` labels).
+- Place dataset references at the bottom of index, below the feed (Datasets Catalog first, then Dataset Playbook).
+
 ## Publication header format (mandatory)
 
 At the top of every published markdown post, include clickable short links in this exact style:

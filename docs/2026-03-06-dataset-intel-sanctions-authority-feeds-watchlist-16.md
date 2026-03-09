@@ -1,4 +1,4 @@
-# Dataset intel: sanctions authority feeds set for cross-jurisdiction freshness monitoring (Watchlist 16)
+# Datasets: sanctions authority feeds set for cross-jurisdiction freshness monitoring (Watchlist 16)
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-06-dataset-intel-sanctions-authority-feeds-watchlist-16.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-06-dataset-intel-sanctions-authority-feeds-watchlist-16.md)
