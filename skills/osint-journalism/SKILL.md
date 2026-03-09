@@ -199,6 +199,25 @@ In `research-traces/`, add a short **"Could this be wrong because..."** block li
 - For follow-ups, explicitly separate: unchanged findings vs new findings.
 - Preserve an audit trail in `research-traces/` for major methodological changes.
 
+## Single-source and rumor discipline (SELF quality upgrade)
+
+- If a high-impact claim relies on one origin (single post, single official statement, single scraper output), label the conclusion as provisional unless independent corroboration is found.
+- For market- or conflict-sensitive rumor bursts, explicitly separate:
+  - what is verified,
+  - what is circulating unverified,
+  - what evidence is still missing.
+- Do not publish a strong binary verdict when key contradictory evidence is unavailable or blocked by timing gaps.
+
+## Trace-to-copy mapping rule (SELF quality upgrade)
+
+Before publishing, ensure each major claim in the story body has a matching evidence entry in `research-traces/` with:
+- source URL,
+- timestamp/date,
+- classification (Observation / Inference / Unknown),
+- one-line limitation note.
+
+If a sentence cannot be mapped, rewrite or remove it.
+
 ## Copy desk pass (mandatory before publish)
 
 Run a final newsroom-style pass focused on accuracy and readability, not prose flourishes:
