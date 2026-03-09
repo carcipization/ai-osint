@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 94 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 99 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 23+13+11+17+7+7+6+3+3+3+1 = **94** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (5), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 23+13+11+17+7+7+9+5+3+3+1 = **99** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -122,6 +122,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [OpenSky Network](https://opensky-network.org/data) — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.
 - [ADS-B Exchange](https://www.adsbexchange.com/data/) — Broad ADS-B feeds for flight path reconstruction and discontinuities. Commercial endpoint/term changes should be monitored.
 - [ADSB.lol Open Data](https://www.adsb.lol/docs/open-data/api/) — Community-backed ADS-B API and archives. Useful as independent aviation corroboration with uneven geography.
+- [Air Traffic Passenger Statistics](https://catalog.data.gov/dataset/air-traffic-passenger-statistics) — Airport-level passenger throughput and route-level traffic counts for aviation demand and disruption context checks. Strong operational signal with airport-reporting and periodic backfill caveats.
+- [MTA Metro-North Delays](https://catalog.data.gov/dataset/mta-metro-north-delays-beginning-2012) — Commuter rail delay records for transport reliability and urban mobility stress monitoring. Useful local operations layer, but incident coding and delay attribution can revise.
 
 ## Economy, governance, and structural risk
 - [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.
@@ -185,6 +187,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Toronto MCI](https://open.toronto.ca/dataset/major-crime-indicators/) — Neighbourhood-level major-crime indicators for city trend checks. Definitions differ from US systems.
 - [Edmonton EPS occurrences](https://dashboard.edmonton.ca/dataset/EPS-Neighbourhood-Criminal-Occurrences/xthe-mnvi/data) — Monthly neighbourhood crime indicators for local outlier detection. Not directly comparable across municipalities.
 - [NYC Motor Vehicle Collisions – Crashes](https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes) — High-frequency crash records including location, contributing factors, and injury/fatality fields for urban safety trend checks. Valuable operational signal with reporting-lag and post-incident reclassification caveats.
+- [Recalls Data](https://catalog.data.gov/dataset/recalls-data) — U.S. product recall notices across consumer, vehicle, and safety-related categories for hazard-monitoring and exposure-context checks. Useful rapid-alert layer with agency-specific taxonomy differences.
+- [NYC Motor Vehicle Collisions – Person](https://catalog.data.gov/dataset/motor-vehicle-collisions-person) — Person-level casualty records linked to NYC collision incidents for severity and vulnerable-road-user pattern checks. High granularity with privacy-driven field suppression and revision caveats.
+- [Crash Reporting – Drivers Data](https://catalog.data.gov/dataset/crash-reporting-drivers-data) — Driver-level crash report records for contributing-factor and impairment-context analysis in traffic-safety stories. Strong explanatory layer with jurisdiction-specific coding limits.
 
 ## Telegram and public-channel analytics
 - [TGStat API](https://tgstat.com/api/stat) — Public Telegram channel growth/citation signal. Third-party methodology should be treated as a caveated proxy.
