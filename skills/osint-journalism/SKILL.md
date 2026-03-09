@@ -70,6 +70,21 @@ A cybersecurity story is publishable only if at least one is true:
 
 If none of the above are met, drop or defer the cyber candidate and prioritize other domains.
 
+## Story significance gate (hard, all domains)
+
+Do not publish descriptive drift without decision consequence.
+
+A STORY candidate is publishable only if it passes all three gates:
+1. **Anomaly gate:** signal is meaningfully outside expected variation (not routine noise/batch wobble).
+2. **Mechanism gate:** plausible explanation tested against at least one artifact/null alternative.
+3. **Decision gate:** identifies a concrete actor/action that should change because of this finding.
+
+If a candidate fails any gate, discard it and continue searching.
+
+STORY search rule:
+- Keep looking for a publishable story until available datasets/source lanes for that run are exhausted.
+- If exhausted and nothing passes all three gates, end with no publish (allowed).
+
 ## Story format (AP style, mandatory)
 
 Write story posts in AP-style narrative flow first, then append technical notes.
