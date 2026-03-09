@@ -248,6 +248,21 @@ Before publishing, ensure each major claim in the story body has a matching evid
 
 If a sentence cannot be mapped, rewrite or remove it.
 
+## Claim-origin and falsification ladder (SELF quality upgrade)
+
+Before drafting, force a short origin-first verification ladder for any social/UGC-sensitive claim:
+
+1. **Origin trace first:** identify the earliest observable source/post, not just the most viral repost.
+2. **Claim decomposition:** split into micro-claims (who/what/where/when/impact) and mark each as proven/unproven.
+3. **Counter-evidence sweep:** search specifically for evidence that would invalidate each micro-claim.
+4. **Source transparency threshold:** if origin cannot be established, cap confidence at provisional/inconclusive.
+5. **Narrative fit check:** ensure headline reflects only the strongest still-valid micro-claims.
+
+Rationale alignment:
+- Mirrors Reuters standards emphasis on cross-checking, source honesty, and trying to disprove initiative reporting.
+- Mirrors Reuters Fact Check methodology of identifying claim origin and linking supporting evidence.
+- Mirrors Bellingcat’s originality/source/location/time verification sequence.
+
 ## Copy desk pass (mandatory before publish)
 
 Run a final newsroom-style pass focused on accuracy and readability, not prose flourishes:
