@@ -243,6 +243,15 @@ Run a final newsroom-style pass focused on accuracy and readability, not prose f
 - **Uncertainty placement:** caveats appear where the uncertainty is introduced, not buried later.
 - **Headline discipline:** headline states the strongest defensible conclusion, not the most dramatic framing.
 
+## FOLLOWUP staleness gate (SKILL quality upgrade)
+
+When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns that only restate the same numbers.
+
+- If the same sampled items have shown **no material update across 2+ consecutive FOLLOWUP runs**, rotate at least one sampled item to a different recent high-impact publication.
+- Keep at least one continuity check from prior cycle, but require one freshness check (new source family, new topic, or newly published post) before deciding no-publish.
+- If all sampled items are unchanged, explicitly record the staleness condition in `research-traces/` and use concise no-publish language.
+- Do not manufacture updates; this gate improves sampling quality, not publication pressure.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
