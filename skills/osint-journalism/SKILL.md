@@ -56,6 +56,20 @@ A piece is novel when it adds at least one of:
 - Geospatial or registry linkage not present in headline coverage
 - Non-obvious inference that materially extends public reporting
 
+## Cybersecurity focus gate (hard)
+
+Default stance: cybersecurity is secondary unless the signal is operationally meaningful.
+
+Do not publish cyber stories based only on small statistical drift (minor ratio/percentage movement) without concrete downstream implications.
+
+A cybersecurity story is publishable only if at least one is true:
+- active exploitation trajectory materially changed,
+- high-severity exposure affects critical infrastructure or broad public attack surface,
+- authoritative remediation/patch guidance diverges from observed exploitation reality,
+- cross-source evidence indicates a genuine anomaly likely to change defender prioritization.
+
+If none of the above are met, drop or defer the cyber candidate and prioritize other domains.
+
 ## Story format (AP style, mandatory)
 
 Write story posts in AP-style narrative flow first, then append technical notes.
