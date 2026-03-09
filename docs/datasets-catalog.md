@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-09 06:06 UTC
+**Dateline:** 2026-03-09 17:06 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 89 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 94 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (12), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 23+13+11+12+7+7+6+3+3+3+1 = **89** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 23+13+11+17+7+7+6+3+3+3+1 = **94** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -82,6 +82,11 @@ Use this compact map before scanning full entries.
 - [WFP Global Food Prices](https://data.humdata.org/dataset/global-wfp-food-prices) — WFP-curated global market price observations for staple commodities across countries and markets. High-value inflation and food-security signal with country coverage and market-sampling variability.
 - [FAO Data in Emergencies (DIEM)](https://data.humdata.org/dataset/fao-diem-monitoring-system-household-surveys-aggregated-data) — FAO emergency household-survey aggregates on livelihoods, food security, and shocks in crisis-affected settings. Useful for humanitarian stress triangulation, but survey timing and sampling frames differ by operation.
 - [NYC Air Quality](https://catalog.data.gov/dataset/air-quality) — New York City air quality indicators for pollution-related exposure context and local hazard monitoring. Strong city-level signal with methodology breaks and station coverage changes requiring caution.
+- [WFP HungerMap – Ukraine](https://data.humdata.org/dataset/wfp-hungermap-data-for-ukr) — WFP HungerMap indicators for Ukraine covering food-security stress proxies and related humanitarian conditions. Useful for rapid situation tracking with model/input dependency caveats.
+- [WFP HungerMap – Haiti](https://data.humdata.org/dataset/wfp-hungermap-data-for-hti) — WFP HungerMap indicators for Haiti providing near-operational food-security stress context. Valuable for crisis monitoring, but indicator construction and reporting cadence can shift.
+- [WFP HungerMap – Ecuador](https://data.humdata.org/dataset/wfp-hungermap-data-for-ecu) — WFP HungerMap indicators for Ecuador for emerging food-access and stress pattern checks. Good directional layer that should be triangulated with country sources.
+- [CDC Provisional COVID-19 Death Counts by Week and State](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state) — Weekly provisional mortality counts by U.S. state for respiratory-wave and excess-pressure context. High-value public-health signal with known reporting lag and revision risk.
+- [CDC COVID-NET Monthly Hospitalization Rates](https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil) — Laboratory-confirmed COVID-19 hospitalization rates used for severity and burden tracking. Strong trend signal, but coverage reflects surveillance-network design rather than full-population capture.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.

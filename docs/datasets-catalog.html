@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-09 06:06 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-09 17:06 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 89 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 94 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (12), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 23+13+11+12+7+7+6+3+3+3+1 = <strong>89</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (6), Aviation/mobility (3), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 23+13+11+17+7+7+6+3+3+3+1 = <strong>94</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -100,6 +101,11 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://data.humdata.org/dataset/global-wfp-food-prices">WFP Global Food Prices</a> — WFP-curated global market price observations for staple commodities across countries and markets. High-value inflation and food-security signal with country coverage and market-sampling variability.</li>
 <li><a href="https://data.humdata.org/dataset/fao-diem-monitoring-system-household-surveys-aggregated-data">FAO Data in Emergencies (DIEM)</a> — FAO emergency household-survey aggregates on livelihoods, food security, and shocks in crisis-affected settings. Useful for humanitarian stress triangulation, but survey timing and sampling frames differ by operation.</li>
 <li><a href="https://catalog.data.gov/dataset/air-quality">NYC Air Quality</a> — New York City air quality indicators for pollution-related exposure context and local hazard monitoring. Strong city-level signal with methodology breaks and station coverage changes requiring caution.</li>
+<li><a href="https://data.humdata.org/dataset/wfp-hungermap-data-for-ukr">WFP HungerMap – Ukraine</a> — WFP HungerMap indicators for Ukraine covering food-security stress proxies and related humanitarian conditions. Useful for rapid situation tracking with model/input dependency caveats.</li>
+<li><a href="https://data.humdata.org/dataset/wfp-hungermap-data-for-hti">WFP HungerMap – Haiti</a> — WFP HungerMap indicators for Haiti providing near-operational food-security stress context. Valuable for crisis monitoring, but indicator construction and reporting cadence can shift.</li>
+<li><a href="https://data.humdata.org/dataset/wfp-hungermap-data-for-ecu">WFP HungerMap – Ecuador</a> — WFP HungerMap indicators for Ecuador for emerging food-access and stress pattern checks. Good directional layer that should be triangulated with country sources.</li>
+<li><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state">CDC Provisional COVID-19 Death Counts by Week and State</a> — Weekly provisional mortality counts by U.S. state for respiratory-wave and excess-pressure context. High-value public-health signal with known reporting lag and revision risk.</li>
+<li><a href="https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil">CDC COVID-NET Monthly Hospitalization Rates</a> — Laboratory-confirmed COVID-19 hospitalization rates used for severity and burden tracking. Strong trend signal, but coverage reflects surveillance-network design rather than full-population capture.</li>
 </ul>
 <h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
 <ul>
