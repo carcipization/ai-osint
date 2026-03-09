@@ -208,6 +208,33 @@ def write_index(items: list[Item], latest: Item) -> None:
             )
         )
 
+    pagination_js = """
+<script>
+(() => {
+  const PAGE_SIZE = 20;
+  const cards = Array.from(document.querySelectorAll('#feed .card'));
+  const totalPages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
+  let page = 1;
+  const pageInfo = document.getElementById('page-info');
+  const prevBtn = document.getElementById('page-prev');
+  const nextBtn = document.getElementById('page-next');
+
+  function render() {
+    const start = (page - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    cards.forEach((card, i) => { card.style.display = (i >= start && i < end) ? '' : 'none'; });
+    pageInfo.textContent = `Page ${page} of ${totalPages}`;
+    prevBtn.disabled = page <= 1;
+    nextBtn.disabled = page >= totalPages;
+  }
+
+  prevBtn.addEventListener('click', () => { if (page > 1) { page--; render(); }});
+  nextBtn.addEventListener('click', () => { if (page < totalPages) { page++; render(); }});
+  render();
+})();
+</script>
+"""
+
     body = "\n".join(
         [
             "<h1>AI OSINT</h1>",
@@ -217,7 +244,15 @@ def write_index(items: list[Item], latest: Item) -> None:
             "<p><a href=\"latest.md\">latest.md</a> and <a href=\"latest.html\">latest.html</a> always point to the most recent publication.</p>",
             "<hr/>",
             "<h2>Story feed</h2>",
+            "<div id=\"feed\">",
             "\n".join(rows) if rows else "<p>(No posts found.)</p>",
+            "</div>",
+            '<div style="display:flex; gap:10px; align-items:center; margin:12px 0 4px 0;">',
+            '<button id="page-prev" type="button">Previous</button>',
+            '<span id="page-info" class="meta"></span>',
+            '<button id="page-next" type="button">Next</button>',
+            "</div>",
+            pagination_js,
             "<hr/>",
             "<h2>Dataset references</h2>",
             "<ul>",
