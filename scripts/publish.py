@@ -173,8 +173,13 @@ def dateline_sort_key(it: Item) -> tuple[datetime, str]:
     return (datetime.min, it.slug)
 
 
+SPECIAL_DATASET_DOCS = {"datasets-catalog", "dataset-playbook", "dataset-strategy"}
+
+
 def is_story_or_datasets_item(it: Item) -> bool:
     s = it.slug.lower()
+    if s in SPECIAL_DATASET_DOCS:
+        return False
     return (
         "osint-story" in s
         or "dataset-intel" in s
@@ -210,8 +215,14 @@ def write_index(items: list[Item], latest: Item) -> None:
             f"<p><a href=\"{latest.slug}.html\"><strong>{html.escape(latest.title)}</strong></a></p>",
             "<p><a href=\"latest.md\">latest.md</a> and <a href=\"latest.html\">latest.html</a> always point to the most recent publication.</p>",
             "<hr/>",
-            "<h2>All posts</h2>",
+            "<h2>Story feed</h2>",
             "\n".join(rows) if rows else "<p>(No posts found.)</p>",
+            "<hr/>",
+            "<h2>Dataset references</h2>",
+            "<ul>",
+            '<li><a href="dataset-playbook.html">Dataset Playbook</a> · <a href="dataset-playbook.md">Markdown</a></li>',
+            '<li><a href="dataset-strategy.html">Dataset Strategy (legacy)</a> · <a href="dataset-strategy.md">Markdown</a></li>',
+            "</ul>",
             "<hr/>",
             '<p>Repo: <a href="https://github.com/carcipization/ai-osint">github.com/carcipization/ai-osint</a></p>',
         ]
