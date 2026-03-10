@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "publishableSlots": {
+    "cadence": ["STORY_A", "STORY_B", "DATASETS_A", "DATASETS_B"],
+    "oneoff": ["STORY", "DATASETS"]
+  },
+  "forbiddenDocsSlugRegex": "(followup|self|skill-update|datasets-optimize|kev|known-exploited-vulnerabilities|cisa-known-exploited)",
+  "forbiddenTitleRegex": "\\b(KEV|Known Exploited Vulnerabilities)\\b",
+  "allowedTitleRegex": "^#\\s*(Datasets:|.+osint-story)",
+  "feed": {
+    "includeSlugRegex": "(osint-story|dataset-intel)",
+    "excludeSlugRegex": "(datasets-optimize|followup|self|skill-update|kev|known-exploited-vulnerabilities|cisa-known-exploited)",
+    "pageSize": 20,
+    "datasetReferences": [
+      "datasets-catalog",
+      "dataset-playbook"
+    ]
+  }
+}

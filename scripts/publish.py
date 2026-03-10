@@ -19,6 +19,7 @@ Design goals:
 """
 
 from dataclasses import dataclass
+import json
 from pathlib import Path
 from datetime import datetime
 import html
@@ -31,6 +32,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 # GitHub Pages source is /docs for this repo.
 OUT = DOCS
+
+POLICY = json.loads((ROOT / "policy" / "publication_policy.json").read_text(encoding="utf-8"))
 
 CSS = """
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
@@ -173,20 +176,18 @@ def dateline_sort_key(it: Item) -> tuple[datetime, str]:
     return (datetime.min, it.slug)
 
 
-SPECIAL_DATASET_DOCS = {"datasets-catalog", "dataset-playbook"}
+SPECIAL_DATASET_DOCS = set(POLICY["feed"]["datasetReferences"])
+FEED_INCLUDE = re.compile(POLICY["feed"]["includeSlugRegex"], re.I)
+FEED_EXCLUDE = re.compile(POLICY["feed"]["excludeSlugRegex"], re.I)
 
 
 def is_story_or_datasets_item(it: Item) -> bool:
     s = it.slug.lower()
     if s in SPECIAL_DATASET_DOCS:
         return False
-    if s.startswith("datasets-optimize"):
+    if FEED_EXCLUDE.search(s):
         return False
-    return (
-        "osint-story" in s
-        or "dataset-intel" in s
-        or s.startswith("dataset-")
-    )
+    return FEED_INCLUDE.search(s) is not None
 
 
 def write_index(items: list[Item], latest: Item) -> None:
@@ -208,10 +209,11 @@ def write_index(items: list[Item], latest: Item) -> None:
             )
         )
 
+    page_size = int(POLICY["feed"].get("pageSize", 20))
     pagination_js = """
 <script>
-(() => {
-  const PAGE_SIZE = 20;
+(() => {{
+  const PAGE_SIZE = __PAGE_SIZE__;
   const cards = Array.from(document.querySelectorAll('#feed .card'));
   const totalPages = Math.max(1, Math.ceil(cards.length / PAGE_SIZE));
   let page = 1;
@@ -219,21 +221,21 @@ def write_index(items: list[Item], latest: Item) -> None:
   const prevBtn = document.getElementById('page-prev');
   const nextBtn = document.getElementById('page-next');
 
-  function render() {
+  function render() {{
     const start = (page - 1) * PAGE_SIZE;
     const end = start + PAGE_SIZE;
-    cards.forEach((card, i) => { card.style.display = (i >= start && i < end) ? '' : 'none'; });
+    cards.forEach((card, i) => {{ card.style.display = (i >= start && i < end) ? '' : 'none'; }});
     pageInfo.textContent = `Page ${page} of ${totalPages}`;
     prevBtn.disabled = page <= 1;
     nextBtn.disabled = page >= totalPages;
-  }
+  }}
 
-  prevBtn.addEventListener('click', () => { if (page > 1) { page--; render(); }});
-  nextBtn.addEventListener('click', () => { if (page < totalPages) { page++; render(); }});
+  prevBtn.addEventListener('click', () => {{ if (page > 1) {{ page--; render(); }}}});
+  nextBtn.addEventListener('click', () => {{ if (page < totalPages) {{ page++; render(); }}}});
   render();
-})();
+}})();
 </script>
-"""
+""".replace("__PAGE_SIZE__", str(page_size))
 
     body = "\n".join(
         [

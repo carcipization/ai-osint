@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 import sys
@@ -9,10 +10,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
-FORBIDDEN_SLUG = re.compile(r"(followup|self|skill-update|datasets-optimize|kev|known-exploited-vulnerabilities|cisa-known-exploited)", re.I)
-FORBIDDEN_TITLE = re.compile(r"\b(KEV|Known Exploited Vulnerabilities)\b", re.I)
-ALLOWED_TITLE = re.compile(r"^#\s*(Datasets:|.+osint-story)", re.I)
-
+POLICY = json.loads((ROOT / "policy" / "publication_policy.json").read_text(encoding="utf-8"))
+FORBIDDEN_SLUG = re.compile(POLICY["forbiddenDocsSlugRegex"], re.I)
+FORBIDDEN_TITLE = re.compile(POLICY["forbiddenTitleRegex"], re.I)
+ALLOWED_TITLE = re.compile(POLICY["allowedTitleRegex"], re.I)
 
 def staged_files() -> list[str]:
     out = subprocess.check_output([

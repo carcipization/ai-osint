@@ -127,6 +127,8 @@ When checking outage-duration claims:
 
 ## Feed rules (mandatory)
 
+Publication policy source of truth: `/home/pi/.openclaw/workspace/ai-osint/policy/publication_policy.json`.
+
 - Feed includes only STORY and DATASETS_INTEL publications.
 - Exclude FOLLOWUP, SELF, SKILL, and DATASETS_OPTIMIZE entries from the public story feed.
 - In feed-facing dataset headlines, use `Datasets: ...` (never `DATASETS_A/B/OPTIMIZE:` labels).
