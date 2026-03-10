@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-09 17:39 UTC
+**Dateline:** 2026-03-10 06:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 98 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 103 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (5), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 23+13+11+17+7+7+9+5+2+3+1 = **98** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (24), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (19), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (7), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 24+13+11+19+7+7+9+7+2+3+1 = **103** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -102,6 +102,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [WFP HungerMap – Ecuador](https://data.humdata.org/dataset/wfp-hungermap-data-for-ecu) — WFP HungerMap indicators for Ecuador for emerging food-access and stress pattern checks. Good directional layer that should be triangulated with country sources.
 - [CDC Provisional COVID-19 Death Counts by Week and State](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state) — Weekly provisional mortality counts by U.S. state for respiratory-wave and excess-pressure context. High-value public-health signal with known reporting lag and revision risk.
 - [CDC COVID-NET Monthly Hospitalization Rates](https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil) — Laboratory-confirmed COVID-19 hospitalization rates used for severity and burden tracking. Strong trend signal, but coverage reflects surveillance-network design rather than full-population capture.
+- [HDX HAPI - Climate: Rainfall](https://data.humdata.org/dataset/hdx-hapi-rainfall) — Harmonized rainfall indicators in the HDX Humanitarian API Pipeline for rapid hydro-climate stress context. Useful for short-cycle hazard corroboration, but gridded/aggregated processing assumptions should be checked before local attribution.
+- [GDACS RSS Information](https://data.humdata.org/dataset/gdacs-rss-information) — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
@@ -124,12 +126,15 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [ADSB.lol Open Data](https://www.adsb.lol/docs/open-data/api/) — Community-backed ADS-B API and archives. Useful as independent aviation corroboration with uneven geography.
 - [Air Traffic Passenger Statistics](https://catalog.data.gov/dataset/air-traffic-passenger-statistics) — Airport-level passenger throughput and route-level traffic counts for aviation demand and disruption context checks. Strong operational signal with airport-reporting and periodic backfill caveats.
 - [MTA Metro-North Delays](https://catalog.data.gov/dataset/mta-metro-north-delays-beginning-2012) — Commuter rail delay records for transport reliability and urban mobility stress monitoring. Useful local operations layer, but incident coding and delay attribution can revise.
+- [Alternative Fuel Corridors (November 3 2025)](https://catalog.data.gov/dataset/alternative-fuel-corridors-november-3-2025) — Official designated U.S. alternative-fuel highway corridors for EV/hydrogen fueling coverage baselines in mobility resilience analysis. Useful infrastructure context, but designation status can lag real-world buildout.
+- [NEVI 2 Corridor Groups (October 28 2025)](https://catalog.data.gov/dataset/nevi-2-corridor-groups-october-28-2025) — Corridor groupings for National Electric Vehicle Infrastructure planning and deployment tracking across U.S. routes. Valuable for charging-network rollout monitoring with versioned geometry and milestone-update caveats.
 
 ## Economy, governance, and structural risk
 - [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.
 - [IMF Data API](https://www.imf.org/external/datamapper/api/) — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.
 - [Eurostat APIs (Statistics + Catalogue)](https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access) — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.
 - [U.S. Census Bureau APIs](https://www.census.gov/data/developers/data-sets.html) — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.
+- [Border Crossing Entry Data](https://catalog.data.gov/dataset/border-crossing-entry-data-683ae) — U.S. land-border crossing counts by port, mode, and traveler/vehicle type for trade-and-mobility pressure monitoring. Useful high-frequency policy-sensitivity signal with known seasonality and port-level reporting revision risk.
 - [FRED API (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) — Large macro/financial time-series API with release, category, and observation endpoints for reproducible economic context checks. Excellent baseline layer, but mixed source provenance across series requires metadata discipline.
 - [BLS Public Data API](https://www.bls.gov/developers/) — U.S. Bureau of Labor Statistics machine-readable labor series (employment, CPI, PPI, productivity and more) for high-confidence domestic labor/inflation baselines. Strong official coverage with series-ID and seasonal-adjustment handling required.
 - [BEA Data API](https://apps.bea.gov/API/signup/) — U.S. Bureau of Economic Analysis API for GDP, personal income, international transactions, and regional accounts used in macro claim context checks. Primary-source economic backbone with revision-aware interpretation needed around release windows.
