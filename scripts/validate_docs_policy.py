@@ -9,7 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
-FORBIDDEN_SLUG = re.compile(r"(followup|self|skill-update|datasets-optimize)", re.I)
+FORBIDDEN_SLUG = re.compile(r"(followup|self|skill-update|datasets-optimize|kev|known-exploited-vulnerabilities|cisa-known-exploited)", re.I)
+FORBIDDEN_TITLE = re.compile(r"\b(KEV|Known Exploited Vulnerabilities)\b", re.I)
 ALLOWED_TITLE = re.compile(r"^#\s*(Datasets:|.+osint-story)", re.I)
 
 
@@ -42,6 +43,9 @@ def main() -> int:
             first = full.read_text(encoding="utf-8", errors="ignore").splitlines()[0]
         except Exception:
             first = ""
+        if FORBIDDEN_TITLE.search(first):
+            bad.append(f"forbidden KEV-family title: {rel} :: {first}")
+            continue
         if not ALLOWED_TITLE.search(first):
             bad.append(f"title must be STORY or 'Datasets:' -> {rel} :: {first}")
 

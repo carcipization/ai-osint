@@ -58,6 +58,8 @@ A piece is novel when it adds at least one of:
 
 ## Cybersecurity focus gate (hard)
 
+Permanent exclusion: do not use CISA KEV as a dataset or story source. KEV-family topics are excluded from publication and dataset intake.
+
 Default stance: cybersecurity is secondary unless the signal is operationally meaningful.
 
 Do not publish cyber stories based only on small statistical drift (minor ratio/percentage movement) without concrete downstream implications.

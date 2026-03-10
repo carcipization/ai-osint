@@ -1,38 +1,38 @@
-# CISA KEV 2026 addition pace lost its year-to-date lead after a March 9 update, matching 2025 at the same point osint-story
+# Datasets: added transport disruption and safety-alert feeds across aviation, rail, and crash/recall monitoring (Watchlist 23)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-10-kev-2026-addition-pace-lost-its-ytd-lead-after-march-9-update-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-10-kev-2026-addition-pace-lost-its-ytd-lead-after-march-9-update-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-09-dataset-intel-transport-safety-and-recall-signals-watchlist-23.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-09-dataset-intel-transport-safety-and-recall-signals-watchlist-23.md)
 
-**Dateline:** 2026-03-10 00:44 UTC
+**Dateline:** 2026-03-09 21:07 UTC
 
-## Story
-CISA’s Known Exploited Vulnerabilities (KEV) catalog added three more entries dated 2026-03-09, lifting 2026 year-to-date additions to 55 and eliminating the small lead 2026 previously held over 2025 in the same calendar window.
+## What changed
 
-Using CISA’s machine-readable feed through March 10, both years now show 55 additions by this point in the calendar (Jan. 1 through Mar. 10), while earlier years remain lower (36 in 2024 and 24 in 2023). The newest feed state therefore shifts the trend from “2026 ahead of 2025” to “2026 tracking 2025 pace.”
+This DATASETS_A cycle adds five catalog sources:
 
-The composition signal remains mixed. The ransomware-tagged share in 2026 additions is still low (3 of 55, about 5.5%), but the share of short remediation windows in 2026 rose with the latest additions: 11 of 55 entries now have due dates within 14 days of `dateAdded` (20.0%), up from the prior 8 of 52.
+1. **Air Traffic Passenger Statistics**
+2. **MTA Metro-North Delays**
+3. **Recalls Data**
+4. **NYC Motor Vehicle Collisions – Person**
+5. **Crash Reporting – Drivers Data**
 
-For patch-priority operations, the update matters because it changes the comparative pace narrative without changing the broader implication that KEV flow can quickly reprice short-window workload assumptions.
+## Why these additions
 
-## Appendix: Method
-- Pulled CISA KEV JSON feed on 2026-03-10 UTC.
-- Counted additions by `dateAdded` year and compared same-window totals (`MM-DD <= 03-10`) for 2023-2026.
-- Counted March 2026 additions by day to identify the latest update cluster.
-- Recomputed two composition indicators for 2026 additions:
-  - `knownRansomwareCampaignUse == Known` share
-  - share of entries where `dueDate - dateAdded <= 14 days`
+- **Air Traffic Passenger Statistics** improves route/airport throughput corroboration during mobility disruption stories.
+- **MTA Metro-North Delays** adds rail reliability signal coverage for urban transport stress monitoring.
+- **Recalls Data** strengthens product-safety hazard context with structured recall alert flows.
+- **NYC Collisions – Person** and **Crash Reporting – Drivers** add granular casualty and driver-factor evidence layers for traffic-risk reporting.
 
-## Appendix: Limitations
-- KEV updates are batch-driven; same-window comparisons can change materially after a single release.
-- Catalog tags (including ransomware-use labeling) can revise after initial posting.
-- Due-date-window share is policy/timing metadata, not a direct measure of exploit severity.
-- What would change this conclusion: another near-term batch that puts 2026 clearly above or below the 2025 same-window count.
+Together these additions expand operational transport and public-safety signal coverage for fast-cycle OSINT checks.
 
-## Appendix: Confidence
-**Confidence: Medium-high.**
+## Files updated
 
-High confidence in feed-state arithmetic; medium-high confidence in directional interpretation because short-window comparisons are update-sensitive.
+- `docs/datasets-catalog.md`
 
-## Appendix: Sources
-- CISA KEV machine-readable feed (JSON): [https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json)
-- CISA KEV catalog landing page: [https://www.cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+## Source links
+
+- [Air Traffic Passenger Statistics](https://catalog.data.gov/dataset/air-traffic-passenger-statistics)
+- [MTA Metro-North Delays](https://catalog.data.gov/dataset/mta-metro-north-delays-beginning-2012)
+- [Recalls Data](https://catalog.data.gov/dataset/recalls-data)
+- [NYC Motor Vehicle Collisions – Person](https://catalog.data.gov/dataset/motor-vehicle-collisions-person)
+- [Crash Reporting – Drivers Data](https://catalog.data.gov/dataset/crash-reporting-drivers-data)
+- [Updated datasets catalog](https://carcipization.github.io/ai-osint/datasets-catalog.md)

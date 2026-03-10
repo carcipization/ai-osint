@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 99 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 98 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (5), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 23+13+11+17+7+7+9+5+3+3+1 = **99** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (5), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 23+13+11+17+7+7+9+5+2+3+1 = **98** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -38,7 +38,7 @@ Use these stable tokens in internal retrieval notes so query phrasing stays cons
 - **economy-governance-risk:** macro, central-bank, labor, fiscal, governance
 - **ownership-sanctions-procurement:** sanctions, entities, beneficial ownership, contracts
 - **ai-risk-labor:** model capability, incidents, compute, hiring
-- **cyber-exploitation:** CVE, KEV, EPSS, exploitation
+- **cyber-exploitation:** CVE, EPSS, exploitation
 - **public-safety:** crime, police, city incidents
 - **telegram-analytics:** channels, citations, growth
 - **space-weather:** solar flares, geomagnetic, Kp, SWPC
@@ -46,7 +46,7 @@ Use these stable tokens in internal retrieval notes so query phrasing stays cons
 ## Retrieval lenses (for fast story triage)
 Use this compact map before scanning full entries.
 
-- **Fast operational corroboration (minutes to hourly):** OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, CISA KEV Catalog, FIRST EPSS.
+- **Fast operational corroboration (minutes to hourly):** OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, FIRST EPSS.
 - **Event-tracking + anomaly detection (hourly to daily):** ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.
 - **Structural baselines (monthly to annual):** UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.
 - **Entity/ownership resolution:** OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.
@@ -176,7 +176,6 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [LinkedIn Economic Graph](https://economicgraph.linkedin.com/) — Workforce trend analytics for occupational and skills transitions. Platform sample bias applies.
 
 ## Cyber vulnerability and exploitation risk
-- [CISA KEV Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) — Authoritative list of vulnerabilities observed exploited in the wild for federal prioritization. Crucial corroboration source for exploitation claims.
 - [FIRST EPSS](https://www.first.org/epss/data_stats) — Daily exploit-likelihood scoring for CVE triage prioritization. Probability signal, not exploitation confirmation.
 - [NIST NVD CVE API](https://nvd.nist.gov/developers/vulnerabilities) — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.
 

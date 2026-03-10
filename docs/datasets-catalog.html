@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -21,7 +22,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-09 17:39 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 99 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 98 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (5), Cyber exploitation risk (3), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 23+13+11+17+7+7+9+5+3+3+1 = <strong>99</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (23), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (17), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (9), Aviation/mobility (5), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 23+13+11+17+7+7+9+5+2+3+1 = <strong>98</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -53,7 +54,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><strong>economy-governance-risk:</strong> macro, central-bank, labor, fiscal, governance</li>
 <li><strong>ownership-sanctions-procurement:</strong> sanctions, entities, beneficial ownership, contracts</li>
 <li><strong>ai-risk-labor:</strong> model capability, incidents, compute, hiring</li>
-<li><strong>cyber-exploitation:</strong> CVE, KEV, EPSS, exploitation</li>
+<li><strong>cyber-exploitation:</strong> CVE, EPSS, exploitation</li>
 <li><strong>public-safety:</strong> crime, police, city incidents</li>
 <li><strong>telegram-analytics:</strong> channels, citations, growth</li>
 <li><strong>space-weather:</strong> solar flares, geomagnetic, Kp, SWPC</li>
@@ -61,7 +62,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <h2 id="retrieval-lenses-for-fast-story-triage">Retrieval lenses (for fast story triage)</h2>
 <p>Use this compact map before scanning full entries.</p>
 <ul>
-<li><strong>Fast operational corroboration (minutes to hourly):</strong> OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, CISA KEV Catalog, FIRST EPSS.</li>
+<li><strong>Fast operational corroboration (minutes to hourly):</strong> OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, FIRST EPSS.</li>
 <li><strong>Event-tracking + anomaly detection (hourly to daily):</strong> ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.</li>
 <li><strong>Structural baselines (monthly to annual):</strong> UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.</li>
 <li><strong>Entity/ownership resolution:</strong> OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.</li>
@@ -195,7 +196,6 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="cyber-vulnerability-and-exploitation-risk">Cyber vulnerability and exploitation risk</h2>
 <ul>
-<li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV Catalog</a> — Authoritative list of vulnerabilities observed exploited in the wild for federal prioritization. Crucial corroboration source for exploitation claims.</li>
 <li><a href="https://www.first.org/epss/data_stats">FIRST EPSS</a> — Daily exploit-likelihood scoring for CVE triage prioritization. Probability signal, not exploitation confirmation.</li>
 <li><a href="https://nvd.nist.gov/developers/vulnerabilities">NIST NVD CVE API</a> — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.</li>
 </ul>
