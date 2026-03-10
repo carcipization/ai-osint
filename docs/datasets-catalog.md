@@ -3,7 +3,7 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-10 18:01 UTC
+**Dateline:** 2026-03-10 21:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
@@ -59,6 +59,8 @@ Use this compact map before scanning full entries.
 4. If adding aliases in future, keep one canonical entry and mention aliases in-text.
 5. Re-run duplicate-domain and section-balance checks before publish.
 6. For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.
+7. For city-level incident feeds, prefer one canonical entry per city/system and avoid near-duplicate mirrors unless they add distinct fields.
+8. For catalog entries with date-stamped titles (e.g., corridor snapshots), keep the version date in the title and note supersession risk in the descriptor.
 
 ## Freshness and revision-risk tags (retrieval optimization)
 Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.
@@ -74,6 +76,10 @@ Use these compact tags in internal triage notes to avoid over-trusting revision-
 
 Operational rule: for high-impact claims, avoid single-source conclusions from **F0+R+** datasets without at least one independent corroboration family.
 
+### Municipal-feed comparability protocol (DATASETS_OPTIMIZE)
+- Treat cross-city crime and crash feeds as **within-city trend tools first**, not direct city-vs-city ranking tools.
+- When used for cross-city context, require a same-period normalization note (population, reporting standard, or offense definition scope).
+- If a municipal dataset lacks stable definition history, cap confidence for comparative claims and document the missing standardization artifact.
 
 ## Conflict, unrest, and information control
 - [ACLED](https://acleddata.com/) — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.
