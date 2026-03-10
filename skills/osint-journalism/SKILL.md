@@ -87,6 +87,16 @@ STORY search rule:
 - Keep looking for a publishable story until available datasets/source lanes for that run are exhausted.
 - If exhausted and nothing passes all three gates, end with no publish (allowed).
 
+## Story novelty and duplication gate (SKILL quality upgrade)
+
+Do not publish a new story when it only rephrases a very recent conclusion from the same source lane.
+
+Before drafting, run a **last-72h overlap check** against recent STORY posts:
+- If headline claim, core metric, and actor/action implication are substantially unchanged, treat as duplicate and no-publish.
+- A follow-on is publishable only with at least one material delta: new official release window, sign/regime change, threshold crossing, or a newly validated mechanism that changes action priority.
+- Prefer “continuity noted in FOLLOWUP” over issuing near-duplicate STORY posts.
+- In `research-traces/`, record one-line duplicate rationale when rejecting a candidate.
+
 ## Story format (AP style, mandatory)
 
 Write story posts in AP-style narrative flow first, then append technical notes.
