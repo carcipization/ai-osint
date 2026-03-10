@@ -19,7 +19,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-10 18:01 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-10 21:01 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
 <p><strong>Catalog metadata:</strong> 109 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
@@ -75,6 +75,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>If adding aliases in future, keep one canonical entry and mention aliases in-text.</li>
 <li>Re-run duplicate-domain and section-balance checks before publish.</li>
 <li>For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.</li>
+<li>For city-level incident feeds, prefer one canonical entry per city/system and avoid near-duplicate mirrors unless they add distinct fields.</li>
+<li>For catalog entries with date-stamped titles (e.g., corridor snapshots), keep the version date in the title and note supersession risk in the descriptor.</li>
 </ol>
 <h2 id="freshness-and-revision-risk-tags-retrieval-optimization">Freshness and revision-risk tags (retrieval optimization)</h2>
 <p>Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.</p>
@@ -88,6 +90,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 - <strong>R+ (revision-prone):</strong> source commonly backfills or restates recent periods.
 - <strong>R0 (low revision):</strong> revision risk present but typically limited after release cutoffs.</p>
 <p>Operational rule: for high-impact claims, avoid single-source conclusions from <strong>F0+R+</strong> datasets without at least one independent corroboration family.</p>
+<h3 id="municipal-feed-comparability-protocol-datasets_optimize">Municipal-feed comparability protocol (DATASETS_OPTIMIZE)</h3>
+<ul>
+<li>Treat cross-city crime and crash feeds as <strong>within-city trend tools first</strong>, not direct city-vs-city ranking tools.</li>
+<li>When used for cross-city context, require a same-period normalization note (population, reporting standard, or offense definition scope).</li>
+<li>If a municipal dataset lacks stable definition history, cap confidence for comparative claims and document the missing standardization artifact.</li>
+</ul>
 <h2 id="conflict-unrest-and-information-control">Conflict, unrest, and information control</h2>
 <ul>
 <li><a href="https://acleddata.com/">ACLED</a> — Near-real-time conflict and protest event data. Strong for intensity/trajectory checks, but regional reporting lag and source bias require triangulation.</li>
