@@ -184,6 +184,18 @@ Also require dateline exact format:
 - If a key input is missing, choose **Inconclusive** over forced certainty.
 - Include at least one "what would change this verdict" condition in limitations.
 
+## Uncertainty language protocol (SELF quality upgrade)
+
+When evidence is incomplete or mixed, make uncertainty explicit at sentence level instead of burying it in limitations.
+
+- Use **verified-status labels** in drafting notes and map to copy verbs:
+  - `Verified (direct evidence)` → use verbs like *shows/measured/recorded*
+  - `Likely (supported inference)` → use verbs like *indicates/suggests*
+  - `Unverified claim` → use verbs like *claims/alleges/says*
+- If a key artifact is user-generated content (UGC), identify it as UGC in the sentence and state what is and is not verified yet.
+- For risk reporting, include scale/context in the same paragraph as the claim (avoid alarming framing without denominator/baseline).
+- If verification is pending, say so directly and timestamp the latest verified checkpoint.
+
 ## Narrative clarity checklist
 
 - Lead with the answer, then the strongest evidence, then why it matters.
