@@ -56,6 +56,17 @@ A piece is novel when it adds at least one of:
 - Geospatial or registry linkage not present in headline coverage
 - Non-obvious inference that materially extends public reporting
 
+## Lead attribution rule (mandatory)
+
+When the initial idea comes from an existing external story/report/post, always credit it and link it.
+
+Required behavior:
+- Add an explicit `Initial lead:` line near the top of STORY posts (immediately after dateline or first paragraph).
+- Include outlet/author/account name + direct URL to the lead item.
+- Keep attribution specific (do not use vague phrases like “reports said”).
+- Separate attribution from contribution: state what new OSINT value this piece adds beyond the lead (new data pull, falsification, cross-source test, etc.).
+- If multiple leads informed the idea, list the primary lead first and move others to Sources.
+
 ## Cybersecurity focus gate (hard)
 
 Permanent exclusion: do not use CISA KEV as a dataset or story source. KEV-family topics are excluded from publication and dataset intake.
