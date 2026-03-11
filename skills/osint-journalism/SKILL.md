@@ -341,6 +341,23 @@ When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns
 - If all sampled items are unchanged, explicitly record the staleness condition in `research-traces/` and use concise no-publish language.
 - Do not manufacture updates; this gate improves sampling quality, not publication pressure.
 
+## Publication-policy preflight (SKILL quality upgrade)
+
+Before finalizing a STORY or DATASETS post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects.
+
+- STORY headlines must clearly include story type marker expected by repo policy (e.g., `(osint-story)` in current convention).
+- Dataset posts must begin with `Datasets:`.
+- Keep top-of-file link block + dateline format exactly compliant.
+- If a post fails policy checks, fix markdown first, then regenerate HTML artifacts.
+
+## Working-tree hygiene for cadence reliability (SKILL quality upgrade)
+
+To reduce avoidable rebase interruptions and accidental broad diffs:
+
+- Before `git pull --rebase`, check whether unrelated generated HTML drift exists.
+- If unrelated drift is present, stash it with a timestamped note, complete the slot task, and avoid mixing that drift into the slot commit.
+- Keep slot commits scoped to intentional content + required generated artifacts only.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
