@@ -315,6 +315,23 @@ Run a final newsroom-style pass focused on accuracy and readability, not prose f
 - **Uncertainty placement:** caveats appear where the uncertainty is introduced, not buried later.
 - **Headline discipline:** headline states the strongest defensible conclusion, not the most dramatic framing.
 
+## Disconfirming-evidence prominence (SELF quality upgrade)
+
+To reduce confirmation bias and improve trustworthiness, surface the strongest challenge early instead of burying it in limitations.
+
+- In the story body (not just appendix), include a short **"What could overturn this"** sentence/paragraph whenever evidence is mixed or still developing.
+- If credible counter-evidence exists, place it in the first half of the story and explain why it does or does not change the current conclusion.
+- If no disconfirming artifact was found, say so explicitly and state the exact search gap (time window, missing registry update, unavailable telemetry, etc.).
+- Never present a strong verdict without naming the top unresolved contradiction risk.
+
+## Attribution density rule (SELF quality upgrade)
+
+For disputable claims, attribution must be near-immediate and specific.
+
+- Any sentence that could reasonably be contested should contain attribution in the same sentence or immediately adjacent sentence.
+- Prefer explicit actor/source nouns over vague references (e.g., "according to IODA outage telemetry" not "data shows").
+- If using anonymous/indirect sourcing in rare cases, explain why identity/details are limited and what verification was done independently.
+
 ## FOLLOWUP staleness gate (SKILL quality upgrade)
 
 When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns that only restate the same numbers.
