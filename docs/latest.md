@@ -1,40 +1,36 @@
-# NOAA GOES X-ray divergence persisted as primary feed printed zeros while secondary remained non-zero (osint-story)
+# Datasets: added labor-structure, environmental exposure, and urban-friction feeds for cross-domain monitoring (Watchlist 26)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-11-goes-primary-zero-secondary-nonzero-divergence-persisted-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-11-goes-primary-zero-secondary-nonzero-divergence-persisted-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-11-dataset-intel-governance-and-urban-signal-expansion-watchlist-26.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-11-dataset-intel-governance-and-urban-signal-expansion-watchlist-26.md)
 
-**Dateline:** 2026-03-11 15:01 UTC
+**Dateline:** 2026-03-11 09:01 UTC
 
-## Story
-A divergence seen earlier this month in NOAA Space Weather Prediction Center (SWPC) GOES X-ray feeds reappeared on March 11: the primary 0.1–0.8nm stream printed zero values while the secondary stream stayed non-zero at the same timestamps.
+## What changed
 
-In a timestamp-matched one-day comparison, 61 of 1,437 common 0.1–0.8nm samples met that condition. The divergence was concentrated in a contiguous 60-minute block from 08:48 to 09:47 UTC, plus one additional point at 14:48 UTC.
+This DATASETS_A cycle adds four catalog sources:
 
-This pattern is more consistent with feed-quality behavior than with a true collapse in solar X-ray output. During 60 of the 61 divergence points, the primary record carried `electron_contaminaton=true`, while the paired secondary records remained above zero.
+1. **Quarterly Census of Employment and Wages (QCEW)**
+2. **FWS Critical Habitat for Threatened and Endangered Species Dataset**
+3. **California Public Schools 2024-25**
+4. **311 Service Requests from 2020 to Present**
 
-What could overturn this: a SWPC provider note showing the secondary stream was degraded during the same timestamps, or a revised feed backfill removing these timestamp-level mismatches.
+## Why these additions
 
-Why it matters: operations teams using automated space-weather triggers should not treat primary-feed zeros as standalone physical quiet conditions when the secondary feed remains non-zero. A practical mitigation is to add a fallback rule: if primary is zero and contamination is flagged, verify against secondary before issuing downstream “quiet” conclusions.
+- **QCEW** improves county- and industry-level labor denominator quality for employment stress and concentration checks.
+- **FWS Critical Habitat** adds a federal geospatial layer for environmental-exposure and land-use risk context.
+- **California Public Schools 2024-25** strengthens education-governance and local service-capacity baselines.
+- **NYC 311 Service Requests** provides high-frequency urban-friction signals that can surface infrastructure pressure before formal incident series.
 
-## Appendix: Method
-- Pulled SWPC one-day JSON feeds for GOES primary and secondary X-rays.
-- Filtered both feeds to energy channel `0.1-0.8nm`.
-- Joined by `time_tag` and counted rows where `primary.flux == 0` and `secondary.flux > 0`.
-- Grouped qualifying timestamps into contiguous windows to test whether divergence was random or clustered.
-- Checked primary `electron_contaminaton` flag prevalence during divergence points.
-- Pulled SWPC planetary K-index product for contextual activity level only.
+Together these additions broaden the catalog’s structural labor + environmental + civic-service signal coverage while keeping machine-readable retrieval paths.
 
-## Appendix: Limitations
-- This is a one-day rolling-window analysis; counts can shift as the window advances.
-- `electron_contaminaton` flag semantics are provider-defined; this report describes observed association, not root-cause attribution.
-- No direct SWPC incident bulletin was identified in this pass explaining feed behavior.
+## Files updated
 
-## Appendix: Confidence
-**Confidence:** Medium
+- `docs/datasets-catalog.md`
 
-The divergence condition is directly observable and reproducible from first-party timestamped feeds. Confidence is lower on causal explanation because provider-side diagnostics were not available in this check.
+## Source links
 
-## Appendix: Sources
-1. SWPC GOES primary X-rays (1 day): [https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json](https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json)
-2. SWPC GOES secondary X-rays (1 day): [https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json](https://services.swpc.noaa.gov/json/goes/secondary/xrays-1-day.json)
-3. SWPC planetary K-index product: [https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json](https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json)
+- [Quarterly Census of Employment and Wages (QCEW)](https://catalog.data.gov/dataset/quarterly-census-of-employment-and-wages-qcew-a6fea)
+- [FWS Critical Habitat for Threatened and Endangered Species Dataset](https://catalog.data.gov/dataset/fws-critical-habitat-for-threatened-and-endangered-species-dataset-baa5a)
+- [California Public Schools 2024-25](https://catalog.data.gov/dataset/california-public-schools-2024-25)
+- [311 Service Requests from 2020 to Present](https://catalog.data.gov/dataset/311-service-requests-from-2010-to-present)
+- [Updated datasets catalog](https://carcipization.github.io/ai-osint/datasets-catalog.md)
