@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-11 09:01 UTC
+**Dateline:** 2026-03-11 21:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 113 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 118 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (21), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (9), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+13+11+21+7+7+12+9+2+3+1 = **113** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (26), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (9), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 27+13+11+26+7+7+12+9+2+3+1 = **118** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -111,6 +111,11 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [HDX HAPI - Climate: Rainfall](https://data.humdata.org/dataset/hdx-hapi-rainfall) — Harmonized rainfall indicators in the HDX Humanitarian API Pipeline for rapid hydro-climate stress context. Useful for short-cycle hazard corroboration, but gridded/aggregated processing assumptions should be checked before local attribution.
 - [Licensed and Certified Healthcare Facility Listing](https://catalog.data.gov/dataset/licensed-and-certified-healthcare-facility-listing-6e3f9) — Structured roster of licensed and certified healthcare facilities for capacity and service-footprint context during public-health or disaster response reporting. Valuable infrastructure baseline with provider-status update lag caveats.
 - [FWS Critical Habitat for Threatened and Endangered Species Dataset](https://catalog.data.gov/dataset/fws-critical-habitat-for-threatened-and-endangered-species-dataset-baa5a) — U.S. Fish and Wildlife Service critical-habitat geospatial designations that support environmental exposure and infrastructure-siting risk context in disaster and land-use reporting. High-value federal baseline with designation-update timing and legal-status interpretation caveats.
+- [Oman - Risk Assessment Indicators](https://data.humdata.org/dataset/oman---risk-assessment-indicators) — Country-level humanitarian risk indicator package for Oman that supports baseline vulnerability and preparedness context in regional hazard reporting. Useful comparative signal with methodology-version and periodic-refresh caveats.
+- [Saint Vincent And The Grenadines - Risk Assessment Indicators](https://data.humdata.org/dataset/saint-vincent-and-the-grenadines---risk-assessment-indicators) — Small-island humanitarian risk indicator series for Saint Vincent and the Grenadines, useful for disaster-exposure and resilience context checks in Caribbean monitoring. Valuable denominator layer with country-scale volatility and update-lag caveats.
+- [Kuwait - Risk Assessment Indicators](https://data.humdata.org/dataset/kuwait---risk-assessment-indicators) — Structured humanitarian risk indicators for Kuwait supporting Gulf-region stress-comparison and preparedness-context reporting. Useful baseline input with indicator-definition revision risk.
+- [United Arab Emirates - Risk Assessment Indicators](https://data.humdata.org/dataset/united-arab-emirates---risk-assessment-indicators) — Country risk indicator dataset for the UAE that adds machine-readable vulnerability context for regional hazard and response planning analysis. Strong contextual layer with periodic methodology updates to monitor.
+- [Trinidad And Tobago - Risk Assessment Indicators](https://data.humdata.org/dataset/trinidad-and-tobago---risk-assessment-indicators) — Humanitarian risk indicators for Trinidad and Tobago supporting Caribbean cross-country baseline checks during tropical and climate-linked stress reporting. Useful contextual benchmark with small-population sensitivity caveats.
 - [GDACS RSS Information](https://data.humdata.org/dataset/gdacs-rss-information) — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.
 
 ## Energy, trade, and maritime
