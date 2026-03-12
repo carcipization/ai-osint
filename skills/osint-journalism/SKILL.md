@@ -25,24 +25,24 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
    - Supported / Not supported / Partly supported / Inconclusive
    - Add explicit caveats for model-derived metrics and method-sensitive estimates
 
-## STORY lane selection (data-first, mandatory)
+## STORY broad-sweep selection (data-first, mandatory)
 
 Reverse the old flow. Do not start with a narrative idea.
 
-**No predefined lane pool.** Build lanes fresh each run from what data is actually updating now.
+**No predefined tracks.** Build candidates fresh each run from what data is actually updating now.
 
 1. **Freshness + availability scan first (hard first pass)**
-   - Discover candidate lanes dynamically from currently updating, reachable sources.
+   - Discover candidate signals dynamically from currently updating, reachable sources.
    - Use broad discovery inputs: official release calendars, API latest endpoints, wire/headline event surfaces, and high-signal social leads.
-   - Define a lane only after finding a concrete fresh artifact.
-   - Score each discovered lane on:
+   - Define a candidate only after finding a concrete fresh artifact.
+   - Score each discovered candidate on:
      - freshness (new/updated artifact in current window),
      - availability (query works now; no blocking errors),
      - baseline comparability (enough history/context to judge anomaly),
      - decision surface (who would act if true).
 
 2. **Only then generate story concepts**
-   - For top-scoring lanes, derive 1–2 testable story concepts from observed data changes.
+   - For top-scoring candidates, derive 1–2 testable story concepts from observed data changes.
    - Prefer concept framing as: “what changed vs baseline, and what decision could change?”
 
 3. **Timebox for STORY runs**
@@ -51,23 +51,23 @@ Reverse the old flow. Do not start with a narrative idea.
    - Publish/no-publish decision: 5 min
 
 4. **No-publish guardrail**
-   - Do not no-publish before completing the data-first scan unless discovered lanes are unavailable with documented errors.
+   - Do not no-publish before completing the data-first scan unless discovered candidates are unavailable with documented errors.
 
 ## Situational awareness + anomaly sweep (mandatory for STORY/FOLLOWUP/DATASETS)
 
 Run a short dual-trigger sweep at the start of each run (timebox: 5–10 minutes).
 
 Required:
-- Use web/news search to identify active developments across event classes (not a single headline lane).
+- Use web/news search to identify active developments across event classes (not a single headline track).
 - Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
-- Do not predispose the pass to any predefined lane, domain, or dataset family.
+- Do not predispose the pass to any predefined track, domain, or dataset family.
 
 Dual-trigger rule (hard):
 1. **World-state trigger**: build a neutral brief from what is newly active now, then rank by expected real-world impact.
 2. **Anomaly trigger**: run a blind dataset anomaly scan for fresh, non-routine changes even when no matching headline/news story exists.
 
 Selection rule:
-- Derive candidate lanes from both triggers before deep data pulls.
+- Derive candidate signals from both triggers before deep data pulls.
 - Include at least one world-state-derived candidate and one anomaly-derived candidate per run when available.
 - If either side yields no qualified candidate, document why in the trace.
 - If the top-impact item is not selected first, document explicit blocker(s) in trace.
@@ -137,8 +137,8 @@ Required behavior:
 
 ## Domain prioritization (operator preference)
 
-- Deprioritize Fed/banking-liquidity lanes by default in STORY runs.
-- Treat Fed/banking candidates as secondary/fallback lanes; only elevate when there is a clear regime break or cross-domain consequence (e.g., broad spillover into labor, logistics, energy, conflict, or public-safety decisions).
+- Deprioritize Fed/banking-liquidity signals by default in STORY runs.
+- Treat Fed/banking candidates as secondary/fallback signals; only elevate when there is a clear regime break or cross-domain consequence (e.g., broad spillover into labor, logistics, energy, conflict, or public-safety decisions).
 - In the first-pass freshness scan, prefer non-Fed/non-banking domains unless data quality is materially worse.
 
 ## Cybersecurity focus gate (hard)
@@ -169,12 +169,12 @@ A STORY candidate is publishable only if it passes all three gates:
 If a candidate fails any gate, discard it and continue searching.
 
 STORY search rule:
-- Keep looking for a publishable story until available datasets/source lanes for that run are exhausted.
+- Keep looking for a publishable story until available datasets/source candidates for that run are exhausted.
 - If exhausted and nothing passes all three gates, end with no publish (allowed).
 
 ## Story novelty and duplication gate (SKILL quality upgrade)
 
-Do not publish a new story when it only rephrases a very recent conclusion from the same source lane.
+Do not publish a new story when it only rephrases a very recent conclusion from the same source stream.
 
 Before drafting, run a **last-72h overlap check** against recent STORY posts:
 - If headline claim, core metric, and actor/action implication are substantially unchanged, treat as duplicate and no-publish.
