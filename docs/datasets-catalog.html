@@ -48,6 +48,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <ul>
 <li><strong>conflict-control:</strong> conflict, unrest, censorship, shutdowns, outages</li>
 <li><strong>humanitarian-hazard:</strong> earthquakes, disasters, displacement, fires, coastal</li>
+<li><strong>humanitarian-risk-shards:</strong> country risk-assessment indicator datasets (e.g., HDX country-level risk indicator packs)</li>
 <li><strong>energy-trade-maritime:</strong> shipping, chokepoints, commodities, power, gas</li>
 <li><strong>aviation-mobility:</strong> flights, ADS-B, routes, air traffic</li>
 <li><strong>economy-governance-risk:</strong> macro, central-bank, labor, fiscal, governance</li>
@@ -77,6 +78,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li>For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.</li>
 <li>For city-level incident feeds, prefer one canonical entry per city/system and avoid near-duplicate mirrors unless they add distinct fields.</li>
 <li>For catalog entries with date-stamped titles (e.g., corridor snapshots), keep the version date in the title and note supersession risk in the descriptor.</li>
+<li>For country-sharded datasets (same schema repeated across countries), prefer one concise naming pattern and keep descriptors template-consistent so retrieval and dedup checks remain stable.</li>
+<li>When adding multiple country shards in one cycle, record the family label in traces (e.g., "risk-assessment indicators") to speed future overlap checks.</li>
 </ol>
 <h2 id="freshness-and-revision-risk-tags-retrieval-optimization">Freshness and revision-risk tags (retrieval optimization)</h2>
 <p>Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.</p>
@@ -90,6 +93,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 - <strong>R+ (revision-prone):</strong> source commonly backfills or restates recent periods.
 - <strong>R0 (low revision):</strong> revision risk present but typically limited after release cutoffs.</p>
 <p>Operational rule: for high-impact claims, avoid single-source conclusions from <strong>F0+R+</strong> datasets without at least one independent corroboration family.</p>
+<h3 id="country-shard-dedup-protocol-datasets_optimize">Country-shard dedup protocol (DATASETS_OPTIMIZE)</h3>
+<ul>
+<li>If many country variants of the same dataset family appear in discovery, add only shards that improve geographic coverage gaps for current monitoring priorities.</li>
+<li>Avoid adding adjacent-country shards solely due to recency timestamps when they do not expand decision-relevant coverage.</li>
+<li>In traces, list selected shards and at least one intentionally skipped shard family to document breadth-vs-duplication judgment.</li>
+</ul>
 <h3 id="municipal-feed-comparability-protocol-datasets_optimize">Municipal-feed comparability protocol (DATASETS_OPTIMIZE)</h3>
 <ul>
 <li>Treat cross-city crime and crash feeds as <strong>within-city trend tools first</strong>, not direct city-vs-city ranking tools.</li>
