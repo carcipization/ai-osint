@@ -432,6 +432,37 @@ To reduce avoidable rebase interruptions and accidental broad diffs:
 - If unrelated drift is present, stash it with a timestamped note, complete the slot task, and avoid mixing that drift into the slot commit.
 - Keep slot commits scoped to intentional content + required generated artifacts only.
 
+## Rapid challenge pass (SELF quality upgrade)
+
+Before final draft lock, run a 5-minute adversarial check to reduce confirmation bias:
+
+1. Write the strongest one-sentence counter-thesis to your current conclusion.
+2. Attempt one targeted search/query that would support that counter-thesis.
+3. If found, surface it in the story body (not only limitations) and adjust confidence.
+4. If not found, document exact gap searched (time range/source family/query) in `research-traces/`.
+
+This operationalizes Reuters’ “try to disprove as well as prove your story” guidance as a repeatable newsroom step.
+
+## Disputable-fact attribution SLA (SELF quality upgrade)
+
+For any sentence containing a disputable fact, enforce a strict attribution window:
+
+- Attribution must appear in the **same sentence** or the **immediately adjacent sentence**.
+- If attribution is further away, rewrite before publish.
+- When multiple consecutive facts come from one source, restate attribution at least once per paragraph.
+
+Goal: readers should never need to scan far to find provenance for contestable claims.
+
+## Evidence independence test (SELF quality upgrade)
+
+When using multiple sources for corroboration, verify true independence:
+
+- Do not count two items that cite the same upstream origin as independent confirmation.
+- Mark each source in trace with an `upstream origin` field (if known).
+- For high-impact claims, require at least two different upstream origins or downgrade to provisional/inconclusive.
+
+This aligns corroboration practice with AP’s requirement for independent corroboration around sensitive anonymous/secondhand information.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
