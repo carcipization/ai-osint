@@ -59,6 +59,10 @@ Run a short world-state search brief at the start of each run (timebox: 5–10 m
 
 Required:
 - Use web/news search to identify active developments across event classes (not a single headline lane).
+- Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by the world-state brief.
+- Run a minimum event-class sweep each time: conflict/security, chokepoints/logistics, energy/commodities, policy/sanctions, humanitarian/displacement.
+- Rank brief items by expected real-world impact before lane selection.
+- Highest-impact item must be attempted first; if not selected, document explicit blocker(s) in trace.
 - Capture top developments in the private trace with timestamped links and search terms.
 - Derive candidate lanes from this brief before deep data pulls.
 - Require at least one search-derived candidate lane per run, or explicitly record why none qualified.
