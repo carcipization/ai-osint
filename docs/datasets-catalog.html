@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-11 21:01 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-12 09:01 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 118 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 123 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (13), Ownership/sanctions/procurement (11), Humanitarian/hazard (26), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (9), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 27+13+11+26+7+7+12+9+2+3+1 = <strong>118</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (27), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 27+14+11+27+7+7+12+12+2+3+1 = <strong>123</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -143,6 +144,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://data.humdata.org/dataset/united-arab-emirates---risk-assessment-indicators">United Arab Emirates - Risk Assessment Indicators</a> — Country risk indicator dataset for the UAE that adds machine-readable vulnerability context for regional hazard and response planning analysis. Strong contextual layer with periodic methodology updates to monitor.</li>
 <li><a href="https://data.humdata.org/dataset/trinidad-and-tobago---risk-assessment-indicators">Trinidad And Tobago - Risk Assessment Indicators</a> — Humanitarian risk indicators for Trinidad and Tobago supporting Caribbean cross-country baseline checks during tropical and climate-linked stress reporting. Useful contextual benchmark with small-population sensitivity caveats.</li>
 <li><a href="https://data.humdata.org/dataset/gdacs-rss-information">GDACS RSS Information</a> — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/national-usfs-fire-perimeter-feature-layer-bb7cd">National USFS Fire Perimeter (Feature Layer)</a> — National U.S. wildland fire perimeter polygons (daily/final mapped incidents) for rapid hazard-footprint and spread-context checks. Strong operational geospatial layer with perimeter-finalization lag and incident-size inclusion caveats.</li>
 </ul>
 <h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
 <ul>
@@ -159,6 +161,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://marinecadastre.gov/accessais/">MarineCadastre AccessAIS</a> — US-focused AIS archive access. Useful for US waters analyses, not global coverage.</li>
 <li><a href="https://www.aishub.net/api">AISHub API</a> — Community AIS data feeds for vessel tracking redundancy. Coverage quality depends on contributor network.</li>
 <li><a href="https://catalog.data.gov/dataset/harmonized-tariff-schedule-of-the-united-states-2024">Harmonized Tariff Schedule of the United States (2026)</a> — Official U.S. tariff schedule classifications and duty-rate tables for import-policy and trade-exposure verification. Authoritative legal baseline, with periodic amendments that require effective-date checks.</li>
+<li><a href="https://catalog.data.gov/dataset/event-correlated-outage-dataset-in-america">Event-correlated Outage Dataset in America</a> — U.S. power-outage analysis dataset linking outage patterns with event and population context across multiple source systems (EAGLE-I, DOE-417, population estimates). Valuable grid-disruption corroboration layer with integration-method and update-cadence caveats.</li>
 </ul>
 <h2 id="aviation-and-mobility">Aviation and mobility</h2>
 <ul>
@@ -171,6 +174,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://catalog.data.gov/dataset/electric-vehicle-population-data">Electric Vehicle Population Data</a> — Registration-level electric-vehicle population records for adoption trend and charging-demand context in transport-transition stories. Strong policy-sensitive signal with jurisdiction-specific reporting lag and reclassification caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/mta-subway-stations">MTA Subway Stations</a> — Geocoded New York City subway station inventory supporting urban mobility exposure, disruption mapping, and transit-access analysis. Useful static infrastructure layer with occasional metadata/version refresh gaps.</li>
 <li><a href="https://catalog.data.gov/dataset/nevi-2-corridor-groups-october-28-2025">NEVI 2 Corridor Groups (October 28 2025)</a> — Corridor groupings for National Electric Vehicle Infrastructure planning and deployment tracking across U.S. routes. Valuable for charging-network rollout monitoring with versioned geometry and milestone-update caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/freight-rail-traffic-carloads">Freight Rail Traffic - Carloads</a> — Weekly and monthly U.S. rail carload volumes (bulk-commodity heavy) for industrial-flow and logistics-pressure baseline checks. Useful transport-demand pulse with commodity-mix and calendar-effect caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/freight-rail-traffic-intermodal-units">Freight Rail Traffic - Intermodal Units</a> — U.S. rail intermodal unit counts (containers/trailers) for consumer-goods and trade-flow stress monitoring across short cycles. Strong directional logistics signal with modal-substitution and seasonal-traffic caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/north-american-rail-network-nodes-b078b">North American Rail Network Nodes</a> — FRA/BTS rail-node geospatial network baseline for rail chokepoint mapping, route-context analysis, and infrastructure exposure overlays. High-value structural layer with topology-update/versioning caveats.</li>
 </ul>
 <h2 id="economy-governance-and-structural-risk">Economy, governance, and structural risk</h2>
 <ul>
