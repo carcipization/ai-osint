@@ -53,6 +53,16 @@ Reverse the old flow. Do not start with a narrative idea.
 4. **No-publish guardrail**
    - Do not no-publish before completing the data-first scan unless discovered lanes are unavailable with documented errors.
 
+## Situational awareness search (mandatory for STORY/FOLLOWUP/DATASETS)
+
+Run a short world-state search brief at the start of each run (timebox: 5–10 minutes).
+
+Required:
+- Use web/news search to identify active developments across event classes (not a single headline lane).
+- Capture top developments in the private trace with timestamped links and search terms.
+- Derive candidate lanes from this brief before deep data pulls.
+- Require at least one search-derived candidate lane per run, or explicitly record why none qualified.
+
 ## Dataset intake policy (batch-first)
 
 - Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
@@ -61,6 +71,24 @@ Reverse the old flow. Do not start with a narrative idea.
 - Adding only one dataset is unacceptable.
 - Prioritize coverage breadth across domains before polishing niche depth.
 - Do **not** run AP/story preflight or story publishability gates for dataset selection.
+
+### Dataset hunting protocol (event-class, cross-domain)
+
+1. Start from situational-awareness event classes (conflict/disruption/sanctions/infrastructure/humanitarian, etc.).
+2. Map each class to an impact chain (physical flows -> prices/risk -> policy/social effects).
+3. Hunt datasets in **families** for each chain:
+   - primary operational indicator,
+   - independent confirmation indicator,
+   - spillover/second-order indicator.
+4. Score candidate datasets before promotion:
+   - freshness cadence,
+   - endpoint reliability,
+   - baseline depth/comparability,
+   - coverage breadth,
+   - revision risk,
+   - decision relevance.
+5. Prefer datasets that complete or strengthen a cross-domain chain; deprioritize isolated single-metric additions.
+6. Log misses in trace (missing source class, endpoint failure, sparse history) to improve future hunts.
 
 ## Claim-check minimum standard
 
