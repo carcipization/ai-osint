@@ -95,6 +95,12 @@ Required behavior:
 - Separate attribution from contribution: state what new OSINT value this piece adds beyond the lead (new data pull, falsification, cross-source test, etc.).
 - If multiple leads informed the idea, list the primary lead first and move others to Sources.
 
+## Domain prioritization (operator preference)
+
+- Deprioritize Fed/banking-liquidity lanes by default in STORY runs.
+- Treat Fed/banking candidates as secondary/fallback lanes; only elevate when there is a clear regime break or cross-domain consequence (e.g., broad spillover into labor, logistics, energy, conflict, or public-safety decisions).
+- In the first-pass freshness scan, prefer non-Fed/non-banking domains unless data quality is materially worse.
+
 ## Cybersecurity focus gate (hard)
 
 Permanent exclusion: do not use CISA KEV as a dataset or story source. KEV-family topics are excluded from publication and dataset intake.
