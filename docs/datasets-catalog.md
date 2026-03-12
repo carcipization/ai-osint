@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-12 09:01 UTC
+**Dateline:** 2026-03-12 21:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 123 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 128 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (27), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+27+7+7+12+12+2+3+1 = **123** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (32), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 27+14+11+32+7+7+12+12+2+3+1 = **128** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -126,6 +126,11 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Trinidad And Tobago - Risk Assessment Indicators](https://data.humdata.org/dataset/trinidad-and-tobago---risk-assessment-indicators) — Humanitarian risk indicators for Trinidad and Tobago supporting Caribbean cross-country baseline checks during tropical and climate-linked stress reporting. Useful contextual benchmark with small-population sensitivity caveats.
 - [GDACS RSS Information](https://data.humdata.org/dataset/gdacs-rss-information) — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.
 - [National USFS Fire Perimeter (Feature Layer)](https://catalog.data.gov/dataset/national-usfs-fire-perimeter-feature-layer-bb7cd) — National U.S. wildland fire perimeter polygons (daily/final mapped incidents) for rapid hazard-footprint and spread-context checks. Strong operational geospatial layer with perimeter-finalization lag and incident-size inclusion caveats.
+- [Air Quality System (AQS)](https://catalog.data.gov/dataset/air-quality-system-aqs) — EPA national pollutant concentration repository across U.S. monitoring locations for PM/ozone and hazardous-pollutant context checks. High-value air-exposure baseline with station coverage and QA lag caveats.
+- [AirNow Real Time Air Quality REST API](https://catalog.data.gov/dataset/airnow-real-time-air-quality-rest-api) — Near-real-time Air Quality Index feed for rapid smoke/pollution condition checks in breaking hazard coverage. Useful operational signal with local monitor sparsity and occasional reporting latency.
+- [Regional Air Quality Data](https://catalog.data.gov/dataset/regional-air-quality-data) — Long-run regional atmospheric chemistry and meteorology series (1989–present) for anomaly-versus-baseline framing in air-quality stories. Strong historical context layer with instrument-network consistency caveats.
+- [NOAA Next Generation Radar (NEXRAD) Level 3 Products](https://catalog.data.gov/dataset/noaa-next-generation-radar-nexrad-level-3-products2) — Processed Doppler radar products across the NEXRAD network for high-frequency precipitation/storm-structure situational checks. Strong short-cycle weather corroboration feed with product-specific interpretation complexity.
+- [Air Quality Realtime](https://catalog.data.gov/dataset/air-quality-realtime) — Hourly District of Columbia monitor readings for urban pollution spike detection and municipal exposure context checks. Useful city-level operational feed with one-year rolling-window limits.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
