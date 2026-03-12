@@ -53,19 +53,27 @@ Reverse the old flow. Do not start with a narrative idea.
 4. **No-publish guardrail**
    - Do not no-publish before completing the data-first scan unless discovered lanes are unavailable with documented errors.
 
-## Situational awareness search (mandatory for STORY/FOLLOWUP/DATASETS)
+## Situational awareness + anomaly sweep (mandatory for STORY/FOLLOWUP/DATASETS)
 
-Run a short world-state search brief at the start of each run (timebox: 5–10 minutes).
+Run a short dual-trigger sweep at the start of each run (timebox: 5–10 minutes).
 
 Required:
 - Use web/news search to identify active developments across event classes (not a single headline lane).
-- Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by the world-state brief.
-- Do not predispose the search pass to any predefined lane, domain, or dataset family.
-- Build the brief from what is newly active in the current world state, then rank items by expected real-world impact.
-- Select lanes only after this neutral brief is assembled; if the top-impact item is not selected, document explicit blocker(s) in trace.
-- Capture top developments in the private trace with timestamped links and search terms.
-- Derive candidate lanes from this brief before deep data pulls.
-- Require at least one search-derived candidate lane per run, or explicitly record why none qualified.
+- Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
+- Do not predispose the pass to any predefined lane, domain, or dataset family.
+
+Dual-trigger rule (hard):
+1. **World-state trigger**: build a neutral brief from what is newly active now, then rank by expected real-world impact.
+2. **Anomaly trigger**: run a blind dataset anomaly scan for fresh, non-routine changes even when no matching headline/news story exists.
+
+Selection rule:
+- Derive candidate lanes from both triggers before deep data pulls.
+- Include at least one world-state-derived candidate and one anomaly-derived candidate per run when available.
+- If either side yields no qualified candidate, document why in the trace.
+- If the top-impact item is not selected first, document explicit blocker(s) in trace.
+
+Trace rule:
+- Capture search terms, links, timestamps, anomaly checks attempted, and reasons for candidate acceptance/rejection.
 
 ## Dataset intake policy (batch-first)
 
