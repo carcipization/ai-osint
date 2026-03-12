@@ -25,6 +25,30 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
    - Supported / Not supported / Partly supported / Inconclusive
    - Add explicit caveats for model-derived metrics and method-sensitive estimates
 
+## STORY lane selection (data-first, mandatory)
+
+Reverse the old flow. Do not start with a narrative idea.
+
+1. **Freshness + availability scan first (hard first pass)**
+   - Build a candidate lane list from sources with known update cadence and reliable access.
+   - Score each lane on:
+     - freshness (new/updated artifact in current window),
+     - availability (query works now; no blocking errors),
+     - baseline comparability (enough history/context to judge anomaly),
+     - decision surface (who would act if true).
+
+2. **Only then generate story concepts**
+   - For top-scoring lanes, derive 1–2 testable story concepts from observed data changes.
+   - Prefer concept framing as: “what changed vs baseline, and what decision could change?”
+
+3. **Timebox for STORY runs**
+   - Data freshness/availability scan: 10–15 min
+   - Concept + evidence testing: 15–20 min
+   - Publish/no-publish decision: 5 min
+
+4. **No-publish guardrail**
+   - Do not no-publish before completing the data-first scan unless all candidate lanes are unavailable with documented errors.
+
 ## Dataset intake policy (batch-first)
 
 - Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
