@@ -463,6 +463,38 @@ When using multiple sources for corroboration, verify true independence:
 
 This aligns corroboration practice with AP’s requirement for independent corroboration around sensitive anonymous/secondhand information.
 
+## STORY no-publish exhaust protocol (SKILL quality upgrade)
+
+When a STORY slot ends with no publication, prove that lane exhaustion was substantive (not just quick rejection).
+
+Minimum trace requirements:
+- List at least **3 distinct candidate lanes** attempted (or all available if fewer than 3 were genuinely available).
+- For each lane, record:
+  - freshness artifact checked,
+  - anomaly result (outside range vs routine),
+  - mechanism test attempted,
+  - concrete decision actor/action impact test,
+  - final reject reason tied to failed gate(s).
+- Include one-line duplicate check result against last-72h stories for any near-overlap candidate.
+
+Publishing pressure rule:
+- Do not lower significance thresholds to avoid a no-publish outcome.
+- A well-documented no-publish is higher quality than a weak or duplicative story.
+
+## Mechanism-first claim sentence template (SKILL quality upgrade)
+
+For quantitative anomaly stories, the first two paragraphs should follow this order:
+1. **Observed change** (measured delta + denominator/time window)
+2. **Best-tested mechanism** (what likely explains it, with attribution)
+3. **Decision consequence** (who should do what differently now)
+
+If mechanism remains unresolved:
+- State unresolved status explicitly in paragraph 2,
+- downgrade confidence,
+- and include a specific “what evidence is missing” line in body text.
+
+This reduces descriptive-drift stories that report movement without explaining causal relevance.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
