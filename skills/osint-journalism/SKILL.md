@@ -29,7 +29,7 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 
 Reverse the old flow. Do not start with a narrative idea.
 
-**No predefined tracks.** Build candidates fresh each run from what data is actually updating now.
+**No predefined tracks and no fixed upfront shortlist.** Build candidates continuously from what data is actually updating now.
 
 1. **Freshness + availability scan first (hard first pass)**
    - Discover candidate signals dynamically from currently updating, reachable sources.
@@ -40,9 +40,10 @@ Reverse the old flow. Do not start with a narrative idea.
      - availability (query works now; no blocking errors),
      - baseline comparability (enough history/context to judge anomaly),
      - decision surface (who would act if true).
+   - Continue expanding candidate discovery through the scan window; do not freeze the option set early.
 
 2. **Only then generate story concepts**
-   - For top-scoring candidates, derive 1–2 testable story concepts from observed data changes.
+   - Generate concepts from the strongest observed candidates after the broad scan window, not from an early capped list.
    - Prefer concept framing as: “what changed vs baseline, and what decision could change?”
 
 3. **Timebox for STORY runs**
@@ -468,7 +469,8 @@ This aligns corroboration practice with AP’s requirement for independent corro
 When a STORY slot ends with no publication, prove that source/candidate exhaustion was substantive (not just quick rejection).
 
 Minimum trace requirements:
-- List at least **3 distinct candidates** attempted (or all available if fewer than 3 were genuinely available).
+- Show that discovery remained open during the scan window (no fixed upfront candidate cap) and record attempted candidates.
+- Include at least **3 distinct candidates** attempted (or all available if fewer than 3 were genuinely available).
 - For each candidate, record:
   - freshness artifact checked,
   - anomaly result (outside range vs routine),
