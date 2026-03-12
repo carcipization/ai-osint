@@ -29,9 +29,13 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 
 Reverse the old flow. Do not start with a narrative idea.
 
+**No predefined lane pool.** Build lanes fresh each run from what data is actually updating now.
+
 1. **Freshness + availability scan first (hard first pass)**
-   - Build a candidate lane list from sources with known update cadence and reliable access.
-   - Score each lane on:
+   - Discover candidate lanes dynamically from currently updating, reachable sources.
+   - Use broad discovery inputs: official release calendars, API latest endpoints, wire/headline event surfaces, and high-signal social leads.
+   - Define a lane only after finding a concrete fresh artifact.
+   - Score each discovered lane on:
      - freshness (new/updated artifact in current window),
      - availability (query works now; no blocking errors),
      - baseline comparability (enough history/context to judge anomaly),
@@ -47,7 +51,7 @@ Reverse the old flow. Do not start with a narrative idea.
    - Publish/no-publish decision: 5 min
 
 4. **No-publish guardrail**
-   - Do not no-publish before completing the data-first scan unless all candidate lanes are unavailable with documented errors.
+   - Do not no-publish before completing the data-first scan unless discovered lanes are unavailable with documented errors.
 
 ## Dataset intake policy (batch-first)
 
