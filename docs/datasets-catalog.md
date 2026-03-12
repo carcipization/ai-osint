@@ -33,6 +33,7 @@ Use these stable tokens in internal retrieval notes so query phrasing stays cons
 
 - **conflict-control:** conflict, unrest, censorship, shutdowns, outages
 - **humanitarian-hazard:** earthquakes, disasters, displacement, fires, coastal
+- **humanitarian-risk-shards:** country risk-assessment indicator datasets (e.g., HDX country-level risk indicator packs)
 - **energy-trade-maritime:** shipping, chokepoints, commodities, power, gas
 - **aviation-mobility:** flights, ADS-B, routes, air traffic
 - **economy-governance-risk:** macro, central-bank, labor, fiscal, governance
@@ -61,6 +62,8 @@ Use this compact map before scanning full entries.
 6. For entries used in current-cycle analysis, surface revision/provisional flags in the story method/limitations when the source exposes them.
 7. For city-level incident feeds, prefer one canonical entry per city/system and avoid near-duplicate mirrors unless they add distinct fields.
 8. For catalog entries with date-stamped titles (e.g., corridor snapshots), keep the version date in the title and note supersession risk in the descriptor.
+9. For country-sharded datasets (same schema repeated across countries), prefer one concise naming pattern and keep descriptors template-consistent so retrieval and dedup checks remain stable.
+10. When adding multiple country shards in one cycle, record the family label in traces (e.g., "risk-assessment indicators") to speed future overlap checks.
 
 ## Freshness and revision-risk tags (retrieval optimization)
 Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.
@@ -75,6 +78,11 @@ Use these compact tags in internal triage notes to avoid over-trusting revision-
 - **R0 (low revision):** revision risk present but typically limited after release cutoffs.
 
 Operational rule: for high-impact claims, avoid single-source conclusions from **F0+R+** datasets without at least one independent corroboration family.
+
+### Country-shard dedup protocol (DATASETS_OPTIMIZE)
+- If many country variants of the same dataset family appear in discovery, add only shards that improve geographic coverage gaps for current monitoring priorities.
+- Avoid adding adjacent-country shards solely due to recency timestamps when they do not expand decision-relevant coverage.
+- In traces, list selected shards and at least one intentionally skipped shard family to document breadth-vs-duplication judgment.
 
 ### Municipal-feed comparability protocol (DATASETS_OPTIMIZE)
 - Treat cross-city crime and crash feeds as **within-city trend tools first**, not direct city-vs-city ranking tools.
