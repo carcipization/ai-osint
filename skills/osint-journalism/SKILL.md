@@ -465,11 +465,11 @@ This aligns corroboration practice with AP’s requirement for independent corro
 
 ## STORY no-publish exhaust protocol (SKILL quality upgrade)
 
-When a STORY slot ends with no publication, prove that lane exhaustion was substantive (not just quick rejection).
+When a STORY slot ends with no publication, prove that source/candidate exhaustion was substantive (not just quick rejection).
 
 Minimum trace requirements:
-- List at least **3 distinct candidate lanes** attempted (or all available if fewer than 3 were genuinely available).
-- For each lane, record:
+- List at least **3 distinct candidates** attempted (or all available if fewer than 3 were genuinely available).
+- For each candidate, record:
   - freshness artifact checked,
   - anomaly result (outside range vs routine),
   - mechanism test attempted,
