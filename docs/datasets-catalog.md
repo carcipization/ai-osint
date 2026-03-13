@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-13 09:01 UTC
+**Dateline:** 2026-03-13 21:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 134 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 140 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (38), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+38+7+7+12+12+2+3+1 = **134** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (44), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 27+14+11+44+7+7+12+12+2+3+1 = **140** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -114,6 +114,12 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [WFP HungerMap – Ukraine](https://data.humdata.org/dataset/wfp-hungermap-data-for-ukr) — WFP HungerMap indicators for Ukraine covering food-security stress proxies and related humanitarian conditions. Useful for rapid situation tracking with model/input dependency caveats.
 - [WFP HungerMap – Haiti](https://data.humdata.org/dataset/wfp-hungermap-data-for-hti) — WFP HungerMap indicators for Haiti providing near-operational food-security stress context. Valuable for crisis monitoring, but indicator construction and reporting cadence can shift.
 - [WFP HungerMap – Ecuador](https://data.humdata.org/dataset/wfp-hungermap-data-for-ecu) — WFP HungerMap indicators for Ecuador for emerging food-access and stress pattern checks. Good directional layer that should be triangulated with country sources.
+- [HDX HAPI - Coordination & Context: Conflict Events](https://data.humdata.org/dataset/hdx-hapi-conflict-event) — Harmonized conflict-event context table in the HDX Humanitarian API Pipeline for rapid cross-country checks of conflict pressure around humanitarian indicators. Useful fast corroboration layer with event-coding and source-coverage caveats.
+- [Global: Acute Food Insecurity Country Data](https://data.humdata.org/dataset/global-acute-food-insecurity-country-data) — Country-level acute food insecurity indicators supporting global severity baselines and prioritization checks in humanitarian coverage. Strong comparative denominator with periodic methodology and update-lag caveats.
+- [Global - Requirements and Funding Data](https://data.humdata.org/dataset/global-requirements-and-funding-data) — Global humanitarian funding requirements versus received funding, useful for response-gap monitoring across crises and donor cycles. High-value allocation context with reporting-lag and appeal-revision caveats.
+- [Ukraine - Requirements and Funding Data](https://data.humdata.org/dataset/ukr-requirements-and-funding-data) — Ukraine-specific humanitarian requirements and funding series for tracking resource gaps in a high-salience conflict response theater. Decision-relevant operational context with plan-cycle revision caveats.
+- [Syrian Arab Republic - Requirements and Funding Data](https://data.humdata.org/dataset/syr-requirements-and-funding-data) — Syria requirements/funding indicators for monitoring chronic humanitarian financing pressure and delivery constraints over time. Strong continuity baseline with update-timing and plan-scope caveats.
+- [Yemen - Requirements and Funding Data](https://data.humdata.org/dataset/yem-requirements-and-funding-data) — Yemen humanitarian requirements and funding data for checking whether response resources are tracking needs in one of the largest protracted crises. High decision relevance with periodic appeal-adjustment caveats.
 - [CDC Provisional COVID-19 Death Counts by Week and State](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state) — Weekly provisional mortality counts by U.S. state for respiratory-wave and excess-pressure context. High-value public-health signal with known reporting lag and revision risk.
 - [CDC COVID-NET Monthly Hospitalization Rates](https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil) — Laboratory-confirmed COVID-19 hospitalization rates used for severity and burden tracking. Strong trend signal, but coverage reflects surveillance-network design rather than full-population capture.
 - [HDX HAPI - Climate: Rainfall](https://data.humdata.org/dataset/hdx-hapi-rainfall) — Harmonized rainfall indicators in the HDX Humanitarian API Pipeline for rapid hydro-climate stress context. Useful for short-cycle hazard corroboration, but gridded/aggregated processing assumptions should be checked before local attribution.
