@@ -176,6 +176,20 @@ A STORY candidate is publishable only if it passes all three gates:
 2. **Mechanism gate:** plausible explanation tested against at least one artifact/null alternative.
 3. **Decision gate:** identifies a concrete actor/action that should change because of this finding.
 
+## Importance gate (hard, fail-closed)
+
+A STORY must also pass an always-on importance check before drafting and again before publish.
+
+Pass criteria (all required):
+1. **Broad relevance:** consequences are meaningful beyond specialist audiences.
+2. **Concrete consequence:** at least one real-world outcome is explicit (cost/access/safety/mobility/policy/operations), not just technical-state movement.
+3. **Decision utility:** a non-specialist actor can make or update a concrete decision from the reporting.
+
+Fail-close policy:
+- If importance is ambiguous or weak, do **not** publish STORY (use brief/hold/no-publish as appropriate).
+- Do not treat clean/easy data access as a substitute for importance.
+- If only low-importance candidates are available, return no-publish rather than force output.
+
 Short-window ranking guardrail (hard):
 - Claims like “biggest move in 7/14 days” are **candidate flags only**, not publish conclusions by themselves.
 - Do not publish from a short-window rank claim unless at least one additional condition holds:
@@ -493,8 +507,10 @@ Minimum trace requirements:
   - anomaly result (outside range vs routine),
   - mechanism test attempted,
   - concrete decision actor/action impact test,
+  - **importance gate result** (pass/fail with one-line rationale),
   - final reject reason tied to failed gate(s).
 - Include one-line duplicate check result against last-72h stories for any near-overlap candidate.
+- Include one-line anti-convenience check: why the selected publish candidate beat higher-friction alternatives on importance (not ease).
 
 Publishing pressure rule:
 - Do not lower significance thresholds to avoid a no-publish outcome.
