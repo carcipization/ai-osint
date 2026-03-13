@@ -167,6 +167,14 @@ A STORY candidate is publishable only if it passes all three gates:
 2. **Mechanism gate:** plausible explanation tested against at least one artifact/null alternative.
 3. **Decision gate:** identifies a concrete actor/action that should change because of this finding.
 
+Short-window ranking guardrail (hard):
+- Claims like “biggest move in 7/14 days” are **candidate flags only**, not publish conclusions by themselves.
+- Do not publish from a short-window rank claim unless at least one additional condition holds:
+  - cross-window robustness (still notable across longer windows such as 30/90d or seasonal baseline),
+  - absolute-magnitude significance (not just rank within a small window),
+  - independent confirmation from another source family,
+  - clear mechanism + concrete non-specialist decision consequence.
+
 If a candidate fails any gate, discard it and continue searching.
 
 STORY search rule:
