@@ -6,7 +6,7 @@
   },
   "forbiddenDocsSlugRegex": "(followup|datasets-optimize|kev|known-exploited-vulnerabilities|cisa-known-exploited)",
   "forbiddenTitleRegex": "\\b(KEV|Known Exploited Vulnerabilities)\\b",
-  "allowedTitleRegex": "^#\\s*(Datasets:|.+osint-story)",
+  "allowedTitleRegex": "^#\\s*(Datasets:|.+)",
   "feed": {
     "includeSlugRegex": "(osint-story|dataset-intel)",
     "excludeSlugRegex": "(datasets-optimize|followup|kev|known-exploited-vulnerabilities|cisa-known-exploited)",

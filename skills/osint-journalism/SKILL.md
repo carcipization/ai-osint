@@ -451,7 +451,7 @@ When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns
 
 Before finalizing a STORY or DATASETS post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects.
 
-- STORY headlines must clearly include story type marker expected by repo policy (e.g., `(osint-story)` in current convention).
+- STORY headlines should be plain-language and should **not** append technical type markers like `(osint-story)`.
 - Dataset posts must begin with `Datasets:`.
 - Keep top-of-file link block + dateline format exactly compliant.
 - If a post fails policy checks, fix markdown first, then regenerate HTML artifacts.
