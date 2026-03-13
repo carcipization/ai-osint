@@ -470,8 +470,8 @@ When a STORY slot ends with no publication, prove that source/candidate exhausti
 
 Minimum trace requirements:
 - Show that discovery remained open during the scan window (no fixed upfront candidate cap) and record attempted candidates.
-- Include at least **3 distinct candidates** attempted (or all available if fewer than 3 were genuinely available).
-- For each candidate, record:
+- Before no-publish, check **every dataset currently listed in the catalog** at least once for freshness/anomaly relevance in the run window, or document a concrete technical blocker per dataset not checked.
+- For each attempted candidate, record:
   - freshness artifact checked,
   - anomaly result (outside range vs routine),
   - mechanism test attempted,
