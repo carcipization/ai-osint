@@ -514,6 +514,37 @@ If mechanism remains unresolved:
 
 This reduces descriptive-drift stories that report movement without explaining causal relevance.
 
+## Attribution-first paragraph protocol (SELF quality upgrade)
+
+To reduce "fact blob" leads and improve reader trust, enforce attribution structure in the first two paragraphs of any STORY/claim-check draft:
+
+1. **Paragraph 1:** strongest defensible finding with immediate source attribution (same sentence or adjacent).
+2. **Paragraph 2:** strongest counterpoint/uncertainty with explicit source attribution and what evidence is still missing.
+3. If either paragraph has disputable facts without nearby attribution, rewrite before publish.
+
+Rationale alignment:
+- AP guidance emphasizes placing attribution in the same sentence (or immediately adjacent) for disputable facts.
+- Reuters standards emphasize honesty/transparency in sourcing and testing whether the story withstands challenge.
+
+## Corroboration independence ledger (SELF quality upgrade)
+
+For high-impact claims, add an explicit mini-ledger in `research-traces/` before final confidence assignment:
+
+- `claim_id`
+- `source`
+- `upstream_origin`
+- `evidence_family` (official record / telemetry / on-scene UGC / media synthesis)
+- `independent_of` (list claim_ids it is truly independent from)
+- `proves` (micro-claim)
+- `limitation`
+
+Hard rule:
+- Do not count two items as corroboration if they share the same upstream origin.
+- If fewer than two independent evidence families remain after deduplication, cap verdict at provisional/inconclusive.
+
+Rationale alignment:
+- Reuters and AP both stress corroboration strength and source credibility over sheer source count.
+
 ## Cadence safety checks before push
 
 - Confirm new output has working source links
