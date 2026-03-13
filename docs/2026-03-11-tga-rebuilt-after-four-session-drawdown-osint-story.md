@@ -1,4 +1,4 @@
-# TGA rebuilt after four-session drawdown, but funding gauges show no immediate stress (osint-story)
+# TGA rebuilt after four-session drawdown, but funding gauges show no immediate stress
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-11-tga-rebuilt-after-four-session-drawdown-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-11-tga-rebuilt-after-four-session-drawdown-osint-story.md)

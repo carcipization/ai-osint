@@ -1,4 +1,4 @@
-# U.S. airport screenings hit second-highest day of 2026 as spring travel ramps (osint-story)
+# U.S. airport screenings hit second-highest day of 2026 as spring travel ramps
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-10-us-airport-screenings-hit-second-highest-day-of-2026-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-10-us-airport-screenings-hit-second-highest-day-of-2026-osint-story.md)

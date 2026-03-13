@@ -1,4 +1,4 @@
-# NOAA flags likely G1 geomagnetic-storm window for March 13–14 after quieter run-up (osint-story)
+# NOAA flags likely G1 geomagnetic-storm window for March 13–14 after quieter run-up
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-12-noaa-flags-likely-g1-geomagnetic-storm-window-for-march-13-14-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-12-noaa-flags-likely-g1-geomagnetic-storm-window-for-march-13-14-osint-story.md)

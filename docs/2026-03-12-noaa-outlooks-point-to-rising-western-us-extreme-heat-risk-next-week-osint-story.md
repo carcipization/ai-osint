@@ -1,4 +1,4 @@
-# NOAA outlooks point to rising western U.S. extreme-heat risk next week (osint-story)
+# NOAA outlooks point to rising western U.S. extreme-heat risk next week
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-12-noaa-outlooks-point-to-rising-western-us-extreme-heat-risk-next-week-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-12-noaa-outlooks-point-to-rising-western-us-extreme-heat-risk-next-week-osint-story.md)

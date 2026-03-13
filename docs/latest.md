@@ -1,4 +1,4 @@
-# USGS reports magnitude 6.3 earthquake off Chile with low initial damage signal (osint-story)
+# USGS reports magnitude 6.3 earthquake off Chile with low initial damage signal
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-13-usgs-reports-magnitude-6-3-earthquake-off-chile-with-low-initial-damage-signal-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-13-usgs-reports-magnitude-6-3-earthquake-off-chile-with-low-initial-damage-signal-osint-story.md)

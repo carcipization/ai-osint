@@ -1,4 +1,4 @@
-# NOAA issues and extends G1 geomagnetic storm warning as Kp 5 threshold is reached (osint-story)
+# NOAA issues and extends G1 geomagnetic storm warning as Kp 5 threshold is reached
 
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-13-noaa-issues-and-extends-g1-geomagnetic-storm-warning-osint-story.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-13-noaa-issues-and-extends-g1-geomagnetic-storm-warning-osint-story.md)
