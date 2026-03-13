@@ -103,6 +103,15 @@ Trace rule:
 5. Prefer datasets that complete or strengthen a cross-domain chain; deprioritize isolated single-metric additions.
 6. Log misses in trace (missing source class, endpoint failure, sparse history) to improve future hunts.
 
+### DATASETS_OPTIMIZE cache maintenance (mandatory)
+
+Every DATASETS_OPTIMIZE run must maintain the local dataset-change cache:
+1. Run `python3 /home/pi/.openclaw/workspace/autonomous-osint-reporter/scripts/ai_osint_ctl.py discovery cache-sync`.
+2. Pull a maintenance batch with `discovery cache-next` and review/scan selected entries.
+3. Record scan outcomes with `discovery cache-mark` (use `--changed` when meaningful movement is detected).
+4. Include cache stats in the private trace: active entries, scanned this run, changed flagged, blocked/errors.
+5. If cache maintenance fails, treat DATASETS_OPTIMIZE as incomplete and report exact blocker(s).
+
 ## Claim-check minimum standard
 
 A claim-check must include all of the following before publication:
