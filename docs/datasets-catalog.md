@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-12 21:01 UTC
+**Dateline:** 2026-03-13 09:01 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 128 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 134 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (32), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+32+7+7+12+12+2+3+1 = **128** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (38), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 27+14+11+38+7+7+12+12+2+3+1 = **134** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -124,6 +124,12 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Kuwait - Risk Assessment Indicators](https://data.humdata.org/dataset/kuwait---risk-assessment-indicators) — Structured humanitarian risk indicators for Kuwait supporting Gulf-region stress-comparison and preparedness-context reporting. Useful baseline input with indicator-definition revision risk.
 - [United Arab Emirates - Risk Assessment Indicators](https://data.humdata.org/dataset/united-arab-emirates---risk-assessment-indicators) — Country risk indicator dataset for the UAE that adds machine-readable vulnerability context for regional hazard and response planning analysis. Strong contextual layer with periodic methodology updates to monitor.
 - [Trinidad And Tobago - Risk Assessment Indicators](https://data.humdata.org/dataset/trinidad-and-tobago---risk-assessment-indicators) — Humanitarian risk indicators for Trinidad and Tobago supporting Caribbean cross-country baseline checks during tropical and climate-linked stress reporting. Useful contextual benchmark with small-population sensitivity caveats.
+- [Central African Republic - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-caf) — COD-AB administrative boundary package for Central African Republic (national-to-subnational geometries) used to geolocate incidents, displacement reporting, and aid-access constraints against official admin units. High-value humanitarian mapping baseline with periodic boundary-version and naming harmonization caveats.
+- [Philippines - Risk Assessment Indicators](https://data.humdata.org/dataset/philippines---risk-assessment-indicators) — Country-level humanitarian risk indicator set for the Philippines supporting typhoon, displacement, and service-disruption preparedness context in Southeast Asia monitoring. Useful operational baseline with methodology-version and update-cadence caveats.
+- [Somalia - Risk Assessment Indicators](https://data.humdata.org/dataset/somalia---risk-assessment-indicators) — Humanitarian risk indicators for Somalia covering fragility, exposure, and response-capacity context for Horn-of-Africa crisis tracking. Strong denominator layer with country-data sparsity and refresh-lag caveats.
+- [Bangladesh - Risk Assessment Indicators](https://data.humdata.org/dataset/bangladesh---risk-assessment-indicators) — Risk indicator package for Bangladesh supporting flood/cyclone exposure and population-vulnerability context in Bay-of-Bengal reporting. Valuable cross-check baseline with periodic indicator-definition revisions.
+- [Armenia - Risk Assessment Indicators](https://data.humdata.org/dataset/armenia---risk-assessment-indicators) — Country risk indicators for Armenia to strengthen Caucasus humanitarian-preparedness and resilience context checks. Useful comparative input with model-version and publication-lag caveats.
+- [Libya - Risk Assessment Indicators](https://data.humdata.org/dataset/libya---risk-assessment-indicators) — Humanitarian risk indicators for Libya used to monitor conflict-adjacent vulnerability and service-capacity pressures in North Africa. High-relevance contextual series with mixed-source quality and revision-risk caveats.
 - [GDACS RSS Information](https://data.humdata.org/dataset/gdacs-rss-information) — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.
 - [National USFS Fire Perimeter (Feature Layer)](https://catalog.data.gov/dataset/national-usfs-fire-perimeter-feature-layer-bb7cd) — National U.S. wildland fire perimeter polygons (daily/final mapped incidents) for rapid hazard-footprint and spread-context checks. Strong operational geospatial layer with perimeter-finalization lag and incident-size inclusion caveats.
 - [Air Quality System (AQS)](https://catalog.data.gov/dataset/air-quality-system-aqs) — EPA national pollutant concentration repository across U.S. monitoring locations for PM/ozone and hazardous-pollutant context checks. High-value air-exposure baseline with station coverage and QA lag caveats.

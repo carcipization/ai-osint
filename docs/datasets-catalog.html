@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-12 21:01 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-13 09:01 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 128 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 134 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (32), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 27+14+11+32+7+7+12+12+2+3+1 = <strong>128</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (38), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 27+14+11+38+7+7+12+12+2+3+1 = <strong>134</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -142,6 +143,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://data.humdata.org/dataset/kuwait---risk-assessment-indicators">Kuwait - Risk Assessment Indicators</a> — Structured humanitarian risk indicators for Kuwait supporting Gulf-region stress-comparison and preparedness-context reporting. Useful baseline input with indicator-definition revision risk.</li>
 <li><a href="https://data.humdata.org/dataset/united-arab-emirates---risk-assessment-indicators">United Arab Emirates - Risk Assessment Indicators</a> — Country risk indicator dataset for the UAE that adds machine-readable vulnerability context for regional hazard and response planning analysis. Strong contextual layer with periodic methodology updates to monitor.</li>
 <li><a href="https://data.humdata.org/dataset/trinidad-and-tobago---risk-assessment-indicators">Trinidad And Tobago - Risk Assessment Indicators</a> — Humanitarian risk indicators for Trinidad and Tobago supporting Caribbean cross-country baseline checks during tropical and climate-linked stress reporting. Useful contextual benchmark with small-population sensitivity caveats.</li>
+<li><a href="https://data.humdata.org/dataset/cod-ab-caf">Central African Republic - Subnational Administrative Boundaries</a> — COD-AB administrative boundary package for Central African Republic (national-to-subnational geometries) used to geolocate incidents, displacement reporting, and aid-access constraints against official admin units. High-value humanitarian mapping baseline with periodic boundary-version and naming harmonization caveats.</li>
+<li><a href="https://data.humdata.org/dataset/philippines---risk-assessment-indicators">Philippines - Risk Assessment Indicators</a> — Country-level humanitarian risk indicator set for the Philippines supporting typhoon, displacement, and service-disruption preparedness context in Southeast Asia monitoring. Useful operational baseline with methodology-version and update-cadence caveats.</li>
+<li><a href="https://data.humdata.org/dataset/somalia---risk-assessment-indicators">Somalia - Risk Assessment Indicators</a> — Humanitarian risk indicators for Somalia covering fragility, exposure, and response-capacity context for Horn-of-Africa crisis tracking. Strong denominator layer with country-data sparsity and refresh-lag caveats.</li>
+<li><a href="https://data.humdata.org/dataset/bangladesh---risk-assessment-indicators">Bangladesh - Risk Assessment Indicators</a> — Risk indicator package for Bangladesh supporting flood/cyclone exposure and population-vulnerability context in Bay-of-Bengal reporting. Valuable cross-check baseline with periodic indicator-definition revisions.</li>
+<li><a href="https://data.humdata.org/dataset/armenia---risk-assessment-indicators">Armenia - Risk Assessment Indicators</a> — Country risk indicators for Armenia to strengthen Caucasus humanitarian-preparedness and resilience context checks. Useful comparative input with model-version and publication-lag caveats.</li>
+<li><a href="https://data.humdata.org/dataset/libya---risk-assessment-indicators">Libya - Risk Assessment Indicators</a> — Humanitarian risk indicators for Libya used to monitor conflict-adjacent vulnerability and service-capacity pressures in North Africa. High-relevance contextual series with mixed-source quality and revision-risk caveats.</li>
 <li><a href="https://data.humdata.org/dataset/gdacs-rss-information">GDACS RSS Information</a> — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/national-usfs-fire-perimeter-feature-layer-bb7cd">National USFS Fire Perimeter (Feature Layer)</a> — National U.S. wildland fire perimeter polygons (daily/final mapped incidents) for rapid hazard-footprint and spread-context checks. Strong operational geospatial layer with perimeter-finalization lag and incident-size inclusion caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/air-quality-system-aqs">Air Quality System (AQS)</a> — EPA national pollutant concentration repository across U.S. monitoring locations for PM/ozone and hazardous-pollutant context checks. High-value air-exposure baseline with station coverage and QA lag caveats.</li>
