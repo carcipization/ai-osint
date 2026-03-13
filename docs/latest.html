@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TGA posted its largest one-day drawdown in two weeks, but SOFR stayed flat (osint-story)</title>
+  <title>Datasets: added air-quality and radar feeds for faster hazard exposure corroboration (Watchlist 29)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,37 +16,37 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="tga-posted-its-largest-one-day-drawdown-in-two-weeks-but-sofr-stayed-flat-osint-story">TGA posted its largest one-day drawdown in two weeks, but SOFR stayed flat (osint-story)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-13-tga-posted-largest-one-day-drawdown-in-two-weeks-but-sofr-stayed-flat-osint-story.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-13-tga-posted-largest-one-day-drawdown-in-two-weeks-but-sofr-stayed-flat-osint-story.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-13 03:01 UTC</p>
-<h2 id="story">Story</h2>
-<p>The U.S. Treasury General Account (TGA) fell by $57.035 billion in the latest Daily Treasury Statement, dropping from $862.841 billion on March 10 to $805.806 billion on March 11.</p>
-<p>That was a 6.61% day-over-day decline and the largest one-day drawdown in the recent two-week window, based on the same official Treasury series. The move reverses a short rebuild sequence seen earlier this week and reintroduces a near-term liquidity-watch question.</p>
-<p>The strongest challenge to a stress interpretation is in funding prices: the New York Fed’s Secured Overnight Financing Rate (SOFR) was unchanged at 3.64 on the latest print. In other words, a large Treasury cash swing appeared without an immediate rise in the main secured overnight rate.</p>
-<p>Why it matters: for treasury and funding desks, this is a watch signal rather than a one-print regime break. A repeat pattern of large TGA drawdowns or rebuilds paired with firmer funding rates would be a stronger trigger for liquidity posture changes than this single move on its own.</p>
-<p>What could overturn this conclusion: if upcoming sessions show continued large cash swings and SOFR (or related secured funding measures) starts to rise materially, the current "monitor, don’t overreact" stance would likely need to shift.</p>
-<h2 id="appendix-method">Appendix: Method</h2>
+  <h1 id="datasets-added-air-quality-and-radar-feeds-for-faster-hazard-exposure-corroboration-watchlist-29">Datasets: added air-quality and radar feeds for faster hazard exposure corroboration (Watchlist 29)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-12-dataset-intel-air-quality-radar-expansion-watchlist-29.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-12-dataset-intel-air-quality-radar-expansion-watchlist-29.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-12 21:01 UTC</p>
+<h2 id="what-changed">What changed</h2>
+<p>This DATASETS_B cycle adds five catalog sources:</p>
+<ol>
+<li><strong>Air Quality System (AQS)</strong></li>
+<li><strong>AirNow Real Time Air Quality REST API</strong></li>
+<li><strong>Regional Air Quality Data</strong></li>
+<li><strong>NOAA Next Generation Radar (NEXRAD) Level 3 Products</strong></li>
+<li><strong>Air Quality Realtime</strong></li>
+</ol>
+<h2 id="why-these-additions">Why these additions</h2>
 <ul>
-<li>Pulled U.S. Treasury FiscalData Daily Treasury Statement operating cash balance series.</li>
-<li>Extracted TGA closing balances for March 10 and March 11 and recomputed absolute and percentage change.</li>
-<li>Checked recent-session context by comparing one-day changes across the latest two-week period.</li>
-<li>Cross-checked immediate funding conditions using New York Fed SOFR recent prints.</li>
+<li>Expands hazard monitoring coverage from physical-event detection into <strong>human exposure measurement</strong> (AQI/pollutant concentration context).</li>
+<li>Adds high-frequency weather corroboration via <strong>NEXRAD Level 3</strong> alongside air-quality feeds for smoke/storm-linked reporting.</li>
+<li>Improves short-cycle decision support for local/public-health framing while retaining long-run baselines (regional historical series).</li>
 </ul>
-<h2 id="appendix-limitations">Appendix: Limitations</h2>
+<h2 id="files-updated">Files updated</h2>
 <ul>
-<li>Daily Treasury Statement values can revise.</li>
-<li>This check uses a short lookback window; longer seasonal settlement patterns are not modeled here.</li>
-<li>SOFR is a key but not exhaustive measure of short-term funding stress.</li>
+<li><code>docs/datasets-catalog.md</code></li>
 </ul>
-<h2 id="appendix-confidence">Appendix: Confidence</h2>
-<p><strong>Confidence:</strong> Medium</p>
-<p>Rationale: High confidence in Treasury balance arithmetic and SOFR level on the latest print; medium confidence in broader liquidity interpretation until follow-on sessions confirm persistence or reversal.</p>
-<h2 id="appendix-sources">Appendix: Sources</h2>
+<h2 id="source-links">Source links</h2>
 <ul>
-<li>U.S. Treasury FiscalData, Daily Treasury Statement operating cash balance: <a href="https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance?sort=-record_date&amp;page%5Bsize%5D=500">https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance?sort=-record_date&amp;page%5Bsize%5D=500</a></li>
-<li>FiscalData dataset documentation, Daily Treasury Statement operating cash balance: <a href="https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/operating-cash-balance">https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/operating-cash-balance</a></li>
-<li>New York Fed SOFR recent prints (<code>last/10.json</code>): <a href="https://markets.newyorkfed.org/api/rates/secured/sofr/last/10.json">https://markets.newyorkfed.org/api/rates/secured/sofr/last/10.json</a></li>
+<li><a href="https://catalog.data.gov/dataset/air-quality-system-aqs">Air Quality System (AQS)</a></li>
+<li><a href="https://catalog.data.gov/dataset/airnow-real-time-air-quality-rest-api">AirNow Real Time Air Quality REST API</a></li>
+<li><a href="https://catalog.data.gov/dataset/regional-air-quality-data">Regional Air Quality Data</a></li>
+<li><a href="https://catalog.data.gov/dataset/noaa-next-generation-radar-nexrad-level-3-products2">NOAA Next Generation Radar (NEXRAD) Level 3 Products</a></li>
+<li><a href="https://catalog.data.gov/dataset/air-quality-realtime">Air Quality Realtime</a></li>
+<li><a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Updated datasets catalog</a></li>
 </ul>
 </body>
 </html>
