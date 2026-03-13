@@ -516,6 +516,29 @@ Publishing pressure rule:
 - Do not lower significance thresholds to avoid a no-publish outcome.
 - A well-documented no-publish is higher quality than a weak or duplicative story.
 
+## Importance gate adjudication rubric (SKILL quality upgrade)
+
+To enforce fail-closed STORY importance decisions and prevent convenience bias, run this explicit adjudication step before draft lock:
+
+1. **Write one-line public-interest stake**
+   - "If true, this changes decisions for ___ because ___."
+   - If the actor/action cannot be named concretely, importance fails.
+
+2. **Broad-impact floor (hard)**
+   - Candidate must plausibly affect non-specialist decisions or conditions (public safety, livelihoods, mobility, prices, services, governance choices).
+   - Specialist-only technical movement without clear spillover fails by default.
+
+3. **Convenience override check (hard)**
+   - For top two viable candidates, record a one-line comparison: why selected candidate is more important, not just easier/faster to measure.
+   - If selection rationale cites data cleanliness/speed more than consequence magnitude, stop and re-rank.
+
+4. **Fail-closed output rule**
+   - If importance is ambiguous after contradiction pass, mark candidate `importance_fail` and continue searching.
+   - No publication based on "interesting" or "clean" signal alone.
+
+Trace requirement:
+- Add an `importance_adjudication` block in `research-traces/` for every published STORY candidate with: affected actor(s), action delta, public consequence, and convenience-check note.
+
 ## Mechanism-first claim sentence template (SKILL quality upgrade)
 
 For quantitative anomaly stories, the first two paragraphs should follow this order:
