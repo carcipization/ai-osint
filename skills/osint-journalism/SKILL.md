@@ -497,11 +497,11 @@ This aligns corroboration practice with AP’s requirement for independent corro
 
 ## STORY no-publish exhaust protocol (SKILL quality upgrade)
 
-When a STORY slot ends with no publication, prove that source/candidate exhaustion was substantive (not just quick rejection).
+When a STORY slot cannot publish a standard story, do not stop at NO_PUBLISH by default. Use the dataset fallback path.
 
 Minimum trace requirements:
 - Show that discovery remained open during the scan window (no fixed upfront candidate cap) and record attempted candidates.
-- Before no-publish, check the full local dataset-change cache for this run window (review all cache entries, prioritizing recently changed/unscanned items), or document a concrete technical blocker for any cache segment not checked.
+- Before no-publish/fallback decision, check the full local dataset-change cache for this run window (review all cache entries, prioritizing recently changed/unscanned items), or document a concrete technical blocker for any cache segment not checked.
 - For each attempted candidate, record:
   - freshness artifact checked,
   - anomaly result (outside range vs routine),
@@ -512,9 +512,22 @@ Minimum trace requirements:
 - Include one-line duplicate check result against last-72h stories for any near-overlap candidate.
 - Include one-line anti-convenience check: why the selected publish candidate beat higher-friction alternatives on importance (not ease).
 
+### Mandatory fallback for non-publishing STORY runs
+
+If no standard STORY candidate passes, execute fallback:
+1. Find at least one **new, currently relevant** dataset tied to active world developments.
+2. Add it to the catalog in the same run.
+3. Publish a dataset-focused story explaining:
+   - what the dataset is,
+   - scope/bounds/limitations,
+   - how to use it (query/analysis approach),
+   - why it is potentially useful/important now.
+4. Use clear dataset-intel framing; avoid pretending this is an event-anomaly story.
+5. Only emit true NO_PUBLISH if both standard STORY and dataset fallback fail, with explicit blockers.
+
 Publishing pressure rule:
-- Do not lower significance thresholds to avoid a no-publish outcome.
-- A well-documented no-publish is higher quality than a weak or duplicative story.
+- Do not lower significance thresholds to force a weak event story.
+- Prefer a high-utility dataset fallback over a low-importance specialist event write-up.
 
 ## Importance gate adjudication rubric (SKILL quality upgrade)
 
