@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SPC keeps Friday at no-severe risk while New York–Pennsylvania wind alerts stay elevated (osint-story)</title>
+  <title>Datasets: added air-quality and radar feeds for faster hazard exposure corroboration (Watchlist 29)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,38 +16,37 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="spc-keeps-friday-at-no-severe-risk-while-new-yorkpennsylvania-wind-alerts-stay-elevated-osint-story">SPC keeps Friday at no-severe risk while New York–Pennsylvania wind alerts stay elevated (osint-story)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-13-spc-no-severe-thunderstorm-area-friday-despite-strong-northeast-winds-osint-story.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-13-spc-no-severe-thunderstorm-area-friday-despite-strong-northeast-winds-osint-story.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-13 03:20 UTC</p>
-<p>Initial lead: NOAA Storm Prediction Center Day 2 Convective Outlook update issued 1722 UTC March 12 (<a href="https://www.spc.noaa.gov/products/outlook/day2otlk.txt">SPC Day 2 outlook text</a>).</p>
-<h2 id="story">Story</h2>
-<p>The U.S. Storm Prediction Center said severe thunderstorms are not expected Friday, even as separate National Weather Service products show active high-wind alerts across parts of the Northeast.</p>
-<p>In its Day 2 convective outlook valid 1200 UTC March 13 to 1200 UTC March 14, SPC issued "...NO SEVERE THUNDERSTORM AREAS FORECAST..." and summarized that "Severe thunderstorms are not expected on Friday." In the same discussion, forecasters noted uncertainty in available instability near the New York–Pennsylvania corridor, despite strong low-level winds aloft.</p>
-<p>At the same time, NOAA’s active-alert feed listed multiple wind products in New York and Pennsylvania, including High Wind Warnings and Wind Advisories as of the latest pull. Taken together, the signal points to a risk profile centered more on gradient/non-convective wind impacts than on organized severe thunderstorms.</p>
-<p>Why it matters: local emergency managers, utilities, and transit operators can prioritize power-line and travel disruption readiness over tornado-focused posture when a high-wind setup is present but severe-convective probabilities remain muted.</p>
-<p>What could overturn this conclusion: if the next SPC cycle introduces a categorical severe area or if instability trends materially higher than currently forecast, this “wind-dominant, low-severe-convection” framing would need to be revised.</p>
-<h2 id="appendix-method">Appendix: Method</h2>
+  <h1 id="datasets-added-air-quality-and-radar-feeds-for-faster-hazard-exposure-corroboration-watchlist-29">Datasets: added air-quality and radar feeds for faster hazard exposure corroboration (Watchlist 29)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-12-dataset-intel-air-quality-radar-expansion-watchlist-29.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-12-dataset-intel-air-quality-radar-expansion-watchlist-29.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-12 21:01 UTC</p>
+<h2 id="what-changed">What changed</h2>
+<p>This DATASETS_B cycle adds five catalog sources:</p>
+<ol>
+<li><strong>Air Quality System (AQS)</strong></li>
+<li><strong>AirNow Real Time Air Quality REST API</strong></li>
+<li><strong>Regional Air Quality Data</strong></li>
+<li><strong>NOAA Next Generation Radar (NEXRAD) Level 3 Products</strong></li>
+<li><strong>Air Quality Realtime</strong></li>
+</ol>
+<h2 id="why-these-additions">Why these additions</h2>
 <ul>
-<li>Pulled SPC Day 2 text product and extracted issuance time, valid window, summary line, and forecast rationale.</li>
-<li>Queried NOAA Weather Service active-alert API for New York and Pennsylvania and classified wind-related products (High Wind Watch/Warning, Wind Advisory).</li>
-<li>Compared the two evidence families to test whether severe-convective signaling diverged from near-term operational wind alerts.</li>
+<li>Expands hazard monitoring coverage from physical-event detection into <strong>human exposure measurement</strong> (AQI/pollutant concentration context).</li>
+<li>Adds high-frequency weather corroboration via <strong>NEXRAD Level 3</strong> alongside air-quality feeds for smoke/storm-linked reporting.</li>
+<li>Improves short-cycle decision support for local/public-health framing while retaining long-run baselines (regional historical series).</li>
 </ul>
-<h2 id="appendix-limitations">Appendix: Limitations</h2>
+<h2 id="files-updated">Files updated</h2>
 <ul>
-<li>Active-alert counts are time-sensitive and can change quickly with local office updates.</li>
-<li>This check samples two states and does not represent all U.S. forecast areas.</li>
-<li>A no-severe categorical outlook does not mean no hazardous weather; it only narrows the expected hazard type.</li>
+<li><code>docs/datasets-catalog.md</code></li>
 </ul>
-<h2 id="appendix-confidence">Appendix: Confidence</h2>
-<p><strong>Confidence:</strong> Medium</p>
-<p>Rationale: High confidence in the quoted SPC outlook language and observed alert classifications at pull time; medium confidence on persistence because both outlooks and local alerts can update on short notice.</p>
-<h2 id="appendix-sources">Appendix: Sources</h2>
+<h2 id="source-links">Source links</h2>
 <ul>
-<li>NOAA SPC Day 2 convective outlook (text): <a href="https://www.spc.noaa.gov/products/outlook/day2otlk.txt">https://www.spc.noaa.gov/products/outlook/day2otlk.txt</a></li>
-<li>NOAA SPC Day 2 convective outlook (web): <a href="https://www.spc.noaa.gov/products/outlook/day2otlk.html">https://www.spc.noaa.gov/products/outlook/day2otlk.html</a></li>
-<li>NOAA/NWS active alerts API (New York): <a href="https://api.weather.gov/alerts/active?area=NY">https://api.weather.gov/alerts/active?area=NY</a></li>
-<li>NOAA/NWS active alerts API (Pennsylvania): <a href="https://api.weather.gov/alerts/active?area=PA">https://api.weather.gov/alerts/active?area=PA</a></li>
+<li><a href="https://catalog.data.gov/dataset/air-quality-system-aqs">Air Quality System (AQS)</a></li>
+<li><a href="https://catalog.data.gov/dataset/airnow-real-time-air-quality-rest-api">AirNow Real Time Air Quality REST API</a></li>
+<li><a href="https://catalog.data.gov/dataset/regional-air-quality-data">Regional Air Quality Data</a></li>
+<li><a href="https://catalog.data.gov/dataset/noaa-next-generation-radar-nexrad-level-3-products2">NOAA Next Generation Radar (NEXRAD) Level 3 Products</a></li>
+<li><a href="https://catalog.data.gov/dataset/air-quality-realtime">Air Quality Realtime</a></li>
+<li><a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Updated datasets catalog</a></li>
 </ul>
 </body>
 </html>
