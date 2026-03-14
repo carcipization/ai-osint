@@ -330,6 +330,13 @@ When evidence is incomplete or mixed, make uncertainty explicit at sentence leve
 - Replace abstract method language with concrete verbs (measured, counted, compared, matched).
 - Avoid stacked caveats in one sentence; distribute them where each uncertainty appears.
 
+## Consequence-first test (mandatory for STORY)
+
+Before publish, run this test on paragraph 1:
+- It must state a concrete broad real-world consequence (cost/access/safety/mobility/services/policy operations).
+- It must identify at least one non-specialist actor decision that could change.
+- If paragraph 1 cannot do both clearly, do not publish STORY as-is; rewrite or demote to fallback/hold.
+
 ## Weak-point guardrails (SELF quality upgrade)
 
 These rules target recurring weak spots in OSINT reporting quality: overreliance on single artifacts, weak provenance for social content, and under-explained uncertainty.
