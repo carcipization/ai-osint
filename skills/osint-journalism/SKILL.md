@@ -75,6 +75,7 @@ Selection rule:
 
 Trace rule:
 - Capture search terms, links, timestamps, anomaly checks attempted, and reasons for candidate acceptance/rejection.
+- For every blocked/error fetch, log a structured line with: source name, URL, HTTP/status or error type, UTC timestamp, and one retry outcome (success/fail + status).
 
 ## Dataset intake policy (batch-first)
 
@@ -110,7 +111,8 @@ Every DATASETS_OPTIMIZE run must maintain the local dataset-change cache:
 2. Pull a maintenance batch with `discovery cache-next` and review/scan selected entries.
 3. Record scan outcomes with `discovery cache-mark` (use `--changed` when meaningful movement is detected).
 4. Include cache stats in the private trace: active entries, scanned this run, changed flagged, blocked/errors.
-5. If cache maintenance fails, treat DATASETS_OPTIMIZE as incomplete and report exact blocker(s).
+5. Enumerate each blocked/error item in the trace with source name + URL + status/error + UTC timestamp + retry result.
+6. If cache maintenance fails, treat DATASETS_OPTIMIZE as incomplete and report exact blocker(s).
 
 ## Claim-check minimum standard
 
