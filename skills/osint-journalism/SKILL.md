@@ -522,15 +522,16 @@ Minimum trace requirements:
 ### Mandatory fallback for non-publishing STORY runs
 
 If no standard STORY candidate passes, execute fallback:
-1. Find at least one **new, currently relevant** dataset tied to active world developments.
-2. Add it to the catalog in the same run.
-3. Publish a dataset-focused story explaining:
+1. Before choosing a fallback topic, run a broad comparison set from at least 3 distinct source families/domains and record why each did or did not qualify.
+2. Find at least one **new, currently relevant** dataset tied to active world developments.
+3. Add it to the catalog in the same run.
+4. Publish a dataset-focused story explaining:
    - what the dataset is,
    - scope/bounds/limitations,
    - how to use it (query/analysis approach),
    - why it is potentially useful/important now.
-4. Use clear dataset-intel framing; avoid pretending this is an event-anomaly story.
-5. Only emit true NO_PUBLISH if both standard STORY and dataset fallback fail, with explicit blockers.
+5. Use clear dataset-intel framing; avoid pretending this is an event-anomaly story.
+6. Only emit true NO_PUBLISH if both standard STORY and dataset fallback fail, with explicit blockers.
 
 Publishing pressure rule:
 - Do not lower significance thresholds to force a weak event story.
