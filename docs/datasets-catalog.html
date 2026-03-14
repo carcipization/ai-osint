@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-13 21:01 UTC</p>
+<p><strong>Dateline:</strong> 2026-03-14 00:17 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 139 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 140 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (44), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 27+14+11+44+7+7+12+11+2+3+1 = <strong>139</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (45), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 27+14+11+45+7+7+12+12+2+3+1 = <strong>140</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -119,6 +120,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <ul>
 <li><a href="https://api.reliefweb.int/">ReliefWeb API</a> — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.</li>
 <li><a href="https://data.humdata.org/">Humanitarian Data Exchange (HDX)</a> — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.</li>
+<li><a href="https://keyfigures.api.unocha.org/">OCHA Key Figures API</a> — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.</li>
 <li><a href="https://www.emdat.be/">EM-DAT</a> — Disaster impact database for severity and cross-event context. Reliable for structured comparisons but estimates revise over time.</li>
 <li><a href="https://www.unhcr.org/refugee-statistics/download/">UNHCR Refugee Data</a> — Displacement statistics for migration and conflict follow-through analysis. Be mindful of registration lag.</li>
 <li><a href="https://earthquake.usgs.gov/earthquakes/feed/">USGS Earthquake Feeds</a> — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.</li>

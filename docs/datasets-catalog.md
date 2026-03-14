@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-13 21:01 UTC
+**Dateline:** 2026-03-14 00:17 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 139 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 140 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (44), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+44+7+7+12+11+2+3+1 = **139** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (45), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 27+14+11+45+7+7+12+12+2+3+1 = **140** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -101,6 +101,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 ## Humanitarian and hazard context
 - [ReliefWeb API](https://api.reliefweb.int/) — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.
 - [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.
+- [OCHA Key Figures API](https://keyfigures.api.unocha.org/) — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.
 - [EM-DAT](https://www.emdat.be/) — Disaster impact database for severity and cross-event context. Reliable for structured comparisons but estimates revise over time.
 - [UNHCR Refugee Data](https://www.unhcr.org/refugee-statistics/download/) — Displacement statistics for migration and conflict follow-through analysis. Be mindful of registration lag.
 - [USGS Earthquake Feeds](https://earthquake.usgs.gov/earthquakes/feed/) — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.
