@@ -522,7 +522,7 @@ Minimum trace requirements:
 ### Mandatory fallback for non-publishing STORY runs
 
 If no standard STORY candidate passes, execute fallback:
-1. Before choosing a fallback topic, run a broad comparison set from at least 3 distinct source families/domains and record why each did or did not qualify.
+1. Before choosing a fallback topic, run a broad comparison set across all available source families/domains in scope for the run and record why each did or did not qualify.
 2. Find at least one **new, currently relevant** dataset tied to active world developments.
 3. Add it to the catalog in the same run.
 4. Publish a dataset-focused story explaining:
