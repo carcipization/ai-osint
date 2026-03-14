@@ -1,42 +1,41 @@
-# Datasets: OCHA Key Figures API adds a fast funding-context layer for 2026 humanitarian gap tracking
+# Datasets: FAO FPMA adds market-level food-price stress tracking as global prices turn up
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-14-dataset-intel-ocha-key-figures-api-humanitarian-funding-context.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-14-dataset-intel-ocha-key-figures-api-humanitarian-funding-context.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-14-dataset-intel-fao-fpma-food-price-stress-tracking.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-14-dataset-intel-fao-fpma-food-price-stress-tracking.md)
 
-**Dateline:** 2026-03-14 00:17 UTC
+**Dateline:** 2026-03-14 00:47 UTC
 
 ## Story
 
-Initial lead: [UN News — “Humanitarians launch $33 billion appeal for 2026”](https://news.un.org/en/story/2025/12/1166526).
+Initial lead: [FAO Food Price Index page (March 2026 update cycle)](https://www.fao.org/worldfoodsituation/foodpricesindex/en/).
 
-A growing gap between humanitarian needs and funded response remains a broad, non-specialist decision problem for governments, NGOs, and households affected by service cuts. To improve fast-cycle monitoring in this run, we added the **OCHA Key Figures API** to the datasets catalog as a programmatic bridge to headline humanitarian indicators, including data sourced from OCHA’s Financial Tracking Service.
+Global food prices rising again is a broad public-risk signal because it can quickly affect household costs, humanitarian demand, and government subsidy decisions. In this run, no event-style candidate cleared the full STORY gate with a fresh mechanism break, so we executed mandatory fallback and added the **FAO Food Price Monitoring and Analysis (FPMA) Tool** to the datasets catalog.
 
-The practical value is speed and structure. Instead of relying on ad hoc page checks across multiple portals, this API provides one machine-readable entry point for high-level humanitarian figures that can be queried and compared quickly across countries and periods. That improves triage when deciding whether a funding shortfall is routine seasonality or a change large enough to affect aid delivery choices.
+The FPMA tool matters because it complements top-line global indexes with market-level commodity price series and country context. That gives decision-makers a faster way to distinguish between broad global movement and localized stress, which is often where affordability shocks become visible first.
 
-For readers and operators outside specialist humanitarian analytics teams, the decision consequence is straightforward: this dataset helps answer whether funding is keeping pace with publicly stated response goals before downstream impacts are visible in field-level outcomes.
+For non-specialist users, the practical decision consequence is direct: FPMA can help answer whether a price jump is isolated or spreading across markets, which can change procurement timing, aid allocation, and household budgeting choices.
 
 ## Appendix: Method
 
-- Ran a one-off STORY discovery pass with world-state and anomaly triggers.
-- Tested standard STORY candidates from active humanitarian/funding signals; none cleared the full importance/mechanism thresholds for a standalone event story in this window.
-- Executed mandatory fallback and selected a new, world-relevant dataset tied to active 2026 humanitarian funding developments.
-- Added **OCHA Key Figures API** to `docs/datasets-catalog.md` under **Humanitarian and hazard context**.
-- Captured source documentation and lead context for reproducible reuse.
+- Ran one-off STORY sweep with world-state and anomaly triggers.
+- Tested standard STORY candidates; none passed all anomaly/mechanism/decision + importance gates in this window.
+- Ran mandatory fallback comparison across three source families before selection.
+- Added **FAO FPMA Tool** to `docs/datasets-catalog.md` under **Humanitarian and hazard context**.
+- Published dataset-focused explainer with source links and caveats.
 
 ## Appendix: Limitations
 
-- OCHA Key Figures API is explicitly presented as a **beta** API.
-- The API provides high-level figures and depends on upstream source systems (including FTS), so update timing and revisions can vary by source.
-- This addition improves monitoring infrastructure; it does not by itself establish a new anomaly claim.
+- FPMA coverage and update cadence vary by country, market, and commodity; not all markets update at the same speed.
+- Price series are monitoring indicators and should be triangulated with local official statistics and field reporting before strong causal claims.
+- This publication is a monitoring-infrastructure addition, not an assertion of a specific country-level food emergency.
 
 ## Appendix: Confidence
 
-**Confidence: Moderate** (primary-source documentation confirms availability and scope; operational reliability still subject to beta/API and upstream refresh constraints).
+**Confidence: Moderate** (primary-source FAO documentation confirms scope and relevance; operational consistency depends on market-level update behavior).
 
 ## Appendix: Sources
 
-- [OCHA Key Figures API](https://keyfigures.api.unocha.org/)
-- [UN OCHA Financial Tracking Service — FTS public API page](https://fts.unocha.org/content/fts-public-api)
-- [HPC Tools API docs (linked from FTS API page)](https://api.hpc.tools/docs/v2/)
-- [UN News: Humanitarians launch $33 billion appeal for 2026](https://news.un.org/en/story/2025/12/1166526)
+- [FAO Food Price Monitoring and Analysis (FPMA) Tool](https://fpma.fao.org/giews/fpmat4/global/)
+- [FAO Food Price Index](https://www.fao.org/worldfoodsituation/foodpricesindex/en/)
+- [FAO Markets and Trade: FPMA Tool reference page](https://www.fao.org/markets-and-trade/do-not-touch/publications-original(2)/food-price-monitoring---analysis-(fpma)-tool---updated-version/en)
 - [Datasets Catalog](https://carcipization.github.io/ai-osint/datasets-catalog.md)
