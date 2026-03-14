@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 140 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 139 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -24,7 +24,7 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 
 ## Structural QA snapshot
 - **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (44), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+44+7+7+12+12+2+3+1 = **140** (must match catalog metadata count).
+- **Balance checksum:** 27+14+11+44+7+7+12+11+2+3+1 = **139** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -47,7 +47,7 @@ Use these stable tokens in internal retrieval notes so query phrasing stays cons
 ## Retrieval lenses (for fast story triage)
 Use this compact map before scanning full entries.
 
-- **Fast operational corroboration (minutes to hourly):** OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, NOAA SWPC JSON feeds, FIRST EPSS.
+- **Fast operational corroboration (minutes to hourly):** OONI, RIPE Atlas, CAIDA IODA, USGS Earthquake Feeds, FIRST EPSS.
 - **Event-tracking + anomaly detection (hourly to daily):** ACLED, GDELT, ReliefWeb API, NASA FIRMS, OpenSky Network, ADS-B Exchange, IMF PortWatch.
 - **Structural baselines (monthly to annual):** UCDP GED, EM-DAT, UN Comtrade, World Bank Indicators API, IMF Data API, FAOSTAT, SIPRI Milex.
 - **Entity/ownership resolution:** OpenSanctions, OpenCorporates API, Open Ownership Register, UK Companies House PSC, GLEIF LEI Golden Copy.
@@ -252,4 +252,3 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [TGDataset](https://github.com/SystemsLab-Sapienza/TGDataset) — Research snapshot corpus for historical Telegram network structure. Best for baseline context, not live operational monitoring.
 
 ## Space weather and disruption context
-- [NOAA SWPC JSON feeds](https://services.swpc.noaa.gov/json/) — Operational space-weather observations/forecasts (e.g., flare/Kp products). Useful for timing and severity context in comms/power/GNSS stories, with forecast/observed distinction required.
