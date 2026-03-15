@@ -60,6 +60,7 @@ Run a short dual-trigger sweep at the start of each run (timebox: 5–10 minutes
 
 Required:
 - Use web/news search to identify active developments across event classes (not a single headline track).
+- Run a brief Bluesky signal check guided by the active world situation (lead generation only; verify with independent evidence before publication).
 - Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
 - Do not predispose the pass to any predefined track, domain, or dataset family.
 
