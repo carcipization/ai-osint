@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-14 00:17 UTC
+**Dateline:** 2026-03-15 21:30 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 146 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 150 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -109,6 +109,10 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [NOAA IBTrACS](https://www.ncei.noaa.gov/products/international-best-track-archive) — Tropical cyclone tracks for hazard overlays and route-risk context. Cross-era comparability is imperfect.
 - [NOAA CO-OPS Data Retrieval API](https://api.tidesandcurrents.noaa.gov/api/prod/) — Official U.S. coastal observations/predictions (water level, tides, currents, meteorology) with high-frequency station queries. Strong disruption-context source with station-coverage and interval-limit constraints.
 - [Copernicus CDS (ERA5)](https://cds.climate.copernicus.eu/) — Reanalysis weather/climate fields for baseline comparisons. Excellent contextual control layer with spatial-resolution limits.
+- [NASA OB.DAAC PACE Ocean Color Data](https://oceancolor.gsfc.nasa.gov/) — NASA ocean-color data access for PACE OCI hyperspectral products (including chlorophyll-a and phytoplankton-relevant retrievals) used to monitor bloom onset, spread, and persistence. High-value marine-biogeochemistry signal with algorithm-version and adjacency-effect caveats near bright ice surfaces.
+- [NASA LANCE VIIRS (SNPP/NOAA-20)](https://lance.modaps.eosdis.nasa.gov/) — Near-real-time VIIRS streams for fast situational checks of sea ice/iceberg context, ocean color proxies, and evolving debris fields. Strong short-cycle monitoring layer with NRT-vs-final product differences and cloud-coverage limits.
+- [USGS Landsat Collection 2](https://www.usgs.gov/landsat-missions/landsat-data-access) — Medium-resolution optical imagery useful for confirming iceberg fragmentation geometry, meltwater ponding, and co-located surface context around bloom episodes. Excellent visual corroboration source with revisit, cloud, and polar-light constraints.
+- [U.S. National Ice Center Iceberg Products](https://usicecenter.gov/Resources/Arctic-Antarctic-Iceberg-Products) — Operational iceberg analyses and chart products for tracking named Antarctic iceberg position/status and break-up progression over time. Critical trajectory anchor for linking ocean-color anomalies to iceberg forcing, with product-cadence and mapping-generalization caveats.
 - [WFP Global Food Prices](https://data.humdata.org/dataset/global-wfp-food-prices) — WFP-curated global market price observations for staple commodities across countries and markets. High-value inflation and food-security signal with country coverage and market-sampling variability.
 - [FAO FPMA Tool](https://fpma.fao.org/giews/fpmat4/global/) — FAO Food Price Monitoring and Analysis tool with country/market commodity price series and alert context for food-access stress tracking. High utility for near-operational inflation and food-security monitoring, with market sampling and update-cadence caveats.
 - [FAO Data in Emergencies (DIEM)](https://data.humdata.org/dataset/fao-diem-monitoring-system-household-surveys-aggregated-data) — FAO emergency household-survey aggregates on livelihoods, food security, and shocks in crisis-affected settings. Useful for humanitarian stress triangulation, but survey timing and sampling frames differ by operation.
