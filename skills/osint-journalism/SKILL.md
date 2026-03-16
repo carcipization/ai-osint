@@ -60,7 +60,7 @@ Run a short dual-trigger sweep at the start of each run (timebox: 5–10 minutes
 
 Required:
 - Use web/news search to identify active developments across event classes (not a single headline track).
-- **Bluesky check is STORY-only.** Do not run Bluesky sweeps in DATASETS, FOLLOWUP, DATASETS_OPTIMIZE, SELF, or SKILL slots.
+- **Bluesky check is STORY-only.** Do not run Bluesky sweeps in DATASETS, FOLLOWUP, or DATASETS_OPTIMIZE slots.
 - Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
 - Do not predispose the pass to any predefined track, domain, or dataset family.
 
@@ -207,7 +207,7 @@ STORY search rule:
 - Keep looking for a publishable story until available datasets/source candidates for that run are exhausted.
 - If exhausted and nothing passes all three gates, end with no publish (allowed).
 
-## Story novelty and duplication gate (SKILL quality upgrade)
+## Story novelty and duplication gate (quality upgrade)
 
 Do not publish a new story when it only rephrases a very recent conclusion from the same source stream.
 
@@ -260,7 +260,7 @@ When checking outage-duration claims:
 Publication policy source of truth: `/home/pi/.openclaw/workspace/ai-osint/policy/publication_policy.json`.
 
 - Feed includes only STORY and DATASETS_INTEL publications.
-- Exclude FOLLOWUP, SELF, SKILL, and DATASETS_OPTIMIZE entries from the public story feed.
+- Exclude FOLLOWUP and DATASETS_OPTIMIZE entries from the public story feed.
 - In feed-facing dataset headlines, use `Datasets: ...` (never `DATASETS_A/B/OPTIMIZE:` labels).
 - Place dataset references at the bottom of index, below the feed (Datasets Catalog first, then Dataset Playbook).
 
@@ -314,7 +314,7 @@ Also require dateline exact format:
 - If a key input is missing, choose **Inconclusive** over forced certainty.
 - Include at least one "what would change this verdict" condition in limitations.
 
-## Uncertainty language protocol (SELF quality upgrade)
+## Uncertainty language protocol (quality upgrade)
 
 When evidence is incomplete or mixed, make uncertainty explicit at sentence level instead of burying it in limitations.
 
@@ -340,7 +340,7 @@ Before publish, run this test on paragraph 1:
 - It must identify at least one non-specialist actor decision that could change.
 - If paragraph 1 cannot do both clearly, do not publish STORY as-is; rewrite or demote to fallback/hold.
 
-## Weak-point guardrails (SELF quality upgrade)
+## Weak-point guardrails (quality upgrade)
 
 These rules target recurring weak spots in OSINT reporting quality: overreliance on single artifacts, weak provenance for social content, and under-explained uncertainty.
 
@@ -387,7 +387,7 @@ In `research-traces/`, add a short **"Could this be wrong because..."** block li
 - For follow-ups, explicitly separate: unchanged findings vs new findings.
 - Preserve an audit trail in `research-traces/` for major methodological changes.
 
-## Single-source and rumor discipline (SELF quality upgrade)
+## Single-source and rumor discipline (quality upgrade)
 
 - If a high-impact claim relies on one origin (single post, single official statement, single scraper output), label the conclusion as provisional unless independent corroboration is found.
 - For market- or conflict-sensitive rumor bursts, explicitly separate:
@@ -396,7 +396,7 @@ In `research-traces/`, add a short **"Could this be wrong because..."** block li
   - what evidence is still missing.
 - Do not publish a strong binary verdict when key contradictory evidence is unavailable or blocked by timing gaps.
 
-## Trace-to-copy mapping rule (SELF quality upgrade)
+## Trace-to-copy mapping rule (quality upgrade)
 
 Before publishing, ensure each major claim in the story body has a matching evidence entry in `research-traces/` with:
 - source URL,
@@ -406,7 +406,7 @@ Before publishing, ensure each major claim in the story body has a matching evid
 
 If a sentence cannot be mapped, rewrite or remove it.
 
-## Claim-origin and falsification ladder (SELF quality upgrade)
+## Claim-origin and falsification ladder (quality upgrade)
 
 Before drafting, force a short origin-first verification ladder for any social/UGC-sensitive claim:
 
@@ -431,7 +431,7 @@ Run a final newsroom-style pass focused on accuracy and readability, not prose f
 - **Uncertainty placement:** caveats appear where the uncertainty is introduced, not buried later.
 - **Headline discipline:** headline states the strongest defensible conclusion, not the most dramatic framing.
 
-## Disconfirming-evidence prominence (SELF quality upgrade)
+## Disconfirming-evidence prominence (quality upgrade)
 
 To reduce confirmation bias and improve trustworthiness, surface the strongest challenge early instead of burying it in limitations.
 
@@ -440,7 +440,7 @@ To reduce confirmation bias and improve trustworthiness, surface the strongest c
 - If no disconfirming artifact was found, say so explicitly and state the exact search gap (time window, missing registry update, unavailable telemetry, etc.).
 - Never present a strong verdict without naming the top unresolved contradiction risk.
 
-## Attribution density rule (SELF quality upgrade)
+## Attribution density rule (quality upgrade)
 
 For disputable claims, attribution must be near-immediate and specific.
 
@@ -448,7 +448,7 @@ For disputable claims, attribution must be near-immediate and specific.
 - Prefer explicit actor/source nouns over vague references (e.g., "according to IODA outage telemetry" not "data shows").
 - If using anonymous/indirect sourcing in rare cases, explain why identity/details are limited and what verification was done independently.
 
-## FOLLOWUP staleness gate (SKILL quality upgrade)
+## FOLLOWUP staleness gate (quality upgrade)
 
 When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns that only restate the same numbers.
 
@@ -457,7 +457,7 @@ When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns
 - If all sampled items are unchanged, explicitly record the staleness condition in `research-traces/` and use concise no-publish language.
 - Do not manufacture updates; this gate improves sampling quality, not publication pressure.
 
-## Publication-policy preflight (SKILL quality upgrade)
+## Publication-policy preflight (quality upgrade)
 
 Before finalizing a STORY or DATASETS post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects.
 
@@ -466,7 +466,7 @@ Before finalizing a STORY or DATASETS post, run a quick policy-shape check on th
 - Keep top-of-file link block + dateline format exactly compliant.
 - If a post fails policy checks, fix markdown first, then regenerate HTML artifacts.
 
-## Working-tree hygiene for cadence reliability (SKILL quality upgrade)
+## Working-tree hygiene for cadence reliability (quality upgrade)
 
 To reduce avoidable rebase interruptions and accidental broad diffs:
 
@@ -474,7 +474,7 @@ To reduce avoidable rebase interruptions and accidental broad diffs:
 - If unrelated drift is present, stash it with a timestamped note, complete the slot task, and avoid mixing that drift into the slot commit.
 - Keep slot commits scoped to intentional content + required generated artifacts only.
 
-## Rapid challenge pass (SELF quality upgrade)
+## Rapid challenge pass (quality upgrade)
 
 Before final draft lock, run a 5-minute adversarial check to reduce confirmation bias:
 
@@ -485,7 +485,7 @@ Before final draft lock, run a 5-minute adversarial check to reduce confirmation
 
 This operationalizes Reuters’ “try to disprove as well as prove your story” guidance as a repeatable newsroom step.
 
-## Disputable-fact attribution SLA (SELF quality upgrade)
+## Disputable-fact attribution SLA (quality upgrade)
 
 For any sentence containing a disputable fact, enforce a strict attribution window:
 
@@ -495,7 +495,7 @@ For any sentence containing a disputable fact, enforce a strict attribution wind
 
 Goal: readers should never need to scan far to find provenance for contestable claims.
 
-## Evidence independence test (SELF quality upgrade)
+## Evidence independence test (quality upgrade)
 
 When using multiple sources for corroboration, verify true independence:
 
@@ -505,7 +505,7 @@ When using multiple sources for corroboration, verify true independence:
 
 This aligns corroboration practice with AP’s requirement for independent corroboration around sensitive anonymous/secondhand information.
 
-## STORY no-publish exhaust protocol (SKILL quality upgrade)
+## STORY no-publish exhaust protocol (quality upgrade)
 
 When a STORY slot cannot publish a standard story, do not stop at NO_PUBLISH by default. Use the dataset fallback path.
 
@@ -540,7 +540,7 @@ Publishing pressure rule:
 - Do not lower significance thresholds to force a weak event story.
 - Prefer a high-utility dataset fallback over a low-importance specialist event write-up.
 
-## Mechanism-first claim sentence template (SKILL quality upgrade)
+## Mechanism-first claim sentence template (quality upgrade)
 
 For quantitative anomaly stories, the first two paragraphs should follow this order:
 1. **Observed change** (measured delta + denominator/time window)
@@ -554,7 +554,7 @@ If mechanism remains unresolved:
 
 This reduces descriptive-drift stories that report movement without explaining causal relevance.
 
-## Attribution-first paragraph protocol (SELF quality upgrade)
+## Attribution-first paragraph protocol (quality upgrade)
 
 To reduce "fact blob" leads and improve reader trust, enforce attribution structure in the first two paragraphs of any STORY/claim-check draft:
 
@@ -566,7 +566,7 @@ Rationale alignment:
 - AP guidance emphasizes placing attribution in the same sentence (or immediately adjacent) for disputable facts.
 - Reuters standards emphasize honesty/transparency in sourcing and testing whether the story withstands challenge.
 
-## Corroboration independence ledger (SELF quality upgrade)
+## Corroboration independence ledger (quality upgrade)
 
 For high-impact claims, add an explicit mini-ledger in `research-traces/` before final confidence assignment:
 
