@@ -1,45 +1,44 @@
-# Datasets: Space-weather operational stack adds four NOAA machine-readable feeds (Watchlist 39)
+# U.S. diesel prices jumped nearly $1 in one week as Hormuz disruption deepened
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-17-dataset-intel-space-weather-operational-stack-watchlist-39.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-17-dataset-intel-space-weather-operational-stack-watchlist-39.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-16-us-diesel-prices-jumped-nearly-1-dollar-in-one-week-as-hormuz-disruption-deepened-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-16-us-diesel-prices-jumped-nearly-1-dollar-in-one-week-as-hormuz-disruption-deepened-osint-story.md)
 
-**Dateline:** 2026-03-17 17:42 UTC
+**Dateline:** 2026-03-16 21:39 UTC
 
 ## Story
 
-This DATASETS_A run adds four NOAA Space Weather Prediction Center (SWPC) machine-readable datasets that materially improve rapid verification of geomagnetic disruption risk:
+Initial lead: [Reuters: UAE crude output falls by more than half as Hormuz closure forces shut-ins](https://www.reuters.com/business/energy/uae-crude-output-falls-by-more-than-half-hormuz-closure-forces-shut-ins-2026-03-16/).
 
-1. **NOAA SWPC Alerts JSON**
-2. **NOAA Planetary K-index Forecast JSON**
-3. **NOAA Planetary K-index Observed JSON**
-4. **NOAA SWPC Solar Wind Plasma 7-day JSON**
+U.S. on-highway diesel prices rose by **$0.962 per gallon in a single week** to **$4.859** on March 9 from **$3.897** on March 2, according to the U.S. Energy Information Administration’s weekly retail update. The same release shows regular gasoline up **$0.487 per gallon** week-over-week to **$3.502**. For households and small businesses, this is a direct cost shock; for freight operators, diesel is an immediate margin and routing pressure input.
 
-Together, this stack closes a full operational chain: official warning issuance, forecast severity windows, observed realized conditions, and upstream solar-wind mechanism context. That makes it easier to distinguish headline-level space-weather concern from near-term service-risk conditions that can matter for power operations, satellites, aviation communications, and navigation reliability.
+The most-tested mechanism is external supply disruption rather than domestic-only seasonal noise. The International Energy Agency’s March oil market report describes a near-halt in tanker movements through the Strait of Hormuz with major regional shut-ins, while Reuters reports UAE production and loading disruptions linked to the same conflict window.
 
-For non-specialist decision users, the practical gain is timing clarity: organizations can prepare for specific risk windows and then quickly check whether modeled intensity actually materialized.
+Decision consequence is concrete and broad: non-specialist actors who depend on trucking-heavy supply chains—local distributors, municipal procurement teams, and households planning near-term transport and delivery spend—should treat current fuel costs as elevated-risk rather than routine weekly fluctuation.
+
+What could overturn this: if upcoming EIA weekly releases rapidly reverse most of this move, or if Hormuz transit normalizes faster than currently indicated, near-term pass-through pressure could ease sooner than this signal implies.
 
 ## Appendix: Method
 
-- Ran required DATASETS dual-trigger sweep:
-  - world-state trigger: active NOAA/SWPC coverage around March 19 G2 watch window,
-  - anomaly trigger: verified reachable machine-readable endpoints with direct operational fields.
-- Added 4 qualified datasets (batch target met) to `docs/datasets-catalog.md` under Space weather and disruption context.
-- Logged candidate additions with discovery CLI for retrieval continuity.
+- Used EIA weekly retail fuel release as primary measured series (observation layer).
+- Recomputed week-over-week deltas from EIA reported values:
+  - Diesel: 4.859 - 3.897 = 0.962
+  - Gasoline: 3.502 - 3.015 = 0.487
+- Cross-checked mechanism context with IEA March 2026 Oil Market Report and Reuters field reporting on production/loading disruption.
+- Reviewed EIA methodology notes for weekly diesel sampling caveats.
 
 ## Appendix: Limitations
 
-- Forecast K-index values are model outputs and can revise close to event time.
-- Alerts feeds can include superseded/corrected messages that require sequence-aware interpretation.
-- Solar-wind telemetry is noisy at high frequency and should be interpreted as mechanism context, not impact proof by itself.
+- EIA weekly retail price estimates are survey-based and can revise; one-week moves should be monitored across subsequent releases.
+- Causality is multi-factor: refinery operations, inventory behavior, and regional logistics can amplify or dampen global crude shocks.
+- This story focuses on observed U.S. retail pass-through, not a full decomposition of all price drivers.
 
 ## Appendix: Confidence
 
-**Confidence: High** (all four endpoints were reachable and are first-party NOAA SWPC machine-readable sources with clear complementary roles).
+**Confidence: Moderate-High** (direct first-party weekly measurements plus independent mechanism context from IEA and Reuters; remaining uncertainty is short-window volatility and revision risk).
 
 ## Appendix: Sources
 
-- [NOAA SWPC Alerts JSON](https://services.swpc.noaa.gov/products/alerts.json)
-- [NOAA Planetary K-index Forecast JSON](https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json)
-- [NOAA Planetary K-index Observed JSON](https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json)
-- [NOAA SWPC Solar Wind Plasma 7-day JSON](https://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json)
-- [Datasets Catalog](https://carcipization.github.io/ai-osint/datasets-catalog.md)
+- [EIA Gasoline and Diesel Fuel Update](https://www.eia.gov/petroleum/gasdiesel/)
+- [EIA diesel methodology note](https://www.eia.gov/petroleum/gasdiesel/diesel_proc-methods.php)
+- [IEA Oil Market Report, March 2026](https://www.iea.org/reports/oil-market-report-march-2026)
+- [Reuters lead reporting on UAE/Hormuz disruption](https://www.reuters.com/business/energy/uae-crude-output-falls-by-more-than-half-hormuz-closure-forces-shut-ins-2026-03-16/)
