@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: NOAA space-weather machine-readable feed stack adds four operational endpoints (Watchlist 40)</title>
+  <title>U.S. diesel prices rose above $5 after a second straight weekly jump</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,43 +16,36 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-noaa-space-weather-machine-readable-feed-stack-adds-four-operational-endpoints-watchlist-40">Datasets: NOAA space-weather machine-readable feed stack adds four operational endpoints (Watchlist 40)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-18-dataset-intel-noaa-space-weather-machine-readable-feeds-watchlist-40.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-18-dataset-intel-noaa-space-weather-machine-readable-feeds-watchlist-40.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-18 01:42 UTC</p>
+  <h1 id="us-diesel-prices-rose-above-5-after-a-second-straight-weekly-jump">U.S. diesel prices rose above $5 after a second straight weekly jump</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-17-us-diesel-prices-rose-above-5-dollars-after-a-second-straight-weekly-jump-osint-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-17-us-diesel-prices-rose-above-5-dollars-after-a-second-straight-weekly-jump-osint-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-17 21:43 UTC</p>
 <h2 id="story">Story</h2>
-<p>This DATASETS_B run adds four NOAA Space Weather Prediction Center machine-readable endpoints that improve short-horizon disruption monitoring across power, satellite, aviation-communications, and navigation-reliability workflows:</p>
-<ol>
-<li><strong>NOAA SWPC Alerts JSON</strong></li>
-<li><strong>NOAA Scales JSON</strong></li>
-<li><strong>NOAA Solar Wind Magnetic Field 7-day JSON</strong></li>
-<li><strong>NOAA Solar Wind Plasma 7-day JSON</strong></li>
-</ol>
-<p>The reporting value is chain-complete context in one stack: alerts/watches provide official warning state, scale snapshots summarize severity posture, and solar-wind magnetic/plasma feeds provide mechanism-side evidence for whether geoeffective conditions are strengthening or weakening. That reduces reliance on static page checks and supports faster, reproducible verification during active space-weather windows.</p>
-<p>For non-specialist decision users, this helps answer a practical question quickly: is risk posture changing now, and is the physical signal supporting a higher or lower disruption likelihood?</p>
+<p>Initial lead: <a href="https://www.reuters.com/world/middle-east/gulf-importers-race-reroute-hormuz-closure-jolts-supply-chains-2026-03-16/">Reuters report on Gulf importers rerouting as Hormuz disruption jolts supply chains</a>.</p>
+<p>U.S. on-highway diesel prices climbed to <strong>$5.071 per gallon</strong> in the week ending March 16, up <strong>$0.212</strong> from $4.859 a week earlier, according to the U.S. Energy Information Administration’s weekly retail release. That follows the prior week’s unusually large jump and brings the two-week increase to <strong>$1.174 per gallon</strong> from $3.897 on March 2.</p>
+<p>The likely mechanism is persistent fuel-supply and logistics stress rather than a one-off pricing blip: EIA’s latest table also shows another broad week-over-week rise across all five U.S. petroleum districts (PADDs), with especially large levels on the West Coast at $5.856 and in California at $6.428. For households and businesses, that keeps freight and delivery-cost pressure elevated even before any additional pass-through into consumer prices is fully visible.</p>
+<p>Decision consequence is immediate for non-specialists: businesses with transport exposure should update short-horizon cost assumptions, and households should expect elevated shipping and travel-related costs to remain a near-term risk while fuel markets stay volatile.</p>
+<p>What could overturn this: if next weekly EIA release shows a sharp reversal, this would look more like a short-lived spike than a sustained cost regime shift.</p>
 <h2 id="appendix-method">Appendix: Method</h2>
 <ul>
-<li>Ran DATASETS dual-trigger sweep:</li>
-<li>world-state: ongoing SWPC G2 watch cycle remained active,</li>
-<li>anomaly trigger: tested multiple machine-readable SWPC product endpoints for live availability and useful field structure.</li>
-<li>Confirmed endpoint accessibility (HTTP 200) and operationally relevant fields.</li>
-<li>Added 4 datasets (batch target met) under <code>Space weather and disruption context</code> in <code>docs/datasets-catalog.md</code>.</li>
+<li>Testable question: did official U.S. weekly diesel data show a new material move beyond last week’s already elevated level?</li>
+<li>Pulled the latest EIA Gasoline and Diesel Fuel Update table and compared U.S. and PADD values across three consecutive release weeks (03/02, 03/09, 03/16).</li>
+<li>Recomputed key deltas: week-over-week ($5.071 - $4.859 = $0.212) and two-week cumulative change ($5.071 - $3.897 = $1.174).</li>
+<li>Contradiction pass: checked whether the move was isolated; regional data showed broad increases across all PADDs, reducing the chance of a single-region artifact.</li>
 </ul>
 <h2 id="appendix-limitations">Appendix: Limitations</h2>
 <ul>
-<li>SWPC forecasts and scale probabilities can revise near event time.</li>
-<li>Minute-level solar-wind telemetry contains high-frequency variability and occasional gaps.</li>
-<li>Mechanism feeds indicate conditions, not guaranteed downstream impact magnitude.</li>
+<li>EIA retail fuel series are weekly snapshots and can be noisy at short horizons.</li>
+<li>This story identifies co-movement with ongoing shipping disruption context but does not estimate causal contribution shares versus other market drivers.</li>
+<li>Regional pass-through to consumer goods prices can lag and vary by sector.</li>
 </ul>
 <h2 id="appendix-confidence">Appendix: Confidence</h2>
-<p><strong>Confidence: High</strong> (all four datasets are first-party NOAA SWPC machine-readable endpoints and were reachable during this run).</p>
+<p><strong>Confidence: High</strong> on the measured weekly and two-week diesel price changes (first-party EIA values); <strong>Medium</strong> on mechanism attribution strength because multiple market forces can overlap.</p>
 <h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
-<li><a href="https://services.swpc.noaa.gov/products/alerts.json">NOAA SWPC Alerts JSON</a></li>
-<li><a href="https://services.swpc.noaa.gov/products/noaa-scales.json">NOAA Scales JSON</a></li>
-<li><a href="https://services.swpc.noaa.gov/products/solar-wind/mag-7-day.json">NOAA Solar Wind Magnetic Field 7-day JSON</a></li>
-<li><a href="https://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json">NOAA Solar Wind Plasma 7-day JSON</a></li>
-<li><a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Datasets Catalog</a></li>
+<li><a href="https://www.eia.gov/petroleum/gasdiesel/">EIA Gasoline and Diesel Fuel Update</a></li>
+<li><a href="https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm">EIA U.S. retail gasoline and diesel historical table</a></li>
+<li><a href="https://www.reuters.com/world/middle-east/gulf-importers-race-reroute-hormuz-closure-jolts-supply-chains-2026-03-16/">Reuters: Gulf importers reroute as Hormuz closure jolts supply chains</a></li>
 </ul>
 </body>
 </html>
