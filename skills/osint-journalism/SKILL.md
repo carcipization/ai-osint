@@ -61,6 +61,9 @@ Run a short dual-trigger sweep at the start of each run (timebox: 5–10 minutes
 Required:
 - Use web/news search to identify active developments across event classes (not a single headline track).
 - **Bluesky check is STORY-only.** Do not run Bluesky sweeps in DATASETS, FOLLOWUP, or DATASETS_OPTIMIZE slots.
+- **Bluesky discovery pass minimum:** run at least **5 distinct Bluesky queries** per STORY run.
+- **Trending scan required:** include a quick pass over current Bluesky trending/discussion topics and convert the top relevant trends into additional query terms.
+- Use Bluesky results to surface candidate datasets/sensors to inspect next (lead generation for dataset targeting), not just headline leads.
 - Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
 - Do not predispose the pass to any predefined track, domain, or dataset family.
 
@@ -76,6 +79,7 @@ Selection rule:
 
 Trace rule:
 - Capture search terms, links, timestamps, anomaly checks attempted, and reasons for candidate acceptance/rejection.
+- For STORY runs, explicitly log: (a) all Bluesky queries run (minimum 5), (b) trending topics reviewed, (c) which trend-derived queries were added, and (d) dataset leads produced from Bluesky (or explicit none).
 - For every blocked/error fetch, log a structured line with: source name, URL, HTTP/status or error type, UTC timestamp, and one retry outcome (success/fail + status).
 
 ## Dataset intake policy (batch-first, consequence-first)
