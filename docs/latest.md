@@ -1,43 +1,41 @@
-# NOAA forecast signals G2 geomagnetic storm risk for March 19
+# U.S. diesel prices rose above $5 after a second straight weekly jump
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-18-noaa-forecast-signals-g2-geomagnetic-storm-risk-for-march-19-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-18-noaa-forecast-signals-g2-geomagnetic-storm-risk-for-march-19-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-17-us-diesel-prices-rose-above-5-dollars-after-a-second-straight-weekly-jump-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-17-us-diesel-prices-rose-above-5-dollars-after-a-second-straight-weekly-jump-osint-story.md)
 
-**Dateline:** 2026-03-18 13:42 UTC
+**Dateline:** 2026-03-17 21:43 UTC
 
 ## Story
 
-Initial lead: [NOAA Space Weather Prediction Center (SWPC) watch notice for a G2 geomagnetic storm on March 19](https://www.swpc.noaa.gov/news/g2-moderate-geomagnetic-storm-watch-issued-1).
+Initial lead: [Reuters report on Gulf importers rerouting as Hormuz disruption jolts supply chains](https://www.reuters.com/world/middle-east/gulf-importers-race-reroute-hormuz-closure-jolts-supply-chains-2026-03-16/).
 
-The U.S. National Weather Service’s Space Weather Prediction Center said in its latest 3-day forecast (issued 12:30 UTC Wednesday) that the strongest expected geomagnetic conditions for March 18-20 are **Kp 6.33, equivalent to a G2 (moderate) geomagnetic storm**, with the main risk window concentrated on March 19 UTC. For non-specialists, this matters because moderate geomagnetic storms can raise the chance of power-grid fluctuations at high latitudes and degrade some radio and satellite operations.
+U.S. on-highway diesel prices climbed to **$5.071 per gallon** in the week ending March 16, up **$0.212** from $4.859 a week earlier, according to the U.S. Energy Information Administration’s weekly retail release. That follows the prior week’s unusually large jump and brings the two-week increase to **$1.174 per gallon** from $3.897 on March 2.
 
-SWPC attributes the expected disturbance to **coronal mass ejection (CME) influences from March 16**, with possible lingering effects into March 20. In the same forecasting package, SWPC keeps elevated probabilities for minor-to-moderate radio blackouts (R1-R2) through March 20, which can affect some high-frequency communications.
+The likely mechanism is persistent fuel-supply and logistics stress rather than a one-off pricing blip: EIA’s latest table also shows another broad week-over-week rise across all five U.S. petroleum districts (PADDs), with especially large levels on the West Coast at $5.856 and in California at $6.428. For households and businesses, that keeps freight and delivery-cost pressure elevated even before any additional pass-through into consumer prices is fully visible.
 
-The practical decision window is near-term: utilities and infrastructure operators in high-latitude regions, satellite operators, and aviation or maritime users that depend on high-frequency radio should treat Thursday’s UTC intervals as higher-risk operating periods and prepare fallback comms/power procedures.
+Decision consequence is immediate for non-specialists: businesses with transport exposure should update short-horizon cost assumptions, and households should expect elevated shipping and travel-related costs to remain a near-term risk while fuel markets stay volatile.
 
-What could overturn this: if observed Kp values on March 19 stay below forecast levels, impacts may be limited and this would read as an over-forecast rather than a realized moderate storm event.
+What could overturn this: if next weekly EIA release shows a sharp reversal, this would look more like a short-lived spike than a sustained cost regime shift.
 
 ## Appendix: Method
 
-- Testable question: did a fresh primary-source forecast raise near-term geomagnetic risk to a level with broader operational consequences?
-- Pulled SWPC official products: watch notice, machine-readable alerts feed, 3-day text forecast, and planetary K-index forecast feed.
-- Extracted quantitative trigger points: highest expected 3-hour Kp (6.33), day-by-day storm category path (G2 on Mar 19, weaker on Mar 20), and listed impact domains.
-- Contradiction pass: checked recent observed geomagnetic readings in the same forecast package, which were lower over the prior 24 hours; treated this as a forecast uncertainty, not a contradiction of issuance.
+- Testable question: did official U.S. weekly diesel data show a new material move beyond last week’s already elevated level?
+- Pulled the latest EIA Gasoline and Diesel Fuel Update table and compared U.S. and PADD values across three consecutive release weeks (03/02, 03/09, 03/16).
+- Recomputed key deltas: week-over-week ($5.071 - $4.859 = $0.212) and two-week cumulative change ($5.071 - $3.897 = $1.174).
+- Contradiction pass: checked whether the move was isolated; regional data showed broad increases across all PADDs, reducing the chance of a single-region artifact.
 
 ## Appendix: Limitations
 
-- This is a forecast-led story; realized severity depends on CME arrival timing and magnetic orientation at Earth.
-- SWPC products can be revised as new solar-wind observations arrive.
-- Impact descriptions are risk ranges, not guaranteed outcomes in every affected latitude band.
+- EIA retail fuel series are weekly snapshots and can be noisy at short horizons.
+- This story identifies co-movement with ongoing shipping disruption context but does not estimate causal contribution shares versus other market drivers.
+- Regional pass-through to consumer goods prices can lag and vary by sector.
 
 ## Appendix: Confidence
 
-**Confidence: Medium-High** that elevated risk is real for March 19 because multiple official SWPC products align on a G2 watch window; **Medium** on realized impact magnitude until observed Kp and operational disruptions are recorded in real time.
+**Confidence: High** on the measured weekly and two-week diesel price changes (first-party EIA values); **Medium** on mechanism attribution strength because multiple market forces can overlap.
 
 ## Appendix: Sources
 
-- [SWPC: G2 Moderate Geomagnetic Storm Watch Issued](https://www.swpc.noaa.gov/news/g2-moderate-geomagnetic-storm-watch-issued-1)
-- [SWPC Alerts, Watches and Warnings JSON](https://services.swpc.noaa.gov/products/alerts.json)
-- [SWPC 3-Day Forecast (text)](https://services.swpc.noaa.gov/text/3-day-forecast.txt)
-- [SWPC Planetary K-index Forecast JSON](https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json)
-- [NOAA Space Weather Scales explanation](https://www.swpc.noaa.gov/noaa-scales-explanation)
+- [EIA Gasoline and Diesel Fuel Update](https://www.eia.gov/petroleum/gasdiesel/)
+- [EIA U.S. retail gasoline and diesel historical table](https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm)
+- [Reuters: Gulf importers reroute as Hormuz closure jolts supply chains](https://www.reuters.com/world/middle-east/gulf-importers-race-reroute-hormuz-closure-jolts-supply-chains-2026-03-16/)
