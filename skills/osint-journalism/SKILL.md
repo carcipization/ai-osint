@@ -78,14 +78,26 @@ Trace rule:
 - Capture search terms, links, timestamps, anomaly checks attempted, and reasons for candidate acceptance/rejection.
 - For every blocked/error fetch, log a structured line with: source name, URL, HTTP/status or error type, UTC timestamp, and one retry outcome (success/fail + status).
 
-## Dataset intake policy (batch-first)
+## Dataset intake policy (batch-first, consequence-first)
 
 - Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
 - Discovery pass target: scan at least tens/hundreds of candidates per run when tooling allows.
 - Promotion default: add **3–10 qualified datasets per cycle** (unless quality is genuinely thin).
 - Adding only one dataset is unacceptable.
 - Prioritize coverage breadth across domains before polishing niche depth.
-- Do **not** run AP/story preflight or story publishability gates for dataset selection.
+- Do **not** run AP/story preflight for dataset selection, but do run a **non-specialist consequence screen** before promotion.
+
+Hard selection priorities (in order):
+1. **Broad non-specialist consequence potential** (cost/access/safety/mobility/services) over specialist-only telemetry.
+2. **Decision usefulness** for general audiences and operators, not just technical observability.
+3. **Cross-domain chain value** (can the dataset connect upstream events to downstream real-world effects).
+4. **Freshness and reliability** (important, but never sufficient on their own).
+
+Anti-bias guardrails:
+- **No recency anchoring:** a domain is not preferred just because it produced a recent story.
+- **No convenience anchoring:** easy-to-query machine-readable feeds do not outrank relevance.
+- **Domain repetition cap:** if the same domain dominated recent dataset runs, require explicit rationale to continue; otherwise rotate to a higher-impact domain.
+- **NOAA-specific constraint:** do not add NOAA-centric datasets unless clear broad public consequence is demonstrated for the current run window.
 
 ### Dataset hunting protocol (event-class, cross-domain)
 
@@ -95,15 +107,18 @@ Trace rule:
    - primary operational indicator,
    - independent confirmation indicator,
    - spillover/second-order indicator.
-4. Score candidate datasets before promotion:
+4. Score candidate datasets before promotion (ordered):
+   - non-specialist consequence relevance,
+   - decision relevance,
+   - cross-domain chain contribution,
    - freshness cadence,
    - endpoint reliability,
    - baseline depth/comparability,
    - coverage breadth,
-   - revision risk,
-   - decision relevance.
-5. Prefer datasets that complete or strengthen a cross-domain chain; deprioritize isolated single-metric additions.
-6. Log misses in trace (missing source class, endpoint failure, sparse history) to improve future hunts.
+   - revision risk.
+5. Prefer datasets that complete or strengthen a cross-domain chain with clear public-facing consequence; deprioritize isolated specialist telemetry without downstream decision value.
+6. Recency is a tie-breaker only after consequence and decision relevance are satisfied.
+7. Log misses in trace (missing source class, endpoint failure, sparse history, or failed consequence screen) to improve future hunts.
 
 ### DATASETS_OPTIMIZE cache maintenance (mandatory)
 
