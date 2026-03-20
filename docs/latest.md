@@ -1,45 +1,40 @@
-# NOAA SWPC escalates to a G3 geomagnetic-storm watch after K6 alerts and a sudden impulse
+# Datasets: Food-input pass-through and flood-claims pressure baselines expand (Watchlist 44)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-20-noaa-swpc-escalates-to-g3-watch-after-k6-alerts-and-sudden-impulse-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-20-noaa-swpc-escalates-to-g3-watch-after-k6-alerts-and-sudden-impulse-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-20-dataset-intel-food-input-and-flood-claims-pressure-baselines-watchlist-44.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-20-dataset-intel-food-input-and-flood-claims-pressure-baselines-watchlist-44.md)
 
-**Dateline:** 2026-03-20 21:39 UTC
+**Dateline:** 2026-03-20 17:39 UTC
 
-NOAA’s Space Weather Prediction Center (SWPC) raised its near-term storm outlook to **G3 (Strong)** late Friday after issuing K-index alerts up to **K=6** and logging a **geomagnetic sudden impulse**, according to SWPC’s machine-readable alerts feed.
+This datasets-only run adds three high-consequence baselines to improve coverage of (a) upstream food-cost pressure transmission and (b) recurring household flood-loss exposure. Together they strengthen cross-domain tracking from input shocks to consumer prices and from hazard events to repeated insurance claims burden.
 
-The escalation matters because this moved from earlier minor conditions into a stronger watch tier that carries broader operational consequences: higher-latitude power-grid fluctuations, satellite-orientation irregularities and drag risk, and degraded high-frequency radio performance in affected regions.
+## Added datasets (3)
 
-Key progression in the same-day sequence:
-- Earlier window: K=4 warning/alert activity.
-- Escalation window: K=5 and K=6 warnings/alerts (Onset/threshold reached).
-- Confirmation signal: SWPC sudden-impulse summary (56 nT at BOU station).
-- Forward outlook: WATA50 watch indicating G3 predicted for Mar 20–21 (easing to G1 by Mar 22).
+1. **Fertilizer Use and Price**  
+   URL: [https://catalog.data.gov/dataset/fertilizer-use-and-price](https://catalog.data.gov/dataset/fertilizer-use-and-price)  
+   Why it matters: Adds long-run nutrient and fertilizer price context for farm-input stress, a key upstream driver of food production costs that can later pass through to household grocery inflation.
 
-Decision relevance for non-specialists is practical rather than technical: utilities, satellite operators, and high-latitude radio users should treat this as a stronger short-window disturbance phase than the earlier G1/G2 framing from prior days.
+2. **Price Spreads from Farm to Consumer**  
+   URL: [https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer](https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer)  
+   Why it matters: Adds direct farm-to-retail spread evidence to test whether consumer food-price movement is farm-cost driven, processing/marketing-system driven, or mixed.
 
-What would overturn this framing: if subsequent SWPC updates rapidly downgrade storm-level expectations and stop issuing higher-K alerts, the operational-risk framing should be revised down.
+3. **FIMA NFIP Redacted Claims (OpenFEMA)**  
+   URL: [https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema](https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema)  
+   Why it matters: Adds transaction-level flood-claims context for repeated household loss pressure and insurance burden persistence across disaster cycles.
 
-## Appendix: Method
+## Decision-use framing
 
-- Ran world-state + anomaly sweep and pulled primary SWPC alert artifacts directly from NOAA JSON feed.
-- Reconstructed intra-day sequence from product codes and timestamps (K04→K05/K06, sudden impulse, then G3 watch bulletin).
-- Applied consequence screen against SWPC’s own potential-impact text for each warning/watch product.
+- **Households:** better context for whether food inflation pressure is likely to persist from farm-input channels versus retail-chain dynamics.
+- **Local/state planners:** better longitudinal signal on recurring flood claims pressure when evaluating mitigation prioritization and recovery strategy.
+- **OSINT workflow:** tighter linkage between hazard → claims burden and input costs → shelf-price outcomes.
 
-## Appendix: Limitations
+## Method notes
 
-- This is a short-window operational read; SWPC products can update quickly as observations evolve.
-- K-index alerts and watch categories indicate disturbance severity windows, not guaranteed realized infrastructure damage.
-- Impact intensity is latitude- and system-specific.
+- Slot policy: DATASETS_A (datasets-only), with required batch size met (3 additions).
+- Selection prioritized broad non-specialist consequence and cross-domain chain value over convenience.
+- Catalog entries were added with caveats on cadence, revisions, and comparability.
 
-## Appendix: Confidence
+## Sources
 
-**Confidence: Medium-High.**
-
-- High confidence in event chronology and category changes because all core claims come from SWPC primary machine-readable products.
-- Moderate confidence in downstream impact magnitude because realized effects vary by exposure and system resilience.
-
-## Appendix: Sources
-
-- SWPC alerts feed (JSON): [https://services.swpc.noaa.gov/products/alerts.json](https://services.swpc.noaa.gov/products/alerts.json)
-- SWPC Alerts/Warnings page: [https://www.swpc.noaa.gov/products/alerts-watches-and-warnings](https://www.swpc.noaa.gov/products/alerts-watches-and-warnings)
-- SWPC NOAA scales explanation: [https://www.swpc.noaa.gov/noaa-scales-explanation](https://www.swpc.noaa.gov/noaa-scales-explanation)
+- [https://catalog.data.gov/dataset/fertilizer-use-and-price](https://catalog.data.gov/dataset/fertilizer-use-and-price)
+- [https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer](https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer)
+- [https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema](https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema)

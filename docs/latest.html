@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NOAA SWPC escalates to a G3 geomagnetic-storm watch after K6 alerts and a sudden impulse</title>
+  <title>Datasets: Food-input pass-through and flood-claims pressure baselines expand (Watchlist 44)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,42 +16,46 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="noaa-swpc-escalates-to-a-g3-geomagnetic-storm-watch-after-k6-alerts-and-a-sudden-impulse">NOAA SWPC escalates to a G3 geomagnetic-storm watch after K6 alerts and a sudden impulse</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-20-noaa-swpc-escalates-to-g3-watch-after-k6-alerts-and-sudden-impulse-osint-story.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-20-noaa-swpc-escalates-to-g3-watch-after-k6-alerts-and-sudden-impulse-osint-story.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-03-20 21:39 UTC</p>
-<p>NOAA’s Space Weather Prediction Center (SWPC) raised its near-term storm outlook to <strong>G3 (Strong)</strong> late Friday after issuing K-index alerts up to <strong>K=6</strong> and logging a <strong>geomagnetic sudden impulse</strong>, according to SWPC’s machine-readable alerts feed.</p>
-<p>The escalation matters because this moved from earlier minor conditions into a stronger watch tier that carries broader operational consequences: higher-latitude power-grid fluctuations, satellite-orientation irregularities and drag risk, and degraded high-frequency radio performance in affected regions.</p>
-<p>Key progression in the same-day sequence:
-- Earlier window: K=4 warning/alert activity.
-- Escalation window: K=5 and K=6 warnings/alerts (Onset/threshold reached).
-- Confirmation signal: SWPC sudden-impulse summary (56 nT at BOU station).
-- Forward outlook: WATA50 watch indicating G3 predicted for Mar 20–21 (easing to G1 by Mar 22).</p>
-<p>Decision relevance for non-specialists is practical rather than technical: utilities, satellite operators, and high-latitude radio users should treat this as a stronger short-window disturbance phase than the earlier G1/G2 framing from prior days.</p>
-<p>What would overturn this framing: if subsequent SWPC updates rapidly downgrade storm-level expectations and stop issuing higher-K alerts, the operational-risk framing should be revised down.</p>
-<h2 id="appendix-method">Appendix: Method</h2>
+  <h1 id="datasets-food-input-pass-through-and-flood-claims-pressure-baselines-expand-watchlist-44">Datasets: Food-input pass-through and flood-claims pressure baselines expand (Watchlist 44)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-20-dataset-intel-food-input-and-flood-claims-pressure-baselines-watchlist-44.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-03-20-dataset-intel-food-input-and-flood-claims-pressure-baselines-watchlist-44.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-03-20 17:39 UTC</p>
+<p>This datasets-only run adds three high-consequence baselines to improve coverage of (a) upstream food-cost pressure transmission and (b) recurring household flood-loss exposure. Together they strengthen cross-domain tracking from input shocks to consumer prices and from hazard events to repeated insurance claims burden.</p>
+<h2 id="added-datasets-3">Added datasets (3)</h2>
+<ol>
+<li>
+<p><strong>Fertilizer Use and Price</strong><br />
+   URL: <a href="https://catalog.data.gov/dataset/fertilizer-use-and-price">https://catalog.data.gov/dataset/fertilizer-use-and-price</a><br />
+   Why it matters: Adds long-run nutrient and fertilizer price context for farm-input stress, a key upstream driver of food production costs that can later pass through to household grocery inflation.</p>
+</li>
+<li>
+<p><strong>Price Spreads from Farm to Consumer</strong><br />
+   URL: <a href="https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer">https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer</a><br />
+   Why it matters: Adds direct farm-to-retail spread evidence to test whether consumer food-price movement is farm-cost driven, processing/marketing-system driven, or mixed.</p>
+</li>
+<li>
+<p><strong>FIMA NFIP Redacted Claims (OpenFEMA)</strong><br />
+   URL: <a href="https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema">https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema</a><br />
+   Why it matters: Adds transaction-level flood-claims context for repeated household loss pressure and insurance burden persistence across disaster cycles.</p>
+</li>
+</ol>
+<h2 id="decision-use-framing">Decision-use framing</h2>
 <ul>
-<li>Ran world-state + anomaly sweep and pulled primary SWPC alert artifacts directly from NOAA JSON feed.</li>
-<li>Reconstructed intra-day sequence from product codes and timestamps (K04→K05/K06, sudden impulse, then G3 watch bulletin).</li>
-<li>Applied consequence screen against SWPC’s own potential-impact text for each warning/watch product.</li>
+<li><strong>Households:</strong> better context for whether food inflation pressure is likely to persist from farm-input channels versus retail-chain dynamics.</li>
+<li><strong>Local/state planners:</strong> better longitudinal signal on recurring flood claims pressure when evaluating mitigation prioritization and recovery strategy.</li>
+<li><strong>OSINT workflow:</strong> tighter linkage between hazard → claims burden and input costs → shelf-price outcomes.</li>
 </ul>
-<h2 id="appendix-limitations">Appendix: Limitations</h2>
+<h2 id="method-notes">Method notes</h2>
 <ul>
-<li>This is a short-window operational read; SWPC products can update quickly as observations evolve.</li>
-<li>K-index alerts and watch categories indicate disturbance severity windows, not guaranteed realized infrastructure damage.</li>
-<li>Impact intensity is latitude- and system-specific.</li>
+<li>Slot policy: DATASETS_A (datasets-only), with required batch size met (3 additions).</li>
+<li>Selection prioritized broad non-specialist consequence and cross-domain chain value over convenience.</li>
+<li>Catalog entries were added with caveats on cadence, revisions, and comparability.</li>
 </ul>
-<h2 id="appendix-confidence">Appendix: Confidence</h2>
-<p><strong>Confidence: Medium-High.</strong></p>
+<h2 id="sources">Sources</h2>
 <ul>
-<li>High confidence in event chronology and category changes because all core claims come from SWPC primary machine-readable products.</li>
-<li>Moderate confidence in downstream impact magnitude because realized effects vary by exposure and system resilience.</li>
-</ul>
-<h2 id="appendix-sources">Appendix: Sources</h2>
-<ul>
-<li>SWPC alerts feed (JSON): <a href="https://services.swpc.noaa.gov/products/alerts.json">https://services.swpc.noaa.gov/products/alerts.json</a></li>
-<li>SWPC Alerts/Warnings page: <a href="https://www.swpc.noaa.gov/products/alerts-watches-and-warnings">https://www.swpc.noaa.gov/products/alerts-watches-and-warnings</a></li>
-<li>SWPC NOAA scales explanation: <a href="https://www.swpc.noaa.gov/noaa-scales-explanation">https://www.swpc.noaa.gov/noaa-scales-explanation</a></li>
+<li><a href="https://catalog.data.gov/dataset/fertilizer-use-and-price">https://catalog.data.gov/dataset/fertilizer-use-and-price</a></li>
+<li><a href="https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer">https://catalog.data.gov/dataset/price-spreads-from-farm-to-consumer</a></li>
+<li><a href="https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema">https://catalog.data.gov/dataset/fima-nfip-redacted-claims-openfema</a></li>
 </ul>
 </body>
 </html>
