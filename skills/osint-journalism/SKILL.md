@@ -548,12 +548,12 @@ If no standard STORY candidate passes, execute fallback:
 1. Before choosing a fallback topic, run a broad comparison set across all available source families/domains in scope for the run and record why each did or did not qualify.
 2. Find at least one **new, currently relevant** dataset tied to active world developments.
 3. Add it to the catalog in the same run.
-4. Publish a dataset-focused story explaining:
+4. Publish a dataset-focused **Dataset Brief** (not an event STORY) explaining:
    - what the dataset is,
    - scope/bounds/limitations,
    - how to use it (query/analysis approach),
    - why it is potentially useful/important now.
-5. Use clear dataset-intel framing; avoid pretending this is an event-anomaly story.
+5. Use clear dataset-intel/dataset-brief framing and naming (avoid `osint-story` slug/type markers); avoid pretending this is an event-anomaly story.
 6. Only emit true NO_PUBLISH if both standard STORY and dataset fallback fail, with explicit blockers.
 
 Publishing pressure rule:

@@ -1,7 +1,7 @@
 # FEMA NFIP multiple-loss property dataset adds a high-impact baseline for recurring U.S. flood risk
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-20-fema-nfip-multiple-loss-properties-adds-household-flood-risk-baseline-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-20-fema-nfip-multiple-loss-properties-adds-household-flood-risk-baseline-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-20-dataset-brief-fema-nfip-multiple-loss-properties-household-flood-risk-baseline.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-20-dataset-brief-fema-nfip-multiple-loss-properties-household-flood-risk-baseline.md)
 
 **Dateline:** 2026-03-20 13:39 UTC
 
@@ -31,6 +31,6 @@ For non-specialists, this is decision-useful because repeated-loss geographies a
 
 ## Method notes and limitations
 
-- This was a **STORY-slot mandatory dataset fallback publish** after no standard story candidate passed novelty+importance gates in this run window.
+- This was a **STORY-slot mandatory dataset brief fallback publish** after no standard story candidate passed novelty+importance gates in this run window.
 - FEMA notes location redaction/privacy protections and address-quality limitations; location-derived statistics should be interpreted with those caveats.
 - This post introduces dataset capability and decision relevance; it does not claim a new national flood-loss anomaly by itself.
