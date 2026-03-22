@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 150 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 154 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -214,6 +214,10 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Freight Analysis Framework (FAF5) Regions](https://catalog.data.gov/dataset/freight-analysis-framework-faf5-regions1) — FAF5 regional geography boundaries (metropolitan areas, remainder-of-state, whole-state units) that define how multimodal freight flows are partitioned for exposure analysis. High-value denominator layer for consistent corridor/metro risk comparisons under supply disruptions, with boundary-version and geography-definition caveats. _Metadata updated: 2025-07-17._
 - [2022 Commodity Flow Survey - Exports Series](https://catalog.data.gov/dataset/2022-commodity-flow-survey-exports-series) — Census/BTS commodity-movement export series for shipment value, weight, and transport mode, useful for monitoring where external demand and port/channel disruptions could hit U.S. goods-flow resilience. Strong trade-pressure indicator with survey periodicity and disclosure/aggregation caveats. _Metadata updated: 2025-09-30._
 - [2022 Commodity Flow Survey - Geographic Area Series](https://catalog.data.gov/dataset/2022-commodity-flow-survey-geographic-area-series) — Census/BTS geographic freight movement series supporting origin-destination exposure mapping across U.S. regions and metro areas during logistics shocks. Decision-useful regional vulnerability baseline with periodic release and comparability caveats. _Metadata updated: 2025-09-30._
+- [Freight Analysis Framework (FAF5) Network Links](https://catalog.data.gov/dataset/freight-analysis-framework-faf5-network-links1) — Topologically connected road-link network layer used with FAF flows to map corridor-level freight rerouting and chokepoint exposure under disruption scenarios. High-consequence operational routing context with model-vintage and network-assumption caveats. _Metadata updated: 2025-07-17._
+- [Freight Analysis Framework (FAF5) Network Nodes](https://catalog.data.gov/dataset/freight-analysis-framework-faf5-network-nodes1) — Node-level network topology companion to FAF5 links for tracing where freight paths concentrate around interchanges, ports, and intermodal connectors. Useful for bottleneck diagnostics and contingency-routing analysis with topology-version caveats. _Metadata updated: 2025-07-17._
+- [Intermodal Freight Facilities](https://catalog.data.gov/dataset/intermodal-freight-facilities) — Multi-layer transfer-point dataset (truck, rail TOFC/COFC, air-truck, marine/ro-ro, and pipeline handoffs) for identifying mode-switch friction points during supply-chain shocks. Strong cross-modal resilience signal with layer-definition and update-lag caveats. _Metadata updated: 2025-07-17._
+- [Freight Facts and Figures](https://catalog.data.gov/dataset/freight-facts-and-figures) — BTS compiled freight-system performance and impact tables/charts that provide quick national baselines for movement, safety, energy, and environmental effects. Useful broad-context denominator for public-facing logistics reporting, with lower short-cycle sensitivity than operational feeds. _Metadata updated: 2023-12-07._
 
 ## Economy, governance, and structural risk
 - [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.
