@@ -1,53 +1,42 @@
-# Datasets: Census monthly trade classification stack strengthens U.S. import and export shock monitoring
+# ENTSO-E says Europe’s 2025 Iberian blackout came from interacting grid failures, not a single fault
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-23-dataset-intel-census-trade-api-classification-stack-watchlist-50.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-23-dataset-intel-census-trade-api-classification-stack-watchlist-50.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-03-23-entso-e-final-report-links-iberian-blackout-to-interacting-grid-failures.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-03-23-entso-e-final-report-links-iberian-blackout-to-interacting-grid-failures.md)
 
-**Dateline:** 2026-03-23 17:39 UTC
+**Dateline:** 2026-03-23 21:39 UTC
 
-This DATASETS_A run added six high-frequency U.S. trade datasets from Census/Data.gov that complement the previously added End-use series. Together, they create a stronger cross-classification stack for tracking import and export pressure by commodity system (Harmonized System and Standard International Trade Classification) and by advanced-technology category.
+Initial lead: ENTSO-E’s March 20, 2026 publication of its final Expert Panel report on the 28 April 2025 Spain-Portugal blackout.
 
-For non-specialists, this directly improves cost-risk monitoring because trade disruptions can reach households through fertilizer inputs, food prices, consumer goods, and shipping-dependent inventories. For operators, the stack improves early detection of whether stress is broad-based or concentrated in specific commodity families.
+Europe’s transmission-system operator association said the 2025 blackout in continental Spain and Portugal was caused by several interacting failures rather than one isolated breakdown, a finding that matters for electricity reliability planning as geopolitical energy stress remains elevated.
 
-## Added datasets (6)
+According to ENTSO-E’s final report release, the event combined oscillations, voltage and reactive-power control gaps, differing voltage-regulation practices, rapid output reductions and generator disconnections, which then cascaded into wider loss of supply. The panel said this was a first-of-its-kind incident and the most severe blackout on Europe’s power system in more than 20 years.
 
-1. Time Series International Trade: Monthly U.S. Imports by Harmonized System (HS) Code  
-   [https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-imports-by-harmonized-system-hs-code](https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-imports-by-harmonized-system-hs-code)
-2. Time Series International Trade: Monthly U.S. Exports by Harmonized System (HS) Code  
-   [https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-exports-by-harmonized-system-hs-code](https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-exports-by-harmonized-system-hs-code)
-3. Time Series International Trade: Monthly U.S. Imports by Standard International Trade Classification (SITC) Code  
-   [https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-imports-by-standard-international-trade-classi](https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-imports-by-standard-international-trade-classi)
-4. Time Series International Trade: Monthly U.S. Exports by Standard International Trade Classification (SITC) Code  
-   [https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-exports-by-standard-international-trade-classi](https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-exports-by-standard-international-trade-classi)
-5. Time Series International Trade: Monthly U.S. Imports by Advanced Technology Code  
-   [https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-imports-by-advanced-technology-code](https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-imports-by-advanced-technology-code)
-6. Time Series International Trade: Monthly U.S. Exports by Advanced Technology Code  
-   [https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-exports-by-advanced-technology-code](https://catalog.data.gov/dataset/time-series-international-trade-monthly-u-s-exports-by-advanced-technology-code)
+For households, businesses and public services, the decision consequence is practical: grid operators and regulators need to treat local instability risks as cross-border reliability risks, and prioritize deployable fixes in monitoring, coordination and operating practice before peak-stress periods.
 
-## Why this dataset batch matters now
+What could overturn this conclusion: a formal post-publication correction or regulator finding that materially revises ENTSO-E’s causal chain. No such overriding artifact was identified in this run window.
 
-- **Broad consequence coverage:** supports household-cost, food-input, and supply-availability monitoring rather than specialist-only telemetry.
-- **Decision utility:** enables partner-concentration checks, commodity-specific stress detection, and import/export split diagnostics in monthly cadence.
-- **Cross-domain chain value:** links geopolitical shipping and energy disruption signals to measurable U.S. trade-flow changes.
+## Appendix: Method
 
-## Endpoint spot-checks (this run)
+- Used ENTSO-E primary publications as the evidentiary anchor:
+  - March 20, 2026 final-report release statement.
+  - ENTSO-E blackout publication hub summarizing causes, legal investigation basis, and recommendations framework.
+- Ran contradiction check against current wire context to test whether newer official findings displaced ENTSO-E’s causal framing during this run window.
+- Applied last-72h overlap check in `ai-osint` docs to avoid near-duplicate publication.
 
-The following Census API families returned successful responses for `time=2026-01` in this run window:
-- `intltrade/imports/hs`
-- `intltrade/exports/hs`
-- `intltrade/imports/sitc`
-- `intltrade/exports/sitc`
-- `intltrade/imports/hitech`
-- `intltrade/exports/hitech`
+## Appendix: Limitations
 
-## Sources
+- This story relies on ENTSO-E’s public summary language in the run timebox; full technical annex-level recalculation was not reproduced here.
+- Root-cause weighting among interacting factors may be refined by future operator/regulator follow-up publications.
+- Geopolitical context is included for operational relevance, not as evidence of direct causation for the 2025 Iberian event.
 
-- Census International Trade developer page: [https://www.census.gov/data/developers/data-sets/international-trade.html](https://www.census.gov/data/developers/data-sets/international-trade.html)
-- Data.gov dataset pages listed above
-- Census API endpoint family root: [https://api.census.gov/data/timeseries/intltrade/](https://api.census.gov/data/timeseries/intltrade/)
+## Appendix: Confidence
 
-## Limitations
+**Confidence: Moderate-High**
 
-- Census monthly trade data are revised annually with April statistics; short-window conclusions should be treated as provisional until revision windows settle.
-- Classification systems (HS, SITC, hi-tech) are complementary but not one-to-one; crosswalk assumptions should be documented in story-level methods.
-- This is a dataset-intel addition post, not a claim that a new trade anomaly has already occurred.
+Rationale: primary-source publication from the responsible European grid-operator body with explicit causal and recommendation framing; confidence is capped below maximum pending any post-publication corrigenda or independent regulator reinterpretation.
+
+## Appendix: Sources
+
+- ENTSO-E news release (March 20, 2026): [https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/](https://www.entsoe.eu/news/2026/03/20/entso-e-publishes-expert-panel-final-report-on-28-april-2025-blackout-in-spain-and-portugal/)
+- ENTSO-E 28 April 2025 blackout publication page: [https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/](https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/)
+- Reuters context wire (March 23, 2026): [https://www.reuters.com/world/middle-east/iran-threatens-retaliate-against-gulf-energy-water-after-trump-ultimatum-2026-03-23/](https://www.reuters.com/world/middle-east/iran-threatens-retaliate-against-gulf-energy-water-after-trump-ultimatum-2026-03-23/)
