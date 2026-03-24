@@ -134,6 +134,7 @@ Every DATASETS_OPTIMIZE run must maintain the local dataset-change cache:
 5. Enumerate each blocked/error item in the trace with source name + URL + status/error + UTC timestamp + retry result.
 6. If cache maintenance fails, treat DATASETS_OPTIMIZE as incomplete and report exact blocker(s).
 7. During DATASETS_OPTIMIZE, when a dataset endpoint returns repeatable hard failures (e.g., 404 after one retry), log it as a catalog-quality issue and queue a replacement-source search in the next dataset slot.
+8. Run a lightweight catalog-structure hygiene pass on scanned entries: flag title bloat/near-duplicates (for example repetitive "Application Programming Interface (API)" suffix variants) and queue canonical naming/merge cleanup for the next DATASETS_A/B slot.
 
 ## Claim-check minimum standard
 
