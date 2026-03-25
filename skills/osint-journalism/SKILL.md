@@ -89,6 +89,8 @@ Trace rule:
 - Promotion default: add **3–10 qualified datasets per cycle** (unless quality is genuinely thin).
 - Adding only one dataset is unacceptable.
 - Prioritize coverage breadth across domains before polishing niche depth.
+- Before final selection, run a **catalog overlap pass** against `docs/datasets-catalog.md` and classify each candidate as **net-new / adjacent / duplicate**.
+- Prefer **net-new** candidates; choose **adjacent** only when they clearly improve broad non-specialist consequence coverage and decision usefulness.
 - Do **not** run AP/story preflight for dataset selection, but do run a **non-specialist consequence screen** before promotion.
 
 Hard selection priorities (in order):
