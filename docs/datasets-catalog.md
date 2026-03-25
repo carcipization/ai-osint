@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-03-15 21:30 UTC
+**Dateline:** 2026-03-25 02:15 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 176 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 181 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -99,6 +99,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [CAIDA IODA](https://www.caida.org/projects/ioda/) — Outage detection via BGP/darknet/active signals. Strong for macro outage events, less sensitive to app/platform-level blocking.
 
 ## Humanitarian and hazard context
+
+- [USGS Water Data for the Nation (NWIS + Water Services API)](https://waterservices.usgs.gov/) — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.
 - [ReliefWeb API](https://api.reliefweb.int/) — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.
 - [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.
 - [OCHA Key Figures API](https://keyfigures.api.unocha.org/) — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.
@@ -214,6 +216,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [EIA Gasoline and Diesel Fuel Update](https://www.eia.gov/petroleum/gasdiesel/) — Weekly U.S. retail gasoline and on-highway diesel price series by PADD, state, and selected cities for rapid consumer-cost pass-through checks during oil and shipping disruptions. Strong decision-relevance for households and freight operators, with known weekly volatility and survey-method caveats.
 
 ## Aviation and mobility
+
+- [Airline On-Time Performance Data](https://catalog.data.gov/dataset/airline-on-time-performance-data) — U.S. BTS flight-level delay and cancellation records for detecting persistent air-network reliability stress and passenger disruption risk. Strong mobility-service indicator with carrier reporting lag and schedule-normalization caveats.
 - [OpenSky Network](https://opensky-network.org/data) — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.
 - [ADS-B Exchange](https://www.adsbexchange.com/data/) — Broad ADS-B feeds for flight path reconstruction and discontinuities. Commercial endpoint/term changes should be monitored.
 - [ADSB.lol Open Data](https://www.adsb.lol/docs/open-data/api/) — Community-backed ADS-B API and archives. Useful as independent aviation corroboration with uneven geography.
@@ -238,6 +242,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Freight Facts and Figures](https://catalog.data.gov/dataset/freight-facts-and-figures) — BTS compiled freight-system performance and impact tables/charts that provide quick national baselines for movement, safety, energy, and environmental effects. Useful broad-context denominator for public-facing logistics reporting, with lower short-cycle sensitivity than operational feeds. _Metadata updated: 2023-12-07._
 
 ## Economy, governance, and structural risk
+
+- [Household Pulse Survey Public Use File and API](https://www.census.gov/data/developers/data-sets/household-pulse-survey.html) — Near-real-time U.S. household survey indicators on food sufficiency, housing strain, health access, and employment disruption. High-consequence social-pressure signal with sampling and questionnaire-version caveats.
+- [Fair Market Rents](https://catalog.data.gov/dataset/fair-market-rents) — HUD rent benchmarks by metropolitan area/county used for housing affordability, voucher adequacy, and displacement-risk context. Decision-useful cost-of-living baseline with annual-method updates and local market lag caveats.
 - [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.
 - [IMF Data API](https://www.imf.org/external/datamapper/api/) — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.
 - [Eurostat APIs (Statistics + Catalogue)](https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access) — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.
@@ -319,6 +326,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [NIST NVD CVE API](https://nvd.nist.gov/developers/vulnerabilities) — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.
 
 ## Domestic public safety
+
+- [NHTSA Crash Data API (FARS/CRSS)](https://crashviewer.nhtsa.dot.gov/CrashAPI) — Programmatic U.S. fatal-crash and sample crash microdata access for roadway-safety severity and trend checks. High public-safety relevance with reporting-lag and weighting-method caveats for national inference.
 - [FBI CDE/UCR](https://cde.ucr.cjis.gov/) — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.
 - [Statistics Canada](https://www.statcan.gc.ca/) — Canadian official statistical series for national and provincial context. Release lag and revisions apply.
 - [Chicago Crimes (2001–present)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2) — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.
