@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 187 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 192 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -177,6 +177,11 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Current and Resolved Drug Shortages and Discontinuations Reported to FDA](https://catalog.data.gov/dataset/current-and-resolved-drug-shortages-and-discontinuations-reported-to-fda) — FDA manufacturer-reported current/resolved shortage and discontinuation records for specific drug products, useful for early warning on treatment access risks before they appear in utilization or mortality series. High public-health consequence signal with manufacturer-reporting and resolution-timing caveats.
 - [Monthly Prescription Drug Plan Formulary and Pharmacy Network Information](https://catalog.data.gov/dataset/monthly-prescription-drug-plan-formulary-and-pharmacy-network-information) — Monthly Medicare Part D and MA-PD formulary/network tables that show which drugs and pharmacy networks are available by plan and geography, supporting fast checks of access friction and substitution burden for patients. Strong household healthcare-access indicator with plan-cycle and benefit-design caveats.
 - [Hospitals](https://catalog.data.gov/dataset/hospitals-e60a8) — HIFLD geospatial hospital inventory for mapping healthcare-facility coverage and service-access exposure during disasters and infrastructure disruptions. Useful operational capacity denominator with facility-status currency caveats.
+- [State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data](https://catalog.data.gov/dataset/state-medicaid-and-chip-applications-eligibility-determinations-and-enrollment-data-f1647) — CMS state-level monthly indicators for application volume, eligibility actions, enrollment, and call-center process metrics that reveal healthcare-access pressure and administrative bottlenecks. High public-consequence safety-net signal with state reporting and revision-window caveats.
+- [Nursing Home Compare](https://catalog.data.gov/dataset/nursing-home-compare-ed7b0) — CMS Care Compare nursing-home quality and inspection-linked datasets for every Medicare/Medicaid-certified facility, supporting rapid checks of elder-care safety and service-quality risk. Strong household care-decision signal with measure-update lag and methodology caveats.
+- [Payroll Based Journal Daily Nurse Staffing](https://catalog.data.gov/dataset/payroll-based-journal-daily-nurse-staffing-94bbe) — Facility-level daily paid staffing hours from nursing-home submissions, enabling staffing-stress and care-capacity monitoring before severe quality failures become visible in slower outcomes data. High operational consequence with reporting compliance and category-definition caveats.
+- [Opioid Treatment Program Providers](https://catalog.data.gov/dataset/opioid-treatment-program-providers-9e369) — Medicare-enrolled opioid treatment program provider registry with location and enrollment timing fields for tracking treatment-access coverage and service-desert risk. High public-health access indicator with program-scope and provider-update caveats.
+- [Fair Market Rents lookup tool](https://catalog.data.gov/dataset/fair-market-rents-for-the-section-8-housing-assistance-payments-program) — HUD Fair Market Rent documentation and values used for voucher payment standards and assisted-housing rent decisions, critical for gauging local affordability pressure and displacement risk. High household-cost consequence signal with annual methodology updates and geography-definition caveats.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
