@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 192 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 196 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -182,6 +182,10 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Payroll Based Journal Daily Nurse Staffing](https://catalog.data.gov/dataset/payroll-based-journal-daily-nurse-staffing-94bbe) — Facility-level daily paid staffing hours from nursing-home submissions, enabling staffing-stress and care-capacity monitoring before severe quality failures become visible in slower outcomes data. High operational consequence with reporting compliance and category-definition caveats.
 - [Opioid Treatment Program Providers](https://catalog.data.gov/dataset/opioid-treatment-program-providers-9e369) — Medicare-enrolled opioid treatment program provider registry with location and enrollment timing fields for tracking treatment-access coverage and service-desert risk. High public-health access indicator with program-scope and provider-update caveats.
 - [Fair Market Rents lookup tool](https://catalog.data.gov/dataset/fair-market-rents-for-the-section-8-housing-assistance-payments-program) — HUD Fair Market Rent documentation and values used for voucher payment standards and assisted-housing rent decisions, critical for gauging local affordability pressure and displacement risk. High household-cost consequence signal with annual methodology updates and geography-definition caveats.
+- [Medicare Monthly Enrollment](https://catalog.data.gov/dataset/medicare-monthly-enrollment) — CMS monthly enrollment totals for hospital/medical and prescription-drug coverage at national, state/territory, and county levels, enabling early detection of coverage shifts that affect care access for older adults and disabled populations. High public-consequence healthcare-access indicator with administrative revision and plan-classification caveats. _Metadata updated: 2026-03-25._
+- [NADAC (National Average Drug Acquisition Cost) 2026](https://catalog.data.gov/dataset/nadac-national-average-drug-acquisition-cost-2026) — Weekly National Average Drug Acquisition Cost reference prices for retail outpatient drugs, useful for tracking medicine price-pressure and reimbursement stress before slower annual summaries. High household-cost and pharmacy-access signal with weekly publication churn and product-level comparability caveats. _Metadata updated: 2026-03-25._
+- [NNDSS Weekly Data](https://catalog.data.gov/dataset/nndss-weekly-data-14574) — CDC provisional weekly notifiable-disease counts across U.S. states/territories for fast surveillance of infectious-disease pressure that can spill into school, workplace, and health-system decisions. High public-health consequence feed with reporting lag and ongoing case-count revisions.
+- [ASPR Treatments Locator](https://catalog.data.gov/dataset/aspr-treatments-locator) — HHS ASPR treatment-site locator records for outpatient COVID-19 and influenza therapeutics, supporting rapid checks of local medication access during respiratory-surge periods. Decision-useful care-access layer with inventory self-attestation and update-lag caveats. _Metadata updated: 2026-03-26._
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
