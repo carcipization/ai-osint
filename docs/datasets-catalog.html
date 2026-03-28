@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -21,7 +22,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
 <p><strong>Dateline:</strong> 2026-03-25 02:15 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 196 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 202 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -203,6 +204,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://catalog.data.gov/dataset/nadac-national-average-drug-acquisition-cost-2026">NADAC (National Average Drug Acquisition Cost) 2026</a> — Weekly National Average Drug Acquisition Cost reference prices for retail outpatient drugs, useful for tracking medicine price-pressure and reimbursement stress before slower annual summaries. High household-cost and pharmacy-access signal with weekly publication churn and product-level comparability caveats. <em>Metadata updated: 2026-03-25.</em></li>
 <li><a href="https://catalog.data.gov/dataset/nndss-weekly-data-14574">NNDSS Weekly Data</a> — CDC provisional weekly notifiable-disease counts across U.S. states/territories for fast surveillance of infectious-disease pressure that can spill into school, workplace, and health-system decisions. High public-health consequence feed with reporting lag and ongoing case-count revisions.</li>
 <li><a href="https://catalog.data.gov/dataset/aspr-treatments-locator">ASPR Treatments Locator</a> — HHS ASPR treatment-site locator records for outpatient COVID-19 and influenza therapeutics, supporting rapid checks of local medication access during respiratory-surge periods. Decision-useful care-access layer with inventory self-attestation and update-lag caveats. <em>Metadata updated: 2026-03-26.</em></li>
+<li><a href="https://catalog.data.gov/dataset/respiratory-conditions-treated-in-the-emergency-department">Respiratory Conditions Treated in the Emergency Department</a> — CDC National Syndromic Surveillance Program emergency-department respiratory-condition counts by age and condition group, useful for near-real-time pressure tracking before slower hospitalization and mortality summaries. High public-health and service-capacity consequence indicator with syndrome-definition and reporting-coverage caveats. <em>Metadata updated: 2026-03-26.</em></li>
+<li><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-rates-and-percent-of-total-deaths-by-jurisdiction-of-res">Provisional COVID-19 Death Counts, Rates, and Percent of Total Deaths, by Jurisdiction of Residence</a> — CDC provisional death-count and rate series by state/jurisdiction (weekly, rolling period, cumulative) for mortality-burden monitoring and risk communication during evolving respiratory waves. High consequence mortality indicator with death-certificate lag and provisional-revision caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/wide-ranging-online-data-for-epidemiologic-research-wonder">CDC WONDER API for Data Query Web Service</a> — CDC WONDER API access to mortality, natality, cancer, tuberculosis, STI, vaccination-adverse-event, and population datasets for reproducible cross-domain health-burden analysis from county to national levels. High analytical and policy utility with schema heterogeneity and query-limit caveats. <em>Metadata updated: 2026-03-22.</em></li>
 </ul>
 <h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
 <ul>
@@ -280,6 +284,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://catalog.data.gov/dataset/national-bridge-inventory-abd5a">National Bridge Inventory</a> — FHWA bridge-level structural and inspection attributes for U.S. bridges, supporting infrastructure-risk mapping where transport bottlenecks could affect commute reliability, freight delivery, and emergency access. Strong safety-and-mobility baseline with inspection-cycle and condition-rating comparability caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/highway-rail-accidents">Highway-Rail Accidents</a> — FRA crossing-collision records between rail equipment and roadway users, enabling trend checks on severe transport-safety incidents at grade crossings. High-consequence public-safety signal with reporting-lag and local-exposure denominator caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/train-accident-reports-landing-page">Train Accident Reports (Form FRA 6180.54)</a> — FRA rail equipment accident/incident reporting hub for derailments and other train accidents not limited to grade crossings, useful for rail-network safety and disruption monitoring. Decision-useful operational safety layer with incident-threshold and filing-timing caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/crossing-inventory-data-current">Crossing Inventory Data (Form 71) - Current</a> — Current nationwide FRA highway-rail crossing inventory (one record per crossing) with standardized crossing IDs and attributes, supporting local safety exposure checks, routing-risk screening, and emergency-response planning around grade crossings. Strong public-safety infrastructure layer with field-completeness and update-lag caveats. <em>Metadata updated: 2026-03-27.</em></li>
+<li><a href="https://catalog.data.gov/dataset/crossing-inventory-data-form-71-historical">Crossing Inventory Data (Form 71) - Historical</a> — Historical FRA crossing inventory archive for tracking crossing-status changes, protection upgrades, and long-run risk-pattern shifts across jurisdictions. High value for trend and policy-effect analysis with schema-version and historical backfill caveats. <em>Metadata updated: 2026-03-27.</em></li>
+<li><a href="https://catalog.data.gov/dataset/crossing-inventory-source-data-form-71-current">Crossing Inventory Source Data (Form 71) - Current</a> — Raw-source FRA Form 71 crossing feed with untransformed values for higher-fidelity audits, validation, and reproducible downstream modeling beyond user-friendly extracts. Important verification layer with raw-field interpretation and normalization caveats. <em>Metadata updated: 2026-03-27.</em></li>
 </ul>
 <h2 id="economy-governance-and-structural-risk">Economy, governance, and structural risk</h2>
 <ul>
