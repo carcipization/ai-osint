@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 227 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 230 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -160,6 +160,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Bangladesh - Risk Assessment Indicators](https://data.humdata.org/dataset/bangladesh---risk-assessment-indicators) — Risk indicator package for Bangladesh supporting flood/cyclone exposure and population-vulnerability context in Bay-of-Bengal reporting. Valuable cross-check baseline with periodic indicator-definition revisions.
 - [Armenia - Risk Assessment Indicators](https://data.humdata.org/dataset/armenia---risk-assessment-indicators) — Country risk indicators for Armenia to strengthen Caucasus humanitarian-preparedness and resilience context checks. Useful comparative input with model-version and publication-lag caveats.
 - [Libya - Risk Assessment Indicators](https://data.humdata.org/dataset/libya---risk-assessment-indicators) — Humanitarian risk indicators for Libya used to monitor conflict-adjacent vulnerability and service-capacity pressures in North Africa. High-relevance contextual series with mixed-source quality and revision-risk caveats.
+- [India - Risk Assessment Indicators](https://data.humdata.org/dataset/india---risk-assessment-indicators) — Country-scale humanitarian risk indicators for India that support population-vulnerability and preparedness-context checks across climate and service-stress reporting. High decision-useful denominator with model-version and refresh-lag caveats.
+- [Mexico - Risk Assessment Indicators](https://data.humdata.org/dataset/mexico---risk-assessment-indicators) — Structured humanitarian risk indicators for Mexico, useful for linking hazard and social stress signals to likely downstream household and service impacts. Strong cross-domain context layer with indicator-method update caveats.
+- [Nigeria - Risk Assessment Indicators](https://data.humdata.org/dataset/nigeria---risk-assessment-indicators) — National humanitarian risk indicators for Nigeria that improve baseline context for fragility, displacement risk, and response-capacity stress checks. High-consequence comparative signal with mixed-source and periodic-update caveats.
 - [GDACS RSS Information](https://data.humdata.org/dataset/gdacs-rss-information) — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.
 - [U.S. Drought Monitor Data Download](https://droughtmonitor.unl.edu/DmData/DataDownload.aspx) — Weekly drought-severity statistics across national/state/county geographies (including area and population exposure shares) that help convert hazard maps into decision-relevant burden metrics. Use alongside USDM GIS layers for map overlays and with station observations (e.g., SCAN) for ground-truth checks; weekly-cadence and category-threshold caveats apply.
 - [U.S. Drought Monitor GIS Data](https://droughtmonitor.unl.edu/DmData/GISData.aspx) — Weekly geospatial drought category files (including shapefile/KMZ/WMS pathways) that support map-based exposure overlays for water, agriculture, and wildfire planning. Strong operational mapping layer with category-boundary revision and week-to-week smoothing caveats.
