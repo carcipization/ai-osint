@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 233 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 236 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -163,6 +163,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [India - Risk Assessment Indicators](https://data.humdata.org/dataset/india---risk-assessment-indicators) — Country-scale humanitarian risk indicators for India that support population-vulnerability and preparedness-context checks across climate and service-stress reporting. High decision-useful denominator with model-version and refresh-lag caveats.
 - [Mexico - Risk Assessment Indicators](https://data.humdata.org/dataset/mexico---risk-assessment-indicators) — Structured humanitarian risk indicators for Mexico, useful for linking hazard and social stress signals to likely downstream household and service impacts. Strong cross-domain context layer with indicator-method update caveats.
 - [Nigeria - Risk Assessment Indicators](https://data.humdata.org/dataset/nigeria---risk-assessment-indicators) — National humanitarian risk indicators for Nigeria that improve baseline context for fragility, displacement risk, and response-capacity stress checks. High-consequence comparative signal with mixed-source and periodic-update caveats.
+- [Pakistan - Risk Assessment Indicators](https://data.humdata.org/dataset/pakistan---risk-assessment-indicators) — Country-level humanitarian risk indicators for Pakistan used to contextualize climate, displacement, and service-capacity stress before event-level signals escalate. Strong public-consequence baseline with periodic methodology and refresh-lag caveats.
+- [Ethiopia - Risk Assessment Indicators](https://data.humdata.org/dataset/ethiopia---risk-assessment-indicators) — Structured humanitarian risk indicators for Ethiopia supporting drought, food-security, and displacement consequence screening across regions. High decision utility for preparedness context with indicator-definition revision caveats.
+- [Indonesia - Risk Assessment Indicators](https://data.humdata.org/dataset/indonesia---risk-assessment-indicators) — National humanitarian risk indicators for Indonesia that strengthen hazard exposure and response-capacity baseline checks in a large archipelagic population. Useful cross-domain denominator with periodic update-lag and model-version caveats.
 - [GDACS RSS Information](https://data.humdata.org/dataset/gdacs-rss-information) — Global Disaster Alert and Coordination System alert feed snapshots for near-real-time disaster signal intake. Strong early-warning utility with alert-severity interpretation and update churn caveats.
 - [U.S. Drought Monitor Data Download](https://droughtmonitor.unl.edu/DmData/DataDownload.aspx) — Weekly drought-severity statistics across national/state/county geographies (including area and population exposure shares) that help convert hazard maps into decision-relevant burden metrics. Use alongside USDM GIS layers for map overlays and with station observations (e.g., SCAN) for ground-truth checks; weekly-cadence and category-threshold caveats apply.
 - [U.S. Drought Monitor GIS Data](https://droughtmonitor.unl.edu/DmData/GISData.aspx) — Weekly geospatial drought category files (including shapefile/KMZ/WMS pathways) that support map-based exposure overlays for water, agriculture, and wildfire planning. Strong operational mapping layer with category-boundary revision and week-to-week smoothing caveats.
