@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 236 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 239 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -163,6 +163,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [India - Risk Assessment Indicators](https://data.humdata.org/dataset/india---risk-assessment-indicators) — Country-scale humanitarian risk indicators for India that support population-vulnerability and preparedness-context checks across climate and service-stress reporting. High decision-useful denominator with model-version and refresh-lag caveats.
 - [Mexico - Risk Assessment Indicators](https://data.humdata.org/dataset/mexico---risk-assessment-indicators) — Structured humanitarian risk indicators for Mexico, useful for linking hazard and social stress signals to likely downstream household and service impacts. Strong cross-domain context layer with indicator-method update caveats.
 - [Nigeria - Risk Assessment Indicators](https://data.humdata.org/dataset/nigeria---risk-assessment-indicators) — National humanitarian risk indicators for Nigeria that improve baseline context for fragility, displacement risk, and response-capacity stress checks. High-consequence comparative signal with mixed-source and periodic-update caveats.
+- [Brazil - Risk Assessment Indicators](https://data.humdata.org/dataset/brazil---risk-assessment-indicators) — Country-level humanitarian risk indicators for Brazil that improve baseline context on exposure, vulnerability, and response capacity in a large regional population center. Strong non-specialist consequence relevance with periodic methodology-update caveats.
+- [Egypt - Risk Assessment Indicators](https://data.humdata.org/dataset/egypt---risk-assessment-indicators) — Structured risk indicators for Egypt that support early context checks around service access, hazard exposure, and resilience constraints. Useful cross-domain denominator with refresh-lag and indicator-definition caveats.
+- [South Africa - Risk Assessment Indicators](https://data.humdata.org/dataset/south-africa---risk-assessment-indicators) — National humanitarian risk indicators for South Africa useful for preparedness and social-stress baselines when disruption signals emerge. High decision utility for comparative regional screening with model-version caveats.
 - [Pakistan - Risk Assessment Indicators](https://data.humdata.org/dataset/pakistan---risk-assessment-indicators) — Country-level humanitarian risk indicators for Pakistan used to contextualize climate, displacement, and service-capacity stress before event-level signals escalate. Strong public-consequence baseline with periodic methodology and refresh-lag caveats.
 - [Ethiopia - Risk Assessment Indicators](https://data.humdata.org/dataset/ethiopia---risk-assessment-indicators) — Structured humanitarian risk indicators for Ethiopia supporting drought, food-security, and displacement consequence screening across regions. High decision utility for preparedness context with indicator-definition revision caveats.
 - [Indonesia - Risk Assessment Indicators](https://data.humdata.org/dataset/indonesia---risk-assessment-indicators) — National humanitarian risk indicators for Indonesia that strengthen hazard exposure and response-capacity baseline checks in a large archipelagic population. Useful cross-domain denominator with periodic update-lag and model-version caveats.
