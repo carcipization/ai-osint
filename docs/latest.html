@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: urban mobility and public-safety decision stack (watchlist 78)</title>
+  <title>Datasets: TSA checkpoint travel numbers for airport screening-risk monitoring (watchlist 79)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,60 +16,37 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-urban-mobility-and-public-safety-decision-stack-watchlist-78">Datasets: urban mobility and public-safety decision stack (watchlist 78)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-03-dataset-intel-urban-mobility-and-public-safety-decision-stack-watchlist-78.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-03-dataset-intel-urban-mobility-and-public-safety-decision-stack-watchlist-78.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-03 05:46 UTC</p>
-<p>This DATASETS_B run adds seven net-new datasets focused on city-level crime pressure, transit access, rider safety, and accessibility reliability.</p>
-<h2 id="added-in-this-batch-7-net-new">Added in this batch (7 net-new)</h2>
+  <h1 id="datasets-tsa-checkpoint-travel-numbers-for-airport-screening-risk-monitoring-watchlist-79">Datasets: TSA checkpoint travel numbers for airport screening-risk monitoring (watchlist 79)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-03-dataset-brief-tsa-checkpoint-travel-numbers-airport-screening-risk-watchlist-79.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-03-dataset-brief-tsa-checkpoint-travel-numbers-airport-screening-risk-watchlist-79.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-03 17:43 UTC</p>
+<p>After a full STORY_A scan, no standard event story cleared the novelty/importance bar without risking near-duplicate framing against recent airport and oil-disruption coverage. This fallback publishes one high-utility dataset brief tied to an active public-consequence decision surface: U.S. airport screening reliability.</p>
+<h2 id="dataset-added">Dataset added</h2>
+<ul>
+<li><strong>TSA Checkpoint Travel Numbers</strong><br />
+  URL: <a href="https://www.tsa.gov/travel/passenger-volumes">https://www.tsa.gov/travel/passenger-volumes</a></li>
+</ul>
+<h2 id="what-this-dataset-is">What this dataset is</h2>
+<p>A daily TSA series showing total U.S. checkpoint passenger throughput, typically with same-day prior-year comparison values.</p>
+<h2 id="scope-and-limitations">Scope and limitations</h2>
+<ul>
+<li>National aggregate throughput signal; it does not directly report checkpoint wait times.</li>
+<li>Calendar effects (holidays, storms, school breaks) can produce large swings unrelated to policy changes.</li>
+<li>Throughput is a demand-and-operations indicator, not a full service-quality measure by itself.</li>
+</ul>
+<h2 id="how-to-use-it">How to use it</h2>
 <ol>
-<li>
-<p><strong>Police Transparency - Arrests - All Data (main table / denormalized)</strong><br />
-   Chicago arrest records for enforcement activity and neighborhood-level detention pressure tracking.</p>
-</li>
-<li>
-<p><strong>Crimes - 2001 to Present</strong><br />
-   Long-run Chicago incident dataset for baseline crime-pattern reconstruction and short-cycle anomaly checks.</p>
-</li>
-<li>
-<p><strong>CTA - Ridership - 'L' Station Entries - Monthly Day-Type Averages &amp; Totals</strong><br />
-   Station-level rail ridership for corridor demand and service-access stress monitoring.</p>
-</li>
-<li>
-<p><strong>CTA - Ridership - Bus Routes - Monthly Day-Type Averages &amp; Totals</strong><br />
-   Route-level bus ridership for neighborhood mobility and modal substitution pressure.</p>
-</li>
-<li>
-<p><strong>MTA NYCT Safety Data: Beginning 2019</strong><br />
-   New York City Transit safety-event counts for rider-risk context and service-confidence monitoring.</p>
-</li>
-<li>
-<p><strong>MTA Bus Wheelchair Ramp/Lift Usage: Beginning 2017</strong><br />
-   Accessibility-assist usage counts for disability access demand and service-equity checks.</p>
-</li>
-<li>
-<p><strong>MTA NYCT Paratransit Provider No-Shows: Beginning 2016</strong><br />
-   Access-A-Ride no-show records for missed essential-trip reliability tracking among mobility-limited riders.</p>
-</li>
+<li>Track 7-day and 14-day rolling averages to reduce day-of-week noise.</li>
+<li>Compare current values with prior-year and pre-disruption windows to detect persistent divergence.</li>
+<li>Pair with flight delay/cancellation and airport-status feeds to separate screening stress from air-traffic-control or weather effects.</li>
 </ol>
 <h2 id="why-this-matters-now">Why this matters now</h2>
-<p>Together these datasets strengthen a practical non-specialist consequence chain from <strong>public-safety pressure -&gt; transit reliability -&gt; access equity for essential trips</strong>.</p>
-<p>That improves decision usefulness for city agencies, transit operators, disability advocates, and local service planners deciding where to shift operations, enforcement focus, and rider-support resources.</p>
-<h2 id="method-notes">Method notes</h2>
-<ul>
-<li>Datasets-only cadence run completed (7 additions; within required 3–10 range).</li>
-<li>Catalog overlap pass: selected datasets were treated as <strong>net-new</strong> against current <code>docs/datasets-catalog.md</code>.</li>
-<li>Selection prioritized broad public consequence and decision utility over convenience of ingestion.</li>
-</ul>
+<p>Travelers, airport operators, and policymakers need a fast public indicator for whether screening operations are stabilizing or degrading during funding/staffing uncertainty. This dataset provides a daily decision-useful baseline for routing, staffing, and travel-timing choices.</p>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="https://catalog.data.gov/dataset/police-transparency-arrests-all-data-main-table-denormalized">https://catalog.data.gov/dataset/police-transparency-arrests-all-data-main-table-denormalized</a></li>
-<li><a href="https://catalog.data.gov/dataset/crimes-2001-to-present">https://catalog.data.gov/dataset/crimes-2001-to-present</a></li>
-<li><a href="https://catalog.data.gov/dataset/cta-ridership-l-station-entries-monthly-day-type-averages-totals">https://catalog.data.gov/dataset/cta-ridership-l-station-entries-monthly-day-type-averages-totals</a></li>
-<li><a href="https://catalog.data.gov/dataset/cta-ridership-bus-routes-monthly-day-type-averages-totals">https://catalog.data.gov/dataset/cta-ridership-bus-routes-monthly-day-type-averages-totals</a></li>
-<li><a href="https://catalog.data.gov/dataset/mta-nyct-safety-data-beginning-2019">https://catalog.data.gov/dataset/mta-nyct-safety-data-beginning-2019</a></li>
-<li><a href="https://catalog.data.gov/dataset/mta-bus-wheelchair-ramp-lift-usage-beginning-2018">https://catalog.data.gov/dataset/mta-bus-wheelchair-ramp-lift-usage-beginning-2018</a></li>
-<li><a href="https://catalog.data.gov/dataset/mta-access-a-ride-provider-no-shows-beginning-2016">https://catalog.data.gov/dataset/mta-access-a-ride-provider-no-shows-beginning-2016</a></li>
+<li><a href="https://www.tsa.gov/travel/passenger-volumes">https://www.tsa.gov/travel/passenger-volumes</a></li>
+<li><a href="https://www.bts.gov/freight-indicators">https://www.bts.gov/freight-indicators</a></li>
+<li><a href="https://catalog.data.gov/dataset/airline-on-time-performance-data">https://catalog.data.gov/dataset/airline-on-time-performance-data</a></li>
 </ul>
 </body>
 </html>
