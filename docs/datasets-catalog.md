@@ -64,7 +64,6 @@ Use this compact map before scanning full entries.
 8. For catalog entries with date-stamped titles (e.g., corridor snapshots), keep the version date in the title and note supersession risk in the descriptor.
 9. For country-sharded datasets (same schema repeated across countries), prefer one concise naming pattern and keep descriptors template-consistent so retrieval and dedup checks remain stable.
 10. When adding multiple country shards in one cycle, record the family label in traces (e.g., "risk-assessment indicators") to speed future overlap checks.
-11. TEMP BLOCK (2026-04-02): do not add HDX country-level "Risk Assessment Indicators" shards unless Jon explicitly re-enables them.
 
 ## Freshness and revision-risk tags (retrieval optimization)
 Use these compact tags in internal triage notes to avoid over-trusting revision-sensitive feeds.
