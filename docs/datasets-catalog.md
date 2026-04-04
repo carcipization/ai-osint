@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 255 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 261 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -200,6 +200,13 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Provisional COVID-19 death counts and rates by month, jurisdiction of residence, and demographic characteristics](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-and-rates-by-month-jurisdiction-of-residence-and-demogra) — Monthly demographic mortality panel for rapid burden checks by place and population group, supporting faster public-risk communication than annual finalized statistics. High consequence mortality dataset with death-certificate lag and provisional revision caveats.
 
 - [Company Level Petroleum Imports](https://catalog.data.gov/dataset/company-level-petroleum-imports) — EIA importer-level petroleum inflow records for tracking concentration, product-mix substitution, and potential pass-through exposure to U.S. household fuel and freight costs during external supply disruptions; high decision relevance with reporting-lag/revision caveats.
+
+- [U.S. Food Imports](https://catalog.data.gov/dataset/u-s-food-imports) — U.S. food import-flow dataset for monitoring external supply dependence and potential consumer price pressure when maritime or customs disruptions tighten availability; strong household consequence signal with classification/release-lag caveats.
+- [National Highway Freight Network (NHFN)](https://catalog.data.gov/dataset/national-highway-freight-network-nhfn1) — Federal freight-corridor geospatial baseline for identifying roadway chokepoints and rerouting constraints that can drive delivery delays and logistics-cost pass-through; high operational decision utility with update-cycle caveats.
+- [Electric Power Transmission Lines](https://catalog.data.gov/dataset/electric-power-transmission-lines) — National transmission-network layer for mapping grid exposure and potential outage spillover paths affecting households, hospitals, and industry; broad consequence relevance with asset-status/real-time operation caveats.
+- [Oil Refineries](https://catalog.data.gov/dataset/oil-refineries) — Refinery facility inventory for regional fuel-processing concentration and disruption-impact analysis across gasoline/diesel supply chains; high cost/mobility consequence value with throughput-timing caveats.
+- [Air Traffic Cargo Statistics](https://catalog.data.gov/dataset/air-traffic-cargo-statistics) — Airport cargo throughput series for tracking air-freight demand shifts during port, rail, or trucking stress; useful spillover indicator for supply reliability and time-sensitive goods movement.
+- [Los Angeles International Airport - Air Cargo Volume](https://catalog.data.gov/dataset/los-angeles-international-airport-air-cargo-volume) — Hub-specific cargo volume dataset for one of the highest-impact U.S. international freight gateways, supporting near-term monitoring of import/export pressure and rerouting effects.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
