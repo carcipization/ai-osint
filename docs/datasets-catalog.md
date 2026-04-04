@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 254 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 255 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -198,6 +198,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [National Health Interview Survey](https://catalog.data.gov/dataset/national-health-interview-survey) — CDC/NCHS household interview survey microdata and summary access for insurance, access-to-care, chronic-condition, and functional-health baselines. High decision utility for non-specialist health-risk context with survey-design and release-lag caveats.
 - [Vaccination Coverage among Young Children (0-35 Months)](https://catalog.data.gov/dataset/vaccination-coverage-among-young-children-0-35-months-f9411) — Early-childhood immunization coverage indicators for tracking preventive-care gaps that can amplify outbreak risk and pediatric service pressure. Strong family-health consequence signal with survey/administrative integration caveats.
 - [Provisional COVID-19 death counts and rates by month, jurisdiction of residence, and demographic characteristics](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-and-rates-by-month-jurisdiction-of-residence-and-demogra) — Monthly demographic mortality panel for rapid burden checks by place and population group, supporting faster public-risk communication than annual finalized statistics. High consequence mortality dataset with death-certificate lag and provisional revision caveats.
+
+- [Company Level Petroleum Imports](https://catalog.data.gov/dataset/company-level-petroleum-imports) — EIA importer-level petroleum inflow records for tracking concentration, product-mix substitution, and potential pass-through exposure to U.S. household fuel and freight costs during external supply disruptions; high decision relevance with reporting-lag/revision caveats.
 
 ## Energy, trade, and maritime
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
