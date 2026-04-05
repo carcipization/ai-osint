@@ -99,6 +99,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [CAIDA IODA](https://www.caida.org/projects/ioda/) — Outage detection via BGP/darknet/active signals. Strong for macro outage events, less sensitive to app/platform-level blocking.
 
 ## Humanitarian and hazard context
+- [Provisional COVID-19 Death Counts by Week Ending Date and State](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state) — Weekly state-level counts of deaths involving COVID-19, pneumonia, and influenza for rapid mortality-burden monitoring and cross-jurisdiction surge detection. High public-consequence health signal with death-certificate reporting lag and periodic backfill caveats. _Metadata updated: 2026-04-03._
+- [Provisional COVID-19 death counts, rates, and percent of total deaths, by jurisdiction of residence](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-rates-and-percent-of-total-deaths-by-jurisdiction-of-res) — Jurisdiction-level COVID mortality counts, rates, and share-of-total-deaths across weekly and rolling windows to separate absolute burden from composition effects. Strong policy and hospital-planning indicator with provisional revision and denominator-comparability caveats. _Metadata updated: 2026-04-03._
+- [Monthly Rates of Laboratory-Confirmed COVID-19 Hospitalizations from the COVID-NET Surveillance System](https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil) — Population-based monthly COVID hospitalization rates from COVID-NET for severity tracking beyond case-volume noise. High consequence healthcare-load signal with surveillance-catchment and delayed-update caveats. _Metadata updated: 2026-04-03._
 
 - [USGS Water Data for the Nation (NWIS + Water Services API)](https://waterservices.usgs.gov/) — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.
 - [ReliefWeb API](https://api.reliefweb.int/) — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.
@@ -257,6 +260,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Hospital Provider Cost Report](https://catalog.data.gov/dataset/hospital-provider-cost-report) — Medicare hospital cost-report financial and utilization fields for monitoring facility-level operating stress before closures or service cuts become visible in slower outcomes data. High public-consequence healthcare-capacity signal with filing lag and accounting-method caveats.
 
 ## Aviation and mobility
+- [Transportation Economic Trends (TET) data](https://catalog.data.gov/dataset/transportation-economic-trends-tet-data) — Multi-series transportation-economy indicators used by BTS to connect freight/passenger activity with inflation, labor, and output context. Useful cross-domain baseline for mobility-cost consequence analysis, with heterogeneous source cadence and revision caveats. _Metadata updated: 2026-03-27._
 
 - [Airline On-Time Performance Data](https://catalog.data.gov/dataset/airline-on-time-performance-data) — U.S. BTS flight-level delay and cancellation records for detecting persistent air-network reliability stress and passenger disruption risk. Strong mobility-service indicator with carrier reporting lag and schedule-normalization caveats.
 - [OpenSky Network](https://opensky-network.org/data) — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.
@@ -411,6 +415,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [NIST NVD CVE API](https://nvd.nist.gov/developers/vulnerabilities) — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.
 
 ## Domestic public safety
+- [Motor Vehicle Collisions - Crashes](https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes) — NYC police-reported crash-event records with timing and location attributes for high-frequency road-safety burden tracking in a major metro area. Practical public-safety and emergency-load indicator with reporting/closure lag caveats. _Metadata updated: 2026-04-05._
+- [Traffic Crashes - Crashes](https://catalog.data.gov/dataset/traffic-crashes-crashes) — Chicago crash-event records from CPD e-crash reporting for injury/fatality risk monitoring and neighborhood-level roadway hazard trend analysis. Strong local safety consequence feed with investigation-status and data-quality revision caveats. _Metadata updated: 2026-04-05._
 
 - [NHTSA Crash Data API (FARS/CRSS)](https://crashviewer.nhtsa.dot.gov/CrashAPI) — Programmatic U.S. fatal-crash and sample crash microdata access for roadway-safety severity and trend checks. High public-safety relevance with reporting-lag and weighting-method caveats for national inference.
 - [FBI CDE/UCR](https://cde.ucr.cjis.gov/) — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.

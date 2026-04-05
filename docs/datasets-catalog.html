@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -117,7 +118,14 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="humanitarian-and-hazard-context">Humanitarian and hazard context</h2>
 <ul>
-<li><a href="https://waterservices.usgs.gov/">USGS Water Data for the Nation (NWIS + Water Services API)</a> — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state">Provisional COVID-19 Death Counts by Week Ending Date and State</a> — Weekly state-level counts of deaths involving COVID-19, pneumonia, and influenza for rapid mortality-burden monitoring and cross-jurisdiction surge detection. High public-consequence health signal with death-certificate reporting lag and periodic backfill caveats. <em>Metadata updated: 2026-04-03.</em></li>
+<li><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-rates-and-percent-of-total-deaths-by-jurisdiction-of-res">Provisional COVID-19 death counts, rates, and percent of total deaths, by jurisdiction of residence</a> — Jurisdiction-level COVID mortality counts, rates, and share-of-total-deaths across weekly and rolling windows to separate absolute burden from composition effects. Strong policy and hospital-planning indicator with provisional revision and denominator-comparability caveats. <em>Metadata updated: 2026-04-03.</em></li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil">Monthly Rates of Laboratory-Confirmed COVID-19 Hospitalizations from the COVID-NET Surveillance System</a> — Population-based monthly COVID hospitalization rates from COVID-NET for severity tracking beyond case-volume noise. High consequence healthcare-load signal with surveillance-catchment and delayed-update caveats. <em>Metadata updated: 2026-04-03.</em></p>
+</li>
+<li>
+<p><a href="https://waterservices.usgs.gov/">USGS Water Data for the Nation (NWIS + Water Services API)</a> — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.</p>
+</li>
 <li><a href="https://api.reliefweb.int/">ReliefWeb API</a> — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.</li>
 <li><a href="https://data.humdata.org/">Humanitarian Data Exchange (HDX)</a> — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.</li>
 <li><a href="https://keyfigures.api.unocha.org/">OCHA Key Figures API</a> — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.</li>
@@ -286,7 +294,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="aviation-and-mobility">Aviation and mobility</h2>
 <ul>
-<li><a href="https://catalog.data.gov/dataset/airline-on-time-performance-data">Airline On-Time Performance Data</a> — U.S. BTS flight-level delay and cancellation records for detecting persistent air-network reliability stress and passenger disruption risk. Strong mobility-service indicator with carrier reporting lag and schedule-normalization caveats.</li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/transportation-economic-trends-tet-data">Transportation Economic Trends (TET) data</a> — Multi-series transportation-economy indicators used by BTS to connect freight/passenger activity with inflation, labor, and output context. Useful cross-domain baseline for mobility-cost consequence analysis, with heterogeneous source cadence and revision caveats. <em>Metadata updated: 2026-03-27.</em></p>
+</li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/airline-on-time-performance-data">Airline On-Time Performance Data</a> — U.S. BTS flight-level delay and cancellation records for detecting persistent air-network reliability stress and passenger disruption risk. Strong mobility-service indicator with carrier reporting lag and schedule-normalization caveats.</p>
+</li>
 <li><a href="https://opensky-network.org/data">OpenSky Network</a> — Open flight surveillance data for route anomaly checks. Coverage/rate limits vary by access tier.</li>
 <li><a href="https://www.adsbexchange.com/data/">ADS-B Exchange</a> — Broad ADS-B feeds for flight path reconstruction and discontinuities. Commercial endpoint/term changes should be monitored.</li>
 <li><a href="https://www.adsb.lol/docs/open-data/api/">ADSB.lol Open Data</a> — Community-backed ADS-B API and archives. Useful as independent aviation corroboration with uneven geography.</li>
@@ -444,7 +457,13 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="domestic-public-safety">Domestic public safety</h2>
 <ul>
-<li><a href="https://crashviewer.nhtsa.dot.gov/CrashAPI">NHTSA Crash Data API (FARS/CRSS)</a> — Programmatic U.S. fatal-crash and sample crash microdata access for roadway-safety severity and trend checks. High public-safety relevance with reporting-lag and weighting-method caveats for national inference.</li>
+<li><a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes">Motor Vehicle Collisions - Crashes</a> — NYC police-reported crash-event records with timing and location attributes for high-frequency road-safety burden tracking in a major metro area. Practical public-safety and emergency-load indicator with reporting/closure lag caveats. <em>Metadata updated: 2026-04-05.</em></li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/traffic-crashes-crashes">Traffic Crashes - Crashes</a> — Chicago crash-event records from CPD e-crash reporting for injury/fatality risk monitoring and neighborhood-level roadway hazard trend analysis. Strong local safety consequence feed with investigation-status and data-quality revision caveats. <em>Metadata updated: 2026-04-05.</em></p>
+</li>
+<li>
+<p><a href="https://crashviewer.nhtsa.dot.gov/CrashAPI">NHTSA Crash Data API (FARS/CRSS)</a> — Programmatic U.S. fatal-crash and sample crash microdata access for roadway-safety severity and trend checks. High public-safety relevance with reporting-lag and weighting-method caveats for national inference.</p>
+</li>
 <li><a href="https://cde.ucr.cjis.gov/">FBI CDE/UCR</a> — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.</li>
 <li><a href="https://catalog.data.gov/dataset/hate-crime-statistics-2004">Hate Crime Statistics</a> — FBI hate-crime incident and offense records for tracking targeted-violence patterns and community-safety risk across jurisdictions. High public-safety relevance with agency participation and classification-consistency caveats.</li>
 <li><a href="https://www.statcan.gc.ca/">Statistics Canada</a> — Canadian official statistical series for national and provincial context. Release lag and revisions apply.</li>
