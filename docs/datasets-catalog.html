@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -274,7 +275,15 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://catalog.data.gov/dataset/marine-highways1">Marine Highways</a> — USDOT/BTS NTAD geometry of designated U.S. Marine Highway routes (MARAD program) for tracking alternative waterborne freight corridors that can relieve road/rail congestion during logistics shocks. Strong network-routing baseline with diagrammatic-route and designation-scope caveats. <em>Metadata updated: 2025-09-11.</em></li>
 <li><a href="https://catalog.data.gov/dataset/principal-ports5">Principal Ports</a> — USACE/BTS principal-port geospatial and commodity-tonnage summary dataset (domestic/foreign/import/export splits) for identifying where maritime throughput concentration creates chokepoint exposure. High-consequence trade-flow denominator with periodic refresh and reporting-vintage caveats. <em>Metadata updated: 2025-12-19.</em></li>
 <li><a href="https://catalog.data.gov/dataset/loaded-containers-monthly-imports-and-exports-through-port-authority-of-ny-nj-maritime-ter">Loaded Containers Monthly Imports and Exports Through Port Authority of NY NJ Maritime Terminals: Beginning 2000</a> — Long-run TEU import/export volumes for the Port of New York and New Jersey, useful for near-real-economy containerized trade stress checks when global shipping disruptions spill into U.S. gateway operations. Decision-useful metro freight signal with non-federal publication-policy and annualized reporting caveats. <em>Metadata updated: 2025-07-12.</em></li>
-<li><a href="https://www.eia.gov/petroleum/gasdiesel/">EIA Gasoline and Diesel Fuel Update</a> — Weekly U.S. retail gasoline and on-highway diesel price series by PADD, state, and selected cities for rapid consumer-cost pass-through checks during oil and shipping disruptions. Strong decision-relevance for households and freight operators, with known weekly volatility and survey-method caveats.</li>
+<li>
+<p><a href="https://www.eia.gov/petroleum/gasdiesel/">EIA Gasoline and Diesel Fuel Update</a> — Weekly U.S. retail gasoline and on-highway diesel price series by PADD, state, and selected cities for rapid consumer-cost pass-through checks during oil and shipping disruptions. Strong decision-relevance for households and freight operators, with known weekly volatility and survey-method caveats.</p>
+</li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/wic-participants-by-county-c7a23">WIC Participants by County</a> — County-level Women, Infants, and Children participation counts that reveal where maternal-child nutrition support demand is concentrated beyond state aggregates. High family-welfare decision value for local service planning, with county reporting-lag and comparability caveats.</p>
+</li>
+<li><a href="https://catalog.data.gov/dataset/national-obesity-by-state-d765a">National Obesity By State</a> — State-level obesity prevalence indicators for tracking chronic-condition burden that amplifies heat, respiratory, and healthcare-access shocks. Useful public-health vulnerability baseline with survey-method and state-comparability caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/provider-of-services-file-hospital-non-hospital-facilities-f216f">Provider of Services File - Hospital &amp; Non-Hospital Facilities</a> — CMS provider inventory and participation records across hospitals and non-hospital facilities for mapping care-access footprint and certification status changes. Strong healthcare-service continuity denominator with enrollment/update-lag caveats.</li>
+<li><a href="https://catalog.data.gov/dataset/hospital-provider-cost-report">Hospital Provider Cost Report</a> — Medicare hospital cost-report financial and utilization fields for monitoring facility-level operating stress before closures or service cuts become visible in slower outcomes data. High public-consequence healthcare-capacity signal with filing lag and accounting-method caveats.</li>
 </ul>
 <h2 id="aviation-and-mobility">Aviation and mobility</h2>
 <ul>
@@ -315,7 +324,13 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://catalog.data.gov/dataset/train-accident-reports-landing-page">Train Accident Reports (Form FRA 6180.54)</a> — FRA rail equipment accident/incident reporting hub for derailments and other train accidents not limited to grade crossings, useful for rail-network safety and disruption monitoring. Decision-useful operational safety layer with incident-threshold and filing-timing caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/crossing-inventory-data-current">Crossing Inventory Data (Form 71) - Current</a> — Current nationwide FRA highway-rail crossing inventory (one record per crossing) with standardized crossing IDs and attributes, supporting local safety exposure checks, routing-risk screening, and emergency-response planning around grade crossings. Strong public-safety infrastructure layer with field-completeness and update-lag caveats. <em>Metadata updated: 2026-03-27.</em></li>
 <li><a href="https://catalog.data.gov/dataset/crossing-inventory-data-form-71-historical">Crossing Inventory Data (Form 71) - Historical</a> — Historical FRA crossing inventory archive for tracking crossing-status changes, protection upgrades, and long-run risk-pattern shifts across jurisdictions. High value for trend and policy-effect analysis with schema-version and historical backfill caveats. <em>Metadata updated: 2026-03-27.</em></li>
-<li><a href="https://catalog.data.gov/dataset/crossing-inventory-source-data-form-71-current">Crossing Inventory Source Data (Form 71) - Current</a> — Raw-source FRA Form 71 crossing feed with untransformed values for higher-fidelity audits, validation, and reproducible downstream modeling beyond user-friendly extracts. Important verification layer with raw-field interpretation and normalization caveats. <em>Metadata updated: 2026-03-27.</em></li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/crossing-inventory-source-data-form-71-current">Crossing Inventory Source Data (Form 71) - Current</a> — Raw-source FRA Form 71 crossing feed with untransformed values for higher-fidelity audits, validation, and reproducible downstream modeling beyond user-friendly extracts. Important verification layer with raw-field interpretation and normalization caveats. <em>Metadata updated: 2026-03-27.</em></p>
+</li>
+<li>
+<p><a href="https://catalog.data.gov/dataset/septa-ridership-statistics">SEPTA Ridership Statistics</a> — Philadelphia-area transit ridership and route usage series for monitoring commuter-access stress and service-reliability pressure in a major U.S. metro network. Strong household mobility and labor-access indicator with agency-specific reporting and route-change caveats.</p>
+</li>
+<li><a href="https://catalog.data.gov/dataset/mta-subway-hourly-ridership-beginning-2025">MTA Subway Hourly Ridership: Beginning 2025</a> — Hourly turnstile-entry counts for New York City subway stations that provide fast detection of mobility shocks from weather, safety incidents, or service disruptions. High-consequence urban access signal with station coverage and operational-adjustment caveats.</li>
 </ul>
 <h2 id="economy-governance-and-structural-risk">Economy, governance, and structural risk</h2>
 <ul>
