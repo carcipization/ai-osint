@@ -29,6 +29,37 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 
 Reverse the old flow. Do not start with a narrative idea.
 
+## Seed-to-dataset interrogation protocol (mandatory for wire-led STORY candidates)
+
+When a lead starts from Reuters/AP/major wire (or any single media seed), do this exact sequence before drafting:
+
+1. **Write seed claim + competing questions (private trace)**
+   - One seed claim sentence (what the wire says happened).
+   - At least 2 competing questions that do **not** assume the seed framing is correct.
+
+2. **Run targeted catalog retrieval before narrative drafting**
+   - Pull candidate datasets from `docs/datasets-catalog.md` by topic keywords tied to the seed domain.
+   - Build a short list of relevant datasets (target 5-15) and classify each: `usable now` / `not usable now` with reason.
+
+3. **Interrogate data first, question second**
+   - For each `usable now` dataset, extract the freshest available artifact and one baseline comparator (prior period/window).
+   - Record only observed changes first (no causal language yet): what moved, where, magnitude, and timeframe.
+
+4. **Build a claim-evidence matrix before prose**
+   - For each major claim, log: claim text, evidence family, source URL, timestamp, status (`supported` / `unproven` / `contradicted`).
+   - If the lead claim remains single-origin after this pass, keep it explicitly provisional.
+
+5. **Select story question from data findings (not from seed framing)**
+   - Choose the final reporting question only after step 3-4 outputs are complete.
+   - If data findings point elsewhere, re-angle or demote.
+
+6. **Publication class discipline**
+   - If targeted dataset interrogation does not produce meaningful new evidence, do not publish as a full event STORY.
+   - Use dataset brief / analysis framing instead of story framing.
+
+Hard failure rule:
+- Publishing a wire-led STORY without completing the targeted dataset interrogation + claim-evidence matrix is non-compliant.
+
 **No predefined tracks and no fixed upfront shortlist.** Build candidates continuously from what data is actually updating now.
 
 1. **Freshness + availability scan first (hard first pass)**
