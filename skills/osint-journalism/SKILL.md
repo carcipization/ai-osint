@@ -101,6 +101,42 @@ Required:
 - Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
 - Do not predispose the pass to any predefined track, domain, or dataset family.
 
+### STORY lead-signal query pack (default, concrete)
+
+Run this pack each STORY slot before candidate selection.
+
+Bluesky minimum pack (12 queries):
+1. ("breaking" OR "urgent" OR "developing") (port OR refinery OR pipeline OR grid OR hospital OR outbreak OR sanctions)
+2. ("shutdown" OR "halted" OR "offline" OR "evacuation") (energy OR transport OR health)
+3. ("exports" OR "imports" OR "throughput") (down OR suspended OR delayed)
+4. ("state of emergency" OR "emergency declared" OR "curfew")
+5. ("price spike" OR "shortage" OR "stockout") (fuel OR food OR medicine OR power)
+6. ("hospitalizations" OR "ICU" OR "ER visits") (surge OR rising)
+7. ("shipping delays" OR "queues" OR "ground stop" OR "rail disruption")
+8. ("school closures" OR "service interruption" OR "water advisory")
+9. Trend-derived query #1 (from current Bluesky trending topics)
+10. Trend-derived query #2 (from current Bluesky trending topics)
+11. High-signal account sweep (last 24h anomalies)
+12. ("new data" OR "released today" OR "update") + high-impact domains
+
+Polymarket minimum pack (8 scans):
+1. Top probability movers (24h)
+2. High-volume rapid repricing markets
+3. Geopolitics/conflict/escalation tags
+4. Energy/supply/fuel markets
+5. Macro/inflation/commodity shock markets
+6. Public-health/disruption-relevant markets
+7. Low-signal/noisy framing filter pass (exclude meme/sports noise)
+8. Contrarian pass: large repricing with weak mainstream pickup
+
+Candidate extraction rule (mandatory):
+- For each shortlisted lead, record a 4-item packet in trace before deep work:
+  1) testable question,
+  2) three required evidence checks,
+  3) one falsifier,
+  4) target datasets for interrogation.
+- Drop any lead that cannot produce this packet.
+
 Dual-trigger rule (hard):
 1. **World-state trigger**: build a neutral brief from what is newly active now, then rank by expected real-world impact.
 2. **Anomaly trigger**: run a blind dataset anomaly scan for fresh, non-routine changes even when no matching headline/news story exists.
