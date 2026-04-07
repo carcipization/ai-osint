@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-07 09:55 UTC
+**Dateline:** 2026-04-07 21:52 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 266 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 267 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -376,6 +376,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [ITU ICT Indicators](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/wtid.aspx) — Digital infrastructure and usage baselines. Useful control variable for shutdown/censorship narratives.
 - [Worldwide Governance Indicators](https://info.worldbank.org/governance/wgi/) — Institutional context and fragility proxies. Annual composites are poor short-term attribution tools.
 - [FOIA Logs](https://catalog.data.gov/dataset/foia-logs) — Agency Freedom of Information Act request/processing logs for tracking transparency backlogs, release timing, and public-record access friction that can affect oversight and accountability reporting. High governance consequence signal with agency-specific field definitions and closure-status caveats.
+- [Quarterly FOIA Report](https://catalog.data.gov/dataset/quarterly-foia-report-0da4b) — DOJ-structured quarterly FOIA workload and backlog reporting (including oldest pending requests) for agency-by-agency transparency throughput monitoring beyond annual summaries. High public-accountability consequence dataset with quarter-boundary lag and agency reporting-format caveats.
 - [OECD.AI](https://oecd.ai/) — Cross-country AI ecosystem/policy indicators. Best for comparative policy context, not daily movement.
 - [Polymarket](https://polymarket.com/) — Real-money event-contract market prices that can act as high-frequency belief proxies for elections, policy, and geopolitical scenarios. Useful as a sentiment/expectations signal, but contract design, liquidity, and participant composition can distort implied probabilities.
 - [Metaculus](https://www.metaculus.com/questions/) — Forecast-question platform with probabilistic crowd predictions and time-series forecast histories, useful for expectation-shift monitoring and narrative timing checks. Strong for trend-of-belief signals, but user-base composition and question framing can bias implied probabilities.
