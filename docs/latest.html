@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: State and local energy exposure stack (watchlist 88)</title>
+  <title>Datasets: OCHA FTS funding-flow tracker for service-gap risk (watchlist 89)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,35 +16,32 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-state-and-local-energy-exposure-stack-watchlist-88">Datasets: State and local energy exposure stack (watchlist 88)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-state-and-local-energy-exposure-stack-watchlist-88.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-state-and-local-energy-exposure-stack-watchlist-88.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-08 01:56 UTC</p>
-<p>This fallback dataset brief adds three energy datasets to improve consequence-first monitoring during continued oil and shipping disruption volatility.</p>
-<p>The practical value is decision support: these sources help identify where fuel and power cost shocks are most likely to hit households, transport networks, and local service reliability.</p>
+  <h1 id="datasets-ocha-fts-funding-flow-tracker-for-service-gap-risk-watchlist-89">Datasets: OCHA FTS funding-flow tracker for service-gap risk (watchlist 89)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-ocha-fts-funding-flows-service-gap-watchlist-89.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-ocha-fts-funding-flows-service-gap-watchlist-89.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-08 10:49 UTC</p>
+<p>No standard STORY candidate in this slot cleared the importance + mechanism gates after data-first scanning, so this run publishes the mandatory fallback as a dataset brief.</p>
+<p>This addition is currently relevant because humanitarian-finance headlines often report large pledges, but operational impact depends on whether funding is committed, paid, and routed to specific response plans and sectors.</p>
 <h2 id="added-in-this-run">Added in this run</h2>
 <ol>
-<li><strong>State Energy Data System (SEDS)</strong> — long-run state-level production, consumption, expenditure, and price baselines.</li>
-<li><strong>City and County Energy Profiles</strong> — local-area energy demand/fuel-mix context for county and metro exposure mapping.</li>
-<li><strong>Monthly and Annual Energy Consumption by Sector</strong> — sector-level demand shifts (residential/commercial/industrial/transport) for pass-through analysis.</li>
+<li><strong>OCHA Financial Tracking Service (FTS) Public API</strong> — machine-readable funding records across requirements, pledges, commitments, and paid contributions with country/plan/sector cuts.</li>
 </ol>
-<h2 id="how-to-use-this-stack-now">How to use this stack now</h2>
+<h2 id="how-to-use-this-dataset-now">How to use this dataset now</h2>
 <ul>
-<li>Use <strong>SEDS</strong> to rank structural state exposure to prolonged fuel-cost shocks.</li>
-<li>Use <strong>City and County Energy Profiles</strong> to localize consequences for non-specialist decisions (household bills, transit reliability, municipal operations).</li>
-<li>Use <strong>sector consumption series</strong> to test which demand segments are absorbing shock first and where policy or procurement response is most urgent.</li>
+<li>Compare <strong>announced funding</strong> vs <strong>paid/committed funding</strong> to avoid overstating response capacity.</li>
+<li>Track <strong>country and sector allocation gaps</strong> to identify where life-impacting services (food, health, shelter, water) remain underfunded.</li>
+<li>Pair FTS flow data with humanitarian outcome datasets (food insecurity, displacement, disease burden) to test whether financing changes are likely to alter near-term conditions.</li>
 </ul>
 <h2 id="limits">Limits</h2>
 <ul>
-<li>SEDS and many local profile fields are not real-time; they are denominator and exposure tools, not instant event detectors.</li>
-<li>Sector series can revise and should be interpreted with seasonal context.</li>
-<li>These datasets should be paired with short-cycle operational signals (ports, prices, outages) before causal claims.</li>
+<li>FTS depends on reporting from many actors; completeness can vary by crisis and donor.</li>
+<li>Short-cycle conclusions should be labeled provisional when recent reporting windows are still open.</li>
+<li>Funding movement is necessary but not sufficient evidence of on-the-ground delivery speed.</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="https://catalog.data.gov/dataset/state-energy-data-system-seds">https://catalog.data.gov/dataset/state-energy-data-system-seds</a></li>
-<li><a href="https://catalog.data.gov/dataset/city-and-county-energy-profiles-60fbd">https://catalog.data.gov/dataset/city-and-county-energy-profiles-60fbd</a></li>
-<li><a href="https://catalog.data.gov/dataset/monthly-and-annual-energy-consumption-by-sector">https://catalog.data.gov/dataset/monthly-and-annual-energy-consumption-by-sector</a></li>
+<li><a href="https://fts.unocha.org/content/fts-public-api">https://fts.unocha.org/content/fts-public-api</a></li>
+<li><a href="https://api.hpc.tools/docs/v2/">https://api.hpc.tools/docs/v2/</a></li>
 </ul>
 </body>
 </html>
