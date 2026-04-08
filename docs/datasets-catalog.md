@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-08 01:52 UTC
+**Dateline:** 2026-04-08 05:41 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 270 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 273 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -103,6 +103,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [USGS Water Data for the Nation (NWIS + Water Services API)](https://waterservices.usgs.gov/) — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.
 - [ReliefWeb API](https://api.reliefweb.int/) — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.
 - [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.
+- [OpenAQ API](https://docs.openaq.org/) — Global open air-quality measurements (including PM2.5/ozone and station metadata) for rapid public-health exposure checks during smoke, pollution, and cross-border haze episodes. High non-specialist consequence signal with monitor-density and reporting-latency caveats.
 - [OCHA Key Figures API](https://keyfigures.api.unocha.org/) — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.
 - [EM-DAT](https://www.emdat.be/) — Disaster impact database for severity and cross-event context. Reliable for structured comparisons but estimates revise over time.
 - [UNHCR Refugee Data](https://www.unhcr.org/refugee-statistics/download/) — Displacement statistics for migration and conflict follow-through analysis. Be mindful of registration lag.
@@ -313,6 +314,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [IMF Data API](https://www.imf.org/external/datamapper/api/) — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.
 - [Eurostat APIs (Statistics + Catalogue)](https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access) — Official EU statistical APIs with machine-readable JSON-stat access, dataset discovery (TOC/DCAT/RSS), and structured metadata for reproducible regional baselines. High analytical value, but indicator publication cadence and definitional changes must be tracked per dataset.
 - [U.S. Census Bureau APIs](https://www.census.gov/data/developers/data-sets.html) — Official U.S. demographic, housing, and economic datasets (ACS, Decennial, and more) with granular geographic cuts. High utility for domestic baseline/anomaly work, with endpoint/version heterogeneity to manage.
+- [SEC EDGAR APIs (Submissions, XBRL, and filing endpoints)](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) — Machine-readable U.S. corporate filings and financial statement data for fast checks of issuer distress signals, sector concentration risk, and disclosure-timing anomalies that can spill into jobs, pensions, and household investment exposure. Strong consequence and governance signal with filer-quality and taxonomy-version caveats.
 - [Border Crossing Entry Data](https://catalog.data.gov/dataset/border-crossing-entry-data-683ae) — U.S. land-border crossing counts by port, mode, and traveler/vehicle type for trade-and-mobility pressure monitoring. Useful high-frequency policy-sensitivity signal with known seasonality and port-level reporting revision risk.
 - [California Public Schools 2024-25](https://catalog.data.gov/dataset/california-public-schools-2024-25) — Statewide school directory and status attributes for district-level infrastructure and enrollment-footprint context in education-governance and local service-capacity reporting. Useful structural denominator with annual roll-over and administrative-code change caveats.
 - [Student Absenteeism](https://catalog.data.gov/dataset/student-absenteeism-b0fcc) — State-level chronic absenteeism counts (students absent 15+ days) by sex for rapid screening of education-access strain that often co-moves with household health, transport, and economic stress. High family and service-delivery consequence indicator with school-year comparability and reporting-lag caveats.
@@ -390,6 +392,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 **Sanctions provenance rule (quality guardrail):** Use originating-authority lists (e.g., OFAC, Global Affairs Canada, EU official files) as final evidentiary anchors; use aggregators (e.g., OpenSanctions) for discovery, cross-linking, and rapid triage.
 
 - [OpenSanctions](https://www.opensanctions.org/datasets/) — Aggregated designation/entity datasets for sanctions-wave and network monitoring. Confirm high-stakes claims at originating authority.
+- [IATI Datastore v3 API](https://developer.iatistandard.org/en/api/) — International Aid Transparency Initiative machine-readable aid activity and transaction data for tracking where announced funding actually flows across countries, sectors, and implementers. High non-specialist consequence value for humanitarian service coverage and accountability checks, with publisher-completeness and timeliness caveats.
 - [UN Security Council Consolidated List](https://scsanctions.un.org/resources/xml/en/consolidated.xml) — Official UN consolidated sanctions list in XML/HTML/PDF with committee-linked identifiers. High-value multilateral baseline for cross-jurisdiction sanctions timing and scope checks.
 - [OpenCorporates API](https://api.opencorporates.com/) — Company registry federation for entity resolution and corporate linkage checks. Jurisdiction depth varies.
 - [Open Ownership Register](https://register.openownership.org/) — Beneficial ownership datasets for ownership-chain reconstruction. Coverage quality is country-dependent.
