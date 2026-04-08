@@ -1,31 +1,34 @@
-# Datasets: OCHA FTS funding-flow tracker for service-gap risk (watchlist 89)
+# Datasets: Food and labor stress early-warning stack (watchlist 90)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-ocha-fts-funding-flows-service-gap-watchlist-89.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-ocha-fts-funding-flows-service-gap-watchlist-89.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-08-dataset-intel-food-and-labor-stress-early-warning-stack-watchlist-90.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-08-dataset-intel-food-and-labor-stress-early-warning-stack-watchlist-90.md)
 
-**Dateline:** 2026-04-08 10:49 UTC
+**Dateline:** 2026-04-08 13:50 UTC
 
-No standard STORY candidate in this slot cleared the importance + mechanism gates after data-first scanning, so this run publishes the mandatory fallback as a dataset brief.
+This DATASETS_B run adds three consequence-first datasets for earlier detection of household stress: one global hotspot outlook layer, one U.S. household food-security baseline series, and one U.S. labor-claimant composition series.
 
-This addition is currently relevant because humanitarian-finance headlines often report large pledges, but operational impact depends on whether funding is committed, paid, and routed to specific response plans and sectors.
+Together, these improve the ability to separate broad deterioration from localized pressure, and to map where service, budget, or policy responses may need to move first.
 
 ## Added in this run
 
-1. **OCHA Financial Tracking Service (FTS) Public API** — machine-readable funding records across requirements, pledges, commitments, and paid contributions with country/plan/sector cuts.
+1. **Food Insecurity Hotspots Data Set** — outlook-focused hotspot risk for near-term acute food insecurity deterioration.
+2. **Food Security in the United States** — USDA household food-security prevalence baselines for affordability/nutrition stress context.
+3. **Characteristics of the Insured Unemployed (ETA-203)** — weekly composition of insured unemployment to detect sector/demographic concentration in labor stress.
 
-## How to use this dataset now
+## Why this stack matters now
 
-- Compare **announced funding** vs **paid/committed funding** to avoid overstating response capacity.
-- Track **country and sector allocation gaps** to identify where life-impacting services (food, health, shelter, water) remain underfunded.
-- Pair FTS flow data with humanitarian outcome datasets (food insecurity, displacement, disease burden) to test whether financing changes are likely to alter near-term conditions.
+- It links **global risk outlook** to **domestic household burden** and **labor-market claimant composition**.
+- It supports concrete decisions for non-specialists and operators: where to prioritize aid, adjust local service capacity, and monitor household-income risk.
+- It improves cross-domain chain testing (food affordability pressure ↔ household insecurity ↔ labor-market stress distribution).
 
 ## Limits
 
-- FTS depends on reporting from many actors; completeness can vary by crisis and donor.
-- Short-cycle conclusions should be labeled provisional when recent reporting windows are still open.
-- Funding movement is necessary but not sufficient evidence of on-the-ground delivery speed.
+- Food-security prevalence series are not real-time and should be used as denominator context, not instant event confirmation.
+- Hotspot outlook products are model- and expert-judgment dependent and should be paired with in-country operational feeds.
+- ETA-203 reflects insured unemployment populations and may underrepresent groups with weaker UI coverage.
 
 ## Sources
 
-- [https://fts.unocha.org/content/fts-public-api](https://fts.unocha.org/content/fts-public-api)
-- [https://api.hpc.tools/docs/v2/](https://api.hpc.tools/docs/v2/)
+- [https://catalog.data.gov/dataset/food-insecurity-hotspots-data-set](https://catalog.data.gov/dataset/food-insecurity-hotspots-data-set)
+- [https://catalog.data.gov/dataset/food-security-in-the-united-states](https://catalog.data.gov/dataset/food-security-in-the-united-states)
+- [https://catalog.data.gov/dataset/characteristics-of-the-insured-unemployed-eta-203](https://catalog.data.gov/dataset/characteristics-of-the-insured-unemployed-eta-203)
