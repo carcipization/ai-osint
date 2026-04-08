@@ -1,38 +1,41 @@
-# Datasets: Quarterly FOIA report as a transparency-backlog signal (watchlist 87)
+# Datasets: Governance, health, and labor risk signals watchlist (86)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-07-dataset-brief-quarterly-foia-report-transparency-backlog-signal-watchlist-87.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-07-dataset-brief-quarterly-foia-report-transparency-backlog-signal-watchlist-87.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-07-dataset-intel-governance-health-and-labor-risk-signals-watchlist-86.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-07-dataset-intel-governance-health-and-labor-risk-signals-watchlist-86.md)
 
-**Dateline:** 2026-04-07 21:55 UTC
+**Dateline:** 2026-04-07 09:58 UTC
 
-This STORY slot did not produce a standard event story that cleared all gates with meaningful new independent evidence. Per cadence fallback rules, this run publishes a dataset brief for a high-relevance source added this cycle.
+This cycle adds five high-consequence datasets that improve monitoring of public-record transparency, severe respiratory burden, labor-market inflection, and ownership concentration in nursing-home care.
 
-The added dataset is **Quarterly FOIA Report** (DOJ/Data.gov), a machine-readable accountability layer that tracks agency request inflow, processing, backlog, and oldest-pending request status each quarter.
+Together they support non-specialist decisions around care access, staffing and hiring outlook, and public accountability when service outcomes diverge from official claims.
 
-## Why this matters now
+## Added this run
 
-When policy shocks, sanctions actions, or public-safety incidents escalate, non-specialist decisions often depend on whether agencies can release records quickly and consistently. Quarterly FOIA throughput and backlog movement provides an early warning of transparency friction that can delay oversight, litigation, procurement scrutiny, and local accountability reporting.
+1. **FOIA Logs** — Agency request and processing logs for tracking disclosure delays and transparency backlogs.
+2. **Provisional COVID-19 Death Counts by Week Ending Date and State** — Weekly directional mortality pressure by state.
+3. **Monthly Rates of Laboratory-Confirmed COVID-19 Hospitalizations (COVID-NET)** — Monthly severe-burden and hospital-load indicator.
+4. **Current Employment Statistics (CES)** — Monthly payroll and earnings changes for labor stress and wage pressure checks.
+5. **Skilled Nursing Facility All Owners** — Facility-to-owner linkage for concentration and control-risk mapping in elder care.
 
-## What this dataset is
+## How to use this stack
 
-- Agency-level quarterly Freedom of Information Act operational reporting.
-- Core fields include requests received, requests processed, backlog counts, and oldest pending requests.
-- Source page: [https://catalog.data.gov/dataset/quarterly-foia-report-0da4b](https://catalog.data.gov/dataset/quarterly-foia-report-0da4b)
+- **Burden + system pressure:** Pair weekly COVID mortality with COVID-NET hospitalization rates to separate transient case noise from sustained severe-impact shifts.
+- **Household consequence timing:** Layer CES payroll/earnings changes to test whether health burden is coinciding with labor softening or wage compression.
+- **Governance and accountability:** Use FOIA logs to test whether agencies in affected states are slowing disclosures during high-pressure periods.
+- **Exposure chain checks:** Use nursing-home ownership linkages to identify where concentrated ownership overlaps with worsening local burden or staffing stress.
 
-## How to use it in OSINT workflows
+## Limits to state clearly in reporting
 
-1. **Backlog pressure trend:** compare quarter-over-quarter changes in backlog and processing ratios by agency.
-2. **Shock response check:** test whether agencies tied to current high-impact events show deteriorating throughput after event windows.
-3. **Oldest-pending risk flag:** monitor persistence of oldest requests as a governance friction indicator.
-4. **Cross-dataset linkage:** combine with FOIA Logs for finer-grain timing and caseflow context.
-
-## Limits and caveats
-
-- Quarterly cadence is slower than daily event cycles.
-- Agency reporting quality/format can vary.
-- Backlog counts are operational indicators, not direct proof of misconduct or concealment.
+- Provisional health series revise with reporting lag and backfill.
+- COVID-NET is sentinel/catchment based, not full-population coverage.
+- CES is survey-estimated and benchmark-revised.
+- FOIA logs vary by agency schema and closure coding.
+- Ownership records can lag corporate-control changes.
 
 ## Sources
 
-- [https://catalog.data.gov/dataset/quarterly-foia-report-0da4b](https://catalog.data.gov/dataset/quarterly-foia-report-0da4b)
 - [https://catalog.data.gov/dataset/foia-logs](https://catalog.data.gov/dataset/foia-logs)
+- [https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state](https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state)
+- [https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil](https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil)
+- [https://catalog.data.gov/dataset/current-employment-statistics-ces-5540b](https://catalog.data.gov/dataset/current-employment-statistics-ces-5540b)
+- [https://catalog.data.gov/dataset/skilled-nursing-facility-all-owners](https://catalog.data.gov/dataset/skilled-nursing-facility-all-owners)
