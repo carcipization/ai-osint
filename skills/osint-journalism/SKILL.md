@@ -90,44 +90,27 @@ Hard failure rule:
 Run a short dual-trigger sweep at the start of each run (timebox: 5–10 minutes).
 
 Required:
-- **Lead with Bluesky + Polymarket for STORY candidate discovery.** Treat these as primary lead-signal surfaces.
-- **Bluesky check is STORY-only.** Do not run Bluesky sweeps in DATASETS, FOLLOWUP, or DATASETS_OPTIMIZE slots.
-- **Bluesky discovery pass minimum:** run at least **5 distinct Bluesky queries** per STORY run.
-- **Trending scan required:** include a quick pass over current Bluesky trending/discussion topics and convert the top relevant trends into additional query terms.
-- Use Bluesky results to surface candidate datasets/sensors to inspect next (lead generation for dataset targeting), not just headline leads.
-- **Polymarket signal pass is STORY-only and mandatory:** run at least **3 distinct Polymarket queries/market scans** per STORY run (for expectation-shift lead generation, not as standalone proof).
-- Log any non-result/low-liquidity limitation when Polymarket signal quality is weak.
-- **Use web/news search as supplemental corroboration and context expansion for Bluesky/Polymarket-led candidates** (not as default primary lead source).
+- **Data-first hypothesis generation is mandatory for STORY runs.** Candidate ideas must come from raw dataset/sensor/registry changes (time-series breaks, threshold crossings, cross-source divergence, structural shifts).
+- **Do not use Reuters/AP/wire/news articles as hypothesis seeds.**
+- Bluesky/Polymarket are optional and **context-only after** a data-seeded candidate exists; they are never origin evidence.
 - Do **not** use convenience/default query shortcuts (e.g., generic TSA/NOAA filler checks) unless directly justified by findings.
 - Do not predispose the pass to any predefined track, domain, or dataset family.
 
-### STORY lead-signal query pack (default, concrete)
+### STORY data-signal discovery pack (default, concrete)
 
 Run this pack each STORY slot before candidate selection.
 
-Bluesky minimum pack (12 queries):
-1. ("breaking" OR "urgent" OR "developing") (port OR refinery OR pipeline OR grid OR hospital OR outbreak OR sanctions)
-2. ("shutdown" OR "halted" OR "offline" OR "evacuation") (energy OR transport OR health)
-3. ("exports" OR "imports" OR "throughput") (down OR suspended OR delayed)
-4. ("state of emergency" OR "emergency declared" OR "curfew")
-5. ("price spike" OR "shortage" OR "stockout") (fuel OR food OR medicine OR power)
-6. ("hospitalizations" OR "ICU" OR "ER visits") (surge OR rising)
-7. ("shipping delays" OR "queues" OR "ground stop" OR "rail disruption")
-8. ("school closures" OR "service interruption" OR "water advisory")
-9. Trend-derived query #1 (from current Bluesky trending topics)
-10. Trend-derived query #2 (from current Bluesky trending topics)
-11. High-signal account sweep (last 24h anomalies)
-12. ("new data" OR "released today" OR "update") + high-impact domains
+Raw-data minimum pack (example families; adapt by domain):
+1. Latest-vs-baseline deltas from high-cadence public series (prices, flows, utilization, admissions, outages, mobility).
+2. Threshold-crossing scan (policy/operational breakpoints, percentile extremes, rolling z-score anomalies).
+3. Cross-source divergence scan (same phenomenon across at least two independent data families).
+4. Structural-break scan (trend/level shift versus prior 30/90-day baseline where available).
+5. Geographic concentration scan (localized spikes versus national/regional background).
+6. Revision-risk scan (provisional vs finalized windows; identify where updates can materially revise claims).
 
-Polymarket minimum pack (8 scans):
-1. Top probability movers (24h)
-2. High-volume rapid repricing markets
-3. Geopolitics/conflict/escalation tags
-4. Energy/supply/fuel markets
-5. Macro/inflation/commodity shock markets
-6. Public-health/disruption-relevant markets
-7. Low-signal/noisy framing filter pass (exclude meme/sports noise)
-8. Contrarian pass: large repricing with weak mainstream pickup
+Optional context pass (non-origin):
+- After data-seeded candidates exist, use Bluesky/Polymarket/news only to gather context, counter-hypotheses, and possible mechanism leads.
+- Do not promote a candidate solely from these surfaces.
 
 Candidate extraction rule (mandatory):
 - For each shortlisted lead, record a 4-item packet in trace before deep work:
