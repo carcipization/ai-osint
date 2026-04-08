@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-08 05:41 UTC
+**Dateline:** 2026-04-08 10:45 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 273 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 274 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -105,6 +105,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.
 - [OpenAQ API](https://docs.openaq.org/) — Global open air-quality measurements (including PM2.5/ozone and station metadata) for rapid public-health exposure checks during smoke, pollution, and cross-border haze episodes. High non-specialist consequence signal with monitor-density and reporting-latency caveats.
 - [OCHA Key Figures API](https://keyfigures.api.unocha.org/) — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.
+- [OCHA Financial Tracking Service (FTS) Public API](https://api.hpc.tools/docs/v2/) — Machine-readable humanitarian funding flows (requirements, commitments, paid contributions, recipients, and sector/country cuts) for checking whether announced aid is actually moving to operations in active crises. High non-specialist consequence value for service-gap and accountability reporting, with voluntary-reporting completeness and update-lag caveats.
 - [EM-DAT](https://www.emdat.be/) — Disaster impact database for severity and cross-event context. Reliable for structured comparisons but estimates revise over time.
 - [UNHCR Refugee Data](https://www.unhcr.org/refugee-statistics/download/) — Displacement statistics for migration and conflict follow-through analysis. Be mindful of registration lag.
 - [USGS Earthquake Feeds](https://earthquake.usgs.gov/earthquakes/feed/) — Fast seismic event context and magnitude tracking. Great for timing/frequency checks; not causal attribution.
