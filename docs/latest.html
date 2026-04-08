@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: Governance, health, and labor risk signals watchlist (86)</title>
+  <title>Datasets: State and local energy exposure stack (watchlist 88)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,47 +12,39 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
-.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-governance-health-and-labor-risk-signals-watchlist-86">Datasets: Governance, health, and labor risk signals watchlist (86)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-07-dataset-intel-governance-health-and-labor-risk-signals-watchlist-86.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-07-dataset-intel-governance-health-and-labor-risk-signals-watchlist-86.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-07 09:58 UTC</p>
-<p>This cycle adds five high-consequence datasets that improve monitoring of public-record transparency, severe respiratory burden, labor-market inflection, and ownership concentration in nursing-home care.</p>
-<p>Together they support non-specialist decisions around care access, staffing and hiring outlook, and public accountability when service outcomes diverge from official claims.</p>
-<h2 id="added-this-run">Added this run</h2>
+  <h1 id="datasets-state-and-local-energy-exposure-stack-watchlist-88">Datasets: State and local energy exposure stack (watchlist 88)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-state-and-local-energy-exposure-stack-watchlist-88.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-08-dataset-brief-state-and-local-energy-exposure-stack-watchlist-88.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-08 01:56 UTC</p>
+<p>This fallback dataset brief adds three energy datasets to improve consequence-first monitoring during continued oil and shipping disruption volatility.</p>
+<p>The practical value is decision support: these sources help identify where fuel and power cost shocks are most likely to hit households, transport networks, and local service reliability.</p>
+<h2 id="added-in-this-run">Added in this run</h2>
 <ol>
-<li><strong>FOIA Logs</strong> — Agency request and processing logs for tracking disclosure delays and transparency backlogs.</li>
-<li><strong>Provisional COVID-19 Death Counts by Week Ending Date and State</strong> — Weekly directional mortality pressure by state.</li>
-<li><strong>Monthly Rates of Laboratory-Confirmed COVID-19 Hospitalizations (COVID-NET)</strong> — Monthly severe-burden and hospital-load indicator.</li>
-<li><strong>Current Employment Statistics (CES)</strong> — Monthly payroll and earnings changes for labor stress and wage pressure checks.</li>
-<li><strong>Skilled Nursing Facility All Owners</strong> — Facility-to-owner linkage for concentration and control-risk mapping in elder care.</li>
+<li><strong>State Energy Data System (SEDS)</strong> — long-run state-level production, consumption, expenditure, and price baselines.</li>
+<li><strong>City and County Energy Profiles</strong> — local-area energy demand/fuel-mix context for county and metro exposure mapping.</li>
+<li><strong>Monthly and Annual Energy Consumption by Sector</strong> — sector-level demand shifts (residential/commercial/industrial/transport) for pass-through analysis.</li>
 </ol>
-<h2 id="how-to-use-this-stack">How to use this stack</h2>
+<h2 id="how-to-use-this-stack-now">How to use this stack now</h2>
 <ul>
-<li><strong>Burden + system pressure:</strong> Pair weekly COVID mortality with COVID-NET hospitalization rates to separate transient case noise from sustained severe-impact shifts.</li>
-<li><strong>Household consequence timing:</strong> Layer CES payroll/earnings changes to test whether health burden is coinciding with labor softening or wage compression.</li>
-<li><strong>Governance and accountability:</strong> Use FOIA logs to test whether agencies in affected states are slowing disclosures during high-pressure periods.</li>
-<li><strong>Exposure chain checks:</strong> Use nursing-home ownership linkages to identify where concentrated ownership overlaps with worsening local burden or staffing stress.</li>
+<li>Use <strong>SEDS</strong> to rank structural state exposure to prolonged fuel-cost shocks.</li>
+<li>Use <strong>City and County Energy Profiles</strong> to localize consequences for non-specialist decisions (household bills, transit reliability, municipal operations).</li>
+<li>Use <strong>sector consumption series</strong> to test which demand segments are absorbing shock first and where policy or procurement response is most urgent.</li>
 </ul>
-<h2 id="limits-to-state-clearly-in-reporting">Limits to state clearly in reporting</h2>
+<h2 id="limits">Limits</h2>
 <ul>
-<li>Provisional health series revise with reporting lag and backfill.</li>
-<li>COVID-NET is sentinel/catchment based, not full-population coverage.</li>
-<li>CES is survey-estimated and benchmark-revised.</li>
-<li>FOIA logs vary by agency schema and closure coding.</li>
-<li>Ownership records can lag corporate-control changes.</li>
+<li>SEDS and many local profile fields are not real-time; they are denominator and exposure tools, not instant event detectors.</li>
+<li>Sector series can revise and should be interpreted with seasonal context.</li>
+<li>These datasets should be paired with short-cycle operational signals (ports, prices, outages) before causal claims.</li>
 </ul>
 <h2 id="sources">Sources</h2>
 <ul>
-<li><a href="https://catalog.data.gov/dataset/foia-logs">https://catalog.data.gov/dataset/foia-logs</a></li>
-<li><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state">https://catalog.data.gov/dataset/provisional-covid-19-death-counts-by-week-ending-date-and-state</a></li>
-<li><a href="https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil">https://catalog.data.gov/dataset/monthly-rates-of-laboratory-confirmed-covid-19-hospitalizations-from-the-covid-net-surveil</a></li>
-<li><a href="https://catalog.data.gov/dataset/current-employment-statistics-ces-5540b">https://catalog.data.gov/dataset/current-employment-statistics-ces-5540b</a></li>
-<li><a href="https://catalog.data.gov/dataset/skilled-nursing-facility-all-owners">https://catalog.data.gov/dataset/skilled-nursing-facility-all-owners</a></li>
+<li><a href="https://catalog.data.gov/dataset/state-energy-data-system-seds">https://catalog.data.gov/dataset/state-energy-data-system-seds</a></li>
+<li><a href="https://catalog.data.gov/dataset/city-and-county-energy-profiles-60fbd">https://catalog.data.gov/dataset/city-and-county-energy-profiles-60fbd</a></li>
+<li><a href="https://catalog.data.gov/dataset/monthly-and-annual-energy-consumption-by-sector">https://catalog.data.gov/dataset/monthly-and-annual-energy-consumption-by-sector</a></li>
 </ul>
 </body>
 </html>
