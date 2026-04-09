@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-08 14:47 UTC
+**Dateline:** 2026-04-09 01:41 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 277 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 278 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -102,6 +102,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 
 - [USGS Water Data for the Nation (NWIS + Water Services API)](https://waterservices.usgs.gov/) — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.
 - [ReliefWeb API](https://api.reliefweb.int/) — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.
+- [WHO Disease Outbreak News API](https://www.who.int/api/news/diseaseoutbreaknews/sfhelp) — WHO machine-readable outbreak-news endpoint for rapid retrieval of official outbreak reports and update chronology across countries and pathogens. High public-health consequence signal for travel, preparedness, and clinical-alert decisions, with report-timing and event-definition caveats.
 - [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.
 - [OpenAQ API](https://docs.openaq.org/) — Global open air-quality measurements (including PM2.5/ozone and station metadata) for rapid public-health exposure checks during smoke, pollution, and cross-border haze episodes. High non-specialist consequence signal with monitor-density and reporting-latency caveats.
 - [OCHA Key Figures API](https://keyfigures.api.unocha.org/) — OCHA API that consolidates high-level humanitarian figures and includes Financial Tracking Service-backed funding indicators in one programmatic surface. Useful for rapid cross-crisis funding-gap context, with beta-status and source-level lag caveats.
