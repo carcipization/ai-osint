@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: transparency, mobility, and local safety signals (watchlist 92)</title>
+  <title>Datasets: Chicago violence victim-demographics signal for localized safety decisions (watchlist 93)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,55 +12,41 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
-.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-transparency-mobility-and-local-safety-signals-watchlist-92">Datasets: transparency, mobility, and local safety signals (watchlist 92)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-09-dataset-intel-transparency-mobility-and-local-safety-signals-watchlist-92.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-09-dataset-intel-transparency-mobility-and-local-safety-signals-watchlist-92.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-09 09:56 UTC</p>
-<p>This dataset cycle adds five net-new machine-readable sources focused on public-facing accountability and day-to-day service reliability: corporate filing churn, transit disruption pressure, and local public-safety trend baselines. Together, they improve early detection of operational stress that non-specialist audiences can act on (commute planning, local risk posture, and governance oversight).</p>
-<h2 id="added-datasets-5">Added datasets (5)</h2>
-<ol>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/corporations-and-other-entities-all-filings">Corporations and Other Entities: All Filings</a></strong><br />
-   New York State filing-level corporate records (formation, amendment, status events) that help track entity churn and governance stress around employers, contractors, and service providers.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/mta-subway-major-incidents-beginning-2015">MTA Subway Major Incidents: Beginning 2015</a></strong><br />
-   Major-incident records for New York City subway operations that support quick checks on mobility disruptions with direct commuter and emergency-access consequences.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/mta-bus-speeds-beginning-2015">MTA Bus Speeds: Beginning 2015</a></strong><br />
-   Corridor-level speed histories for NYC buses, useful for identifying slowdowns that materially change commute reliability and neighborhood service access.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/index-crimes-by-county-and-agency-beginning-1990">Index Crimes by County and Agency: Beginning 1990</a></strong><br />
-   Long-run county/agency crime baselines for New York State, useful for separating short-term noise from structural safety trend shifts.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/apd-arrests">APD Arrests</a></strong><br />
-   Austin arrest records that add a high-cadence local enforcement pressure signal for detention, court, and community-service load context.</p>
-</li>
-</ol>
+  <h1 id="datasets-chicago-violence-victim-demographics-signal-for-localized-safety-decisions-watchlist-93">Datasets: Chicago violence victim-demographics signal for localized safety decisions (watchlist 93)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-09-dataset-brief-chicago-violence-victim-demographics-signal-watchlist-93.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-09-dataset-brief-chicago-violence-victim-demographics-signal-watchlist-93.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-09 13:40 UTC</p>
+<p>No standard STORY candidate in this slot cleared novelty, mechanism, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.</p>
+<p>This run adds a high-utility public-safety dataset that helps move beyond total-incident counting and toward who is being harmed and where concentration risk is changing.</p>
+<h2 id="added-in-this-run">Added in this run</h2>
+<p><strong><a href="https://catalog.data.gov/dataset/violence-reduction-victim-demographics-aggregated">Violence Reduction - Victim Demographics - Aggregated</a></strong> — City of Chicago aggregated victim-demographics dataset (machine-readable exports including CSV/JSON) for tracking shifts in violence burden across demographic groups.</p>
 <h2 id="why-this-matters-now">Why this matters now</h2>
 <ul>
-<li><strong>Accountability + service continuity:</strong> corporate filing events can surface entity instability before downstream labor or service effects are obvious.</li>
-<li><strong>Mobility consequence:</strong> transit incident and speed datasets convert broad “system strain” narratives into measurable route/corridor impacts.</li>
-<li><strong>Safety decision utility:</strong> long-run and high-frequency local crime/arrest datasets support faster checks of whether public-safety shifts are transient or persistent.</li>
+<li><strong>Decision utility:</strong> City agencies, schools, health systems, and community organizations can target prevention and support based on shifting harm concentration rather than citywide averages.</li>
+<li><strong>Public consequence:</strong> Changes in victim demographic concentration can signal where emergency, trauma-care, and violence-interruption resources may need to be reallocated.</li>
+<li><strong>Cross-dataset value:</strong> It pairs naturally with Chicago incident-level crime data and arrest/enforcement datasets already in the catalog for trend decomposition.</li>
 </ul>
-<h2 id="caveats">Caveats</h2>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol>
+<li>Build rolling 4- and 12-week baselines by demographic group.</li>
+<li>Compare latest window against baseline and prior-year seasonally similar windows.</li>
+<li>Map concentrated increases to neighborhood-level incident datasets before drawing causal conclusions.</li>
+<li>Treat group-level changes as allocation signals, not standalone causal proof.</li>
+</ol>
+<h2 id="limits">Limits</h2>
 <ul>
-<li>Several additions are <strong>city/state scoped</strong>, so they should be used as operational local indicators, not national generalizations.</li>
-<li>Incident/arrest and filing systems can include <strong>reporting lags, recoding, and policy-definition changes</strong>; trend interpretation should use stable windows and metadata notes.</li>
-<li>Transit speed and major-incident fields are sensitive to schedule and classification changes; cross-period comparisons need denominator discipline.</li>
+<li>Aggregated structure limits incident-level causal inference.</li>
+<li>Reporting practices and category definitions can evolve over time.</li>
+<li>Should be interpreted with complementary incident/location datasets to avoid over-reading compositional shifts.</li>
 </ul>
-<h2 id="appendix-sources">Appendix: Sources</h2>
+<h2 id="sources">Sources</h2>
 <ul>
-<li>data.gov dataset metadata and API endpoints listed above.</li>
-<li>Updated catalog entry file: <code>docs/datasets-catalog.md</code>.</li>
+<li><a href="https://catalog.data.gov/dataset/violence-reduction-victim-demographics-aggregated">https://catalog.data.gov/dataset/violence-reduction-victim-demographics-aggregated</a></li>
+<li>Updated catalog: <code>docs/datasets-catalog.md</code></li>
 </ul>
 </body>
 </html>
