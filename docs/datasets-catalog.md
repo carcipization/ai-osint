@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-09 09:56 UTC
+**Dateline:** 2026-04-09 13:40 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 283 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 284 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -453,6 +453,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Crime Data from 2020 to 2024](https://catalog.data.gov/dataset/crime-data-from-2020-to-present) — Los Angeles incident-level crime records for high-frequency local safety trend checks and cross-city pattern comparison. Valuable operational layer with reporting-lag and classification-change limitations.
 - [Index Crimes by County and Agency: Beginning 1990](https://catalog.data.gov/dataset/index-crimes-by-county-and-agency-beginning-1990) — Long-run New York State county/agency index-crime series for separating short-term incident noise from structural public-safety trend shifts relevant to policing and community prevention decisions. Strong baseline utility with offense-definition change and agency-reporting consistency caveats.
 - [APD Arrests](https://catalog.data.gov/dataset/apd-arrests) — Austin Police Department arrest records with offense/time/location fields for rapid checks of local enforcement and detention-pressure changes that can affect court, jail, and community-service loads. Useful operational accountability signal with city-only scope and classification-policy caveats.
+- [Violence Reduction - Victim Demographics - Aggregated](https://catalog.data.gov/dataset/violence-reduction-victim-demographics-aggregated) — Chicago victim-demographics aggregates for violence-reduction monitoring, enabling quicker checks on which communities are bearing rising harm and whether risk concentration is shifting by age/sex/race groups. Strong public-safety equity signal with aggregation-level limits and reporting-lag caveats. _Metadata updated: 2026-04-05._
 - [Estimates of Emergency Department Visits in the United States (2016–2022)](https://catalog.data.gov/dataset/estimates-of-emergency-department-visits-in-the-united-states-from-2016-2019-faa2a) — National emergency-department visit counts/rates by leading diagnoses and reasons for visit, useful for health-system pressure and seasonal burden context. High-value public-health denominator with coding and reporting-cycle caveats.
 - [Emergency Department Volume and Capacity (California)](https://catalog.data.gov/dataset/emergency-department-volume-and-capacity) — California facility-level emergency-department burden ratio (encounters relative to treatment stations) for service-pressure monitoring. Strong operational state-level capacity signal with jurisdiction-specific reporting cadence and definitions.
 - [Emergency Medical Service (EMS) Stations](https://catalog.data.gov/dataset/emergency-medical-service-ems-stations) — HIFLD geospatial inventory of EMS station locations for rapid checks of emergency-response coverage and infrastructure exposure during disasters or local service disruptions. Practical preparedness baseline with station-status currency and staffing-level blind-spot caveats.
