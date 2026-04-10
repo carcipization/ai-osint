@@ -1,34 +1,42 @@
-# Datasets: maternal, hospital-capacity, and utility-service pressure stack (watchlist 96)
+# Datasets: Pregnancy-Associated Mortality for local maternal-risk monitoring (watchlist 97)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-maternal-hospital-and-utility-service-pressure-stack-watchlist-96.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-maternal-hospital-and-utility-service-pressure-stack-watchlist-96.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-10-dataset-brief-pregnancy-associated-mortality-local-maternal-risk-watchlist-97.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-10-dataset-brief-pregnancy-associated-mortality-local-maternal-risk-watchlist-97.md)
 
-**Dateline:** 2026-04-10 09:52 UTC
+**Dateline:** 2026-04-10 14:06 UTC
 
-This DATASETS_A cycle adds four machine-readable datasets that strengthen consequence-first monitoring across maternal health, hospital load, household utility service quality, and local food-safety enforcement.
+No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.
 
-## Added in this run
+The **Pregnancy-Associated Mortality** dataset provides machine-readable local records that help track severe maternal outcome burden over time. For non-specialist readers and operators, this matters because maternal mortality pressure is a direct household-level risk signal and an indirect stress signal for prenatal/postpartum care access, referral pathways, and emergency response readiness.
 
-- **[VSRR Provisional Maternal Death Counts and Rates](https://catalog.data.gov/dataset/vsrr-provisional-maternal-death-counts)** — U.S. provisional maternal mortality signal with direct CSV/JSON access for early trend checks before finalized annual vital-statistics releases.
-- **[COVID-19 Reported Patient Impact and Hospital Capacity by Facility -- RAW](https://catalog.data.gov/dataset/covid-19-reported-patient-impact-and-hospital-capacity-by-facility-raw)** — Facility-level U.S. hospital utilization and capacity data (including inpatient/ICU burden fields) for localized surge and health-system stress monitoring.
-- **[Utility Company Customer Service Response Index (CSRI): Beginning 2005](https://catalog.data.gov/dataset/utility-company-customer-service-response-index-csri-beginning-2005)** — New York utility customer-service response index time series for measuring complaint-response performance and persistent service friction.
-- **[HHS - Food Inspection Data from July 2024 and onward](https://catalog.data.gov/dataset/hhs-food-inspection-data-from-july-2024-and-onward)** — Montgomery County (MD) food-establishment inspection records with violation/outcome fields for local public-health and compliance-risk checks.
+## Dataset overview
 
-## Why these matter together
+- **Dataset:** Pregnancy-Associated Mortality
+- **Catalog page:** [https://catalog.data.gov/dataset/pregnancy-associated-mortality](https://catalog.data.gov/dataset/pregnancy-associated-mortality)
+- **Publisher context:** NYC open data pathway via Data.gov metadata
+- **Direct raw access confirmed:** CSV / JSON / XML / RDF resources exposed
+- **Metadata modified:** 2025-10-25
 
-- **Maternal + facility capacity linkage:** Maternal mortality risk interpretation is stronger when read alongside real-time facility-capacity constraints and surge periods.
-- **Household consequence layer:** Utility complaint-response performance provides an operational measure of whether households are getting timely resolution during billing/outage stress.
-- **Public-health ground signal:** Local inspection outcomes add near-operational food-safety context that can surface neighborhood-level service and enforcement pressure.
+## Why it is useful now
 
-## Practical use pattern
+- **High-consequence public-health relevance:** maternal death trends and related indicators are among the clearest signals of health-system and access inequality stress.
+- **Decision usefulness:** supports local prioritization for maternal-health outreach, postpartum follow-up design, and service-capacity targeting.
+- **Cross-domain value:** can be paired with hospital-capacity, insurance-coverage, and social-vulnerability datasets to test where risk is concentrating.
 
-1. Track maternal provisional mortality direction and reporting-vintage shifts.
-2. Cross-check hospital burden by geography and week for capacity context.
-3. Monitor utility response-index deterioration for service-friction escalation.
-4. Add food-inspection violation density as a local environmental-health pressure indicator.
+## Practical analysis approach
 
-## Constraints and caveats
+1. Pull the latest machine-readable table (JSON/CSV).
+2. Build a baseline by year/period and geography where fields allow.
+3. Segment by available demographic dimensions to detect concentration shifts.
+4. Pair with at least one independent service-capacity source before causal claims.
 
-- Provisional mortality and facility feeds can revise; trend confidence should be recalibrated after backfills.
-- Utility CSRI and food-inspection datasets are subnational and should not be over-generalized nationally.
-- Cross-dataset conclusions should separate measured association from causal attribution.
+## Limits and cautions
+
+- Scope is jurisdiction-limited (NYC), not national.
+- Mortality counts can be low in subgroups, producing volatility.
+- Classification and publication timing can revise trend interpretation.
+- Use as a consequence signal, not sole-cause proof.
+
+## Appendix: Sources
+
+- Data.gov dataset entry: [https://catalog.data.gov/dataset/pregnancy-associated-mortality](https://catalog.data.gov/dataset/pregnancy-associated-mortality)

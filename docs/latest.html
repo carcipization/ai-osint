@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: maternal, hospital-capacity, and utility-service pressure stack (watchlist 96)</title>
+  <title>Datasets: Pregnancy-Associated Mortality for local maternal-risk monitoring (watchlist 97)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -12,41 +12,47 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
-.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-maternal-hospital-capacity-and-utility-service-pressure-stack-watchlist-96">Datasets: maternal, hospital-capacity, and utility-service pressure stack (watchlist 96)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-maternal-hospital-and-utility-service-pressure-stack-watchlist-96.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-maternal-hospital-and-utility-service-pressure-stack-watchlist-96.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-10 09:52 UTC</p>
-<p>This DATASETS_A cycle adds four machine-readable datasets that strengthen consequence-first monitoring across maternal health, hospital load, household utility service quality, and local food-safety enforcement.</p>
-<h2 id="added-in-this-run">Added in this run</h2>
+  <h1 id="datasets-pregnancy-associated-mortality-for-local-maternal-risk-monitoring-watchlist-97">Datasets: Pregnancy-Associated Mortality for local maternal-risk monitoring (watchlist 97)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-brief-pregnancy-associated-mortality-local-maternal-risk-watchlist-97.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-brief-pregnancy-associated-mortality-local-maternal-risk-watchlist-97.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-10 14:06 UTC</p>
+<p>No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.</p>
+<p>The <strong>Pregnancy-Associated Mortality</strong> dataset provides machine-readable local records that help track severe maternal outcome burden over time. For non-specialist readers and operators, this matters because maternal mortality pressure is a direct household-level risk signal and an indirect stress signal for prenatal/postpartum care access, referral pathways, and emergency response readiness.</p>
+<h2 id="dataset-overview">Dataset overview</h2>
 <ul>
-<li><strong><a href="https://catalog.data.gov/dataset/vsrr-provisional-maternal-death-counts">VSRR Provisional Maternal Death Counts and Rates</a></strong> — U.S. provisional maternal mortality signal with direct CSV/JSON access for early trend checks before finalized annual vital-statistics releases.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/covid-19-reported-patient-impact-and-hospital-capacity-by-facility-raw">COVID-19 Reported Patient Impact and Hospital Capacity by Facility -- RAW</a></strong> — Facility-level U.S. hospital utilization and capacity data (including inpatient/ICU burden fields) for localized surge and health-system stress monitoring.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/utility-company-customer-service-response-index-csri-beginning-2005">Utility Company Customer Service Response Index (CSRI): Beginning 2005</a></strong> — New York utility customer-service response index time series for measuring complaint-response performance and persistent service friction.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/hhs-food-inspection-data-from-july-2024-and-onward">HHS - Food Inspection Data from July 2024 and onward</a></strong> — Montgomery County (MD) food-establishment inspection records with violation/outcome fields for local public-health and compliance-risk checks.</li>
+<li><strong>Dataset:</strong> Pregnancy-Associated Mortality</li>
+<li><strong>Catalog page:</strong> <a href="https://catalog.data.gov/dataset/pregnancy-associated-mortality">https://catalog.data.gov/dataset/pregnancy-associated-mortality</a></li>
+<li><strong>Publisher context:</strong> NYC open data pathway via Data.gov metadata</li>
+<li><strong>Direct raw access confirmed:</strong> CSV / JSON / XML / RDF resources exposed</li>
+<li><strong>Metadata modified:</strong> 2025-10-25</li>
 </ul>
-<h2 id="why-these-matter-together">Why these matter together</h2>
+<h2 id="why-it-is-useful-now">Why it is useful now</h2>
 <ul>
-<li><strong>Maternal + facility capacity linkage:</strong> Maternal mortality risk interpretation is stronger when read alongside real-time facility-capacity constraints and surge periods.</li>
-<li><strong>Household consequence layer:</strong> Utility complaint-response performance provides an operational measure of whether households are getting timely resolution during billing/outage stress.</li>
-<li><strong>Public-health ground signal:</strong> Local inspection outcomes add near-operational food-safety context that can surface neighborhood-level service and enforcement pressure.</li>
+<li><strong>High-consequence public-health relevance:</strong> maternal death trends and related indicators are among the clearest signals of health-system and access inequality stress.</li>
+<li><strong>Decision usefulness:</strong> supports local prioritization for maternal-health outreach, postpartum follow-up design, and service-capacity targeting.</li>
+<li><strong>Cross-domain value:</strong> can be paired with hospital-capacity, insurance-coverage, and social-vulnerability datasets to test where risk is concentrating.</li>
 </ul>
-<h2 id="practical-use-pattern">Practical use pattern</h2>
+<h2 id="practical-analysis-approach">Practical analysis approach</h2>
 <ol>
-<li>Track maternal provisional mortality direction and reporting-vintage shifts.</li>
-<li>Cross-check hospital burden by geography and week for capacity context.</li>
-<li>Monitor utility response-index deterioration for service-friction escalation.</li>
-<li>Add food-inspection violation density as a local environmental-health pressure indicator.</li>
+<li>Pull the latest machine-readable table (JSON/CSV).</li>
+<li>Build a baseline by year/period and geography where fields allow.</li>
+<li>Segment by available demographic dimensions to detect concentration shifts.</li>
+<li>Pair with at least one independent service-capacity source before causal claims.</li>
 </ol>
-<h2 id="constraints-and-caveats">Constraints and caveats</h2>
+<h2 id="limits-and-cautions">Limits and cautions</h2>
 <ul>
-<li>Provisional mortality and facility feeds can revise; trend confidence should be recalibrated after backfills.</li>
-<li>Utility CSRI and food-inspection datasets are subnational and should not be over-generalized nationally.</li>
-<li>Cross-dataset conclusions should separate measured association from causal attribution.</li>
+<li>Scope is jurisdiction-limited (NYC), not national.</li>
+<li>Mortality counts can be low in subgroups, producing volatility.</li>
+<li>Classification and publication timing can revise trend interpretation.</li>
+<li>Use as a consequence signal, not sole-cause proof.</li>
+</ul>
+<h2 id="appendix-sources">Appendix: Sources</h2>
+<ul>
+<li>Data.gov dataset entry: <a href="https://catalog.data.gov/dataset/pregnancy-associated-mortality">https://catalog.data.gov/dataset/pregnancy-associated-mortality</a></li>
 </ul>
 </body>
 </html>
