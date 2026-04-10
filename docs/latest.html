@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: health surveillance, freight pressure, and labor-shock signals (watchlist 94)</title>
+  <title>Datasets: UNICEF SDMX API expands child-risk and service-access monitoring (watchlist 95)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,51 +16,41 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-health-surveillance-freight-pressure-and-labor-shock-signals-watchlist-94">Datasets: health surveillance, freight pressure, and labor-shock signals (watchlist 94)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-09-dataset-intel-health-surveillance-freight-and-labor-shock-signals-watchlist-94.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-09-dataset-intel-health-surveillance-freight-and-labor-shock-signals-watchlist-94.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-09 17:40 UTC</p>
-<p>This dataset cycle adds five net-new machine-readable sources focused on practical early warnings for households and local operators: disease activity shifts before severe outcomes, freight-system stress before visible shelf/cost effects, and layoff/closure signals before slower labor aggregates catch up.</p>
-<h2 id="added-datasets-5">Added datasets (5)</h2>
+  <h1 id="datasets-unicef-sdmx-api-expands-child-risk-and-service-access-monitoring-watchlist-95">Datasets: UNICEF SDMX API expands child-risk and service-access monitoring (watchlist 95)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-brief-unicef-sdmx-child-risk-and-service-access-watchlist-95.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-brief-unicef-sdmx-child-risk-and-service-access-watchlist-95.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-10 05:49 UTC</p>
+<p>No standard STORY candidate in this slot cleared anomaly, mechanism, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.</p>
+<p>UNICEF’s SDMX API provides direct machine-readable access to cross-country child-wellbeing indicators that can sharpen early warning on broad public consequences: child mortality, immunization coverage, nutrition stress, school participation, water and sanitation access, and social protection reach. For non-specialists, this matters because it helps answer practical questions faster: where service access is weakening, where child health risk is rising, and where public systems may need support before pressure compounds.</p>
+<p>The dataset is especially useful right now because many high-impact risks (infectious disease bursts, food affordability stress, climate shocks, and displacement) show up first in child-facing indicators before they are fully visible in slower annual reports. The API structure also supports reproducible cross-country comparison instead of one-off screenshot narratives.</p>
+<h2 id="dataset-intel">Dataset intel</h2>
+<ul>
+<li><strong>Source:</strong> UNICEF Indicator Data Warehouse (SDMX)</li>
+<li><strong>Base API:</strong> <a href="https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/">https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/</a></li>
+<li><strong>Discovery endpoint:</strong> <code>dataflow</code></li>
+<li><strong>Example working pull (latest observations):</strong></li>
+<li><code>[https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,GLOBAL_DATAFLOW,1.0/..../?lastNObservations=1</code>](https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/data/UNICEF,GLOBAL_DATAFLOW,1.0/..../?lastNObservations=1`)</li>
+<li><strong>Evidence of live availability in this run:</strong> <code>dataflow</code> and sample <code>data</code> endpoint returned HTTP 200.</li>
+</ul>
+<h2 id="how-to-use-it">How to use it</h2>
 <ol>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/cdc-wastewater-data-for-sars-cov-2">CDC Wastewater Data for SARS-CoV-2</a></strong><br />
-   Community wastewater surveillance for earlier detection of transmission trend changes before hospital and death series fully reflect shifts.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/provisional-covid-19-death-counts-rates-and-percent-of-total-deaths-by-jurisdiction-of-res">Provisional COVID-19 Death Counts, Rates, and Percent of Total Deaths, by Jurisdiction of Residence</a></strong><br />
-   Jurisdiction-level mortality levels/rates/share-of-all-deaths context for comparing absolute and compositional burden across places.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/supply-chain-and-freight-indicators">Supply Chain and Freight Indicators</a></strong><br />
-   BTS cross-modal freight indicators that support reproducible pressure checks across ports, rail, trucking, and related logistics components.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/mta-metro-north-service-reliability-beginning-2020">MTA Metro-North Service Reliability: Beginning 2020</a></strong><br />
-   Metro-North reliability performance series for identifying sustained commuter-access degradation beyond one-off delay events.</p>
-</li>
-<li>
-<p><strong><a href="https://catalog.data.gov/dataset/worker-adjustment-and-retraining-notification-warn-notices">Worker Adjustment and Retraining Notification (WARN) Notices</a></strong><br />
-   Employer closure/layoff notice data that can flag local income-risk and service-demand pressure before many monthly labor indicators update.</p>
-</li>
+<li>Pull available dataflows via <code>/dataflow</code> to identify relevant indicator families (for example: immunisation, nutrition, child mortality, WASH, education).</li>
+<li>Retrieve selected series through <code>/data/{flowRef}/{key}</code> with a fixed extraction template per indicator group.</li>
+<li>Compare latest observation against prior period and a 3–5 year baseline where available.</li>
+<li>Pair with one independent consequence-family source (for example WHO DON, HDX/OCHA, or local ministry releases) before drawing strong causal conclusions.</li>
 </ol>
-<h2 id="why-this-matters-now">Why this matters now</h2>
+<h2 id="scope-and-limits">Scope and limits</h2>
 <ul>
-<li><strong>Earlier health risk detection:</strong> wastewater + mortality-composition signals improve lead/lag interpretation for public-health communication.</li>
-<li><strong>Supply chain decision utility:</strong> structured freight indicators improve quick triage of whether disruption is isolated or cross-modal.</li>
-<li><strong>Household consequence visibility:</strong> WARN notices tighten the window between employer actions and local planning responses.</li>
+<li>Coverage is global but not uniform; country cadence and reporting lag vary.</li>
+<li>Indicator definitions are not interchangeable across all series; each metric needs denominator checks.</li>
+<li>Some high-frequency shocks will appear with delay in official child-indicator systems.</li>
 </ul>
-<h2 id="caveats">Caveats</h2>
-<ul>
-<li>WARN coverage and notice rules vary by state and may miss smaller workforce events.</li>
-<li>Wastewater coverage is uneven by site and requires normalization care.</li>
-<li>Freight indicators are multi-component and updated on mixed cadences; component definitions should be checked before cross-period claims.</li>
-<li>Provisional mortality series revise over time and should be treated as directional during short windows.</li>
-</ul>
+<h2 id="why-this-is-important-now">Why this is important now</h2>
+<p>This dataset improves consequence-first OSINT: it can connect upstream shocks to household-level outcomes (health access, nutrition pressure, school participation) that matter to families, aid planners, and local operators. It is a high-utility addition for runs that need public-interest signals beyond market-only or specialist telemetry.</p>
 <h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
-<li>data.gov metadata and endpoints listed above.</li>
-<li>Updated catalog entry file: <code>docs/datasets-catalog.md</code>.</li>
+<li>UNICEF SDMX API documentation: <a href="https://data.unicef.org/sdmx-api-documentation/">https://data.unicef.org/sdmx-api-documentation/</a></li>
+<li>UNICEF SDMX API root: <a href="https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/">https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/</a></li>
 </ul>
 </body>
 </html>
