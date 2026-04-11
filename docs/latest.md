@@ -1,38 +1,43 @@
-# Datasets: homelessness, youth capacity, and neighborhood-friction stack (watchlist 100)
+# Datasets: Montgomery County daily crime feed for local public-safety signal (watchlist 101)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-11-dataset-intel-homelessness-youth-capacity-and-neighborhood-friction-stack-watchlist-100.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-11-dataset-intel-homelessness-youth-capacity-and-neighborhood-friction-stack-watchlist-100.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-11-dataset-brief-montgomery-county-crime-daily-public-safety-signal-watchlist-101.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-11-dataset-brief-montgomery-county-crime-daily-public-safety-signal-watchlist-101.md)
 
-**Dateline:** 2026-04-11 09:41 UTC
+**Dateline:** 2026-04-11 13:47 UTC
 
-This DATASETS_A cycle adds four machine-readable datasets that improve consequence-first monitoring of shelter pressure, youth housing capacity, and neighborhood service-friction signals.
+No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.
 
-## Added in this run
+The **Crime** dataset from Montgomery County, Maryland provides founded-incident records with daily refresh and machine-readable resources. For non-specialist readers, this matters because local crime-mix and location shifts directly inform household safety decisions, neighborhood risk posture, and public-service prioritization.
 
-- **[DHS Daily Report (Historical)](https://catalog.data.gov/dataset/dhs-daily-report-historical)** — pre-2021 New York City daily shelter census and application-flow history for longer baseline and regime-shift checks.
-- **[DHS Data Dashboard](https://catalog.data.gov/dataset/dhs-data-dashboard)** — demographic composition of households in NYC shelter services, useful for targeting support where burden concentration shifts.
-- **[Runaway and Homeless Youth (RHY) Daily Census](https://catalog.data.gov/dataset/runaway-and-homeless-youth-rhy-daily-census)** — daily bed availability and vacancy metrics across youth crisis and transitional housing programs.
-- **[Noise Complaints](https://catalog.data.gov/dataset/noise-complaints)** — Montgomery County complaint-level noise records from 311/web channels with near-daily refresh.
+## Dataset overview
 
-## Why this stack matters
+- **Dataset:** Crime
+- **Catalog page:** [https://catalog.data.gov/dataset/crime](https://catalog.data.gov/dataset/crime)
+- **Publisher context:** data.montgomerycountymd.gov (via Data.gov metadata)
+- **Direct raw access confirmed:** CSV / JSON / XML / RDF resources exposed
+- **Metadata updated:** 2026-04-05
+- **Data last modified (catalog):** 2026-04-04
 
-- **Household protection decisions:** shelter census and historical baseline layers improve early warning for overflow and sustained housing stress.
-- **Youth-specific service risk:** RHY bed vacancy data helps distinguish total-system pressure from youth-program bottlenecks.
-- **Neighborhood quality-of-life pressure:** noise complaint surges can reveal localized service friction that often precedes broader municipal strain narratives.
+## Why it is useful now
 
-## Practical use pattern
+- **High-consequence local safety signal:** daily updates allow faster checks of offense concentration and neighborhood pressure changes.
+- **Decision usefulness:** supports practical decisions for residents, local services, and community safety organizations.
+- **Cross-domain chain value:** can be paired with 311 complaints, EMS dispatch, and eviction/displacement indicators for second-order stress mapping.
 
-1. Build current-vs-historical shelter pressure baselines using current and historical DHS series.
-2. Segment by demographic composition to detect burden concentration shifts.
-3. Track RHY vacancy rates as an operational slack indicator for youth placement risk.
-4. Cross-check local complaint spikes with weather, events, and service disruptions before causal claims.
+## Practical analysis approach
 
-## Caveats
+1. Pull latest daily incident records and group by offense family and geography.
+2. Compare recent 7/30-day windows against prior baselines to identify non-routine shifts.
+3. Check whether spikes are broad-based or concentrated in a small number of tracts/blocks.
+4. Validate preliminary patterns against at least one independent local burden dataset before strong causal claims.
 
-- Three of four additions are NYC-scoped and should not be generalized nationally.
-- Complaint datasets reflect reporting behavior and enforcement pathways, not all underlying incidents.
-- Administrative social-service datasets can revise with backfills or category-policy updates.
+## Limits and cautions
+
+- Preliminary incident classifications can be revised after investigation.
+- Reporting and coding practices can shift over time.
+- Dataset is county-scoped and not a national proxy.
+- Use for directional situational awareness, not definitive causal attribution alone.
 
 ## Appendix: Sources
 
-- Data.gov catalog (all datasets linked above)
+- Data.gov dataset entry: [https://catalog.data.gov/dataset/crime](https://catalog.data.gov/dataset/crime)
