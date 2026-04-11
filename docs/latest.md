@@ -1,39 +1,43 @@
-# Datasets: health, mobility, and household pressure stack (watchlist 98)
+# Datasets: Respiratory-illness visit surveillance for city-level care pressure (watchlist 99)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-health-mobility-and-household-pressure-stack-watchlist-98.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-health-mobility-and-household-pressure-stack-watchlist-98.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-11-dataset-brief-respiratory-illness-visits-city-level-care-pressure-watchlist-99.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-11-dataset-brief-respiratory-illness-visits-city-level-care-pressure-watchlist-99.md)
 
-**Dateline:** 2026-04-10 18:03 UTC
+**Dateline:** 2026-04-11 05:52 UTC
 
-This DATASETS_B cycle adds five machine-readable datasets that improve consequence-first monitoring across hospital baseline capacity, airfare affordability and route pressure, homelessness system load, and overdose emergency burden.
+No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.
 
-## Added in this run
+The **Inpatient, Emergency Department, and Outpatient Visits for Respiratory Illnesses** dataset gives weekly respiratory-burden indicators across emergency departments, inpatient admissions, and outpatient surveillance streams. For non-specialist readers and operators, this is useful because respiratory surges quickly translate into practical decisions about care seeking, local service pressure, and short-horizon risk posture.
 
-- **[Licensed and Certified Healthcare Facility Bed Types and Counts](https://catalog.data.gov/dataset/licensed-and-certified-healthcare-facility-bed-types-and-counts-ad4df)** — facility-level bed-type capacity counts for California providers, useful for baseline care-capacity and surge-bottleneck checks.
-- **[Consumer Airfare Report: Table 1a - All U.S. Airport Pair Markets](https://catalog.data.gov/dataset/consumer-airfare-report-table-1a-all-u-s-airport-pair-markets)** — airport-pair fare and passenger-volume data for national route-level travel-cost and access monitoring.
-- **[Consumer Airfare Report: Table 6 - Contiguous State City-Pair Markets That Average At Least 10 Passengers Per Day](https://catalog.data.gov/dataset/consumer-airfare-report-table-6-contiguous-state-city-pair-markets-that-average-at-least-1)** — medium/high-traffic city-pair fare panel for concentration and fare-premium shift tracking.
-- **[DHS Daily Report](https://catalog.data.gov/dataset/dhs-daily-report)** — daily New York City shelter census/service-load data for homelessness pressure and capacity trend checks.
-- **[Opioid EMS Calls](https://catalog.data.gov/dataset/opioid-ems-calls-ac2fc)** — incident-level overdose-related EMS response calls in Tempe, Arizona for high-frequency local emergency burden monitoring.
+## Dataset overview
 
-## Why this stack matters
+- **Dataset:** Inpatient, Emergency Department, and Outpatient Visits for Respiratory Illnesses
+- **Catalog page:** [https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses](https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses)
+- **Publisher context:** data.cityofchicago.org (via Data.gov catalog metadata)
+- **Direct raw access confirmed:** CSV / JSON / XML / RDF resources exposed
+- **Metadata updated:** 2026-04-05
+- **Data last modified (catalog):** 2026-04-03
 
-- **Health capacity + acute burden linkage:** bed-type capacity and overdose call pressure provide a stronger operational picture than either alone.
-- **Mobility affordability consequence:** route-level airfare changes can quickly alter household travel access and small-business operating costs.
-- **Housing-system stress visibility:** daily shelter census data gives near-operational insight into homelessness system load rather than annual snapshots.
+## Why it is useful now
 
-## Practical use pattern
+- **High-consequence public-health relevance:** weekly respiratory illness pressure can directly affect wait times, bed turnover, and household care access.
+- **Decision usefulness:** supports timing decisions for local public-health messaging, surge staffing, and personal risk mitigation.
+- **Cross-domain value:** pairs well with school-absence, mobility, pharmacy, and utility-disruption datasets to test downstream stress patterns.
 
-1. Track bed-capacity and shelter-load baselines for stress thresholds.
-2. Monitor city-pair airfare shifts for sudden accessibility/cost pressure.
-3. Pair overdose EMS call spikes with local hospital-load context before causal claims.
-4. Use multi-dataset triangulation to distinguish temporary noise from persistent pressure.
+## Practical analysis approach
 
-## Caveats
+1. Pull latest weekly series via CSV/JSON endpoints.
+2. Build recent baseline (4–12 weeks) for emergency-department and inpatient percentages.
+3. Compare age-group and race/ethnicity slices for concentration shifts.
+4. Cross-check with at least one independent respiratory signal before strong causal claims.
 
-- Several additions are subnational (California, NYC, Tempe) and should not be over-generalized nationally.
-- Administrative and operational datasets can revise after backfills.
-- Route composition and seasonal travel patterns can affect airfare comparability.
+## Limits and cautions
+
+- Geographic scope is city-level and not nationally representative.
+- Data are provisional and can revise as reporting backfills.
+- Syndromic definitions and coding practices can shift comparability.
+- Use as a decision-support indicator, not sole proof of mechanism.
 
 ## Appendix: Sources
 
-- Data.gov catalog (all datasets linked above)
+- Data.gov dataset entry: [https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses](https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses)

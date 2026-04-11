@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: health, mobility, and household pressure stack (watchlist 98)</title>
+  <title>Datasets: Respiratory-illness visit surveillance for city-level care pressure (watchlist 99)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,41 +16,44 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-health-mobility-and-household-pressure-stack-watchlist-98">Datasets: health, mobility, and household pressure stack (watchlist 98)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-health-mobility-and-household-pressure-stack-watchlist-98.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-10-dataset-intel-health-mobility-and-household-pressure-stack-watchlist-98.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-10 18:03 UTC</p>
-<p>This DATASETS_B cycle adds five machine-readable datasets that improve consequence-first monitoring across hospital baseline capacity, airfare affordability and route pressure, homelessness system load, and overdose emergency burden.</p>
-<h2 id="added-in-this-run">Added in this run</h2>
+  <h1 id="datasets-respiratory-illness-visit-surveillance-for-city-level-care-pressure-watchlist-99">Datasets: Respiratory-illness visit surveillance for city-level care pressure (watchlist 99)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-11-dataset-brief-respiratory-illness-visits-city-level-care-pressure-watchlist-99.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-11-dataset-brief-respiratory-illness-visits-city-level-care-pressure-watchlist-99.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-11 05:52 UTC</p>
+<p>No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.</p>
+<p>The <strong>Inpatient, Emergency Department, and Outpatient Visits for Respiratory Illnesses</strong> dataset gives weekly respiratory-burden indicators across emergency departments, inpatient admissions, and outpatient surveillance streams. For non-specialist readers and operators, this is useful because respiratory surges quickly translate into practical decisions about care seeking, local service pressure, and short-horizon risk posture.</p>
+<h2 id="dataset-overview">Dataset overview</h2>
 <ul>
-<li><strong><a href="https://catalog.data.gov/dataset/licensed-and-certified-healthcare-facility-bed-types-and-counts-ad4df">Licensed and Certified Healthcare Facility Bed Types and Counts</a></strong> — facility-level bed-type capacity counts for California providers, useful for baseline care-capacity and surge-bottleneck checks.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/consumer-airfare-report-table-1a-all-u-s-airport-pair-markets">Consumer Airfare Report: Table 1a - All U.S. Airport Pair Markets</a></strong> — airport-pair fare and passenger-volume data for national route-level travel-cost and access monitoring.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/consumer-airfare-report-table-6-contiguous-state-city-pair-markets-that-average-at-least-1">Consumer Airfare Report: Table 6 - Contiguous State City-Pair Markets That Average At Least 10 Passengers Per Day</a></strong> — medium/high-traffic city-pair fare panel for concentration and fare-premium shift tracking.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/dhs-daily-report">DHS Daily Report</a></strong> — daily New York City shelter census/service-load data for homelessness pressure and capacity trend checks.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/opioid-ems-calls-ac2fc">Opioid EMS Calls</a></strong> — incident-level overdose-related EMS response calls in Tempe, Arizona for high-frequency local emergency burden monitoring.</li>
+<li><strong>Dataset:</strong> Inpatient, Emergency Department, and Outpatient Visits for Respiratory Illnesses</li>
+<li><strong>Catalog page:</strong> <a href="https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses">https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses</a></li>
+<li><strong>Publisher context:</strong> data.cityofchicago.org (via Data.gov catalog metadata)</li>
+<li><strong>Direct raw access confirmed:</strong> CSV / JSON / XML / RDF resources exposed</li>
+<li><strong>Metadata updated:</strong> 2026-04-05</li>
+<li><strong>Data last modified (catalog):</strong> 2026-04-03</li>
 </ul>
-<h2 id="why-this-stack-matters">Why this stack matters</h2>
+<h2 id="why-it-is-useful-now">Why it is useful now</h2>
 <ul>
-<li><strong>Health capacity + acute burden linkage:</strong> bed-type capacity and overdose call pressure provide a stronger operational picture than either alone.</li>
-<li><strong>Mobility affordability consequence:</strong> route-level airfare changes can quickly alter household travel access and small-business operating costs.</li>
-<li><strong>Housing-system stress visibility:</strong> daily shelter census data gives near-operational insight into homelessness system load rather than annual snapshots.</li>
+<li><strong>High-consequence public-health relevance:</strong> weekly respiratory illness pressure can directly affect wait times, bed turnover, and household care access.</li>
+<li><strong>Decision usefulness:</strong> supports timing decisions for local public-health messaging, surge staffing, and personal risk mitigation.</li>
+<li><strong>Cross-domain value:</strong> pairs well with school-absence, mobility, pharmacy, and utility-disruption datasets to test downstream stress patterns.</li>
 </ul>
-<h2 id="practical-use-pattern">Practical use pattern</h2>
+<h2 id="practical-analysis-approach">Practical analysis approach</h2>
 <ol>
-<li>Track bed-capacity and shelter-load baselines for stress thresholds.</li>
-<li>Monitor city-pair airfare shifts for sudden accessibility/cost pressure.</li>
-<li>Pair overdose EMS call spikes with local hospital-load context before causal claims.</li>
-<li>Use multi-dataset triangulation to distinguish temporary noise from persistent pressure.</li>
+<li>Pull latest weekly series via CSV/JSON endpoints.</li>
+<li>Build recent baseline (4–12 weeks) for emergency-department and inpatient percentages.</li>
+<li>Compare age-group and race/ethnicity slices for concentration shifts.</li>
+<li>Cross-check with at least one independent respiratory signal before strong causal claims.</li>
 </ol>
-<h2 id="caveats">Caveats</h2>
+<h2 id="limits-and-cautions">Limits and cautions</h2>
 <ul>
-<li>Several additions are subnational (California, NYC, Tempe) and should not be over-generalized nationally.</li>
-<li>Administrative and operational datasets can revise after backfills.</li>
-<li>Route composition and seasonal travel patterns can affect airfare comparability.</li>
+<li>Geographic scope is city-level and not nationally representative.</li>
+<li>Data are provisional and can revise as reporting backfills.</li>
+<li>Syndromic definitions and coding practices can shift comparability.</li>
+<li>Use as a decision-support indicator, not sole proof of mechanism.</li>
 </ul>
 <h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
-<li>Data.gov catalog (all datasets linked above)</li>
+<li>Data.gov dataset entry: <a href="https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses">https://catalog.data.gov/dataset/inpatient-emergency-department-and-outpatient-visits-for-respiratory-illnesses</a></li>
 </ul>
 </body>
 </html>
