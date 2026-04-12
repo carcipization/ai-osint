@@ -1,38 +1,43 @@
-# Datasets: real-time urban emergency-demand stack (watchlist 104)
+# Datasets: New Orleans calls-for-service feed for rapid local safety signal (watchlist 105)
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-12-dataset-intel-real-time-urban-emergency-demand-stack-watchlist-104.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-12-dataset-intel-real-time-urban-emergency-demand-stack-watchlist-104.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-12-dataset-brief-new-orleans-calls-for-service-rapid-local-safety-signal-watchlist-105.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-12-dataset-brief-new-orleans-calls-for-service-rapid-local-safety-signal-watchlist-105.md)
 
-**Dateline:** 2026-04-12 09:49 UTC
+**Dateline:** 2026-04-12 13:42 UTC
 
-This DATASETS_A cycle adds four machine-readable datasets that improve short-cycle consequence tracking for emergency response load and respiratory hospital pressure across large U.S. metro systems.
+No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.
 
-## Added in this run
+The **Calls for Service 2026** dataset from New Orleans provides machine-readable police call-for-service incidents for the current year. For non-specialist readers, this matters because shifts in call volume and category mix can quickly signal neighborhood safety pressure and emergency-response demand.
 
-- **[Seattle Real Time Fire 911 Calls](https://catalog.data.gov/dataset/seattle-real-time-fire-911-calls-cd20b)** — near-real-time Seattle Fire dispatch feed for incident-demand spikes.
-- **[LAPD Calls for Service 2024 to Present](https://catalog.data.gov/dataset/lapd-calls-for-service-2024)** — Los Angeles police call stream for neighborhood-level service-load shifts.
-- **[Law Enforcement Dispatched Calls for Service: Real-Time](https://catalog.data.gov/dataset/law-enforcement-dispatched-calls-for-service-real-time)** — San Francisco near-real-time police dispatch activity.
-- **[Respiratory Virus Hospital Admissions Over Time](https://catalog.data.gov/dataset/respiratory-virus-hospital-admissions-over-time)** — San Francisco weekly hospital admissions for influenza, RSV, and COVID-19.
+## Dataset overview
 
-## Why this stack matters
+- **Dataset:** Calls for Service 2026
+- **Catalog page:** [https://catalog.data.gov/dataset/calls-for-service-2026](https://catalog.data.gov/dataset/calls-for-service-2026)
+- **Publisher context:** data.nola.gov / Orleans Parish Communication District (via Data.gov metadata)
+- **Direct raw access confirmed:** CSV / JSON / XML / RDF resources
+- **Metadata updated:** 2026-04-12
+- **Data last modified (catalog):** 2026-04-11
 
-- **Operational speed:** three dispatch feeds provide minute-to-day visibility into local safety and response pressure.
-- **Health-system linkage:** respiratory admissions add a severe-illness burden layer that can validate or challenge dispatch-led stress signals.
-- **Decision utility:** supports practical staffing, readiness, and local risk-communication choices for residents, city operators, and service planners.
+## Why it is useful now
 
-## Practical use pattern
+- **Fast consequence signal:** call-for-service streams can reveal abrupt local safety and response-load changes faster than slower finalized reports.
+- **Decision usefulness:** supports practical planning for residents, local organizations, and municipal service operators.
+- **Cross-domain chain value:** can be paired with EMS dispatch, crash records, and housing-stress indicators to test broader neighborhood strain.
 
-1. Monitor 24h/7d dispatch volumes and category mix for non-routine surges.
-2. Compare geographic concentration across the three city feeds to identify localized stress clusters.
-3. Pair dispatch spikes with weekly respiratory admissions shifts before strong causal framing.
-4. Use rolling baselines and event annotations to separate true anomalies from reporting/cadence artifacts.
+## Practical analysis approach
 
-## Caveats
+1. Track daily and weekly shifts in call counts by signal type and area.
+2. Compare current 7/30-day windows against prior baselines to separate routine variation from genuine surges.
+3. Cross-check severe-category movement with at least one independent local dataset before strong causal claims.
+4. Use this stream for operational situational awareness, then validate with finalized incident/outcome records.
 
-- These are subnational administrative datasets and are not national proxies.
-- Dispatch records reflect coding, triage, and closure workflows that can change over time.
-- Hospital-admission series are periodic and may revise; they should be treated as lagged confirmation, not real-time causality proof.
+## Limits and cautions
+
+- Records are preliminary and call classifications can be reclassified after initial entry.
+- Location precision is reduced to block level and some sensitive call types are suppressed.
+- The source warns against strict long-run comparability for some use cases due to workflow and data-quality constraints.
+- City scope means results should not be generalized without corroborating evidence.
 
 ## Appendix: Sources
 
-- Data.gov catalog entries linked above.
+- Data.gov dataset entry: [https://catalog.data.gov/dataset/calls-for-service-2026](https://catalog.data.gov/dataset/calls-for-service-2026)
