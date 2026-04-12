@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: public safety and housing-enforcement stack (watchlist 102)</title>
+  <title>Datasets: Tempe measles wastewater early-signal layer for school/community risk checks (watchlist 103)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,40 +16,45 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-public-safety-and-housing-enforcement-stack-watchlist-102">Datasets: public safety and housing-enforcement stack (watchlist 102)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-11-dataset-intel-public-safety-and-housing-enforcement-stack-watchlist-102.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-11-dataset-intel-public-safety-and-housing-enforcement-stack-watchlist-102.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-11 17:41 UTC</p>
-<p>This DATASETS_B cycle adds four machine-readable datasets that strengthen consequence-first monitoring across emergency demand, traffic safety risk, and housing condition/compliance pressure.</p>
-<h2 id="added-in-this-run">Added in this run</h2>
+  <h1 id="datasets-tempe-measles-wastewater-early-signal-layer-for-schoolcommunity-risk-checks-watchlist-103">Datasets: Tempe measles wastewater early-signal layer for school/community risk checks (watchlist 103)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-12-dataset-brief-tempe-measles-wastewater-early-signal-watchlist-103.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-12-dataset-brief-tempe-measles-wastewater-early-signal-watchlist-103.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-12 05:46 UTC</p>
+<p>No standard STORY candidate in this slot cleared anomaly, mechanism, decision, and broad-importance gates after a data-first sweep, so this run publishes the mandatory dataset fallback as a dataset brief.</p>
+<p>The <strong>Biomarker Measles</strong> dataset from the City of Tempe provides wastewater surveillance signals for measles biomarkers. For non-specialist readers, this matters because early wastewater movement can provide practical lead time for school, household, and local health-service planning before confirmed case series settle.</p>
+<h2 id="dataset-overview">Dataset overview</h2>
 <ul>
-<li><strong><a href="https://catalog.data.gov/dataset/police-dispatched-incidents">Police Dispatched Incidents</a></strong> — Montgomery County incident-level police dispatch stream updated up to four times daily.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/automated-red-light-violations">Automated Red Light Violations</a></strong> — camera-captured red-light violations for intersection-level traffic-safety hotspot checks.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/housing-code-violations">Housing Code Violations</a></strong> — housing code-enforcement records (2013–present) with weekly updates.</li>
-<li><strong><a href="https://catalog.data.gov/dataset/housing-licensing-and-registration">Housing Licensing and Registration</a></strong> — rental license/registration inventory for condominiums, single-family, multifamily, and accessory units.</li>
+<li><strong>Dataset:</strong> Biomarker Measles</li>
+<li><strong>Catalog page:</strong> <a href="https://catalog.data.gov/dataset/biomarker-measles">https://catalog.data.gov/dataset/biomarker-measles</a></li>
+<li><strong>Publisher context:</strong> City of Tempe (non-federal dataset via Data.gov)</li>
+<li><strong>Direct raw access confirmed:</strong> ArcGIS Hub dataset resource + landing page/API-backed records</li>
+<li><strong>Metadata updated:</strong> 2026-03-07</li>
+<li><strong>Data last modified (catalog):</strong> 2026-03-05</li>
 </ul>
-<h2 id="why-this-stack-matters">Why this stack matters</h2>
+<h2 id="why-it-is-useful-now">Why it is useful now</h2>
 <ul>
-<li><strong>Immediate local decision utility:</strong> dispatch and red-light violation streams provide fast operational signals for safety pressure and enforcement load.</li>
-<li><strong>Household safety linkage:</strong> housing code violations surface potential habitability and health-risk conditions affecting residents directly.</li>
-<li><strong>Denominator context for housing stress:</strong> licensing/registration records improve interpretation of complaint and dispute datasets by adding stock/compliance baseline.</li>
+<li><strong>Early public-health signal:</strong> can highlight local measles activity pressure before full case adjudication windows complete.</li>
+<li><strong>Decision usefulness:</strong> supports practical timing decisions for schools, families, and local service providers.</li>
+<li><strong>Cross-domain chain value:</strong> can be paired with immunization coverage, emergency visit, and school-absence indicators for stronger local consequence assessment.</li>
 </ul>
-<h2 id="practical-use-pattern">Practical use pattern</h2>
+<h2 id="practical-analysis-approach">Practical analysis approach</h2>
 <ol>
-<li>Track 7/30-day shifts in dispatched incidents by type and geography.</li>
-<li>Compare red-light violation concentration with crash and complaint data before causal claims.</li>
-<li>Monitor weekly housing-code violation trends for persistent hotspot clusters.</li>
-<li>Use licensing inventory to normalize violation/dispute rates and avoid raw-count bias.</li>
+<li>Pull latest biomarker values and check site-level changes versus recent baseline windows.</li>
+<li>Separate one-off spikes from persistent trend movement with rolling comparisons.</li>
+<li>Cross-check with at least one independent local health-demand series before strong claims.</li>
+<li>Treat this as early-warning context, not standalone case-count confirmation.</li>
 </ol>
-<h2 id="caveats">Caveats</h2>
+<h2 id="limits-and-cautions">Limits and cautions</h2>
 <ul>
-<li>These are subnational datasets and should not be generalized to national conditions.</li>
-<li>Dispatch and enforcement records reflect administrative workflows and coding policies.</li>
-<li>Camera-placement, reporting behavior, and inspection intensity can influence observed counts.</li>
+<li>Wastewater biomarker signals are indirect proxies, not confirmed clinical diagnoses.</li>
+<li>Site coverage and sampling cadence can change comparability over time.</li>
+<li>City scope means findings should not be generalized to wider geographies without additional evidence.</li>
+<li>Signal movement can precede, lag, or diverge from confirmed surveillance counts.</li>
 </ul>
 <h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
-<li>Data.gov catalog (all datasets linked above)</li>
+<li>Data.gov dataset entry: <a href="https://catalog.data.gov/dataset/biomarker-measles">https://catalog.data.gov/dataset/biomarker-measles</a></li>
+<li>City landing page (from catalog metadata): <a href="https://data.tempe.gov/pages/tempegov::biomarker-measles">https://data.tempe.gov/pages/tempegov::biomarker-measles</a></li>
 </ul>
 </body>
 </html>
