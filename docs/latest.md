@@ -1,38 +1,35 @@
-# Datasets: coastal water and dispatch-operations stack (watchlist 106)
+# Datasets: NHS England A&E attendances and emergency admissions
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-12-dataset-intel-coastal-water-and-dispatch-operations-stack-watchlist-106.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-12-dataset-intel-coastal-water-and-dispatch-operations-stack-watchlist-106.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-04-13-dataset-brief-nhs-england-ae-attendances-and-emergency-admissions.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-04-13-dataset-brief-nhs-england-ae-attendances-and-emergency-admissions.md)
 
-**Dateline:** 2026-04-12 17:44 UTC
+**Dateline:** 2026-04-13 05:42 UTC
 
-This DATASETS_B cycle adds four machine-readable datasets that improve consequence-first monitoring across urban emergency demand and coastal public-health exposure conditions.
+No STORY_A candidate cleared the anomaly+mechanism+decision and broad-importance gates in this cycle, so this run publishes the mandatory fallback as a Dataset Brief.
 
 ## Added in this run
 
-- **[Call Data](https://catalog.data.gov/dataset/call-data-eb3f1)** — Seattle Police call-for-service activity feed with daily updates.
-- **[Law Enforcement Dispatched Calls for Service: Closed](https://catalog.data.gov/dataset/law-enforcement-dispatched-calls-for-service-closed)** — San Francisco closed dispatch-call records for stable trend checks.
-- **[Beach Water Quality Monitoring](https://catalog.data.gov/dataset/beach-water-quality-monitoring)** — San Francisco bacteriological beach-water monitoring results.
-- **[Beach Water Quality - Automated Sensors](https://catalog.data.gov/dataset/beach-water-quality-automated-sensors)** — Chicago near-hourly beach water sensor measurements during operational seasons.
+- **[NHS England A&E Attendances and Emergency Admissions](https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/)** — monthly emergency-care statistics (provider-level files) for attendances, four-hour performance, and emergency admissions.
 
-## Why this stack matters
+## Why this dataset matters now
 
-- **Everyday safety and service pressure:** two dispatch datasets provide practical visibility into changing local emergency-response demand.
-- **Direct household exposure relevance:** two beach-water datasets support rapid checks on recreation and coastal health risk conditions.
-- **Cross-domain utility:** pairing call-demand spikes with environmental exposure shifts can improve situational triage before slower formal reports.
+- **Broad household impact:** emergency-care pressure directly affects care access, wait times, and operational decisions for patients and families.
+- **Decision utility for non-specialists:** readers can track whether emergency demand and waits are rising or easing before seasonal narratives harden.
+- **Cross-domain linkage potential:** this series can be paired with respiratory surveillance, ambulance activity, and weather shocks to test mechanism claims instead of relying on anecdotal reports.
 
 ## Practical use pattern
 
-1. Track 24h/7d shifts in dispatch calls by category and area.
-2. Use closed-call records for cleaner trend baselines after in-progress updates settle.
-3. Monitor beach-water indicators for abrupt changes in exposure-risk conditions.
-4. Cross-check spikes with local advisories and healthcare-demand indicators before strong causal claims.
+1. Pull latest monthly publication pack and prior-month comparator.
+2. Compare attendances, emergency admissions, and wait-time distribution versus recent baseline.
+3. Cross-check with respiratory or local incident datasets before assigning causes.
+4. Flag provisional/lag windows where revision risk is highest.
 
 ## Caveats
 
-- Dispatch datasets reflect administrative coding, triage, and closure workflows.
-- Beach-water sensor and sampling coverage can be seasonal and site-dependent.
-- Local datasets are not national proxies and should be interpreted within jurisdiction context.
+- Publication cadence is monthly, so this is not a live operational feed.
+- Metrics and publication structure can change with NHS methodology updates.
+- England coverage is not automatically representative of devolved UK systems.
 
 ## Appendix: Sources
 
-- Data.gov catalog entries linked above.
+- NHS England statistical release page linked above.
