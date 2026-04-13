@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: UK flood, grid, and mobility open-data stack (watchlist 107)</title>
+  <title>Datasets: Environment Agency Rainfall API for flood-context checks (watchlist 108)</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,40 +16,37 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-uk-flood-grid-and-mobility-open-data-stack-watchlist-107">Datasets: UK flood, grid, and mobility open-data stack (watchlist 107)</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-13-dataset-intel-uk-flood-grid-and-mobility-open-data-stack-watchlist-107.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-13-dataset-intel-uk-flood-grid-and-mobility-open-data-stack-watchlist-107.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-13 09:41 UTC</p>
-<p>This DATASETS_A cycle adds four machine-readable UK datasets that improve fast consequence checks across flood exposure, coastal risk, electricity-system strain, and road-mobility pressure.</p>
+  <h1 id="datasets-environment-agency-rainfall-api-for-flood-context-checks-watchlist-108">Datasets: Environment Agency Rainfall API for flood-context checks (watchlist 108)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-13-dataset-brief-environment-agency-rainfall-api-flood-context-watchlist-108.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-04-13-dataset-brief-environment-agency-rainfall-api-flood-context-watchlist-108.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-04-13 13:40 UTC</p>
+<p>No STORY_B candidate cleared anomaly, mechanism, decision, and broad-importance gates in this cycle. Mandatory fallback executed as a dataset brief.</p>
 <h2 id="added-in-this-run">Added in this run</h2>
 <ul>
-<li><strong><a href="https://environment.data.gov.uk/flood-monitoring/doc/reference">Environment Agency Flood Monitoring API</a></strong> — open warning/alert and river-level API for England.</li>
-<li><strong><a href="https://environment.data.gov.uk/flood-monitoring/doc/tidegauge">Environment Agency Tide Gauge API</a></strong> — 15-minute UK coastal tide-level observations.</li>
-<li><strong><a href="https://api.neso.energy/api/3/action/package_search">NESO Open Data API (GB electricity system)</a></strong> — CKAN API gateway for Great Britain electricity demand/generation/system datasets.</li>
-<li><strong><a href="https://roadtraffic.dft.gov.uk/api-docs">UK DfT Road Traffic Statistics API</a></strong> — open road traffic counts and vehicle-mile series across Great Britain geographies.</li>
+<li><strong><a href="https://environment.data.gov.uk/flood-monitoring/doc/rainfall">Environment Agency Rainfall API</a></strong> — open rainfall station observations and recent accumulations for England.</li>
 </ul>
-<h2 id="why-this-stack-matters">Why this stack matters</h2>
+<h2 id="why-this-dataset-matters-now">Why this dataset matters now</h2>
 <ul>
-<li><strong>Direct household and municipal relevance:</strong> flood and tide signals map to immediate safety, travel, and local-response decisions.</li>
-<li><strong>Cross-domain chain value:</strong> grid-stress and road-flow datasets help test whether weather and hazard shocks are cascading into power reliability and mobility access.</li>
-<li><strong>Operational utility:</strong> all four sources provide machine-readable access suitable for repeatable anomaly scans and baseline comparisons.</li>
+<li><strong>Direct household decision value:</strong> rainfall intensity and persistence help residents judge local flooding and travel risk, not just headline alert status.</li>
+<li><strong>Operational consequence value:</strong> local authorities and responders can test whether warning changes align with measured rainfall shifts.</li>
+<li><strong>Cross-domain linkage:</strong> rainfall observations can be paired with flood alerts, river-level gauges, transit disruption data, and power-outage reports to separate weather-driven disruption from unrelated incidents.</li>
 </ul>
 <h2 id="practical-use-pattern">Practical use pattern</h2>
 <ol>
-<li>Track flood warnings and gauge levels by area, then compare with prior-day/prior-week conditions.</li>
-<li>Use tide gauges to monitor coastal surge persistence and validate local flood-risk context.</li>
-<li>Pull NESO demand/generation/balancing series to test power-system stress during hazard windows.</li>
-<li>Cross-check DfT traffic counts to see whether disruption is changing movement patterns at regional/local levels.</li>
+<li>Pull station-level recent rainfall observations for affected localities.</li>
+<li>Compare current/last-24h values against nearby stations and recent baseline windows.</li>
+<li>Cross-check with flood warnings and river-level gauges before assigning mechanism.</li>
+<li>Flag station gaps and transfer-lag windows when making near-real-time claims.</li>
 </ol>
 <h2 id="caveats">Caveats</h2>
 <ul>
-<li>Flood/tide data quality and timeliness vary by station and transfer intervals.</li>
-<li>NESO API coverage spans many datasets with differing publication cadences and definitions.</li>
-<li>DfT road traffic series include modeled annual estimates and count-point comparability limits.</li>
+<li>Station coverage is uneven; sparse local networks can understate micro-events.</li>
+<li>Transfer latency and maintenance outages can create apparent drops/spikes.</li>
+<li>Gauge readings support context but are not a complete flood-impact proxy on their own.</li>
 </ul>
 <h2 id="appendix-sources">Appendix: Sources</h2>
 <ul>
-<li>Environment Agency and UK government API/documentation pages linked above.</li>
+<li>Environment Agency Flood Monitoring API documentation linked above.</li>
 </ul>
 </body>
 </html>
