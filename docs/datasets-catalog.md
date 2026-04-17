@@ -7,7 +7,7 @@
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 289 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 145 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (45), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+45+7+7+12+12+2+3+1 = **140** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (50), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 27+14+11+50+7+7+12+12+2+3+1 = **145** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -188,6 +188,11 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Continuum of Care (CoC) Housing Inventory Count Reports](https://catalog.data.gov/dataset/coc-housing-inventory-count-reports) — Annual HUD housing-inventory snapshots for sheltered and unsheltered homelessness-response capacity at national, state, and CoC levels. Useful housing-stress and shelter-capacity baseline with methodology and local reporting-consistency caveats.
 - [SDWIS/FED Drinking Water Data](https://catalog.data.gov/dataset/sdwisfed-drinking-water-data) — EPA national compliance dataset for public water systems, violations by contaminant/rule, and enforcement context, enabling direct checks of drinking-water safety exposure by geography and year. High public-health consequence signal with state reporting lag and enforcement-status update caveats.
 - [Current and Resolved Drug Shortages and Discontinuations Reported to FDA](https://catalog.data.gov/dataset/current-and-resolved-drug-shortages-and-discontinuations-reported-to-fda) — FDA manufacturer-reported current/resolved shortage and discontinuation records for specific drug products, useful for early warning on treatment access risks before they appear in utilization or mortality series. High public-health consequence signal with manufacturer-reporting and resolution-timing caveats.
+- [openFDA Drug Enforcement Reports API](https://open.fda.gov/apis/drug/enforcement/) — FDA machine-readable drug recall enforcement records with recall reason, classification, distribution scope, and timeline fields for rapid checks of medicine safety exposure and pharmacy substitution pressure. High household and provider decision relevance with ongoing case updates and coding-consistency caveats.
+- [openFDA Food Enforcement Reports API](https://open.fda.gov/apis/food/enforcement/) — FDA recall and market-withdrawal records for foods, including classification and distribution geography, supporting faster contamination-risk triage and consumer-facing safety advisories. Strong public-health consequence signal with reporting-lag and product-taxonomy caveats.
+- [openFDA Device Enforcement Reports API](https://open.fda.gov/apis/device/enforcement/) — FDA device recall enforcement dataset for tracking whether safety actions involve widely used medical devices that can disrupt care delivery or patient use patterns. High patient-safety and service-continuity relevance with manufacturer report dependence and classification-update caveats.
+- [openFDA Drug Adverse Event API (FAERS)](https://open.fda.gov/apis/drug/event/) — Programmatic access to FDA adverse-event safety reports for medicines, enabling early detection of unusual harm-reporting clusters before finalized epidemiologic assessments. High consequence pharmacovigilance layer with spontaneous-reporting bias and causality-limit caveats.
+- [openFDA Device Adverse Event API (MAUDE)](https://open.fda.gov/apis/device/event/) — FDA medical-device adverse-event report API for monitoring potential safety-signal accumulation linked to implants and critical equipment classes. Strong healthcare safety signal with underreporting, duplicate report, and follow-up revision caveats.
 - [Monthly Prescription Drug Plan Formulary and Pharmacy Network Information](https://catalog.data.gov/dataset/monthly-prescription-drug-plan-formulary-and-pharmacy-network-information) — Monthly Medicare Part D and MA-PD formulary/network tables that show which drugs and pharmacy networks are available by plan and geography, supporting fast checks of access friction and substitution burden for patients. Strong household healthcare-access indicator with plan-cycle and benefit-design caveats.
 - [Hospitals](https://catalog.data.gov/dataset/hospitals-e60a8) — HIFLD geospatial hospital inventory for mapping healthcare-facility coverage and service-access exposure during disasters and infrastructure disruptions. Useful operational capacity denominator with facility-status currency caveats.
 - [State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data](https://catalog.data.gov/dataset/state-medicaid-and-chip-applications-eligibility-determinations-and-enrollment-data-f1647) — CMS state-level monthly indicators for application volume, eligibility actions, enrollment, and call-center process metrics that reveal healthcare-access pressure and administrative bottlenecks. High public-consequence safety-net signal with state reporting and revision-window caveats.
