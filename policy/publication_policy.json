@@ -1,7 +1,7 @@
 {
   "version": 1,
   "publishableSlots": {
-    "cadence": ["STORY_A", "STORY_B", "STORY_C", "DATASETS_A", "DATASETS_B", "DATASETS_C"],
+    "cadence": ["STORY", "DATASETS"],
     "oneoff": ["STORY", "DATASETS"]
   },
   "forbiddenDocsSlugRegex": "(followup|datasets-optimize|kev|known-exploited-vulnerabilities|cisa-known-exploited)",
