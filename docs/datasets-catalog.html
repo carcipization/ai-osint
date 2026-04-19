@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-09 17:40 UTC</p>
+<p><strong>Dateline:</strong> 2026-04-19 14:40 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 145 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 150 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (50), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 27+14+11+50+7+7+12+12+2+3+1 = <strong>145</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (30), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (51), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (13), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 30+14+11+51+7+7+13+12+2+3+1 = <strong>150</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -123,6 +124,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <li><a href="https://environment.data.gov.uk/flood-monitoring/doc/rainfall">Environment Agency Rainfall API</a> — Open rainfall station observations and recent accumulation/measurement endpoints for England that help convert flood alerts into measurable precipitation context for local safety and travel decisions. High household and municipal consequence value with gauge-density, timing-lag, and station-maintenance caveats.</li>
 <li><a href="https://api.reliefweb.int/">ReliefWeb API</a> — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.</li>
 <li><a href="https://www.who.int/api/news/diseaseoutbreaknews/sfhelp">WHO Disease Outbreak News API</a> — WHO machine-readable outbreak-news endpoint for rapid retrieval of official outbreak reports and update chronology across countries and pathogens. High public-health consequence signal for travel, preparedness, and clinical-alert decisions, with report-timing and event-definition caveats.</li>
+<li><a href="https://wonder.cdc.gov/wonder/help/WONDER-API.html">CDC WONDER API</a> — CDC programmatic query interface for mortality, natality, and notifiable-condition statistical tables that can validate whether local health shocks are translating into measurable severe outcomes. High household and health-system consequence value with suppression, aggregation, and release-lag caveats.</li>
 <li><a href="https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/">UNICEF SDMX API (Global + Sector Dataflows)</a> — UNICEF machine-readable indicator warehouse (global and thematic dataflows for child mortality, immunization, nutrition, education, WASH, social protection, and related SDG-aligned metrics) for cross-country consequence tracking and vulnerability baselining. High non-specialist decision value for service-access and child-wellbeing monitoring, with indicator-definition heterogeneity and release-lag caveats.</li>
 <li><a href="https://data.humdata.org/">Humanitarian Data Exchange (HDX)</a> — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.</li>
 <li><a href="https://docs.openaq.org/">OpenAQ API</a> — Global open air-quality measurements (including PM2.5/ozone and station metadata) for rapid public-health exposure checks during smoke, pollution, and cross-border haze episodes. High non-specialist consequence signal with monitor-density and reporting-latency caveats.</li>
@@ -377,9 +379,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <ul>
 <li><a href="https://www.census.gov/data/developers/data-sets/household-pulse-survey.html">Household Pulse Survey Public Use File and API</a> — Near-real-time U.S. household survey indicators on food sufficiency, housing strain, health access, and employment disruption. High-consequence social-pressure signal with sampling and questionnaire-version caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/fair-market-rents">Fair Market Rents</a> — HUD rent benchmarks by metropolitan area/county used for housing affordability, voucher adequacy, and displacement-risk context. Decision-useful cost-of-living baseline with annual-method updates and local market lag caveats.</li>
+<li><a href="https://www.huduser.gov/portal/datasets/usps_crosswalk.html">HUD USPS ZIP Code Crosswalk Files</a> — Quarterly HUD crosswalk tables linking ZIPs to census tracts/counties/CBSAs for reproducible joins between household-cost, demographic, and service-access datasets. High non-specialist housing and local-policy decision value with ZIP boundary drift and weighting-method caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/hud-low-and-moderate-income-areas">Low and Moderate Income Areas</a> — HUD geospatial eligibility layer identifying low- and moderate-income areas for targeting housing, credit, and community-investment interventions. High operational decision utility with boundary-vintage and tract-update caveats.</li>
 <li><a href="https://www.census.gov/permits">Building Permits Survey (BPS)</a> — U.S. Census monthly residential permitting counts across national, state, and metro/local geographies, useful for early housing-supply and construction-cycle stress signals before completions and affordability effects fully appear. High consequence housing pipeline indicator with revision and methodology-update caveats.</li>
+<li><a href="https://evictionlab.org/data/">Eviction Lab Data and Research Tools</a> — County/city/state eviction filing and judgment indicators for measuring household housing insecurity pressure before homelessness and school-disruption effects become visible in slower annual series. High household-stability and local-service consequence signal with court-coverage and jurisdiction comparability caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/fhfa-house-price-indexes-hpis-948c6">FHFA House Price Indexes (HPIs)</a> — Federal Housing Finance Agency repeat-sales home-price index suite (national, state, metro, county, ZIP and tract cuts) for tracking shelter-cost pressure and regional housing-affordability divergence. High household-cost and mortgage-risk consequence value with revision-vintage and geography-comparability caveats.</li>
+<li><a href="https://broadbandmap.fcc.gov/data-download">FCC National Broadband Map Downloads</a> — Location-level broadband availability and technology deployment files for tracking digital-access inequality that affects schooling, telehealth, and remote-work resilience during local disruptions. High non-specialist service-access and productivity consequence value with provider-reporting challenge windows and coverage-model caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zip-code-2024">U.S. Electric Utility Companies and Rates: Look-up by Zip Code (2024)</a> — ZIP-level utility-provider and average-rate lookup for rapid checks of local household electricity-cost exposure and affordability pressure. Strong consumer-cost decision layer with annual snapshot cadence and tariff-change timing caveats.</li>
 <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation">World Bank Indicators API</a> — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.</li>
 <li><a href="https://www.imf.org/external/datamapper/api/">IMF Data API</a> — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.</li>
@@ -516,6 +521,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 <p><a href="https://crashviewer.nhtsa.dot.gov/CrashAPI">NHTSA Crash Data API (FARS/CRSS)</a> — Programmatic U.S. fatal-crash and sample crash microdata access for roadway-safety severity and trend checks. High public-safety relevance with reporting-lag and weighting-method caveats for national inference.</p>
 </li>
 <li><a href="https://cde.ucr.cjis.gov/">FBI CDE/UCR</a> — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.</li>
+<li><a href="https://crime-data-explorer.fr.cloud.gov/pages/downloads">FBI Crime Data Explorer Bulk Downloads</a> — Programmatic/bulk offense and arrest extracts from FBI Crime Data Explorer for reproducible short-cycle local safety trend checks beyond static dashboards. High household and municipal consequence value with participation heterogeneity and offense-definition transition caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/hate-crime-statistics-2004">Hate Crime Statistics</a> — FBI hate-crime incident and offense records for tracking targeted-violence patterns and community-safety risk across jurisdictions. High public-safety relevance with agency participation and classification-consistency caveats.</li>
 <li><a href="https://www.statcan.gc.ca/">Statistics Canada</a> — Canadian official statistical series for national and provincial context. Release lag and revisions apply.</li>
 <li><a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2">Chicago Crimes (2001–present)</a> — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.</li>

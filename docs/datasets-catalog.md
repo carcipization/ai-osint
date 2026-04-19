@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-09 17:40 UTC
+**Dateline:** 2026-04-19 14:40 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 145 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 150 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (27), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (50), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (12), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 27+14+11+50+7+7+12+12+2+3+1 = **145** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (30), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (51), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (13), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 30+14+11+51+7+7+13+12+2+3+1 = **150** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -106,6 +106,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Environment Agency Rainfall API](https://environment.data.gov.uk/flood-monitoring/doc/rainfall) — Open rainfall station observations and recent accumulation/measurement endpoints for England that help convert flood alerts into measurable precipitation context for local safety and travel decisions. High household and municipal consequence value with gauge-density, timing-lag, and station-maintenance caveats.
 - [ReliefWeb API](https://api.reliefweb.int/) — Structured humanitarian situation reports and updates. Useful chronology layer; quality follows upstream submitters.
 - [WHO Disease Outbreak News API](https://www.who.int/api/news/diseaseoutbreaknews/sfhelp) — WHO machine-readable outbreak-news endpoint for rapid retrieval of official outbreak reports and update chronology across countries and pathogens. High public-health consequence signal for travel, preparedness, and clinical-alert decisions, with report-timing and event-definition caveats.
+- [CDC WONDER API](https://wonder.cdc.gov/wonder/help/WONDER-API.html) — CDC programmatic query interface for mortality, natality, and notifiable-condition statistical tables that can validate whether local health shocks are translating into measurable severe outcomes. High household and health-system consequence value with suppression, aggregation, and release-lag caveats.
 - [UNICEF SDMX API (Global + Sector Dataflows)](https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/) — UNICEF machine-readable indicator warehouse (global and thematic dataflows for child mortality, immunization, nutrition, education, WASH, social protection, and related SDG-aligned metrics) for cross-country consequence tracking and vulnerability baselining. High non-specialist decision value for service-access and child-wellbeing monitoring, with indicator-definition heterogeneity and release-lag caveats.
 - [Humanitarian Data Exchange (HDX)](https://data.humdata.org/) — OCHA-managed open humanitarian datasets and APIs for crisis indicators, displacement, and response operations. High-value cross-country evidence layer with dataset-specific quality/coverage variance.
 - [OpenAQ API](https://docs.openaq.org/) — Global open air-quality measurements (including PM2.5/ozone and station metadata) for rapid public-health exposure checks during smoke, pollution, and cross-border haze episodes. High non-specialist consequence signal with monitor-density and reporting-latency caveats.
@@ -342,9 +343,12 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 
 - [Household Pulse Survey Public Use File and API](https://www.census.gov/data/developers/data-sets/household-pulse-survey.html) — Near-real-time U.S. household survey indicators on food sufficiency, housing strain, health access, and employment disruption. High-consequence social-pressure signal with sampling and questionnaire-version caveats.
 - [Fair Market Rents](https://catalog.data.gov/dataset/fair-market-rents) — HUD rent benchmarks by metropolitan area/county used for housing affordability, voucher adequacy, and displacement-risk context. Decision-useful cost-of-living baseline with annual-method updates and local market lag caveats.
+- [HUD USPS ZIP Code Crosswalk Files](https://www.huduser.gov/portal/datasets/usps_crosswalk.html) — Quarterly HUD crosswalk tables linking ZIPs to census tracts/counties/CBSAs for reproducible joins between household-cost, demographic, and service-access datasets. High non-specialist housing and local-policy decision value with ZIP boundary drift and weighting-method caveats.
 - [Low and Moderate Income Areas](https://catalog.data.gov/dataset/hud-low-and-moderate-income-areas) — HUD geospatial eligibility layer identifying low- and moderate-income areas for targeting housing, credit, and community-investment interventions. High operational decision utility with boundary-vintage and tract-update caveats.
 - [Building Permits Survey (BPS)](https://www.census.gov/permits) — U.S. Census monthly residential permitting counts across national, state, and metro/local geographies, useful for early housing-supply and construction-cycle stress signals before completions and affordability effects fully appear. High consequence housing pipeline indicator with revision and methodology-update caveats.
+- [Eviction Lab Data and Research Tools](https://evictionlab.org/data/) — County/city/state eviction filing and judgment indicators for measuring household housing insecurity pressure before homelessness and school-disruption effects become visible in slower annual series. High household-stability and local-service consequence signal with court-coverage and jurisdiction comparability caveats.
 - [FHFA House Price Indexes (HPIs)](https://catalog.data.gov/dataset/fhfa-house-price-indexes-hpis-948c6) — Federal Housing Finance Agency repeat-sales home-price index suite (national, state, metro, county, ZIP and tract cuts) for tracking shelter-cost pressure and regional housing-affordability divergence. High household-cost and mortgage-risk consequence value with revision-vintage and geography-comparability caveats.
+- [FCC National Broadband Map Downloads](https://broadbandmap.fcc.gov/data-download) — Location-level broadband availability and technology deployment files for tracking digital-access inequality that affects schooling, telehealth, and remote-work resilience during local disruptions. High non-specialist service-access and productivity consequence value with provider-reporting challenge windows and coverage-model caveats.
 - [U.S. Electric Utility Companies and Rates: Look-up by Zip Code (2024)](https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zip-code-2024) — ZIP-level utility-provider and average-rate lookup for rapid checks of local household electricity-cost exposure and affordability pressure. Strong consumer-cost decision layer with annual snapshot cadence and tariff-change timing caveats.
 - [World Bank Indicators API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) — Cross-country macro/social baselines. Good for context framing, weak for fast-cycle stories.
 - [IMF Data API](https://www.imf.org/external/datamapper/api/) — Sovereign and macro indicators for stress-consistency checks. Definitions/coverage differ across IMF datasets.
@@ -476,6 +480,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 
 - [NHTSA Crash Data API (FARS/CRSS)](https://crashviewer.nhtsa.dot.gov/CrashAPI) — Programmatic U.S. fatal-crash and sample crash microdata access for roadway-safety severity and trend checks. High public-safety relevance with reporting-lag and weighting-method caveats for national inference.
 - [FBI CDE/UCR](https://cde.ucr.cjis.gov/) — US crime baseline comparisons across jurisdictions. Participation and categorization shifts can affect comparability.
+- [FBI Crime Data Explorer Bulk Downloads](https://crime-data-explorer.fr.cloud.gov/pages/downloads) — Programmatic/bulk offense and arrest extracts from FBI Crime Data Explorer for reproducible short-cycle local safety trend checks beyond static dashboards. High household and municipal consequence value with participation heterogeneity and offense-definition transition caveats.
 - [Hate Crime Statistics](https://catalog.data.gov/dataset/hate-crime-statistics-2004) — FBI hate-crime incident and offense records for tracking targeted-violence patterns and community-safety risk across jurisdictions. High public-safety relevance with agency participation and classification-consistency caveats.
 - [Statistics Canada](https://www.statcan.gc.ca/) — Canadian official statistical series for national and provincial context. Release lag and revisions apply.
 - [Chicago Crimes (2001–present)](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2) — High-frequency city-level incident records for local anomaly scans. Backfills/reclassifications occur.
