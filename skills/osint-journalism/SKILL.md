@@ -135,6 +135,34 @@ Trace rule:
 - For STORY runs, explicitly log: (a) all Bluesky queries run (minimum 5), (b) trending topics reviewed, (c) which trend-derived queries were added, (d) dataset leads produced from Bluesky (or explicit none), (e) Polymarket queries/scans run (minimum 3), and (f) any Polymarket limitation notes (e.g., no match/low liquidity/noisy contract framing).
 - For every blocked/error fetch, log a structured line with: source name, URL, HTTP/status or error type, UTC timestamp, and one retry outcome (success/fail + status).
 
+### Bluesky + Polymarket wide-net policy (anti-confirmation, mandatory)
+
+Goal: avoid thesis-seeking query patterns. Treat both surfaces as discovery/counter-hypothesis inputs, not validation tools.
+
+Hard rules:
+1. **Do not start from a single favored thesis string.** Build a diversified query basket before reading results.
+2. **Minimum query diversity per run:**
+   - Bluesky: at least 8 distinct queries.
+   - Polymarket: at least 6 distinct scans/queries.
+3. **Query basket composition (both platforms):**
+   - 2 baseline neutral domain queries (broad topic without expected direction)
+   - 2 opposing-direction queries (explicitly test the inverse or competing narrative)
+   - 2 mechanism/second-order queries (spillovers, constraints, implementation effects)
+   - 1 null/no-change query (signals that would indicate the event is overstated or fading)
+   - 1 unrelated high-impact control query (checks whether better candidates exist outside current focus)
+4. **Promotion gate:** a lead cannot be shortlisted unless it survives one targeted disconfirming query.
+5. **Evidence weighting:**
+   - Bluesky/Polymarket never count as origin proof.
+   - They may generate leads, counter-hypotheses, and expectation/context signals only.
+6. **Breadth-over-comfort rule:** if >50% of queries come from one domain (e.g., only energy/geopolitics), add cross-domain queries until the mix is balanced or document why imbalance is required.
+
+Required trace fields (STORY):
+- `query_basket_plan` (the planned diversified basket before execution)
+- `executed_queries` with category labels (neutral/opposing/mechanism/null/control)
+- `top_disconfirming_findings`
+- `rejected_due_to_confirmation_risk` (explicit list, can be `none`)
+- `cross-domain candidates surfaced` (minimum 2, or explicit blocker)
+
 ## Dataset intake policy (batch-first, consequence-first)
 
 - Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
