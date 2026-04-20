@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-19 14:40 UTC
+**Dateline:** 2026-04-20 14:26 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 150 datasets • 11 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 155 datasets • 11 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -23,8 +23,8 @@ Compact reference list. Each item is 1–2 sentences: what it is and why it matt
 - [Space weather and disruption context](#space-weather-and-disruption-context)
 
 ## Structural QA snapshot
-- **Section balance (entries):** Economy/governance (30), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (51), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (13), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
-- **Balance checksum:** 30+14+11+51+7+7+13+12+2+3+1 = **150** (must match catalog metadata count).
+- **Section balance (entries):** Economy/governance (30), Energy/trade/maritime (15), Ownership/sanctions/procurement (11), Humanitarian/hazard (52), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (14), Aviation/mobility (14), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).
+- **Balance checksum:** 30+15+11+52+7+7+14+14+2+3+1 = **155** (must match catalog metadata count).
 - **Skew flag:** space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.
 - **Catalog hygiene checks:** metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.
 
@@ -99,6 +99,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [CAIDA IODA](https://www.caida.org/projects/ioda/) — Outage detection via BGP/darknet/active signals. Strong for macro outage events, less sensitive to app/platform-level blocking.
 
 ## Humanitarian and hazard context
+- [USDA FoodData Central API](https://fdc.nal.usda.gov/api-guide/) — USDA nutrient-composition and branded-food database API for monitoring diet affordability/quality substitutions and ingredient-risk exposure during household budget stress or supply disruptions. High household health and cost consequence signal with manufacturer-data heterogeneity and update-cadence caveats.
 
 - [USGS Water Data for the Nation (NWIS + Water Services API)](https://waterservices.usgs.gov/) — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.
 - [Environment Agency Flood Monitoring API](https://environment.data.gov.uk/flood-monitoring/doc/reference) — England flood warnings/alerts, area-level status, and river/level measurements via open JSON endpoints for rapid household and municipal flood-risk checks. High life-safety and service-disruption relevance with station coverage and transfer-latency caveats.
@@ -234,6 +235,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Los Angeles International Airport - Air Cargo Volume](https://catalog.data.gov/dataset/los-angeles-international-airport-air-cargo-volume) — Hub-specific cargo volume dataset for one of the highest-impact U.S. international freight gateways, supporting near-term monitoring of import/export pressure and rerouting effects.
 
 ## Energy, trade, and maritime
+- [NREL Alternative Fuel Stations API](https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/) — U.S. alternative-fuel and EV charging station inventory with location, fuel type, and access fields for checking mobility resilience when gasoline/diesel disruptions or evacuation flows shift demand. High transport-access and cost consequence value with station-status latency and network-operator reporting caveats.
 - [UN Comtrade](https://comtrade.un.org/) — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.
 - [UNCTADstat](https://unctadstat.unctad.org/EN/) — Trade and shipping indicators for structural maritime baselines. Strong macro context; indicator release cadence varies.
 - [World Bank Pink Sheet](https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet) — Commodity benchmark prices for shock context. Not a retail/local price proxy.
@@ -288,6 +290,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Hospital Provider Cost Report](https://catalog.data.gov/dataset/hospital-provider-cost-report) — Medicare hospital cost-report financial and utilization fields for monitoring facility-level operating stress before closures or service cuts become visible in slower outcomes data. High public-consequence healthcare-capacity signal with filing lag and accounting-method caveats.
 
 ## Aviation and mobility
+- [FAA National Airspace System (NAS) Status](https://nasstatus.faa.gov/) — Near-real-time FAA airport and airspace delay/closure status surface for rapid checks of flight-disruption severity affecting passenger travel, cargo timing, and connection reliability. High public mobility consequence signal with event-description brevity and evolving operational updates.
+- [BTS Airline On-Time Statistics (TranStats)](https://www.transtats.bts.gov/ONTIME/) — U.S. carrier-level on-time, cancellation, and delay-cause records (monthly, airport/route granularity) for baseline-normalized travel and logistics disruption analysis. Strong non-specialist decision utility with reporting lag and carrier-coverage scope caveats.
 - [Transportation Economic Trends (TET) data](https://catalog.data.gov/dataset/transportation-economic-trends-tet-data) — Multi-series transportation-economy indicators used by BTS to connect freight/passenger activity with inflation, labor, and output context. Useful cross-domain baseline for mobility-cost consequence analysis, with heterogeneous source cadence and revision caveats. _Metadata updated: 2026-03-27._
 - [UK DfT Road Traffic Statistics API](https://roadtraffic.dft.gov.uk/api-docs) — Open Department for Transport API for Great Britain road traffic counts and vehicle-miles series across regions, local authorities, and count points, enabling direct checks of mobility-load and disruption spillovers. High public consequence transport-access dataset with annual-estimation methodology and local-count-point comparability caveats.
 
@@ -474,6 +478,7 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [NIST NVD CVE API](https://nvd.nist.gov/developers/vulnerabilities) — CVE metadata/severity/references and modification tracking. Enrichment lag/revisions are common.
 
 ## Domestic public safety
+- [NHTSA Public API](https://api.nhtsa.gov/) — NHTSA machine-readable vehicle and safety-reference endpoints (including VIN decode and related safety attributes) that improve rapid checks of recall exposure and model-level safety-risk context for households and fleet operators. High consumer safety consequence value with rate-limiting and endpoint-scope caveats.
 - [Motor Vehicle Collisions - Crashes](https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes) — NYC police-reported crash-event records with timing and location attributes for high-frequency road-safety burden tracking in a major metro area. Practical public-safety and emergency-load indicator with reporting/closure lag caveats. _Metadata updated: 2026-04-05._
 - [Traffic Crashes - Crashes](https://catalog.data.gov/dataset/traffic-crashes-crashes) — Chicago crash-event records from CPD e-crash reporting for injury/fatality risk monitoring and neighborhood-level roadway hazard trend analysis. Strong local safety consequence feed with investigation-status and data-quality revision caveats. _Metadata updated: 2026-04-05._
 - [Opioid EMS Calls](https://catalog.data.gov/dataset/opioid-ems-calls-ac2fc) — Incident-level emergency medical response calls tagged to opioid overdose context in Tempe, Arizona, supporting rapid local checks of acute overdose burden and emergency-service strain. High public-health and safety consequence signal with city-only scope and call-classification caveats. _Metadata updated: 2026-03-29._

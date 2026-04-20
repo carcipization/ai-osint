@@ -12,6 +12,7 @@ code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
 pre code { display:block; padding:12px; overflow:auto; }
 .meta { color: var(--muted); }
 hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
 </style>
 </head>
 <body>
@@ -19,9 +20,9 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
   <h1 id="datasets-catalog">Datasets Catalog</h1>
 <p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.html">HTML</a>
 <strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/datasets-catalog.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-04-19 14:40 UTC</p>
+<p><strong>Dateline:</strong> 2026-04-20 14:26 UTC</p>
 <p>Compact reference list. Each item is 1–2 sentences: what it is and why it matters.</p>
-<p><strong>Catalog metadata:</strong> 150 datasets • 11 domains • structure-optimized for cadence retrieval</p>
+<p><strong>Catalog metadata:</strong> 155 datasets • 11 domains • structure-optimized for cadence retrieval</p>
 <h2 id="quick-navigation">Quick navigation</h2>
 <ul>
 <li><a href="#conflict-unrest-and-information-control">Conflict, unrest, and information control</a></li>
@@ -38,8 +39,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="structural-qa-snapshot">Structural QA snapshot</h2>
 <ul>
-<li><strong>Section balance (entries):</strong> Economy/governance (30), Energy/trade/maritime (14), Ownership/sanctions/procurement (11), Humanitarian/hazard (51), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (13), Aviation/mobility (12), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
-<li><strong>Balance checksum:</strong> 30+14+11+51+7+7+13+12+2+3+1 = <strong>150</strong> (must match catalog metadata count).</li>
+<li><strong>Section balance (entries):</strong> Economy/governance (30), Energy/trade/maritime (15), Ownership/sanctions/procurement (11), Humanitarian/hazard (52), Conflict/unrest/info-control (7), AI/risk/labor (7), Domestic public safety (14), Aviation/mobility (14), Cyber exploitation risk (2), Telegram/public-channel analytics (3), Space weather (1).</li>
+<li><strong>Balance checksum:</strong> 30+15+11+52+7+7+14+14+2+3+1 = <strong>155</strong> (must match catalog metadata count).</li>
 <li><strong>Skew flag:</strong> space-weather is intentionally narrow and relies on NOAA SWPC as the primary operational feed; expand only when additional machine-readable primary feeds are identified.</li>
 <li><strong>Catalog hygiene checks:</strong> metadata count aligned to current entries, navigation anchors normalized, and section naming standardized for stable deep links.</li>
 </ul>
@@ -117,7 +118,12 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="humanitarian-and-hazard-context">Humanitarian and hazard context</h2>
 <ul>
-<li><a href="https://waterservices.usgs.gov/">USGS Water Data for the Nation (NWIS + Water Services API)</a> — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.</li>
+<li>
+<p><a href="https://fdc.nal.usda.gov/api-guide/">USDA FoodData Central API</a> — USDA nutrient-composition and branded-food database API for monitoring diet affordability/quality substitutions and ingredient-risk exposure during household budget stress or supply disruptions. High household health and cost consequence signal with manufacturer-data heterogeneity and update-cadence caveats.</p>
+</li>
+<li>
+<p><a href="https://waterservices.usgs.gov/">USGS Water Data for the Nation (NWIS + Water Services API)</a> — Real-time and historical U.S. streamflow, gage height, groundwater, and water-quality observations for flood and drought consequence tracking. High decision value for community safety and water-management operations, with station-density and sensor-outage caveats.</p>
+</li>
 <li><a href="https://environment.data.gov.uk/flood-monitoring/doc/reference">Environment Agency Flood Monitoring API</a> — England flood warnings/alerts, area-level status, and river/level measurements via open JSON endpoints for rapid household and municipal flood-risk checks. High life-safety and service-disruption relevance with station coverage and transfer-latency caveats.</li>
 <li><a href="https://environment.data.gov.uk/flood-monitoring/doc/tidegauge">Environment Agency Tide Gauge API</a> — Near-real-time (15-minute) coastal tide-gauge observations around UK coasts for storm-surge and coastal-flood exposure monitoring. High public-safety and transport-infrastructure consequence signal with local datum interpretation and gauge-outage caveats.</li>
 <li><a href="https://environment.data.gov.uk/flood-monitoring/doc/rainfall">Environment Agency Rainfall API</a> — Open rainfall station observations and recent accumulation/measurement endpoints for England that help convert flood alerts into measurable precipitation context for local safety and travel decisions. High household and municipal consequence value with gauge-density, timing-lag, and station-maintenance caveats.</li>
@@ -259,6 +265,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="energy-trade-and-maritime">Energy, trade, and maritime</h2>
 <ul>
+<li><a href="https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/">NREL Alternative Fuel Stations API</a> — U.S. alternative-fuel and EV charging station inventory with location, fuel type, and access fields for checking mobility resilience when gasoline/diesel disruptions or evacuation flows shift demand. High transport-access and cost consequence value with station-status latency and network-operator reporting caveats.</li>
 <li><a href="https://comtrade.un.org/">UN Comtrade</a> — Official trade statistics for rerouting and sanctions-evasion pattern checks. Powerful but lagged and occasionally revised.</li>
 <li><a href="https://unctadstat.unctad.org/EN/">UNCTADstat</a> — Trade and shipping indicators for structural maritime baselines. Strong macro context; indicator release cadence varies.</li>
 <li><a href="https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/world-bank-commodities-price-data-the-pink-sheet">World Bank Pink Sheet</a> — Commodity benchmark prices for shock context. Not a retail/local price proxy.</li>
@@ -317,6 +324,8 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="aviation-and-mobility">Aviation and mobility</h2>
 <ul>
+<li><a href="https://nasstatus.faa.gov/">FAA National Airspace System (NAS) Status</a> — Near-real-time FAA airport and airspace delay/closure status surface for rapid checks of flight-disruption severity affecting passenger travel, cargo timing, and connection reliability. High public mobility consequence signal with event-description brevity and evolving operational updates.</li>
+<li><a href="https://www.transtats.bts.gov/ONTIME/">BTS Airline On-Time Statistics (TranStats)</a> — U.S. carrier-level on-time, cancellation, and delay-cause records (monthly, airport/route granularity) for baseline-normalized travel and logistics disruption analysis. Strong non-specialist decision utility with reporting lag and carrier-coverage scope caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/transportation-economic-trends-tet-data">Transportation Economic Trends (TET) data</a> — Multi-series transportation-economy indicators used by BTS to connect freight/passenger activity with inflation, labor, and output context. Useful cross-domain baseline for mobility-cost consequence analysis, with heterogeneous source cadence and revision caveats. <em>Metadata updated: 2026-03-27.</em></li>
 <li>
 <p><a href="https://roadtraffic.dft.gov.uk/api-docs">UK DfT Road Traffic Statistics API</a> — Open Department for Transport API for Great Britain road traffic counts and vehicle-miles series across regions, local authorities, and count points, enabling direct checks of mobility-load and disruption spillovers. High public consequence transport-access dataset with annual-estimation methodology and local-count-point comparability caveats.</p>
@@ -511,6 +520,7 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </ul>
 <h2 id="domestic-public-safety">Domestic public safety</h2>
 <ul>
+<li><a href="https://api.nhtsa.gov/">NHTSA Public API</a> — NHTSA machine-readable vehicle and safety-reference endpoints (including VIN decode and related safety attributes) that improve rapid checks of recall exposure and model-level safety-risk context for households and fleet operators. High consumer safety consequence value with rate-limiting and endpoint-scope caveats.</li>
 <li><a href="https://catalog.data.gov/dataset/motor-vehicle-collisions-crashes">Motor Vehicle Collisions - Crashes</a> — NYC police-reported crash-event records with timing and location attributes for high-frequency road-safety burden tracking in a major metro area. Practical public-safety and emergency-load indicator with reporting/closure lag caveats. <em>Metadata updated: 2026-04-05.</em></li>
 <li><a href="https://catalog.data.gov/dataset/traffic-crashes-crashes">Traffic Crashes - Crashes</a> — Chicago crash-event records from CPD e-crash reporting for injury/fatality risk monitoring and neighborhood-level roadway hazard trend analysis. Strong local safety consequence feed with investigation-status and data-quality revision caveats. <em>Metadata updated: 2026-04-05.</em></li>
 <li>
