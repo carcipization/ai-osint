@@ -579,6 +579,21 @@ To reduce avoidable rebase interruptions and accidental broad diffs:
 - If unrelated drift is present, stash it with a timestamped note, complete the slot task, and avoid mixing that drift into the slot commit.
 - Keep slot commits scoped to intentional content + required generated artifacts only.
 
+## Canonical-URL retry discipline for volatile publishers (quality upgrade)
+
+When primary sources frequently rotate paths/slugs (for example CDC/ENTSO-E pages), enforce a deterministic retry pattern so runs do not lose time to avoidable 404s.
+
+Required procedure:
+1. On first 404/410/redirect-loop, record the failing URL in trace with UTC timestamp.
+2. Retry once using the source's canonical index/hub page (not a guessed deep link).
+3. Resolve and store the canonical deep URL from that hub page for the current run.
+4. Continue evidence collection only after canonical URL is confirmed reachable.
+5. In trace, log both the failed URL and the canonical replacement URL + final status.
+
+Purpose:
+- Reduces false "blocked source" outcomes caused by URL churn.
+- Improves FOLLOWUP/STORY reliability without lowering evidence standards.
+
 ## Rapid challenge pass (quality upgrade)
 
 Before final draft lock, run a 5-minute adversarial check to reduce confirmation bias:
