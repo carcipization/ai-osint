@@ -130,6 +130,31 @@ Selection rule:
 - If either side yields no qualified candidate, document why in the trace.
 - If the top-impact item is not selected first, document explicit blocker(s) in trace.
 
+### Candidate tournament + evidence-budget protocol (mandatory for STORY)
+
+Purpose: raise publishable-story hit rate without lowering standards by forcing early comparison on consequence and verification feasibility.
+
+1. Build an initial board of 6-12 candidates from the discovery pass.
+2. For each candidate, assign quick 0-3 scores for:
+   - broad consequence (non-specialist impact)
+   - decision utility (clear actor/action)
+   - anomaly strength (outside routine variation)
+   - mechanism testability (can be challenged now)
+   - evidence independence feasibility (>=2 independent families reachable)
+   - time-to-verify (can reach provisional verdict inside slot timebox)
+3. Compute `priority_score = consequence + decision + anomaly + mechanism + independence - time_to_verify_penalty` where `time_to_verify_penalty` is 0 for fast, 1 for medium, 2 for slow.
+4. Advance top 3 candidates only if each has a plausible path to pass importance + significance gates.
+5. Run one explicit disconfirming check on each top-3 candidate before selecting final deep-work target.
+6. If all top-3 fail, reopen board with new domains (do not force publication from weak leftovers).
+
+Hard anti-convenience rule:
+- A candidate cannot be selected solely because it is easiest to query.
+- If a lower-friction candidate is selected over a higher-impact candidate, trace must include the exact verification blocker that prevented the higher-impact path.
+
+Implementation note:
+- Use template: `skills/osint-journalism/templates/story-candidate-tournament.md`
+- Store completed board in `research-traces/` (private only).
+
 Trace rule:
 - Capture search terms, links, timestamps, anomaly checks attempted, and reasons for candidate acceptance/rejection.
 - For STORY runs, explicitly log: (a) all Bluesky queries run (minimum 5), (b) trending topics reviewed, (c) which trend-derived queries were added, (d) dataset leads produced from Bluesky (or explicit none), (e) Polymarket queries/scans run (minimum 3), and (f) any Polymarket limitation notes (e.g., no match/low liquidity/noisy contract framing).
