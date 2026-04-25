@@ -130,63 +130,23 @@ Selection rule:
 - If either side yields no qualified candidate, document why in the trace.
 - If the top-impact item is not selected first, document explicit blocker(s) in trace.
 
-### Candidate tournament + evidence-budget protocol (mandatory for STORY)
+### Candidate selection protocol (publish-first for STORY)
 
-Purpose: raise publishable-story hit rate without lowering standards by forcing early comparison on consequence and verification feasibility.
+Purpose: increase publishable-story output by selecting the strongest *publishable now* lead quickly, then iterating.
 
-1. Build an initial board of 6-12 candidates from the discovery pass.
-2. For each candidate, assign quick 0-3 scores for:
-   - broad consequence (non-specialist impact)
-   - decision utility (clear actor/action)
-   - anomaly strength (outside routine variation)
-   - mechanism testability (can be challenged now)
-   - evidence independence feasibility (>=2 independent families reachable)
-   - time-to-verify (can reach provisional verdict inside slot timebox)
-3. Compute `priority_score = consequence + decision + anomaly + mechanism + independence - time_to_verify_penalty` where `time_to_verify_penalty` is 0 for fast, 1 for medium, 2 for slow.
-4. Advance top 3 candidates only if each has a plausible path to pass importance + significance gates.
-5. Run one explicit disconfirming check on each top-3 candidate before selecting final deep-work target.
-6. If all top-3 fail, reopen board with new domains (do not force publication from weak leftovers).
+- Build a short candidate board (3-8 leads) from discovery.
+- Prioritize by: broad consequence, decision utility, anomaly signal, and verification speed.
+- Run at least one disconfirming check on the leading candidate before committing.
+- If the lead fails, move immediately to the next candidate instead of expanding process overhead.
 
-Hard anti-convenience rule:
-- A candidate cannot be selected solely because it is easiest to query.
-- If a lower-friction candidate is selected over a higher-impact candidate, trace must include the exact verification blocker that prevented the higher-impact path.
-
-Implementation note:
-- Use template: `skills/osint-journalism/templates/story-candidate-tournament.md`
-- Store completed board in `research-traces/` (private only).
+EVOLVE direction (mandatory):
+- EVOLVE work must improve story discovery, verification speed, and publication hit-rate.
+- Do not add process gates whose primary effect is reducing publish frequency.
+- Prefer tooling that surfaces more viable leads earlier and shortens time-to-publish for high-quality stories.
 
 Trace rule:
-- Capture search terms, links, timestamps, anomaly checks attempted, and reasons for candidate acceptance/rejection.
-- For STORY runs, explicitly log: (a) all Bluesky queries run (minimum 5), (b) trending topics reviewed, (c) which trend-derived queries were added, (d) dataset leads produced from Bluesky (or explicit none), (e) Polymarket queries/scans run (minimum 3), and (f) any Polymarket limitation notes (e.g., no match/low liquidity/noisy contract framing).
-- For every blocked/error fetch, log a structured line with: source name, URL, HTTP/status or error type, UTC timestamp, and one retry outcome (success/fail + status).
-
-### Bluesky + Polymarket wide-net policy (anti-confirmation, mandatory)
-
-Goal: avoid thesis-seeking query patterns. Treat both surfaces as discovery/counter-hypothesis inputs, not validation tools.
-
-Hard rules:
-1. **Do not start from a single favored thesis string.** Build a diversified query basket before reading results.
-2. **Minimum query diversity per run:**
-   - Bluesky: at least 8 distinct queries.
-   - Polymarket: at least 6 distinct scans/queries.
-3. **Query basket composition (both platforms):**
-   - 2 baseline neutral domain queries (broad topic without expected direction)
-   - 2 opposing-direction queries (explicitly test the inverse or competing narrative)
-   - 2 mechanism/second-order queries (spillovers, constraints, implementation effects)
-   - 1 null/no-change query (signals that would indicate the event is overstated or fading)
-   - 1 unrelated high-impact control query (checks whether better candidates exist outside current focus)
-4. **Promotion gate:** a lead cannot be shortlisted unless it survives one targeted disconfirming query.
-5. **Evidence weighting:**
-   - Bluesky/Polymarket never count as origin proof.
-   - They may generate leads, counter-hypotheses, and expectation/context signals only.
-6. **Breadth-over-comfort rule:** if >50% of queries come from one domain (e.g., only energy/geopolitics), add cross-domain queries until the mix is balanced or document why imbalance is required.
-
-Required trace fields (STORY):
-- `query_basket_plan` (the planned diversified basket before execution)
-- `executed_queries` with category labels (neutral/opposing/mechanism/null/control)
-- `top_disconfirming_findings`
-- `rejected_due_to_confirmation_risk` (explicit list, can be `none`)
-- `cross-domain candidates surfaced` (minimum 2, or explicit blocker)
+- Capture search terms, links, timestamps, anomaly checks attempted, and acceptance/rejection reasons for candidates that were actually tested.
+- Record enough context to reproduce the decision, without enforcing fixed query-count quotas.
 
 ## Dataset intake policy (batch-first, consequence-first)
 
@@ -650,33 +610,14 @@ When using multiple sources for corroboration, verify true independence:
 
 This aligns corroboration practice with AP’s requirement for independent corroboration around sensitive anonymous/secondhand information.
 
-## STORY no-publish exhaust protocol (quality upgrade)
+## STORY publish-first protocol (quality upgrade)
 
-When a STORY slot cannot publish a standard story, exhaust candidates and evidence cleanly, then emit NO_PUBLISH and move on.
+Default expectation: publish when there is a defensible, decision-useful story.
 
-Minimum trace requirements:
-- Show that discovery remained open during the scan window (no fixed upfront candidate cap) and record attempted candidates.
-- Before no-publish decision, check the full local dataset-change cache for this run window (review all cache entries, prioritizing recently changed/unscanned items), or document a concrete technical blocker for any cache segment not checked.
-- For each attempted candidate, record:
-  - freshness artifact checked,
-  - anomaly result (outside range vs routine),
-  - mechanism test attempted,
-  - concrete decision actor/action impact test,
-  - **importance gate result** (pass/fail with one-line rationale),
-  - final reject reason tied to failed gate(s).
-- Include one-line duplicate check result against last-72h stories for any near-overlap candidate.
-- Include one-line anti-convenience check: why the selected publish candidate beat higher-friction alternatives on importance (not ease).
-
-### No-fallback rule for non-publishing STORY runs
-
-If no standard STORY candidate passes, do not publish a dataset brief as fallback.
-1. Run a broad comparison set across all available source families/domains in scope and record why each did or did not qualify.
-2. Complete dataset-change cache coverage for the run (or log explicit blockers for anything unreachable).
-3. Emit NO_PUBLISH with explicit blockers/rejection reasons and rotate to the next cadence slot.
-
-Publishing pressure rule:
-- Do not lower significance thresholds to force a weak event story.
-- Do not substitute a dataset brief when a story is not publishable.
+- Keep standards for evidence and attribution intact.
+- Prefer rapid candidate rotation over heavy procedural gating.
+- Use NO_PUBLISH only when no candidate is defensible within the slot after reasonable testing.
+- If no-publish occurs, summarize blockers briefly and continue with the next slot focused on finding a publishable story.
 
 ## Mechanism-first claim sentence template (quality upgrade)
 
