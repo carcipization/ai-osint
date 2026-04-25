@@ -7,9 +7,10 @@ Usage:
 
 from __future__ import annotations
 
-import re
 import sys
 from pathlib import Path
+
+from trace_guard_common import first_group_count, missing_sections, read_text
 
 REQUIRED_SECTIONS = [
     "query basket plan",
@@ -22,16 +23,14 @@ REQUIRED_SECTIONS = [
 
 def count_queries(text: str, label: str) -> int:
     # Accepts forms like "Bluesky (8/8 executed)" or "Polymarket (7 scans executed)"
-    patterns = [
-        rf"{label}\s*\((\d+)\s*/\s*(\d+)",
-        rf"{label}\s*\((\d+)\s+scans\s+executed\)",
-        rf"{label}\s*\((\d+)\s+executed\)",
-    ]
-    for p in patterns:
-        m = re.search(p, text, flags=re.IGNORECASE)
-        if m:
-            return int(m.group(1))
-    return 0
+    return first_group_count(
+        text,
+        [
+            rf"{label}\s*\((\d+)\s*/\s*(\d+)",
+            rf"{label}\s*\((\d+)\s+scans\s+executed\)",
+            rf"{label}\s*\((\d+)\s+executed\)",
+        ],
+    )
 
 
 def main() -> int:
@@ -44,13 +43,11 @@ def main() -> int:
         print(f"ERROR: trace file not found: {path}")
         return 2
 
-    text = path.read_text(encoding="utf-8", errors="replace")
+    text = read_text(path)
     errors: list[str] = []
 
-    lowered = text.lower()
-    for section in REQUIRED_SECTIONS:
-        if section not in lowered:
-            errors.append(f"Missing required section: '{section}'")
+    for section in missing_sections(text, REQUIRED_SECTIONS):
+        errors.append(f"Missing required section: '{section}'")
 
     bluesky_n = count_queries(text, "Bluesky")
     polymarket_n = count_queries(text, "Polymarket")

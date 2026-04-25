@@ -11,6 +11,14 @@ import re
 import sys
 from pathlib import Path
 
+from trace_guard_common import (
+    count_numbered_lines,
+    extract_section,
+    first_group_count,
+    missing_sections,
+    read_text,
+)
+
 REQUIRED_SECTIONS = [
     "sampled prior stories",
     "bluesky query basket",
@@ -20,20 +28,22 @@ REQUIRED_SECTIONS = [
 
 
 def extract_count(text: str, label: str) -> int:
-    patterns = [
-        rf"{label}[^\n]*\(required[^\n]*\)\s*\nexecuted queries\s*\((\d+)\)",
-        rf"executed queries\s*\((\d+)\):",
-    ]
-    block = re.search(rf"##\s+{label}[\s\S]*?(?=\n##\s+|\Z)", text, flags=re.IGNORECASE)
+    block = extract_section(text, label)
     if not block:
         return 0
-    btext = block.group(0)
-    for p in patterns:
-        m = re.search(p, btext, flags=re.IGNORECASE)
-        if m:
-            return int(m.group(1))
+
+    n = first_group_count(
+        block,
+        [
+            rf"{label}[^\n]*\(required[^\n]*\)\s*\nexecuted queries\s*\((\d+)\)",
+            r"executed queries\s*\((\d+)\):",
+        ],
+    )
+    if n > 0:
+        return n
+
     # fallback: count numbered items in the section
-    return len(re.findall(r"^\s*\d+\.\s+`?.+`?\s*$", btext, flags=re.MULTILINE))
+    return count_numbered_lines(block)
 
 
 def main() -> int:
@@ -46,13 +56,11 @@ def main() -> int:
         print(f"ERROR: trace file not found: {path}")
         return 2
 
-    text = path.read_text(encoding="utf-8", errors="replace")
-    low = text.lower()
+    text = read_text(path)
     errors: list[str] = []
 
-    for section in REQUIRED_SECTIONS:
-        if section not in low:
-            errors.append(f"Missing required section: '{section}'")
+    for section in missing_sections(text, REQUIRED_SECTIONS):
+        errors.append(f"Missing required section: '{section}'")
 
     bluesky_n = extract_count(text, "Bluesky query basket")
     polymarket_n = extract_count(text, "Polymarket market/signal queries")
