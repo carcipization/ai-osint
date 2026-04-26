@@ -31,6 +31,13 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("## Dual-trigger candidate board")
     lines.append("- World-state candidates scanned:")
     lines.append("- Anomaly candidates scanned:")
+    lines.append("- Candidate rotation log (ordered by priority and why each was accepted/rejected):")
+    lines.append("")
+
+    lines.append("## Source availability / blocker log")
+    lines.append("| source | url | first_status | retry_status | timestamp_utc | notes |")
+    lines.append("|---|---|---|---|---|---|")
+    lines.append("|  |  |  |  |  |  |")
     lines.append("")
 
     for i in range(1, candidates + 1):
@@ -68,6 +75,11 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("## 72h overlap check")
     lines.append("- Potential duplicate post(s):")
     lines.append("- Material delta justifying publish OR no-publish rationale:")
+    lines.append("")
+
+    lines.append("## Candidate exhaustion check")
+    lines.append("- Remaining viable candidates after gates:")
+    lines.append("- If none, why this run is exhausted (availability/importance/mechanism/decision blockers):")
     lines.append("")
 
     lines.append("## Publish/no-publish decision")
