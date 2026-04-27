@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -44,21 +45,59 @@ def polymarket_search(repo_root: Path, term: str, limit: int) -> dict:
     }
 
 
+def _poly_top_findings(poly_runs: list[dict]) -> list[dict]:
+    findings: list[dict] = []
+    for run in poly_runs:
+        term = run.get("command", "")
+        results = run.get("results")
+        if not isinstance(results, list):
+            findings.append({"query": term, "matches": 0, "top": []})
+            continue
+        top = []
+        for m in results[:3]:
+            top.append(
+                {
+                    "question": m.get("question"),
+                    "slug": m.get("slug"),
+                    "prices": m.get("outcomePrices"),
+                    "volume": m.get("volume"),
+                }
+            )
+        findings.append({"query": term, "matches": len(results), "top": top})
+    return findings
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="FOLLOWUP cycle probe helper")
     ap.add_argument("--repo-root", default=".", help="Path to ai-osint repo")
     ap.add_argument("--bluesky-query", action="append", default=[], help="Bluesky query string (repeatable)")
     ap.add_argument("--poly-term", action="append", default=[], help="Polymarket search term (repeatable)")
     ap.add_argument("--poly-limit", type=int, default=5)
+    ap.add_argument("--enforce-followup-minimums", action="store_true", help="Fail if fewer than 5 Bluesky queries or 3 Polymarket terms are provided")
     args = ap.parse_args()
+
+    if args.enforce_followup_minimums:
+        if len(args.bluesky_query) < 5:
+            print("error: FOLLOWUP requires at least 5 Bluesky queries", file=sys.stderr)
+            return 2
+        if len(args.poly_term) < 3:
+            print("error: FOLLOWUP requires at least 3 Polymarket queries", file=sys.stderr)
+            return 2
 
     repo = Path(args.repo_root).resolve()
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
+    poly_runs = [polymarket_search(repo, t, args.poly_limit) for t in args.poly_term]
     out = {
         "run_utc": now,
         "bluesky_queries": [web_search_bluesky(q, 5) for q in args.bluesky_query],
-        "polymarket": [polymarket_search(repo, t, args.poly_limit) for t in args.poly_term],
+        "polymarket": poly_runs,
+        "polymarket_top_findings": _poly_top_findings(poly_runs),
+        "minimums": {
+            "bluesky_queries": len(args.bluesky_query),
+            "polymarket_queries": len(args.poly_term),
+            "enforced": bool(args.enforce_followup_minimums),
+        },
     }
     print(json.dumps(out, indent=2))
     return 0
