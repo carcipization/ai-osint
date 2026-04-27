@@ -40,6 +40,12 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("|  |  |  |  |  |  |")
     lines.append("")
 
+    lines.append("## Canonical URL / auth retry ledger")
+    lines.append("| source_family | failing_url | failure_code | retry_path (hub/index/auth) | replacement_url_or_auth | final_status | timestamp_utc |")
+    lines.append("|---|---|---|---|---|---|---|")
+    lines.append("|  |  |  |  |  |  |  |")
+    lines.append("")
+
     for i in range(1, candidates + 1):
         lines.append(f"### Candidate {i}")
         lines.append("1) Testable question:")
@@ -80,6 +86,12 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("## Candidate exhaustion check")
     lines.append("- Remaining viable candidates after gates:")
     lines.append("- If none, why this run is exhausted (availability/importance/mechanism/decision blockers):")
+    lines.append("")
+
+    lines.append("## Decision-actor map (non-specialist utility)")
+    lines.append("| actor | decision they could change now | trigger threshold/evidence needed |")
+    lines.append("|---|---|---|")
+    lines.append("|  |  |  |")
     lines.append("")
 
     lines.append("## Publish/no-publish decision")
