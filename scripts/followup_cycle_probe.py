@@ -74,6 +74,7 @@ def main() -> int:
     ap.add_argument("--poly-term", action="append", default=[], help="Polymarket search term (repeatable)")
     ap.add_argument("--poly-limit", type=int, default=5)
     ap.add_argument("--enforce-followup-minimums", action="store_true", help="Fail if fewer than 5 Bluesky queries or 3 Polymarket terms are provided")
+    ap.add_argument("--out", help="Optional path to write probe JSON output")
     args = ap.parse_args()
 
     if args.enforce_followup_minimums:
@@ -99,7 +100,12 @@ def main() -> int:
             "enforced": bool(args.enforce_followup_minimums),
         },
     }
-    print(json.dumps(out, indent=2))
+    payload = json.dumps(out, indent=2)
+    print(payload)
+    if args.out:
+        out_path = Path(args.out)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(payload + "\n", encoding="utf-8")
     return 0
 
 

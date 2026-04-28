@@ -1,0 +1,95 @@
+{
+  "run_utc": "2026-04-28 20:25:30 UTC",
+  "bluesky_queries": [
+    {
+      "query": "Brent oil Hormuz disruption",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "UK National Grid ESO demand outage",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "US overdose provisional CDC",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "UK rail disruption National Rail",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "humanitarian funding OCHA FTS",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    }
+  ],
+  "polymarket": [
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search oil --limit 5 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    },
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search ceasefire --limit 5 --json",
+      "exit_code": 0,
+      "results": [
+        {
+          "id": "540816",
+          "slug": "russia-ukraine-ceasefire-before-gta-vi-554",
+          "question": "Russia-Ukraine Ceasefire before GTA VI?",
+          "category": null,
+          "active": true,
+          "closed": false,
+          "volume": "1621915.934687044",
+          "liquidity": "121385.7902",
+          "startDate": "2025-05-02T15:48:00.174Z",
+          "endDate": "2026-07-31T12:00:00Z",
+          "outcomes": "[\"Yes\", \"No\"]",
+          "outcomePrices": "[\"0.535\", \"0.465\"]",
+          "url": "https://polymarket.com/event/russia-ukraine-ceasefire-before-gta-vi-554"
+        }
+      ],
+      "stderr": null
+    },
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search recession --limit 5 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    }
+  ],
+  "polymarket_top_findings": [
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search oil --limit 5 --json",
+      "matches": 0,
+      "top": []
+    },
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search ceasefire --limit 5 --json",
+      "matches": 1,
+      "top": [
+        {
+          "question": "Russia-Ukraine Ceasefire before GTA VI?",
+          "slug": "russia-ukraine-ceasefire-before-gta-vi-554",
+          "prices": "[\"0.535\", \"0.465\"]",
+          "volume": "1621915.934687044"
+        }
+      ]
+    },
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search recession --limit 5 --json",
+      "matches": 0,
+      "top": []
+    }
+  ],
+  "minimums": {
+    "bluesky_queries": 5,
+    "polymarket_queries": 3,
+    "enforced": true
+  }
+}
