@@ -15,6 +15,7 @@ FORBIDDEN_SLUG = re.compile(POLICY["forbiddenDocsSlugRegex"], re.I)
 FORBIDDEN_TITLE = re.compile(POLICY["forbiddenTitleRegex"], re.I)
 ALLOWED_TITLE = re.compile(POLICY["allowedTitleRegex"], re.I)
 REUTERS_LINK = re.compile(r"https?://(?:www\.)?reuters\.com/", re.I)
+REUTERS_TEXT = re.compile(r"\breuters\b", re.I)
 
 def staged_files() -> list[str]:
     out = subprocess.check_output([
@@ -31,29 +32,35 @@ def main() -> int:
     bad: list[str] = []
     for rel in staged_files():
         p = Path(rel)
-        if p.suffix != ".md" or p.parent != Path("docs"):
+        if p.parent != Path("docs") or p.suffix not in {".md", ".html"}:
+            continue
+
+        full = ROOT / rel
+        if not full.exists():
+            continue
+        try:
+            text = full.read_text(encoding="utf-8", errors="ignore")
+        except Exception:
+            text = ""
+
+        if REUTERS_LINK.search(text) or REUTERS_TEXT.search(text):
+            bad.append(f"reuters references disallowed in docs publication: {rel}")
+
+        # Title/slug checks are markdown-specific
+        if p.suffix != ".md":
             continue
         if p.name.lower() in {"latest.md", "readme.md", "datasets-catalog.md", "dataset-playbook.md"}:
             continue
         if FORBIDDEN_SLUG.search(p.stem):
             bad.append(f"forbidden slug pattern: {rel}")
             continue
-        full = ROOT / rel
-        if not full.exists():
-            continue
-        try:
-            text = full.read_text(encoding="utf-8", errors="ignore")
-            first = text.splitlines()[0] if text.splitlines() else ""
-        except Exception:
-            text = ""
-            first = ""
+
+        first = text.splitlines()[0] if text.splitlines() else ""
         if FORBIDDEN_TITLE.search(first):
             bad.append(f"forbidden KEV-family title: {rel} :: {first}")
             continue
         if not ALLOWED_TITLE.search(first):
             bad.append(f"title must be STORY or 'Datasets:' -> {rel} :: {first}")
-        if REUTERS_LINK.search(text):
-            bad.append(f"reuters links disallowed in docs publication: {rel}")
 
     if bad:
         print("\n[docs-policy] Blocked commit: publication policy violation(s):", file=sys.stderr)
