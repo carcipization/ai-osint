@@ -139,6 +139,37 @@ Purpose: increase publishable-story output by selecting the strongest *publishab
 - Run at least one disconfirming check on the leading candidate before committing.
 - If the lead fails, move immediately to the next candidate instead of expanding process overhead.
 
+### STORY candidate triage architecture (quality + hit-rate upgrade)
+
+Use a strict two-pass flow to concentrate effort on candidates that can plausibly publish in-slot.
+
+**Pass 1: Candidate queue (fast filter)**
+- For each lead, capture in one block:
+  1) consequence statement for non-specialists,
+  2) actor/action decision surface,
+  3) one likely mechanism,
+  4) one falsifier path,
+  5) two fastest independent evidence families available now.
+- If any of (1)-(3) is weak/unclear, demote immediately.
+
+**Pass 2: Publish-ready queue (challenge test)**
+- Promote only candidates that survive Pass 1.
+- Run a 10-12 minute challenge test per candidate:
+  - one disconfirming query,
+  - one baseline comparison,
+  - one independence check on corroborating sources.
+- Escalate to drafting only if anomaly, mechanism, decision, and importance gates still hold after challenge test.
+
+**Hard abandon triggers**
+- Consequence cannot be stated concretely for non-specialists.
+- Decision utility remains generic (“monitor situation”) after evidence pass.
+- Evidence families collapse to one upstream origin for a high-impact claim.
+- Contradictory artifact appears and cannot be resolved inside slot time.
+
+**Forced rotate rule**
+- If a candidate misses escalation criteria after challenge test, rotate immediately to next candidate.
+- Do not spend >20 minutes total on a single weak candidate before first draft lock decision.
+
 EVOLVE direction (mandatory):
 - EVOLVE work must improve story discovery, verification speed, and publication hit-rate.
 - Do not add process gates whose primary effect is reducing publish frequency.
