@@ -547,6 +547,19 @@ When FOLLOWUP cycles repeatedly return unchanged outputs, avoid low-value reruns
 - If all sampled items are unchanged, explicitly record the staleness condition in `research-traces/` and use concise no-publish language.
 - Do not manufacture updates; this gate improves sampling quality, not publication pressure.
 
+## FOLLOWUP query robustness pivot (quality upgrade)
+
+When required context sweeps (for example Bluesky/Polymarket scans) produce low-yield or noisy outputs, pivot quickly instead of repeating generic queries.
+
+- Trigger pivot when **3 or more** initial queries return zero useful hits or mostly irrelevant matches.
+- Replace generic strings with structured variants that include:
+  - event + actor,
+  - explicit timeframe,
+  - consequence term (cost/access/safety/mobility/policy/operations).
+- Include at least one platform-native direct check (specific profile/post URL) and at least one independent non-platform corroboration surface before treating context as meaningful.
+- In trace, label each candidate finding as `signal`, `noise`, or `unverifiable` to speed go/no-go decisions and reduce narrative drift.
+- If pivot still yields no material update, close with no-publish and proceed to fallback-to-EVOLVE as required.
+
 ## Publication-policy preflight (quality upgrade)
 
 Before finalizing a STORY or DATASETS post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects.
