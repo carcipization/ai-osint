@@ -590,4 +590,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [Telemetr API](https://api.telemetr.io/) — Channel benchmarking and trend data for comparative network scans. Coverage and terms may change.
 - [TGDataset](https://github.com/SystemsLab-Sapienza/TGDataset) — Research snapshot corpus for historical Telegram network structure. Best for baseline context, not live operational monitoring.
 
+## Household economic stress and service access
+- [Census Household Pulse Survey API](https://www.census.gov/data/developers/data-sets/household-pulse-survey.html) — Near-real-time U.S. household survey microdata/API access on food insufficiency, housing-payment difficulty, utility hardship, and mental-health strain. High non-specialist consequence dataset for rapid checks of household stress shifts, with sampling-error and questionnaire-version caveats.
+- [LIHEAP Household Report Data](https://catalog.data.gov/dataset/liheap-household-report-data) — U.S. Low Income Home Energy Assistance Program household counts and benefits distribution records for tracking energy-burden support reach and potential winter/summer utility vulnerability gaps. Strong household cost-and-access decision signal with annual reporting lag and state comparability caveats.
+- [HUD Picture of Subsidized Households](https://catalog.data.gov/dataset/picture-of-subsidized-households) — HUD-assisted household and unit counts by program/geography for monitoring rental-support coverage, concentration, and gaps that can influence homelessness-prevention planning. High housing-access consequence value with annual cadence and program-definition caveats.
+
 ## Space weather and disruption context
