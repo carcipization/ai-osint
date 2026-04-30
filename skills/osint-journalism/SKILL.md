@@ -13,7 +13,7 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 1. **Classify the task first**
    - Claim-check (specific claim + provenance URL)
    - OSINT story (new analysis, not a claim-check)
-   - Follow-up (re-check prior posts; publish only material changes)
+   - Follow-up (re-check prior posts; publish updates freely, including minor changes)
    - Dataset task (catalog addition/optimization)
 
 2. **Pick evidence tiers**
@@ -54,8 +54,8 @@ When a lead starts from Reuters/AP/major wire (or any single media seed), do thi
    - If data findings point elsewhere, re-angle or demote.
 
 6. **Publication class discipline**
-   - If targeted dataset interrogation does not produce meaningful new evidence, do not publish as a full event STORY.
-   - Use dataset brief / analysis framing instead of story framing.
+   - If targeted dataset interrogation finds any plausible update, you may publish as a STORY.
+   - Prefer publishing over holding when uncertain.
 
 Hard failure rule:
 - Publishing a wire-led STORY without completing the targeted dataset interrogation + claim-evidence matrix is non-compliant.
@@ -82,8 +82,8 @@ Hard failure rule:
    - Concept + evidence testing: 15–20 min
    - Publish/no-publish decision: 5 min
 
-4. **No-publish guardrail**
-   - Do not no-publish before completing the data-first scan unless discovered candidates are unavailable with documented errors.
+4. **Publish default**
+   - Default to publishing a STORY each run when any defensible candidate exists.
 
 ## Situational awareness + anomaly sweep (mandatory for STORY/FOLLOWUP/DATASETS)
 
@@ -120,7 +120,7 @@ Candidate extraction rule (mandatory):
   4) target datasets for interrogation.
 - Drop any lead that cannot produce this packet.
 
-Dual-trigger rule (hard):
+Dual-trigger rule :
 1. **World-state trigger**: build a neutral brief from what is newly active now, then rank by expected real-world impact.
 2. **Anomaly trigger**: run a blind dataset anomaly scan for fresh, non-routine changes even when no matching headline/news story exists.
 
@@ -212,7 +212,7 @@ Hard selection priorities (in order):
 3. **Cross-domain chain value** (can the dataset connect upstream events to downstream real-world effects).
 4. **Freshness and reliability** (important, but never sufficient on their own).
 
-Anti-bias guardrails:
+Anti-bias rules:
 - **No recency anchoring:** a domain is not preferred just because it produced a recent story.
 - **No convenience anchoring:** easy-to-query machine-readable feeds do not outrank relevance.
 - **Domain repetition cap:** if the same domain dominated recent dataset runs, require explicit rationale to continue; otherwise rotate to a higher-impact domain.
@@ -291,7 +291,7 @@ Required behavior:
 - Treat Fed/banking candidates as secondary/fallback signals; only elevate when there is a clear regime break or cross-domain consequence (e.g., broad spillover into labor, logistics, energy, conflict, or public-safety decisions).
 - In the first-pass freshness scan, prefer non-Fed/non-banking domains unless data quality is materially worse.
 
-## Cybersecurity focus gate (hard)
+## Cybersecurity focus gate 
 
 Permanent exclusion: do not use CISA KEV as a dataset or story source. KEV-family topics are excluded from publication and dataset intake.
 
@@ -307,42 +307,14 @@ A cybersecurity story is publishable only if at least one is true:
 
 If none of the above are met, drop or defer the cyber candidate and prioritize other domains.
 
-## Story significance gate (hard, all domains)
+## Story publication policy (lower-bar mode)
 
-Do not publish descriptive drift without decision consequence.
+Publish by default when a candidate is plausible and source-linked.
 
-A STORY candidate is publishable only if it passes all three gates:
-1. **Anomaly gate:** signal is meaningfully outside expected variation (not routine noise/batch wobble).
-2. **Mechanism gate:** plausible explanation tested against at least one artifact/null alternative.
-3. **Decision gate:** identifies a concrete actor/action that should change because of this finding.
-
-## Importance gate (hard, fail-closed)
-
-A STORY must also pass an always-on importance check before drafting and again before publish.
-
-Pass criteria (all required):
-1. **Broad relevance:** consequences are meaningful beyond specialist audiences.
-2. **Concrete consequence:** at least one real-world outcome is explicit (cost/access/safety/mobility/policy/operations), not just technical-state movement.
-3. **Decision utility:** a non-specialist actor can make or update a concrete decision from the reporting.
-
-Fail-close policy:
-- If importance is ambiguous or weak, do **not** publish STORY (use brief/hold/no-publish as appropriate).
-- Do not treat clean/easy data access as a substitute for importance.
-- If only low-importance candidates are available, return no-publish rather than force output.
-
-Short-window ranking guardrail (hard):
-- Claims like “biggest move in 7/14 days” are **candidate flags only**, not publish conclusions by themselves.
-- Do not publish from a short-window rank claim unless at least one additional condition holds:
-  - cross-window robustness (still notable across longer windows such as 30/90d or seasonal baseline),
-  - absolute-magnitude significance (not just rank within a small window),
-  - independent confirmation from another source family,
-  - clear mechanism + concrete non-specialist decision consequence.
-
-If a candidate fails any gate, discard it and continue searching.
-
-STORY search rule:
-- Keep looking for a publishable story until available datasets/source candidates for that run are exhausted.
-- If exhausted and nothing passes all three gates, end with no publish (allowed).
+- Minor or incremental changes are publishable.
+- Short-window ranking claims are allowed when clearly labeled as short-window observations.
+- If mechanism or consequence is uncertain, publish with uncertainty language instead of holding.
+- Reserve no-publish for complete source failure or total absence of candidates.
 
 ## Story novelty and duplication gate (quality upgrade)
 
@@ -387,7 +359,7 @@ When checking outage-duration claims:
 ## Follow-up slot discipline
 
 - Sample recent high-impact stories (target 3–10, based on available time).
-- FOLLOWUP runs do **not** publish docs posts.
+- FOLLOWUP runs may publish docs posts when any update is found.
 - If there is a **meaningful update** (new primary data, official revision, materially changed conclusion), report it in Telegram summary and prioritize as a future STORY candidate.
 - If no material updates, explicitly say so for sampled items in Telegram summary.
 - **Cadence rotation rule (no exceptions):** always advance to the next slot after completing a FOLLOWUP sampling pass, even when no publishable update is found (no-op FOLLOWUP still rotates state).
@@ -441,7 +413,7 @@ Also require dateline exact format:
 - Quote claims precisely; do not strengthen wording beyond what the source says.
 - Keep attribution close to the claim sentence (reader should not hunt for provenance).
 
-## Claim-check quality guardrails
+## Claim-check quality rules
 
 - Distinguish clearly between:
   - what is directly measured,
@@ -477,7 +449,7 @@ Before publish, run this test on paragraph 1:
 - It must identify at least one non-specialist actor decision that could change.
 - If paragraph 1 cannot do both clearly, do not publish STORY as-is; rewrite or demote to fallback/hold.
 
-## Weak-point guardrails (quality upgrade)
+## Weak-point rules (quality upgrade)
 
 These rules target recurring weak spots in OSINT reporting quality: overreliance on single artifacts, weak provenance for social content, and under-explained uncertainty.
 
