@@ -607,6 +607,26 @@ When required context sweeps (for example Bluesky/Polymarket scans) produce low-
 - In trace, label each candidate finding as `signal`, `noise`, or `unverifiable` to speed go/no-go decisions and reduce narrative drift.
 - If pivot still yields no material update, close with no-publish and proceed to fallback-to-EVOLVE as required.
 
+### FOLLOWUP structured query scaffold (operational default)
+
+Use this scaffold after the first low-yield pass to enforce consequence-first retrieval.
+
+Required components per query:
+1. `event` (specific incident/policy/action),
+2. `actor` (entity responsible/affected),
+3. `timeframe` (explicit window),
+4. `consequence` (cost/access/safety/mobility/services/policy operations).
+
+Template bank:
+- `site:bsky.app <event> <actor> <YYYY-MM> <consequence-term>`
+- `site:bsky.app <location> <event> update <time-window> <consequence-term>`
+- `Polymarket <event> <actor> <time-window>`
+- `<event> official update <time-window> <primary-source-domain>`
+
+Execution rule:
+- Run one generic pass, then switch to scaffold if 3+ low-yield results appear.
+- Log each query with one-line outcome label (`signal` / `noise` / `unverifiable`) in trace.
+
 ## Publication-policy preflight (quality upgrade)
 
 Before finalizing a STORY or DATASETS post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects.
