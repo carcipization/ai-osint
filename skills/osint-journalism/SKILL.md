@@ -13,7 +13,7 @@ Purpose: produce high-quality automated OSINT journalism: fast, clear, evidence-
 1. **Classify the task first**
    - Claim-check (specific claim + provenance URL)
    - OSINT story (new analysis, not a claim-check)
-   - Follow-up (re-check prior posts; publish updates freely, including minor changes)
+   - Follow-up (re-check prior posts; publish only material changes)
    - Dataset task (catalog addition/optimization)
 
 2. **Pick evidence tiers**
@@ -359,7 +359,7 @@ When checking outage-duration claims:
 ## Follow-up slot discipline
 
 - Sample recent high-impact stories (target 3–10, based on available time).
-- FOLLOWUP runs may publish docs posts when any update is found.
+- FOLLOWUP runs do **not** publish docs posts.
 - If there is a **meaningful update** (new primary data, official revision, materially changed conclusion), report it in Telegram summary and prioritize as a future STORY candidate.
 - If no material updates, explicitly say so for sampled items in Telegram summary.
 - **Cadence rotation rule (no exceptions):** always advance to the next slot after completing a FOLLOWUP sampling pass, even when no publishable update is found (no-op FOLLOWUP still rotates state).
