@@ -598,6 +598,8 @@ Template bank:
 Execution rule:
 - Run one generic pass, then switch to scaffold if 3+ low-yield results appear.
 - Log each query with one-line outcome label (`signal` / `noise` / `unverifiable`) in trace.
+- Validate FOLLOWUP trace structure before finalize/push with:
+  - `python3 scripts/check_followup_trace.py <trace.md>`
 
 ## Publication-policy preflight (quality upgrade)
 
