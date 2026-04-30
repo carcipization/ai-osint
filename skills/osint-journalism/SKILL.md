@@ -170,6 +170,22 @@ Use a strict two-pass flow to concentrate effort on candidates that can plausibl
 - If a candidate misses escalation criteria after challenge test, rotate immediately to next candidate.
 - Do not spend >20 minutes total on a single weak candidate before first draft lock decision.
 
+### STORY anomaly worksheet (fast quant discipline)
+
+Before deep drafting, complete a compact anomaly worksheet for each serious candidate.
+
+Required fields:
+1. Observed value + timestamp/window.
+2. Baseline comparator(s): prior period and at least one broader window (30/90d or seasonal where available).
+3. Absolute delta and percent delta (with denominator shown).
+4. One robustness check (cross-window or alternate metric that tests stability).
+5. One independent confirmation family (not same upstream origin).
+6. One sentence on concrete non-specialist decision consequence.
+
+Decision rule:
+- If the worksheet cannot be completed in the first pass with reliable inputs, demote or drop the candidate and rotate.
+- Do not advance a candidate whose anomaly is only a short-window rank claim without additional significance support.
+
 EVOLVE direction (mandatory):
 - EVOLVE work must improve story discovery, verification speed, and publication hit-rate.
 - Do not add process gates whose primary effect is reducing publish frequency.
