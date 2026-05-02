@@ -152,13 +152,13 @@ Use a strict two-pass flow to concentrate effort on candidates that can plausibl
   5) two fastest independent evidence families available now.
 - If any of (1)-(3) is weak/unclear, demote immediately.
 
-**Pass 2: Publish-ready queue (challenge test)**
+**Pass 2: Publish-ready queue (fast validation)**
 - Promote only candidates that survive Pass 1.
-- Run a 10-12 minute challenge test per candidate:
-  - one disconfirming query,
-  - one baseline comparison,
-  - one independence check on corroborating sources.
-- Escalate to drafting only if anomaly, mechanism, decision, and importance gates still hold after challenge test.
+- Run a short validation pass per candidate (timebox optional):
+  - quick disconfirming look,
+  - quick baseline sense-check,
+  - quick corroboration sanity check when available.
+- Escalate to drafting as soon as the candidate is defensible; do not require formal gate-style checks.
 
 **Hard abandon triggers**
 - Consequence cannot be stated concretely for non-specialists.
@@ -167,7 +167,7 @@ Use a strict two-pass flow to concentrate effort on candidates that can plausibl
 - Contradictory artifact appears and cannot be resolved inside slot time.
 
 **Forced rotate rule**
-- If a candidate misses escalation criteria after challenge test, rotate immediately to next candidate.
+- If a candidate is not defensible quickly, rotate immediately to the next candidate.
 - Do not spend >20 minutes total on a single weak candidate before first draft lock decision.
 
 ### STORY anomaly worksheet (fast quant discipline)
@@ -198,7 +198,7 @@ Trace rule:
 
 ### Origin-diversity preflight (advisory for STORY/FOLLOWUP)
 
-Run this before deep drafting (after candidate challenge test, before draft lock) when it helps quality.
+Run this before deep drafting (during candidate validation, before draft lock) when it helps quality.
 
 For each **major claim**, create a compact origin map:
 1. claim text,
@@ -652,16 +652,16 @@ Purpose:
 - Reduces false "blocked source" outcomes caused by URL churn.
 - Improves FOLLOWUP/STORY reliability without lowering evidence standards.
 
-## Rapid challenge pass (quality upgrade)
+## Rapid counter-check (optional quality upgrade)
 
-Before final draft lock, run a 5-minute adversarial check to reduce confirmation bias:
+Before final draft lock, optionally run a brief adversarial check:
 
-1. Write the strongest one-sentence counter-thesis to your current conclusion.
-2. Attempt one targeted search/query that would support that counter-thesis.
-3. If found, surface it in the story body (not only limitations) and adjust confidence.
-4. If not found, document exact gap searched (time range/source family/query) in `research-traces/`.
+1. Write a one-sentence counter-thesis to your current conclusion.
+2. Attempt one targeted search/query that could support it.
+3. If found, surface it in the story body and adjust confidence.
+4. If not found, optionally note the search gap in `research-traces/`.
 
-This operationalizes Reuters’ “try to disprove as well as prove your story” guidance as a repeatable newsroom step.
+Use this when it improves clarity; it is not a publish gate.
 
 ## Disputable-fact attribution SLA (quality upgrade)
 
