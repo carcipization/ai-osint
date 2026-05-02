@@ -83,6 +83,17 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("| C1 |  |  |  |  |  |  |")
     lines.append("")
 
+    lines.append("## Origin-diversity preflight (mandatory)")
+    lines.append("| claim_id | claim_criticality (high/med/low) | artifact_urls | origin_families_count | corroboration_minutes_spent | pass/fail | action |")
+    lines.append("|---|---|---|---|---|---|---|")
+    lines.append("| C1 |  |  |  |  |  | escalate/provisional/rotate |")
+    lines.append("")
+    lines.append("Threshold checks:")
+    lines.append("- High-impact claims have >=2 independent origin families or are explicitly downgraded provisional: yes/no")
+    lines.append("- If key claims collapse to one origin family after ~12 min targeted corroboration: rotate candidate")
+    lines.append("- Contradiction unresolved in-slot: hold/rotate")
+    lines.append("")
+
     lines.append("## Could this be wrong because...")
     lines.append("- Top disconfirming hypothesis:")
     lines.append("- Evidence that would invalidate current conclusion:")
