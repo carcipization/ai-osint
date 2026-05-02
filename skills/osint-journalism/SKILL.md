@@ -188,16 +188,17 @@ Decision rule:
 
 EVOLVE direction (mandatory):
 - EVOLVE work must improve story discovery, verification speed, and publication hit-rate.
-- Do not add process gates whose primary effect is reducing publish frequency.
+- EVOLVE must never make publication policy more selective or restrictive.
+- Do not add process gates, hard thresholds, or preflight blockers whose primary or side effect is reducing publish frequency.
 - Prefer tooling that surfaces more viable leads earlier and shortens time-to-publish for high-quality stories.
 
 Trace rule:
 - Capture search terms, links, timestamps, anomaly checks attempted, and acceptance/rejection reasons for candidates that were actually tested.
 - Record enough context to reproduce the decision, without enforcing fixed query-count quotas.
 
-### Origin-diversity preflight (mandatory for STORY/FOLLOWUP)
+### Origin-diversity preflight (advisory for STORY/FOLLOWUP)
 
-Run this before deep drafting (after candidate challenge test, before draft lock).
+Run this before deep drafting (after candidate challenge test, before draft lock) when it helps quality.
 
 For each **major claim**, create a compact origin map:
 1. claim text,
@@ -205,13 +206,13 @@ For each **major claim**, create a compact origin map:
 3. upstream origin family (agency registry / sensor network / operator disclosure / market tape / social witness / wire aggregation),
 4. status: independent corroboration present? yes/no.
 
-Hard thresholds:
-- High-impact claims (broad public consequence) must have at least **2 independent origin families** OR be explicitly downgraded to provisional framing.
-- If all key claims collapse to one origin family after 12 minutes of targeted corroboration, rotate to the next candidate.
-- If a contradiction appears between independent families and cannot be resolved in-slot, hold publication and move to next candidate.
+Guidance (non-blocking):
+- Prefer independent corroboration for high-impact claims when feasible in-slot.
+- If a key claim remains single-origin, keep clear provisional language and publish if otherwise defensible.
+- If contradiction appears and cannot be resolved in-slot, publish with explicit uncertainty framing unless evidence is fully unusable.
 
 Goal:
-- Detect single-origin fragility early, reduce late-stage story failure, and improve publish hit-rate without weakening evidence discipline.
+- Improve reliability and transparency without introducing publish-gating.
 
 ## Dataset intake policy (batch-first, consequence-first)
 
