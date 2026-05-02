@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dataset Intel: Household services and safety-net APIs (Watchlist #121)</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="dataset-intel-household-services-and-safety-net-apis-watchlist-121">Dataset Intel: Household services and safety-net APIs (Watchlist #121)</h1>
+<p><strong>Date (UTC):</strong> 2026-05-02</p>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-02-dataset-intel-household-services-and-safety-net-apis-watchlist-121.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-02-dataset-intel-household-services-and-safety-net-apis-watchlist-121.md">Markdown</a></p>
+<hr />
+<h2 id="why-this-batch-matters">Why this batch matters</h2>
+<p>This batch expands high-consequence, non-specialist monitoring around household stability: utility burden, food access, and local social-service demand. These are practical early-warning surfaces for cost stress and service-access deterioration before slower annual reports.</p>
+<h2 id="added-datasets-3">Added datasets (3)</h2>
+<h3 id="1-211-counts-airs-211-network">1) 211 Counts (AIRS / 211 network)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://search.211counts.org/">https://search.211counts.org/</a></li>
+<li><strong>What it is:</strong> Standardized local 211 call/request trends by need category (housing, utilities, food, mental health, etc.) across participating communities.</li>
+<li><strong>Why it’s useful:</strong> Near-operational demand-side signal for household hardship and unmet basic-needs pressure.</li>
+<li><strong>Caveats:</strong> Participation and taxonomy consistency vary by region; call volume reflects help-seeking behavior and access, not full underlying prevalence.</li>
+</ul>
+<h3 id="2-usda-food-access-research-atlas">2) USDA Food Access Research Atlas</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/">https://www.ers.usda.gov/data-products/food-access-research-atlas/</a></li>
+<li><strong>What it is:</strong> U.S. tract-level indicators of low-income/low-access food environments and related access measures.</li>
+<li><strong>Why it’s useful:</strong> Structural denominator for interpreting where food-price or transport shocks are most likely to hit household access.</li>
+<li><strong>Caveats:</strong> Not high-cadence; best used as vulnerability baseline rather than incident-time nowcast.</li>
+</ul>
+<h3 id="3-us-census-saipe-small-area-income-and-poverty-estimates">3) U.S. Census SAIPE (Small Area Income and Poverty Estimates)</h3>
+<ul>
+<li><strong>URL:</strong> <a href="https://www.census.gov/programs-surveys/saipe/data.html">https://www.census.gov/programs-surveys/saipe/data.html</a></li>
+<li><strong>What it is:</strong> County/school-district poverty and income estimates used widely for program allocation and local hardship benchmarking.</li>
+<li><strong>Why it’s useful:</strong> Stable county-level poverty baseline for contextualizing changes in assistance demand and service-friction signals.</li>
+<li><strong>Caveats:</strong> Annual model-based estimates; not designed for weekly shock detection.</li>
+</ul>
+<h2 id="selection-notes">Selection notes</h2>
+<ul>
+<li>Chosen for broad non-specialist consequence coverage (food, utilities, household hardship) and cross-domain chain value with existing safety-net and housing datasets.</li>
+<li>Prioritized net-new practical decision surfaces over narrowly technical telemetry.</li>
+</ul>
+</body>
+</html>
