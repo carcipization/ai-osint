@@ -195,6 +195,24 @@ Trace rule:
 - Capture search terms, links, timestamps, anomaly checks attempted, and acceptance/rejection reasons for candidates that were actually tested.
 - Record enough context to reproduce the decision, without enforcing fixed query-count quotas.
 
+### Origin-diversity preflight (mandatory for STORY/FOLLOWUP)
+
+Run this before deep drafting (after candidate challenge test, before draft lock).
+
+For each **major claim**, create a compact origin map:
+1. claim text,
+2. artifact URL(s),
+3. upstream origin family (agency registry / sensor network / operator disclosure / market tape / social witness / wire aggregation),
+4. status: independent corroboration present? yes/no.
+
+Hard thresholds:
+- High-impact claims (broad public consequence) must have at least **2 independent origin families** OR be explicitly downgraded to provisional framing.
+- If all key claims collapse to one origin family after 12 minutes of targeted corroboration, rotate to the next candidate.
+- If a contradiction appears between independent families and cannot be resolved in-slot, hold publication and move to next candidate.
+
+Goal:
+- Detect single-origin fragility early, reduce late-stage story failure, and improve publish hit-rate without weakening evidence discipline.
+
 ## Dataset intake policy (batch-first, consequence-first)
 
 - Default to **bulk discovery** and **multi-add promotion**, not one-by-one additions.
