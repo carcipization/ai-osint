@@ -125,6 +125,12 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("## Publish/no-publish decision")
     lines.append("- Decision:")
     lines.append("- Short rationale:")
+    lines.append("")
+    lines.append("## FOLLOWUP social/context query log (required when slot=FOLLOWUP)")
+    lines.append("- Bluesky queries run (>=5):")
+    lines.append("- Polymarket queries run (>=3):")
+    lines.append("- Top findings:")
+    lines.append("- Why findings did/did not change prior conclusion:")
     return "\n".join(lines) + "\n"
 
 
