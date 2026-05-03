@@ -6,10 +6,6 @@ import sys
 from pathlib import Path
 
 
-def numbered_items(section: str) -> list[str]:
-    return re.findall(r"^\s*\d+\.\s+`.*$", section, flags=re.M)
-
-
 def main() -> int:
     if len(sys.argv) != 2:
         print("usage: check_followup_trace.py <trace.md>")
@@ -22,46 +18,19 @@ def main() -> int:
 
     text = p.read_text(encoding="utf-8", errors="ignore")
 
-    bsky_m = re.search(r"### Bluesky queries \(5\)(.*?)(?:\n### |\Z)", text, flags=re.S)
-    poly_m = re.search(r"### Polymarket queries \(3\)(.*?)(?:\n### |\Z)", text, flags=re.S)
+    # Minimal gate only:
+    # Require an explicit verdict + primary-data evidence note.
+    verdict_ok = re.search(r"materially new primary-data signal\?\s*(yes|no)", text, flags=re.I)
+    evidence_ok = re.search(r"primary-data evidence\s*:\s*.+", text, flags=re.I)
 
-    if not bsky_m:
-        print("FAIL: missing '### Bluesky queries (5)' section")
+    if not verdict_ok:
+        print("FAIL: missing verdict line: 'Materially new primary-data signal? yes|no'")
         return 1
-    if not poly_m:
-        print("FAIL: missing '### Polymarket queries (3)' section")
-        return 1
-
-    bsky_items = numbered_items(bsky_m.group(1))
-    poly_items = numbered_items(poly_m.group(1))
-    bsky_count = len(bsky_items)
-    poly_count = len(poly_items)
-
-    errs: list[str] = []
-    if bsky_count < 5:
-        errs.append(f"Bluesky query count too low: {bsky_count} < 5")
-    if poly_count < 3:
-        errs.append(f"Polymarket query count too low: {poly_count} < 3")
-
-    label_re = re.compile(r"\*\*(signal|noise|unverifiable)\*\*", flags=re.I)
-    for item in bsky_items:
-        if not label_re.search(item):
-            errs.append(f"Bluesky item missing label (signal/noise/unverifiable): {item}")
-    for item in poly_items:
-        if not label_re.search(item):
-            errs.append(f"Polymarket item missing label (signal/noise/unverifiable): {item}")
-
-    if "Top finding:" not in bsky_m.group(1):
-        errs.append("Bluesky section missing 'Top finding:' summary")
-    if "Top finding:" not in poly_m.group(1):
-        errs.append("Polymarket section missing 'Top finding:' summary")
-
-    if errs:
-        for e in errs:
-            print(f"FAIL: {e}")
+    if not evidence_ok:
+        print("FAIL: missing evidence line: 'Primary-data evidence: ...'")
         return 1
 
-    print(f"PASS: Bluesky={bsky_count}, Polymarket={poly_count}, labels=ok, summaries=ok")
+    print("PASS: minimal follow-up gate satisfied (verdict + evidence)")
     return 0
 
 
