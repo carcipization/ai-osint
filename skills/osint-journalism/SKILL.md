@@ -622,7 +622,7 @@ Execution rule:
 
 ## Publication-policy preflight (quality upgrade)
 
-Before finalizing a STORY or DATASETS post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects.
+Before finalizing a STORY post, run a quick policy-shape check on the markdown source to avoid preventable publish/commit rejects. DATASETS runs do not publish posts.
 
 - STORY headlines should be plain-language and should **not** append technical type markers like `(osint-story)`.
 - Dataset posts must begin with `Datasets:`.
