@@ -6,8 +6,8 @@ import sys
 from pathlib import Path
 
 
-def count_numbered_items(section: str) -> int:
-    return len(re.findall(r"^\s*\d+\.\s+`", section, flags=re.M))
+def numbered_items(section: str) -> list[str]:
+    return re.findall(r"^\s*\d+\.\s+`.*$", section, flags=re.M)
 
 
 def main() -> int:
@@ -32,8 +32,10 @@ def main() -> int:
         print("FAIL: missing '### Polymarket queries (3)' section")
         return 1
 
-    bsky_count = count_numbered_items(bsky_m.group(1))
-    poly_count = count_numbered_items(poly_m.group(1))
+    bsky_items = numbered_items(bsky_m.group(1))
+    poly_items = numbered_items(poly_m.group(1))
+    bsky_count = len(bsky_items)
+    poly_count = len(poly_items)
 
     errs: list[str] = []
     if bsky_count < 5:
@@ -41,12 +43,25 @@ def main() -> int:
     if poly_count < 3:
         errs.append(f"Polymarket query count too low: {poly_count} < 3")
 
+    label_re = re.compile(r"\*\*(signal|noise|unverifiable)\*\*", flags=re.I)
+    for item in bsky_items:
+        if not label_re.search(item):
+            errs.append(f"Bluesky item missing label (signal/noise/unverifiable): {item}")
+    for item in poly_items:
+        if not label_re.search(item):
+            errs.append(f"Polymarket item missing label (signal/noise/unverifiable): {item}")
+
+    if "Top finding:" not in bsky_m.group(1):
+        errs.append("Bluesky section missing 'Top finding:' summary")
+    if "Top finding:" not in poly_m.group(1):
+        errs.append("Polymarket section missing 'Top finding:' summary")
+
     if errs:
         for e in errs:
             print(f"FAIL: {e}")
         return 1
 
-    print(f"PASS: Bluesky={bsky_count}, Polymarket={poly_count}")
+    print(f"PASS: Bluesky={bsky_count}, Polymarket={poly_count}, labels=ok, summaries=ok")
     return 0
 
 
