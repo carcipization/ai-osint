@@ -616,9 +616,10 @@ Template bank:
 
 Execution rule:
 - Run one generic pass, then switch to scaffold if 3+ low-yield results appear.
-- Log each query with one-line outcome label (`signal` / `noise` / `unverifiable`) in trace.
-- Validate FOLLOWUP trace structure before finalize/push with:
+- Keep FOLLOWUP trace validation minimal. Do not add new trace-format/checking requirements beyond the existing minimal gate in `scripts/check_followup_trace.py` unless Jon explicitly requests it.
+- Minimal gate only:
   - `python3 scripts/check_followup_trace.py <trace.md>`
+  - Required lines in trace: `Materially new primary-data signal? yes|no` and `Primary-data evidence: ...`
 
 ## Publication-policy preflight (quality upgrade)
 
