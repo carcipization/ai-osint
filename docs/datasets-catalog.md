@@ -601,4 +601,8 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [SAIPE (Small Area Income and Poverty Estimates)](https://www.census.gov/programs-surveys/saipe/data.html) — County and school-district poverty/income estimates for grounding local hardship and assistance-demand interpretation against stable socioeconomic baselines. High policy and allocation relevance with annual model-based update limitations.
 
 
+## Operational alerting and disruption telemetry
+- [USGS All-Hazards Data Distribution System (HDDS)](https://hddsexplorer.usgs.gov/) — USGS emergency-response geospatial data distribution platform for rapid access to event-specific hazard layers (flood, landslide, earthquake, wildfire, storm impacts) during active incidents. High operational-response and consequence-mapping utility with event-dependent coverage and product-standardization caveats.
+- [EMSC Real-time Earthquake Feed](https://www.seismicportal.eu/realtime.html) — European-Mediterranean Seismological Centre near-real-time earthquake event feed useful for independent seismic cross-checking and regional early confirmation outside single-network dependence. High anomaly corroboration value with revision and agency-reconciliation caveats.
+
 ## Space weather and disruption context
