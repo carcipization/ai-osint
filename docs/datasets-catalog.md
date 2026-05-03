@@ -3,11 +3,11 @@
 **Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/datasets-catalog.html)
 **LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/datasets-catalog.md)
 
-**Dateline:** 2026-04-27 14:24 UTC
+**Dateline:** 2026-05-03 09:50 UTC
 
 Compact reference list. Each item is 1–2 sentences: what it is and why it matters.
 
-**Catalog metadata:** 184 datasets • 12 domains • structure-optimized for cadence retrieval
+**Catalog metadata:** 187 datasets • 12 domains • structure-optimized for cadence retrieval
 
 ## Quick navigation
 - [Conflict, unrest, and information control](#conflict-unrest-and-information-control)
@@ -599,5 +599,9 @@ Operational rule: for high-impact claims, avoid single-source conclusions from *
 - [211 Counts (AIRS)](https://search.211counts.org/) — Community-level 211 request trend platform with category-level signals (housing, utilities, food, mental health, and other basic-needs requests) for near-operational detection of local hardship demand spikes. High practical non-specialist consequence value with regional participation and category-taxonomy comparability caveats.
 - [USDA Food Access Research Atlas](https://www.ers.usda.gov/data-products/food-access-research-atlas/) — U.S. census-tract food-access vulnerability baseline (low-income/low-access and related indicators) for identifying communities most exposed when transport or food-cost stress rises. Strong structural denominator with non-high-frequency update cadence caveats.
 - [SAIPE (Small Area Income and Poverty Estimates)](https://www.census.gov/programs-surveys/saipe/data.html) — County and school-district poverty/income estimates for grounding local hardship and assistance-demand interpretation against stable socioeconomic baselines. High policy and allocation relevance with annual model-based update limitations.
+
+- [SNAP Retailer Locator Historical Data](https://www.fns.usda.gov/snap/retailer-locator/data) — USDA Food and Nutrition Service downloadable historical SNAP-authorized retailer records (CSV/ZIP and map-ready files) with store type, address, geolocation, and authorization timelines for assessing neighborhood food-access resilience when household budgets tighten or local supply chains are disrupted. High non-specialist consequence value for food-access and mobility decisions, with retailer self-report/update-lag and authorization-versus-actual-stock caveats.
+- [BLS Local Area Unemployment Statistics (LAUS)](https://www.bls.gov/lau/) — Monthly and annual labor-force, employment, and unemployment measures for states, counties, metros, and many cities, useful for identifying where household income risk is rising before slower annual socioeconomic datasets refresh. High household-cost and service-demand consequence signal with seasonal-adjustment, benchmark-revision, and small-area volatility caveats.
+- [NHS England GP Appointments Data Hub](https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/gp-appointments-data) — England general-practice appointments publication and downloadable dashboard outputs for appointment volume, wait-time, mode, and role mix, enabling direct checks of frontline primary-care access pressure that can alter household care-seeking decisions. High public-service consequence signal with coding-quality, category-mapping, and publication-lag caveats.
 
 ## Space weather and disruption context
