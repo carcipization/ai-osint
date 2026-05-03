@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datasets: Household Access, Labor Stress, and Primary Care Coverage Watchlist</title>
+  <title>STORY: Bangladesh measles caseload climbed sharply through late April as emergency campaign expanded</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,39 +16,38 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="datasets-household-access-labor-stress-and-primary-care-coverage-watchlist">Datasets: Household Access, Labor Stress, and Primary Care Coverage Watchlist</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-03-datasets-household-access-labor-primary-care-watchlist.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-03-datasets-household-access-labor-primary-care-watchlist.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-05-03 09:50 UTC</p>
-<p>This one-off datasets run adds three net-new, primary-source datasets focused on everyday consequence surfaces: food-access infrastructure for low-income households, local labor-market deterioration risk, and frontline healthcare appointment access.</p>
-<h2 id="what-was-added">What was added</h2>
-<ol>
-<li>
-<p><strong>SNAP Retailer Locator Historical Data (USDA FNS)</strong><br />
-   URL: <a href="https://www.fns.usda.gov/snap/retailer-locator/data">https://www.fns.usda.gov/snap/retailer-locator/data</a><br />
-   Why it matters: gives tract/ZIP-adjacent retailer presence and churn context to test whether affordability shocks are also turning into practical access frictions.</p>
-</li>
-<li>
-<p><strong>BLS Local Area Unemployment Statistics (LAUS)</strong><br />
-   URL: <a href="https://www.bls.gov/lau/">https://www.bls.gov/lau/</a><br />
-   Why it matters: high-frequency county/metro unemployment signals help connect macro labor moves to likely near-term pressure on rent, food, and utility payment resilience.</p>
-</li>
-<li>
-<p><strong>NHS England GP Appointments Data Hub</strong><br />
-   URL: <a href="https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/gp-appointments-data">https://digital.nhs.uk/data-and-information/data-tools-and-services/data-services/gp-appointments-data</a><br />
-   Why it matters: appointment volume and timeliness indicators provide direct service-access evidence for primary care strain affecting household decision-making.</p>
-</li>
-</ol>
-<h2 id="selection-notes">Selection notes</h2>
+  <h1 id="story-bangladesh-measles-caseload-climbed-sharply-through-late-april-as-emergency-campaign-expanded">STORY: Bangladesh measles caseload climbed sharply through late April as emergency campaign expanded</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-05-02 02:55 UTC</p>
+<p>Bangladesh’s measles outbreak continued to accelerate through late April, with official tallies indicating a larger burden than was reported in mid-April and a growing concentration of severe outcomes among children. The World Health Organization said Bangladesh had logged 19,161 suspected cases and 2,897 laboratory-confirmed cases between 15 March and 14 April, with 166 measles-related deaths reported in that window.</p>
+<p>By 26 April, Bangladesh’s Directorate General of Health Services (DGHS), in figures relayed by state news agency BSS, reported 32,028 suspected cases and 4,603 confirmed cases since 15 March, plus 43 confirmed measles deaths and 216 suspected measles-related deaths. The late-April totals suggest substantial growth in reported burden after the WHO reporting cutoff.</p>
+<p>The outbreak response shifted from hotspot targeting to nationwide rollout in April. WHO said Bangladesh began a targeted measles-rubella campaign on 5 April in 30 upazilas across 18 districts, then moved to a nationwide campaign from 20 April, aimed at children 6-59 months old. That sequence indicates authorities treated the event as a broad national transmission problem rather than a localized cluster.</p>
+<p>What could overturn this assessment: if late-April totals are revised downward after case reclassification or delayed laboratory reconciliation, the apparent pace of growth could moderate. The core direction, however, is currently supported by both WHO and Bangladesh health-authority reporting streams.</p>
+<h2 id="appendix-method">Appendix: Method</h2>
 <ul>
-<li>Prioritized broad non-specialist consequence over technical convenience.</li>
-<li>Kept to direct raw-data access endpoints (download/API/dashboard export), not catalog wrappers.</li>
-<li>Kept intake independent of wire-media leads and anchored to primary-source dataset ecosystems.</li>
+<li>Compared two reporting windows from independent evidence families:</li>
+<li>WHO Disease Outbreak News snapshot (through 14 April 2026).</li>
+<li>DGHS daily situation figures as published by BSS (through 26 April 2026).</li>
+<li>Used only direct numeric comparisons for overlapping indicators (suspected cases, confirmed cases, deaths).</li>
+<li>Treated suspected and confirmed deaths as separate categories.</li>
 </ul>
-<h2 id="next-use-impact-chain">Next-use impact chain</h2>
-<p>These additions strengthen near-term cross-domain chain coverage:
-- <strong>Labor stress -&gt; affordability pressure</strong> (LAUS)
-- <strong>Affordability pressure -&gt; food-access infrastructure exposure</strong> (SNAP retailer footprint)
-- <strong>Household strain -&gt; primary-care access friction</strong> (NHS GP appointments)</p>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
+<ul>
+<li>WHO and DGHS windows are not identical and may use different publication lags.</li>
+<li>DGHS figures were accessed via BSS reporting rather than a direct DGHS data table in this run.</li>
+<li>Suspected-case counts can later be revised as laboratory confirmation progresses.</li>
+</ul>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
+<p><strong>Confidence: Moderate.</strong></p>
+<ul>
+<li>Strengths: primary WHO publication plus Bangladesh health-authority figures carried by the state wire.</li>
+<li>Constraints: non-identical reporting windows and potential downstream revisions in suspected/confirmed classifications.</li>
+</ul>
+<h2 id="appendix-sources">Appendix: Sources</h2>
+<ol>
+<li>WHO Disease Outbreak News, “Measles - Bangladesh” (2026-DON598): <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598">https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598</a></li>
+<li>BSS (citing DGHS Health Emergency Operation Centre), “8 more die of measles, measles-like symptoms” (26 April 2026): <a href="https://www.bssnews.net/news/381600">https://www.bssnews.net/news/381600</a></li>
+</ol>
 </body>
 </html>
