@@ -1,0 +1,95 @@
+{
+  "run_utc": "2026-05-05 08:27:10 UTC",
+  "bluesky_queries": [
+    {
+      "query": "site outage",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "fuel supply",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "airport disruption",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "power grid",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "shipping delays",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    }
+  ],
+  "polymarket": [
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search oil --limit 8 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    },
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search inflation --limit 8 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    },
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search ceasefire --limit 8 --json",
+      "exit_code": 0,
+      "results": [
+        {
+          "id": "540816",
+          "slug": "russia-ukraine-ceasefire-before-gta-vi-554",
+          "question": "Russia-Ukraine Ceasefire before GTA VI?",
+          "category": null,
+          "active": true,
+          "closed": false,
+          "volume": "1652456.309689047",
+          "liquidity": "53430.7718",
+          "startDate": "2025-05-02T15:48:00.174Z",
+          "endDate": "2026-07-31T12:00:00Z",
+          "outcomes": "[\"Yes\", \"No\"]",
+          "outcomePrices": "[\"0.555\", \"0.445\"]",
+          "url": "https://polymarket.com/event/russia-ukraine-ceasefire-before-gta-vi-554"
+        }
+      ],
+      "stderr": null
+    }
+  ],
+  "polymarket_top_findings": [
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search oil --limit 8 --json",
+      "matches": 0,
+      "top": []
+    },
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search inflation --limit 8 --json",
+      "matches": 0,
+      "top": []
+    },
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search ceasefire --limit 8 --json",
+      "matches": 1,
+      "top": [
+        {
+          "question": "Russia-Ukraine Ceasefire before GTA VI?",
+          "slug": "russia-ukraine-ceasefire-before-gta-vi-554",
+          "prices": "[\"0.555\", \"0.445\"]",
+          "volume": "1652456.309689047"
+        }
+      ]
+    }
+  ],
+  "minimums": {
+    "bluesky_queries": 5,
+    "polymarket_queries": 3,
+    "enforced": true
+  }
+}
