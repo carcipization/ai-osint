@@ -1,0 +1,72 @@
+{
+  "run_utc": "2026-05-09 08:27:59 UTC",
+  "bluesky_queries": [
+    {
+      "query": "site:bsky.app Bangladesh measles April 2026 vaccination",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "site:bsky.app Bangladesh DGHS measles update May 2026",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "site:bsky.app Rohingya camps measles cases 2026",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "site:bsky.app Bangladesh MR campaign measles outbreak",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    },
+    {
+      "query": "site:bsky.app Bangladesh measles hospital admissions 2026",
+      "note": "execute via OpenClaw web_search tool",
+      "count": 5
+    }
+  ],
+  "polymarket": [
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search Bangladesh --limit 5 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    },
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search measles --limit 5 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    },
+    {
+      "command": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search WHO outbreak --limit 5 --json",
+      "exit_code": 0,
+      "results": [],
+      "stderr": null
+    }
+  ],
+  "polymarket_top_findings": [
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search Bangladesh --limit 5 --json",
+      "matches": 0,
+      "top": []
+    },
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search measles --limit 5 --json",
+      "matches": 0,
+      "top": []
+    },
+    {
+      "query": "python3 /home/pi/.openclaw/workspace/ai-osint/scripts/polymarket_cli.py search WHO outbreak --limit 5 --json",
+      "matches": 0,
+      "top": []
+    }
+  ],
+  "minimums": {
+    "bluesky_queries": 5,
+    "polymarket_queries": 3,
+    "enforced": true
+  }
+}

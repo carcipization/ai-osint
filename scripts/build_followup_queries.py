@@ -6,11 +6,17 @@ from typing import List
 
 
 def build_queries(event: str, actor: str, timeframe: str, consequence: str) -> List[str]:
+    freshness = "latest OR new OR update"
+    consequence_tail = f"{consequence} cost OR access OR safety OR services"
     return [
         f"site:bsky.app {event} {actor} {timeframe} {consequence}",
+        f"site:bsky.app {event} {actor} {freshness} {timeframe} {consequence}",
         f"site:bsky.app {event} update {timeframe} {consequence}",
+        f"site:bsky.app {actor} {event} {timeframe} {consequence_tail}",
+        f"site:bsky.app {event} location update {timeframe} {consequence}",
         f"Polymarket {event} {actor} {timeframe}",
         f"{event} official update {timeframe}",
+        f"{event} {actor} official bulletin {timeframe} {consequence}",
     ]
 
 
