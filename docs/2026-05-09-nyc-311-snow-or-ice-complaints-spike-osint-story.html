@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC 311 anomaly watch: “Snow or Ice” complaints spiked ~10.7x baseline on 2026-02-24</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="nyc-311-anomaly-watch-snow-or-ice-complaints-spiked-107x-baseline-on-2026-02-24">NYC 311 anomaly watch: “Snow or Ice” complaints spiked ~10.7x baseline on 2026-02-24</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-09-nyc-311-snow-or-ice-complaints-spike-anomaly-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-09-nyc-311-snow-or-ice-complaints-spike-anomaly-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-05-09</p>
+<h2 id="what-changed-anomalous-data-point">What changed (anomalous data point)</h2>
+<p>NYC 311 daily total complaints jumped to <strong>22,806</strong> on <strong>2026-02-24</strong>, versus a 2026 YTD daily mean near <strong>11,030</strong> (about <strong>+5.4σ</strong> above mean in a simple daily z-score scan).</p>
+<p>The dominant anomaly driver was a single category:</p>
+<ul>
+<li><strong>Snow or Ice:</strong> <strong>11,370</strong> complaints on 2026-02-24</li>
+<li>Prior-28-day baseline for that category: about <strong>1,061/day</strong></li>
+<li>Implied one-day uplift: about <strong>+10,309</strong> complaints</li>
+<li>Ratio vs prior-28-day baseline: about <strong>10.7x</strong></li>
+</ul>
+<h2 id="why-this-matters">Why this matters</h2>
+<p>A one-day surge of this size concentrates demand on sanitation/transport/public-works response layers and can serve as an early stress signal for city operations and household mobility risk.</p>
+<h2 id="evidence-and-method">Evidence and method</h2>
+<ol>
+<li>Pulled NYC Open Data 311 service requests (<code>erm2-nwe9</code>) grouped by day from 2026-01-01 onward.</li>
+<li>Computed mean and population standard deviation across daily totals (excluding the latest two days to reduce partial-ingest artifacts).</li>
+<li>Ranked days by z-score; 2026-02-24 was the top outlier.</li>
+<li>Decomposed that date by <code>complaint_type</code> and compared to prior 28-day per-day averages by category.</li>
+</ol>
+<h2 id="key-caveats">Key caveats</h2>
+<ul>
+<li>This is an <strong>operational anomaly check</strong>, not a causal attribution model.</li>
+<li>311 volumes can be influenced by weather, reporting campaigns, platform effects, and backlog/ingest timing.</li>
+<li>Category names reflect reporter/system labeling conventions.</li>
+</ul>
+<h2 id="primary-sources">Primary sources</h2>
+<ul>
+<li>NYC Open Data dataset page (311 Service Requests): <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests/erm2-nwe9">https://data.cityofnewyork.us/Social-Services/311-Service-Requests/erm2-nwe9</a></li>
+<li>Socrata API docs endpoint: <a href="https://data.cityofnewyork.us/resource/erm2-nwe9.json">https://data.cityofnewyork.us/resource/erm2-nwe9.json</a></li>
+</ul>
+<h3 id="reproducible-query-patterns-used">Reproducible query patterns used</h3>
+<ul>
+<li>Daily totals from 2026-01-01:</li>
+<li><code>?$select=date_trunc_ymd(created_date)%20as%20day,%20count(*)%20as%20n&amp;$where=created_date%20%3E=%20'2026-01-01T00:00:00'&amp;$group=day&amp;$order=day%20asc&amp;$limit=5000</code></li>
+<li>Category breakdown for 2026-02-24:</li>
+<li><code>?$select=complaint_type,%20count(*)%20as%20n&amp;$where=created_date%20between%20'2026-02-24T00:00:00'%20and%20'2026-02-24T23:59:59'&amp;$group=complaint_type&amp;$order=n%20desc&amp;$limit=2000</code></li>
+<li>Baseline window (prior 28 days):</li>
+<li><code>?$select=complaint_type,%20count(*)%20as%20n&amp;$where=created_date%20between%20'2026-01-27T00:00:00'%20and%20'2026-02-23T23:59:59'&amp;$group=complaint_type&amp;$limit=2000</code></li>
+</ul>
+<hr />
+<p>If requested, I can publish a follow-up that joins this anomaly to archived weather observations and transit disruption records to test plausible drivers.</p>
+</body>
+</html>
