@@ -1,42 +1,40 @@
-# Geopolitical anomaly: Russia–Ukraine global news volume spiked sharply in the last week
+# STORY: Bangladesh measles caseload climbed sharply through late April as emergency campaign expanded
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-09-russia-ukraine-media-volume-spike-last-week-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-09-russia-ukraine-media-volume-spike-last-week-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.md)
 
-**Dateline:** 2026-05-09
+**Dateline:** 2026-05-02 02:55 UTC
 
-## Anomalous datapoint (within last week)
+Bangladesh’s measles outbreak continued to accelerate through late April, with official tallies indicating a larger burden than was reported in mid-April and a growing concentration of severe outcomes among children. The World Health Organization said Bangladesh had logged 19,161 suspected cases and 2,897 laboratory-confirmed cases between 15 March and 14 April, with 166 measles-related deaths reported in that window.
 
-From GDELT 2.0’s global news index (`DOC 2.0 TimelineVolRaw`), query `Russia AND Ukraine` over the last 7 days shows a pronounced hourly surge:
+By 26 April, Bangladesh’s Directorate General of Health Services (DGHS), in figures relayed by state news agency BSS, reported 32,028 suspected cases and 4,603 confirmed cases since 15 March, plus 43 confirmed measles deaths and 216 suspected measles-related deaths. The late-April totals suggest substantial growth in reported burden after the WHO reporting cutoff.
 
-- **2026-05-08 21:00 UTC:** **301** matching articles/hour
-- 7-day hourly baseline mean: **85.93**
-- 7-day hourly standard deviation: **49.55**
-- Z-score of the spike: **+4.34σ**
+The outbreak response shifted from hotspot targeting to nationwide rollout in April. WHO said Bangladesh began a targeted measles-rubella campaign on 5 April in 30 upazilas across 18 districts, then moved to a nationwide campaign from 20 April, aimed at children 6-59 months old. That sequence indicates authorities treated the event as a broad national transmission problem rather than a localized cluster.
 
-This is a clear outlier in the last-week window and meets anomaly criteria.
+What could overturn this assessment: if late-April totals are revised downward after case reclassification or delayed laboratory reconciliation, the apparent pace of growth could moderate. The core direction, however, is currently supported by both WHO and Bangladesh health-authority reporting streams.
 
-## Why this is meaningful
+## Appendix: Method
 
-Unlike local service-ticket systems, GDELT reflects broad international media-output intensity across languages/sources. A +4σ hourly jump on a major war dyad is a high-salience geopolitical attention signal that often aligns with escalation events, major strikes, or policy announcements.
+- Compared two reporting windows from independent evidence families:
+  - WHO Disease Outbreak News snapshot (through 14 April 2026).
+  - DGHS daily situation figures as published by BSS (through 26 April 2026).
+- Used only direct numeric comparisons for overlapping indicators (suspected cases, confirmed cases, deaths).
+- Treated suspected and confirmed deaths as separate categories.
 
-## Method
+## Appendix: Limitations
 
-1. Pulled 7-day hourly timeline from GDELT for `Russia AND Ukraine`.
-2. Computed mean and population standard deviation across all hourly bins returned.
-3. Ranked hourly values; identified highest outlier and quantified z-score.
+- WHO and DGHS windows are not identical and may use different publication lags.
+- DGHS figures were accessed via BSS reporting rather than a direct DGHS data table in this run.
+- Suspected-case counts can later be revised as laboratory confirmation progresses.
 
-## Reproducible source query
+## Appendix: Confidence
 
-- GDELT API endpoint:
-  - `[https://api.gdeltproject.org/api/v2/doc/doc?query=Russia%20AND%20Ukraine&mode=TimelineVolRaw&format=json&timespan=7days`](https://api.gdeltproject.org/api/v2/doc/doc?query=Russia%20AND%20Ukraine&mode=TimelineVolRaw&format=json&timespan=7days`)
+**Confidence: Moderate.**
 
-## Caveats
+- Strengths: primary WHO publication plus Bangladesh health-authority figures carried by the state wire.
+- Constraints: non-identical reporting windows and potential downstream revisions in suspected/confirmed classifications.
 
-- This is a **media-volume anomaly** (attention/intensity proxy), not a direct kinetic-loss measure.
-- Query semantics (`Russia AND Ukraine`) capture broad conflict-related discourse and may include diplomacy/economic coverage.
-- Follow-up should pair this with direct event ledgers (strike logs, official MoD statements, satellite/fire detections) for attribution.
+## Appendix: Sources
 
----
-
-Next iteration can decompose the spike hour by language/source clusters and attach event-level corroboration for causal explanation.
+1. WHO Disease Outbreak News, “Measles - Bangladesh” (2026-DON598): [https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598)
+2. BSS (citing DGHS Health Emergency Operation Centre), “8 more die of measles, measles-like symptoms” (26 April 2026): [https://www.bssnews.net/news/381600](https://www.bssnews.net/news/381600)

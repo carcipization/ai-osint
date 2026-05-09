@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Geopolitical anomaly: Russia–Ukraine global news volume spiked sharply in the last week</title>
+  <title>STORY: Bangladesh measles caseload climbed sharply through late April as emergency campaign expanded</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,39 +16,38 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="geopolitical-anomaly-russiaukraine-global-news-volume-spiked-sharply-in-the-last-week">Geopolitical anomaly: Russia–Ukraine global news volume spiked sharply in the last week</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-09-russia-ukraine-media-volume-spike-last-week-osint-story.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-09-russia-ukraine-media-volume-spike-last-week-osint-story.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-05-09</p>
-<h2 id="anomalous-datapoint-within-last-week">Anomalous datapoint (within last week)</h2>
-<p>From GDELT 2.0’s global news index (<code>DOC 2.0 TimelineVolRaw</code>), query <code>Russia AND Ukraine</code> over the last 7 days shows a pronounced hourly surge:</p>
+  <h1 id="story-bangladesh-measles-caseload-climbed-sharply-through-late-april-as-emergency-campaign-expanded">STORY: Bangladesh measles caseload climbed sharply through late April as emergency campaign expanded</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-05-02 02:55 UTC</p>
+<p>Bangladesh’s measles outbreak continued to accelerate through late April, with official tallies indicating a larger burden than was reported in mid-April and a growing concentration of severe outcomes among children. The World Health Organization said Bangladesh had logged 19,161 suspected cases and 2,897 laboratory-confirmed cases between 15 March and 14 April, with 166 measles-related deaths reported in that window.</p>
+<p>By 26 April, Bangladesh’s Directorate General of Health Services (DGHS), in figures relayed by state news agency BSS, reported 32,028 suspected cases and 4,603 confirmed cases since 15 March, plus 43 confirmed measles deaths and 216 suspected measles-related deaths. The late-April totals suggest substantial growth in reported burden after the WHO reporting cutoff.</p>
+<p>The outbreak response shifted from hotspot targeting to nationwide rollout in April. WHO said Bangladesh began a targeted measles-rubella campaign on 5 April in 30 upazilas across 18 districts, then moved to a nationwide campaign from 20 April, aimed at children 6-59 months old. That sequence indicates authorities treated the event as a broad national transmission problem rather than a localized cluster.</p>
+<p>What could overturn this assessment: if late-April totals are revised downward after case reclassification or delayed laboratory reconciliation, the apparent pace of growth could moderate. The core direction, however, is currently supported by both WHO and Bangladesh health-authority reporting streams.</p>
+<h2 id="appendix-method">Appendix: Method</h2>
 <ul>
-<li><strong>2026-05-08 21:00 UTC:</strong> <strong>301</strong> matching articles/hour</li>
-<li>7-day hourly baseline mean: <strong>85.93</strong></li>
-<li>7-day hourly standard deviation: <strong>49.55</strong></li>
-<li>Z-score of the spike: <strong>+4.34σ</strong></li>
+<li>Compared two reporting windows from independent evidence families:</li>
+<li>WHO Disease Outbreak News snapshot (through 14 April 2026).</li>
+<li>DGHS daily situation figures as published by BSS (through 26 April 2026).</li>
+<li>Used only direct numeric comparisons for overlapping indicators (suspected cases, confirmed cases, deaths).</li>
+<li>Treated suspected and confirmed deaths as separate categories.</li>
 </ul>
-<p>This is a clear outlier in the last-week window and meets anomaly criteria.</p>
-<h2 id="why-this-is-meaningful">Why this is meaningful</h2>
-<p>Unlike local service-ticket systems, GDELT reflects broad international media-output intensity across languages/sources. A +4σ hourly jump on a major war dyad is a high-salience geopolitical attention signal that often aligns with escalation events, major strikes, or policy announcements.</p>
-<h2 id="method">Method</h2>
+<h2 id="appendix-limitations">Appendix: Limitations</h2>
+<ul>
+<li>WHO and DGHS windows are not identical and may use different publication lags.</li>
+<li>DGHS figures were accessed via BSS reporting rather than a direct DGHS data table in this run.</li>
+<li>Suspected-case counts can later be revised as laboratory confirmation progresses.</li>
+</ul>
+<h2 id="appendix-confidence">Appendix: Confidence</h2>
+<p><strong>Confidence: Moderate.</strong></p>
+<ul>
+<li>Strengths: primary WHO publication plus Bangladesh health-authority figures carried by the state wire.</li>
+<li>Constraints: non-identical reporting windows and potential downstream revisions in suspected/confirmed classifications.</li>
+</ul>
+<h2 id="appendix-sources">Appendix: Sources</h2>
 <ol>
-<li>Pulled 7-day hourly timeline from GDELT for <code>Russia AND Ukraine</code>.</li>
-<li>Computed mean and population standard deviation across all hourly bins returned.</li>
-<li>Ranked hourly values; identified highest outlier and quantified z-score.</li>
+<li>WHO Disease Outbreak News, “Measles - Bangladesh” (2026-DON598): <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598">https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598</a></li>
+<li>BSS (citing DGHS Health Emergency Operation Centre), “8 more die of measles, measles-like symptoms” (26 April 2026): <a href="https://www.bssnews.net/news/381600">https://www.bssnews.net/news/381600</a></li>
 </ol>
-<h2 id="reproducible-source-query">Reproducible source query</h2>
-<ul>
-<li>GDELT API endpoint:</li>
-<li><code>[https://api.gdeltproject.org/api/v2/doc/doc?query=Russia%20AND%20Ukraine&amp;mode=TimelineVolRaw&amp;format=json&amp;timespan=7days</code>](https://api.gdeltproject.org/api/v2/doc/doc?query=Russia%20AND%20Ukraine&amp;mode=TimelineVolRaw&amp;format=json&amp;timespan=7days`)</li>
-</ul>
-<h2 id="caveats">Caveats</h2>
-<ul>
-<li>This is a <strong>media-volume anomaly</strong> (attention/intensity proxy), not a direct kinetic-loss measure.</li>
-<li>Query semantics (<code>Russia AND Ukraine</code>) capture broad conflict-related discourse and may include diplomacy/economic coverage.</li>
-<li>Follow-up should pair this with direct event ledgers (strike logs, official MoD statements, satellite/fire detections) for attribution.</li>
-</ul>
-<hr />
-<p>Next iteration can decompose the spike hour by language/source clusters and attach event-level corroboration for causal explanation.</p>
 </body>
 </html>
