@@ -1,40 +1,53 @@
-# STORY: Bangladesh measles caseload climbed sharply through late April as emergency campaign expanded
+# NYC 311 anomaly watch: “Snow or Ice” complaints spiked ~10.7x baseline on 2026-02-24
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-02-bangladesh-measles-cases-rise-through-late-april-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-09-nyc-311-snow-or-ice-complaints-spike-anomaly-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-09-nyc-311-snow-or-ice-complaints-spike-anomaly-story.md)
 
-**Dateline:** 2026-05-02 02:55 UTC
 
-Bangladesh’s measles outbreak continued to accelerate through late April, with official tallies indicating a larger burden than was reported in mid-April and a growing concentration of severe outcomes among children. The World Health Organization said Bangladesh had logged 19,161 suspected cases and 2,897 laboratory-confirmed cases between 15 March and 14 April, with 166 measles-related deaths reported in that window.
+**Dateline:** 2026-05-09
 
-By 26 April, Bangladesh’s Directorate General of Health Services (DGHS), in figures relayed by state news agency BSS, reported 32,028 suspected cases and 4,603 confirmed cases since 15 March, plus 43 confirmed measles deaths and 216 suspected measles-related deaths. The late-April totals suggest substantial growth in reported burden after the WHO reporting cutoff.
+## What changed (anomalous data point)
 
-The outbreak response shifted from hotspot targeting to nationwide rollout in April. WHO said Bangladesh began a targeted measles-rubella campaign on 5 April in 30 upazilas across 18 districts, then moved to a nationwide campaign from 20 April, aimed at children 6-59 months old. That sequence indicates authorities treated the event as a broad national transmission problem rather than a localized cluster.
+NYC 311 daily total complaints jumped to **22,806** on **2026-02-24**, versus a 2026 YTD daily mean near **11,030** (about **+5.4σ** above mean in a simple daily z-score scan).
 
-What could overturn this assessment: if late-April totals are revised downward after case reclassification or delayed laboratory reconciliation, the apparent pace of growth could moderate. The core direction, however, is currently supported by both WHO and Bangladesh health-authority reporting streams.
+The dominant anomaly driver was a single category:
 
-## Appendix: Method
+- **Snow or Ice:** **11,370** complaints on 2026-02-24
+- Prior-28-day baseline for that category: about **1,061/day**
+- Implied one-day uplift: about **+10,309** complaints
+- Ratio vs prior-28-day baseline: about **10.7x**
 
-- Compared two reporting windows from independent evidence families:
-  - WHO Disease Outbreak News snapshot (through 14 April 2026).
-  - DGHS daily situation figures as published by BSS (through 26 April 2026).
-- Used only direct numeric comparisons for overlapping indicators (suspected cases, confirmed cases, deaths).
-- Treated suspected and confirmed deaths as separate categories.
+## Why this matters
 
-## Appendix: Limitations
+A one-day surge of this size concentrates demand on sanitation/transport/public-works response layers and can serve as an early stress signal for city operations and household mobility risk.
 
-- WHO and DGHS windows are not identical and may use different publication lags.
-- DGHS figures were accessed via BSS reporting rather than a direct DGHS data table in this run.
-- Suspected-case counts can later be revised as laboratory confirmation progresses.
+## Evidence and method
 
-## Appendix: Confidence
+1. Pulled NYC Open Data 311 service requests (`erm2-nwe9`) grouped by day from 2026-01-01 onward.
+2. Computed mean and population standard deviation across daily totals (excluding the latest two days to reduce partial-ingest artifacts).
+3. Ranked days by z-score; 2026-02-24 was the top outlier.
+4. Decomposed that date by `complaint_type` and compared to prior 28-day per-day averages by category.
 
-**Confidence: Moderate.**
+## Key caveats
 
-- Strengths: primary WHO publication plus Bangladesh health-authority figures carried by the state wire.
-- Constraints: non-identical reporting windows and potential downstream revisions in suspected/confirmed classifications.
+- This is an **operational anomaly check**, not a causal attribution model.
+- 311 volumes can be influenced by weather, reporting campaigns, platform effects, and backlog/ingest timing.
+- Category names reflect reporter/system labeling conventions.
 
-## Appendix: Sources
+## Primary sources
 
-1. WHO Disease Outbreak News, “Measles - Bangladesh” (2026-DON598): [https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON598)
-2. BSS (citing DGHS Health Emergency Operation Centre), “8 more die of measles, measles-like symptoms” (26 April 2026): [https://www.bssnews.net/news/381600](https://www.bssnews.net/news/381600)
+- NYC Open Data dataset page (311 Service Requests): [https://data.cityofnewyork.us/Social-Services/311-Service-Requests/erm2-nwe9](https://data.cityofnewyork.us/Social-Services/311-Service-Requests/erm2-nwe9)
+- Socrata API docs endpoint: [https://data.cityofnewyork.us/resource/erm2-nwe9.json](https://data.cityofnewyork.us/resource/erm2-nwe9.json)
+
+### Reproducible query patterns used
+
+- Daily totals from 2026-01-01:
+  - `?$select=date_trunc_ymd(created_date)%20as%20day,%20count(*)%20as%20n&$where=created_date%20%3E=%20'2026-01-01T00:00:00'&$group=day&$order=day%20asc&$limit=5000`
+- Category breakdown for 2026-02-24:
+  - `?$select=complaint_type,%20count(*)%20as%20n&$where=created_date%20between%20'2026-02-24T00:00:00'%20and%20'2026-02-24T23:59:59'&$group=complaint_type&$order=n%20desc&$limit=2000`
+- Baseline window (prior 28 days):
+  - `?$select=complaint_type,%20count(*)%20as%20n&$where=created_date%20between%20'2026-01-27T00:00:00'%20and%20'2026-02-23T23:59:59'&$group=complaint_type&$limit=2000`
+
+---
+
+If requested, I can publish a follow-up that joins this anomaly to archived weather observations and transit disruption records to test plausible drivers.
