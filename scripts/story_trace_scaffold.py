@@ -16,7 +16,7 @@ def utc_now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
-def build_markdown(run_label: str, slot: str, candidates: int) -> str:
+def build_markdown(run_label: str, slot: str, candidates: int, include_timers: bool) -> str:
     lines: list[str] = []
     lines.append(f"# {slot} research trace scaffold")
     lines.append("")
@@ -28,6 +28,14 @@ def build_markdown(run_label: str, slot: str, candidates: int) -> str:
     lines.append("- Required evidence families:")
     lines.append("- Top falsification path:")
     lines.append("")
+    if include_timers:
+        lines.append("## Slot timebox + rotation clock")
+        lines.append("- Discovery scan start/end (target 10–15m):")
+        lines.append("- Concept/evidence testing start/end (target 15–20m):")
+        lines.append("- Publish decision lock time (target final 5m):")
+        lines.append("- Candidate spend log (minutes per candidate; abandon >20m weak leads):")
+        lines.append("")
+
     lines.append("## Discovery-pack execution (data-first)")
     lines.append("| check | datasets/sources used | baseline window | observed delta | status |")
     lines.append("|---|---|---|---|---|")
@@ -140,6 +148,7 @@ def main() -> int:
     ap.add_argument("--run-label", default="cadence", help="Run label")
     ap.add_argument("--slot", default="STORY", help="Slot label")
     ap.add_argument("--candidates", type=int, default=4, help="Number of candidate packets (default 4)")
+    ap.add_argument("--include-timers", action="store_true", help="Include slot timebox/rotation clock section")
     args = ap.parse_args()
 
     if args.candidates < 1 or args.candidates > 12:
@@ -147,7 +156,7 @@ def main() -> int:
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(build_markdown(args.run_label, args.slot, args.candidates), encoding="utf-8")
+    out_path.write_text(build_markdown(args.run_label, args.slot, args.candidates, args.include_timers), encoding="utf-8")
     print(str(out_path))
     return 0
 
