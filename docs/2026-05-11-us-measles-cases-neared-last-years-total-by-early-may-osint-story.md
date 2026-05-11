@@ -1,5 +1,9 @@
 # U.S. measles cases neared last year’s total by early May
 
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-11-us-measles-cases-neared-last-years-total-by-early-may-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-11-us-measles-cases-neared-last-years-total-by-early-may-osint-story.md)
+
+
 **Dateline:** 2026-05-11
 
 CDC’s national measles tracker shows 1,842 confirmed U.S. cases as of 7 May 2026 (updated 8 May), versus 2,288 for full-year 2025. CDC also reports that 93% of 2026 cases are outbreak-associated.
