@@ -1,5 +1,9 @@
 # WHO–CDC case tally gap in Andes cluster reflects reporting lag, not risk shift
 
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-12-who-cdc-case-tally-gap-in-andes-cluster-reflects-reporting-lag-not-risk-shift-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-12-who-cdc-case-tally-gap-in-andes-cluster-reflects-reporting-lag-not-risk-shift-osint-story.md)
+
+
 **Dateline:** 2026-05-12
 
 WHO’s DON599 bulletin (event status as of 4 May) lists seven total cases in the cruise-linked Andes hantavirus cluster, while CDC HAN00528 (background updated through 8 May) reports eight total cases. The discrepancy appears to reflect update timing windows, not a contradiction in outbreak direction.
