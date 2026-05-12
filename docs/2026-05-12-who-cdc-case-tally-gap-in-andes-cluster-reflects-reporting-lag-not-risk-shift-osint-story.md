@@ -26,6 +26,6 @@ No evidence in these sources of a qualitative risk jump between the WHO bulletin
 
 ## Sources
 
-1. WHO Disease Outbreak News (DON599): https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599
-2. CDC HAN00528: https://www.cdc.gov/han/php/notices/han00528.html
-3. CDC Measles Cases and Outbreaks page (timing/cadence benchmark for weekly public-health reporting updates): https://www.cdc.gov/measles/data-research/index.html
+1. WHO Disease Outbreak News (DON599): [https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599)
+2. CDC HAN00528: [https://www.cdc.gov/han/php/notices/han00528.html](https://www.cdc.gov/han/php/notices/han00528.html)
+3. CDC Measles Cases and Outbreaks page (timing/cadence benchmark for weekly public-health reporting updates): [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html)

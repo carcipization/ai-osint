@@ -28,6 +28,6 @@ The U.S. is approaching last year’s total before mid-year, indicating sustaine
 
 ## Sources
 
-1. CDC — Measles Cases and Outbreaks (updated May 8, 2026): https://www.cdc.gov/measles/data-research/index.html
-2. CDC HAN 00528 — 2026 Multi-country Hantavirus Cluster Linked to Cruise Ship: https://www.cdc.gov/han/php/notices/han00528.html
-3. WHO DON599 — Hantavirus cluster linked to cruise ship travel, Multi-country: https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599
+1. CDC — Measles Cases and Outbreaks (updated May 8, 2026): [https://www.cdc.gov/measles/data-research/index.html](https://www.cdc.gov/measles/data-research/index.html)
+2. CDC HAN 00528 — 2026 Multi-country Hantavirus Cluster Linked to Cruise Ship: [https://www.cdc.gov/han/php/notices/han00528.html](https://www.cdc.gov/han/php/notices/han00528.html)
+3. WHO DON599 — Hantavirus cluster linked to cruise ship travel, Multi-country: [https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599)
