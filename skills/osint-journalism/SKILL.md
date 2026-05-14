@@ -337,6 +337,9 @@ Publish by default when a candidate is plausible and source-linked.
 
 ## Story novelty and duplication gate (quality upgrade)
 
+- Subject diversity hard cap: do not publish more than 2 stories on the same subject in any trailing 4-day window.
+- Operational check: before final publish decision, scan the last 4 days of `docs/*-osint-story.md`; if candidate subject already appears twice, block and pivot to a different subject.
+
 Do not publish a new story when it only rephrases a very recent conclusion from the same source stream.
 
 Before drafting, run a **last-72h overlap check** against recent STORY posts:
