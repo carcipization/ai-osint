@@ -10,7 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 STORY_FILE_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-.*-osint-story\.md$", re.I)
-ANDES_RE = re.compile(r"\bandes\b", re.I)
+SUBJECT_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("space-weather", re.compile(r"\b(space weather|swpc|noaa space weather|geomagnetic|solar flare|coronal mass ejection|\bcme\b)\b", re.I)),
+    ("andes", re.compile(r"\bandes\b", re.I)),
+    ("earthquakes", re.compile(r"\b(usgs|earthquake|seismic|aftershock|m\d(?:\.\d)?)\b", re.I)),
+    ("measles", re.compile(r"\bmeasles\b", re.I)),
+]
 
 
 def story_date(name: str) -> datetime | None:
@@ -23,15 +28,19 @@ def story_date(name: str) -> datetime | None:
         return None
 
 
-def is_andes_story(path: Path) -> bool:
+def story_subject(path: Path) -> str | None:
     if not path.exists() or not path.name.lower().endswith("-osint-story.md"):
-        return False
+        return None
     txt = path.read_text(encoding="utf-8", errors="ignore")
     title = txt.splitlines()[0] if txt.splitlines() else ""
-    return bool(ANDES_RE.search(path.stem) or ANDES_RE.search(title))
+    hay = f"{path.stem} {title}"
+    for key, pat in SUBJECT_PATTERNS:
+        if pat.search(hay):
+            return key
+    return None
 
 
-def count_andes_in_window(dt: datetime) -> tuple[int, list[str]]:
+def count_subject_in_window(dt: datetime, subject: str) -> tuple[int, list[str]]:
     start = dt - timedelta(days=3)
     names: list[str] = []
     for p in DOCS.glob("*.md"):
@@ -40,7 +49,7 @@ def count_andes_in_window(dt: datetime) -> tuple[int, list[str]]:
             continue
         if sdt < start or sdt > dt:
             continue
-        if is_andes_story(p):
+        if story_subject(p) == subject:
             names.append(p.name)
     return len(names), sorted(names)
 
@@ -57,18 +66,19 @@ def main() -> int:
     if dt is None:
         print("PASS (non-story filename)")
         return 0
-    if not is_andes_story(candidate):
-        print("PASS (subject cap not applicable)")
+    subject = story_subject(candidate)
+    if not subject:
+        print("PASS (subject unknown; cap not applied)")
         return 0
 
-    n, names = count_andes_in_window(dt)
+    n, names = count_subject_in_window(dt, subject)
     if n > 2:
-        print(f"BLOCK Andes cap exceeded: {n} in trailing 4-day window")
+        print(f"BLOCK subject cap exceeded for '{subject}': {n} in trailing 4-day window")
         for x in names:
             print(f" - {x}")
         return 1
 
-    print(f"PASS Andes cap: {n} in trailing 4-day window")
+    print(f"PASS subject cap for '{subject}': {n} in trailing 4-day window")
     return 0
 
 
