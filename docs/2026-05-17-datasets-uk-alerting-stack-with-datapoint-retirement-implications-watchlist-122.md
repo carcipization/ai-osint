@@ -1,5 +1,9 @@
 # Datasets: UK alerting stack with DataPoint retirement implications (watchlist 122)
 
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-17-datasets-uk-alerting-stack-with-datapoint-retirement-implications-watchlist-122.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-17-datasets-uk-alerting-stack-with-datapoint-retirement-implications-watchlist-122.md)
+
+
 **Dateline:** 2026-05-17
 
 This cadence run verifies that UK operational alerting inputs remain available for outbreaks and flood response, while confirming a live dependency risk from Met Office DataPoint decommissioning.
