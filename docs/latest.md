@@ -1,36 +1,36 @@
-# SWPC overnight forecast downgrades geomagnetic peak to G1 while radio blackout risk persists
+# USGS significant-day feed shows single M6.0 Caribbean event
 
-**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-17-swpc-overnight-forecast-downgrades-geomagnetic-peak-to-g1-while-radio-blackout-risk-persists-osint-story.html)
-**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-17-swpc-overnight-forecast-downgrades-geomagnetic-peak-to-g1-while-radio-blackout-risk-persists-osint-story.md)
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-16-usgs-significant-day-feed-shows-single-m60-caribbean-event-osint-story.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-16-usgs-significant-day-feed-shows-single-m60-caribbean-event-osint-story.md)
 
-**Dateline:** 2026-05-17
+**Dateline:** 2026-05-16
 
-NOAA SWPC’s 0030 UTC update shifts the near-term space-weather profile from a prior G2-capable window toward a lower expected geomagnetic peak (G1), while keeping meaningful short-horizon radio blackout probabilities in place.
+USGS’s machine-readable significant-earthquake feed for the past day currently lists one event: a reviewed M6.0 quake east-southeast of Codrington, Antigua and Barbuda.
 
 ## What changed in this cadence window
 
-- New 3-day bulletin (issued **2026-05-17 0030 UTC**) sets the **greatest expected Kp at 5.00 (G1)** for May 17–19.
-- Same bulletin reports **greatest observed Kp 6 (G2)** in the prior 24 hours, indicating recent stronger conditions have eased in the forward view.
-- SWPC also reports **R1 radio blackouts observed** in the past 24h, with forward **R1-R2 probability at 40% daily** through May 19.
+- **Significant day count:** 1 event.
+- **Top event:** M6.0, 70 km ESE of Codrington, Antigua and Barbuda (event id `us6000sy84`).
+- **Status/impact indicators in feed:** reviewed origin, tsunami flag 0, PAGER alert level green.
 
 ## Verification notes
 
-1. Primary machine-readable forecast text confirms issuance timestamp, Kp table, and forecaster rationale (CH HSS effects plus possible glancing CME contribution on 18 May).
-2. SWPC advisory-outlook context remains consistent with a mid-May G1-focused period rather than severe/extreme storm framing.
-3. SWPC real-time solar-wind product documentation supports operational interpretation that near-Earth solar-wind regime changes can quickly alter short-window geomagnetic intensity.
+1. USGS `significant_day.geojson` confirms the one-event daily significant set and event metadata.
+2. USGS `significant_week.geojson` places the M6.0 event in broader weekly context (other significant events still present, including prior Japan event).
+3. USGS `all_day.geojson` confirms broader background seismic activity remains active (many smaller events), while only one event meets the significant-day threshold.
 
 ## Caveats
 
-- Forecast bands can change with updated solar-wind and CME propagation inputs.
-- Probability values are operational outlooks, not deterministic impacts for any single region or system.
-- This publication is a cadence snapshot, not a full post-event impact audit.
+- “Significant” is a USGS feed classification and can update as new solutions/reports arrive.
+- Early impact fields (felt reports, alert, MMI) may revise after additional data ingestion.
+- This is a feed-state snapshot, not a full damage assessment.
 
 ## Bottom line
 
-For this cadence execution, the evidence supports a **moderation update**: expected geomagnetic peak risk is currently capped at G1 in the near-term forecast, but radio blackout risk remains active and non-trivial through the window.
+For this cadence execution, publication outcome is a **single-event significant-day snapshot**: one reviewed M6.0 Caribbean earthquake dominates the USGS significant-day feed, with no additional significant-day entries at run time.
 
 ## Sources
 
-1. https://services.swpc.noaa.gov/text/3-day-forecast.txt
-2. https://services.swpc.noaa.gov/text/advisory-outlook.txt
-3. https://www.swpc.noaa.gov/products/real-time-solar-wind
+1. https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_day.geojson
+2. https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson
+3. https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson

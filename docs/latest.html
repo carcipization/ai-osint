@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SWPC overnight forecast downgrades geomagnetic peak to G1 while radio blackout risk persists</title>
+  <title>USGS significant-day feed shows single M6.0 Caribbean event</title>
   <style>
 :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
@@ -16,36 +16,36 @@ hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
 </head>
 <body>
   <p><a href="./index.html">← AI OSINT Home</a></p>
-  <h1 id="swpc-overnight-forecast-downgrades-geomagnetic-peak-to-g1-while-radio-blackout-risk-persists">SWPC overnight forecast downgrades geomagnetic peak to G1 while radio blackout risk persists</h1>
-<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-17-swpc-overnight-forecast-downgrades-geomagnetic-peak-to-g1-while-radio-blackout-risk-persists-osint-story.html">HTML</a>
-<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-17-swpc-overnight-forecast-downgrades-geomagnetic-peak-to-g1-while-radio-blackout-risk-persists-osint-story.md">Markdown</a></p>
-<p><strong>Dateline:</strong> 2026-05-17</p>
-<p>NOAA SWPC’s 0030 UTC update shifts the near-term space-weather profile from a prior G2-capable window toward a lower expected geomagnetic peak (G1), while keeping meaningful short-horizon radio blackout probabilities in place.</p>
+  <h1 id="usgs-significant-day-feed-shows-single-m60-caribbean-event">USGS significant-day feed shows single M6.0 Caribbean event</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-16-usgs-significant-day-feed-shows-single-m60-caribbean-event-osint-story.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-16-usgs-significant-day-feed-shows-single-m60-caribbean-event-osint-story.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-05-16</p>
+<p>USGS’s machine-readable significant-earthquake feed for the past day currently lists one event: a reviewed M6.0 quake east-southeast of Codrington, Antigua and Barbuda.</p>
 <h2 id="what-changed-in-this-cadence-window">What changed in this cadence window</h2>
 <ul>
-<li>New 3-day bulletin (issued <strong>2026-05-17 0030 UTC</strong>) sets the <strong>greatest expected Kp at 5.00 (G1)</strong> for May 17–19.</li>
-<li>Same bulletin reports <strong>greatest observed Kp 6 (G2)</strong> in the prior 24 hours, indicating recent stronger conditions have eased in the forward view.</li>
-<li>SWPC also reports <strong>R1 radio blackouts observed</strong> in the past 24h, with forward <strong>R1-R2 probability at 40% daily</strong> through May 19.</li>
+<li><strong>Significant day count:</strong> 1 event.</li>
+<li><strong>Top event:</strong> M6.0, 70 km ESE of Codrington, Antigua and Barbuda (event id <code>us6000sy84</code>).</li>
+<li><strong>Status/impact indicators in feed:</strong> reviewed origin, tsunami flag 0, PAGER alert level green.</li>
 </ul>
 <h2 id="verification-notes">Verification notes</h2>
 <ol>
-<li>Primary machine-readable forecast text confirms issuance timestamp, Kp table, and forecaster rationale (CH HSS effects plus possible glancing CME contribution on 18 May).</li>
-<li>SWPC advisory-outlook context remains consistent with a mid-May G1-focused period rather than severe/extreme storm framing.</li>
-<li>SWPC real-time solar-wind product documentation supports operational interpretation that near-Earth solar-wind regime changes can quickly alter short-window geomagnetic intensity.</li>
+<li>USGS <code>significant_day.geojson</code> confirms the one-event daily significant set and event metadata.</li>
+<li>USGS <code>significant_week.geojson</code> places the M6.0 event in broader weekly context (other significant events still present, including prior Japan event).</li>
+<li>USGS <code>all_day.geojson</code> confirms broader background seismic activity remains active (many smaller events), while only one event meets the significant-day threshold.</li>
 </ol>
 <h2 id="caveats">Caveats</h2>
 <ul>
-<li>Forecast bands can change with updated solar-wind and CME propagation inputs.</li>
-<li>Probability values are operational outlooks, not deterministic impacts for any single region or system.</li>
-<li>This publication is a cadence snapshot, not a full post-event impact audit.</li>
+<li>“Significant” is a USGS feed classification and can update as new solutions/reports arrive.</li>
+<li>Early impact fields (felt reports, alert, MMI) may revise after additional data ingestion.</li>
+<li>This is a feed-state snapshot, not a full damage assessment.</li>
 </ul>
 <h2 id="bottom-line">Bottom line</h2>
-<p>For this cadence execution, the evidence supports a <strong>moderation update</strong>: expected geomagnetic peak risk is currently capped at G1 in the near-term forecast, but radio blackout risk remains active and non-trivial through the window.</p>
+<p>For this cadence execution, publication outcome is a <strong>single-event significant-day snapshot</strong>: one reviewed M6.0 Caribbean earthquake dominates the USGS significant-day feed, with no additional significant-day entries at run time.</p>
 <h2 id="sources">Sources</h2>
 <ol>
-<li>https://services.swpc.noaa.gov/text/3-day-forecast.txt</li>
-<li>https://services.swpc.noaa.gov/text/advisory-outlook.txt</li>
-<li>https://www.swpc.noaa.gov/products/real-time-solar-wind</li>
+<li>https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_day.geojson</li>
+<li>https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson</li>
+<li>https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson</li>
 </ol>
 </body>
 </html>
