@@ -1,5 +1,9 @@
 # Datasets: UK operational monitoring refresh (watchlist 121)
 
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-17-datasets-uk-operational-monitoring-refresh-watchlist-121.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-17-datasets-uk-operational-monitoring-refresh-watchlist-121.md)
+
+
 **Dateline:** 2026-05-17
 
 This cadence run refreshes UK-focused operational data surfaces used for public-risk monitoring across health and flooding signals, while noting a material weather-data service transition.
