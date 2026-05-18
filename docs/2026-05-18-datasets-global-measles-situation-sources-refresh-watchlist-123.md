@@ -1,5 +1,9 @@
 # Datasets: Global measles situation sources refresh (watchlist 123)
 
+**Human-readable HTML:** [HTML](https://carcipization.github.io/ai-osint/2026-05-18-datasets-global-measles-situation-sources-refresh-watchlist-123.html)
+**LLM-friendly Markdown:** [Markdown](https://carcipization.github.io/ai-osint/2026-05-18-datasets-global-measles-situation-sources-refresh-watchlist-123.md)
+
+
 **Dateline:** 2026-05-18
 
 This cadence run validates three high-value public sources used for recurring measles situation monitoring and confirms they remain usable for cross-checking global burden context.
