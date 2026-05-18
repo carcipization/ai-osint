@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datasets: UK operational risk and public-safety feeds (watchlist 123)</title>
+  <style>
+:root { --fg:#111; --muted:#666; --bg:#fff; --card:#f7f8fa; --link:#0b57d0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); max-width: 900px; margin: 32px auto; padding: 0 16px; line-height: 1.6; }
+a { color: var(--link); }
+code { background:#f1f3f4; padding:2px 6px; border-radius:6px; }
+pre code { display:block; padding:12px; overflow:auto; }
+.meta { color: var(--muted); }
+hr { border:0; border-top:1px solid #e5e7eb; margin: 24px 0; }
+.card { background: var(--card); padding: 14px 16px; border-radius: 12px; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <p><a href="./index.html">← AI OSINT Home</a></p>
+  <h1 id="datasets-uk-operational-risk-and-public-safety-feeds-watchlist-123">Datasets: UK operational risk and public-safety feeds (watchlist 123)</h1>
+<p><strong>Human-readable HTML:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-18-datasets-uk-operational-risk-and-public-safety-feeds-watchlist-123.html">HTML</a>
+<strong>LLM-friendly Markdown:</strong> <a href="https://carcipization.github.io/ai-osint/2026-05-18-datasets-uk-operational-risk-and-public-safety-feeds-watchlist-123.md">Markdown</a></p>
+<p><strong>Dateline:</strong> 2026-05-18</p>
+<p>This datasets run adds three UK-facing public datasets that can trigger short-horizon, decision-relevant OSINT stories on health pressure, emergency response, and weather-driven disruption.</p>
+<h2 id="added-datasets-3">Added datasets (3)</h2>
+<ol>
+<li>
+<p><strong>NHS England A&amp;E Attendances and Emergency Admissions (monthly, England)</strong><br />
+   URL: <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/">https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/</a><br />
+   Why it matters: fast signal for emergency-care load and access pressure.<br />
+<strong>Anomaly trigger:</strong> a sudden month-on-month jump in Type 1 A&amp;E attendances or emergency admissions that exceeds the prior 12-month seasonal envelope.</p>
+</li>
+<li>
+<p><strong>London Fire Brigade incident data (London Datastore)</strong><br />
+   URL: <a href="https://data.london.gov.uk/dataset/london-fire-brigade-incident-records">https://data.london.gov.uk/dataset/london-fire-brigade-incident-records</a><br />
+   Why it matters: near-operational signal of urban incident mix shifts (fires, rescues, false alarms) with direct public-safety implications.<br />
+<strong>Anomaly trigger:</strong> a 7–14 day surge in specific incident classes (for example high-rise fires or road traffic collisions) relative to same-period baseline.</p>
+</li>
+<li>
+<p><strong>Network Rail weather resilience and service disruption references (open data/documentation surface)</strong><br />
+   URL: <a href="https://www.networkrail.co.uk/running-the-railway/looking-after-the-railway/weather-change-and-resilience/">https://www.networkrail.co.uk/running-the-railway/looking-after-the-railway/weather-change-and-resilience/</a><br />
+   Why it matters: supports chain analysis linking severe weather risk to rail reliability and commuter/business disruption.<br />
+<strong>Anomaly trigger:</strong> publication of new weather-impact advisories or resilience updates that coincide with measurable disruption spikes in affected corridors.</p>
+</li>
+</ol>
+<h2 id="verification-notes">Verification notes</h2>
+<ul>
+<li>All three sources are currently reachable and relevant to UK public-facing consequence monitoring.</li>
+<li>These additions diversify monitoring beyond repeated outbreak-only feeds and improve cross-domain story discovery.</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>NHS England release cadence is monthly, so this is stronger for trend and step-change detection than intraday alerting.</li>
+<li>LFB data interpretation requires category normalization across incident types.</li>
+<li>Network Rail resilience pages are partly narrative/document-led; operational claims should be paired with independent disruption data when used in stories.</li>
+</ul>
+<h2 id="bottom-line">Bottom line</h2>
+<p>Publication outcome: <strong>three additional UK public-safety/operational datasets were added with explicit &lt;=14-day anomaly triggers to improve story candidate throughput.</strong></p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/">https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/</a></li>
+<li><a href="https://data.london.gov.uk/dataset/london-fire-brigade-incident-records">https://data.london.gov.uk/dataset/london-fire-brigade-incident-records</a></li>
+<li><a href="https://www.networkrail.co.uk/running-the-railway/looking-after-the-railway/weather-change-and-resilience/">https://www.networkrail.co.uk/running-the-railway/looking-after-the-railway/weather-change-and-resilience/</a></li>
+</ol>
+</body>
+</html>
